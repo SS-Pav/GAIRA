@@ -1,2 +1,4 @@
-raw_data: data/raw
-processed_data: data/processed
+raw_data: /Volumes/SSD_SPG/GAIRA_DATA/raw
+processed_data: /Volumes/SSD_SPG/GAIRA_DATA/processed
+cache: /Volumes/SSD_SPG/GAIRA_DATA/cache
+database: data/gaira.duckdb

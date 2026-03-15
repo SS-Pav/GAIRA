@@ -9,11 +9,19 @@ def main() -> None:
     db_path = project_root / "data" / "gaira.duckdb"
 
     with duckdb.connect(str(db_path)) as connection:
+        table_columns = connection.execute("DESCRIBE datasets").fetchdf()["column_name"].tolist()
+        preferred_columns = [
+            "dataset_id",
+            "name",
+            "priority",
+            "status",
+            "provenance_url",
+            "raw_source_url",
+        ]
+        selected_columns = [column for column in preferred_columns if column in table_columns]
+
         datasets_df = connection.execute(
-            """
-            SELECT dataset_id, name, priority, status
-            FROM datasets
-            """
+            f"SELECT {', '.join(selected_columns)} FROM datasets"
         ).fetchdf()
 
     print(datasets_df.to_string(index=False))

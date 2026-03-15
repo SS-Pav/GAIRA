@@ -15,6 +15,11 @@ def main() -> None:
         return
 
     datasets_df = pd.read_csv(csv_path)
+    extra_columns = [
+        column
+        for column in datasets_df.columns
+        if column not in {"dataset_id", "name", "priority", "status"}
+    ]
 
     with duckdb.connect(str(db_path)) as connection:
         # Replace the full registry table with the latest CSV contents.
@@ -22,6 +27,8 @@ def main() -> None:
         connection.execute("CREATE OR REPLACE TABLE datasets AS SELECT * FROM datasets_df")
 
     print(f"Loaded {len(datasets_df)} dataset records into GAIRA.")
+    if extra_columns:
+        print(f"Detected {len(extra_columns)} additional registry columns and loaded them too.")
 
 
 if __name__ == "__main__":

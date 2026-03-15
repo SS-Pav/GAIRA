@@ -72,7 +72,102 @@ def main() -> None:
             """
         )
 
-    print("GAIRA database initialized with datasets, samples, and spectra tables.")
+        # Reference-level metadata for RamanBioLib-style biomolecule libraries.
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS reference_metadata (
+                ref_id TEXT,
+                dataset_id TEXT,
+                source_row_id INTEGER,
+                component TEXT,
+                biochemical_class TEXT,
+                submission_date TEXT,
+                contact TEXT,
+                source TEXT,
+                reference TEXT,
+                extraction_method TEXT,
+                peak_identification TEXT,
+                interpolation_method TEXT,
+                extra_preprocessing TEXT,
+                complete_sample_name TEXT,
+                sample_source TEXT,
+                sample_composition TEXT,
+                sample_preparation TEXT,
+                sample_substrate TEXT,
+                raman_technique TEXT,
+                raman_system TEXT,
+                delivery_optics TEXT,
+                laser_wavelength_nm TEXT,
+                laser_power TEXT,
+                acquisition_time TEXT,
+                orig_spectral_range TEXT,
+                orig_spectral_resolution TEXT,
+                orig_spatial_resolution TEXT,
+                detector TEXT,
+                calibration TEXT,
+                cropping TEXT,
+                spike_removal TEXT,
+                denoising TEXT,
+                background_removal TEXT,
+                baseline_removal TEXT,
+                normalization TEXT,
+                additional_info TEXT
+            )
+            """
+        )
+
+        # Individual Raman peak annotations for each reference compound.
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS reference_peaks (
+                ref_id TEXT,
+                dataset_id TEXT,
+                component TEXT,
+                source_row_id INTEGER,
+                peak_rank INTEGER,
+                peak_cm REAL,
+                rel_intensity REAL
+            )
+            """
+        )
+
+        # Full reference spectra stored as compact JSON arrays.
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS reference_spectra (
+                ref_id TEXT,
+                dataset_id TEXT,
+                component TEXT,
+                source_row_id INTEGER,
+                x_min REAL,
+                x_max REAL,
+                n_points INTEGER,
+                wavenumbers_json TEXT,
+                intensity_json TEXT,
+                normalized_flag TEXT,
+                preprocessing_summary TEXT
+            )
+            """
+        )
+
+        # One row per spectrum point for simple SQL inspection and plotting later.
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS reference_spectrum_points (
+                ref_id TEXT,
+                dataset_id TEXT,
+                component TEXT,
+                source_row_id INTEGER,
+                point_index INTEGER,
+                wavenumber REAL,
+                intensity REAL
+            )
+            """
+        )
+
+    print(
+        "GAIRA database initialized with datasets, samples, spectra, and Raman reference tables."
+    )
 
 
 if __name__ == "__main__":

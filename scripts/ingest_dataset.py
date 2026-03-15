@@ -8,7 +8,7 @@ def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(project_root / "src"))
 
-    from gaira.config import get_storage_config
+    from gaira.config import ensure_storage_dirs, resolve_storage_path
     from gaira.parsers.ramanbiolib_parser import RamanBioLibParser
 
     parser = argparse.ArgumentParser(description="Run a dataset ingestion scaffold for GAIRA.")
@@ -21,26 +21,34 @@ def main() -> None:
         print(f"Parser for '{args.dataset_id}' is not implemented yet.")
         return
 
-    storage_config = get_storage_config()
-    raw_data_path = storage_config.get("raw_data")
+    storage_config = ensure_storage_dirs()
+    raw_data_path = resolve_storage_path(storage_config.get("raw_data"))
+    db_path = resolve_storage_path(storage_config.get("database"))
 
-    if not raw_data_path:
+    if raw_data_path is None:
         print("The storage config is missing the 'raw_data' path.")
         return
 
-    dataset_root = project_root / raw_data_path / args.dataset_id
-    db_path = project_root / "data" / "gaira.duckdb"
+    if db_path is None:
+        print("The storage config is missing the 'database' path.")
+        return
 
+    dataset_root = raw_data_path / args.dataset_id
+
+    print("Storage paths in use:")
+    print(f"  raw_data: {raw_data_path}")
+    print(f"  processed_data: {resolve_storage_path(storage_config.get('processed_data'))}")
+    print(f"  cache: {resolve_storage_path(storage_config.get('cache'))}")
+    print(f"  database: {db_path}")
     print(f"Using dataset folder: {dataset_root}")
-    print(f"Using database: {db_path}")
 
     parser_instance = RamanBioLibParser(
         dataset_id=args.dataset_id,
         dataset_root=dataset_root,
         db_path=db_path,
     )
-    parser_instance.audit()
-    print("Ingestion scaffold finished. Full parsing is still a TODO.")
+    print("Running full RamanBioLib ingestion into DuckDB.")
+    parser_instance.ingest()
 
 
 if __name__ == "__main__":
