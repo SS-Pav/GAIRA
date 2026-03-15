@@ -1,0 +1,28 @@
+from pathlib import Path
+
+import duckdb
+import pandas as pd
+
+
+def main() -> None:
+    # Build paths from the project root so the script stays portable.
+    project_root = Path(__file__).resolve().parents[1]
+    csv_path = project_root / "data" / "registry" / "datasets.csv"
+    db_path = project_root / "data" / "gaira.duckdb"
+
+    if not csv_path.exists():
+        print(f"Registry file not found: {csv_path}")
+        return
+
+    datasets_df = pd.read_csv(csv_path)
+
+    with duckdb.connect(str(db_path)) as connection:
+        # Replace the full registry table with the latest CSV contents.
+        connection.register("datasets_df", datasets_df)
+        connection.execute("CREATE OR REPLACE TABLE datasets AS SELECT * FROM datasets_df")
+
+    print(f"Loaded {len(datasets_df)} dataset records into GAIRA.")
+
+
+if __name__ == "__main__":
+    main()
