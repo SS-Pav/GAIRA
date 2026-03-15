@@ -12,6 +12,7 @@ def main() -> None:
         table_columns = connection.execute("DESCRIBE datasets").fetchdf()["column_name"].tolist()
         preferred_columns = [
             "dataset_id",
+            "dataset_family",
             "name",
             "priority",
             "status",

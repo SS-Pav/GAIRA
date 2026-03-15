@@ -2,6 +2,8 @@ import argparse
 import sys
 from pathlib import Path
 
+import pandas as pd
+
 
 def main() -> None:
     # Make the src package importable when running from the project root.
@@ -16,10 +18,24 @@ def main() -> None:
     args = parser.parse_args()
 
     print(f"Preparing ingestion scaffold for dataset: {args.dataset_id}")
+    registry_path = project_root / "data" / "registry" / "datasets.csv"
 
-    if args.dataset_id != "ramanbiolib":
-        print(f"Parser for '{args.dataset_id}' is not implemented yet.")
-        return
+    dataset_family = None
+    if registry_path.exists():
+        registry_df = pd.read_csv(registry_path)
+        match_df = registry_df[registry_df["dataset_id"] == args.dataset_id].copy()
+        if not match_df.empty and "dataset_family" in match_df.columns:
+            dataset_family = str(match_df.iloc[0]["dataset_family"]).strip().lower()
+
+    # Preserve the known RamanBioLib ingestion path exactly.
+    if args.dataset_id == "ramanbiolib" or dataset_family == "reference":
+        selected_family = "reference"
+    elif dataset_family == "biosample":
+        selected_family = "biosample"
+    elif dataset_family == "knowledge":
+        selected_family = "knowledge"
+    else:
+        selected_family = "unknown"
 
     storage_config = ensure_storage_dirs()
     raw_data_path = resolve_storage_path(storage_config.get("raw_data"))
@@ -42,13 +58,41 @@ def main() -> None:
     print(f"  database: {db_path}")
     print(f"Using dataset folder: {dataset_root}")
 
-    parser_instance = RamanBioLibParser(
-        dataset_id=args.dataset_id,
-        dataset_root=dataset_root,
-        db_path=db_path,
+    if selected_family == "reference":
+        if args.dataset_id != "ramanbiolib":
+            print(
+                "This reference dataset is registered, but only the RamanBioLib parser is "
+                "implemented right now."
+            )
+            return
+
+        parser_instance = RamanBioLibParser(
+            dataset_id=args.dataset_id,
+            dataset_root=dataset_root,
+            db_path=db_path,
+        )
+        print("Running full RamanBioLib ingestion into DuckDB.")
+        parser_instance.ingest()
+        return
+
+    if selected_family == "biosample":
+        print(
+            "Biosample parser scaffold exists, but no concrete dataset implementation has "
+            "been added yet."
+        )
+        return
+
+    if selected_family == "knowledge":
+        print(
+            "Knowledge parser scaffold exists, but no concrete dataset implementation has "
+            "been added yet."
+        )
+        return
+
+    print(
+        "Dataset family could not be resolved from the registry. Add a registry row with "
+        "dataset_family set to reference, biosample, or knowledge."
     )
-    print("Running full RamanBioLib ingestion into DuckDB.")
-    parser_instance.ingest()
 
 
 if __name__ == "__main__":

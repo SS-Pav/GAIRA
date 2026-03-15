@@ -1,7 +1,7 @@
-dataset_id,name,source_url,source_type,modality,sample_type,matrix_type,pure_or_mixture,raw_available,processed_available,license,priority,status,notes,provenance_url,raw_source_url
-ramanbiolib,RamanBioLib Open Biomolecule Raman Library,https://zenodo.org/records/17280080,zenodo,Raman,mixed biomolecule library,biomolecule references,pure,yes,yes,open,high,todo,Core biomolecule reference library,https://zenodo.org/records/17280080,https://github.com/mteranm/ramanbiolib
-shine_ev_sers,SPECTRA/SHINE EV Hepatotoxicity Dataset,https://zenodo.org/records/14768753,zenodo,SERS,extracellular vesicles,cell culture EVs,mixture,yes,yes,CC-BY,high,todo,APAP hepatotoxicity EV-SERS study,,
-small2023_ev,Small 2023 EV Cell-Line Dataset,https://zenodo.org/records/7011380,zenodo,SERS,extracellular vesicles,cell-line EVs,mixture,yes,yes,unknown,high,todo,Five cell lines plus mixture experiments,,
-serum_ag_colloids,Adsorption of Serum Components on Ag Colloids,https://zenodo.org/records/17374939,zenodo,SERS,serum,human serum,mixture,yes,yes,open,medium,todo,Serum on Ag colloids dataset,,
-ergothioneine_serum,Ergothioneine in Human Serum SERS,https://zenodo.org/records/13791050,zenodo,SERS,serum,human serum,mixture,yes,yes,open,medium,todo,Metabolite in serum dataset,,
-hcc_serum,Hepatocellular Carcinoma Serum SERS,https://zenodo.org/records/4277797,zenodo,SERS,serum,human serum,mixture,yes,yes,open,medium,todo,HCC serum classification dataset,,
+dataset_id,dataset_family,name,source_url,source_type,modality,sample_type,matrix_type,pure_or_mixture,raw_available,processed_available,license,priority,status,notes,provenance_url,raw_source_url
+ramanbiolib,reference,RamanBioLib Open Biomolecule Raman Library,https://zenodo.org/records/17280080,zenodo,Raman,mixed biomolecule library,biomolecule references,pure,yes,yes,open,high,todo,Core biomolecule reference library,https://zenodo.org/records/17280080,https://github.com/mteranm/ramanbiolib
+shine_ev_sers,biosample,SPECTRA/SHINE EV Hepatotoxicity Dataset,https://zenodo.org/records/14768753,zenodo,SERS,extracellular vesicles,cell culture EVs,mixture,yes,yes,CC-BY,high,todo,APAP hepatotoxicity EV-SERS study,,
+small2023_ev,biosample,Small 2023 EV Cell-Line Dataset,https://zenodo.org/records/7011380,zenodo,SERS,extracellular vesicles,cell-line EVs,mixture,yes,yes,unknown,high,todo,Five cell lines plus mixture experiments,,
+serum_ag_colloids,biosample,Adsorption of Serum Components on Ag Colloids,https://zenodo.org/records/17374939,zenodo,SERS,serum,human serum,mixture,yes,yes,open,medium,todo,Serum on Ag colloids dataset,,
+ergothioneine_serum,biosample,Ergothioneine in Human Serum SERS,https://zenodo.org/records/13791050,zenodo,SERS,serum,human serum,mixture,yes,yes,open,medium,todo,Metabolite in serum dataset,,
+hcc_serum,biosample,Hepatocellular Carcinoma Serum SERS,https://zenodo.org/records/4277797,zenodo,SERS,serum,human serum,mixture,yes,yes,open,medium,todo,HCC serum classification dataset,,
