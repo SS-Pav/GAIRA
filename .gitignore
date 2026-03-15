@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# Data
+data/raw/
+data/processed/
+
+# Databases
+*.duckdb
+*.sqlite
+
+# Logs
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Parquet / cache
+*.parquet
+*.feather
