@@ -80,6 +80,41 @@ def main() -> None:
         print("SHINE EV SERS download and extraction step is complete.")
         return
 
+    if args.dataset_id == "small2023_ev":
+        download_targets = [
+            (
+                "Readme.docx",
+                "https://zenodo.org/api/records/7011380/files/Readme.docx/content",
+            ),
+            (
+                "NormedProbe1.mat",
+                "https://zenodo.org/api/records/7011380/files/NormedProbe1.mat/content",
+            ),
+            (
+                "Main_Text.zip",
+                "https://zenodo.org/api/records/7011380/files/Main_Text.zip/content",
+            ),
+        ]
+
+        print(
+            "Downloading the grounded first-ingest assets for small2023_ev. "
+            "This includes the README, the normalized Probe1 matrix, and the Main_Text archive "
+            "that contains the released Calx axis."
+        )
+
+        for file_name, file_url in download_targets:
+            output_path = target_folder / file_name
+            if output_path.exists() and output_path.stat().st_size > 0:
+                print(f"Skipping existing file: {output_path}")
+                continue
+
+            print(f"Downloading: {file_url}")
+            urlretrieve(file_url, output_path)
+            print(f"Saved: {output_path}")
+
+        print("small2023_ev download step is complete.")
+        return
+
     if args.dataset_id != "ramanbiolib":
         print("Downloader scaffold is ready, but automatic downloading is only implemented for RamanBioLib right now.")
         return

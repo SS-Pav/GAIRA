@@ -9,18 +9,35 @@ import numpy as np
 import pandas as pd
 
 
-PROCESSING_VERSION = "v1_crop450_1800_interp1_minmax"
-CROP_MIN_CM = 450.0
-CROP_MAX_CM = 1800.0
-INTERPOLATION_STEP_CM = 1.0
-BASELINE_METHOD = "none"
-NORMALIZATION_METHOD = "minmax"
+PROCESSING_CONFIGS = {
+    "shine_ev_sers": {
+        "processing_version": "v1_crop450_1800_interp1_minmax",
+        "crop_min_cm": 450.0,
+        "crop_max_cm": 1800.0,
+        "interpolation_step_cm": 1.0,
+        "baseline_method": "none",
+        "normalization_method": "minmax",
+    },
+    "small2023_ev": {
+        # The released small2023_ev Calx axis is 670..1800 cm^-1.
+        "processing_version": "v1_crop670_1800_interp1_minmax",
+        "crop_min_cm": 670.0,
+        "crop_max_cm": 1800.0,
+        "interpolation_step_cm": 1.0,
+        "baseline_method": "none",
+        "normalization_method": "minmax",
+    },
+}
 SOURCE_TABLE = "biosample_spectrum_points"
 
 
-def build_common_grid() -> np.ndarray:
+def build_common_grid(config: dict) -> np.ndarray:
     """Create the shared comparison grid used for processed biosample spectra."""
-    return np.arange(CROP_MIN_CM, CROP_MAX_CM + INTERPOLATION_STEP_CM, INTERPOLATION_STEP_CM)
+    return np.arange(
+        config["crop_min_cm"],
+        config["crop_max_cm"] + config["interpolation_step_cm"],
+        config["interpolation_step_cm"],
+    )
 
 
 def normalize_minmax(intensities: np.ndarray) -> np.ndarray:
@@ -62,18 +79,20 @@ def build_chunk_query(chunk_size: int) -> str:
 
 
 def process_one_spectrum(
+    dataset_id: str,
     biosample_id: str,
     spectrum_df: pd.DataFrame,
     class_label: str | None,
     subclass_label: str | None,
     common_grid: np.ndarray,
+    config: dict,
 ) -> tuple[dict, list[dict], tuple[str | None, str | None], np.ndarray] | None:
     """Crop, interpolate, and normalize one biosample spectrum."""
     ordered_df = spectrum_df.sort_values("point_index").reset_index(drop=True)
     x_values = ordered_df["wavenumber"].to_numpy(dtype=float)
     y_values = ordered_df["intensity"].to_numpy(dtype=float)
 
-    crop_mask = (x_values >= CROP_MIN_CM) & (x_values <= CROP_MAX_CM)
+    crop_mask = (x_values >= config["crop_min_cm"]) & (x_values <= config["crop_max_cm"])
     cropped_x = x_values[crop_mask]
     cropped_y = y_values[crop_mask]
 
@@ -83,18 +102,18 @@ def process_one_spectrum(
 
     interpolated_y = np.interp(common_grid, cropped_x, cropped_y)
     normalized_y = normalize_minmax(interpolated_y)
-    processed_id = f"{PROCESSING_VERSION}__{biosample_id}"
+    processed_id = f"{config['processing_version']}__{biosample_id}"
 
     spectrum_row = {
         "processed_id": processed_id,
         "biosample_id": biosample_id,
-        "dataset_id": "shine_ev_sers",
-        "processing_version": PROCESSING_VERSION,
-        "crop_min_cm": CROP_MIN_CM,
-        "crop_max_cm": CROP_MAX_CM,
-        "interpolation_step_cm": INTERPOLATION_STEP_CM,
-        "baseline_method": BASELINE_METHOD,
-        "normalization_method": NORMALIZATION_METHOD,
+        "dataset_id": dataset_id,
+        "processing_version": config["processing_version"],
+        "crop_min_cm": config["crop_min_cm"],
+        "crop_max_cm": config["crop_max_cm"],
+        "interpolation_step_cm": config["interpolation_step_cm"],
+        "baseline_method": config["baseline_method"],
+        "normalization_method": config["normalization_method"],
         "n_points": int(len(common_grid)),
         "x_min": float(common_grid.min()),
         "x_max": float(common_grid.max()),
@@ -102,8 +121,8 @@ def process_one_spectrum(
         "intensity_json": serialize_array(normalized_y),
         "source_table": SOURCE_TABLE,
         "processing_notes": (
-            "Raw biosample_spectrum_points were cropped to 450-1800 cm^-1, "
-            "interpolated to a 1 cm^-1 common grid, and min-max normalized."
+            f"Raw biosample_spectrum_points were cropped to {config['crop_min_cm']:.0f}-{config['crop_max_cm']:.0f} cm^-1, "
+            f"interpolated to a {config['interpolation_step_cm']:.0f} cm^-1 common grid, and min-max normalized."
         ),
     }
 
@@ -111,7 +130,7 @@ def process_one_spectrum(
         {
             "processed_id": processed_id,
             "biosample_id": biosample_id,
-            "dataset_id": "shine_ev_sers",
+            "dataset_id": dataset_id,
             "point_index": point_index,
             "wavenumber": float(wavenumber),
             "intensity": float(intensity),
@@ -139,17 +158,18 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    if args.dataset_id != "shine_ev_sers":
-        print("Only the shine_ev_sers processed pipeline is implemented right now.")
+    if args.dataset_id not in PROCESSING_CONFIGS:
+        print("Processed biosample support is only implemented for shine_ev_sers and small2023_ev right now.")
         return
 
+    config = PROCESSING_CONFIGS[args.dataset_id]
     db_path = project_root / "data" / "gaira.duckdb"
-    common_grid = build_common_grid()
+    common_grid = build_common_grid(config)
     class_accumulators: dict[tuple[str | None, str | None], dict[str, np.ndarray | int]] = defaultdict(dict)
 
     print(f"Processing biosample dataset: {args.dataset_id}")
     print(f"Database: {db_path}")
-    print(f"Processing version: {PROCESSING_VERSION}")
+    print(f"Processing version: {config['processing_version']}")
     print(f"Common comparison grid: {common_grid[0]:.1f} to {common_grid[-1]:.1f} cm^-1")
     print(f"Processed points per spectrum: {len(common_grid)}")
 
@@ -177,7 +197,7 @@ def main() -> None:
             FROM biosample_processed_spectra
             WHERE dataset_id = ? AND processing_version = ?
             """,
-            [args.dataset_id, PROCESSING_VERSION],
+            [args.dataset_id, config["processing_version"]],
         ).fetchdf()
 
         if not existing_processed_ids.empty:
@@ -191,21 +211,21 @@ def main() -> None:
                     WHERE dataset_id = ? AND processing_version = ?
                 )
                 """,
-                [args.dataset_id, PROCESSING_VERSION],
+                [args.dataset_id, config["processing_version"]],
             )
             connection.execute(
                 """
                 DELETE FROM biosample_processed_spectra
                 WHERE dataset_id = ? AND processing_version = ?
                 """,
-                [args.dataset_id, PROCESSING_VERSION],
+                [args.dataset_id, config["processing_version"]],
             )
             connection.execute(
                 """
                 DELETE FROM biosample_class_summary
                 WHERE dataset_id = ? AND processing_version = ?
                 """,
-                [args.dataset_id, PROCESSING_VERSION],
+                [args.dataset_id, config["processing_version"]],
             )
 
         total_processed_spectra = 0
@@ -237,11 +257,13 @@ def main() -> None:
                 class_label = spectrum_df["class_label"].iloc[0]
                 subclass_label = spectrum_df["subclass_label"].iloc[0]
                 processed_result = process_one_spectrum(
+                    dataset_id=args.dataset_id,
                     biosample_id=biosample_id,
                     spectrum_df=spectrum_df,
                     class_label=class_label,
                     subclass_label=subclass_label,
                     common_grid=common_grid,
+                    config=config,
                 )
 
                 if processed_result is None:
@@ -299,15 +321,15 @@ def main() -> None:
 
             summary_rows.append(
                 {
-                    "summary_id": f"{PROCESSING_VERSION}__{args.dataset_id}__{label_part}__{subclass_part}",
+                    "summary_id": f"{config['processing_version']}__{args.dataset_id}__{label_part}__{subclass_part}",
                     "dataset_id": args.dataset_id,
                     "class_label": class_label,
                     "subclass_label": subclass_label,
-                    "processing_version": PROCESSING_VERSION,
+                    "processing_version": config["processing_version"],
                     "n_spectra": count,
-                    "crop_min_cm": CROP_MIN_CM,
-                    "crop_max_cm": CROP_MAX_CM,
-                    "interpolation_step_cm": INTERPOLATION_STEP_CM,
+                    "crop_min_cm": config["crop_min_cm"],
+                    "crop_max_cm": config["crop_max_cm"],
+                    "interpolation_step_cm": config["interpolation_step_cm"],
                     "mean_wavenumbers_json": serialize_array(common_grid),
                     "mean_intensity_json": serialize_array(mean_intensity),
                     "std_intensity_json": serialize_array(std_intensity),
