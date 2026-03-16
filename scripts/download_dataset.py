@@ -1,6 +1,7 @@
 import argparse
 import sys
 from pathlib import Path
+from urllib.request import urlretrieve
 from zipfile import ZipFile, BadZipFile
 
 import pandas as pd
@@ -62,6 +63,22 @@ def main() -> None:
     print(f"Dataset found: {dataset_row['name']}")
     print(f"Source URL: {dataset_row['source_url']}")
     print(f"Target folder: {target_folder}")
+
+    if args.dataset_id == "shine_ev_sers":
+        zip_url = (
+            "https://zenodo.org/records/14768753/files/"
+            "SERS-Hepatotoxicity_DATA_CODE_FIGURE.zip?download=1"
+        )
+        zip_path = target_folder / "SERS-Hepatotoxicity_DATA_CODE_FIGURE.zip"
+        print(f"Downloading Zenodo archive: {zip_url}")
+        urlretrieve(zip_url, zip_path)
+        print(f"Downloaded archive to: {zip_path}")
+        top_level_folders = extract_zip_file(zip_path, target_folder)
+        print("Extracted top-level folders:")
+        for folder_name in top_level_folders:
+            print(f"  {folder_name}")
+        print("SHINE EV SERS download and extraction step is complete.")
+        return
 
     if args.dataset_id != "ramanbiolib":
         print("Downloader scaffold is ready, but automatic downloading is only implemented for RamanBioLib right now.")

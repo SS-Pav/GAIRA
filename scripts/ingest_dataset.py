@@ -11,6 +11,8 @@ def main() -> None:
     sys.path.insert(0, str(project_root / "src"))
 
     from gaira.config import ensure_storage_dirs, resolve_storage_path
+    from gaira.parsers.biosample.shine_ev_sers_parser import ShineEVSERSParser
+    from gaira.parsers.knowledge.raman_knowledge_core_parser import RamanKnowledgeCoreParser
     from gaira.parsers.ramanbiolib_parser import RamanBioLibParser
 
     parser = argparse.ArgumentParser(description="Run a dataset ingestion scaffold for GAIRA.")
@@ -76,6 +78,17 @@ def main() -> None:
         return
 
     if selected_family == "biosample":
+        if args.dataset_id == "shine_ev_sers":
+            parser_instance = ShineEVSERSParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running SHINE EV SERS biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
         print(
             "Biosample parser scaffold exists, but no concrete dataset implementation has "
             "been added yet."
@@ -83,6 +96,17 @@ def main() -> None:
         return
 
     if selected_family == "knowledge":
+        if args.dataset_id == "raman_knowledge_core":
+            parser_instance = RamanKnowledgeCoreParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running Raman knowledge core ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
         print(
             "Knowledge parser scaffold exists, but no concrete dataset implementation has "
             "been added yet."

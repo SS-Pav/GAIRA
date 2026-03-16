@@ -239,6 +239,65 @@ def main() -> None:
             """
         )
 
+        # Processed biosample spectra aligned to a common comparison grid.
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS biosample_processed_spectra (
+                processed_id TEXT,
+                biosample_id TEXT,
+                dataset_id TEXT,
+                processing_version TEXT,
+                crop_min_cm REAL,
+                crop_max_cm REAL,
+                interpolation_step_cm REAL,
+                baseline_method TEXT,
+                normalization_method TEXT,
+                n_points INTEGER,
+                x_min REAL,
+                x_max REAL,
+                wavenumbers_json TEXT,
+                intensity_json TEXT,
+                source_table TEXT,
+                processing_notes TEXT
+            )
+            """
+        )
+
+        # One row per point for the processed biosample spectra.
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS biosample_processed_points (
+                processed_id TEXT,
+                biosample_id TEXT,
+                dataset_id TEXT,
+                point_index INTEGER,
+                wavenumber REAL,
+                intensity REAL
+            )
+            """
+        )
+
+        # Class-level mean and standard deviation spectra for processed biosamples.
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS biosample_class_summary (
+                summary_id TEXT,
+                dataset_id TEXT,
+                class_label TEXT,
+                subclass_label TEXT,
+                processing_version TEXT,
+                n_spectra INTEGER,
+                crop_min_cm REAL,
+                crop_max_cm REAL,
+                interpolation_step_cm REAL,
+                mean_wavenumbers_json TEXT,
+                mean_intensity_json TEXT,
+                std_intensity_json TEXT,
+                notes TEXT
+            )
+            """
+        )
+
         # Literature and other knowledge sources for a future RAG layer.
         db.execute(
             """
@@ -322,6 +381,49 @@ def main() -> None:
                 applies_to TEXT,
                 note_text TEXT,
                 mitigation_text TEXT
+            )
+            """
+        )
+
+        # Explicit semantic Raman regions curated for cautious interpretation.
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS semantic_regions (
+                region_id TEXT,
+                dataset_id TEXT,
+                region_label TEXT,
+                region_min_cm REAL,
+                region_max_cm REAL,
+                dominant_group TEXT,
+                secondary_groups TEXT,
+                typical_examples TEXT,
+                interpretation_note TEXT,
+                caution_note TEXT
+            )
+            """
+        )
+
+        # Dataset-specific acquisition context for cautious interpretation.
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS dataset_context (
+                context_id TEXT,
+                dataset_id TEXT,
+                target_dataset_id TEXT,
+                modality TEXT,
+                sample_type TEXT,
+                measurement_state TEXT,
+                substrate_type TEXT,
+                enhancement_mode TEXT,
+                known_biases TEXT,
+                region_caution_450_700 TEXT,
+                region_caution_700_900 TEXT,
+                region_caution_900_1100 TEXT,
+                region_caution_1100_1300 TEXT,
+                region_caution_1300_1500 TEXT,
+                region_caution_1500_1700 TEXT,
+                interpretation_note TEXT,
+                do_not_overclaim_note TEXT
             )
             """
         )
