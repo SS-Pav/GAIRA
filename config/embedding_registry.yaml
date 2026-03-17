@@ -1,0 +1,34 @@
+defaults:
+  small2023_ev: small2023_ev_v1
+
+embeddings:
+  small2023_ev_v1:
+    dataset_id: small2023_ev
+    benchmark_version: v1
+    role: production_default
+    status: default_working_gaira_embedding
+    output_dir: /Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding
+    notes: >
+      Default working GAIRA embedding for downstream inference, search, and interpretation
+      experiments on small2023_ev. This is the current non-transductive working default by
+      project policy, even though later research benchmarks exist.
+
+  small2023_ev_v2:
+    dataset_id: small2023_ev
+    benchmark_version: v2
+    role: research_upper_bound
+    status: transductive_supervised_upper_bound
+    output_dir: /Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v2
+    notes: >
+      Research-only upper-bound benchmark. Strong but transductive, so it should not be treated
+      as the default deployment-like embedding.
+
+  small2023_ev_v3:
+    dataset_id: small2023_ev
+    benchmark_version: v3
+    role: strict_transfer_test
+    status: strict_source_only_negative_result
+    output_dir: /Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v3
+    notes: >
+      Strict train-only source-transfer benchmark. Kept as a negative-result stress test rather
+      than a downstream default.
