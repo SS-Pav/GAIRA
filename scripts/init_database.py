@@ -439,6 +439,7 @@ def main() -> None:
                 measurement_mode TEXT,
                 default_substrate_type TEXT,
                 default_substrate_material TEXT,
+                substrate_vendor TEXT,
                 instrument_context TEXT,
                 default_preprocessing_family TEXT,
                 notes TEXT
@@ -456,6 +457,7 @@ def main() -> None:
                 measurement_mode TEXT,
                 substrate_type TEXT,
                 substrate_material TEXT,
+                substrate_vendor TEXT,
                 substrate_batch_id TEXT,
                 probe_family TEXT,
                 spectral_axis_family TEXT,
@@ -464,6 +466,13 @@ def main() -> None:
                 notes TEXT
             )
             """
+        )
+
+        db.execute(
+            "ALTER TABLE dataset_domain_context ADD COLUMN IF NOT EXISTS substrate_vendor TEXT"
+        )
+        db.execute(
+            "ALTER TABLE subclass_domain_context ADD COLUMN IF NOT EXISTS substrate_vendor TEXT"
         )
 
     print(

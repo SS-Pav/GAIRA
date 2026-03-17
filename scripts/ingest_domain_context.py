@@ -12,6 +12,7 @@ DATASET_CONTEXT_COLUMNS = [
     "measurement_mode",
     "default_substrate_type",
     "default_substrate_material",
+    "substrate_vendor",
     "instrument_context",
     "default_preprocessing_family",
     "notes",
@@ -25,6 +26,7 @@ SUBCLASS_CONTEXT_COLUMNS = [
     "measurement_mode",
     "substrate_type",
     "substrate_material",
+    "substrate_vendor",
     "substrate_batch_id",
     "probe_family",
     "spectral_axis_family",
@@ -70,11 +72,75 @@ def main() -> None:
             )
 
         connection.register("dataset_context_df", dataset_df)
-        connection.execute("INSERT INTO dataset_domain_context SELECT * FROM dataset_context_df")
+        connection.execute(
+            """
+            INSERT INTO dataset_domain_context (
+                dataset_id,
+                dataset_family,
+                context_level,
+                biosample_type,
+                measurement_mode,
+                default_substrate_type,
+                default_substrate_material,
+                instrument_context,
+                default_preprocessing_family,
+                notes,
+                substrate_vendor
+            )
+            SELECT
+                dataset_id,
+                dataset_family,
+                context_level,
+                biosample_type,
+                measurement_mode,
+                default_substrate_type,
+                default_substrate_material,
+                instrument_context,
+                default_preprocessing_family,
+                notes,
+                substrate_vendor
+            FROM dataset_context_df
+            """
+        )
         connection.unregister("dataset_context_df")
 
         connection.register("subclass_context_df", subclass_df)
-        connection.execute("INSERT INTO subclass_domain_context SELECT * FROM subclass_context_df")
+        connection.execute(
+            """
+            INSERT INTO subclass_domain_context (
+                dataset_id,
+                subclass_label,
+                context_level,
+                biosample_type,
+                measurement_mode,
+                substrate_type,
+                substrate_material,
+                substrate_batch_id,
+                probe_family,
+                spectral_axis_family,
+                cross_domain_intensity_comparable,
+                preprocessing_family,
+                notes,
+                substrate_vendor
+            )
+            SELECT
+                dataset_id,
+                subclass_label,
+                context_level,
+                biosample_type,
+                measurement_mode,
+                substrate_type,
+                substrate_material,
+                substrate_batch_id,
+                probe_family,
+                spectral_axis_family,
+                cross_domain_intensity_comparable,
+                preprocessing_family,
+                notes,
+                substrate_vendor
+            FROM subclass_context_df
+            """
+        )
         connection.unregister("subclass_context_df")
 
     print(f"Inserted dataset_domain_context rows: {len(dataset_df)}")

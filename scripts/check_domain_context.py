@@ -23,6 +23,9 @@ def main() -> None:
                 biosample_type,
                 measurement_mode,
                 default_substrate_type,
+                default_substrate_material,
+                substrate_vendor,
+                instrument_context,
                 default_preprocessing_family
             FROM dataset_domain_context
             ORDER BY dataset_id
@@ -35,6 +38,10 @@ def main() -> None:
                 dataset_id,
                 subclass_label,
                 measurement_mode,
+                substrate_type,
+                substrate_material,
+                substrate_vendor,
+                substrate_batch_id,
                 probe_family,
                 spectral_axis_family,
                 cross_domain_intensity_comparable,
