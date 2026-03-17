@@ -428,8 +428,46 @@ def main() -> None:
             """
         )
 
+        # Lightweight measurement/domain context for routing and invariant analysis.
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS dataset_domain_context (
+                dataset_id TEXT,
+                dataset_family TEXT,
+                context_level TEXT,
+                biosample_type TEXT,
+                measurement_mode TEXT,
+                default_substrate_type TEXT,
+                default_substrate_material TEXT,
+                instrument_context TEXT,
+                default_preprocessing_family TEXT,
+                notes TEXT
+            )
+            """
+        )
+
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS subclass_domain_context (
+                dataset_id TEXT,
+                subclass_label TEXT,
+                context_level TEXT,
+                biosample_type TEXT,
+                measurement_mode TEXT,
+                substrate_type TEXT,
+                substrate_material TEXT,
+                substrate_batch_id TEXT,
+                probe_family TEXT,
+                spectral_axis_family TEXT,
+                cross_domain_intensity_comparable TEXT,
+                preprocessing_family TEXT,
+                notes TEXT
+            )
+            """
+        )
+
     print(
-        "GAIRA database initialized with registry, reference, biosample, and knowledge tables."
+        "GAIRA database initialized with registry, reference, biosample, knowledge, and domain-context tables."
     )
 
 
