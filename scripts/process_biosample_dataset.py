@@ -27,6 +27,17 @@ PROCESSING_CONFIGS = {
         "baseline_method": "none",
         "normalization_method": "minmax",
     },
+    "hcc_serum": {
+        # The released R_code.R crops to 430..1730 cm^-1 after baseline handling.
+        # GAIRA reuses that comparison window and a 1 cm common grid, while keeping
+        # baseline handling explicit as none in this first processed-layer pass.
+        "processing_version": "v1_crop430_1730_interp1_minmax",
+        "crop_min_cm": 430.0,
+        "crop_max_cm": 1730.0,
+        "interpolation_step_cm": 1.0,
+        "baseline_method": "none",
+        "normalization_method": "minmax",
+    },
 }
 SOURCE_TABLE = "biosample_spectrum_points"
 
@@ -159,7 +170,7 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.dataset_id not in PROCESSING_CONFIGS:
-        print("Processed biosample support is only implemented for shine_ev_sers and small2023_ev right now.")
+        print("Processed biosample support is only implemented for shine_ev_sers, small2023_ev, and hcc_serum right now.")
         return
 
     config = PROCESSING_CONFIGS[args.dataset_id]
