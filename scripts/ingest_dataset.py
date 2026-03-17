@@ -18,6 +18,9 @@ def main() -> None:
     from gaira.parsers.grounding.serum_ag_colloids_grounding_parser import (
         SerumAgColloidsGroundingParser,
     )
+    from gaira.parsers.grounding.serum_ag_colloids_literature_grounding_parser import (
+        SerumAgColloidsLiteratureGroundingParser,
+    )
     from gaira.parsers.biosample.shine_ev_sers_parser import ShineEVSERSParser
     from gaira.parsers.knowledge.raman_knowledge_core_parser import RamanKnowledgeCoreParser
     from gaira.parsers.ramanbiolib_parser import RamanBioLibParser
@@ -61,7 +64,7 @@ def main() -> None:
         return
 
     dataset_root = raw_data_path / args.dataset_id
-    if args.dataset_id == "serum_ag_colloids_grounding":
+    if args.dataset_id in {"serum_ag_colloids_grounding", "serum_ag_colloids_literature_grounding"}:
         dataset_root = raw_data_path / "serum_ag_colloids"
 
     print("Storage paths in use:")
@@ -176,6 +179,17 @@ def main() -> None:
                 db_path=db_path,
             )
             print("Running serum_ag_colloids_grounding ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id == "serum_ag_colloids_literature_grounding":
+            parser_instance = SerumAgColloidsLiteratureGroundingParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running serum_ag_colloids_literature_grounding ingestion into DuckDB.")
             parser_instance.audit()
             parser_instance.ingest()
             return

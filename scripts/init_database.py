@@ -609,6 +609,82 @@ def main() -> None:
             """
         )
 
+        # Tier-2 grounding support layer for literature-backed evidence and digitized spectra.
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS grounding_support_documents (
+                document_id TEXT,
+                dataset_id TEXT,
+                source_dataset_id TEXT,
+                evidence_family TEXT,
+                evidence_tier TEXT,
+                support_type TEXT,
+                citation_label TEXT,
+                title TEXT,
+                authors TEXT,
+                year TEXT,
+                journal TEXT,
+                doi TEXT,
+                source_file TEXT,
+                is_digitized TEXT,
+                use_for_primary_matching TEXT,
+                use_for_supporting_comparison TEXT,
+                use_for_rag TEXT,
+                notes TEXT
+            )
+            """
+        )
+
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS grounding_support_chunks (
+                chunk_id TEXT,
+                document_id TEXT,
+                dataset_id TEXT,
+                chunk_order INTEGER,
+                section TEXT,
+                chunk_text TEXT,
+                metadata_json TEXT
+            )
+            """
+        )
+
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS grounding_support_spectra (
+                support_spectrum_id TEXT,
+                document_id TEXT,
+                dataset_id TEXT,
+                source_dataset_id TEXT,
+                evidence_family TEXT,
+                citation_label TEXT,
+                x_min REAL,
+                x_max REAL,
+                n_points INTEGER,
+                wavenumbers_json TEXT,
+                intensity_json TEXT,
+                is_digitized TEXT,
+                use_for_primary_matching TEXT,
+                use_for_supporting_comparison TEXT,
+                use_for_rag TEXT,
+                notes TEXT
+            )
+            """
+        )
+
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS grounding_support_spectrum_points (
+                support_spectrum_id TEXT,
+                document_id TEXT,
+                dataset_id TEXT,
+                point_index INTEGER,
+                wavenumber REAL,
+                intensity REAL
+            )
+            """
+        )
+
     print(
         "GAIRA database initialized with registry, reference, biosample, grounding, knowledge, and domain-context tables."
     )

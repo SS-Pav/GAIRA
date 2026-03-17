@@ -37,6 +37,7 @@ def main() -> None:
     for dataset_id in [
         "ramanbiolib",
         "serum_ag_colloids_grounding",
+        "serum_ag_colloids_literature_grounding",
         "small2023_ev",
         "shine_ev_sers",
         "diabetes_plasma_ev_sers",

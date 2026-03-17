@@ -47,8 +47,10 @@ packs:
     datasets:
       - ramanbiolib
       - serum_ag_colloids_grounding
+      - serum_ag_colloids_literature_grounding
     notes: >
       Shared molecular, perturbation, and literature-backed grounding pack. This pack is intended
       to support multiple biosample-domain foundation packs without being treated itself as a
       biosample inference or benchmarking pack. It currently includes RamanBioLib and the selected
-      controlled-reference folders extracted from the serum_ag_colloids archive.
+      controlled-reference folders extracted from the serum_ag_colloids archive, plus the deferred
+      literature and digitized-literature support assets from the same release.

@@ -211,7 +211,7 @@ def main() -> None:
         print("serum_ag_colloids download step is complete.")
         return
 
-    if args.dataset_id == "serum_ag_colloids_grounding":
+    if args.dataset_id in {"serum_ag_colloids_grounding", "serum_ag_colloids_literature_grounding"}:
         download_targets = [
             (
                 "dataset_spectral_data.zip",
@@ -233,7 +233,7 @@ def main() -> None:
         print(
             "Downloading the shared serum Ag colloids release assets for the grounding-layer asset. "
             "The grounding ingest reuses the same grounded archive as the serum biosample dataset but "
-            "targets only selected controlled-reference folders."
+            "targets only selected non-biosample support folders."
         )
 
         for file_name, file_url in download_targets:
@@ -246,7 +246,7 @@ def main() -> None:
             urlretrieve(file_url, output_path)
             print(f"Saved: {output_path}")
 
-        print("serum_ag_colloids_grounding download step is complete.")
+        print(f"{args.dataset_id} download step is complete.")
         return
 
     if args.dataset_id != "ramanbiolib":
