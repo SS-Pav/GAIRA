@@ -1,0 +1,34 @@
+packs:
+  GAIRA_EV:
+    pack_id: GAIRA_EV
+    role: ev_foundation_pack
+    status: active_scaffold
+    intended_sample_types:
+      - extracellular vesicles
+    intended_matrices:
+      - plasma EV
+      - EV-like SERS datasets
+    datasets:
+      - ramanbiolib
+      - small2023_ev
+      - shine_ev_sers
+      - diabetes_plasma_ev_sers
+    default_embedding: small2023_ev_v1
+    notes: >
+      First EV-focused GAIRA foundation pack. Keeps reference-library support via RamanBioLib and
+      uses small2023_ev_v1 as the current default downstream embedding for EV-domain work.
+
+  GAIRA_SERUM:
+    pack_id: GAIRA_SERUM
+    role: serum_foundation_pack
+    status: scaffold_pending_serum_onboarding
+    intended_sample_types:
+      - serum
+    intended_matrices:
+      - serum
+    datasets:
+      - ramanbiolib
+    default_embedding: none_yet
+    notes: >
+      Serum-domain scaffold only. RamanBioLib is included as the shared analog-reference base,
+      but no serum biosample embedding is onboarded yet.
