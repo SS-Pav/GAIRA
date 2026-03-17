@@ -115,6 +115,67 @@ def main() -> None:
         print("small2023_ev download step is complete.")
         return
 
+    if args.dataset_id == "diabetes_plasma_ev_sers":
+        download_targets = [
+            (
+                "Diabetes_Raw_Data_Codes.zip",
+                "https://zenodo.org/api/records/18945379/files/Diabetes%20-%20Raw%20Data%20-%20Codes.zip/content",
+            ),
+        ]
+
+        print(
+            "Downloading the grounded diabetes plasma EV multimodal archive. "
+            "The initial GAIRA onboarding targets the released Figure 3 SERS MAT assets inside this zip."
+        )
+
+        for file_name, file_url in download_targets:
+            output_path = target_folder / file_name
+            if output_path.exists() and output_path.stat().st_size > 0:
+                print(f"Skipping existing file: {output_path}")
+                continue
+
+            print(f"Downloading: {file_url}")
+            urlretrieve(file_url, output_path)
+            print(f"Saved: {output_path}")
+
+        print("diabetes_plasma_ev_sers download step is complete.")
+        return
+
+    if args.dataset_id == "hcc_serum":
+        download_targets = [
+            (
+                "dataset.zip",
+                "https://zenodo.org/api/records/4277797/files/dataset.zip/content",
+            ),
+            (
+                "data.csv",
+                "https://zenodo.org/api/records/4277797/files/data.csv/content",
+            ),
+            (
+                "R_code.R",
+                "https://zenodo.org/api/records/4277797/files/R_code.R/content",
+            ),
+        ]
+
+        print(
+            "Downloading the grounded HCC serum SERS release assets. "
+            "GAIRA onboarding will use the 144-spectrum TXT archive as the primary raw path "
+            "and keep data.csv plus R_code.R as grounded metadata and preprocessing references."
+        )
+
+        for file_name, file_url in download_targets:
+            output_path = target_folder / file_name
+            if output_path.exists() and output_path.stat().st_size > 0:
+                print(f"Skipping existing file: {output_path}")
+                continue
+
+            print(f"Downloading: {file_url}")
+            urlretrieve(file_url, output_path)
+            print(f"Saved: {output_path}")
+
+        print("hcc_serum download step is complete.")
+        return
+
     if args.dataset_id != "ramanbiolib":
         print("Downloader scaffold is ready, but automatic downloading is only implemented for RamanBioLib right now.")
         return

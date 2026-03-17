@@ -28,7 +28,9 @@ packs:
       - serum
     datasets:
       - ramanbiolib
+      - hcc_serum
     default_embedding: none_yet
     notes: >
-      Serum-domain scaffold only. RamanBioLib is included as the shared analog-reference base,
-      but no serum biosample embedding is onboarded yet.
+      First serum-domain scaffold. RamanBioLib is included as the shared analog-reference base,
+      and hcc_serum is the first onboarded serum biosample dataset. No serum embedding is
+      promoted to default yet.

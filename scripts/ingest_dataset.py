@@ -11,6 +11,8 @@ def main() -> None:
     sys.path.insert(0, str(project_root / "src"))
 
     from gaira.config import ensure_storage_dirs, resolve_storage_path
+    from gaira.parsers.biosample.diabetes_plasma_ev_sers_parser import DiabetesPlasmaEVSERSParser
+    from gaira.parsers.biosample.hcc_serum_parser import HCCSerumParser
     from gaira.parsers.biosample.small2023_ev_parser import Small2023EVParser
     from gaira.parsers.biosample.shine_ev_sers_parser import ShineEVSERSParser
     from gaira.parsers.knowledge.raman_knowledge_core_parser import RamanKnowledgeCoreParser
@@ -97,6 +99,28 @@ def main() -> None:
                 db_path=db_path,
             )
             print("Running small2023_ev biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id == "diabetes_plasma_ev_sers":
+            parser_instance = DiabetesPlasmaEVSERSParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running diabetes_plasma_ev_sers biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id == "hcc_serum":
+            parser_instance = HCCSerumParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running hcc_serum biosample ingestion into DuckDB.")
             parser_instance.audit()
             parser_instance.ingest()
             return
