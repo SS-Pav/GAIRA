@@ -475,8 +475,142 @@ def main() -> None:
             "ALTER TABLE subclass_domain_context ADD COLUMN IF NOT EXISTS substrate_vendor TEXT"
         )
 
+        # Grounding-layer metadata for controlled references and perturbation assets that are not
+        # biosample benchmark datasets and do not fit the RamanBioLib reference schema cleanly.
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS grounding_metadata (
+                grounding_id TEXT,
+                dataset_id TEXT,
+                source_dataset_id TEXT,
+                source_row_id TEXT,
+                experiment_family TEXT,
+                grounding_role TEXT,
+                modality TEXT,
+                compound_label TEXT,
+                class_label TEXT,
+                concentration_label TEXT,
+                replicate_id TEXT,
+                source_file TEXT,
+                biosample_context TEXT,
+                substrate_type TEXT,
+                substrate_material TEXT,
+                instrument TEXT,
+                laser_wavelength_nm TEXT,
+                spectral_range TEXT,
+                preprocessing_summary TEXT,
+                notes TEXT
+            )
+            """
+        )
+
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS grounding_spectra (
+                grounding_id TEXT,
+                dataset_id TEXT,
+                source_dataset_id TEXT,
+                source_row_id TEXT,
+                x_min REAL,
+                x_max REAL,
+                n_points INTEGER,
+                wavenumbers_json TEXT,
+                intensity_json TEXT,
+                normalized_flag TEXT,
+                preprocessing_summary TEXT
+            )
+            """
+        )
+
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS grounding_spectrum_points (
+                grounding_id TEXT,
+                dataset_id TEXT,
+                source_dataset_id TEXT,
+                source_row_id TEXT,
+                point_index INTEGER,
+                wavenumber REAL,
+                intensity REAL
+            )
+            """
+        )
+
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS grounding_peaks (
+                grounding_id TEXT,
+                dataset_id TEXT,
+                source_dataset_id TEXT,
+                source_row_id TEXT,
+                peak_rank INTEGER,
+                peak_cm REAL,
+                peak_intensity REAL,
+                prominence REAL
+            )
+            """
+        )
+
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS grounding_processed_spectra (
+                processed_id TEXT,
+                grounding_id TEXT,
+                dataset_id TEXT,
+                experiment_family TEXT,
+                class_label TEXT,
+                processing_version TEXT,
+                crop_min_cm REAL,
+                crop_max_cm REAL,
+                interpolation_step_cm REAL,
+                baseline_method TEXT,
+                normalization_method TEXT,
+                n_points INTEGER,
+                x_min REAL,
+                x_max REAL,
+                wavenumbers_json TEXT,
+                intensity_json TEXT,
+                source_table TEXT,
+                processing_notes TEXT
+            )
+            """
+        )
+
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS grounding_processed_points (
+                processed_id TEXT,
+                grounding_id TEXT,
+                dataset_id TEXT,
+                point_index INTEGER,
+                wavenumber REAL,
+                intensity REAL
+            )
+            """
+        )
+
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS grounding_class_summary (
+                summary_id TEXT,
+                dataset_id TEXT,
+                experiment_family TEXT,
+                class_label TEXT,
+                processing_version TEXT,
+                n_spectra INTEGER,
+                crop_min_cm REAL,
+                crop_max_cm REAL,
+                interpolation_step_cm REAL,
+                mean_wavenumbers_json TEXT,
+                mean_intensity_json TEXT,
+                std_intensity_json TEXT,
+                notes TEXT
+            )
+            """
+        )
+
     print(
-        "GAIRA database initialized with registry, reference, biosample, knowledge, and domain-context tables."
+        "GAIRA database initialized with registry, reference, biosample, grounding, knowledge, and domain-context tables."
     )
 
 

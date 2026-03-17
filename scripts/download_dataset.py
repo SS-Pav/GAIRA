@@ -176,6 +176,79 @@ def main() -> None:
         print("hcc_serum download step is complete.")
         return
 
+    if args.dataset_id == "serum_ag_colloids":
+        download_targets = [
+            (
+                "dataset_spectral_data.zip",
+                "https://zenodo.org/api/records/17374939/files/Dataset%20spectral%20data.zip/content",
+            ),
+            (
+                "scripts_spectral_data.zip",
+                "https://zenodo.org/api/records/17374939/files/Scripts%20spectral%20data.zip/content",
+            ),
+            (
+                "Instructions.docx",
+                "https://zenodo.org/api/records/17374939/files/Instructions.docx/content",
+            ),
+        ]
+
+        print(
+            "Downloading the grounded serum Ag colloids release assets. "
+            "GAIRA onboarding will keep the native BWtek TXT archive untouched and use the released "
+            "script and instructions files as grounded metadata/context references."
+        )
+
+        for file_name, file_url in download_targets:
+            output_path = target_folder / file_name
+            if output_path.exists() and output_path.stat().st_size > 0:
+                print(f"Skipping existing file: {output_path}")
+                continue
+
+            print(f"Downloading: {file_url}")
+            urlretrieve(file_url, output_path)
+            print(f"Saved: {output_path}")
+
+        print("serum_ag_colloids download step is complete.")
+        return
+
+    if args.dataset_id == "serum_ag_colloids_grounding":
+        download_targets = [
+            (
+                "dataset_spectral_data.zip",
+                "https://zenodo.org/api/records/17374939/files/Dataset%20spectral%20data.zip/content",
+            ),
+            (
+                "scripts_spectral_data.zip",
+                "https://zenodo.org/api/records/17374939/files/Scripts%20spectral%20data.zip/content",
+            ),
+            (
+                "Instructions.docx",
+                "https://zenodo.org/api/records/17374939/files/Instructions.docx/content",
+            ),
+        ]
+
+        shared_folder = raw_data_path / "serum_ag_colloids"
+        shared_folder.mkdir(parents=True, exist_ok=True)
+
+        print(
+            "Downloading the shared serum Ag colloids release assets for the grounding-layer asset. "
+            "The grounding ingest reuses the same grounded archive as the serum biosample dataset but "
+            "targets only selected controlled-reference folders."
+        )
+
+        for file_name, file_url in download_targets:
+            output_path = shared_folder / file_name
+            if output_path.exists() and output_path.stat().st_size > 0:
+                print(f"Skipping existing file: {output_path}")
+                continue
+
+            print(f"Downloading: {file_url}")
+            urlretrieve(file_url, output_path)
+            print(f"Saved: {output_path}")
+
+        print("serum_ag_colloids_grounding download step is complete.")
+        return
+
     if args.dataset_id != "ramanbiolib":
         print("Downloader scaffold is ready, but automatic downloading is only implemented for RamanBioLib right now.")
         return

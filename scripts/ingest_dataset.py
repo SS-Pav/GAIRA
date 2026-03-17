@@ -13,7 +13,11 @@ def main() -> None:
     from gaira.config import ensure_storage_dirs, resolve_storage_path
     from gaira.parsers.biosample.diabetes_plasma_ev_sers_parser import DiabetesPlasmaEVSERSParser
     from gaira.parsers.biosample.hcc_serum_parser import HCCSerumParser
+    from gaira.parsers.biosample.serum_ag_colloids_parser import SerumAgColloidsParser
     from gaira.parsers.biosample.small2023_ev_parser import Small2023EVParser
+    from gaira.parsers.grounding.serum_ag_colloids_grounding_parser import (
+        SerumAgColloidsGroundingParser,
+    )
     from gaira.parsers.biosample.shine_ev_sers_parser import ShineEVSERSParser
     from gaira.parsers.knowledge.raman_knowledge_core_parser import RamanKnowledgeCoreParser
     from gaira.parsers.ramanbiolib_parser import RamanBioLibParser
@@ -37,6 +41,8 @@ def main() -> None:
         selected_family = "reference"
     elif dataset_family == "biosample":
         selected_family = "biosample"
+    elif dataset_family == "grounding":
+        selected_family = "grounding"
     elif dataset_family == "knowledge":
         selected_family = "knowledge"
     else:
@@ -55,6 +61,8 @@ def main() -> None:
         return
 
     dataset_root = raw_data_path / args.dataset_id
+    if args.dataset_id == "serum_ag_colloids_grounding":
+        dataset_root = raw_data_path / "serum_ag_colloids"
 
     print("Storage paths in use:")
     print(f"  raw_data: {raw_data_path}")
@@ -125,6 +133,17 @@ def main() -> None:
             parser_instance.ingest()
             return
 
+        if args.dataset_id == "serum_ag_colloids":
+            parser_instance = SerumAgColloidsParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running serum_ag_colloids biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
         print(
             "Biosample parser scaffold exists, but no concrete dataset implementation has "
             "been added yet."
@@ -149,9 +168,27 @@ def main() -> None:
         )
         return
 
+    if selected_family == "grounding":
+        if args.dataset_id == "serum_ag_colloids_grounding":
+            parser_instance = SerumAgColloidsGroundingParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running serum_ag_colloids_grounding ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        print(
+            "Grounding parser scaffold exists, but no concrete dataset implementation has "
+            "been added yet."
+        )
+        return
+
     print(
         "Dataset family could not be resolved from the registry. Add a registry row with "
-        "dataset_family set to reference, biosample, or knowledge."
+        "dataset_family set to reference, biosample, grounding, or knowledge."
     )
 
 

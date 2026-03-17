@@ -36,9 +36,12 @@ def main() -> None:
     print("Dataset membership lookup:")
     for dataset_id in [
         "ramanbiolib",
+        "serum_ag_colloids_grounding",
         "small2023_ev",
         "shine_ev_sers",
         "diabetes_plasma_ev_sers",
+        "hcc_serum",
+        "serum_ag_colloids",
     ]:
         print(f"  {dataset_id}: {', '.join(find_packs_for_dataset(dataset_id))}")
 

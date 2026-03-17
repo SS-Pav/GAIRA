@@ -1,6 +1,9 @@
 # Domain Pack Architecture
 
-GAIRA remains a single shared platform, but now carries an explicit domain-pack layer for pack-scoped defaults and dataset grouping.
+GAIRA remains a single shared platform, but now carries an explicit domain-pack layer that separates:
+
+1. biosample foundation packs used for inference and benchmarking
+2. shared grounding packs used for molecular attribution, analog matching, and interpretation support
 
 Current packs:
 
@@ -8,7 +11,6 @@ Current packs:
   - role: `ev_foundation_pack`
   - intended sample types: extracellular vesicles
   - datasets:
-    - `ramanbiolib`
     - `small2023_ev`
     - `shine_ev_sers`
     - `diabetes_plasma_ev_sers`
@@ -16,34 +18,45 @@ Current packs:
 
 - `GAIRA_SERUM`
   - role: `serum_foundation_pack`
-  - status: scaffold only
   - intended sample types: serum
   - datasets:
-    - `ramanbiolib`
+    - `hcc_serum`
+    - `serum_ag_colloids`
   - default embedding: `none_yet`
+
+- `GAIRA_GROUNDING`
+  - role: `shared_grounding_pack`
+  - status: `active_scaffold`
+  - datasets:
+    - `ramanbiolib`
+  - default embedding: none
 
 Design intent:
 
-- Keep shared infrastructure, search, and ingestion in one repo.
-- Allow future domain-specific foundation packs without splitting GAIRA into separate codebases.
-- Make pack membership, intended sample scope, and default embedding explicit in configuration.
+- Keep shared infrastructure, search, ingestion, and dataset registries in one repo.
+- Allow biosample packs to stay focused on domain-specific datasets and embeddings.
+- Keep shared grounding assets separate from biosample inference packs.
+- Make pack membership, intended scope, and default embeddings explicit in configuration.
 
 Current scope:
 
 - This layer is configuration only.
 - It does not introduce dynamic routing, inference switching, or pack-specific pipeline behavior.
-- It does not change RamanBioLib search behavior, SHINE behavior, or any existing benchmark outputs.
+- It does not change RamanBioLib search behavior, SHINE behavior, serum behavior, or any benchmark outputs.
 
 Relationship to embedding registry:
 
 - The embedding registry still defines benchmark roles and per-dataset default embeddings.
-- The domain-pack registry sits above that and defines which embedding a pack should treat as its default working embedding.
+- The domain-pack registry sits above that and defines which embedding a biosample pack should treat as its default working embedding.
 - Today, `GAIRA_EV` points to `small2023_ev_v1`.
+- `GAIRA_GROUNDING` intentionally does not define an embedding.
 
-Shared datasets:
+Grounding versus inference:
 
-- `ramanbiolib` is intentionally shared across packs as the analog-reference base layer.
+- `GAIRA_EV` and `GAIRA_SERUM` are biosample packs.
+- `GAIRA_GROUNDING` is a shared support layer for molecular and literature-backed interpretation.
+- `ramanbiolib` should now be treated as a grounding asset rather than as a member of biosample packs.
 
 Next use:
 
-- This architecture is ready for future serum dataset onboarding and future pack-specific inference selection logic if GAIRA needs it later.
+- This three-pack architecture is ready for future serum and EV expansion while keeping grounding resources explicit and reusable across domains.

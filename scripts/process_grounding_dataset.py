@@ -1,0 +1,314 @@
+import argparse
+import json
+from collections import defaultdict
+from pathlib import Path
+
+import duckdb
+import numpy as np
+import pandas as pd
+
+
+PROCESSING_CONFIGS = {
+    "serum_ag_colloids_grounding": {
+        "processing_version": "v1_crop400_1800_interp1_vector",
+        "crop_min_cm": 400.0,
+        "crop_max_cm": 1800.0,
+        "interpolation_step_cm": 1.0,
+        "baseline_method": "none",
+        "normalization_method": "vector_l2",
+        "notes": (
+            "Released serum_ag_colloids R scripts consistently crop controlled SERS reference families to "
+            "400-1800 cm^-1 before baseline correction and normalization. This first processed grounding pass "
+            "keeps the crop window but leaves baseline handling explicit as none, then interpolates to a 1 cm^-1 "
+            "grid and applies vector normalization for comparison-friendly direct SERS grounding."
+        ),
+    }
+}
+
+SOURCE_TABLE = "grounding_spectrum_points"
+
+
+def build_common_grid(config: dict) -> np.ndarray:
+    return np.arange(
+        config["crop_min_cm"],
+        config["crop_max_cm"] + config["interpolation_step_cm"],
+        config["interpolation_step_cm"],
+    )
+
+
+def normalize_vector(intensities: np.ndarray) -> np.ndarray:
+    norm = float(np.linalg.norm(intensities))
+    if norm <= 0:
+        return np.zeros_like(intensities, dtype=float)
+    return intensities / norm
+
+
+def serialize_array(values: np.ndarray) -> str:
+    return json.dumps([float(value) for value in values])
+
+
+def build_chunk_query(chunk_size: int) -> str:
+    placeholders = ", ".join(["?"] * chunk_size)
+    return f"""
+        SELECT
+            p.grounding_id,
+            p.point_index,
+            p.wavenumber,
+            p.intensity,
+            m.experiment_family,
+            m.class_label
+        FROM grounding_spectrum_points AS p
+        JOIN grounding_metadata AS m
+          ON p.grounding_id = m.grounding_id
+         AND p.dataset_id = m.dataset_id
+        WHERE p.dataset_id = ?
+          AND p.grounding_id IN ({placeholders})
+        ORDER BY p.grounding_id, p.point_index
+    """
+
+
+def process_one_spectrum(
+    dataset_id: str,
+    grounding_id: str,
+    spectrum_df: pd.DataFrame,
+    experiment_family: str,
+    class_label: str,
+    common_grid: np.ndarray,
+    config: dict,
+) -> tuple[dict, list[dict], tuple[str, str], np.ndarray] | None:
+    ordered_df = spectrum_df.sort_values("point_index").reset_index(drop=True)
+    x_values = ordered_df["wavenumber"].to_numpy(dtype=float)
+    y_values = ordered_df["intensity"].to_numpy(dtype=float)
+
+    crop_mask = (x_values >= config["crop_min_cm"]) & (x_values <= config["crop_max_cm"])
+    cropped_x = x_values[crop_mask]
+    cropped_y = y_values[crop_mask]
+
+    if len(cropped_x) < 2:
+        print(f"Skipping {grounding_id}: fewer than 2 points remained after cropping.")
+        return None
+
+    interpolated_y = np.interp(common_grid, cropped_x, cropped_y)
+    normalized_y = normalize_vector(interpolated_y)
+    processed_id = f"{config['processing_version']}__{grounding_id}"
+
+    spectrum_row = {
+        "processed_id": processed_id,
+        "grounding_id": grounding_id,
+        "dataset_id": dataset_id,
+        "experiment_family": experiment_family,
+        "class_label": class_label,
+        "processing_version": config["processing_version"],
+        "crop_min_cm": config["crop_min_cm"],
+        "crop_max_cm": config["crop_max_cm"],
+        "interpolation_step_cm": config["interpolation_step_cm"],
+        "baseline_method": config["baseline_method"],
+        "normalization_method": config["normalization_method"],
+        "n_points": int(len(common_grid)),
+        "x_min": float(common_grid.min()),
+        "x_max": float(common_grid.max()),
+        "wavenumbers_json": serialize_array(common_grid),
+        "intensity_json": serialize_array(normalized_y),
+        "source_table": SOURCE_TABLE,
+        "processing_notes": config["notes"],
+    }
+
+    point_rows = [
+        {
+            "processed_id": processed_id,
+            "grounding_id": grounding_id,
+            "dataset_id": dataset_id,
+            "point_index": point_index,
+            "wavenumber": float(wavenumber),
+            "intensity": float(intensity),
+        }
+        for point_index, (wavenumber, intensity) in enumerate(zip(common_grid, normalized_y), start=1)
+    ]
+
+    return spectrum_row, point_rows, (experiment_family, class_label), normalized_y
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Build a processed grounding layer in DuckDB.")
+    parser.add_argument("dataset_id", help="Grounding dataset identifier to process")
+    parser.add_argument("--chunk_size", type=int, default=250)
+    args = parser.parse_args()
+
+    if args.dataset_id not in PROCESSING_CONFIGS:
+        print("Processed grounding support is only implemented for serum_ag_colloids_grounding right now.")
+        return
+
+    project_root = Path(__file__).resolve().parents[1]
+    db_path = project_root / "data" / "gaira.duckdb"
+    config = PROCESSING_CONFIGS[args.dataset_id]
+    common_grid = build_common_grid(config)
+    class_accumulators: dict[tuple[str, str], dict[str, np.ndarray | int]] = defaultdict(dict)
+
+    print(f"Processing grounding dataset: {args.dataset_id}")
+    print(f"Database: {db_path}")
+    print(f"Processing version: {config['processing_version']}")
+    print(f"Common comparison grid: {common_grid[0]:.1f} to {common_grid[-1]:.1f} cm^-1")
+    print(f"Processed points per spectrum: {len(common_grid)}")
+
+    with duckdb.connect(str(db_path)) as connection:
+        metadata_df = connection.execute(
+            """
+            SELECT grounding_id, experiment_family, class_label
+            FROM grounding_metadata
+            WHERE dataset_id = ?
+            ORDER BY grounding_id
+            """,
+            [args.dataset_id],
+        ).fetchdf()
+
+        if metadata_df.empty:
+            print("No grounding metadata rows were found. Ingest the raw grounding dataset first.")
+            return
+
+        grounding_ids = metadata_df["grounding_id"].tolist()
+        print(f"Raw grounding spectra available: {len(grounding_ids)}")
+
+        connection.execute(
+            """
+            DELETE FROM grounding_processed_points
+            WHERE processed_id IN (
+                SELECT processed_id
+                FROM grounding_processed_spectra
+                WHERE dataset_id = ? AND processing_version = ?
+            )
+            """,
+            [args.dataset_id, config["processing_version"]],
+        )
+        connection.execute(
+            """
+            DELETE FROM grounding_processed_spectra
+            WHERE dataset_id = ? AND processing_version = ?
+            """,
+            [args.dataset_id, config["processing_version"]],
+        )
+        connection.execute(
+            """
+            DELETE FROM grounding_class_summary
+            WHERE dataset_id = ? AND processing_version = ?
+            """,
+            [args.dataset_id, config["processing_version"]],
+        )
+
+        total_processed_spectra = 0
+        total_processed_points = 0
+        skipped = 0
+        chunk_query_cache: dict[int, str] = {}
+
+        for chunk_start in range(0, len(grounding_ids), args.chunk_size):
+            chunk_ids = grounding_ids[chunk_start : chunk_start + args.chunk_size]
+            chunk_size = len(chunk_ids)
+            chunk_query = chunk_query_cache.get(chunk_size)
+            if chunk_query is None:
+                chunk_query = build_chunk_query(chunk_size)
+                chunk_query_cache[chunk_size] = chunk_query
+
+            chunk_df = connection.execute(chunk_query, [args.dataset_id, *chunk_ids]).fetchdf()
+            if chunk_df.empty:
+                continue
+
+            spectra_rows: list[dict] = []
+            point_rows: list[dict] = []
+
+            for grounding_id, spectrum_df in chunk_df.groupby("grounding_id", sort=False):
+                experiment_family = spectrum_df["experiment_family"].iloc[0]
+                class_label = spectrum_df["class_label"].iloc[0]
+                processed_result = process_one_spectrum(
+                    dataset_id=args.dataset_id,
+                    grounding_id=grounding_id,
+                    spectrum_df=spectrum_df,
+                    experiment_family=experiment_family,
+                    class_label=class_label,
+                    common_grid=common_grid,
+                    config=config,
+                )
+                if processed_result is None:
+                    skipped += 1
+                    continue
+
+                spectrum_row, spectrum_point_rows, group_key, normalized_y = processed_result
+                spectra_rows.append(spectrum_row)
+                point_rows.extend(spectrum_point_rows)
+
+                accumulator = class_accumulators[group_key]
+                if not accumulator:
+                    accumulator["sum"] = np.zeros_like(common_grid, dtype=float)
+                    accumulator["sum_sq"] = np.zeros_like(common_grid, dtype=float)
+                    accumulator["count"] = 0
+
+                accumulator["sum"] = accumulator["sum"] + normalized_y
+                accumulator["sum_sq"] = accumulator["sum_sq"] + np.square(normalized_y)
+                accumulator["count"] = int(accumulator["count"]) + 1
+
+            if spectra_rows:
+                spectra_insert_df = pd.DataFrame(spectra_rows)
+                connection.register("processed_grounding_spectra_chunk", spectra_insert_df)
+                connection.execute(
+                    "INSERT INTO grounding_processed_spectra SELECT * FROM processed_grounding_spectra_chunk"
+                )
+                connection.unregister("processed_grounding_spectra_chunk")
+
+                points_insert_df = pd.DataFrame(point_rows)
+                connection.register("processed_grounding_points_chunk", points_insert_df)
+                connection.execute(
+                    "INSERT INTO grounding_processed_points SELECT * FROM processed_grounding_points_chunk"
+                )
+                connection.unregister("processed_grounding_points_chunk")
+
+                total_processed_spectra += len(spectra_rows)
+                total_processed_points += len(point_rows)
+
+            print(
+                f"Processed chunk {chunk_start + 1}-{chunk_start + chunk_size}: "
+                f"{len(spectra_rows)} spectra, {len(point_rows)} processed points"
+            )
+
+        summary_rows = []
+        for (experiment_family, class_label), accumulator in sorted(class_accumulators.items()):
+            count = int(accumulator["count"])
+            mean_y = accumulator["sum"] / count
+            variance_y = np.maximum((accumulator["sum_sq"] / count) - np.square(mean_y), 0.0)
+            std_y = np.sqrt(variance_y)
+            summary_id = (
+                f"{config['processing_version']}__{args.dataset_id}__"
+                f"{experiment_family}__{class_label}"
+            )
+            summary_rows.append(
+                {
+                    "summary_id": summary_id,
+                    "dataset_id": args.dataset_id,
+                    "experiment_family": experiment_family,
+                    "class_label": class_label,
+                    "processing_version": config["processing_version"],
+                    "n_spectra": count,
+                    "crop_min_cm": config["crop_min_cm"],
+                    "crop_max_cm": config["crop_max_cm"],
+                    "interpolation_step_cm": config["interpolation_step_cm"],
+                    "mean_wavenumbers_json": serialize_array(common_grid),
+                    "mean_intensity_json": serialize_array(mean_y),
+                    "std_intensity_json": serialize_array(std_y),
+                    "notes": config["notes"],
+                }
+            )
+
+        if summary_rows:
+            summary_df = pd.DataFrame(summary_rows)
+            connection.register("grounding_class_summary_df", summary_df)
+            connection.execute(
+                "INSERT INTO grounding_class_summary SELECT * FROM grounding_class_summary_df"
+            )
+            connection.unregister("grounding_class_summary_df")
+
+    print("Grounding processing complete.")
+    print(f"Inserted grounding_processed_spectra rows: {total_processed_spectra}")
+    print(f"Inserted grounding_processed_points rows: {total_processed_points}")
+    print(f"Inserted grounding_class_summary rows: {len(summary_rows)}")
+    print(f"Skipped spectra: {skipped}")
+
+
+if __name__ == "__main__":
+    main()
