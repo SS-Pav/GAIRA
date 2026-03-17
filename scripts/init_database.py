@@ -685,6 +685,39 @@ def main() -> None:
             """
         )
 
+        # Domain-specific context overlay for lightweight pack-local RAG and interpretation.
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS domain_context_documents (
+                document_id TEXT,
+                context_layer TEXT,
+                intended_domain TEXT,
+                context_type TEXT,
+                evidence_basis TEXT,
+                source_dataset_id TEXT,
+                source_file TEXT,
+                title TEXT,
+                use_for_rag TEXT,
+                notes TEXT
+            )
+            """
+        )
+
+        db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS domain_context_chunks (
+                chunk_id TEXT,
+                document_id TEXT,
+                context_layer TEXT,
+                intended_domain TEXT,
+                chunk_order INTEGER,
+                section TEXT,
+                chunk_text TEXT,
+                metadata_json TEXT
+            )
+            """
+        )
+
     print(
         "GAIRA database initialized with registry, reference, biosample, grounding, knowledge, and domain-context tables."
     )
