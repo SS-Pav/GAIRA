@@ -8,6 +8,7 @@ import duckdb
 import numpy as np
 import pandas as pd
 
+from gaira.biochemical_theme_layer import BiochemicalThemeLayer
 from gaira.domain_pack_registry import get_domain_pack
 from gaira.ev_context import EVContextRetriever
 from gaira.grounding_search import GroundingSearchEngine, SpectrumQuery
@@ -150,11 +151,13 @@ def load_ev_class_mean_query(
 
 
 class GAIRAInferenceEngine:
-    def __init__(self, db_path: Path) -> None:
+    def __init__(self, db_path: Path, theme_layer_version: str = "v1") -> None:
         self.db_path = Path(db_path)
+        self.theme_layer_version = theme_layer_version
         self.grounding_engine = GroundingSearchEngine(db_path=db_path)
         self.serum_context = SerumContextRetriever(db_path=db_path)
         self.ev_context = EVContextRetriever(db_path=db_path)
+        self.theme_layer = BiochemicalThemeLayer(db_path=db_path, version=theme_layer_version)
 
     def _select_pack(self, domain: str) -> dict:
         if domain == "serum":
@@ -217,6 +220,8 @@ class GAIRAInferenceEngine:
         context_df: pd.DataFrame,
         knowledge_df: pd.DataFrame,
         semantic_df: pd.DataFrame,
+        theme_summary: str,
+        global_caveats: list[str],
     ) -> str:
         lines = [
             f"Domain pack: {pack_entry['pack_id']}",
@@ -278,7 +283,14 @@ class GAIRAInferenceEngine:
         top_semantic = semantic_df.head(3)["source_label"].astype(str).tolist() if not semantic_df.empty else []
 
         lines.append("")
-        lines.append("5. Final integrated interpretation")
+        lines.append("5. Biochemical theme layer")
+        lines.append(f"Theme layer version: {self.theme_layer_version}")
+        lines.append(theme_summary)
+        if global_caveats:
+            lines.append(f"Global caveats: {', '.join(global_caveats)}")
+
+        lines.append("")
+        lines.append("6. Final integrated interpretation")
         if request.domain == "serum":
             lines.append(
                 "The shared grounding layer returned both broad RamanBioLib analogs and serum-local Ag-colloid "
@@ -354,6 +366,16 @@ class GAIRAInferenceEngine:
             else pd.DataFrame()
         )
         context_df = self._select_context_hits(request, tier1_df)
+        theme_result = self.theme_layer.build_from_inference(
+            request,
+            {
+                "tier1_grounding_hits": tier1_df.to_dict(orient="records"),
+                "tier2_support_hits": tier2_df.to_dict(orient="records") if not tier2_df.empty else [],
+                "knowledge_support_hits": knowledge_df.to_dict(orient="records") if not knowledge_df.empty else [],
+                "semantic_region_support_hits": semantic_df.to_dict(orient="records") if not semantic_df.empty else [],
+                "domain_context_hits": context_df.to_dict(orient="records") if not context_df.empty else [],
+            },
+        )
 
         result = {
             "domain_pack": pack_entry["pack_id"],
@@ -361,6 +383,7 @@ class GAIRAInferenceEngine:
             "query_label": request.query_label,
             "query_family": request.query_family,
             "source_dataset_id": request.source_dataset_id,
+            "biochemical_theme_layer_version": theme_result["biochemical_theme_layer_version"],
             "tier1_grounding_hits_before_reranking": tier1_before_df.head(10).to_dict(orient="records"),
             "tier1_grounding_hits": tier1_df.head(10).to_dict(orient="records"),
             "tier2_support_hits_before_reranking": tier2_before_df.head(10).to_dict(orient="records") if not tier2_before_df.empty else [],
@@ -369,6 +392,13 @@ class GAIRAInferenceEngine:
             "knowledge_support_hits": knowledge_df.to_dict(orient="records") if not knowledge_df.empty else [],
             "semantic_region_support_hits": semantic_df.to_dict(orient="records") if not semantic_df.empty else [],
             "domain_context_hits": context_df.head(10).to_dict(orient="records") if not context_df.empty else [],
+            "biochemical_theme_outputs": theme_result["biochemical_theme_outputs"],
+            "biochemical_theme_summary": theme_result["biochemical_theme_summary"],
+            "biochemical_global_caveats": theme_result["biochemical_global_caveats"],
+            "biochemical_what_not_to_claim": theme_result["biochemical_what_not_to_claim"],
+            "dominant_themes": theme_result["dominant_themes"],
+            "evidence_profile_summary": theme_result["evidence_profile_summary"],
+            "query_bands_cm": theme_result["query_bands_cm"],
             "final_summary": self._build_summary(
                 request,
                 pack_entry,
@@ -379,6 +409,8 @@ class GAIRAInferenceEngine:
                 context_df,
                 knowledge_df,
                 semantic_df,
+                theme_result["biochemical_theme_summary"],
+                theme_result["biochemical_global_caveats"],
             ),
         }
         return result
