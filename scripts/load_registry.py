@@ -1,4 +1,5 @@
 from pathlib import Path
+import sys
 
 import duckdb
 import pandas as pd
@@ -7,8 +8,11 @@ import pandas as pd
 def main() -> None:
     # Build paths from the project root so the script stays portable.
     project_root = Path(__file__).resolve().parents[1]
+    sys.path.insert(0, str(project_root / "src"))
+    from gaira.config import get_database_path
+
     csv_path = project_root / "data" / "registry" / "datasets.csv"
-    db_path = project_root / "data" / "gaira.duckdb"
+    db_path = get_database_path()
 
     if not csv_path.exists():
         print(f"Registry file not found: {csv_path}")

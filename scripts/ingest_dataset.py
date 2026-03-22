@@ -5,6 +5,57 @@ from pathlib import Path
 import pandas as pd
 
 
+REQUIRED_RAW_FILES: dict[str, tuple[str, ...]] = {
+    "serum_protocol_comparison": (
+        "dataset_serum_spectra.zip",
+        "Instructions.docx",
+        "analysis.R",
+    ),
+    "cspp_serum": (
+        "spectra.zip",
+        "scripts.zip",
+        "Figure-2_all-spectra-and-metadata.csv",
+        "Figure-4_all-spectra-and-metadata.csv",
+        "Figure-5_all-spectra-and-metadata.csv",
+        "Figure-6_all-spectra-and-metadata.csv",
+        "Figure-7_all-spectra-and-metadata.csv",
+    ),
+    "sers_fingerprint_workingpaper_support": (
+        "record_14294417.json",
+        "comparing1.pdf",
+    ),
+    "sers24_metabolite_support": (
+        "pubmed_37918093.html",
+        "crossref_10_1016_j_saa_2023_123587.json",
+    ),
+}
+
+
+def validate_dataset_root(dataset_id: str, dataset_root: Path) -> None:
+    """Fail fast when the canonical raw dataset folder is missing or incomplete.
+
+    DuckDB should be treated as a single-writer store. We do not allow ingest to
+    proceed against missing raw data or alternate staging paths.
+    """
+    if not dataset_root.exists():
+        raise FileNotFoundError(
+            f"Canonical raw dataset folder is missing for '{dataset_id}': {dataset_root}"
+        )
+
+    if not any(dataset_root.iterdir()):
+        raise FileNotFoundError(
+            f"Canonical raw dataset folder is empty for '{dataset_id}': {dataset_root}"
+        )
+
+    expected_files = REQUIRED_RAW_FILES.get(dataset_id, ())
+    missing_files = [file_name for file_name in expected_files if not (dataset_root / file_name).exists()]
+    if missing_files:
+        raise FileNotFoundError(
+            "Canonical raw assets are incomplete for "
+            f"'{dataset_id}'. Missing: {', '.join(missing_files)} in {dataset_root}"
+        )
+
+
 def main() -> None:
     # Make the src package importable when running from the project root.
     project_root = Path(__file__).resolve().parents[1]
@@ -12,9 +63,13 @@ def main() -> None:
 
     from gaira.config import ensure_storage_dirs, resolve_storage_path
     from gaira.parsers.biosample.diabetes_plasma_ev_sers_parser import DiabetesPlasmaEVSERSParser
+    from gaira.parsers.biosample.cspp_serum_parser import CSPPSerumParser
+    from gaira.parsers.biosample.ergothioneine_serum_parser import ErgothioneineSerumParser
     from gaira.parsers.biosample.hcc_serum_parser import HCCSerumParser
+    from gaira.parsers.biosample.serum_protocol_comparison_parser import SerumProtocolComparisonParser
     from gaira.parsers.biosample.serum_ag_colloids_parser import SerumAgColloidsParser
     from gaira.parsers.biosample.small2023_ev_parser import Small2023EVParser
+    from gaira.parsers.grounding.document_support_parser import DocumentSupportParser
     from gaira.parsers.grounding.serum_ag_colloids_grounding_parser import (
         SerumAgColloidsGroundingParser,
     )
@@ -27,6 +82,11 @@ def main() -> None:
 
     parser = argparse.ArgumentParser(description="Run a dataset ingestion scaffold for GAIRA.")
     parser.add_argument("dataset_id", help="Dataset identifier to ingest")
+    parser.add_argument(
+        "--allow-holdout",
+        action="store_true",
+        help="Explicitly allow ingestion for a dataset marked as a holdout in the registry.",
+    )
     args = parser.parse_args()
 
     print(f"Preparing ingestion scaffold for dataset: {args.dataset_id}")
@@ -38,6 +98,13 @@ def main() -> None:
         match_df = registry_df[registry_df["dataset_id"] == args.dataset_id].copy()
         if not match_df.empty and "dataset_family" in match_df.columns:
             dataset_family = str(match_df.iloc[0]["dataset_family"]).strip().lower()
+            dataset_status = str(match_df.iloc[0].get("status", "")).strip().lower()
+            if dataset_status == "holdout" and not args.allow_holdout:
+                print(
+                    f"Dataset '{args.dataset_id}' is marked as a holdout in the registry and is "
+                    "skipped by default. Re-run with --allow-holdout to ingest it intentionally."
+                )
+                raise SystemExit(2)
 
     # Preserve the known RamanBioLib ingestion path exactly.
     if args.dataset_id == "ramanbiolib" or dataset_family == "reference":
@@ -73,6 +140,10 @@ def main() -> None:
     print(f"  cache: {resolve_storage_path(storage_config.get('cache'))}")
     print(f"  database: {db_path}")
     print(f"Using dataset folder: {dataset_root}")
+
+    validate_dataset_root(args.dataset_id, dataset_root)
+    print(f"Starting sequential ingest for dataset: {args.dataset_id}")
+    print("DuckDB is single-writer; do not parallelize GAIRA write operations.")
 
     if selected_family == "reference":
         if args.dataset_id != "ramanbiolib":
@@ -147,6 +218,39 @@ def main() -> None:
             parser_instance.ingest()
             return
 
+        if args.dataset_id == "serum_protocol_comparison":
+            parser_instance = SerumProtocolComparisonParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running serum_protocol_comparison biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id == "cspp_serum":
+            parser_instance = CSPPSerumParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running cspp_serum biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id == "ergothioneine_serum":
+            parser_instance = ErgothioneineSerumParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running ergothioneine_serum biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
         print(
             "Biosample parser scaffold exists, but no concrete dataset implementation has "
             "been added yet."
@@ -190,6 +294,17 @@ def main() -> None:
                 db_path=db_path,
             )
             print("Running serum_ag_colloids_literature_grounding ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id in {"sers_fingerprint_workingpaper_support", "sers24_metabolite_support"}:
+            parser_instance = DocumentSupportParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print(f"Running {args.dataset_id} support-only grounding ingestion into DuckDB.")
             parser_instance.audit()
             parser_instance.ingest()
             return

@@ -20,8 +20,13 @@ Current packs:
   - role: `serum_foundation_pack`
   - intended sample types: serum
   - datasets:
-    - `hcc_serum`
+    - `hcc_serum` (holdout; skipped by default)
     - `serum_ag_colloids`
+    - `serum_protocol_comparison`
+    - `cspp_serum`
+    - `ergothioneine_serum`
+  - holdout datasets:
+    - `hcc_serum`
   - default embedding: `none_yet`
 
 - `GAIRA_GROUNDING`
@@ -29,6 +34,10 @@ Current packs:
   - status: `active_scaffold`
   - datasets:
     - `ramanbiolib`
+    - `serum_ag_colloids_grounding`
+    - `serum_ag_colloids_literature_grounding`
+    - `sers_fingerprint_workingpaper_support`
+    - `sers24_metabolite_support`
   - default embedding: none
 
 Design intent:
@@ -56,6 +65,8 @@ Grounding versus inference:
 - `GAIRA_EV` and `GAIRA_SERUM` are biosample packs.
 - `GAIRA_GROUNDING` is a shared support layer for molecular and literature-backed interpretation.
 - `ramanbiolib` should now be treated as a grounding asset rather than as a member of biosample packs.
+- `hcc_serum` is retained in the serum pack as a holdout evaluation asset, but current default rebuild,
+  download, and ingest flows skip it unless explicitly requested.
 
 Next use:
 

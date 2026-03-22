@@ -24,8 +24,8 @@ TARGET_PROBES = ["normedprobe1", "normedprobe2"]
 SEED = 42
 BENCHMARK_PER_GROUP = 2000
 PLOT_PER_GROUP = 150
-V2_DIR = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v2")
-V1_DIR = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding")
+V2_DIR = Path("/Volumes/SSD_Rad/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v2")
+V1_DIR = Path("/Volumes/SSD_Rad/GAIRA_DATA/processed/small2023_ev_invariant_embedding")
 MPLCONFIGDIR = V2_DIR / ".mplconfig"
 ORDER_MAP = {"c00": 0, "c01": 1, "c10": 2, "c25": 3, "c50": 4, "c100": 5}
 DOMAIN_MAP = {"normedprobe1": 0, "normedprobe2": 1}
@@ -358,13 +358,13 @@ def build_summary_text(counts_df: pd.DataFrame, comparison_df: pd.DataFrame, geo
 def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(project_root / "src"))
-    from gaira.config import ensure_storage_dirs, resolve_storage_path
+    from gaira.config import ensure_storage_dirs, get_database_path, resolve_storage_path
 
     ensure_storage_dirs()
     V2_DIR.mkdir(parents=True, exist_ok=True)
     os.environ.setdefault("MPLCONFIGDIR", str(MPLCONFIGDIR))
 
-    db_path = project_root / "data" / "gaira.duckdb"
+    db_path = get_database_path()
     full_df = load_processed_dataset(db_path)
     benchmark_df, counts_df = balanced_subset(full_df, BENCHMARK_PER_GROUP, SEED)
     X = decode_intensities(benchmark_df)

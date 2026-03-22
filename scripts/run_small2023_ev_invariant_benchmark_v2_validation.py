@@ -24,9 +24,9 @@ ORDER_MAP = {"c00": 0, "c01": 1, "c10": 2, "c25": 3, "c50": 4, "c100": 5}
 DOMAIN_MAP = {"normedprobe1": 0, "normedprobe2": 1}
 BENCHMARK_PER_GROUP = 2000
 SILHOUETTE_PER_GROUP = 250
-V1_DIR = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding")
-V2_DIR = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v2")
-VALIDATION_DIR = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v2_validation")
+V1_DIR = Path("/Volumes/SSD_Rad/GAIRA_DATA/processed/small2023_ev_invariant_embedding")
+V2_DIR = Path("/Volumes/SSD_Rad/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v2")
+VALIDATION_DIR = Path("/Volumes/SSD_Rad/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v2_validation")
 
 
 def load_processed_dataset(db_path: Path) -> pd.DataFrame:

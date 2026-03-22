@@ -34,6 +34,11 @@ def main() -> None:
 
     parser = argparse.ArgumentParser(description="Prepare a raw dataset folder for GAIRA.")
     parser.add_argument("dataset_id", help="Dataset identifier from data/registry/datasets.csv")
+    parser.add_argument(
+        "--allow-holdout",
+        action="store_true",
+        help="Explicitly allow download for a dataset marked as a holdout in the registry.",
+    )
     args = parser.parse_args()
 
     registry_path = project_root / "data" / "registry" / "datasets.csv"
@@ -57,6 +62,14 @@ def main() -> None:
         return
 
     dataset_row = match_df.iloc[0]
+    dataset_status = str(dataset_row.get("status", "")).strip().lower()
+    if dataset_status == "holdout" and not args.allow_holdout:
+        print(
+            f"Dataset '{args.dataset_id}' is marked as a holdout in the registry and is skipped by "
+            "default. Re-run with --allow-holdout to download it intentionally."
+        )
+        raise SystemExit(2)
+
     target_folder = raw_data_path / args.dataset_id
     target_folder.mkdir(parents=True, exist_ok=True)
 
@@ -211,6 +224,118 @@ def main() -> None:
         print("serum_ag_colloids download step is complete.")
         return
 
+    if args.dataset_id == "serum_protocol_comparison":
+        download_targets = [
+            (
+                "dataset_serum_spectra.zip",
+                "https://zenodo.org/api/records/11143059/files/Dataset%20serum%20spectra.zip/content",
+            ),
+            (
+                "Instructions.docx",
+                "https://zenodo.org/api/records/11143059/files/Instructions.docx/content",
+            ),
+            (
+                "analysis.R",
+                "https://zenodo.org/api/records/11143059/files/Script%20for%20spectra%20analysis.R/content",
+            ),
+        ]
+
+        print(
+            "Downloading the grounded serum protocol-comparison release assets. "
+            "GAIRA onboarding will use the native BWtek TXT archive as the primary raw path and keep "
+            "the instructions plus released R script as provenance and context references."
+        )
+
+        for file_name, file_url in download_targets:
+            output_path = target_folder / file_name
+            if output_path.exists() and output_path.stat().st_size > 0:
+                print(f"Skipping existing file: {output_path}")
+                continue
+
+            print(f"Downloading: {file_url}")
+            urlretrieve(file_url, output_path)
+            print(f"Saved: {output_path}")
+
+        print("serum_protocol_comparison download step is complete.")
+        return
+
+    if args.dataset_id == "cspp_serum":
+        download_targets = [
+            (
+                "spectra.zip",
+                "https://zenodo.org/api/records/5644790/files/Spectra.zip/content",
+            ),
+            (
+                "scripts.zip",
+                "https://zenodo.org/api/records/5644790/files/Scripts.zip/content",
+            ),
+            (
+                "Figure-2_all-spectra-and-metadata.csv",
+                "https://zenodo.org/api/records/5644790/files/Figure-2_all-spectra-and-metadata.csv/content",
+            ),
+            (
+                "Figure-4_all-spectra-and-metadata.csv",
+                "https://zenodo.org/api/records/5644790/files/Figure-4_all-spectra-and-metadata.csv/content",
+            ),
+            (
+                "Figure-5_all-spectra-and-metadata.csv",
+                "https://zenodo.org/api/records/5644790/files/Figure-5_all-spectra-and-metadata.csv/content",
+            ),
+            (
+                "Figure-6_all-spectra-and-metadata.csv",
+                "https://zenodo.org/api/records/5644790/files/Figure-6_all-spectra-and-metadata.csv/content",
+            ),
+            (
+                "Figure-7_all-spectra-and-metadata.csv",
+                "https://zenodo.org/api/records/5644790/files/Figure-7_all-spectra-and-metadata.csv/content",
+            ),
+        ]
+
+        print(
+            "Downloading the grounded CSPP serum methodology archive assets. "
+            "GAIRA onboarding will use the figure-level metadata CSVs as the primary raw ingest path "
+            "and retain the matching TXT archive plus released scripts for provenance."
+        )
+
+        for file_name, file_url in download_targets:
+            output_path = target_folder / file_name
+            if output_path.exists() and output_path.stat().st_size > 0:
+                print(f"Skipping existing file: {output_path}")
+                continue
+
+            print(f"Downloading: {file_url}")
+            urlretrieve(file_url, output_path)
+            print(f"Saved: {output_path}")
+
+        print("cspp_serum download step is complete.")
+        return
+
+    if args.dataset_id == "ergothioneine_serum":
+        download_targets = [
+            (
+                "ERG_calibration.csv",
+                "https://zenodo.org/api/records/13791050/files/ERG_calibration.csv/content",
+            ),
+        ]
+
+        print(
+            "Downloading the grounded ergothioneine-in-serum calibration archive. "
+            "GAIRA onboarding will use the released calibration CSV as the primary raw ingest path."
+        )
+
+        for file_name, file_url in download_targets:
+            output_path = target_folder / file_name
+            if output_path.exists() and output_path.stat().st_size > 0:
+                print(f"Skipping existing file: {output_path}")
+                continue
+
+            print(f"Downloading: {file_url}")
+            urlretrieve(file_url, output_path)
+            print(f"Saved: {output_path}")
+
+        print("ergothioneine_serum download step is complete.")
+        return
+
     if args.dataset_id in {"serum_ag_colloids_grounding", "serum_ag_colloids_literature_grounding"}:
         download_targets = [
             (
@@ -247,6 +372,68 @@ def main() -> None:
             print(f"Saved: {output_path}")
 
         print(f"{args.dataset_id} download step is complete.")
+        return
+
+    if args.dataset_id == "sers_fingerprint_workingpaper_support":
+        download_targets = [
+            (
+                "record_14294417.json",
+                "https://zenodo.org/api/records/14294417",
+            ),
+            (
+                "comparing1.pdf",
+                "https://zenodo.org/api/records/14294417/files/comparing1.pdf/content",
+            ),
+        ]
+
+        print(
+            "Downloading the PDF-only metabolite SERS fingerprint working-paper support assets. "
+            "GAIRA will treat this as support-only grounding evidence because the inspected Zenodo "
+            "record does not expose a clean numeric spectral package."
+        )
+
+        for file_name, file_url in download_targets:
+            output_path = target_folder / file_name
+            if output_path.exists() and output_path.stat().st_size > 0:
+                print(f"Skipping existing file: {output_path}")
+                continue
+
+            print(f"Downloading: {file_url}")
+            urlretrieve(file_url, output_path)
+            print(f"Saved: {output_path}")
+
+        print("sers_fingerprint_workingpaper_support download step is complete.")
+        return
+
+    if args.dataset_id == "sers24_metabolite_support":
+        download_targets = [
+            (
+                "pubmed_37918093.html",
+                "https://pubmed.ncbi.nlm.nih.gov/37918093/",
+            ),
+            (
+                "crossref_10_1016_j_saa_2023_123587.json",
+                "https://api.crossref.org/works/10.1016/j.saa.2023.123587",
+            ),
+        ]
+
+        print(
+            "Downloading the grounded metadata assets for the 24-metabolite SERS database paper. "
+            "No downloadable numeric spectral package was found in this pass, so GAIRA will ingest "
+            "this resource as support-only grounding context."
+        )
+
+        for file_name, file_url in download_targets:
+            output_path = target_folder / file_name
+            if output_path.exists() and output_path.stat().st_size > 0:
+                print(f"Skipping existing file: {output_path}")
+                continue
+
+            print(f"Downloading: {file_url}")
+            urlretrieve(file_url, output_path)
+            print(f"Saved: {output_path}")
+
+        print("sers24_metabolite_support download step is complete.")
         return
 
     if args.dataset_id != "ramanbiolib":

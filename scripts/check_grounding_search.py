@@ -4,7 +4,7 @@ import pandas as pd
 
 
 def main() -> None:
-    output_dir = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/gaira_grounding_search_v1")
+    output_dir = Path("/Volumes/SSD_Rad/GAIRA_DATA/processed/gaira_grounding_search_v1")
     demo_path = output_dir / "grounding_search_demo_results.csv"
     band_path = output_dir / "grounding_band_query_results.csv"
     summary_path = output_dir / "grounding_tiered_evidence_examples.txt"

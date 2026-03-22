@@ -38,24 +38,40 @@ def load_serum_class_mean_query(
     dataset_id: str,
     class_label: str,
     subclass_label: str,
+    processing_version: str | None = None,
 ) -> InferenceRequest:
     with duckdb.connect(str(db_path), read_only=True) as connection:
-        row = connection.execute(
-            """
-            SELECT mean_wavenumbers_json, mean_intensity_json
-            FROM biosample_class_summary
-            WHERE dataset_id = ?
-              AND class_label = ?
-              AND subclass_label = ?
-              AND processing_version = ?
-            LIMIT 1
-            """,
-            [dataset_id, class_label, subclass_label, HCC_SERUM_PROCESSING_VERSION],
-        ).fetchone()
+        if processing_version is None:
+            row = connection.execute(
+                """
+                SELECT mean_wavenumbers_json, mean_intensity_json, processing_version
+                FROM biosample_class_summary
+                WHERE dataset_id = ?
+                  AND class_label = ?
+                  AND subclass_label = ?
+                ORDER BY summary_id
+                LIMIT 1
+                """,
+                [dataset_id, class_label, subclass_label],
+            ).fetchone()
+        else:
+            row = connection.execute(
+                """
+                SELECT mean_wavenumbers_json, mean_intensity_json, processing_version
+                FROM biosample_class_summary
+                WHERE dataset_id = ?
+                  AND class_label = ?
+                  AND subclass_label = ?
+                  AND processing_version = ?
+                LIMIT 1
+                """,
+                [dataset_id, class_label, subclass_label, processing_version],
+            ).fetchone()
     if row is None:
         raise ValueError(f"Missing serum class summary for {dataset_id} / {class_label} / {subclass_label}.")
     x_values = _parse_json_array(row[0])
     y_values = _parse_json_array(row[1])
+    resolved_processing_version = str(row[2])
     query = SpectrumQuery(
         query_id=f"{dataset_id}_{class_label.lower()}_{subclass_label.lower()}",
         query_label=class_label,
@@ -63,7 +79,7 @@ def load_serum_class_mean_query(
         source_dataset_id=dataset_id,
         x=x_values,
         y=y_values,
-        notes="Serum biosample class summary query",
+        notes=f"Serum biosample class summary query ({resolved_processing_version})",
     )
     return InferenceRequest(
         domain="serum",
@@ -80,24 +96,40 @@ def load_ev_class_mean_query(
     dataset_id: str,
     class_label: str,
     subclass_label: str,
+    processing_version: str | None = SMALL2023_PROCESSING_VERSION,
 ) -> InferenceRequest:
     with duckdb.connect(str(db_path), read_only=True) as connection:
-        row = connection.execute(
-            """
-            SELECT mean_wavenumbers_json, mean_intensity_json
-            FROM biosample_class_summary
-            WHERE dataset_id = ?
-              AND class_label = ?
-              AND subclass_label = ?
-              AND processing_version = ?
-            LIMIT 1
-            """,
-            [dataset_id, class_label, subclass_label, SMALL2023_PROCESSING_VERSION],
-        ).fetchone()
+        if processing_version is None:
+            row = connection.execute(
+                """
+                SELECT mean_wavenumbers_json, mean_intensity_json, processing_version
+                FROM biosample_class_summary
+                WHERE dataset_id = ?
+                  AND class_label = ?
+                  AND subclass_label = ?
+                ORDER BY summary_id
+                LIMIT 1
+                """,
+                [dataset_id, class_label, subclass_label],
+            ).fetchone()
+        else:
+            row = connection.execute(
+                """
+                SELECT mean_wavenumbers_json, mean_intensity_json, processing_version
+                FROM biosample_class_summary
+                WHERE dataset_id = ?
+                  AND class_label = ?
+                  AND subclass_label = ?
+                  AND processing_version = ?
+                LIMIT 1
+                """,
+                [dataset_id, class_label, subclass_label, processing_version],
+            ).fetchone()
     if row is None:
         raise ValueError(f"Missing EV class summary for {dataset_id} / {class_label} / {subclass_label}.")
     x_values = _parse_json_array(row[0])
     y_values = _parse_json_array(row[1])
+    resolved_processing_version = str(row[2])
     query = SpectrumQuery(
         query_id=f"{dataset_id}_{class_label.lower()}_{subclass_label.lower()}",
         query_label=class_label,
@@ -105,7 +137,7 @@ def load_ev_class_mean_query(
         source_dataset_id=dataset_id,
         x=x_values,
         y=y_values,
-        notes="EV biosample class summary query",
+        notes=f"EV biosample class summary query ({resolved_processing_version})",
     )
     return InferenceRequest(
         domain="ev",

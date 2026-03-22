@@ -7,9 +7,10 @@ def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(project_root / "src"))
 
+    from gaira.config import get_database_path
     from gaira.search import PeakSearchEngine
 
-    db_path = project_root / "data" / "gaira.duckdb"
+    db_path = get_database_path()
     query_path = project_root / "data" / "processed" / "test_queries" / "collagen_example_query.csv"
 
     engine = PeakSearchEngine(db_path=db_path)

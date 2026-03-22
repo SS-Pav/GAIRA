@@ -162,7 +162,7 @@ def inspect_member(archive_path: Path, member_name: str, label: str) -> None:
 
 
 def main() -> None:
-    archive_path = Path("/Volumes/SSD_SPG/GAIRA_DATA/raw/diabetes_plasma_ev_sers/Diabetes_Raw_Data_Codes.zip")
+    archive_path = Path("/Volumes/SSD_Rad/GAIRA_DATA/raw/diabetes_plasma_ev_sers/Diabetes_Raw_Data_Codes.zip")
     print(f"archive: {archive_path}")
     for label, member_name in ZIP_MEMBERS.items():
         inspect_member(archive_path, member_name, label)

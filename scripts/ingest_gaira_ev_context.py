@@ -17,6 +17,22 @@ def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8").strip()
 
 
+def maybe_read_text(path: Path) -> str | None:
+    if not path.exists():
+        return None
+    return read_text(path)
+
+
+def read_csv_preview(path: Path, n_rows: int = 5) -> str:
+    return pd.read_csv(path).head(n_rows).to_string(index=False)
+
+
+def maybe_read_csv_preview(path: Path, n_rows: int = 5) -> str | None:
+    if not path.exists():
+        return None
+    return read_csv_preview(path, n_rows=n_rows)
+
+
 def build_document(
     document_id: str,
     context_type: str,
@@ -44,20 +60,26 @@ def build_document(
 
 def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
-    db_path = project_root / "data" / "gaira.duckdb"
+    import sys
+
+    sys.path.insert(0, str(project_root / "src"))
+    from gaira.config import get_database_path, get_storage_paths, require_data_root_exists
+
+    storage_paths = require_data_root_exists()
+    db_path = get_database_path()
+    processed_root = storage_paths["processed_data"]
 
     default_embedding_path = project_root / "docs" / "default_embedding_status.md"
-    v1_summary_path = Path(
-        "/Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding/embedding_summary.txt"
+    v1_summary_path = processed_root / "small2023_ev_invariant_embedding" / "embedding_summary.txt"
+    v2_summary_path = processed_root / "small2023_ev_invariant_embedding_v2" / "embedding_summary_v2.txt"
+    v2_validation_path = processed_root / "small2023_ev_invariant_embedding_v2_validation" / "v2_validation_summary.txt"
+    v3_summary_path = processed_root / "small2023_ev_invariant_embedding_v3" / "embedding_summary_v3.txt"
+    diabetes_mapping_summary_path = processed_root / "diabetes_plasma_ev_sers_mapping_summary.txt"
+    small2023_match_example_path = (
+        processed_root / "small2023_ev_class_reference_matches" / "class_c00_normedprobe1_matches.csv"
     )
-    v2_summary_path = Path(
-        "/Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v2/embedding_summary_v2.txt"
-    )
-    v2_validation_path = Path(
-        "/Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v2_validation/v2_validation_summary.txt"
-    )
-    v3_summary_path = Path(
-        "/Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v3/embedding_summary_v3.txt"
+    shine_consensus_example_path = (
+        processed_root / "shine_class_reference_matches" / "class_d0_c0_set9_consensus.csv"
     )
 
     documents: list[dict] = []
@@ -88,107 +110,165 @@ def main() -> None:
         )
     )
 
-    v1_text = read_text(v1_summary_path)
-    v1_chunks = []
-    for idx, chunk_text in enumerate(split_paragraph_chunks(v1_text), start=1):
-        section = "v1_embedding_summary" if idx <= 3 else "v1_embedding_interpretation"
-        v1_chunks.append(
-            (
-                section,
-                chunk_text,
-                {"source_kind": "embedding_summary_v1", "chunk_index": idx},
+    v1_text = maybe_read_text(v1_summary_path)
+    if v1_text:
+        v1_chunks = []
+        for idx, chunk_text in enumerate(split_paragraph_chunks(v1_text), start=1):
+            section = "v1_embedding_summary" if idx <= 3 else "v1_embedding_interpretation"
+            v1_chunks.append(
+                (
+                    section,
+                    chunk_text,
+                    {"source_kind": "embedding_summary_v1", "chunk_index": idx},
+                )
+            )
+        documents.append(
+            build_document(
+                document_id="gaira_ev_context_small2023_v1",
+                context_type="benchmark_summary",
+                evidence_basis="derived_from_embedding_benchmark",
+                source_dataset_id="small2023_ev",
+                source_file=str(v1_summary_path),
+                title="small2023_ev v1 embedding context",
+                notes=(
+                    "Curated EV-context summary for the baseline/default small2023_ev invariant embedding benchmark."
+                ),
+                chunks=v1_chunks,
             )
         )
+
+    v2_text = maybe_read_text(v2_summary_path)
+    if v2_text:
+        v2_chunks = []
+        for idx, chunk_text in enumerate(split_paragraph_chunks(v2_text), start=1):
+            section = "v2_embedding_summary" if idx <= 3 else "v2_embedding_geometry"
+            v2_chunks.append(
+                (
+                    section,
+                    chunk_text,
+                    {"source_kind": "embedding_summary_v2", "chunk_index": idx},
+                )
+            )
+        documents.append(
+            build_document(
+                document_id="gaira_ev_context_small2023_v2_upper_bound",
+                context_type="benchmark_summary",
+                evidence_basis="derived_from_embedding_benchmark",
+                source_dataset_id="small2023_ev",
+                source_file=str(v2_summary_path),
+                title="small2023_ev v2 upper-bound context",
+                notes=("Curated EV-context summary for the strong transductive upper-bound benchmark."),
+                chunks=v2_chunks,
+            )
+        )
+
+    v2_validation_text = maybe_read_text(v2_validation_path)
+    if v2_validation_text:
+        v2_validation_chunks = []
+        for idx, chunk_text in enumerate(split_paragraph_chunks(v2_validation_text), start=1):
+            section = "v2_validation_summary" if idx <= 2 else "v2_validation_caveat"
+            v2_validation_chunks.append(
+                (
+                    section,
+                    chunk_text,
+                    {"source_kind": "v2_validation_summary", "chunk_index": idx},
+                )
+            )
+        documents.append(
+            build_document(
+                document_id="gaira_ev_context_small2023_v2_validation",
+                context_type="caveat",
+                evidence_basis="derived_from_embedding_benchmark",
+                source_dataset_id="small2023_ev",
+                source_file=str(v2_validation_path),
+                title="small2023_ev v2 validation caveat",
+                notes=("Curated EV-context caveat that explains why v2 is strong but still transductive."),
+                chunks=v2_validation_chunks,
+            )
+        )
+
+    v3_text = maybe_read_text(v3_summary_path)
+    if v3_text:
+        v3_chunks = []
+        for idx, chunk_text in enumerate(split_paragraph_chunks(v3_text), start=1):
+            section = "v3_strict_transfer_summary" if idx <= 3 else "v3_strict_transfer_failure"
+            v3_chunks.append(
+                (
+                    section,
+                    chunk_text,
+                    {"source_kind": "embedding_summary_v3", "chunk_index": idx},
+                )
+            )
+        documents.append(
+            build_document(
+                document_id="gaira_ev_context_small2023_v3_negative_result",
+                context_type="caveat",
+                evidence_basis="derived_from_embedding_benchmark",
+                source_dataset_id="small2023_ev",
+                source_file=str(v3_summary_path),
+                title="small2023_ev v3 strict-transfer caveat",
+                notes=("Curated EV-context note for the strict source-only negative-result benchmark."),
+                chunks=v3_chunks,
+            )
+        )
+
     documents.append(
         build_document(
-            document_id="gaira_ev_context_small2023_v1",
-            context_type="benchmark_summary",
+            document_id="gaira_ev_context_small2023_probe_family_note",
+            context_type="interpretive_note",
             evidence_basis="derived_from_embedding_benchmark",
             source_dataset_id="small2023_ev",
-            source_file=str(v1_summary_path),
-            title="small2023_ev v1 embedding context",
-            notes=(
-                "Curated EV-context summary for the baseline/default small2023_ev invariant embedding benchmark."
+            source_file=(
+                f"{v1_summary_path}; {v2_summary_path}; {v2_validation_path}; {v3_summary_path}; "
+                "dataset_domain_context + subclass_domain_context"
             ),
-            chunks=v1_chunks,
+            title="small2023_ev probe-family and invariance note",
+            notes=(
+                "Curated EV-context note explaining Probe1/Probe2 separation and why substrate invariance matters."
+            ),
+            chunks=[
+                (
+                    "small2023_probe_family_note",
+                    (
+                        "small2023_ev spans multiple grounded probe/substrate families rather than one uniform EV "
+                        "measurement domain. Probe1 and Probe2 carry the same mixture-style class labels but differ "
+                        "in substrate batch, raw axis family, and preprocessing/cropping context, so raw intensities "
+                        "should not be treated as directly comparable. This is why substrate invariance matters in "
+                        "small2023_ev: the benchmark program exists to reduce probe-domain effects while preserving "
+                        "biology-centered class structure in processed space."
+                    ),
+                    {"source_kind": "probe_family_invariance_note"},
+                )
+            ],
         )
     )
 
-    v2_text = read_text(v2_summary_path)
-    v2_chunks = []
-    for idx, chunk_text in enumerate(split_paragraph_chunks(v2_text), start=1):
-        section = "v2_embedding_summary" if idx <= 3 else "v2_embedding_geometry"
-        v2_chunks.append(
-            (
-                section,
-                chunk_text,
-                {"source_kind": "embedding_summary_v2", "chunk_index": idx},
-            )
-        )
     documents.append(
         build_document(
-            document_id="gaira_ev_context_small2023_v2_upper_bound",
-            context_type="benchmark_summary",
+            document_id="gaira_ev_context_small2023_benchmark_hierarchy_note",
+            context_type="interpretive_note",
             evidence_basis="derived_from_embedding_benchmark",
             source_dataset_id="small2023_ev",
-            source_file=str(v2_summary_path),
-            title="small2023_ev v2 upper-bound context",
+            source_file=f"{default_embedding_path}; {v2_validation_path}; {v3_summary_path}",
+            title="small2023_ev benchmark hierarchy note",
             notes=(
-                "Curated EV-context summary for the strong transductive upper-bound benchmark."
+                "Curated EV-context note explaining why v1 is default, v2 is upper-bound, and v3 remains a strict-transfer stress test."
             ),
-            chunks=v2_chunks,
-        )
-    )
-
-    v2_validation_text = read_text(v2_validation_path)
-    v2_validation_chunks = []
-    for idx, chunk_text in enumerate(split_paragraph_chunks(v2_validation_text), start=1):
-        section = "v2_validation_summary" if idx <= 2 else "v2_validation_caveat"
-        v2_validation_chunks.append(
-            (
-                section,
-                chunk_text,
-                {"source_kind": "v2_validation_summary", "chunk_index": idx},
-            )
-        )
-    documents.append(
-        build_document(
-            document_id="gaira_ev_context_small2023_v2_validation",
-            context_type="caveat",
-            evidence_basis="derived_from_embedding_benchmark",
-            source_dataset_id="small2023_ev",
-            source_file=str(v2_validation_path),
-            title="small2023_ev v2 validation caveat",
-            notes=(
-                "Curated EV-context caveat that explains why v2 is strong but still transductive."
-            ),
-            chunks=v2_validation_chunks,
-        )
-    )
-
-    v3_text = read_text(v3_summary_path)
-    v3_chunks = []
-    for idx, chunk_text in enumerate(split_paragraph_chunks(v3_text), start=1):
-        section = "v3_strict_transfer_summary" if idx <= 3 else "v3_strict_transfer_failure"
-        v3_chunks.append(
-            (
-                section,
-                chunk_text,
-                {"source_kind": "embedding_summary_v3", "chunk_index": idx},
-            )
-        )
-    documents.append(
-        build_document(
-            document_id="gaira_ev_context_small2023_v3_negative_result",
-            context_type="caveat",
-            evidence_basis="derived_from_embedding_benchmark",
-            source_dataset_id="small2023_ev",
-            source_file=str(v3_summary_path),
-            title="small2023_ev v3 strict-transfer caveat",
-            notes=(
-                "Curated EV-context note for the strict source-only negative-result benchmark."
-            ),
-            chunks=v3_chunks,
+            chunks=[
+                (
+                    "small2023_benchmark_hierarchy_note",
+                    (
+                        "The small2023_ev hierarchy should be read as three different roles rather than three "
+                        "equivalent embeddings. v1 is the current default because it improved cross-probe transfer "
+                        "without becoming a transductive upper-bound system. v2 is stronger numerically, but its own "
+                        "validation notes show that most of the gain is driven by joint class-supervised projection "
+                        "across both probes, so it is kept as a research upper-bound. v3 remains valuable precisely "
+                        "because it failed under strict source-only transfer: it shows that substrate effects are not "
+                        "solved just by declaring a stricter protocol."
+                    ),
+                    {"source_kind": "benchmark_hierarchy_note"},
+                )
+            ],
         )
     )
 
@@ -293,6 +373,27 @@ def main() -> None:
         )
     )
 
+    diabetes_mapping_text = maybe_read_text(diabetes_mapping_summary_path)
+    if diabetes_mapping_text:
+        documents.append(
+            build_document(
+                document_id="gaira_ev_context_diabetes_mapping_audit_note",
+                context_type="caveat",
+                evidence_basis="derived_from_processed_summary",
+                source_dataset_id="diabetes_plasma_ev_sers",
+                source_file=str(diabetes_mapping_summary_path),
+                title="Diabetes plasma EV mapping-audit caveat",
+                notes=("Curated EV-context note grounded in the stored diabetes mapping audit summary."),
+                chunks=[
+                    (
+                        "diabetes_mapping_audit_caveat",
+                        diabetes_mapping_text,
+                        {"source_kind": "mapping_audit_summary"},
+                    )
+                ],
+            )
+        )
+
     documents.append(
         build_document(
             document_id="gaira_ev_context_evidence_tiering_note",
@@ -321,6 +422,41 @@ def main() -> None:
         )
     )
 
+    small2023_match_preview = maybe_read_csv_preview(small2023_match_example_path, n_rows=6)
+    shine_consensus_preview = maybe_read_csv_preview(shine_consensus_example_path, n_rows=3)
+    if small2023_match_preview and shine_consensus_preview:
+        documents.append(
+            build_document(
+                document_id="gaira_ev_context_multicomponent_analog_note",
+                context_type="interpretive_note",
+                evidence_basis="derived_from_processed_summary",
+                source_dataset_id="small2023_ev,shine_ev_sers",
+                source_file=f"{small2023_match_example_path}; {shine_consensus_example_path}",
+                title="EV multicomponent analog-grounding note",
+                notes=(
+                    "Curated EV-context note grounded in existing small2023 and SHINE reference-match outputs."
+                ),
+                chunks=[
+                    (
+                        "ev_multicomponent_analog_note",
+                        (
+                            "Current EV-side reference matching already shows that EV SERS interpretation is usually "
+                            "multicomponent rather than single-molecule. In local small2023 outputs, one EV class mean "
+                            "pulls mixed saccharide, amino-acid, and protein analogs. In local SHINE consensus outputs, "
+                            "the same class-level summary can carry protein, lipid/fatty-acid, and nucleic-acid analog "
+                            "support at once. This means shared grounding hits should be read as mixed biochemical support "
+                            "for EV-associated chemistry rather than literal cargo IDs.\n\n"
+                            "small2023 example preview:\n"
+                            + small2023_match_preview
+                            + "\n\nSHINE consensus preview:\n"
+                            + shine_consensus_preview
+                        ),
+                        {"source_kind": "ev_reference_match_summary"},
+                    )
+                ],
+            )
+        )
+
     documents.append(
         build_document(
             document_id="gaira_ev_context_shine_note",
@@ -345,6 +481,33 @@ def main() -> None:
             ],
         )
     )
+
+    if shine_consensus_preview:
+        documents.append(
+            build_document(
+                document_id="gaira_ev_context_shine_consensus_note",
+                context_type="interpretive_note",
+                evidence_basis="derived_from_processed_summary",
+                source_dataset_id="shine_ev_sers",
+                source_file=str(shine_consensus_example_path),
+                title="SHINE EV consensus-region note",
+                notes=("Curated EV-context note grounded in the stored SHINE class-consensus export."),
+                chunks=[
+                    (
+                        "shine_consensus_region_note",
+                        (
+                            "The current SHINE consensus exports show that EV-class interpretation is often region-based "
+                            "and consensus-based rather than peak-to-single-molecule. For example, the local SHINE "
+                            "consensus file for D0_C0 highlights proteins and lipid/fatty-acid support with dominant "
+                            "regions around 1300-1500 and 450-700 cm^-1, while explicitly warning that the example analog "
+                            "references should not be treated as literal molecule IDs.\n\n"
+                            + shine_consensus_preview
+                        ),
+                        {"source_kind": "shine_consensus_summary"},
+                    )
+                ],
+            )
+        )
 
     document_rows = []
     chunk_rows = []

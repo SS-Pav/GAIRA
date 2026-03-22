@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pandas as pd
 
-V3_DIR = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v3")
+V3_DIR = Path("/Volumes/SSD_Rad/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v3")
 
 
 def main() -> None:

@@ -28,13 +28,18 @@ packs:
     datasets:
       - hcc_serum
       - serum_ag_colloids
+      - serum_protocol_comparison
+      - cspp_serum
+      - ergothioneine_serum
+    holdout_datasets:
+      - hcc_serum
     default_embedding: none_yet
     notes: >
       Serum-focused GAIRA foundation pack for biosample benchmarking and future serum inference work.
-      hcc_serum is the first onboarded serum biosample benchmark-style dataset, and
-      serum_ag_colloids is the second onboarded serum biosample dataset with a more
-      biochemical-interpretation-oriented release structure. No serum embedding is promoted
-      to default yet.
+      hcc_serum is retained as a holdout evaluation dataset and is skipped by default in rebuild
+      and ingest flows unless explicitly requested. The active rebuilt serum stack currently
+      centers serum_ag_colloids, serum_protocol_comparison, cspp_serum, and ergothioneine_serum.
+      No serum embedding is promoted to default yet.
 
   GAIRA_GROUNDING:
     pack_id: GAIRA_GROUNDING
@@ -48,9 +53,12 @@ packs:
       - ramanbiolib
       - serum_ag_colloids_grounding
       - serum_ag_colloids_literature_grounding
+      - sers_fingerprint_workingpaper_support
+      - sers24_metabolite_support
     notes: >
       Shared molecular, perturbation, and literature-backed grounding pack. This pack is intended
       to support multiple biosample-domain foundation packs without being treated itself as a
       biosample inference or benchmarking pack. It currently includes RamanBioLib and the selected
       controlled-reference folders extracted from the serum_ag_colloids archive, plus the deferred
-      literature and digitized-literature support assets from the same release.
+      literature and digitized-literature support assets from the same release, plus support-only
+      paper resources where no clean numeric spectral package was released.

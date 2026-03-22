@@ -7,7 +7,7 @@ import numpy as np
 from scipy.io import loadmat
 
 
-ARCHIVE_PATH = Path("/Volumes/SSD_SPG/GAIRA_DATA/raw/diabetes_plasma_ev_sers/Diabetes_Raw_Data_Codes.zip")
+ARCHIVE_PATH = Path("/Volumes/SSD_Rad/GAIRA_DATA/raw/diabetes_plasma_ev_sers/Diabetes_Raw_Data_Codes.zip")
 FIG3_PREFIX = "Diabetes - Raw Data - Codes/Figure 3/"
 KEY_TERMS = [
     "a_nwd",

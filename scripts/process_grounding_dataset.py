@@ -1,5 +1,6 @@
 import argparse
 import json
+import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -129,6 +130,10 @@ def process_one_spectrum(
 
 
 def main() -> None:
+    project_root = Path(__file__).resolve().parents[1]
+    sys.path.insert(0, str(project_root / "src"))
+    from gaira.config import get_database_path, require_data_root_exists
+
     parser = argparse.ArgumentParser(description="Build a processed grounding layer in DuckDB.")
     parser.add_argument("dataset_id", help="Grounding dataset identifier to process")
     parser.add_argument("--chunk_size", type=int, default=250)
@@ -138,8 +143,8 @@ def main() -> None:
         print("Processed grounding support is only implemented for serum_ag_colloids_grounding right now.")
         return
 
-    project_root = Path(__file__).resolve().parents[1]
-    db_path = project_root / "data" / "gaira.duckdb"
+    require_data_root_exists()
+    db_path = get_database_path()
     config = PROCESSING_CONFIGS[args.dataset_id]
     common_grid = build_common_grid(config)
     class_accumulators: dict[tuple[str, str], dict[str, np.ndarray | int]] = defaultdict(dict)

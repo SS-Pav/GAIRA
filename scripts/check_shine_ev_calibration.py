@@ -44,9 +44,10 @@ def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(project_root / "src"))
 
+    from gaira.config import get_database_path
     from gaira.parsers.biosample.shine_ev_sers_parser import ShineEVSERSParser
 
-    dataset_root = Path("/Volumes/SSD_SPG/GAIRA_DATA/raw/shine_ev_sers")
+    dataset_root = Path("/Volumes/SSD_Rad/GAIRA_DATA/raw/shine_ev_sers")
     if not dataset_root.exists():
         print(f"Dataset folder not found: {dataset_root}")
         return
@@ -54,7 +55,7 @@ def main() -> None:
     parser = ShineEVSERSParser(
         dataset_id="shine_ev_sers",
         dataset_root=dataset_root,
-        db_path=project_root / "data" / "gaira.duckdb",
+        db_path=get_database_path(),
     )
 
     coefficients = np.polyfit(parser.PIXELS, parser.CALIBRATED_CM, 3)

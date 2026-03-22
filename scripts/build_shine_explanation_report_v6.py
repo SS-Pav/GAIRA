@@ -134,11 +134,11 @@ def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(project_root / "src"))
 
-    from gaira.config import get_storage_config, resolve_storage_path
+    from gaira.config import get_database_path, get_storage_config, resolve_storage_path
 
     storage_config = get_storage_config()
     processed_root = resolve_storage_path(storage_config.get("processed_data"))
-    db_path = project_root / "data" / "gaira.duckdb"
+    db_path = get_database_path()
 
     if processed_root is None:
         print("The storage config is missing processed_data.")

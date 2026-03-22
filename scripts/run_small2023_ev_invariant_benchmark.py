@@ -329,7 +329,7 @@ def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(project_root / "src"))
 
-    from gaira.config import ensure_storage_dirs, resolve_storage_path
+    from gaira.config import ensure_storage_dirs, get_database_path, resolve_storage_path
 
     storage_config = ensure_storage_dirs()
     processed_root = resolve_storage_path(storage_config.get("processed_data"))
@@ -340,7 +340,7 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     os.environ.setdefault("MPLCONFIGDIR", str(output_dir / ".mplconfig"))
 
-    db_path = project_root / "data" / "gaira.duckdb"
+    db_path = get_database_path()
 
     full_df = load_processed_dataset(db_path)
     benchmark_df, counts_df = balanced_subset(full_df, BENCHMARK_PER_GROUP, SEED)

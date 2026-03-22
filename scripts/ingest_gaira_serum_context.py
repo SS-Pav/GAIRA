@@ -17,6 +17,12 @@ def read_text_file(path: Path) -> str:
     return path.read_text(encoding="utf-8").strip()
 
 
+def maybe_read_text_file(path: Path) -> str | None:
+    if not path.exists():
+        return None
+    return read_text_file(path)
+
+
 def split_paragraph_chunks(text: str) -> list[str]:
     chunks = [chunk.strip() for chunk in text.split("\n\n") if chunk.strip()]
     return chunks
@@ -68,70 +74,75 @@ def load_band_examples(connection: duckdb.DuckDBPyConnection, pattern: str, limi
 
 def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
-    db_path = project_root / "data" / "gaira.duckdb"
+    import sys
 
-    benchmark_summary_path = Path(
-        "/Volumes/SSD_SPG/GAIRA_DATA/processed/hcc_serum_benchmark_v1/hcc_serum_benchmark_summary.txt"
-    )
-    paper_summary_path = Path(
-        "/Volumes/SSD_SPG/GAIRA_DATA/processed/hcc_serum_paper_comparison/hcc_serum_paper_comparison_summary.txt"
-    )
+    sys.path.insert(0, str(project_root / "src"))
+    from gaira.config import get_database_path, get_storage_paths, require_data_root_exists
+
+    storage_paths = require_data_root_exists()
+    db_path = get_database_path()
+    processed_root = storage_paths["processed_data"]
+
+    benchmark_summary_path = processed_root / "hcc_serum_benchmark_v1" / "hcc_serum_benchmark_summary.txt"
+    paper_summary_path = processed_root / "hcc_serum_paper_comparison" / "hcc_serum_paper_comparison_summary.txt"
 
     documents: list[dict] = []
 
-    benchmark_text = read_text_file(benchmark_summary_path)
-    benchmark_chunks = []
-    for idx, chunk_text in enumerate(split_paragraph_chunks(benchmark_text), start=1):
-        section = "benchmark_summary" if idx <= 2 else "benchmark_interpretation"
-        benchmark_chunks.append(
-            (
-                section,
-                chunk_text,
-                {"source_kind": "benchmark_summary", "chunk_index": idx},
+    benchmark_text = maybe_read_text_file(benchmark_summary_path)
+    if benchmark_text:
+        benchmark_chunks = []
+        for idx, chunk_text in enumerate(split_paragraph_chunks(benchmark_text), start=1):
+            section = "benchmark_summary" if idx <= 2 else "benchmark_interpretation"
+            benchmark_chunks.append(
+                (
+                    section,
+                    chunk_text,
+                    {"source_kind": "benchmark_summary", "chunk_index": idx},
+                )
+            )
+        documents.append(
+            build_document(
+                document_id="gaira_serum_context_hcc_benchmark_v1",
+                context_type="benchmark_summary",
+                evidence_basis="derived_from_benchmark_summary",
+                source_dataset_id="hcc_serum",
+                source_file=str(benchmark_summary_path),
+                title="hcc_serum benchmark v1 context",
+                notes=(
+                    "Curated serum-context summary derived from the stored hcc_serum benchmark v1 output. "
+                    "Used as a serum-specific interpretive overlay rather than as new primary evidence."
+                ),
+                chunks=benchmark_chunks,
             )
         )
-    documents.append(
-        build_document(
-            document_id="gaira_serum_context_hcc_benchmark_v1",
-            context_type="benchmark_summary",
-            evidence_basis="derived_from_benchmark_summary",
-            source_dataset_id="hcc_serum",
-            source_file=str(benchmark_summary_path),
-            title="hcc_serum benchmark v1 context",
-            notes=(
-                "Curated serum-context summary derived from the stored hcc_serum benchmark v1 output. "
-                "Used as a serum-specific interpretive overlay rather than as new primary evidence."
-            ),
-            chunks=benchmark_chunks,
-        )
-    )
 
-    paper_text = read_text_file(paper_summary_path)
-    paper_chunks = []
-    for idx, chunk_text in enumerate(split_paragraph_chunks(paper_text), start=1):
-        section = "paper_reproduction_summary" if idx <= 3 else "paper_reproduction_interpretation"
-        paper_chunks.append(
-            (
-                section,
-                chunk_text,
-                {"source_kind": "paper_comparison_summary", "chunk_index": idx},
+    paper_text = maybe_read_text_file(paper_summary_path)
+    if paper_text:
+        paper_chunks = []
+        for idx, chunk_text in enumerate(split_paragraph_chunks(paper_text), start=1):
+            section = "paper_reproduction_summary" if idx <= 3 else "paper_reproduction_interpretation"
+            paper_chunks.append(
+                (
+                    section,
+                    chunk_text,
+                    {"source_kind": "paper_comparison_summary", "chunk_index": idx},
+                )
+            )
+        documents.append(
+            build_document(
+                document_id="gaira_serum_context_hcc_paper_comparison",
+                context_type="paper_summary",
+                evidence_basis="derived_from_paper_summary",
+                source_dataset_id="hcc_serum",
+                source_file=str(paper_summary_path),
+                title="hcc_serum paper-comparison context",
+                notes=(
+                    "Curated serum-context summary derived from the stored hcc_serum paper-comparison output. "
+                    "Captures the gap between paper-faithful PCA-LDA reproduction and the current GAIRA serum benchmark."
+                ),
+                chunks=paper_chunks,
             )
         )
-    documents.append(
-        build_document(
-            document_id="gaira_serum_context_hcc_paper_comparison",
-            context_type="paper_summary",
-            evidence_basis="derived_from_paper_summary",
-            source_dataset_id="hcc_serum",
-            source_file=str(paper_summary_path),
-            title="hcc_serum paper-comparison context",
-            notes=(
-                "Curated serum-context summary derived from the stored hcc_serum paper-comparison output. "
-                "Captures the gap between paper-faithful PCA-LDA reproduction and the current GAIRA serum benchmark."
-            ),
-            chunks=paper_chunks,
-        )
-    )
 
     with duckdb.connect(str(db_path), read_only=True) as connection:
         dataset_context_df = connection.execute(
@@ -140,7 +151,13 @@ def main() -> None:
                    default_substrate_material, substrate_vendor, instrument_context,
                    default_preprocessing_family, notes
             FROM dataset_domain_context
-            WHERE dataset_id IN ('hcc_serum', 'serum_ag_colloids')
+            WHERE dataset_id IN (
+                'hcc_serum',
+                'serum_ag_colloids',
+                'serum_protocol_comparison',
+                'cspp_serum',
+                'ergothioneine_serum'
+            )
             ORDER BY dataset_id
             """
         ).fetchdf()
@@ -151,7 +168,13 @@ def main() -> None:
                    substrate_batch_id, probe_family, spectral_axis_family,
                    cross_domain_intensity_comparable, preprocessing_family, notes
             FROM subclass_domain_context
-            WHERE dataset_id IN ('hcc_serum', 'serum_ag_colloids')
+            WHERE dataset_id IN (
+                'hcc_serum',
+                'serum_ag_colloids',
+                'serum_protocol_comparison',
+                'cspp_serum',
+                'ergothioneine_serum'
+            )
             ORDER BY dataset_id, subclass_label
             """
         ).fetchdf()
@@ -167,7 +190,9 @@ def main() -> None:
                 document_id="gaira_serum_context_dataset_context",
                 context_type="paper_summary",
                 evidence_basis="derived_from_grounding",
-                source_dataset_id="hcc_serum,serum_ag_colloids",
+                source_dataset_id=(
+                    "hcc_serum,serum_ag_colloids,serum_protocol_comparison,cspp_serum,ergothioneine_serum"
+                ),
                 source_file="dataset_domain_context + subclass_domain_context",
                 title="Current GAIRA serum dataset context",
                 notes=(

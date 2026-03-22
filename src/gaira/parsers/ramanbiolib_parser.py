@@ -454,7 +454,10 @@ class RamanBioLibParser(DatasetParser):
                 )
         except duckdb.Error as exc:
             print("Could not write RamanBioLib data into DuckDB.")
-            print("Please run `python scripts/init_database.py` after releasing any lock on data/gaira.duckdb.")
+            print(
+                "Please retry after releasing any lock on the configured GAIRA DuckDB path "
+                f"({self.db_path}) and, if needed, rerun `python scripts/init_database.py`."
+            )
             print(f"DuckDB error: {exc}")
             return
 

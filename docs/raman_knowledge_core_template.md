@@ -4,7 +4,7 @@
 
 Place the files under:
 
-`/Volumes/SSD_SPG/GAIRA_DATA/raw/raman_knowledge_core`
+`/Volumes/SSD_Rad/GAIRA_DATA/raw/raman_knowledge_core`
 
 Required files:
 

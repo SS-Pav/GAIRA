@@ -5,7 +5,7 @@ from pathlib import Path
 def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     source_file = (
-        Path("/Volumes/SSD_SPG/GAIRA_DATA/raw/ramanbiolib")
+        Path("/Volumes/SSD_Rad/GAIRA_DATA/raw/ramanbiolib")
         / "ramanbiolib-main"
         / "examples"
         / "search"

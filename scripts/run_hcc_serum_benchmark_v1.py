@@ -24,7 +24,7 @@ SEED = 42
 def ensure_output_dir() -> Path:
     project_root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(project_root / "src"))
-    from gaira.config import ensure_storage_dirs, resolve_storage_path
+    from gaira.config import ensure_storage_dirs, get_database_path, resolve_storage_path
 
     storage_config = ensure_storage_dirs()
     processed_root = resolve_storage_path(storage_config.get("processed_data"))
@@ -296,7 +296,7 @@ def write_summary(
 
 def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
-    db_path = project_root / "data" / "gaira.duckdb"
+    db_path = get_database_path()
     output_dir = ensure_output_dir()
 
     df = load_processed_dataset(db_path)

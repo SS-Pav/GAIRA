@@ -55,29 +55,31 @@ def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(project_root / "src"))
 
+    from gaira.config import get_database_path, get_storage_paths, require_data_root_exists
     from gaira.inference import (
         GAIRAInferenceEngine,
         load_ev_class_mean_query,
         load_serum_class_mean_query,
     )
 
-    db_path = project_root / "data" / "gaira.duckdb"
-    output_dir = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/gaira_inference_v1_1")
+    storage_paths = require_data_root_exists()
+    db_path = get_database_path()
+    output_dir = storage_paths["processed_data"] / "gaira_inference_v1_1"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     engine = GAIRAInferenceEngine(db_path=db_path)
     requests = [
         load_serum_class_mean_query(
             db_path=db_path,
-            dataset_id="hcc_serum",
-            class_label="CTR",
-            subclass_label="released_txt_archive",
+            dataset_id="serum_protocol_comparison",
+            class_label="p1",
+            subclass_label="protocol_comparison_archive",
         ),
         load_serum_class_mean_query(
             db_path=db_path,
-            dataset_id="hcc_serum",
-            class_label="H0T",
-            subclass_label="released_txt_archive",
+            dataset_id="serum_protocol_comparison",
+            class_label="p5",
+            subclass_label="protocol_comparison_archive",
         ),
         load_ev_class_mean_query(
             db_path=db_path,
@@ -137,7 +139,7 @@ def main() -> None:
     for result in results:
         summary_lines.append(result["final_summary"])
         summary_lines.append("")
-        if result["domain_pack"] == "GAIRA_SERUM" and "ctr" in result["query_id"]:
+        if result["domain_pack"] == "GAIRA_SERUM" and "p1" in result["query_id"]:
             write_text(output_dir / "gaira_inference_serum_example_reranked.txt", result["final_summary"])
         if result["domain_pack"] == "GAIRA_EV":
             write_text(output_dir / "gaira_inference_ev_example_reranked.txt", result["final_summary"])

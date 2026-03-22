@@ -11,7 +11,7 @@ from matplotlib.backends.backend_pdf import PdfPages
 from PIL import Image
 
 
-BASE_DIR = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding")
+BASE_DIR = Path("/Volumes/SSD_Rad/GAIRA_DATA/processed/small2023_ev_invariant_embedding")
 REPORT_DIR = BASE_DIR / "report_v1"
 FIGURES_DIR = REPORT_DIR / "figures"
 TABLES_DIR = REPORT_DIR / "tables"

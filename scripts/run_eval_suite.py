@@ -43,6 +43,7 @@ def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(project_root / "src"))
 
+    from gaira.config import get_database_path
     from gaira.search import PeakSearchEngine
 
     manifest_path = project_root / "data" / "processed" / "eval_queries" / "eval_manifest.csv"
@@ -59,7 +60,7 @@ def main() -> None:
     if manifest_df.empty:
         raise ValueError("The evaluation manifest is empty.")
 
-    engine = PeakSearchEngine(db_path=project_root / "data" / "gaira.duckdb")
+    engine = PeakSearchEngine(db_path=get_database_path())
     eval_rows: list[dict] = []
 
     for row in manifest_df.itertuples(index=False):

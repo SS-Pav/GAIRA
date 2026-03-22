@@ -260,8 +260,8 @@ def summarize_variant(name: str, repetition_df: pd.DataFrame, opt_params: list[i
 def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     output_dir = ensure_output_dir()
-    raw_csv_path = Path("/Volumes/SSD_SPG/GAIRA_DATA/raw/hcc_serum/data.csv")
-    gaira_v1_metrics_path = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/hcc_serum_benchmark_v1/hcc_serum_benchmark_metrics.csv")
+    raw_csv_path = Path("/Volumes/SSD_Rad/GAIRA_DATA/raw/hcc_serum/data.csv")
+    gaira_v1_metrics_path = Path("/Volumes/SSD_Rad/GAIRA_DATA/processed/hcc_serum_benchmark_v1/hcc_serum_benchmark_metrics.csv")
 
     metadata_df, x_raw, y_raw = load_raw_dataset(raw_csv_path)
     x_proc, X = preprocess_like_r_code(x_raw, y_raw)

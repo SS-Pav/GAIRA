@@ -1,4 +1,5 @@
 from pathlib import Path
+import sys
 
 import duckdb
 
@@ -9,7 +10,10 @@ PROCESSING_VERSION = "v1_crop400_1800_interp1_vector"
 
 def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
-    db_path = project_root / "data" / "gaira.duckdb"
+    sys.path.insert(0, str(project_root / "src"))
+    from gaira.config import get_database_path
+
+    db_path = get_database_path()
 
     with duckdb.connect(str(db_path), read_only=True) as connection:
         family_counts = connection.execute(

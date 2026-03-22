@@ -150,8 +150,8 @@ def write_summary(
 
 def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
-    archive_path = Path("/Volumes/SSD_SPG/GAIRA_DATA/raw/diabetes_plasma_ev_sers/Diabetes_Raw_Data_Codes.zip")
-    output_dir = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed")
+    archive_path = Path("/Volumes/SSD_Rad/GAIRA_DATA/raw/diabetes_plasma_ev_sers/Diabetes_Raw_Data_Codes.zip")
+    output_dir = Path("/Volumes/SSD_Rad/GAIRA_DATA/processed")
     output_dir.mkdir(parents=True, exist_ok=True)
     audit_csv = output_dir / "diabetes_plasma_ev_sers_mapping_audit.csv"
     summary_txt = output_dir / "diabetes_plasma_ev_sers_mapping_summary.txt"

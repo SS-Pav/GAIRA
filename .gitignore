@@ -10,20 +10,38 @@ venv/
 # macOS
 .DS_Store
 
-# Data
+# External / mounted data
+/Volumes/
+/GAIRA_DATA/
+
+# Local data
 data/raw/
 data/processed/
+data/interim/
+data/exports/
+data/logs/
 
 # Databases
 *.duckdb
 *.sqlite
 
+# Large scientific / binary artifacts
+*.mat
+*.zip
+*.pdf
+*.docx
+*.npz
+*.parquet
+
 # Logs
 logs/
+*.log
 
 # Jupyter
 .ipynb_checkpoints/
 
-# Parquet / cache
-*.parquet
+# Generated reports / figures
+reports/
+
+# Cache-like tabular artifacts
 *.feather

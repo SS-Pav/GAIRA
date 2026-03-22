@@ -38,6 +38,46 @@ PROCESSING_CONFIGS = {
         "baseline_method": "none",
         "normalization_method": "minmax",
     },
+    "serum_ag_colloids": {
+        "processing_version": "v1_crop400_1800_interp1_minmax",
+        "crop_min_cm": 400.0,
+        "crop_max_cm": 1800.0,
+        "interpolation_step_cm": 1.0,
+        "baseline_method": "none",
+        "normalization_method": "minmax",
+    },
+    "serum_protocol_comparison": {
+        "processing_version": "v1_crop400_1800_interp1_minmax",
+        "crop_min_cm": 400.0,
+        "crop_max_cm": 1800.0,
+        "interpolation_step_cm": 1.0,
+        "baseline_method": "none",
+        "normalization_method": "minmax",
+    },
+    "cspp_serum": {
+        "processing_version": "v1_crop400_1800_interp1_minmax",
+        "crop_min_cm": 400.0,
+        "crop_max_cm": 1800.0,
+        "interpolation_step_cm": 1.0,
+        "baseline_method": "none",
+        "normalization_method": "minmax",
+    },
+    "ergothioneine_serum": {
+        "processing_version": "v1_crop400_1800_interp1_minmax",
+        "crop_min_cm": 400.0,
+        "crop_max_cm": 1800.0,
+        "interpolation_step_cm": 1.0,
+        "baseline_method": "none",
+        "normalization_method": "minmax",
+    },
+    "diabetes_plasma_ev_sers": {
+        "processing_version": "v1_crop500_1600_interp1_minmax",
+        "crop_min_cm": 500.0,
+        "crop_max_cm": 1600.0,
+        "interpolation_step_cm": 1.0,
+        "baseline_method": "none",
+        "normalization_method": "minmax",
+    },
 }
 SOURCE_TABLE = "biosample_spectrum_points"
 
@@ -158,6 +198,7 @@ def process_one_spectrum(
 def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(project_root / "src"))
+    from gaira.config import get_database_path, require_data_root_exists
 
     parser = argparse.ArgumentParser(description="Build a processed biosample layer in DuckDB.")
     parser.add_argument("dataset_id", help="Dataset identifier to process")
@@ -170,11 +211,14 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.dataset_id not in PROCESSING_CONFIGS:
-        print("Processed biosample support is only implemented for shine_ev_sers, small2023_ev, and hcc_serum right now.")
+        print(
+            "Processed biosample support is only implemented for configured datasets in PROCESSING_CONFIGS."
+        )
         return
 
     config = PROCESSING_CONFIGS[args.dataset_id]
-    db_path = project_root / "data" / "gaira.duckdb"
+    require_data_root_exists()
+    db_path = get_database_path()
     common_grid = build_common_grid(config)
     class_accumulators: dict[tuple[str | None, str | None], dict[str, np.ndarray | int]] = defaultdict(dict)
 

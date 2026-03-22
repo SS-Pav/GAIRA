@@ -4,13 +4,16 @@ import duckdb
 
 
 def main() -> None:
-    # Keep paths relative to the GAIRA project root.
     project_root = Path(__file__).resolve().parents[1]
-    data_dir = project_root / "data"
-    db_path = data_dir / "gaira.duckdb"
+    import sys
 
-    # Ensure the data directory exists before creating the database file.
-    data_dir.mkdir(exist_ok=True)
+    sys.path.insert(0, str(project_root / "src"))
+    from gaira.config import get_database_path, require_data_root_exists
+
+    require_data_root_exists()
+    db_path = get_database_path()
+
+    db_path.parent.mkdir(parents=True, exist_ok=True)
 
     with duckdb.connect(str(db_path)) as db:
         # Registry-friendly dataset table.
@@ -721,6 +724,7 @@ def main() -> None:
     print(
         "GAIRA database initialized with registry, reference, biosample, grounding, knowledge, and domain-context tables."
     )
+    print(f"Database path: {db_path}")
 
 
 if __name__ == "__main__":

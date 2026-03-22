@@ -8,6 +8,7 @@ def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(project_root / "src"))
 
+    from gaira.config import get_database_path
     from gaira.search import PeakSearchEngine
 
     parser = argparse.ArgumentParser(description="Run GAIRA peak-based Raman search.")
@@ -18,7 +19,7 @@ def main() -> None:
     parser.add_argument("--height", type=float, default=0.03, help="Peak height threshold")
     args = parser.parse_args()
 
-    db_path = project_root / "data" / "gaira.duckdb"
+    db_path = get_database_path()
     engine = PeakSearchEngine(
         db_path=db_path,
         peak_tolerance_cm=args.tolerance,

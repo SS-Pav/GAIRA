@@ -4,7 +4,7 @@ from pathlib import Path
 def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     template_path = project_root / "docs" / "raman_knowledge_core_template.md"
-    dataset_root = Path("/Volumes/SSD_SPG/GAIRA_DATA/raw/raman_knowledge_core")
+    dataset_root = Path("/Volumes/SSD_Rad/GAIRA_DATA/raw/raman_knowledge_core")
     expected_files = [
         "sources.csv",
         "peak_assignments.csv",

@@ -14,7 +14,13 @@ def preview_table(connection: duckdb.DuckDBPyConnection, query: str, params: lis
 
 def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
-    db_path = project_root / "data" / "gaira.duckdb"
+    import sys
+
+    sys.path.insert(0, str(project_root / "src"))
+    from gaira.config import get_database_path, require_data_root_exists
+
+    require_data_root_exists()
+    db_path = get_database_path()
     dataset_id = "raman_knowledge_core"
 
     with duckdb.connect(str(db_path), read_only=True) as connection:

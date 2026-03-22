@@ -50,7 +50,13 @@ def load_csv(path: Path, required_columns: list[str]) -> pd.DataFrame:
 
 def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
-    db_path = project_root / "data" / "gaira.duckdb"
+    import sys
+
+    sys.path.insert(0, str(project_root / "src"))
+    from gaira.config import get_database_path, require_data_root_exists
+
+    require_data_root_exists()
+    db_path = get_database_path()
     context_dir = project_root / "data" / "raw" / "context"
     dataset_context_path = context_dir / "dataset_domain_context_v1.csv"
     subclass_context_path = context_dir / "subclass_domain_context_v1.csv"

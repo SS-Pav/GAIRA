@@ -1,4 +1,5 @@
 from pathlib import Path
+import sys
 
 import duckdb
 import pandas as pd
@@ -9,9 +10,12 @@ st.set_page_config(page_title="GAIRA Dataset Dashboard", layout="wide")
 
 
 def load_datasets() -> pd.DataFrame:
-    # Resolve the database location from the project root.
     project_root = Path(__file__).resolve().parents[1]
-    db_path = project_root / "data" / "gaira.duckdb"
+    sys.path.insert(0, str(project_root / "src"))
+
+    from gaira.config import get_database_path
+
+    db_path = get_database_path()
 
     if not db_path.exists():
         raise FileNotFoundError(f"Database not found: {db_path}")

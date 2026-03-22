@@ -23,6 +23,10 @@ def main() -> None:
         pack_df["datasets"] = pack_df["datasets"].apply(lambda values: ", ".join(values))
         pack_df["intended_sample_types"] = pack_df["intended_sample_types"].apply(lambda values: ", ".join(values))
         pack_df["intended_matrices"] = pack_df["intended_matrices"].apply(lambda values: ", ".join(values))
+        if "holdout_datasets" in pack_df.columns:
+            pack_df["holdout_datasets"] = pack_df["holdout_datasets"].apply(
+                lambda values: ", ".join(values) if isinstance(values, list) else ""
+            )
 
     print("Registered domain packs:")
     print(pack_df.to_string(index=False))
@@ -38,11 +42,15 @@ def main() -> None:
         "ramanbiolib",
         "serum_ag_colloids_grounding",
         "serum_ag_colloids_literature_grounding",
+        "sers_fingerprint_workingpaper_support",
+        "sers24_metabolite_support",
         "small2023_ev",
         "shine_ev_sers",
         "diabetes_plasma_ev_sers",
         "hcc_serum",
         "serum_ag_colloids",
+        "serum_protocol_comparison",
+        "cspp_serum",
     ]:
         print(f"  {dataset_id}: {', '.join(find_packs_for_dataset(dataset_id))}")
 

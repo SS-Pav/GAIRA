@@ -1,4 +1,8 @@
-raw_data: /Volumes/SSD_SPG/GAIRA_DATA/raw
-processed_data: /Volumes/SSD_SPG/GAIRA_DATA/processed
-cache: /Volumes/SSD_SPG/GAIRA_DATA/cache
-database: data/gaira.duckdb
+data_root: /Volumes/SSD_Rad/GAIRA_DATA
+raw_data: /Volumes/SSD_Rad/GAIRA_DATA/raw
+interim_data: /Volumes/SSD_Rad/GAIRA_DATA/interim
+processed_data: /Volumes/SSD_Rad/GAIRA_DATA/processed
+logs: /Volumes/SSD_Rad/GAIRA_DATA/logs
+exports: /Volumes/SSD_Rad/GAIRA_DATA/exports
+cache: /Volumes/SSD_Rad/GAIRA_DATA/interim/cache
+database: /Volumes/SSD_Rad/GAIRA_DATA/interim/gaira.duckdb

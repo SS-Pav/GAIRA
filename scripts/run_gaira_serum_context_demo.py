@@ -8,11 +8,12 @@ def main() -> None:
     project_root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(project_root / "src"))
 
+    from gaira.config import get_database_path
     from gaira.grounding_search import GroundingSearchEngine
     from gaira.serum_context import SerumContextRetriever
 
-    db_path = project_root / "data" / "gaira.duckdb"
-    output_dir = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/gaira_serum_context_demo")
+    db_path = get_database_path()
+    output_dir = Path("/Volumes/SSD_Rad/GAIRA_DATA/processed/gaira_serum_context_demo")
     output_dir.mkdir(parents=True, exist_ok=True)
 
     grounding_engine = GroundingSearchEngine(db_path=db_path)

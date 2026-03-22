@@ -4,7 +4,7 @@ import pandas as pd
 
 
 def main() -> None:
-    output_dir = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v2")
+    output_dir = Path("/Volumes/SSD_Rad/GAIRA_DATA/processed/small2023_ev_invariant_embedding_v2")
     required = [
         output_dir / "small2023_ev_invariant_dataset_v2.npz",
         output_dir / "small2023_ev_invariant_dataset_v2_metadata.csv",

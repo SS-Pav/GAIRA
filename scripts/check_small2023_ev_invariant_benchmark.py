@@ -4,7 +4,7 @@ import pandas as pd
 
 
 def main() -> None:
-    output_dir = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/small2023_ev_invariant_embedding")
+    output_dir = Path("/Volumes/SSD_Rad/GAIRA_DATA/processed/small2023_ev_invariant_embedding")
     baseline_path = output_dir / "baseline_cross_probe_metrics.csv"
     embedding_path = output_dir / "embedding_cross_probe_metrics.csv"
     geometry_path = output_dir / "geometry_metrics.csv"

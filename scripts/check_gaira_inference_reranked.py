@@ -3,7 +3,14 @@ from pathlib import Path
 
 
 def main() -> None:
-    output_dir = Path("/Volumes/SSD_SPG/GAIRA_DATA/processed/gaira_inference_v1_1")
+    project_root = Path(__file__).resolve().parents[1]
+    import sys
+
+    sys.path.insert(0, str(project_root / "src"))
+    from gaira.config import get_storage_paths, require_data_root_exists
+
+    storage_paths = require_data_root_exists()
+    output_dir = storage_paths["processed_data"] / "gaira_inference_v1_1"
     json_path = output_dir / "gaira_inference_reranked_results.json"
     comparison_path = output_dir / "gaira_inference_before_after_comparison.csv"
 
