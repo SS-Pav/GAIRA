@@ -348,6 +348,33 @@ def main() -> None:
 
     documents.append(
         build_document(
+            document_id="gaira_ev_context_cargo_mixture_caveat",
+            context_type="caveat",
+            evidence_basis="derived_from_processed_summary",
+            source_dataset_id="small2023_ev,shine_ev_sers,diabetes_plasma_ev_sers",
+            source_file="embedding summaries + dataset_domain_context",
+            title="EV cargo and mixed-signal caveat",
+            notes=(
+                "Curated EV-context caveat that frames EV SERS as a mixed membrane/cargo/adsorbate signal rather than a single-analyte readout."
+            ),
+            chunks=[
+                (
+                    "ev_cargo_mixture_caveat",
+                    (
+                        "EV SERS signals should be interpreted as mixed biochemical structure rather than single-molecule "
+                        "fingerprints. Depending on substrate and protocol, the signal can reflect membrane lipids, "
+                        "protein cargo, nucleic-acid contributions, and substrate-enhanced adsorbates at the same time. "
+                        "This is why GAIRA treats shared grounding as biochemical analog support and then overlays EV-domain "
+                        "context before making interpretation claims."
+                    ),
+                    {"source_kind": "ev_mixture_caveat"},
+                )
+            ],
+        )
+    )
+
+    documents.append(
+        build_document(
             document_id="gaira_ev_context_diabetes_weak_label_note",
             context_type="caveat",
             evidence_basis="derived_from_dataset_context",
@@ -393,6 +420,30 @@ def main() -> None:
                 ],
             )
         )
+
+    documents.append(
+        build_document(
+            document_id="gaira_ev_context_diabetes_use_note",
+            context_type="interpretive_note",
+            evidence_basis="derived_from_dataset_context",
+            source_dataset_id="diabetes_plasma_ev_sers",
+            source_file="dataset_domain_context + subclass_domain_context",
+            title="Diabetes plasma EV usage note",
+            notes=("Curated EV-context note describing the defensible use of diabetes_plasma_ev_sers inside GAIRA."),
+            chunks=[
+                (
+                    "diabetes_use_note",
+                    (
+                        "Within GAIRA, diabetes_plasma_ev_sers should be used as a weak-label external EV stress test "
+                        "and domain-framing resource rather than as a four-subgroup benchmark. The defensible read is "
+                        "Impact-vs-StrongD cohort-family contrast under one processed archive family, with careful "
+                        "avoidance of patient-level or subgroup-specific overclaims."
+                    ),
+                    {"source_kind": "diabetes_usage_note"},
+                )
+            ],
+        )
+    )
 
     documents.append(
         build_document(

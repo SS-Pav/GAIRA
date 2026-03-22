@@ -156,7 +156,8 @@ def main() -> None:
                 'serum_ag_colloids',
                 'serum_protocol_comparison',
                 'cspp_serum',
-                'ergothioneine_serum'
+                'ergothioneine_serum',
+                'covid_serum_raman'
             )
             ORDER BY dataset_id
             """
@@ -173,7 +174,8 @@ def main() -> None:
                 'serum_ag_colloids',
                 'serum_protocol_comparison',
                 'cspp_serum',
-                'ergothioneine_serum'
+                'ergothioneine_serum',
+                'covid_serum_raman'
             )
             ORDER BY dataset_id, subclass_label
             """
@@ -191,7 +193,7 @@ def main() -> None:
                 context_type="paper_summary",
                 evidence_basis="derived_from_grounding",
                 source_dataset_id=(
-                    "hcc_serum,serum_ag_colloids,serum_protocol_comparison,cspp_serum,ergothioneine_serum"
+                    "hcc_serum,serum_ag_colloids,serum_protocol_comparison,cspp_serum,ergothioneine_serum,covid_serum_raman"
                 ),
                 source_file="dataset_domain_context + subclass_domain_context",
                 title="Current GAIRA serum dataset context",
@@ -207,6 +209,92 @@ def main() -> None:
                 ],
             )
         )
+
+        for dataset_id, title, section_name, chunk_text, notes in [
+            (
+                "serum_protocol_comparison",
+                "Serum protocol-comparison interpretation note",
+                "protocol_comparison_note",
+                (
+                    "serum_protocol_comparison is a same-serum protocol-variability archive, not a disease benchmark. "
+                    "All released spectra come from one commercial human serum sample measured under explicit protocol "
+                    "codes p1-p5, so signal differences should be interpreted mainly as preparation/protocol effects "
+                    "rather than biological class structure. This makes the dataset useful for serum-domain cautioning "
+                    "about preparation sensitivity and protocol dependence, especially when a serum query appears stable "
+                    "only under one protocol neighborhood.\n\n"
+                    "Dataset context:\n"
+                    + dataset_context_df[dataset_context_df["dataset_id"] == "serum_protocol_comparison"].to_string(index=False)
+                    + "\n\nSubclass context:\n"
+                    + subclass_context_df[subclass_context_df["dataset_id"] == "serum_protocol_comparison"].to_string(index=False)
+                ),
+                "Curated serum-specific note that frames serum_protocol_comparison as a protocol-variability dataset.",
+            ),
+            (
+                "cspp_serum",
+                "CSPP serum methodology-family note",
+                "cspp_methodology_note",
+                (
+                    "cspp_serum is a serum methodology archive spanning multiple figure families rather than one "
+                    "biological task. Its subclasses encode processing comparison, protocol optimization, strip "
+                    "variability, shelf-life effects, and metabolite spiking on centrifugal silver plasmonic paper "
+                    "substrates. Query matches into this dataset should therefore be read as method-factor and "
+                    "substrate-behavior context, with the Figure 7 metabolite-spiking family especially useful as "
+                    "supporting serum-specific comparison rather than a direct diagnostic label.\n\n"
+                    "Dataset context:\n"
+                    + dataset_context_df[dataset_context_df["dataset_id"] == "cspp_serum"].to_string(index=False)
+                    + "\n\nSubclass context:\n"
+                    + subclass_context_df[subclass_context_df["dataset_id"] == "cspp_serum"].to_string(index=False)
+                ),
+                "Curated serum-specific note that explains the figure-family structure of cspp_serum.",
+            ),
+            (
+                "ergothioneine_serum",
+                "Ergothioneine serum calibration note",
+                "ergothioneine_calibration_note",
+                (
+                    "ergothioneine_serum is a serum metabolite-calibration archive with explicit concentration labels, "
+                    "so it is best used as concentration-response and metabolite-behavior context rather than as a "
+                    "disease-class reference. If a serum query aligns with this archive, the relevant interpretation is "
+                    "that the spectrum may carry ergothioneine-like or calibration-like behavior under similar colloidal "
+                    "serum SERS conditions, not that ergothioneine has been definitively identified.\n\n"
+                    "Dataset context:\n"
+                    + dataset_context_df[dataset_context_df["dataset_id"] == "ergothioneine_serum"].to_string(index=False)
+                    + "\n\nSubclass context:\n"
+                    + subclass_context_df[subclass_context_df["dataset_id"] == "ergothioneine_serum"].to_string(index=False)
+                ),
+                "Curated serum-specific note that frames ergothioneine_serum as a metabolite-calibration archive.",
+            ),
+            (
+                "covid_serum_raman",
+                "COVID serum spontaneous-Raman cohort note",
+                "covid_serum_raman_note",
+                (
+                    "covid_serum_raman is a serum disease-cohort archive, but it is spontaneous Raman rather than SERS. "
+                    "That makes it useful as serum-domain disease/cohort context and modality-diversity support, while "
+                    "also requiring explicit caution: matches into this dataset do not imply direct equivalence to the "
+                    "SERS-heavy serum datasets already in GAIRA. Interpretation should stay at the level of cohort- or "
+                    "state-associated Raman structure under the released spontaneous-Raman acquisition conditions, not "
+                    "substrate-specific serum SERS behavior.\n\n"
+                    "Dataset context:\n"
+                    + dataset_context_df[dataset_context_df["dataset_id"] == "covid_serum_raman"].to_string(index=False)
+                    + "\n\nSubclass context:\n"
+                    + subclass_context_df[subclass_context_df["dataset_id"] == "covid_serum_raman"].to_string(index=False)
+                ),
+                "Curated serum-specific note that frames covid_serum_raman as a spontaneous-Raman cohort dataset with modality caution relative to serum SERS datasets.",
+            ),
+        ]:
+            documents.append(
+                build_document(
+                    document_id=f"gaira_serum_context_{slugify(dataset_id)}_note",
+                    context_type="interpretive_note",
+                    evidence_basis="derived_from_dataset_context",
+                    source_dataset_id=dataset_id,
+                    source_file="dataset_domain_context + subclass_domain_context",
+                    title=title,
+                    notes=notes,
+                    chunks=[(section_name, chunk_text, {"source_kind": "dataset_specific_context"})],
+                )
+            )
 
         grounding_summary_df = connection.execute(
             """

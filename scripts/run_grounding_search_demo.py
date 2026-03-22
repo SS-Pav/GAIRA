@@ -49,18 +49,33 @@ def main() -> None:
 
     for query in queries:
         direct_df = engine.search_direct_spectral_evidence(query, top_n_per_source=5)
-        support_df = engine.search_supporting_literature_for_spectrum(query, top_n=8)
+        seed_labels = direct_df["source_label"].head(6).astype(str).tolist() if not direct_df.empty else []
+        support_df = engine.search_supporting_literature_for_spectrum(
+            query,
+            seed_labels=seed_labels,
+            domain="serum" if "serum" in query.source_dataset_id else None,
+            top_n=8,
+        )
+        knowledge_df = engine.search_knowledge_support(
+            query,
+            seed_labels=seed_labels,
+            domain="serum" if "serum" in query.source_dataset_id else None,
+            top_n=8,
+        )
 
         if not direct_df.empty:
             demo_rows.extend(direct_df.to_dict(orient="records"))
         if not support_df.empty:
             demo_rows.extend(support_df.to_dict(orient="records"))
+        if not knowledge_df.empty:
+            demo_rows.extend(knowledge_df.to_dict(orient="records"))
 
         summary_lines.append(
             f"Query {query.query_id} ({query.query_label}; {query.query_family}; {query.source_dataset_id})"
         )
         summary_lines.extend(format_result_block("Tier 1 direct evidence", direct_df))
         summary_lines.extend(format_result_block("Tier 2 literature support", support_df))
+        summary_lines.extend(format_result_block("Tier 2 knowledge support", knowledge_df))
         summary_lines.append("")
 
     demo_df = pd.DataFrame(demo_rows)
@@ -69,7 +84,7 @@ def main() -> None:
     else:
         pd.DataFrame().to_csv(output_dir / "grounding_search_demo_results.csv", index=False)
 
-    band_queries = [1659.0, 725.0, 1003.0]
+    band_queries = [1659.0, 733.0, 1003.0]
     band_rows: list[dict] = []
     for band_cm in band_queries:
         band_df = engine.search_band_evidence(band_cm=band_cm, tolerance_cm=10.0)

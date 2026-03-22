@@ -167,9 +167,17 @@ class GAIRAInferenceEngine:
         top_labels = direct_df["source_label"].head(6).astype(str).tolist() if not direct_df.empty else []
         if request.domain == "serum":
             label_df = self.serum_context.search_by_grounding_labels(top_labels, top_n=6)
-            band_df = self.serum_context.search_by_bands([725.0, 1003.0, 1659.0], top_n=6)
+            band_df = self.serum_context.search_by_bands([725.0, 1003.0, 1450.0, 1659.0], top_n=6)
             text_df = self.serum_context.search_by_text(
-                "serum uric acid hypoxanthine adsorption bias batch caveat paper comparison",
+                " ".join(
+                    [
+                        "serum uric acid hypoxanthine adsorption bias batch caveat paper comparison",
+                        request.source_dataset_id,
+                        request.query_family,
+                        request.query_label,
+                        "protocol optimization strip variability shelf life metabolite spiking ergothioneine",
+                    ]
+                ),
                 top_n=6,
             )
         else:
@@ -179,7 +187,15 @@ class GAIRAInferenceEngine:
             )
             band_df = pd.DataFrame()
             text_df = self.ev_context.search_by_text(
-                "extracellular vesicles probe1 probe2 substrate caveat weak label default embedding transductive",
+                " ".join(
+                    [
+                        "extracellular vesicles probe1 probe2 substrate caveat weak label default embedding transductive",
+                        request.source_dataset_id,
+                        request.query_family,
+                        request.query_label,
+                        "shine consensus analog gold nanopillar diabetes mapping impact strongd cargo mixture",
+                    ]
+                ),
                 top_n=6,
             )
 
@@ -199,6 +215,8 @@ class GAIRAInferenceEngine:
         tier2_before_df: pd.DataFrame,
         tier2_df: pd.DataFrame,
         context_df: pd.DataFrame,
+        knowledge_df: pd.DataFrame,
+        semantic_df: pd.DataFrame,
     ) -> str:
         lines = [
             f"Domain pack: {pack_entry['pack_id']}",
@@ -238,18 +256,36 @@ class GAIRAInferenceEngine:
                     f"- {row['document_id']} | {row['section']} | score={float(row['score']):.2f} | {row['matched_tokens']}"
                 )
 
+        lines.append("")
+        lines.append("4. Knowledge and semantic interpretation support")
+        if knowledge_df.empty and semantic_df.empty:
+            lines.append("No knowledge-core support hits.")
+        else:
+            for row in semantic_df.head(4).to_dict(orient="records"):
+                lines.append(
+                    f"- semantic | {row['source_label']} | reranked={float(row['reranked_score']):.4f} | {row['notes']}"
+                )
+            for row in knowledge_df.head(6).to_dict(orient="records"):
+                lines.append(
+                    f"- {row['result_type']} | {row['source_label']} | reranked={float(row['reranked_score']):.4f} | "
+                    f"{row['notes'][:220]}"
+                )
+
         top_tier1 = tier1_df.head(3)["source_label"].astype(str).tolist() if not tier1_df.empty else []
         top_tier2 = tier2_df.head(3)["source_label"].astype(str).tolist() if not tier2_df.empty else []
         top_context = context_df.head(3)["document_id"].astype(str).tolist() if not context_df.empty else []
+        top_knowledge = knowledge_df.head(3)["source_label"].astype(str).tolist() if not knowledge_df.empty else []
+        top_semantic = semantic_df.head(3)["source_label"].astype(str).tolist() if not semantic_df.empty else []
 
         lines.append("")
-        lines.append("4. Final integrated interpretation")
+        lines.append("5. Final integrated interpretation")
         if request.domain == "serum":
             lines.append(
                 "The shared grounding layer returned both broad RamanBioLib analogs and serum-local Ag-colloid "
                 "grounding support. Domain-aware reranking boosts study-matched serum grounding and modestly boosts "
                 "serum literature support while keeping RamanBioLib visible as broad molecular evidence. Serum-context "
-                "notes still add caveats about metabolite dominance, adsorption/protocol sensitivity, and batch-aware interpretation."
+                "notes still add caveats about metabolite dominance, adsorption/protocol sensitivity, and batch-aware interpretation. "
+                "Knowledge-core and semantic-region support remain interpretive aids rather than definitive molecular identification."
             )
         else:
             lines.append(
@@ -257,7 +293,8 @@ class GAIRAInferenceEngine:
                 "through EV-domain context. Domain-aware reranking keeps broad shared grounding neutral while "
                 "downweighting serum-specific grounding and serum literature support unless they are unusually strong. "
                 "EV-context notes then add probe/substrate-family caution, the small2023_ev benchmark hierarchy, and "
-                "weak-label caveats for diabetes_plasma_ev_sers."
+                "weak-label caveats for diabetes_plasma_ev_sers. Knowledge-core and semantic-region support should be "
+                "read as conservative biochemical interpretation support, not as literal EV cargo identification."
             )
         if top_tier1:
             lines.append(f"Top tier-1 labels: {', '.join(top_tier1)}")
@@ -265,6 +302,10 @@ class GAIRAInferenceEngine:
             lines.append(f"Top tier-2 support labels: {', '.join(top_tier2)}")
         if top_context:
             lines.append(f"Top context documents: {', '.join(top_context)}")
+        if top_semantic:
+            lines.append(f"Top semantic regions: {', '.join(top_semantic)}")
+        if top_knowledge:
+            lines.append(f"Top knowledge support labels: {', '.join(top_knowledge)}")
         if not tier1_before_df.empty and not tier1_df.empty:
             lines.append(
                 f"Top tier-1 before reranking: {', '.join(tier1_before_df.head(3)['source_label'].astype(str).tolist())}"
@@ -282,12 +323,36 @@ class GAIRAInferenceEngine:
             top_n_per_source=5,
         )
         tier1_before_df = direct_df[direct_df["evidence_tier"] == "tier1_direct_spectral_grounding"].copy()
+        seed_labels = tier1_before_df["source_label"].head(6).astype(str).tolist() if not tier1_before_df.empty else []
         tier2_before_df = self.grounding_engine.search_supporting_literature_for_spectrum(
             request.spectrum_query,
+            seed_labels=seed_labels,
+            domain=request.domain,
             top_n=8,
+        )
+        knowledge_before_df = self.grounding_engine.search_knowledge_support(
+            request.spectrum_query,
+            seed_labels=seed_labels,
+            domain=request.domain,
+            top_n=10,
         )
         tier1_df = rerank_grounding_hits(tier1_before_df, domain=request.domain, tier="tier1")
         tier2_df = rerank_grounding_hits(tier2_before_df, domain=request.domain, tier="tier2")
+        knowledge_all_df = rerank_grounding_hits(knowledge_before_df, domain=request.domain, tier="tier2")
+        semantic_df = (
+            knowledge_all_df[knowledge_all_df["result_type"] == "semantic_region_support"]
+            .head(5)
+            .reset_index(drop=True)
+            if not knowledge_all_df.empty
+            else pd.DataFrame()
+        )
+        knowledge_df = (
+            knowledge_all_df[knowledge_all_df["result_type"] != "semantic_region_support"]
+            .head(8)
+            .reset_index(drop=True)
+            if not knowledge_all_df.empty
+            else pd.DataFrame()
+        )
         context_df = self._select_context_hits(request, tier1_df)
 
         result = {
@@ -300,6 +365,9 @@ class GAIRAInferenceEngine:
             "tier1_grounding_hits": tier1_df.head(10).to_dict(orient="records"),
             "tier2_support_hits_before_reranking": tier2_before_df.head(10).to_dict(orient="records") if not tier2_before_df.empty else [],
             "tier2_support_hits": tier2_df.head(10).to_dict(orient="records") if not tier2_df.empty else [],
+            "knowledge_support_hits_before_reranking": knowledge_before_df.head(10).to_dict(orient="records") if not knowledge_before_df.empty else [],
+            "knowledge_support_hits": knowledge_df.to_dict(orient="records") if not knowledge_df.empty else [],
+            "semantic_region_support_hits": semantic_df.to_dict(orient="records") if not semantic_df.empty else [],
             "domain_context_hits": context_df.head(10).to_dict(orient="records") if not context_df.empty else [],
             "final_summary": self._build_summary(
                 request,
@@ -309,6 +377,8 @@ class GAIRAInferenceEngine:
                 tier2_before_df,
                 tier2_df,
                 context_df,
+                knowledge_df,
+                semantic_df,
             ),
         }
         return result

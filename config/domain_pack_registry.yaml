@@ -31,6 +31,7 @@ packs:
       - serum_protocol_comparison
       - cspp_serum
       - ergothioneine_serum
+      - covid_serum_raman
     holdout_datasets:
       - hcc_serum
     default_embedding: none_yet
@@ -39,7 +40,9 @@ packs:
       hcc_serum is retained as a holdout evaluation dataset and is skipped by default in rebuild
       and ingest flows unless explicitly requested. The active rebuilt serum stack currently
       centers serum_ag_colloids, serum_protocol_comparison, cspp_serum, and ergothioneine_serum.
-      No serum embedding is promoted to default yet.
+      covid_serum_raman is onboarded as a spontaneous-Raman serum cohort dataset and should be
+      interpreted with modality caution relative to the SERS-heavy serum stack. No serum embedding
+      is promoted to default yet.
 
   GAIRA_GROUNDING:
     pack_id: GAIRA_GROUNDING
@@ -52,6 +55,7 @@ packs:
     datasets:
       - ramanbiolib
       - serum_ag_colloids_grounding
+      - adenine_sers_control
       - serum_ag_colloids_literature_grounding
       - sers_fingerprint_workingpaper_support
       - sers24_metabolite_support
@@ -60,5 +64,6 @@ packs:
       to support multiple biosample-domain foundation packs without being treated itself as a
       biosample inference or benchmarking pack. It currently includes RamanBioLib and the selected
       controlled-reference folders extracted from the serum_ag_colloids archive, plus the deferred
-      literature and digitized-literature support assets from the same release, plus support-only
-      paper resources where no clean numeric spectral package was released.
+      literature and digitized-literature support assets from the same release, plus calibration-like
+      controlled analyte grounding such as adenine_sers_control, plus support-only paper resources
+      where no clean numeric spectral package was released.

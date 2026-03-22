@@ -28,6 +28,8 @@ def main() -> None:
         after_tier1 = result.get("tier1_grounding_hits", [])
         before_tier2 = result.get("tier2_support_hits_before_reranking", [])
         after_tier2 = result.get("tier2_support_hits", [])
+        knowledge_hits = result.get("knowledge_support_hits", [])
+        semantic_hits = result.get("semantic_region_support_hits", [])
         if before_tier1:
             top = before_tier1[0]
             print(
@@ -53,6 +55,18 @@ def main() -> None:
                 "Top tier-2 after: "
                 f"{top['source_dataset_id']} / {top['source_label']} / "
                 f"{float(top['reranked_score']):.4f} (w={float(top['domain_relevance_weight']):.2f})"
+            )
+        if semantic_hits:
+            top = semantic_hits[0]
+            print(
+                "Top semantic support: "
+                f"{top['source_label']} / {float(top['reranked_score']):.4f}"
+            )
+        if knowledge_hits:
+            top = knowledge_hits[0]
+            print(
+                "Top knowledge support: "
+                f"{top['result_type']} / {top['source_label']} / {float(top['reranked_score']):.4f}"
             )
 
     print()

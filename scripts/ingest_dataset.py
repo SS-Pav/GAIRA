@@ -6,6 +6,16 @@ import pandas as pd
 
 
 REQUIRED_RAW_FILES: dict[str, tuple[str, ...]] = {
+    "covid_serum_raman": (
+        "readme.txt",
+        "code.m",
+        "wave_number.txt",
+        "raw_COVID.txt",
+        "raw_Helthy.txt",
+        "raw_Suspected.txt",
+        "raw_Tube.txt",
+        "table2_data.txt",
+    ),
     "serum_protocol_comparison": (
         "dataset_serum_spectra.zip",
         "Instructions.docx",
@@ -27,6 +37,27 @@ REQUIRED_RAW_FILES: dict[str, tuple[str, ...]] = {
     "sers24_metabolite_support": (
         "pubmed_37918093.html",
         "crossref_10_1016_j_saa_2023_123587.json",
+    ),
+    "adenine_sers_control": (
+        "1-s2.0-S0003267025009894-main.pdf",
+        "LOD_opakovatelnost.xlsx",
+        "ad1ng.CSV",
+        "ad1ng_after_two_weeks.CSV",
+        "ad1ug_Average.CSV",
+        "Adenine_1ng_mL.CSV",
+        "Adenine_bAgNPs_100nano.CSV",
+        "Adenine_bAgNPs_100pg.CSV",
+        "Adenine_bAgNPs_10micro.CSV",
+        "Adenine_bAgNPs_10nano.CSV",
+        "Adenine_bAgNPs_10pg.CSV",
+        "Adenine_bAgNPs_1micro.CSV",
+        "bAg-koloid_ad1ug_0.5mW_Average.CSV",
+        "bAgNPs_Adenine_1ng_1.CSV",
+        "bAgNPs_Adenine_1ng_2.CSV",
+        "bAgNPs_Adenine_1ng_3.CSV",
+        "bAgNPs_Adenine_1ng_4.CSV",
+        "bAgNPs_Adenine_1ng_5.CSV",
+        "bg.CSV",
     ),
 }
 
@@ -63,6 +94,7 @@ def main() -> None:
 
     from gaira.config import ensure_storage_dirs, resolve_storage_path
     from gaira.parsers.biosample.diabetes_plasma_ev_sers_parser import DiabetesPlasmaEVSERSParser
+    from gaira.parsers.biosample.covid_serum_raman_parser import COVIDSerumRamanParser
     from gaira.parsers.biosample.cspp_serum_parser import CSPPSerumParser
     from gaira.parsers.biosample.ergothioneine_serum_parser import ErgothioneineSerumParser
     from gaira.parsers.biosample.hcc_serum_parser import HCCSerumParser
@@ -70,6 +102,7 @@ def main() -> None:
     from gaira.parsers.biosample.serum_ag_colloids_parser import SerumAgColloidsParser
     from gaira.parsers.biosample.small2023_ev_parser import Small2023EVParser
     from gaira.parsers.grounding.document_support_parser import DocumentSupportParser
+    from gaira.parsers.grounding.adenine_sers_control_parser import AdenineSERSControlParser
     from gaira.parsers.grounding.serum_ag_colloids_grounding_parser import (
         SerumAgColloidsGroundingParser,
     )
@@ -251,6 +284,17 @@ def main() -> None:
             parser_instance.ingest()
             return
 
+        if args.dataset_id == "covid_serum_raman":
+            parser_instance = COVIDSerumRamanParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running covid_serum_raman biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
         print(
             "Biosample parser scaffold exists, but no concrete dataset implementation has "
             "been added yet."
@@ -283,6 +327,17 @@ def main() -> None:
                 db_path=db_path,
             )
             print("Running serum_ag_colloids_grounding ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id == "adenine_sers_control":
+            parser_instance = AdenineSERSControlParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running adenine_sers_control grounding ingestion into DuckDB.")
             parser_instance.audit()
             parser_instance.ingest()
             return

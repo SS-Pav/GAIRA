@@ -19,15 +19,26 @@ def main() -> None:
     grounding_engine = GroundingSearchEngine(db_path=db_path)
     context_retriever = SerumContextRetriever(db_path=db_path)
 
-    query = next(query for query in grounding_engine.get_demo_queries() if query.query_id == "hcc_serum_ctr")
+    demo_queries = grounding_engine.get_demo_queries()
+    query = next(
+        (
+            item
+            for item in demo_queries
+            if item.source_dataset_id != "hcc_serum"
+        ),
+        None,
+    )
+    if query is None:
+        raise ValueError("Could not find an active non-holdout serum-style demo query.")
     direct_df = grounding_engine.search_direct_spectral_evidence(query, top_n_per_source=3)
     top_labels = direct_df["source_label"].head(5).astype(str).tolist()
-    top_bands = [725.0, 1003.0, 1659.0]
+    top_bands = [725.0, 1003.0, 1450.0, 1659.0]
 
     context_from_labels_df = context_retriever.search_by_grounding_labels(top_labels, top_n=6)
     context_from_bands_df = context_retriever.search_by_bands(top_bands, top_n=6)
     context_from_text_df = context_retriever.search_by_text(
-        "serum Ag colloids uric acid hypoxanthine batch caveat paper comparison", top_n=6
+        "serum Ag colloids uric acid hypoxanthine batch caveat paper comparison covid spontaneous Raman cohort protocol",
+        top_n=6,
     )
 
     direct_df.to_csv(output_dir / "demo_grounding_results.csv", index=False)
@@ -38,7 +49,7 @@ def main() -> None:
     summary_lines = [
         "GAIRA_SERUM_CONTEXT demo",
         "",
-        "Grounding query: hcc_serum CTR class mean",
+        f"Grounding query: {query.query_id}",
         "",
         "Top direct grounding labels:",
     ]
@@ -54,7 +65,7 @@ def main() -> None:
                 f"- {row['document_id']} | {row['section']} | score={float(row['score']):.2f} | {row['matched_tokens']}"
             )
     summary_lines.append("")
-    summary_lines.append("Top serum-context chunks from bands 725, 1003, 1659:")
+    summary_lines.append("Top serum-context chunks from bands 725, 1003, 1450, 1659:")
     if context_from_bands_df.empty:
         summary_lines.append("- no band-context hits")
     else:

@@ -336,6 +336,161 @@ def main() -> None:
         print("ergothioneine_serum download step is complete.")
         return
 
+    if args.dataset_id == "covid_serum_raman":
+        download_targets = [
+            (
+                "readme.txt",
+                "https://ndownloader.figshare.com/files/22386447",
+            ),
+            (
+                "code.m",
+                "https://ndownloader.figshare.com/files/22386408",
+            ),
+            (
+                "wave_number.txt",
+                "https://ndownloader.figshare.com/files/22386453",
+            ),
+            (
+                "raw_COVID.txt",
+                "https://ndownloader.figshare.com/files/22386432",
+            ),
+            (
+                "raw_Helthy.txt",
+                "https://ndownloader.figshare.com/files/22386435",
+            ),
+            (
+                "raw_Suspected.txt",
+                "https://ndownloader.figshare.com/files/22386438",
+            ),
+            (
+                "raw_Tube.txt",
+                "https://ndownloader.figshare.com/files/22386441",
+            ),
+            (
+                "table2_data.txt",
+                "https://ndownloader.figshare.com/files/22386450",
+            ),
+        ]
+
+        print(
+            "Downloading the grounded COVID serum Raman cohort archive. "
+            "GAIRA onboarding will use the shared wave_number vector plus raw cohort matrices as the "
+            "canonical biosample ingest path and retain the readme, MATLAB code, and Table 2 export "
+            "as provenance/context references."
+        )
+
+        for file_name, file_url in download_targets:
+            output_path = target_folder / file_name
+            if output_path.exists() and output_path.stat().st_size > 0:
+                print(f"Skipping existing file: {output_path}")
+                continue
+
+            print(f"Downloading: {file_url}")
+            urlretrieve(file_url, output_path)
+            print(f"Saved: {output_path}")
+
+        print("covid_serum_raman download step is complete.")
+        return
+
+    if args.dataset_id == "adenine_sers_control":
+        download_targets = [
+            (
+                "1-s2.0-S0003267025009894-main.pdf",
+                "https://zenodo.org/api/records/17035751/files/1-s2.0-S0003267025009894-main.pdf/content",
+            ),
+            (
+                "LOD_opakovatelnost.xlsx",
+                "https://zenodo.org/api/records/17035751/files/LOD,%20opakovatelnost.xlsx/content",
+            ),
+            (
+                "ad1ng.CSV",
+                "https://zenodo.org/api/records/17035751/files/ad1ng.CSV/content",
+            ),
+            (
+                "ad1ng_after_two_weeks.CSV",
+                "https://zenodo.org/api/records/17035751/files/ad1ng_after_two_weeks.CSV/content",
+            ),
+            (
+                "ad1ug_Average.CSV",
+                "https://zenodo.org/api/records/17035751/files/ad1ug_Average.CSV/content",
+            ),
+            (
+                "Adenine_1ng_mL.CSV",
+                "https://zenodo.org/api/records/17035751/files/Adenine_1ng_mL.CSV/content",
+            ),
+            (
+                "Adenine_bAgNPs_100nano.CSV",
+                "https://zenodo.org/api/records/17035751/files/Adenine_bAgNPs_100nano.CSV/content",
+            ),
+            (
+                "Adenine_bAgNPs_100pg.CSV",
+                "https://zenodo.org/api/records/17035751/files/Adenine_bAgNPs_100pg.CSV/content",
+            ),
+            (
+                "Adenine_bAgNPs_10micro.CSV",
+                "https://zenodo.org/api/records/17035751/files/Adenine_bAgNPs_10micro.CSV/content",
+            ),
+            (
+                "Adenine_bAgNPs_10nano.CSV",
+                "https://zenodo.org/api/records/17035751/files/Adenine_bAgNPs_10nano.CSV/content",
+            ),
+            (
+                "Adenine_bAgNPs_10pg.CSV",
+                "https://zenodo.org/api/records/17035751/files/Adenine_bAgNPs_10pg.CSV/content",
+            ),
+            (
+                "Adenine_bAgNPs_1micro.CSV",
+                "https://zenodo.org/api/records/17035751/files/Adenine_bAgNPs_1micro.CSV/content",
+            ),
+            (
+                "bAg-koloid_ad1ug_0.5mW_Average.CSV",
+                "https://zenodo.org/api/records/17035751/files/bAg-koloid_ad1ug_0.5mW_Average.CSV/content",
+            ),
+            (
+                "bAgNPs_Adenine_1ng_1.CSV",
+                "https://zenodo.org/api/records/17035751/files/bAgNPs_Adenine_1ng_1.CSV/content",
+            ),
+            (
+                "bAgNPs_Adenine_1ng_2.CSV",
+                "https://zenodo.org/api/records/17035751/files/bAgNPs_Adenine_1ng_2.CSV/content",
+            ),
+            (
+                "bAgNPs_Adenine_1ng_3.CSV",
+                "https://zenodo.org/api/records/17035751/files/bAgNPs_Adenine_1ng_3.CSV/content",
+            ),
+            (
+                "bAgNPs_Adenine_1ng_4.CSV",
+                "https://zenodo.org/api/records/17035751/files/bAgNPs_Adenine_1ng_4.CSV/content",
+            ),
+            (
+                "bAgNPs_Adenine_1ng_5.CSV",
+                "https://zenodo.org/api/records/17035751/files/bAgNPs_Adenine_1ng_5.CSV/content",
+            ),
+            (
+                "bg.CSV",
+                "https://zenodo.org/api/records/17035751/files/bg.CSV/content",
+            ),
+        ]
+
+        print(
+            "Downloading the grounded adenine SERS controlled-reference archive. "
+            "GAIRA onboarding will keep the adenine-focused two-column CSV spectra as the primary raw "
+            "grounding path and retain the article PDF plus LOD workbook as provenance and calibration references."
+        )
+
+        for file_name, file_url in download_targets:
+            output_path = target_folder / file_name
+            if output_path.exists() and output_path.stat().st_size > 0:
+                print(f"Skipping existing file: {output_path}")
+                continue
+
+            print(f"Downloading: {file_url}")
+            urlretrieve(file_url, output_path)
+            print(f"Saved: {output_path}")
+
+        print("adenine_sers_control download step is complete.")
+        return
+
     if args.dataset_id in {"serum_ag_colloids_grounding", "serum_ag_colloids_literature_grounding"}:
         download_targets = [
             (

@@ -23,7 +23,20 @@ PROCESSING_CONFIGS = {
             "keeps the crop window but leaves baseline handling explicit as none, then interpolates to a 1 cm^-1 "
             "grid and applies vector normalization for comparison-friendly direct SERS grounding."
         ),
-    }
+    },
+    "adenine_sers_control": {
+        "processing_version": "v1_crop400_1800_interp1_vector",
+        "crop_min_cm": 400.0,
+        "crop_max_cm": 1800.0,
+        "interpolation_step_cm": 1.0,
+        "baseline_method": "none",
+        "normalization_method": "vector_l2",
+        "notes": (
+            "Adenine-controlled SERS spectra are cropped to 400-1800 cm^-1 for cross-comparison with the "
+            "current shared grounding layer, interpolated to a 1 cm^-1 grid, and vector normalized. This keeps "
+            "the dataset usable as calibration-like direct grounding without over-promoting high-wavenumber flat regions."
+        ),
+    },
 }
 
 SOURCE_TABLE = "grounding_spectrum_points"
@@ -140,7 +153,7 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.dataset_id not in PROCESSING_CONFIGS:
-        print("Processed grounding support is only implemented for serum_ag_colloids_grounding right now.")
+        print("Processed grounding support is only implemented for configured grounding datasets.")
         return
 
     require_data_root_exists()
