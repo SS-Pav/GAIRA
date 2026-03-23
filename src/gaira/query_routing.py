@@ -8,8 +8,7 @@ QUERY_FAMILIES = [
     "serum_general",
     "serum_metabolic",
     "ev_general",
-    "ev_metabolic_or_diabetes",
-    "ev_injury_response",
+    "ev_disease_or_stress",
     "grounding_analyte",
 ]
 
@@ -57,20 +56,12 @@ QUERY_FAMILY_DEFINITIONS: dict[str, QueryFamilyDefinition] = {
         downweight=("serum/liver notes", "analyte-only support"),
         keep_visible=("shared grounding", "shared knowledge support"),
     ),
-    "ev_metabolic_or_diabetes": QueryFamilyDefinition(
-        family="ev_metabolic_or_diabetes",
+    "ev_disease_or_stress": QueryFamilyDefinition(
+        family="ev_disease_or_stress",
         sample_type="ev",
-        emphasis="metabolic/diabetes EV interpretation",
-        boost=("diabetes EV support/context", "generic EV notes"),
-        downweight=("serum/liver notes", "injury-response EV notes unless overlap is real"),
-        keep_visible=("shared grounding", "shared knowledge support"),
-    ),
-    "ev_injury_response": QueryFamilyDefinition(
-        family="ev_injury_response",
-        sample_type="ev",
-        emphasis="injury-response / perturbation EV interpretation",
-        boost=("SHINE/SPECTRA EV support/context", "generic EV notes"),
-        downweight=("serum/liver notes", "metabolic EV notes unless overlap is real"),
+        emphasis="disease/stress-associated EV interpretation",
+        boost=("diabetes EV support/context", "SHINE/SPECTRA EV support/context", "generic EV notes"),
+        downweight=("serum/liver notes", "analyte-only support"),
         keep_visible=("shared grounding", "shared knowledge support"),
     ),
     "grounding_analyte": QueryFamilyDefinition(
@@ -113,9 +104,9 @@ def infer_query_family(
 
     if sample == "ev" or domain == "ev":
         if any(token in text for token in ["diabetes", "metabolic", "obesity", "insulin", "mitochond"]):
-            return "ev_metabolic_or_diabetes"
+            return "ev_disease_or_stress"
         if any(token in text for token in ["injury", "apap", "hepatotox", "perturb", "dose-response", "dose response", "shine", "spectra"]):
-            return "ev_injury_response"
+            return "ev_disease_or_stress"
         return "ev_general"
 
     if sample == "serum" or domain == "serum":
@@ -143,9 +134,9 @@ def classify_support_family(row: dict) -> str:
     if dataset_id in {"serum_ag_colloids_literature_grounding", "serum_ag_colloids_grounding"}:
         return "serum_general"
     if dataset_id == "diabetes_ev_context_support" or "diabetes" in text:
-        return "ev_metabolic_or_diabetes"
+        return "ev_disease_or_stress"
     if dataset_id == "shine_spectra_context_support" or any(token in text for token in ["shine", "spectra", "apap", "injury", "hepatotox"]):
-        return "ev_injury_response"
+        return "ev_disease_or_stress"
     if any(token in text for token in ["small2023_ev", "extracellular vesicle", "probe1", "probe2"]):
         return "ev_general"
     return "shared_generic"
@@ -180,9 +171,9 @@ def classify_context_family(row: dict, domain: str) -> str:
         ):
             return "ev_general"
         if source_dataset_id == "diabetes_plasma_ev_sers" or any(token in text for token in ["diabetes", "metabolic", "insulin", "mitochondrial", "impact", "strong-d", "strongd"]):
-            return "ev_metabolic_or_diabetes"
+            return "ev_disease_or_stress"
         if source_dataset_id == "shine_ev_sers" or any(token in text for token in ["shine", "spectra", "apap", "injury", "day0", "day2", "dose-response", "dose response"]):
-            return "ev_injury_response"
+            return "ev_disease_or_stress"
         return "ev_general"
 
     return "shared_generic"
@@ -198,9 +189,9 @@ def classify_knowledge_family(row: dict) -> str:
     if any(token in text for token in ["liver", "hepat", "hcc", "cca", "cirrho", "hepatitis", "dili", "nafld", "nash", "masld", "bile"]):
         return "serum_liver_hepatobiliary"
     if any(token in text for token in ["diabetes", "metabolic", "insulin", "mitochond", "lipoprotein"]):
-        return "ev_metabolic_or_diabetes"
+        return "ev_disease_or_stress"
     if any(token in text for token in ["injury", "hepatotox", "apap", "perturb", "stress-response", "stress response"]):
-        return "ev_injury_response"
+        return "ev_disease_or_stress"
     if any(token in text for token in ["adenine", "methyladenine", "caffeine", "metabolite", "purine", "xanthine", "nicotinamide"]):
         return "grounding_analyte"
     return "shared_generic"
@@ -215,7 +206,7 @@ def routing_weight(query_family: str | None, candidate_family: str, channel: str
         return {"context": 1.45, "support": 1.35, "knowledge": 1.20}.get(channel, 1.0)
 
     serum_families = {"serum_liver_hepatobiliary", "serum_general", "serum_metabolic"}
-    ev_families = {"ev_general", "ev_metabolic_or_diabetes", "ev_injury_response"}
+    ev_families = {"ev_general", "ev_disease_or_stress"}
 
     if query_family in serum_families and candidate_family in serum_families:
         if query_family == "serum_liver_hepatobiliary" and candidate_family == "serum_general":
@@ -227,9 +218,9 @@ def routing_weight(query_family: str | None, candidate_family: str, channel: str
         return 0.86
 
     if query_family in ev_families and candidate_family in ev_families:
-        if query_family in {"ev_metabolic_or_diabetes", "ev_injury_response"} and candidate_family == "ev_general":
+        if query_family == "ev_disease_or_stress" and candidate_family == "ev_general":
             return 1.10
-        if query_family == "ev_general" and candidate_family in {"ev_metabolic_or_diabetes", "ev_injury_response"}:
+        if query_family == "ev_general" and candidate_family == "ev_disease_or_stress":
             return 0.78
         return 0.78
 
