@@ -51,7 +51,7 @@ def _band_token_text(value: float) -> str:
 
 class BiochemicalThemeLayer:
     def __init__(self, db_path: Path, version: str = "v1") -> None:
-        if version not in {"v1", "v2"}:
+        if version not in {"v1", "v2", "v3"}:
             raise ValueError(f"Unsupported theme-layer version '{version}'.")
         self.db_path = Path(db_path)
         self.version = version
@@ -126,7 +126,7 @@ class BiochemicalThemeLayer:
         caution_lookup = {row["theme_name"]: row["score"] for row in caution_outputs}
         global_caution_load = float(np.mean(list(caution_lookup.values()))) if caution_lookup else 0.0
 
-        if self.version == "v2":
+        if self.version in {"v2", "v3"}:
             positive_outputs = self._build_positive_outputs_v2(raw_scores, evidence_cache, query_bands, caution_lookup, theme_input)
         else:
             positive_outputs = self._build_positive_outputs_v1(raw_scores, evidence_cache, query_bands, caution_lookup)
@@ -236,7 +236,7 @@ class BiochemicalThemeLayer:
     def _source_multiplier(self, evidence_type: str, hit: dict, definition: ThemeDefinition, theme_input: ThemeLayerInput) -> float:
         dataset_id = str(hit.get("source_dataset_id", ""))
         multiplier = 1.0
-        if self.version != "v2":
+        if self.version == "v1":
             return multiplier
         if theme_input.domain != "grounding" and dataset_id == "adenine_sers_control":
             if definition.theme_name == "nucleic_acid_purine_associated":
@@ -251,6 +251,28 @@ class BiochemicalThemeLayer:
             multiplier *= 0.65
         if theme_input.domain == "serum" and evidence_type == "context" and dataset_id == "covid_serum_raman":
             multiplier *= 0.90
+        if self.version == "v3" and theme_input.domain == "ev":
+            if dataset_id == "serum_ag_colloids_grounding":
+                multiplier *= 0.78
+            if dataset_id == "serum_ag_colloids_literature_grounding":
+                multiplier *= 0.72
+            if dataset_id == "diabetes_ev_context_support" and definition.theme_name in {
+                "lipid_membrane_associated",
+                "protein_peptide_associated",
+                "nucleic_acid_purine_associated",
+                "oxidative_metabolic_stress_associated",
+                "weak_label_or_cohort_caution",
+                "low_specificity_caution",
+            }:
+                multiplier *= 1.18
+            if dataset_id == "shine_spectra_context_support" and definition.theme_name in {
+                "protein_peptide_associated",
+                "nucleic_acid_purine_associated",
+                "oxidative_metabolic_stress_associated",
+                "weak_label_or_cohort_caution",
+                "low_specificity_caution",
+            }:
+                multiplier *= 1.20
         return multiplier
 
     def _score_hit(self, evidence_type: str, hit: dict, theme: ThemeDefinition, theme_input: ThemeLayerInput) -> tuple[float, list[str], list[str]]:
@@ -263,7 +285,7 @@ class BiochemicalThemeLayer:
         relevance = min(1.0, 0.42 + 0.12 * len(overlap))
         base_score = EVIDENCE_WEIGHTS[evidence_type] * relevance * self._normalize_hit_score(evidence_type, hit)
 
-        if self.version == "v2" and theme.category == "positive":
+        if self.version in {"v2", "v3"} and theme.category == "positive":
             overlap_map = self._positive_theme_overlap_map(text)
             total_overlap_weight = sum(len(values) for values in overlap_map.values())
             if total_overlap_weight > 0:
@@ -353,14 +375,14 @@ class BiochemicalThemeLayer:
                 if not matched:
                     continue
                 band_score = self._normalize_hit_score("band", hit)
-                if self.version == "v2" and definition.category == "positive":
+                if self.version in {"v2", "v3"} and definition.category == "positive":
                     text = self._hit_text(hit)
                     overlap_map = self._positive_theme_overlap_map(text)
                     total_overlap_weight = sum(len(values) for values in overlap_map.values()) or 1
                     theme_share = len(overlap_map.get(definition.theme_name, [])) / total_overlap_weight if overlap_map else 0.5
                     band_score *= max(0.20, theme_share)
                 score = EVIDENCE_WEIGHTS["band"] * band_score
-                if self.version == "v2" and theme_input.domain != "grounding" and str(hit.get("source_dataset_id")) == "adenine_sers_control":
+                if self.version in {"v2", "v3"} and theme_input.domain != "grounding" and str(hit.get("source_dataset_id")) == "adenine_sers_control":
                     score *= 0.25 if definition.theme_name != "nucleic_acid_purine_associated" else 0.55
                 evidence["band_contrib"] += score
                 evidence["supporting_bands"].append(
@@ -394,6 +416,16 @@ class BiochemicalThemeLayer:
             if "suspected" in theme_input.query_label.lower():
                 evidence["context_contrib"] += 0.25
                 evidence["limiting_hits"].append("query label includes suspected cohort framing")
+            if self.version == "v3" and theme_input.source_dataset_id == "diabetes_plasma_ev_sers":
+                diabetes_text = " ".join(self._hit_text(hit) for hit in theme_input.context_hits + theme_input.tier2_hits)
+                if any(token in diabetes_text for token in ["subgroup overlap", "impact", "strongd", "lipoprotein", "patient-level"]):
+                    evidence["context_contrib"] += 0.25
+                    evidence["limiting_hits"].append("diabetes subgroup-overlap / weak-label archive caveat")
+            if self.version == "v3" and theme_input.source_dataset_id == "shine_ev_sers":
+                shine_text = " ".join(self._hit_text(hit) for hit in theme_input.context_hits + theme_input.tier2_hits)
+                if any(token in shine_text for token in ["monoculture", "single hepatotoxicant", "preclinical", "two biological replicates"]):
+                    evidence["context_contrib"] += 0.35
+                    evidence["limiting_hits"].append("preclinical SHINE / SPECTRA caution")
 
         if definition.theme_name == "probe_substrate_caution":
             if theme_input.domain == "ev" and any(token in theme_input.query_family.lower() for token in ["probe", "normedprobe"]):
@@ -416,6 +448,13 @@ class BiochemicalThemeLayer:
                 evidence["limiting_hits"].append("broad RamanBioLib analog support remains prominent")
             if any(hit.get("result_type") == "support_document_match" for hit in theme_input.tier2_hits[:6]):
                 evidence["tier2_contrib"] += 0.15
+            if self.version == "v3":
+                combined_text = " ".join(
+                    self._hit_text(hit) for hit in theme_input.context_hits + theme_input.tier2_hits + theme_input.knowledge_hits
+                )
+                if any(token in combined_text for token in ["lipoprotein contamination", "not ev-exclusive", "tentative biochemical", "not definitive attribution"]):
+                    evidence["context_contrib"] += 0.20
+                    evidence["limiting_hits"].append("paper-level non-exclusive or tentative assignment caution")
 
         total_score = float(
             sum(
@@ -707,6 +746,10 @@ class BiochemicalThemeLayer:
             warnings.append("Do not over-interpret cohort-level or weak-label signal as subject-level certainty.")
         if theme_input.source_dataset_id == "covid_serum_raman":
             warnings.append("Do not treat spontaneous-Raman cohort structure as interchangeable with serum SERS behavior.")
+        if theme_input.source_dataset_id == "diabetes_plasma_ev_sers":
+            warnings.append("Do not treat Impact and Strong-D archive labels as reconstructed paper subgroups or patient-level diabetes subtypes.")
+        if theme_input.source_dataset_id == "shine_ev_sers":
+            warnings.append("Do not treat the APAP monoculture EV response as broad human liver-disease truth.")
         if caution_scores.get("low_specificity_caution", 0.0) >= 0.25:
             warnings.append("Do not claim single-molecule specificity when broad analog evidence dominates.")
         return warnings

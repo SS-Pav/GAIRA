@@ -86,6 +86,14 @@ PROCESSING_CONFIGS = {
         "baseline_method": "none",
         "normalization_method": "minmax",
     },
+    "cca_hcc_lm_serum_sers": {
+        "processing_version": "v1_crop400_1800_interp1_minmax",
+        "crop_min_cm": 400.0,
+        "crop_max_cm": 1800.0,
+        "interpolation_step_cm": 1.0,
+        "baseline_method": "none",
+        "normalization_method": "minmax",
+    },
 }
 SOURCE_TABLE = "biosample_spectrum_points"
 

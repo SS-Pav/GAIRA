@@ -1,4 +1,5 @@
 import argparse
+import shutil
 import sys
 from pathlib import Path
 from urllib.request import urlretrieve
@@ -22,6 +23,25 @@ def extract_zip_file(zip_path: Path, target_folder: Path) -> list[str]:
         return []
 
     return sorted(top_level_names)
+
+
+def copy_local_file(source_path: Path, target_path: Path) -> None:
+    if target_path.exists() and target_path.stat().st_size > 0:
+        print(f"Skipping existing file: {target_path}")
+        return
+    shutil.copy2(source_path, target_path)
+    print(f"Copied: {source_path} -> {target_path}")
+
+
+def copy_local_tree(source_dir: Path, target_dir: Path) -> None:
+    target_dir.mkdir(parents=True, exist_ok=True)
+    for item in sorted(source_dir.iterdir()):
+        destination = target_dir / item.name
+        if item.is_dir():
+            shutil.copytree(item, destination, dirs_exist_ok=True)
+            print(f"Copied directory: {item} -> {destination}")
+        else:
+            copy_local_file(item, destination)
 
 
 def main() -> None:
@@ -91,6 +111,25 @@ def main() -> None:
         for folder_name in top_level_folders:
             print(f"  {folder_name}")
         print("SHINE EV SERS download and extraction step is complete.")
+        return
+
+    local_source_root = Path.home() / "Downloads" / "New_Set_SERS_Papers_Data"
+
+    if args.dataset_id == "metabolite_sers63_support":
+        source_dir = local_source_root / "Metabolite SERS fingerprints Fityk .fit and .peaks files" / "Supplementary-material"
+        if not source_dir.exists():
+            raise FileNotFoundError(f"Local metabolite archive folder not found: {source_dir}")
+        copy_local_tree(source_dir / "fit", target_folder / "fit")
+        copy_local_tree(source_dir / "peaks", target_folder / "peaks")
+        print("metabolite_sers63_support local copy step is complete.")
+        return
+
+    if args.dataset_id == "cca_hcc_lm_serum_sers":
+        source_path = local_source_root / "Combination of label-free SERS-based nanosensor an.zip"
+        if not source_path.exists():
+            raise FileNotFoundError(f"Local cholangio zip not found: {source_path}")
+        copy_local_file(source_path, target_folder / source_path.name)
+        print("cca_hcc_lm_serum_sers local copy step is complete.")
         return
 
     if args.dataset_id == "small2023_ev":

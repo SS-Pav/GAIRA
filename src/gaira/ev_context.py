@@ -19,6 +19,11 @@ class EVContextRetriever:
             if not self.documents_df.empty
             else {}
         )
+        self.document_source_map = (
+            self.documents_df.set_index("document_id")["source_dataset_id"].to_dict()
+            if not self.documents_df.empty
+            else {}
+        )
 
     def _load_tables(self) -> tuple[pd.DataFrame, pd.DataFrame]:
         with duckdb.connect(str(self.db_path), read_only=True) as connection:
@@ -67,6 +72,7 @@ class EVContextRetriever:
                     "query_type": "text_context_search",
                     "query_text": query_text,
                     "document_id": row["document_id"],
+                    "source_dataset_id": self.document_source_map.get(row["document_id"], ""),
                     "context_type": self.document_type_map.get(row["document_id"], "unknown"),
                     "section": row["section"],
                     "score": float(len(overlap)),
@@ -92,6 +98,7 @@ class EVContextRetriever:
                     "query_type": "label_context_search",
                     "query_labels": ", ".join(labels),
                     "document_id": row["document_id"],
+                    "source_dataset_id": self.document_source_map.get(row["document_id"], ""),
                     "context_type": self.document_type_map.get(row["document_id"], "unknown"),
                     "section": row["section"],
                     "score": float(len(matches)),

@@ -12,9 +12,6 @@ from scipy.signal import find_peaks
 
 
 HCC_SERUM_PROCESSING_VERSION = "v1_crop430_1730_interp1_minmax"
-GROUNDING_PROCESSING_VERSION = "v1_crop400_1800_interp1_vector"
-
-
 @dataclass
 class SpectrumQuery:
     query_id: str
@@ -64,6 +61,14 @@ def _tokenize_labels(values: list[str]) -> set[str]:
         tokens |= _tokenize_text(text)
         tokens.add(text.lower())
     return tokens
+
+
+def _expand_compound_identifier_tokens(value: str) -> set[str]:
+    text = str(value).strip().lower()
+    if not text:
+        return set()
+    parts = [part for part in re.split(r"[_\-/\s]+", text) if len(part) >= 2]
+    return set(parts)
 
 
 def _align_candidate_to_query(
@@ -139,6 +144,7 @@ class GroundingSearchEngine:
                 SELECT
                   g.summary_id,
                   g.dataset_id,
+                  g.processing_version,
                   g.experiment_family,
                   g.class_label,
                   g.n_spectra,
@@ -151,12 +157,10 @@ class GroundingSearchEngine:
                   ON g.dataset_id = m.dataset_id
                  AND g.experiment_family = m.experiment_family
                  AND g.class_label = m.class_label
-                WHERE g.processing_version = ?
                 GROUP BY
-                  g.summary_id, g.dataset_id, g.experiment_family, g.class_label, g.n_spectra,
+                  g.summary_id, g.dataset_id, g.processing_version, g.experiment_family, g.class_label, g.n_spectra,
                   g.mean_wavenumbers_json, g.mean_intensity_json
-                """,
-                [GROUNDING_PROCESSING_VERSION],
+                """
             ).fetchdf()
 
             self.hcc_summary_df = connection.execute(
@@ -183,6 +187,7 @@ class GroundingSearchEngine:
                   c.chunk_id,
                   c.document_id,
                   c.dataset_id,
+                  d.source_dataset_id,
                   c.section,
                   c.chunk_text,
                   c.chunk_order,
@@ -208,6 +213,7 @@ class GroundingSearchEngine:
                   s.document_id,
                   s.dataset_id,
                   s.evidence_family,
+                  s.source_dataset_id,
                   s.citation_label,
                   s.x_min,
                   s.x_max,
@@ -374,8 +380,37 @@ class GroundingSearchEngine:
                 *(seed_labels or []),
             ]
         )
+        tokens |= _expand_compound_identifier_tokens(query.query_label)
+        tokens |= _expand_compound_identifier_tokens(query.query_family)
+        tokens |= _expand_compound_identifier_tokens(query.source_dataset_id)
+        for label in seed_labels or []:
+            tokens |= _expand_compound_identifier_tokens(label)
         if domain == "ev":
-            tokens |= {"ev", "extracellular", "vesicles", "probe1", "probe2", "substrate"}
+            tokens |= {
+                "ev",
+                "extracellular",
+                "vesicles",
+                "probe1",
+                "probe2",
+                "substrate",
+                "diabetes",
+                "impact",
+                "strongd",
+                "normal-weight",
+                "overweight",
+                "subgroup",
+                "heterogeneity",
+                "insulin",
+                "mitochondrial",
+                "shine",
+                "spectra",
+                "apap",
+                "hepatotoxicity",
+                "injury",
+                "dose-response",
+                "day0",
+                "day2",
+            }
         elif domain == "serum":
             tokens |= {"serum", "ag", "colloid", "adsorption", "protocol", "batch"}
         return tokens
@@ -547,6 +582,7 @@ class GroundingSearchEngine:
                         else "literature_chunk_support"
                     ),
                     "source_dataset_id": row["dataset_id"],
+                    "target_dataset_id": row["source_dataset_id"],
                     "source_family": row["evidence_family"],
                     "source_label": row["citation_label"] or row["title"],
                     "score": score,
@@ -578,6 +614,7 @@ class GroundingSearchEngine:
                     "evidence_tier": "tier2_literature_support",
                     "result_type": "digitized_support_spectrum",
                     "source_dataset_id": row["dataset_id"],
+                    "target_dataset_id": row["source_dataset_id"],
                     "source_family": row["evidence_family"],
                     "source_label": row["citation_label"],
                     "score": float(max(local_scores)),
@@ -590,7 +627,10 @@ class GroundingSearchEngine:
         support_df = pd.DataFrame(rows)
         if support_df.empty:
             return support_df
-        support_df = support_df.sort_values(["score"], ascending=False).drop_duplicates(
+        support_df["target_match_weight"] = support_df["target_dataset_id"].fillna("").astype(str).apply(
+            lambda value: 1.0 if query.source_dataset_id and query.source_dataset_id in value else 0.0
+        )
+        support_df = support_df.sort_values(["target_match_weight", "score"], ascending=[False, False]).drop_duplicates(
             subset=["result_type", "source_dataset_id", "source_label", "provenance"],
             keep="first",
         )

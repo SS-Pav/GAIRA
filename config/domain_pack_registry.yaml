@@ -32,6 +32,7 @@ packs:
       - cspp_serum
       - ergothioneine_serum
       - covid_serum_raman
+      - cca_hcc_lm_serum_sers
     holdout_datasets:
       - hcc_serum
     default_embedding: none_yet
@@ -56,6 +57,7 @@ packs:
       - ramanbiolib
       - serum_ag_colloids_grounding
       - adenine_sers_control
+      - metabolite_sers63_support
       - serum_ag_colloids_literature_grounding
       - sers_fingerprint_workingpaper_support
       - sers24_metabolite_support

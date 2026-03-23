@@ -37,6 +37,18 @@ PROCESSING_CONFIGS = {
             "the dataset usable as calibration-like direct grounding without over-promoting high-wavenumber flat regions."
         ),
     },
+    "metabolite_sers63_support": {
+        "processing_version": "v1_crop500_1800_interp1_vector",
+        "crop_min_cm": 500.0,
+        "crop_max_cm": 1800.0,
+        "interpolation_step_cm": 1.0,
+        "baseline_method": "none",
+        "normalization_method": "vector_l2",
+        "notes": (
+            "Reconstructed metabolite Fityk spectra are cropped to 500-1800 cm^-1 for shared grounding comparison, "
+            "interpolated to a 1 cm^-1 grid, and vector normalized."
+        ),
+    },
 }
 
 SOURCE_TABLE = "grounding_spectrum_points"

@@ -1,6 +1,7 @@
 """Biosample dataset parser scaffolds."""
 
 from gaira.parsers.biosample.base import BiosampleParserBase
+from gaira.parsers.biosample.cca_hcc_lm_serum_sers_parser import CCAHCCLMSerumSERSParser
 from gaira.parsers.biosample.covid_serum_raman_parser import COVIDSerumRamanParser
 from gaira.parsers.biosample.cspp_serum_parser import CSPPSerumParser
 from gaira.parsers.biosample.diabetes_plasma_ev_sers_parser import DiabetesPlasmaEVSERSParser
@@ -13,6 +14,7 @@ from gaira.parsers.biosample.small2023_ev_parser import Small2023EVParser
 
 __all__ = [
     "BiosampleParserBase",
+    "CCAHCCLMSerumSERSParser",
     "COVIDSerumRamanParser",
     "CSPPSerumParser",
     "DiabetesPlasmaEVSERSParser",

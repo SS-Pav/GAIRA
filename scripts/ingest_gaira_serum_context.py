@@ -210,6 +210,33 @@ def main() -> None:
             )
         )
 
+        documents.append(
+            build_document(
+                document_id="ck18_dili_biomarker_support",
+                context_type="biomarker_note",
+                evidence_basis="curated_support_note",
+                source_dataset_id="not_applicable_or_unknown",
+                source_file="curated_serum_context_note",
+                title="CK18/K18 liver-injury biomarker note",
+                notes=(
+                    "Minimal serum-context support note retained after removing the LFIA assay workbook dataset. "
+                    "This note is biomarker/assay context only and is not broad serum spectral grounding."
+                ),
+                chunks=[
+                    (
+                        "ck18_biomarker_note",
+                        (
+                            "CK18/K18 is a liver-injury and DILI-relevant biomarker, especially in targeted assay "
+                            "contexts that quantify circulating keratin-18 or related epithelial cell-death signals. "
+                            "In GAIRA this should be treated only as minimal biomarker context and not as general "
+                            "serum biochemical spectral grounding or direct evidence for disease-state spectral interpretation."
+                        ),
+                        {"source_kind": "curated_biomarker_note"},
+                    )
+                ],
+            )
+        )
+
         for dataset_id, title, section_name, chunk_text, notes in [
             (
                 "serum_protocol_comparison",
