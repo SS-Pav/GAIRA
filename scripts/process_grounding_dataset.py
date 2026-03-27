@@ -49,6 +49,19 @@ PROCESSING_CONFIGS = {
             "interpolated to a 1 cm^-1 grid, and vector normalized."
         ),
     },
+    "amino_acid_raman_grounding": {
+        "processing_version": "v1_crop400_1800_interp1_vector",
+        "crop_min_cm": 400.0,
+        "crop_max_cm": 1800.0,
+        "interpolation_step_cm": 1.0,
+        "baseline_method": "none",
+        "normalization_method": "vector_l2",
+        "notes": (
+            "Uploaded amino-acid Raman reference spectra are cropped to 400-1800 cm^-1 for shared biochemical "
+            "comparison, interpolated to a 1 cm^-1 grid, and vector normalized. The ingest remains explicit that "
+            "this is spontaneous Raman grounding rather than study-matched SERS biosample evidence."
+        ),
+    },
 }
 
 SOURCE_TABLE = "grounding_spectrum_points"

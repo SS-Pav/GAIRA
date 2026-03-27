@@ -26,6 +26,12 @@ HCC_SERUM_PROCESSING_VERSION = "v1_crop430_1730_interp1_minmax"
 SMALL2023_PROCESSING_VERSION = "v1_crop670_1800_interp1_minmax"
 
 
+def _default_grounding_modality(dataset_id: str) -> str:
+    if dataset_id in {"ramanbiolib", "amino_acid_raman_grounding"}:
+        return "raman"
+    return "sers"
+
+
 @dataclass
 class InferenceRequest:
     domain: str
@@ -106,7 +112,7 @@ def load_grounding_class_mean_query(
         source_dataset_id=dataset_id,
         spectrum_query=query,
         sample_type="grounding",
-        modality="sers",
+        modality=_default_grounding_modality(dataset_id),
         use_case_domain="analyte",
     )
 

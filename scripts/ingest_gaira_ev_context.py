@@ -391,8 +391,10 @@ def main() -> None:
                         "diabetes_plasma_ev_sers is usable as an onboarded plasma EV SERS dataset, but only "
                         "under the archive-supported Impact-vs-StrongD cohort-family framing. The four paper "
                         "subgroups were not reconstructed because patient/sample identifiers were not embedded "
-                        "in the released MAT cells, so this dataset should not be treated as a four-subgroup "
-                        "benchmark or a patient-level benchmark."
+                            "in the released MAT cells, so this dataset should not be treated as a four-subgroup "
+                            "benchmark or a patient-level benchmark. Within the linked paper framing, Impact tracks "
+                            "the overweight / BMI > 25 cohort-family context, while Strong-D tracks the otherwise / "
+                            "BMI < 25 / not-overweight diabetic cohort-family context."
                     ),
                     {"source_kind": "weak_label_caveat"},
                 )
@@ -436,8 +438,10 @@ def main() -> None:
                     (
                         "Within GAIRA, diabetes_plasma_ev_sers should be used as a weak-label external EV stress test "
                         "and domain-framing resource rather than as a four-subgroup benchmark. The defensible read is "
-                        "Impact-vs-StrongD cohort-family contrast under one processed archive family, with careful "
-                        "avoidance of patient-level or subgroup-specific overclaims."
+                        "Impact-vs-StrongD cohort-family contrast under one processed archive family, with Impact "
+                        "standing in for the overweight / BMI > 25 cohort-family context and Strong-D standing in "
+                        "for the otherwise / BMI < 25 / not-overweight diabetic cohort-family context. Use it with "
+                        "careful avoidance of patient-level or subgroup-specific overclaims."
                     ),
                     {"source_kind": "diabetes_usage_note"},
                 )

@@ -97,8 +97,11 @@ class DiabetesPlasmaEVSERSParser(BiosampleParserBase):
             "Patient IDs are not embedded in the released MAT cells, and patient_data.csv cannot be joined back "
             "to cell order defensibly from the release alone. Four-subgroup A-NWD/A-OWD/W-NWD/W-OWD mapping was "
             "therefore not reconstructed. Current GAIRA row labels are limited to the archive-supported cohort "
-            "families Impact and Strong-D, so this dataset should be treated as a weak-label Impact-vs-StrongD "
-            "comparison rather than a four-subgroup benchmark."
+            "families Impact and Strong-D. Within the archive-linked paper framing, Impact corresponds to the "
+            "overweight / BMI > 25 cohort-family context, while Strong-D is the otherwise / BMI < 25 / not-"
+            "overweight diabetic cohort-family context. Because those semantics are only defensible at the "
+            "cohort-family level, this dataset should still be treated as a weak-label Impact-vs-StrongD "
+            "comparison rather than a four-subgroup or patient-level benchmark."
         )
 
     def _preprocessing_summary(self) -> str:

@@ -66,6 +66,9 @@ REQUIRED_RAW_FILES: dict[str, tuple[str, ...]] = {
         "bAgNPs_Adenine_1ng_5.CSV",
         "bg.CSV",
     ),
+    "amino_acid_raman_grounding": (
+        "aa.xlsx",
+    ),
 }
 
 
@@ -111,6 +114,7 @@ def main() -> None:
     from gaira.parsers.biosample.small2023_ev_parser import Small2023EVParser
     from gaira.parsers.grounding.document_support_parser import DocumentSupportParser
     from gaira.parsers.grounding.adenine_sers_control_parser import AdenineSERSControlParser
+    from gaira.parsers.grounding.amino_acid_raman_parser import AminoAcidRamanParser
     from gaira.parsers.grounding.metabolite_sers_parser import MetaboliteSERSParser
     from gaira.parsers.grounding.serum_ag_colloids_grounding_parser import (
         SerumAgColloidsGroundingParser,
@@ -369,6 +373,17 @@ def main() -> None:
                 db_path=db_path,
             )
             print("Running metabolite_sers63_support grounding ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id == "amino_acid_raman_grounding":
+            parser_instance = AminoAcidRamanParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running amino_acid_raman_grounding ingestion into DuckDB.")
             parser_instance.audit()
             parser_instance.ingest()
             return
