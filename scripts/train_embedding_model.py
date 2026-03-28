@@ -24,8 +24,8 @@ class SpectrumDataset(Dataset):
     def __len__(self) -> int:
         return int(self.spectra.shape[0])
 
-    def __getitem__(self, index: int) -> torch.Tensor:
-        return self.spectra[index]
+    def __getitem__(self, index: int) -> tuple[int, torch.Tensor]:
+        return index, self.spectra[index]
 
 
 def nt_xent_loss(z1: torch.Tensor, z2: torch.Tensor, temperature: float = TEMPERATURE) -> torch.Tensor:
@@ -39,12 +39,93 @@ def nt_xent_loss(z1: torch.Tensor, z2: torch.Tensor, temperature: float = TEMPER
     return F.cross_entropy(similarity, positive_indices)
 
 
-def build_sample_weights(sample_types: np.ndarray, dataset_ids: np.ndarray) -> np.ndarray:
+def supervised_contrastive_loss(embeddings: torch.Tensor, labels: list[str], temperature: float) -> torch.Tensor:
+    valid_mask = torch.tensor([bool(label) for label in labels], device=embeddings.device, dtype=torch.bool)
+    if int(valid_mask.sum().item()) < 2:
+        return torch.zeros((), device=embeddings.device)
+
+    z = embeddings[valid_mask]
+    valid_labels = [label for label in labels if label]
+    label_tensor = torch.tensor(
+        [[1 if label_i == label_j else 0 for label_j in valid_labels] for label_i in valid_labels],
+        device=embeddings.device,
+        dtype=torch.float32,
+    )
+    logits = torch.matmul(z, z.T) / temperature
+    eye = torch.eye(logits.shape[0], device=embeddings.device, dtype=torch.bool)
+    logits = logits.masked_fill(eye, -9e15)
+    positive_mask = label_tensor.masked_fill(eye, 0.0)
+    positive_counts = positive_mask.sum(dim=1)
+    valid_rows = positive_counts > 0
+    if int(valid_rows.sum().item()) == 0:
+        return torch.zeros((), device=embeddings.device)
+
+    log_prob = logits - torch.logsumexp(logits, dim=1, keepdim=True)
+    mean_log_prob_pos = (positive_mask * log_prob).sum(dim=1) / positive_counts.clamp_min(1.0)
+    return -mean_log_prob_pos[valid_rows].mean()
+
+
+def hard_negative_penalty(
+    embeddings: torch.Tensor,
+    scopes: list[str],
+    semantic_groups: list[str],
+    *,
+    margin: float,
+) -> torch.Tensor:
+    device = embeddings.device
+    if len(scopes) < 2:
+        return torch.zeros((), device=device)
+    scope_tensor = torch.tensor(
+        [[1 if scopes[i] and scopes[i] == scopes[j] else 0 for j in range(len(scopes))] for i in range(len(scopes))],
+        device=device,
+        dtype=torch.bool,
+    )
+    diff_tensor = torch.tensor(
+        [
+            [
+                1 if scopes[i] and scopes[j] and semantic_groups[i] and semantic_groups[j] and semantic_groups[i] != semantic_groups[j] else 0
+                for j in range(len(scopes))
+            ]
+            for i in range(len(scopes))
+        ],
+        device=device,
+        dtype=torch.bool,
+    )
+    mask = scope_tensor & diff_tensor
+    mask.fill_diagonal_(False)
+    if int(mask.sum().item()) == 0:
+        return torch.zeros((), device=device)
+    sim = torch.matmul(embeddings, embeddings.T)
+    penalties = F.relu(sim - margin)
+    return penalties[mask].mean()
+
+
+def build_sample_weights(
+    sample_types: np.ndarray,
+    dataset_ids: np.ndarray,
+    record_kinds: np.ndarray,
+    semantic_groups: np.ndarray,
+) -> np.ndarray:
     sample_type_counts = {key: count for key, count in zip(*np.unique(sample_types.astype(str), return_counts=True))}
     dataset_counts = {key: count for key, count in zip(*np.unique(dataset_ids.astype(str), return_counts=True))}
+    semantic_counts = {
+        key: count
+        for key, count in zip(*np.unique(semantic_groups[semantic_groups.astype(str) != ""].astype(str), return_counts=True))
+    }
     weights = []
-    for sample_type, dataset_id in zip(sample_types.astype(str), dataset_ids.astype(str), strict=False):
-        weights.append(1.0 / math.sqrt(sample_type_counts[sample_type] * dataset_counts[dataset_id]))
+    for sample_type, dataset_id, record_kind, semantic_group in zip(
+        sample_types.astype(str),
+        dataset_ids.astype(str),
+        record_kinds.astype(str),
+        semantic_groups.astype(str),
+        strict=False,
+    ):
+        base = 1.0 / math.sqrt(sample_type_counts[sample_type] * dataset_counts[dataset_id])
+        if semantic_group:
+            base *= 1.0 + min(1.5, 1.0 / math.sqrt(max(semantic_counts.get(semantic_group, 1), 1)))
+        if record_kind == "class_summary":
+            base *= 0.35
+        weights.append(base)
     return np.asarray(weights, dtype=np.float32)
 
 
@@ -63,6 +144,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--temperature", type=float, default=TEMPERATURE, help="NT-Xent temperature.")
     parser.add_argument("--seed", type=int, default=7, help="Random seed.")
     parser.add_argument("--max-steps-per-epoch", type=int, default=None, help="Optional step cap for smoke runs.")
+    parser.add_argument("--positive-pair-mode", choices=["instance_only", "instance_semantic"], default="instance_only")
+    parser.add_argument("--semantic-positive-weight", type=float, default=0.0)
+    parser.add_argument("--hard-negative-mode", choices=["off", "same_scope_diff_class"], default="off")
+    parser.add_argument("--hard-negative-weight", type=float, default=0.0)
+    parser.add_argument("--hard-negative-margin", type=float, default=0.30)
+    parser.add_argument("--augmentation-mode", choices=["pass2", "pass3"], default="pass2")
+    parser.add_argument("--augmentation-strength", type=float, default=1.0)
     return parser.parse_args()
 
 
@@ -94,12 +182,17 @@ def main() -> None:
     X = dataset["X"]
     dataset_ids = dataset["dataset_ids"].astype(str)
     sample_types = dataset["sample_types"].astype(str)
+    record_kinds = dataset["record_kinds"].astype(str)
+    semantic_groups = dataset["semantic_groups"].astype(str) if "semantic_groups" in dataset.files else np.asarray([""] * len(X))
+    hard_negative_scopes = (
+        dataset["hard_negative_scopes"].astype(str) if "hard_negative_scopes" in dataset.files else np.asarray([""] * len(X))
+    )
     input_len = int(X.shape[1])
     device = detect_device()
     batch_size = args.batch_size or recommended_batch_size(device)
 
     training_dataset = SpectrumDataset(X)
-    sample_weights = build_sample_weights(sample_types, dataset_ids)
+    sample_weights = build_sample_weights(sample_types, dataset_ids, record_kinds, semantic_groups)
     sampler = WeightedRandomSampler(
         torch.as_tensor(sample_weights, dtype=torch.double),
         num_samples=len(sample_weights),
@@ -130,6 +223,13 @@ def main() -> None:
         "sample_type_counts": {key: int(value) for key, value in zip(*np.unique(sample_types, return_counts=True))},
         "dataset_count": int(len(np.unique(dataset_ids))),
         "max_steps_per_epoch": args.max_steps_per_epoch,
+        "positive_pair_mode": args.positive_pair_mode,
+        "semantic_positive_weight": args.semantic_positive_weight,
+        "hard_negative_mode": args.hard_negative_mode,
+        "hard_negative_weight": args.hard_negative_weight,
+        "hard_negative_margin": args.hard_negative_margin,
+        "augmentation_mode": args.augmentation_mode,
+        "augmentation_strength": args.augmentation_strength,
     }
     write_json(output_dir / "run_config.json", run_config)
     print(
@@ -141,20 +241,57 @@ def main() -> None:
     for epoch in range(1, args.epochs + 1):
         model.train()
         running_loss = 0.0
+        running_instance = 0.0
+        running_semantic = 0.0
+        running_hard_negative = 0.0
         batch_count = 0
-        for batch in train_loader:
+        for batch_indices, batch in train_loader:
             if args.max_steps_per_epoch is not None and batch_count >= args.max_steps_per_epoch:
                 break
+            batch_indices = batch_indices.tolist()
             batch = batch.to(device)
-            view1 = torch.stack([augment_spectrum(sample) for sample in batch], dim=0)
-            view2 = torch.stack([augment_spectrum(sample) for sample in batch], dim=0)
+            view1 = torch.stack(
+                [augment_spectrum(sample, mode=args.augmentation_mode, strength=args.augmentation_strength) for sample in batch],
+                dim=0,
+            )
+            view2 = torch.stack(
+                [augment_spectrum(sample, mode=args.augmentation_mode, strength=args.augmentation_strength) for sample in batch],
+                dim=0,
+            )
             optimizer.zero_grad(set_to_none=True)
             z1 = model(view1)
             z2 = model(view2)
-            loss = nt_xent_loss(z1, z2, temperature=args.temperature)
-            loss.backward()
+            instance_loss = nt_xent_loss(z1, z2, temperature=args.temperature)
+            total_loss = instance_loss
+
+            semantic_loss = torch.zeros((), device=device)
+            if args.positive_pair_mode == "instance_semantic" and args.semantic_positive_weight > 0.0:
+                semantic_labels = [semantic_groups[index] for index in batch_indices]
+                semantic_loss = supervised_contrastive_loss(
+                    torch.cat([z1, z2], dim=0),
+                    semantic_labels + semantic_labels,
+                    temperature=args.temperature,
+                )
+                total_loss = total_loss + args.semantic_positive_weight * semantic_loss
+
+            hard_negative_loss = torch.zeros((), device=device)
+            if args.hard_negative_mode == "same_scope_diff_class" and args.hard_negative_weight > 0.0:
+                scopes = [hard_negative_scopes[index] for index in batch_indices]
+                groups = [semantic_groups[index] for index in batch_indices]
+                hard_negative_loss = hard_negative_penalty(
+                    torch.cat([z1, z2], dim=0),
+                    scopes + scopes,
+                    groups + groups,
+                    margin=args.hard_negative_margin,
+                )
+                total_loss = total_loss + args.hard_negative_weight * hard_negative_loss
+
+            total_loss.backward()
             optimizer.step()
-            running_loss += float(loss.item())
+            running_loss += float(total_loss.item())
+            running_instance += float(instance_loss.item())
+            running_semantic += float(semantic_loss.item())
+            running_hard_negative += float(hard_negative_loss.item())
             batch_count += 1
 
         epoch_loss = running_loss / max(batch_count, 1)
@@ -162,12 +299,21 @@ def main() -> None:
             {
                 "epoch": epoch,
                 "loss": epoch_loss,
+                "instance_loss": running_instance / max(batch_count, 1),
+                "semantic_loss": running_semantic / max(batch_count, 1),
+                "hard_negative_loss": running_hard_negative / max(batch_count, 1),
                 "device": device.type,
                 "batch_size": batch_size,
                 "steps": batch_count,
             }
         )
-        print(f"epoch={epoch:02d} loss={epoch_loss:.6f} steps={batch_count}")
+        print(
+            f"epoch={epoch:02d} loss={epoch_loss:.6f} "
+            f"instance={running_instance / max(batch_count, 1):.6f} "
+            f"semantic={running_semantic / max(batch_count, 1):.6f} "
+            f"hardneg={running_hard_negative / max(batch_count, 1):.6f} "
+            f"steps={batch_count}"
+        )
 
     torch.save(
         {
@@ -178,11 +324,21 @@ def main() -> None:
             "temperature": args.temperature,
             "device": device.type,
             "learning_rate": args.learning_rate,
+            "positive_pair_mode": args.positive_pair_mode,
+            "semantic_positive_weight": args.semantic_positive_weight,
+            "hard_negative_mode": args.hard_negative_mode,
+            "hard_negative_weight": args.hard_negative_weight,
+            "hard_negative_margin": args.hard_negative_margin,
+            "augmentation_mode": args.augmentation_mode,
+            "augmentation_strength": args.augmentation_strength,
         },
         output_dir / "model.pt",
     )
     with (output_dir / "training_log.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["epoch", "loss", "device", "batch_size", "steps"])
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=["epoch", "loss", "instance_loss", "semantic_loss", "hard_negative_loss", "device", "batch_size", "steps"],
+        )
         writer.writeheader()
         writer.writerows(log_rows)
 

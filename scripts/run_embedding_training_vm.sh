@@ -4,7 +4,7 @@ set -euo pipefail
 INSTANCE="${INSTANCE:-gaira-gpu-1}"
 ZONE="${ZONE:-us-east4-c}"
 REMOTE_REPO="${REMOTE_REPO:-~/projects/GAIRA}"
-REMOTE_OUTPUT_DIR="${REMOTE_OUTPUT_DIR:-$REMOTE_REPO/data/processed/embedding_v2}"
+REMOTE_OUTPUT_DIR="${REMOTE_OUTPUT_DIR:-$REMOTE_REPO/data/processed/embedding_v3_pass3}"
 REMOTE_DATASET_PATH="${REMOTE_DATASET_PATH:-$REMOTE_OUTPUT_DIR/embedding_dataset.npz}"
 EPOCHS="${EPOCHS:-30}"
 

@@ -95,7 +95,8 @@ def main() -> None:
     output_dir = resolve_output_dir(args)
     embeddings = np.load(output_dir / "embeddings.npy")
     metadata_df = pd.read_csv(output_dir / "metadata.csv")
-    metadata_df["family_label"] = family_label(metadata_df)
+    if "family_label" not in metadata_df.columns:
+        metadata_df["family_label"] = family_label(metadata_df)
 
     tasks: list[tuple[str, pd.Series]] = [
         ("sample_type", metadata_df["sample_type"]),

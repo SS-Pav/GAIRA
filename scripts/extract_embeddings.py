@@ -61,6 +61,15 @@ def main() -> None:
             "dataset_id": dataset["dataset_ids"].astype(str),
             "sample_type": dataset["sample_types"].astype(str),
             "label_optional": dataset["labels_optional"].astype(str),
+            "family_label": dataset["family_labels"].astype(str)
+            if "family_labels" in dataset.files
+            else np.asarray([""] * len(dataset["dataset_ids"]), dtype=object),
+            "semantic_group": dataset["semantic_groups"].astype(str)
+            if "semantic_groups" in dataset.files
+            else np.asarray([""] * len(dataset["dataset_ids"]), dtype=object),
+            "hard_negative_scope": dataset["hard_negative_scopes"].astype(str)
+            if "hard_negative_scopes" in dataset.files
+            else np.asarray([""] * len(dataset["dataset_ids"]), dtype=object),
             "record_kind": dataset["record_kinds"].astype(str),
             "processing_version": dataset["processing_versions"].astype(str),
             "subclass_label": dataset["subclasses"].astype(str),

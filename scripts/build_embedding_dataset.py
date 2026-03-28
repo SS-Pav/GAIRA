@@ -11,7 +11,7 @@ import pandas as pd
 
 MASTER_X = np.arange(400.0, 1801.0, 1.0, dtype=float)
 RNG = np.random.default_rng(7)
-DEFAULT_MAX_PER_DATASET = 500
+DEFAULT_MAX_PER_DATASET = 350
 CURRENT_VERSION_MAP = {
     "serum_ag_colloids_grounding": "v1_crop400_1800_interp1_vector",
     "adenine_sers_control": "v1_crop400_1800_interp1_vector",
@@ -99,6 +99,7 @@ def main() -> None:
     import sys
 
     sys.path.insert(0, str(project_root / "src"))
+    from gaira.embedding.metadata import family_label_for_dataset, hard_negative_scope, semantic_group
     from gaira.embedding.runtime import resolve_output_dir
     from gaira.config import get_database_path
 
@@ -318,6 +319,41 @@ def main() -> None:
         dataset_ids=metadata_df["dataset_id"].astype(str).to_numpy(),
         sample_types=metadata_df["sample_type"].astype(str).to_numpy(),
         labels_optional=metadata_df["label_optional"].fillna("").astype(str).to_numpy(),
+        family_labels=np.asarray(
+            [
+                family_label_for_dataset(dataset_id, sample_type)
+                for dataset_id, sample_type in zip(
+                    metadata_df["dataset_id"].astype(str),
+                    metadata_df["sample_type"].astype(str),
+                    strict=False,
+                )
+            ],
+            dtype=object,
+        ),
+        semantic_groups=np.asarray(
+            [
+                semantic_group(dataset_id, sample_type, label_optional)
+                for dataset_id, sample_type, label_optional in zip(
+                    metadata_df["dataset_id"].astype(str),
+                    metadata_df["sample_type"].astype(str),
+                    metadata_df["label_optional"].fillna("").astype(str),
+                    strict=False,
+                )
+            ],
+            dtype=object,
+        ),
+        hard_negative_scopes=np.asarray(
+            [
+                hard_negative_scope(dataset_id, sample_type, label_optional)
+                for dataset_id, sample_type, label_optional in zip(
+                    metadata_df["dataset_id"].astype(str),
+                    metadata_df["sample_type"].astype(str),
+                    metadata_df["label_optional"].fillna("").astype(str),
+                    strict=False,
+                )
+            ],
+            dtype=object,
+        ),
         record_kinds=metadata_df["record_kind"].astype(str).to_numpy(),
         processing_versions=metadata_df["processing_version"].astype(str).to_numpy(),
         sample_keys=metadata_df["sample_key"].astype(str).to_numpy(),
