@@ -52,10 +52,16 @@ def choose_version(version_series: pd.Series, dataset_id: str) -> str:
     return v1_versions[0] if v1_versions else versions[0]
 
 
-def sample_rows(df: pd.DataFrame, max_per_dataset: int) -> pd.DataFrame:
-    if len(df) <= max_per_dataset:
+def is_uncapped(max_per_dataset: int | None) -> bool:
+    return max_per_dataset is None or max_per_dataset <= 0
+
+
+def sample_rows(df: pd.DataFrame, max_per_dataset: int | None) -> pd.DataFrame:
+    if is_uncapped(max_per_dataset):
         return df.copy()
-    sample_indices = RNG.choice(df.index.to_numpy(), size=max_per_dataset, replace=False)
+    if len(df) <= int(max_per_dataset):
+        return df.copy()
+    sample_indices = RNG.choice(df.index.to_numpy(), size=int(max_per_dataset), replace=False)
     return df.loc[np.sort(sample_indices)].copy()
 
 
@@ -89,7 +95,7 @@ def parse_args() -> argparse.Namespace:
         "--max-per-dataset",
         type=int,
         default=DEFAULT_MAX_PER_DATASET,
-        help="Maximum number of processed spectra to sample per dataset before adding class summaries.",
+        help="Maximum number of processed spectra to sample per dataset before adding class summaries. Use -1 or 0 for no cap.",
     )
     return parser.parse_args()
 

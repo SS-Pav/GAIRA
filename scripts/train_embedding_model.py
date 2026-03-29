@@ -15,6 +15,35 @@ from torch.utils.data import DataLoader, Dataset, WeightedRandomSampler
 DEFAULT_EPOCHS = 30
 TEMPERATURE = 0.2
 LEARNING_RATE = 1e-3
+TRAINING_PRESETS: dict[str, dict[str, object]] = {
+    "pass2_baseline": {
+        "positive_pair_mode": "instance_only",
+        "semantic_positive_weight": 0.0,
+        "hard_negative_mode": "off",
+        "hard_negative_weight": 0.0,
+        "hard_negative_margin": 0.30,
+        "augmentation_mode": "pass2",
+        "augmentation_strength": 1.0,
+    },
+    "pass3_aggressive": {
+        "positive_pair_mode": "instance_semantic",
+        "semantic_positive_weight": 0.35,
+        "hard_negative_mode": "same_scope_diff_class",
+        "hard_negative_weight": 0.10,
+        "hard_negative_margin": 0.25,
+        "augmentation_mode": "pass3",
+        "augmentation_strength": 1.15,
+    },
+    "pass3_tempered": {
+        "positive_pair_mode": "instance_semantic",
+        "semantic_positive_weight": 0.10,
+        "hard_negative_mode": "same_scope_diff_class",
+        "hard_negative_weight": 0.04,
+        "hard_negative_margin": 0.20,
+        "augmentation_mode": "pass3",
+        "augmentation_strength": 1.00,
+    },
+}
 
 
 class SpectrumDataset(Dataset):
@@ -144,14 +173,32 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--temperature", type=float, default=TEMPERATURE, help="NT-Xent temperature.")
     parser.add_argument("--seed", type=int, default=7, help="Random seed.")
     parser.add_argument("--max-steps-per-epoch", type=int, default=None, help="Optional step cap for smoke runs.")
-    parser.add_argument("--positive-pair-mode", choices=["instance_only", "instance_semantic"], default="instance_only")
-    parser.add_argument("--semantic-positive-weight", type=float, default=0.0)
-    parser.add_argument("--hard-negative-mode", choices=["off", "same_scope_diff_class"], default="off")
-    parser.add_argument("--hard-negative-weight", type=float, default=0.0)
-    parser.add_argument("--hard-negative-margin", type=float, default=0.30)
-    parser.add_argument("--augmentation-mode", choices=["pass2", "pass3"], default="pass2")
-    parser.add_argument("--augmentation-strength", type=float, default=1.0)
+    parser.add_argument("--preset", choices=sorted(TRAINING_PRESETS), default="pass3_tempered")
+    parser.add_argument("--positive-pair-mode", choices=["instance_only", "instance_semantic"], default=None)
+    parser.add_argument("--semantic-positive-weight", type=float, default=None)
+    parser.add_argument("--hard-negative-mode", choices=["off", "same_scope_diff_class"], default=None)
+    parser.add_argument("--hard-negative-weight", type=float, default=None)
+    parser.add_argument("--hard-negative-margin", type=float, default=None)
+    parser.add_argument("--augmentation-mode", choices=["pass2", "pass3"], default=None)
+    parser.add_argument("--augmentation-strength", type=float, default=None)
     return parser.parse_args()
+
+
+def resolve_training_preset(args: argparse.Namespace) -> dict[str, object]:
+    config = dict(TRAINING_PRESETS[args.preset])
+    for field in [
+        "positive_pair_mode",
+        "semantic_positive_weight",
+        "hard_negative_mode",
+        "hard_negative_weight",
+        "hard_negative_margin",
+        "augmentation_mode",
+        "augmentation_strength",
+    ]:
+        value = getattr(args, field)
+        if value is not None:
+            config[field] = value
+    return config
 
 
 def main() -> None:
@@ -170,6 +217,7 @@ def main() -> None:
     )
 
     args = parse_args()
+    preset_config = resolve_training_preset(args)
     output_dir = resolve_output_dir(args)
     dataset_path = resolve_dataset_path(args, output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -223,13 +271,14 @@ def main() -> None:
         "sample_type_counts": {key: int(value) for key, value in zip(*np.unique(sample_types, return_counts=True))},
         "dataset_count": int(len(np.unique(dataset_ids))),
         "max_steps_per_epoch": args.max_steps_per_epoch,
-        "positive_pair_mode": args.positive_pair_mode,
-        "semantic_positive_weight": args.semantic_positive_weight,
-        "hard_negative_mode": args.hard_negative_mode,
-        "hard_negative_weight": args.hard_negative_weight,
-        "hard_negative_margin": args.hard_negative_margin,
-        "augmentation_mode": args.augmentation_mode,
-        "augmentation_strength": args.augmentation_strength,
+        "preset": args.preset,
+        "positive_pair_mode": preset_config["positive_pair_mode"],
+        "semantic_positive_weight": preset_config["semantic_positive_weight"],
+        "hard_negative_mode": preset_config["hard_negative_mode"],
+        "hard_negative_weight": preset_config["hard_negative_weight"],
+        "hard_negative_margin": preset_config["hard_negative_margin"],
+        "augmentation_mode": preset_config["augmentation_mode"],
+        "augmentation_strength": preset_config["augmentation_strength"],
     }
     write_json(output_dir / "run_config.json", run_config)
     print(
@@ -251,11 +300,25 @@ def main() -> None:
             batch_indices = batch_indices.tolist()
             batch = batch.to(device)
             view1 = torch.stack(
-                [augment_spectrum(sample, mode=args.augmentation_mode, strength=args.augmentation_strength) for sample in batch],
+                [
+                    augment_spectrum(
+                        sample,
+                        mode=str(preset_config["augmentation_mode"]),
+                        strength=float(preset_config["augmentation_strength"]),
+                    )
+                    for sample in batch
+                ],
                 dim=0,
             )
             view2 = torch.stack(
-                [augment_spectrum(sample, mode=args.augmentation_mode, strength=args.augmentation_strength) for sample in batch],
+                [
+                    augment_spectrum(
+                        sample,
+                        mode=str(preset_config["augmentation_mode"]),
+                        strength=float(preset_config["augmentation_strength"]),
+                    )
+                    for sample in batch
+                ],
                 dim=0,
             )
             optimizer.zero_grad(set_to_none=True)
@@ -265,26 +328,26 @@ def main() -> None:
             total_loss = instance_loss
 
             semantic_loss = torch.zeros((), device=device)
-            if args.positive_pair_mode == "instance_semantic" and args.semantic_positive_weight > 0.0:
+            if preset_config["positive_pair_mode"] == "instance_semantic" and float(preset_config["semantic_positive_weight"]) > 0.0:
                 semantic_labels = [semantic_groups[index] for index in batch_indices]
                 semantic_loss = supervised_contrastive_loss(
                     torch.cat([z1, z2], dim=0),
                     semantic_labels + semantic_labels,
                     temperature=args.temperature,
                 )
-                total_loss = total_loss + args.semantic_positive_weight * semantic_loss
+                total_loss = total_loss + float(preset_config["semantic_positive_weight"]) * semantic_loss
 
             hard_negative_loss = torch.zeros((), device=device)
-            if args.hard_negative_mode == "same_scope_diff_class" and args.hard_negative_weight > 0.0:
+            if preset_config["hard_negative_mode"] == "same_scope_diff_class" and float(preset_config["hard_negative_weight"]) > 0.0:
                 scopes = [hard_negative_scopes[index] for index in batch_indices]
                 groups = [semantic_groups[index] for index in batch_indices]
                 hard_negative_loss = hard_negative_penalty(
                     torch.cat([z1, z2], dim=0),
                     scopes + scopes,
                     groups + groups,
-                    margin=args.hard_negative_margin,
+                    margin=float(preset_config["hard_negative_margin"]),
                 )
-                total_loss = total_loss + args.hard_negative_weight * hard_negative_loss
+                total_loss = total_loss + float(preset_config["hard_negative_weight"]) * hard_negative_loss
 
             total_loss.backward()
             optimizer.step()
@@ -324,13 +387,14 @@ def main() -> None:
             "temperature": args.temperature,
             "device": device.type,
             "learning_rate": args.learning_rate,
-            "positive_pair_mode": args.positive_pair_mode,
-            "semantic_positive_weight": args.semantic_positive_weight,
-            "hard_negative_mode": args.hard_negative_mode,
-            "hard_negative_weight": args.hard_negative_weight,
-            "hard_negative_margin": args.hard_negative_margin,
-            "augmentation_mode": args.augmentation_mode,
-            "augmentation_strength": args.augmentation_strength,
+            "preset": args.preset,
+            "positive_pair_mode": preset_config["positive_pair_mode"],
+            "semantic_positive_weight": preset_config["semantic_positive_weight"],
+            "hard_negative_mode": preset_config["hard_negative_mode"],
+            "hard_negative_weight": preset_config["hard_negative_weight"],
+            "hard_negative_margin": preset_config["hard_negative_margin"],
+            "augmentation_mode": preset_config["augmentation_mode"],
+            "augmentation_strength": preset_config["augmentation_strength"],
         },
         output_dir / "model.pt",
     )

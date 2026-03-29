@@ -4,9 +4,11 @@ set -euo pipefail
 INSTANCE="${INSTANCE:-gaira-gpu-1}"
 ZONE="${ZONE:-us-east4-c}"
 REMOTE_REPO="${REMOTE_REPO:-~/projects/GAIRA}"
-REMOTE_OUTPUT_DIR="${REMOTE_OUTPUT_DIR:-$REMOTE_REPO/data/processed/embedding_v3_pass3}"
-REMOTE_DATASET_PATH="${REMOTE_DATASET_PATH:-$REMOTE_OUTPUT_DIR/embedding_dataset.npz}"
+REMOTE_OUTPUT_DIR="${REMOTE_OUTPUT_DIR:-$REMOTE_REPO/data/processed/embedding_v3_pass3_gpu_run1}"
+REMOTE_DATASET_PATH="${REMOTE_DATASET_PATH:-$REMOTE_REPO/data/processed/embedding_v3_pass3/embedding_dataset.npz}"
 EPOCHS="${EPOCHS:-30}"
+PRESET="${PRESET:-pass3_tempered}"
+EXTRA_TRAIN_ARGS="${EXTRA_TRAIN_ARGS:-}"
 
 gcloud compute ssh "$INSTANCE" --zone "$ZONE" --command "
   set -euo pipefail
@@ -16,7 +18,7 @@ gcloud compute ssh "$INSTANCE" --zone "$ZONE" --command "
   .venv/bin/pip install --quiet --upgrade pip
   .venv/bin/pip install --quiet torch umap-learn scikit-learn pandas numpy matplotlib seaborn
   mkdir -p $REMOTE_OUTPUT_DIR
-  PYTHONPATH=src .venv/bin/python scripts/train_embedding_model.py --dataset-path $REMOTE_DATASET_PATH --output-dir $REMOTE_OUTPUT_DIR
+  PYTHONPATH=src .venv/bin/python scripts/train_embedding_model.py --dataset-path $REMOTE_DATASET_PATH --output-dir $REMOTE_OUTPUT_DIR --epochs $EPOCHS --preset $PRESET $EXTRA_TRAIN_ARGS
   PYTHONPATH=src .venv/bin/python scripts/extract_embeddings.py --dataset-path $REMOTE_DATASET_PATH --output-dir $REMOTE_OUTPUT_DIR
   PYTHONPATH=src .venv/bin/python scripts/visualize_embeddings.py --output-dir $REMOTE_OUTPUT_DIR
   PYTHONPATH=src .venv/bin/python scripts/evaluate_embeddings.py --output-dir $REMOTE_OUTPUT_DIR

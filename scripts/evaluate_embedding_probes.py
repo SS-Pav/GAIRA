@@ -21,6 +21,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Evaluate frozen linear probes on spectral embeddings.")
     add_common_io_args(parser, default_run_name="embedding_v2", default_root=REMOTE_OUTPUT_ROOT)
     parser.add_argument("--min-class-count", type=int, default=3, help="Minimum samples per class for a task.")
+    parser.add_argument("--report-dir", default=None, help="Directory to write probe outputs. Defaults to output-dir.")
     return parser.parse_args()
 
 
@@ -93,6 +94,8 @@ def main() -> None:
 
     args = parse_args()
     output_dir = resolve_output_dir(args)
+    report_dir = Path(args.report_dir).expanduser().resolve() if args.report_dir else output_dir
+    report_dir.mkdir(parents=True, exist_ok=True)
     embeddings = np.load(output_dir / "embeddings.npy")
     metadata_df = pd.read_csv(output_dir / "metadata.csv")
     if "family_label" not in metadata_df.columns:
@@ -127,7 +130,7 @@ def main() -> None:
             rows.append(result)
 
     probe_df = pd.DataFrame(rows)
-    probe_df.to_csv(output_dir / "probe_metrics.csv", index=False)
+    probe_df.to_csv(report_dir / "probe_metrics.csv", index=False)
     report = textwrap.dedent(
         f"""
         Frozen probe report
@@ -142,8 +145,8 @@ def main() -> None:
         - Higher accuracy and macro-F1 indicate more usable downstream signal in the learned geometry.
         """
     )
-    (output_dir / "probe_report.md").write_text(report, encoding="utf-8")
-    print(f"Saved probe metrics: {output_dir / 'probe_metrics.csv'}")
+    (report_dir / "probe_report.md").write_text(report, encoding="utf-8")
+    print(f"Saved probe metrics: {report_dir / 'probe_metrics.csv'}")
 
 
 if __name__ == "__main__":
