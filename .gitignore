@@ -45,3 +45,11 @@ reports/
 
 # Cache-like tabular artifacts
 *.feather
+.matplotlib-cache/
+tmp/
+__pycache__/
+*.pyc
+
+data/discovery/
+data/targeted/
+tmp/
