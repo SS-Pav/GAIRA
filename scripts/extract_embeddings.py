@@ -73,6 +73,21 @@ def main() -> None:
             "record_kind": dataset["record_kinds"].astype(str),
             "processing_version": dataset["processing_versions"].astype(str),
             "subclass_label": dataset["subclasses"].astype(str),
+            "branch_mode": dataset["branch_mode"].astype(str)
+            if "branch_mode" in dataset.files
+            else np.asarray(["none"] * len(dataset["dataset_ids"]), dtype=object),
+            "branch_primary_label": dataset["branch_primary_label"].astype(str)
+            if "branch_primary_label" in dataset.files
+            else np.asarray([""] * len(dataset["dataset_ids"]), dtype=object),
+            "branch_secondary_label": dataset["branch_secondary_label"].astype(str)
+            if "branch_secondary_label" in dataset.files
+            else np.asarray([""] * len(dataset["dataset_ids"]), dtype=object),
+            "branch_state_label": dataset["branch_state_label"].astype(str)
+            if "branch_state_label" in dataset.files
+            else np.asarray([""] * len(dataset["dataset_ids"]), dtype=object),
+            "branch_label_weight": dataset["branch_label_weight"].astype(np.float32)
+            if "branch_label_weight" in dataset.files
+            else np.asarray([0.0] * len(dataset["dataset_ids"]), dtype=np.float32),
         }
     )
     metadata_df.to_csv(output_dir / "metadata.csv", index=False)

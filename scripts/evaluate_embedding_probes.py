@@ -105,6 +105,12 @@ def main() -> None:
         ("sample_type", metadata_df["sample_type"]),
         ("family_label", metadata_df["family_label"]),
     ]
+    if "branch_state_label" in metadata_df.columns:
+        tasks.append(("branch_state_label", metadata_df["branch_state_label"]))
+    if "branch_primary_label" in metadata_df.columns:
+        tasks.append(("branch_primary_label", metadata_df["branch_primary_label"]))
+    if "branch_secondary_label" in metadata_df.columns:
+        tasks.append(("branch_secondary_label", metadata_df["branch_secondary_label"]))
 
     cca_mask = metadata_df["dataset_id"].astype(str) == "cca_hcc_lm_serum_sers"
     tasks.append(("cca_hcc_lm_serum_sers_class", metadata_df.loc[cca_mask, "label_optional"]))
@@ -113,6 +119,11 @@ def main() -> None:
     ev_df = metadata_df.loc[ev_mask].copy()
     ev_df["ev_dataset_task"] = ev_df["dataset_id"].astype(str)
     tasks.append(("ev_dataset_family", ev_df["ev_dataset_task"]))
+
+    small_mask = metadata_df["dataset_id"].astype(str) == "small2023_ev"
+    if small_mask.any():
+        tasks.append(("small2023_class", metadata_df.loc[small_mask, "label_optional"]))
+        tasks.append(("small2023_probe", metadata_df.loc[small_mask, "subclass_label"]))
 
     aa_mask = metadata_df["dataset_id"].astype(str).isin(
         ["adenine_sers_control", "metabolite_sers63_support", "amino_acid_raman_grounding"]

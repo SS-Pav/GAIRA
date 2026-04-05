@@ -1,0 +1,2 @@
+"""GAIRA targeted acquisition subsystem."""
+

@@ -144,6 +144,33 @@ def neighbor_consistency(neighbor_indices: np.ndarray, labels: pd.Series, metric
     ]
 
 
+def neighbor_consistency_for_subset(
+    embeddings: np.ndarray,
+    metadata_df: pd.DataFrame,
+    *,
+    sample_type: str,
+    knn_k: int,
+    seed: int,
+    backend: str,
+) -> list[dict[str, object]]:
+    subset = metadata_df[metadata_df["sample_type"].astype(str) == sample_type].copy()
+    if subset.empty or len(subset) < 2:
+        return []
+    subset_embeddings = embeddings[subset.index.to_numpy()]
+    subset_neighbors = build_knn_indices(subset_embeddings, k=knn_k, seed=seed, backend=backend)
+    results: list[dict[str, object]] = []
+    for column, name in [
+        ("dataset_id", "dataset_id"),
+        ("label_optional", "class"),
+        ("family_label", "family"),
+    ]:
+        for row in neighbor_consistency(subset_neighbors, subset[column].reset_index(drop=True), name):
+            row["evaluation_tier"] = "within_sample_type_full_corpus"
+            row["sample_type_filter"] = sample_type
+            results.append(row)
+    return results
+
+
 def label_silhouette(embeddings: np.ndarray, labels: pd.Series, label_name: str) -> dict[str, object]:
     valid = labels.fillna("").astype(str)
     valid_mask = valid != ""
@@ -155,6 +182,67 @@ def label_silhouette(embeddings: np.ndarray, labels: pd.Series, label_name: str)
         "value": float(silhouette_score(embeddings[valid_mask.to_numpy()], valid.to_numpy())),
         "evaluation_tier": "sampled_global",
     }
+
+
+def label_silhouette_for_subset(
+    embeddings: np.ndarray,
+    metadata_df: pd.DataFrame,
+    *,
+    sample_type: str,
+    label_column: str,
+    label_name: str,
+    target_size: int,
+    seed: int,
+) -> dict[str, object]:
+    subset = metadata_df[metadata_df["sample_type"].astype(str) == sample_type].copy()
+    if subset.empty or len(subset) < 2:
+        return {
+            "metric": f"silhouette_{label_name}",
+            "value": np.nan,
+            "evaluation_tier": "within_sample_type_sampled",
+            "sample_type_filter": sample_type,
+        }
+    sample_idx = stratified_sample_indices(subset.reset_index(drop=True), min(target_size, len(subset)), seed)
+    sampled_subset = subset.iloc[sample_idx].copy()
+    sampled_embeddings = embeddings[sampled_subset.index.to_numpy()]
+    row = label_silhouette(sampled_embeddings, sampled_subset[label_column].reset_index(drop=True), label_name)
+    row["evaluation_tier"] = "within_sample_type_sampled"
+    row["sample_type_filter"] = sample_type
+    return row
+
+
+def semantic_pairing_summary(metadata_df: pd.DataFrame) -> pd.DataFrame:
+    if "semantic_group" not in metadata_df.columns:
+        return pd.DataFrame()
+    working = metadata_df.copy()
+    working["semantic_group"] = working["semantic_group"].fillna("").astype(str)
+    working = working[working["semantic_group"] != ""].copy()
+    if working.empty:
+        return pd.DataFrame()
+
+    rows: list[dict[str, object]] = []
+    for sample_type, subset in working.groupby("sample_type", sort=True):
+        total_pairs = 0
+        same_dataset_pairs = 0
+        cross_dataset_pairs = 0
+        for _, group in subset.groupby("semantic_group", sort=False):
+            dataset_counts = group.groupby("dataset_id").size()
+            total_group_pairs = int(len(group) * (len(group) - 1) / 2)
+            same_group_pairs = int(sum(int(count * (count - 1) / 2) for count in dataset_counts))
+            total_pairs += total_group_pairs
+            same_dataset_pairs += same_group_pairs
+            cross_dataset_pairs += max(total_group_pairs - same_group_pairs, 0)
+        rows.append(
+            {
+                "sample_type": sample_type,
+                "semantic_positive_pairs_total": total_pairs,
+                "semantic_positive_pairs_cross_dataset": cross_dataset_pairs,
+                "semantic_positive_pairs_same_dataset": same_dataset_pairs,
+                "cross_dataset_fraction": cross_dataset_pairs / total_pairs if total_pairs else np.nan,
+                "same_dataset_fraction": same_dataset_pairs / total_pairs if total_pairs else np.nan,
+            }
+        )
+    return pd.DataFrame(rows)
 
 
 def main() -> None:
@@ -183,6 +271,25 @@ def main() -> None:
         ("family_label", "family"),
     ]:
         metrics.extend(neighbor_consistency(neighbor_indices, metadata_df[column], name))
+    for column, name in [
+        ("branch_state_label", "branch_state"),
+        ("branch_primary_label", "branch_primary"),
+        ("branch_secondary_label", "branch_secondary"),
+    ]:
+        if column in metadata_df.columns:
+            metrics.extend(neighbor_consistency(neighbor_indices, metadata_df[column], name))
+
+    for sample_type in sorted(metadata_df["sample_type"].astype(str).unique().tolist()):
+        metrics.extend(
+            neighbor_consistency_for_subset(
+                embeddings,
+                metadata_df,
+                sample_type=sample_type,
+                knn_k=args.knn_k,
+                seed=args.seed,
+                backend=args.neighbor_backend,
+            )
+        )
 
     sample_indices = stratified_sample_indices(metadata_df, args.sample_size_global_metrics, args.seed)
     sampled_df = metadata_df.loc[sample_indices].copy()
@@ -197,13 +304,60 @@ def main() -> None:
         ("family_label", "family"),
     ]:
         metrics.append(label_silhouette(sampled_embeddings, sampled_df[column], name))
+    for column, name in [
+        ("branch_state_label", "branch_state"),
+        ("branch_primary_label", "branch_primary"),
+        ("branch_secondary_label", "branch_secondary"),
+    ]:
+        if column in sampled_df.columns:
+            metrics.append(label_silhouette(sampled_embeddings, sampled_df[column], name))
+
+    within_type_target = max(1000, min(args.sample_size_global_metrics // 3, 5000))
+    for sample_type in sorted(metadata_df["sample_type"].astype(str).unique().tolist()):
+        for column, name in [
+            ("dataset_id", "dataset_id"),
+            ("label_optional", "class"),
+            ("family_label", "family"),
+        ]:
+            metrics.append(
+                label_silhouette_for_subset(
+                    embeddings,
+                    metadata_df,
+                    sample_type=sample_type,
+                    label_column=column,
+                    label_name=name,
+                    target_size=within_type_target,
+                    seed=args.seed,
+                )
+            )
 
     metrics_df = pd.DataFrame(metrics)
     metrics_df["source_output_dir"] = str(output_dir)
     metrics_df["sample_size_global_metrics"] = int(len(sampled_df))
     metrics_df["knn_k"] = int(args.knn_k)
     metrics_df["neighbor_backend"] = args.neighbor_backend
+    if "sample_type_filter" not in metrics_df.columns:
+        metrics_df["sample_type_filter"] = ""
+    metrics_df["sample_type_filter"] = metrics_df["sample_type_filter"].fillna("")
     metrics_df.to_csv(report_dir / "embedding_metrics_v2.csv", index=False)
+
+    within_type_df = metrics_df[metrics_df["evaluation_tier"].isin(["within_sample_type_full_corpus", "within_sample_type_sampled"])].copy()
+    within_type_df.to_csv(report_dir / "within_sample_type_metrics.csv", index=False)
+
+    pairing_df = semantic_pairing_summary(metadata_df)
+    if not pairing_df.empty:
+        pairing_df.to_csv(report_dir / "semantic_pairing_metrics.csv", index=False)
+
+    branch_mode = metadata_df["branch_mode"].astype(str).mode().iloc[0] if "branch_mode" in metadata_df.columns else "none"
+    branch_note = ""
+    if branch_mode != "none":
+        branch_note = textwrap.dedent(
+            f"""
+            Branch note:
+            - branch_mode = {branch_mode}
+            - This evaluation was computed on the branch subset rather than the full original embedding corpus.
+            """
+        )
 
     report = textwrap.dedent(
         f"""
@@ -222,12 +376,31 @@ def main() -> None:
         Sampled-global metrics:
         {metrics_df[metrics_df['evaluation_tier'] == 'sampled_global'].to_string(index=False)}
 
+        Within-sample-type metrics:
+        {within_type_df.to_string(index=False) if not within_type_df.empty else 'No within-sample-type metrics available.'}
+
+        {branch_note}
+
         Sample manifest:
         - size = {len(sampled_df)}
         - file = {report_dir / 'sample_manifest.csv'}
         """
     )
     (report_dir / "embedding_report_v2.md").write_text(report, encoding="utf-8")
+
+    if not pairing_df.empty:
+        pairing_report = textwrap.dedent(
+            f"""
+            Semantic pairing summary
+
+            This summary estimates the available trusted semantic positive pool within each sample type.
+            Cross-dataset fractions are the key v6 diagnostic because the new preset explicitly prefers
+            cross-dataset positives inside the same sample type when they exist.
+
+            {pairing_df.to_string(index=False)}
+            """
+        )
+        (report_dir / "semantic_pairing_report.md").write_text(pairing_report, encoding="utf-8")
     print(f"Saved metrics: {report_dir / 'embedding_metrics_v2.csv'}")
 
 

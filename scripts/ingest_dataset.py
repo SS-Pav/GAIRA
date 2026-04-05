@@ -69,6 +69,25 @@ REQUIRED_RAW_FILES: dict[str, tuple[str, ...]] = {
     "amino_acid_raman_grounding": (
         "aa.xlsx",
     ),
+    "mycoplasma_na_sers": (
+        "NA-SERS specificity spectra.csv",
+    ),
+    "ovarian_plasma_raman_sers": (
+        "Raman dataset.zip",
+        "SERS dataset.zip",
+    ),
+    "coeliac_faecal_sers": (
+        "coeliac_faecal_sers.zip",
+    ),
+    "single_vesicle_ev_raman": (
+        "fc35_raw_raman_data.rar",
+    ),
+    "ucla_saliva_sev_gc": (
+        "shard_manifest.csv",
+    ),
+    "stroke_urine_sers": (
+        "data.rar",
+    ),
 }
 
 
@@ -123,6 +142,12 @@ def main() -> None:
         SerumAgColloidsLiteratureGroundingParser,
     )
     from gaira.parsers.biosample.shine_ev_sers_parser import ShineEVSERSParser
+    from gaira.parsers.biosample.mycoplasma_na_sers_parser import MycoplasmaNASERSParser
+    from gaira.parsers.biosample.ovarian_plasma_raman_sers_parser import OvarianPlasmaRamanSERSParser
+    from gaira.parsers.biosample.coeliac_faecal_sers_parser import CoeliacFaecalSERSParser
+    from gaira.parsers.biosample.single_vesicle_ev_raman_parser import SingleVesicleEVRamanParser
+    from gaira.parsers.biosample.stroke_urine_sers_parser import StrokeUrineSERSParser
+    from gaira.parsers.biosample.ucla_saliva_sev_gc_parser import UCLASalivaSEVGCParser
     from gaira.parsers.knowledge.raman_knowledge_core_parser import RamanKnowledgeCoreParser
     from gaira.parsers.ramanbiolib_parser import RamanBioLibParser
 
@@ -315,6 +340,72 @@ def main() -> None:
                 db_path=db_path,
             )
             print("Running cca_hcc_lm_serum_sers biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id == "mycoplasma_na_sers":
+            parser_instance = MycoplasmaNASERSParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running mycoplasma_na_sers biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id == "ovarian_plasma_raman_sers":
+            parser_instance = OvarianPlasmaRamanSERSParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running ovarian_plasma_raman_sers biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id == "coeliac_faecal_sers":
+            parser_instance = CoeliacFaecalSERSParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running coeliac_faecal_sers biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id == "single_vesicle_ev_raman":
+            parser_instance = SingleVesicleEVRamanParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running single_vesicle_ev_raman biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id == "ucla_saliva_sev_gc":
+            parser_instance = UCLASalivaSEVGCParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running ucla_saliva_sev_gc biosample ingestion into DuckDB.")
+            parser_instance.audit()
+            parser_instance.ingest()
+            return
+
+        if args.dataset_id == "stroke_urine_sers":
+            parser_instance = StrokeUrineSERSParser(
+                dataset_id=args.dataset_id,
+                dataset_root=dataset_root,
+                db_path=db_path,
+            )
+            print("Running stroke_urine_sers biosample ingestion into DuckDB.")
             parser_instance.audit()
             parser_instance.ingest()
             return

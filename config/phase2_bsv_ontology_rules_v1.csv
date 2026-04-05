@@ -1,0 +1,20 @@
+priority,match_field,match_type,pattern,output_axis,axis_kind,axis_weight,notes
+10,dataset_id,exact,adenine_sers_control,nucleic_acid,primary,1.0,Controlled adenine reference contributes to nucleic-acid-like support.
+11,dataset_id,exact,adenine_sers_control,substrate_adsorption_bias,caveat,0.25,Structured SERS control also carries substrate sensitivity.
+20,dataset_id,exact,amino_acid_raman_grounding,protein_peptide,primary,1.0,Free amino-acid Raman references support the protein/peptide axis in the minimal pilot ontology.
+30,dataset_id,exact,metabolite_sers63_support,small_molecule_metabolite,primary,1.0,Metabolite fingerprint archive supports the small-molecule axis by default.
+40,dataset_id,exact,serum_ag_colloids_grounding,substrate_adsorption_bias,caveat,0.35,Ag-colloid fitting references remain substrate-sensitive.
+50,source_key,exact,serum_ag_colloids::commercial_serum_merck,matrix_background,caveat,1.0,Commercial serum subset is a matrix-background-only support source.
+60,source_key,exact,serum_ag_colloids::spiked_commercial_serum_merck,matrix_background,caveat,0.35,Spiked serum support retains a serum-background caveat.
+100,compound_label,regex,(?i)\b(albumin|alb|ala|arginine|arg|cys|cysteine|glutamic|glut|gly|glycine|histidine|his|hydroxypro|ile|isoleucine|leu|leucine|methio|methionine|phe|phenylalanine|pro|proline|ser|serine|trp|tryptophan|tyr|tyrosine|val|valine)\b,protein_peptide,primary,1.0,Amino-acid or proteinaceous labels map to protein/peptide.
+110,class_label,regex,(?i)\b(albumin|alb|ala|arginine|arg|cys|cysteine|glutamic|glut|gly|glycine|histidine|his|hydroxypro|ile|isoleucine|leu|leucine|methio|methionine|phe|phenylalanine|pro|proline|ser|serine|trp|tryptophan|tyr|tyrosine|val|valine)\b,protein_peptide,primary,1.0,Amino-acid or proteinaceous class labels map to protein/peptide.
+120,compound_label,regex,(?i)\b(dna|rna|adenine|ade|guanine|gua|uracil|ura|thymine|thy)\b,nucleic_acid,primary,1.0,Nucleobases and nucleic-acid references map to the nucleic-acid axis.
+130,class_label,regex,(?i)\b(dna|rna|adenine|ade|guanine|gua|uracil|ura|thymine|thy)\b,nucleic_acid,primary,1.0,Nucleobases and nucleic-acid labels map to the nucleic-acid axis.
+140,compound_label,regex,(?i)\b(gluc|glucose|fruct|fructose|galact|mann|mannose|ribo|ribose|glycogen|nacdgluc|dfruct6p)\b,carbohydrate_glycan,primary,1.0,Sugar-like references map to carbohydrate/glycan.
+150,class_label,regex,(?i)\b(gluc|glucose|fruct|fructose|galact|mann|mannose|ribo|ribose|glycogen|nacdgluc|dfruct6p)\b,carbohydrate_glycan,primary,1.0,Sugar-like labels map to carbohydrate/glycan.
+160,compound_label,regex,(?i)\b(oleic|stearic|triolein|chol|phinositol|phospholipid|fatty)\b,lipid_membrane,primary,1.0,Lipid-like references map to lipid/membrane.
+170,class_label,regex,(?i)\b(oleic|stearic|triolein|chol|phinositol|phospholipid|fatty)\b,lipid_membrane,primary,1.0,Lipid-like labels map to lipid/membrane.
+180,compound_label,regex,(?i)\b(accoa|acetoacet|asco?rb|citric|coa|creat|ergo|ergothioneine|hypox|lact|pep|phosph|pyr|ua|uabound|uafree|urate|uric|xanth|xanthine)\b,small_molecule_metabolite,primary,1.0,Small-molecule metabolite references map to the metabolite axis.
+190,class_label,regex,(?i)\b(accoa|acetoacet|asco?rb|citric|coa|creat|ergo|ergothioneine|hypox|lact|pep|phosph|pyr|ua|uabound|uafree|urate|uric|xanth|xanthine|bkg|erg|hyp)\b,small_molecule_metabolite,primary,1.0,Small-molecule metabolite labels map to the metabolite axis.
+200,class_label,regex,(?i)\b(serummerck|serumsigma|serum|bkg)\b,matrix_background,caveat,1.0,Serum-only background labels contribute to the matrix-background caveat axis.
+210,compound_label,regex,(?i)\b(serum)\b,matrix_background,caveat,1.0,Serum-labelled references contribute to the matrix-background caveat axis.

@@ -1,0 +1,4 @@
+representation_mode,mode_kind,description,retrieval_mode,structure_role,phase_status,notes
+raw_direct,retrieval_default,Compute similarity and BSV directly on processed spectra,primary,none,active_default,This is the default Phase 1 and Phase 2 mode.
+local_structural_embedding,local_structure,Use within-dataset PCA UMAP neighborhoods or clusters for matched background selection smoothing or organization,secondary,within_dataset_only,active_scaffold,This mode organizes local geometry but does not itself assign biochemical meaning.
+local_query_grounding_alignment,planned_alignment,Future optional mode for learning or estimating local query-grounding alignment within a constrained experiment family,planned,query_to_grounding_local_alignment,planned_not_implemented,Documented now so later extensions do not distort the architecture.

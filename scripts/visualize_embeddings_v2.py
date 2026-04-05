@@ -36,19 +36,30 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Sampled v2 embedding visualization.")
     add_common_io_args(parser, default_run_name="embedding_v2", default_root=REMOTE_OUTPUT_ROOT)
     parser.add_argument("--report-dir", default=None, help="Directory containing sample_manifest.csv and target outputs.")
+    parser.add_argument("--projection-backend", choices=["auto", "umap", "tsne", "pca"], default="auto")
     return parser.parse_args()
 
 
-def compute_projection(embeddings: np.ndarray) -> tuple[np.ndarray, str]:
-    try:
-        import umap
+def compute_projection(embeddings: np.ndarray, backend: str) -> tuple[np.ndarray, str]:
+    if backend in {"auto", "umap"}:
+        try:
+            import umap
 
-        reducer = umap.UMAP(n_neighbors=20, min_dist=0.2, metric="cosine", random_state=7)
-        coords = reducer.fit_transform(embeddings)
-        return coords, "UMAP"
-    except Exception:
+            reducer = umap.UMAP(n_neighbors=20, min_dist=0.2, metric="cosine", random_state=7)
+            coords = reducer.fit_transform(embeddings)
+            return coords, "UMAP"
+        except Exception:
+            if backend == "umap":
+                raise
+    if backend in {"auto", "tsne"}:
         reducer = TSNE(n_components=2, perplexity=30, init="pca", random_state=7)
         return reducer.fit_transform(embeddings), "t-SNE"
+    if backend == "pca":
+        from sklearn.decomposition import PCA
+
+        reducer = PCA(n_components=2, random_state=7)
+        return reducer.fit_transform(embeddings), "PCA"
+    raise ValueError(f"Unsupported projection backend: {backend}")
 
 
 def plot_projection(df: pd.DataFrame, color_column: str, title: str, output_path: Path) -> None:
@@ -94,7 +105,7 @@ def main() -> None:
     sample_indices = sample_manifest["original_index"].astype(int).to_numpy()
     sampled_embeddings = embeddings[sample_indices]
     sampled_df = metadata_df.loc[sample_indices].copy().reset_index(drop=True)
-    coords, method_name = compute_projection(sampled_embeddings)
+    coords, method_name = compute_projection(sampled_embeddings, args.projection_backend)
     sampled_df["dim1"] = coords[:, 0]
     sampled_df["dim2"] = coords[:, 1]
     sampled_df.to_csv(report_dir / "embedding_projection_v2.csv", index=False)

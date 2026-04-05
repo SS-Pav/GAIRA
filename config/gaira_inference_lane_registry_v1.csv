@@ -1,0 +1,3 @@
+inference_lane,lane_kind,description,requires_baseline,default_output_pattern,typical_use_case,notes
+absolute_bsv,absolute,Estimate biochemical support present in an individual spectrum group or cluster,no,per_spectrum_bsv; group_mean_bsv,class profiles cohort summaries and cluster interpretation,Best when the question is what is present rather than what changed.
+differential_bsv,differential,Estimate biochemical change relative to a baseline comparator or matched background,yes,per_spectrum_bsv; group_mean_bsv; delta_bsv,perturbation panels dose series case-control contrasts and matched comparisons,Necessary when raw support is dominated by shared background and only differences are biologically meaningful.
