@@ -1,55 +1,141 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
+############################################
+# 🧠 GAIRA CORE IGNORE POLICY
+############################################
 
-# Virtual environments
+# Never track raw/processed scientific data
+data/
+GAIRA_DATA/
+Volumes/
+
+############################################
+# 🐍 PYTHON
+############################################
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+############################################
+# 🧪 VIRTUAL ENVIRONMENTS
+############################################
+
 .venv/
 venv/
+env/
+ENV/
 
-# macOS
+############################################
+# 💻 OS / SYSTEM FILES
+############################################
+
 .DS_Store
+Thumbs.db
 
-# External / mounted data
-/Volumes/
-/GAIRA_DATA/
+############################################
+# 🗃 DATABASES
+############################################
 
-# Local data
-data/raw/
-data/processed/
-data/interim/
-data/exports/
-data/logs/
-
-# Databases
 *.duckdb
 *.sqlite
+*.db
 
-# Large scientific / binary artifacts
+############################################
+# 📊 LARGE / BINARY SCIENTIFIC FILES
+############################################
+
 *.mat
-*.zip
+*.npz
+*.npy
+*.parquet
+*.feather
+
+############################################
+# 📄 DOCUMENTS (RAW PAPERS / EXPORTS)
+############################################
+
 *.pdf
 *.docx
-*.npz
-*.parquet
+*.pptx
 
-# Logs
+############################################
+# 📦 ARCHIVES
+############################################
+
+*.zip
+*.tar
+*.gz
+
+############################################
+# 📈 LOGS & TEMP
+############################################
+
 logs/
 *.log
+tmp/
+temp/
+*.tmp
 
-# Jupyter
+############################################
+# 📓 JUPYTER
+############################################
+
 .ipynb_checkpoints/
 
-# Generated reports / figures
-reports/
+############################################
+# 🎨 PLOTS / REPORTS / GENERATED OUTPUT
+############################################
 
-# Cache-like tabular artifacts
-*.feather
+reports/
+figures/
+plots/
+
+############################################
+# ⚙️ STREAMLIT / CACHE
+############################################
+
+.streamlit/
 .matplotlib-cache/
-tmp/
-__pycache__/
-*.pyc
+
+############################################
+# 🔍 DISCOVERY / PIPELINE ARTIFACTS
+############################################
 
 data/discovery/
 data/targeted/
-tmp/
+data/interim/
+data/processed/
+data/exports/
+data/logs/
+
+############################################
+# 🧠 CLAUDE / MCP (IMPORTANT)
+############################################
+
+.claude_cache/
+.claude_logs/
+mcp_logs/
+
+############################################
+# 🧪 EXPERIMENTAL OUTPUTS
+############################################
+
+runs/
+outputs/
+checkpoints/
+
+############################################
+# 🚨 ACCIDENTAL FILES (like your DuckDB objects)
+############################################
+
+<_duckdb*
+*.out
+*.err
+
+############################################
+# 🔐 OPTIONAL: PROTECT AGAINST LARGE FILE ACCIDENTS
+############################################
+
+# Uncomment if needed later
+# *.csv
+# *.json

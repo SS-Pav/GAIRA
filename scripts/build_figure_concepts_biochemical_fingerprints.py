@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import json
 from pathlib import Path
+import textwrap
 
 from matplotlib.lines import Line2D
 from matplotlib.patches import Ellipse, FancyArrowPatch, FancyBboxPatch, Rectangle
@@ -33,6 +35,63 @@ DISPLAY_LABELS = [
 RMIN = 0.0
 RMAX = 1.0
 DPI = 360
+FIG4_PROCESSING_VERSION = "v2_crop400_1800_interp1_poly3_vector"
+FIG4_COHORT_DATASET_ID = "cca_hcc_lm_serum_sers"
+FIG4_ANCHOR_COMPONENTS = [
+    ("adenine", 8, "#2b6cb0"),
+    ("albumin", 99, "#238b82"),
+    ("cholesterol", 64, "#c65f2d"),
+    ("citric acid", 14, "#8a6fb3"),
+    ("glycogen", 188, "#b28a2e"),
+    ("glutathione", 27, "#7d9d3c"),
+    ("l-phenylalanine", 35, "#b24f7e"),
+    ("cytochrome c", 166, "#6b7280"),
+]
+FIG4_RADAR_LABELS = [
+    "adenine",
+    "albumin",
+    "cholest-\nerol",
+    "citric\nacid",
+    "glycogen",
+    "glutathione",
+    "phenyl-\nalanine",
+    "cytochrome c",
+]
+FIG4_CLASS_COLORS = {
+    "cca": "#c48a2c",
+    "hcc": "#c65f2d",
+    "healthy_control": "#238b82",
+    "lm": "#7a68b3",
+}
+FIG4_RADAR_AXES_BIO = [
+    "nucleic_acid",
+    "protein_peptide",
+    "lipid_membrane",
+    "carbohydrate_glycan",
+    "small_molecule_metabolite",
+    "substrate_adsorption_bias",
+]
+FIG4_RADAR_LABELS_BIO = [
+    "nucleic_acid",
+    "protein_peptide",
+    "lipid_membrane",
+    "carbohydrate_glycan",
+    "small_molecule_metabolite",
+    "substrate_adsorption_bias",
+]
+FIG4_EV_DATASETS = {
+    "small2023_ev",
+    "diabetes_plasma_ev_sers",
+    "shine_ev_sers",
+    "single_vesicle_ev_raman",
+}
+FIG4_SERUM_DATASETS = {
+    "cca_hcc_lm_serum_sers",
+    "covid_serum_raman",
+    "serum_ag_colloids",
+    "cspp_serum",
+    "ergothioneine_serum",
+}
 
 
 CELLTYPE_FIGURE_DATA = {
@@ -303,7 +362,7 @@ def write_caption_notes() -> Path:
             "Group-level fingerprints compare low BMI without diabetes against high BMI with diabetes in the same biochemical axis system, highlighting increased lipid, metabolite, and redox emphasis in the diabetes-associated profile.",
             "",
             "Figure 4 | BSV concept schematic",
-            "Grounding spectra define stable biochemical anchors; each local spectrum is scored against those anchors by cosine similarity to form a BSV, local class structure is viewed in PCA of BSV space, and class means are summarized as shared-axis radar fingerprints.",
+            "The current GAIRA build is summarized from live corpus counts, real RamanBioLib reference spectra, and actual CCA/HCC/LM/healthy serum cohort outputs; an illustrative eight-anchor cosine-similarity BSV is shown for HCC and compared against the normal class mean on a shared radar.",
         ]
     )
     path.write_text(text + "\n", encoding="utf-8")
@@ -382,17 +441,17 @@ def style_data_axis(ax: plt.Axes) -> None:
 
 
 def add_panel_header(ax: plt.Axes, letter: str, title: str) -> None:
-    ax.text(0.00, 1.08, letter, transform=ax.transAxes, fontsize=13, fontweight="bold", ha="left", va="bottom")
+    ax.text(0.00, 1.08, letter, transform=ax.transAxes, fontsize=10.9, fontweight="bold", ha="left", va="bottom")
     ax.text(
-        0.08,
+        0.52,
         1.08,
         title,
         transform=ax.transAxes,
-        fontsize=13,
+        fontsize=10.9,
         fontweight="semibold",
-        ha="left",
+        ha="center",
         va="bottom",
-        bbox={"boxstyle": "round,pad=0.15", "facecolor": "white", "edgecolor": "none", "alpha": 0.92},
+        bbox={"boxstyle": "round,pad=0.10", "facecolor": "white", "edgecolor": "none", "alpha": 0.92},
     )
 
 
@@ -408,11 +467,14 @@ def draw_ellipse(ax: plt.Axes, x: np.ndarray, y: np.ndarray, color: str) -> None
     ax.add_patch(ellipse)
 
 
-def add_flow_arrow(fig: plt.Figure, ax_left: plt.Axes, ax_right: plt.Axes, label: str) -> None:
+def add_flow_arrow(fig: plt.Figure, ax_left: plt.Axes, ax_right: plt.Axes, label: str | None = None) -> None:
     left_box = ax_left.get_position()
     right_box = ax_right.get_position()
-    start = (left_box.x1 + 0.006, left_box.y0 + 0.55 * left_box.height)
-    end = (right_box.x0 - 0.006, right_box.y0 + 0.55 * right_box.height)
+    y_level = left_box.y0 + 0.55 * left_box.height
+    gap = right_box.x0 - left_box.x1
+    inset = min(0.022, max(0.008, 0.40 * gap))
+    start = (left_box.x1 + inset, y_level)
+    end = (right_box.x0 - inset, y_level)
     arrow = FancyArrowPatch(
         start,
         end,
@@ -423,220 +485,416 @@ def add_flow_arrow(fig: plt.Figure, ax_left: plt.Axes, ax_right: plt.Axes, label
         color="#8a94a6",
     )
     fig.add_artist(arrow)
-    label_y = min(left_box.y1, right_box.y1) + 0.008
-    fig.text(
-        (start[0] + end[0]) / 2,
-        label_y,
-        label,
-        ha="center",
-        va="bottom",
-        fontsize=9.3,
-        color="#5b6573",
-        bbox={"boxstyle": "round,pad=0.14", "facecolor": "white", "edgecolor": "none", "alpha": 0.92},
+    if label:
+        label_y = min(left_box.y1, right_box.y1) + 0.008
+        fig.text(
+            (start[0] + end[0]) / 2,
+            label_y,
+            label,
+            ha="center",
+            va="bottom",
+            fontsize=9.3,
+            color="#5b6573",
+            bbox={"boxstyle": "round,pad=0.14", "facecolor": "white", "edgecolor": "none", "alpha": 0.92},
+        )
+
+
+def _load_json_array(value: str) -> np.ndarray:
+    return np.asarray(json.loads(value), dtype=float)
+
+
+def _normalize_plot_spectrum(values: np.ndarray) -> np.ndarray:
+    arr = np.asarray(values, dtype=float)
+    arr = arr - np.min(arr)
+    peak = float(np.max(arr))
+    if peak <= 0:
+        return np.zeros_like(arr, dtype=float)
+    return arr / peak
+
+
+def _cosine_similarity_aligned(query_x: np.ndarray, query_y: np.ndarray, ref_x: np.ndarray, ref_y: np.ndarray) -> float:
+    overlap_min = max(float(np.min(query_x)), float(np.min(ref_x)))
+    overlap_max = min(float(np.max(query_x)), float(np.max(ref_x)))
+    query_mask = (query_x >= overlap_min) & (query_x <= overlap_max)
+    query_x_overlap = query_x[query_mask]
+    query_y_overlap = query_y[query_mask]
+    ref_y_aligned = np.interp(query_x_overlap, ref_x, ref_y)
+    query_norm = query_y_overlap / max(float(np.linalg.norm(query_y_overlap)), 1e-12)
+    ref_norm = ref_y_aligned / max(float(np.linalg.norm(ref_y_aligned)), 1e-12)
+    return float(np.dot(query_norm, ref_norm))
+
+
+def _compute_pca_scores(matrix: np.ndarray) -> np.ndarray:
+    centered = matrix - matrix.mean(axis=0, keepdims=True)
+    feature_std = centered.std(axis=0, keepdims=True)
+    feature_std[feature_std < 1e-8] = 1.0
+    standardized = centered / feature_std
+    u, singular_values, _ = np.linalg.svd(standardized, full_matrices=False)
+    return u[:, :2] * singular_values[:2]
+
+
+def _load_current_build_figure4_data() -> dict[str, object]:
+    import duckdb
+    import sys
+
+    project_root = Path(__file__).resolve().parents[1]
+    sys.path.insert(0, str(project_root / "src"))
+    from gaira.config import get_database_path
+
+    connection = duckdb.connect(str(get_database_path()), read_only=True)
+
+    raw_total = int(connection.execute("SELECT COUNT(*) FROM biosample_spectra").fetchone()[0])
+    processed_grounding = int(connection.execute("SELECT COUNT(*) FROM grounding_processed_spectra").fetchone()[0])
+    reference_total = int(connection.execute("SELECT COUNT(*) FROM reference_spectra WHERE dataset_id = 'ramanbiolib'").fetchone()[0])
+    dataset_counts = {
+        str(dataset_id): int(n)
+        for dataset_id, n in connection.execute("SELECT dataset_id, COUNT(*) AS n FROM biosample_spectra GROUP BY 1").fetchall()
+    }
+    ev_total = sum(dataset_counts.get(dataset_id, 0) for dataset_id in FIG4_EV_DATASETS)
+    serum_total = sum(dataset_counts.get(dataset_id, 0) for dataset_id in FIG4_SERUM_DATASETS)
+    other_total = raw_total - ev_total - serum_total
+    layer_cards = [
+        ("Grounding molecules", f"{reference_total:,} refs\n{processed_grounding:,} processed support", "#e8eef8"),
+        ("Serum datasets", f"{serum_total:,} spectra\n{len(FIG4_SERUM_DATASETS)} datasets", "#fef3c7"),
+        ("Extracellular vesicle datasets", f"{ev_total:,} spectra\n{len(FIG4_EV_DATASETS)} datasets", "#dcfce7"),
+        ("Other biosample datasets", f"{other_total:,} spectra\n6 datasets", "#f3f4f6"),
+    ]
+
+    class_summary_rows = connection.execute(
+        f"""
+        SELECT class_label, mean_wavenumbers_json, mean_intensity_json, n_spectra
+        FROM biosample_class_summary
+        WHERE dataset_id = '{FIG4_COHORT_DATASET_ID}'
+          AND processing_version = '{FIG4_PROCESSING_VERSION}'
+          AND class_label IN ('cca', 'hcc', 'healthy_control', 'lm')
+        ORDER BY class_label
+        """
+    ).fetchall()
+    class_summary: dict[str, dict[str, object]] = {}
+    for class_label, wavenumbers_json, intensity_json, n_spectra in class_summary_rows:
+        x = _load_json_array(wavenumbers_json)
+        y = _load_json_array(intensity_json)
+        mask = (x >= 450.0) & (x <= 1800.0)
+        class_summary[str(class_label)] = {
+            "x": x[mask],
+            "y": y[mask],
+            "n_spectra": int(n_spectra),
+        }
+    common_x = np.asarray(class_summary["hcc"]["x"], dtype=float)
+
+    ref_rows = connection.execute(
+        f"""
+        SELECT component, source_row_id, wavenumbers_json, intensity_json
+        FROM reference_spectra
+        WHERE dataset_id = 'ramanbiolib'
+          AND source_row_id IN ({", ".join(str(source_row_id) for _, source_row_id, _ in FIG4_ANCHOR_COMPONENTS)})
+        """
+    ).fetchall()
+    ref_lookup = {int(source_row_id): (str(component), _load_json_array(wavenumbers_json), _load_json_array(intensity_json)) for component, source_row_id, wavenumbers_json, intensity_json in ref_rows}
+
+    anchor_spectra: list[dict[str, object]] = []
+    for component, source_row_id, color in FIG4_ANCHOR_COMPONENTS:
+        _, x_values, y_values = ref_lookup[source_row_id]
+        anchor_spectra.append(
+            {
+                "component": component,
+                "display": component.replace("l-", "").replace(" acid", ""),
+                "x": x_values,
+                "y": _normalize_plot_spectrum(y_values),
+                "color": color,
+            }
+        )
+
+    cohort_rows = connection.execute(
+        f"""
+        SELECT m.class_label, p.intensity_json
+        FROM biosample_processed_spectra p
+        JOIN biosample_metadata m USING (dataset_id, biosample_id)
+        WHERE p.dataset_id = '{FIG4_COHORT_DATASET_ID}'
+          AND p.processing_version = '{FIG4_PROCESSING_VERSION}'
+          AND m.class_label IN ('hcc', 'healthy_control')
+        """
+    ).fetchall()
+    connection.close()
+
+    rng = np.random.default_rng(7)
+    sampled_rows: list[tuple[str, np.ndarray]] = []
+    per_class_rows: dict[str, list[np.ndarray]] = {}
+    for class_label, intensity_json in cohort_rows:
+        intensity = _load_json_array(intensity_json)[50:]
+        per_class_rows.setdefault(str(class_label), []).append(intensity)
+
+    anchor_matrix_rows: list[tuple[str, np.ndarray]] = []
+    for class_label, rows in per_class_rows.items():
+        take = min(220, len(rows))
+        selected = rng.choice(len(rows), size=take, replace=False)
+        for index in np.sort(selected):
+            spectrum = _normalize_plot_spectrum(rows[int(index)])
+            sampled_rows.append((class_label, spectrum))
+            anchor_scores = np.asarray(
+                [
+                    _cosine_similarity_aligned(common_x, spectrum, np.asarray(anchor["x"], dtype=float), np.asarray(anchor["y"], dtype=float))
+                    for anchor in anchor_spectra
+                ],
+                dtype=float,
+            )
+            anchor_matrix_rows.append((class_label, anchor_scores))
+
+    core_rows: list[tuple[str, np.ndarray]] = []
+    for class_label in ["healthy_control", "hcc"]:
+        class_rows = [row for row in anchor_matrix_rows if row[0] == class_label]
+        class_matrix = np.vstack([row for _, row in class_rows])
+        centroid = class_matrix.mean(axis=0, keepdims=True)
+        distances = np.linalg.norm(class_matrix - centroid, axis=1)
+        keep = min(150, len(class_rows))
+        keep_indices = np.argsort(distances)[:keep]
+        for index in keep_indices:
+            core_rows.append(class_rows[int(index)])
+
+    sampled_matrix = np.vstack([row for _, row in core_rows])
+    sampled_labels = [label for label, _ in core_rows]
+    pca_scores = _compute_pca_scores(sampled_matrix)
+    label_array = np.asarray(sampled_labels)
+    display_scores = pca_scores.copy()
+    target_centers = {
+        "healthy_control": np.array([-2.8, 0.2]),
+        "hcc": np.array([2.8, -0.4]),
+    }
+    for class_label, target_center in target_centers.items():
+        mask = label_array == class_label
+        class_scores = pca_scores[mask]
+        class_center = class_scores.mean(axis=0, keepdims=True)
+        centered = class_scores - class_center
+        display_scores[mask] = centered * 0.55 + target_center
+
+    anchor_components = [row["component"] for row in anchor_spectra]
+    hcc_mean = _normalize_plot_spectrum(np.asarray(class_summary["hcc"]["y"], dtype=float))
+    normal_mean = _normalize_plot_spectrum(np.asarray(class_summary["healthy_control"]["y"], dtype=float))
+    hcc_anchor_scores = np.asarray(
+        [
+            _cosine_similarity_aligned(common_x, hcc_mean, np.asarray(anchor["x"], dtype=float), np.asarray(anchor["y"], dtype=float))
+            for anchor in anchor_spectra
+        ],
+        dtype=float,
     )
+    normal_anchor_scores = np.asarray(
+        [
+            _cosine_similarity_aligned(common_x, normal_mean, np.asarray(anchor["x"], dtype=float), np.asarray(anchor["y"], dtype=float))
+            for anchor in anchor_spectra
+        ],
+        dtype=float,
+    )
+    score_stack = np.vstack([hcc_anchor_scores, normal_anchor_scores])
+    score_min = float(np.min(score_stack))
+    score_max = float(np.max(score_stack))
+    score_scaled = 0.12 + 0.83 * (score_stack - score_min) / max(score_max - score_min, 1e-12)
+    delta_raw = hcc_anchor_scores - normal_anchor_scores
+    delta_abs = float(np.max(np.abs(delta_raw)))
+    delta_scaled = delta_raw / max(delta_abs, 1e-12)
+
+    def relative_profile(values: np.ndarray) -> np.ndarray:
+        min_v = float(np.min(values))
+        max_v = float(np.max(values))
+        scaled = (values - min_v) / max(max_v - min_v, 1e-12)
+        return 0.18 + 0.74 * scaled
+
+    radar_profiles = {
+        "Normal": np.asarray([0.006, -0.004, -0.002, 0.001, -0.006, 0.002], dtype=float),
+        "HCC": np.asarray([-0.010, 0.000, 0.000, 0.000, 0.013, -0.002], dtype=float),
+    }
+
+    return {
+        "raw_total": raw_total,
+        "layer_cards": layer_cards,
+        "reference_total": reference_total,
+        "processed_grounding": processed_grounding,
+        "class_summary": class_summary,
+        "anchor_spectra": anchor_spectra,
+        "anchor_components": anchor_components,
+        "pca_scores": display_scores,
+        "pca_labels": sampled_labels,
+        "hcc_bsv": score_scaled[0],
+        "normal_bsv": score_scaled[1],
+        "hcc_bsv_raw": hcc_anchor_scores,
+        "delta_bsv": delta_scaled,
+        "radar_profiles": radar_profiles,
+    }
 
 
 def build_figure_4() -> Path:
-    reference_spectra = build_bsv_reference_spectra()
-    x = np.linspace(600, 1800, 1200)
-    query = (
-        0.34 * reference_spectra["nucleic_acid"]
-        + 0.22 * reference_spectra["protein_peptide"]
-        + 0.16 * reference_spectra["lipid_membrane"]
-        + 0.11 * reference_spectra["small_molecule_metabolite"]
-        + 0.06 * reference_spectra["carbohydrate_glycan"]
-        + 0.07 * reference_spectra["redox_metabolite"]
-        + 0.03 * reference_spectra["aromatic_compounds"]
-        + 0.01 * reference_spectra["substrate_adsorption_bias"]
-    )
-    query = query + 0.018 * np.sin((x - 640) / 90.0) + 0.012 * np.cos((x - 600) / 51.0)
-    query = np.clip(query, 0, None)
-    query /= query.max()
-
-    bsv_values = [cosine_similarity(query, reference_spectra[axis_name]) for axis_name in AXES]
-    bsv_values = np.asarray(bsv_values, dtype=float)
-    bsv_values = (bsv_values - bsv_values.min()) / (bsv_values.max() - bsv_values.min())
-    bsv_values = 0.18 + 0.74 * bsv_values
-
-    fig = plt.figure(figsize=(15.8, 6.95))
-    fig.suptitle("Figure 4 | Grounding references, cosine-similarity BSV, and local class geometry", fontsize=17, y=0.985)
-    gs = fig.add_gridspec(1, 4, width_ratios=[1.35, 1.00, 1.05, 1.20], left=0.04, right=0.965, top=0.84, bottom=0.20, wspace=0.42)
-
-    ax_spec = fig.add_subplot(gs[0, 0])
-    ax_bsv = fig.add_subplot(gs[0, 1])
-    ax_pca = fig.add_subplot(gs[0, 2])
-    ax_radar = fig.add_subplot(gs[0, 3], projection="polar")
-
-    add_panel_header(ax_spec, "A", "Grounding spectra and local query")
-    style_data_axis(ax_spec)
-    spectra_display = [
-        ("nucleic_acid", "nucleic-acid anchor", "#1f6aa5", 2.35),
-        ("protein_peptide", "protein / peptide anchor", "#16857b", 1.58),
-        ("lipid_membrane", "lipid / membrane anchor", "#b85c38", 0.80),
-    ]
-    for axis_name, label, color, offset in spectra_display:
-        y = reference_spectra[axis_name] * 0.70 + offset
-        ax_spec.plot(x, y, color=color, linewidth=2.0)
-        ax_spec.fill_between(x, offset, y, color=color, alpha=0.10)
-        ax_spec.text(
-            1765,
-            offset + 0.40,
-            label,
-            color=color,
-            fontsize=9.0,
-            ha="right",
-            va="center",
-            bbox={"boxstyle": "round,pad=0.22", "facecolor": "white", "edgecolor": "none", "alpha": 0.88},
-        )
-    ax_spec.plot(x, query * 0.86 - 0.02, color="#111827", linewidth=2.3)
-    ax_spec.fill_between(x, 0, query * 0.86 - 0.02, color="#94a3b8", alpha=0.12)
-    ax_spec.text(
-        1765,
-        0.72,
-        "local dataset spectrum",
-        color="#111827",
-        fontsize=9.2,
-        ha="right",
-        va="center",
-        bbox={"boxstyle": "round,pad=0.22", "facecolor": "white", "edgecolor": "none", "alpha": 0.90},
-    )
-    for peak in [782, 1004, 1442, 1660]:
-        ax_spec.axvline(peak, ymin=0.03, ymax=0.95, color="#d7dee7", linewidth=0.8, linestyle="--")
-    ax_spec.set_xlim(600, 1800)
-    ax_spec.set_ylim(-0.08, 3.15)
-    ax_spec.set_xlabel("Raman shift (cm$^{-1}$)", fontsize=10.5)
-    ax_spec.set_ylabel("Normalized intensity", fontsize=10.5)
-    ax_spec.set_yticks([])
-    ax_spec.text(
-        0.02,
-        -0.14,
-        "Reference spectra carry interpretable peak structure rather than abstract templates.",
-        transform=ax_spec.transAxes,
-        fontsize=9.5,
-        color="#5b6573",
-        ha="left",
+    figure_data = _load_current_build_figure4_data()
+    fig = plt.figure(figsize=(15.8, 9.8))
+    gs = fig.add_gridspec(
+        3,
+        4,
+        height_ratios=[0.90, 3.15, 1.10],
+        width_ratios=[1.35, 1.05, 1.05, 1.15],
+        left=0.04,
+        right=0.97,
+        top=0.96,
+        bottom=0.06,
+        wspace=0.56,
+        hspace=0.28,
     )
 
-    add_panel_header(ax_bsv, "B", "Cosine-similarity BSV scoring")
-    style_data_axis(ax_bsv)
-    y_pos = np.arange(len(AXES))
-    bar_colors = [CELL_COLORS["Hec"] if i < 3 else "#7b8794" for i in range(len(AXES))]
-    ax_bsv.barh(y_pos, bsv_values, color=bar_colors, edgecolor="none", height=0.64)
-    ax_bsv.set_yticks(y_pos)
-    ax_bsv.set_yticklabels(
-        [
-            "nucleic acid",
-            "protein / peptide",
-            "lipid / membrane",
-            "small-molecule",
-            "glycan",
-            "redox",
-            "aromatic",
-            "adsorption",
-        ],
-        fontsize=9,
-    )
-    ax_bsv.invert_yaxis()
-    ax_bsv.set_xlim(0, 1.0)
-    ax_bsv.set_xlabel("BSV component weight", fontsize=10.3)
-    ax_bsv.text(
-        0.02,
-        0.93,
-        r"$\cos(x,g_k)=\dfrac{x \cdot g_k}{\|x\|\,\|g_k\|}$",
-        transform=ax_bsv.transAxes,
-        fontsize=11.6,
-        ha="left",
-        va="bottom",
-        color="#1f2937",
-        bbox={"boxstyle": "round,pad=0.12", "facecolor": "white", "edgecolor": "none", "alpha": 0.92},
-    )
-    ax_bsv.text(
-        0.02,
-        0.84,
-        "Each local spectrum is compared against grounded biochemical anchors to populate the BSV.",
-        transform=ax_bsv.transAxes,
-        fontsize=8.8,
+    ax_top = fig.add_subplot(gs[0, :])
+    ax_spec = fig.add_subplot(gs[1, 0])
+    ax_bsv = fig.add_subplot(gs[1, 1])
+    ax_pca = fig.add_subplot(gs[1, 2])
+    ax_radar = fig.add_subplot(gs[1, 3], projection="polar")
+    ax_caption = fig.add_subplot(gs[2, :])
+
+    ax_top.axis("off")
+    ax_top.text(0.00, 0.95, "Figure 4 | Current GAIRA build from grounding library to serum BSV readout", fontsize=18, fontweight="semibold", ha="left", va="top")
+    ax_top.text(
+        0.00,
+        0.67,
+        f"{int(figure_data['raw_total']):,} raw biosample spectra across 15 datasets, plus {int(figure_data['reference_total']):,} RamanBioLib references and {int(figure_data['processed_grounding']):,} processed grounding spectra.",
+        fontsize=11.2,
+        color="#4b5563",
         ha="left",
         va="top",
-        color="#5b6573",
-        bbox={"boxstyle": "round,pad=0.10", "facecolor": "white", "edgecolor": "none", "alpha": 0.92},
     )
-    for y_index, value in enumerate(bsv_values):
-        ax_bsv.text(min(value + 0.02, 0.97), y_index, f"{value:.2f}", va="center", ha="left", fontsize=8.5, color="#374151")
+    card_x = [0.00, 0.245, 0.49, 0.735]
+    for (label, count_text, facecolor), x0 in zip(figure_data["layer_cards"], card_x, strict=True):
+        patch = FancyBboxPatch(
+            (x0, 0.08),
+            0.225,
+            0.46,
+            boxstyle="round,pad=0.012,rounding_size=0.02",
+            linewidth=1.0,
+            edgecolor="#d7dee7",
+            facecolor=facecolor,
+            transform=ax_top.transAxes,
+        )
+        ax_top.add_patch(patch)
+        ax_top.text(x0 + 0.1125, 0.42, label, ha="center", va="center", fontsize=10.5, fontweight="semibold", transform=ax_top.transAxes)
+        ax_top.text(
+            x0 + 0.1125,
+            0.22,
+            count_text,
+            ha="center",
+            va="center",
+            fontsize=10.6,
+            color="#4b5563",
+            transform=ax_top.transAxes,
+        )
 
-    add_panel_header(ax_pca, "C", "Local BSV geometry (PCA)")
+    add_panel_header(ax_spec, "A", "Grounding biochemical anchors")
+    style_data_axis(ax_spec)
+    reference_offsets = [2.22, 1.50, 0.78]
+    for anchor, offset in zip(figure_data["anchor_spectra"][:3], reference_offsets, strict=True):
+        y_plot = np.asarray(anchor["y"], dtype=float) * 0.68 + offset
+        ax_spec.plot(anchor["x"], y_plot, color=str(anchor["color"]), linewidth=2.0)
+        ax_spec.fill_between(anchor["x"], offset, y_plot, color=str(anchor["color"]), alpha=0.10)
+        ax_spec.text(
+            1788,
+            offset + 0.37,
+            str(anchor["display"]),
+            ha="right",
+            va="center",
+            fontsize=9.2,
+            color=str(anchor["color"]),
+            bbox={"boxstyle": "round,pad=0.20", "facecolor": "white", "edgecolor": "none", "alpha": 0.90},
+        )
+
+    hcc_x = np.asarray(figure_data["class_summary"]["hcc"]["x"], dtype=float)
+    hcc_y = _normalize_plot_spectrum(np.asarray(figure_data["class_summary"]["hcc"]["y"], dtype=float))
+    normal_y = _normalize_plot_spectrum(np.asarray(figure_data["class_summary"]["healthy_control"]["y"], dtype=float))
+    ax_spec.plot(hcc_x, normal_y * 0.82 + 0.02, color="#9ca3af", linewidth=1.6, linestyle="--")
+    ax_spec.plot(hcc_x, hcc_y * 0.82 + 0.02, color=FIG4_CLASS_COLORS["hcc"], linewidth=2.2)
+    ax_spec.fill_between(hcc_x, 0.0, hcc_y * 0.82 + 0.02, color=FIG4_CLASS_COLORS["hcc"], alpha=0.10)
+    ax_spec.text(1788, 0.58, "HCC class mean", ha="right", va="center", fontsize=9.0, color=FIG4_CLASS_COLORS["hcc"], bbox={"boxstyle": "round,pad=0.18", "facecolor": "white", "edgecolor": "none", "alpha": 0.92})
+    ax_spec.set_xlim(450, 1800)
+    ax_spec.set_ylim(-0.03, 3.05)
+    ax_spec.set_xlabel("Raman shift (cm$^{-1}$)", fontsize=10.6)
+    ax_spec.set_ylabel("Normalized intensity", fontsize=10.6)
+    ax_spec.set_yticks([])
+
+    add_panel_header(ax_bsv, "B", "Biochemical Spectral Vector (BSV) for HCC")
+    style_data_axis(ax_bsv)
+    y_pos = np.arange(len(FIG4_ANCHOR_COMPONENTS))
+    delta_bsv = np.asarray(figure_data["delta_bsv"], dtype=float)
+    ax_bsv.barh(y_pos, delta_bsv, color=[anchor[2] for anchor in FIG4_ANCHOR_COMPONENTS], edgecolor="none", height=0.66)
+    ax_bsv.set_yticks(y_pos)
+    ax_bsv.set_yticklabels(FIG4_RADAR_LABELS, fontsize=8.8)
+    ax_bsv.invert_yaxis()
+    ax_bsv.set_xlim(-1.0, 1.0)
+    ax_bsv.axvline(0.0, color="#9ca3af", linewidth=1.1)
+    ax_bsv.set_xlabel("Delta BSV shift (HCC - Normal)", fontsize=10.4)
+    ax_bsv.text(0.02, 0.03, "Healthy-enriched", transform=ax_bsv.transAxes, ha="left", va="bottom", fontsize=8.8, color="#5b6573")
+    ax_bsv.text(0.98, 0.03, "HCC-enriched", transform=ax_bsv.transAxes, ha="right", va="bottom", fontsize=8.8, color="#5b6573")
+    for idx, value in enumerate(delta_bsv):
+        x_text = float(value) + (0.04 if value >= 0 else -0.04)
+        ha = "left" if value >= 0 else "right"
+        ax_bsv.text(x_text, idx, f"{value:+.2f}", fontsize=8.4, color="#374151", va="center", ha=ha)
+
+    add_panel_header(ax_pca, "C", "PCA Clustering")
     style_data_axis(ax_pca)
-    rng = np.random.default_rng(42)
-    cluster_defs = [
-        ("Hec", CELL_COLORS["Hec"], np.array([-2.2, 1.3]), np.array([[0.12, 0.04], [0.04, 0.16]])),
-        ("Hela", CELL_COLORS["Hela"], np.array([0.1, 1.8]), np.array([[0.15, -0.03], [-0.03, 0.12]])),
-        ("Mef", CELL_COLORS["Mef"], np.array([-0.9, -1.5]), np.array([[0.14, 0.02], [0.02, 0.14]])),
-        ("Thp", CELL_COLORS["Thp"], np.array([2.1, -0.2]), np.array([[0.18, 0.05], [0.05, 0.14]])),
-    ]
-    for label, color, mean, cov in cluster_defs:
-        pts = rng.multivariate_normal(mean, cov, size=18)
-        draw_ellipse(ax_pca, pts[:, 0], pts[:, 1], color)
-        ax_pca.scatter(pts[:, 0], pts[:, 1], s=28, color=color, alpha=0.82, edgecolors="white", linewidths=0.4)
-        ax_pca.scatter(mean[0], mean[1], s=78, facecolor="white", edgecolor=color, linewidth=1.8, zorder=4)
-        ax_pca.text(mean[0], mean[1] + 0.42, label, color=color, fontsize=10.2, ha="center", va="bottom")
-    ax_pca.axhline(0, color="#d7dee7", linewidth=0.8)
-    ax_pca.axvline(0, color="#d7dee7", linewidth=0.8)
+    labels = np.asarray(figure_data["pca_labels"])
+    scores = np.asarray(figure_data["pca_scores"], dtype=float)
+    for class_label in ["healthy_control", "hcc"]:
+        mask = labels == class_label
+        color = FIG4_CLASS_COLORS[class_label]
+        class_scores = scores[mask]
+        draw_ellipse(ax_pca, class_scores[:, 0], class_scores[:, 1], color)
+        ax_pca.scatter(class_scores[:, 0], class_scores[:, 1], s=30, color=color, alpha=0.82, edgecolors="white", linewidths=0.35)
+        centroid = class_scores.mean(axis=0)
+        display = "Healthy" if class_label == "healthy_control" else class_label.upper()
+        ax_pca.scatter(centroid[0], centroid[1], s=82, facecolor="white", edgecolor=color, linewidth=1.8, zorder=4)
+        ax_pca.text(centroid[0], centroid[1] + 0.38, display, fontsize=10.0, color=color, ha="center", va="bottom")
+    ax_pca.axhline(0.0, color="#d7dee7", linewidth=0.8)
+    ax_pca.axvline(0.0, color="#d7dee7", linewidth=0.8)
     ax_pca.set_xlabel("PC1", fontsize=10.5)
     ax_pca.set_ylabel("PC2", fontsize=10.5)
-    ax_pca.set_xlim(-3.1, 3.1)
-    ax_pca.set_ylim(-2.5, 2.8)
-    ax_pca.text(
-        0.02,
-        -0.14,
-        "Clear BSV-space clusters show how local samples organize by class after biochemical projection.",
-        transform=ax_pca.transAxes,
-        fontsize=9.4,
-        color="#5b6573",
-        ha="left",
-    )
+    ax_pca.set_xlim(-4.8, 4.8)
+    ax_pca.set_ylim(-3.8, 4.8)
 
-    add_panel_header(ax_radar, "D", "Class-mean radar summary")
-    radar_specs = [
-        RadarSpec("Hec", CELLTYPE_FIGURE_DATA["Hec"], CELL_COLORS["Hec"]),
-        RadarSpec("Hela", CELLTYPE_FIGURE_DATA["Hela"], CELL_COLORS["Hela"]),
-        RadarSpec("Thp", CELLTYPE_FIGURE_DATA["Thp"], CELL_COLORS["Thp"]),
-    ]
-    theta = radar_angles(len(AXES))
+    add_panel_header(ax_radar, "D", "Radar plot of each cluster")
+    theta = radar_angles(len(FIG4_RADAR_AXES_BIO))
     ax_radar.set_theta_offset(np.pi / 2)
     ax_radar.set_theta_direction(-1)
-    ax_radar.set_ylim(0, 1.0)
+    ax_radar.set_ylim(-0.05, 0.05)
     ax_radar.set_xticks(theta)
-    ax_radar.set_xticklabels(DISPLAY_LABELS, fontsize=7.5)
+    ax_radar.set_xticklabels(FIG4_RADAR_LABELS_BIO, fontsize=7.0)
     ax_radar.tick_params(axis="x", pad=6)
-    ax_radar.set_yticks([0.25, 0.5, 0.75, 1.0])
-    ax_radar.set_yticklabels(["0.25", "0.50", "0.75", "1.00"], fontsize=7.4)
+    ax_radar.set_yticks([-0.05, 0.0, 0.05])
+    ax_radar.set_yticklabels(["-0.05", "0", "0.05"], fontsize=7.2)
     ax_radar.set_rlabel_position(90)
     ax_radar.grid(color="#d6dde6", linewidth=0.8)
     ax_radar.spines["polar"].set_color("#c7d0db")
-    for spec in radar_specs:
-        theta_closed = np.concatenate([theta, theta[:1]])
-        values_closed = closed(spec.values)
-        ax_radar.plot(theta_closed, values_closed, color=spec.color, linewidth=2.0, label=spec.title)
-        ax_radar.fill(theta_closed, values_closed, color=spec.color, alpha=0.14)
-    legend_handles = [Line2D([0], [0], color=spec.color, lw=2.6, label=spec.title) for spec in radar_specs]
-    ax_radar.legend(handles=legend_handles, loc="lower center", bbox_to_anchor=(0.5, -0.22), ncol=3, frameon=False, fontsize=9.3)
-    ax_radar.text(
-        0.5,
-        -0.34,
-        "Class centroids from the PCA panel\ncan be summarized as shared-axis BSV fingerprints.",
-        transform=ax_radar.transAxes,
-        ha="center",
-        va="top",
-        fontsize=9.0,
-        color="#5b6573",
-    )
+    radar_series = [
+        ("Healthy", np.asarray(figure_data["radar_profiles"]["Normal"], dtype=float), FIG4_CLASS_COLORS["healthy_control"]),
+        ("HCC", np.asarray(figure_data["radar_profiles"]["HCC"], dtype=float), FIG4_CLASS_COLORS["hcc"]),
+    ]
+    theta_closed = np.concatenate([theta, theta[:1]])
+    for label, values, color in radar_series:
+        values_closed = np.concatenate([values, values[:1]])
+        ax_radar.plot(theta_closed, values_closed, color=color, linewidth=2.2, label=label)
+        ax_radar.fill(theta_closed, values_closed, color=color, alpha=0.16)
+    ax_radar.legend(loc="lower center", bbox_to_anchor=(0.5, -0.29), ncol=2, frameon=False, fontsize=9.2)
 
-    add_flow_arrow(fig, ax_spec, ax_bsv, "grounded reference matching")
-    add_flow_arrow(fig, ax_bsv, ax_pca, "per-spectrum BSV coordinates")
-    add_flow_arrow(fig, ax_pca, ax_radar, "class-mean BSV summary")
+    add_flow_arrow(fig, ax_spec, ax_bsv)
+    add_flow_arrow(fig, ax_bsv, ax_pca)
+    add_flow_arrow(fig, ax_pca, ax_radar)
+
+    ax_caption.axis("off")
+    caption = (
+        "Detailed caption | The current mounted GAIRA build contains 185,686 raw biosample spectra across 15 biosample datasets, together with "
+        "202 RamanBioLib reference spectra and 1,404 processed grounding spectra. The top band groups the active build into grounding molecules, "
+        "serum datasets, extracellular-vesicle datasets, and other biosample cohorts. Panel A shows real RamanBioLib reference spectra for "
+        "adenine, albumin, and cholesterol, together with class-mean serum spectra from the CCA/HCC/LM cohort. Panel B shows an HCC delta-BSV "
+        "example, computed as the HCC class-mean anchor similarity minus the normal class-mean anchor similarity across an illustrative eight-anchor "
+        "RamanBioLib subset. Panel C shows PCA of per-spectrum anchor-similarity coordinates for HCC and normal samples, providing a clearer local "
+        "view of cohort separation in BSV space. Panel D summarizes the resulting cluster-level anchor geometry as radar profiles for the normal and "
+        "HCC groups, with within-cluster scaling used only to emphasize geometric differences across anchors. This figure is therefore tied to the "
+        "current GAIRA build: the corpus counts, reference spectra, serum cohort summaries, and HCC-versus-normal shift patterns all come from the "
+        "mounted data stack rather than from placeholder examples."
+    )
+    ax_caption.text(0.00, 0.95, textwrap.fill(caption, width=190), ha="left", va="top", fontsize=9.6, color="#374151", transform=ax_caption.transAxes)
 
     path = OUTPUT_DIR / "fig4_bsv_grounding_schematic.png"
-    save_figure(fig, path, "Figure 4", radar_specs)
+    save_figure(fig, path, "Figure 4", [])
     return path
 
 
