@@ -6,7 +6,8 @@
 data/
 GAIRA_DATA/
 Volumes/
-
+# macOS junk
+.DS_Store
 ############################################
 # 🐍 PYTHON
 ############################################
@@ -15,6 +16,7 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+*.pyc
 
 ############################################
 # 🧪 VIRTUAL ENVIRONMENTS
@@ -115,6 +117,15 @@ data/logs/
 .claude_cache/
 .claude_logs/
 mcp_logs/
+
+############################################
+# 🔑 SECRETS / CREDENTIALS
+############################################
+.zshrc
+.env
+.env.*
+*.secrets
+credentials/
 
 ############################################
 # 🧪 EXPERIMENTAL OUTPUTS
