@@ -1,0 +1,34 @@
+component_name,contributing_motif_or_theme,source_type,inclusion_weight,rationale
+membrane_lipid,lipid,family,1.0,Core lipid/membrane evidence family
+membrane_lipid,cholesterol,subfamily,1.0,Membrane sterol component
+membrane_lipid,phosphatidylcholine,subfamily,1.0,Major membrane phospholipid
+membrane_lipid,phosphatidylserine,subfamily,1.0,Membrane phospholipid
+membrane_lipid,sphingomyelin,subfamily,1.0,Sphingolipid membrane component
+protein_backbone,collagen,subfamily,1.0,Structural protein
+protein_backbone,proline,subfamily,1.0,Collagen/protein amino acid
+protein_backbone,glycine,subfamily,1.0,Collagen amino acid
+protein_backbone,protein,theme,1.0,Broad protein theme
+protein_backbone,peptide,theme,1.0,Peptide backbone
+aromatic_amino_acid,tryptophan,subfamily,1.0,Aromatic amino acid — key SERS marker
+aromatic_amino_acid,phenylalanine,subfamily,1.0,Ring breathing at 1005 cm-1
+aromatic_amino_acid,tyrosine,subfamily,1.0,Phenol ring vibrations
+aromatic_amino_acid,histidine,subfamily,1.0,Imidazole ring
+purine_nucleotide,adenine,subfamily,1.0,Purine nucleobase
+purine_nucleotide,guanine,subfamily,1.0,Purine nucleobase
+purine_nucleotide,amp_(nucleotide),subfamily,1.0,Adenosine monophosphate
+purine_nucleotide,nucleic acid,theme,1.0,Broad nucleic acid theme
+pyrimidine_nucleotide,cytosine,subfamily,1.0,Pyrimidine nucleobase
+pyrimidine_nucleotide,thymine,subfamily,1.0,Pyrimidine nucleobase
+pyrimidine_nucleotide,uracil,subfamily,1.0,RNA pyrimidine
+glycan_carbohydrate,glucose,subfamily,1.0,Monosaccharide
+glycan_carbohydrate,galactose,subfamily,1.0,Monosaccharide
+glycan_carbohydrate,mannose,subfamily,1.0,Monosaccharide
+glycan_carbohydrate,glycogen,subfamily,1.0,Polysaccharide
+glycan_carbohydrate,carbohydrate,theme,1.0,Broad carbohydrate theme
+redox_metabolite,glutathione,subfamily,1.0,Thiol antioxidant
+redox_metabolite,ergothioneine,subfamily,1.0,Histidine-derived antioxidant
+redox_metabolite,uric_acid,subfamily,1.0,Purine metabolite / antioxidant
+redox_metabolite,carotenoid,subfamily,1.0,Lipid-soluble pigment antioxidant
+redox_metabolite,dopamine,subfamily,1.0,Catecholamine neurotransmitter
+nucleic_acid_backbone,phosphodiester,functional_group,0.5,DNA/RNA backbone chemistry
+nucleic_acid_backbone,phosphate,functional_group,0.5,Phosphate backbone
