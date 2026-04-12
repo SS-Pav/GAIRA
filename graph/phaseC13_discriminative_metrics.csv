@@ -1,0 +1,7 @@
+metric,formula,applies_to,description
+enrichment_ratio,(query_direct + 1) / (comparator_direct + 1),themes,Smoothed ratio of query vs comparator direct evidence
+contrast_score,support_in_query - support_in_comparator,themes,Raw difference in weighted support scores
+enriched_boost,final_score * 1.3,themes where enrichment_ratio >= 2.0,Boost enriched themes in final ranking
+depleted_penalty,final_score * 0.5,themes where enrichment_ratio <= 0.5,Downweight depleted themes
+motif_enrichment,query_members > 2x comparator_members,motifs,Motif is enriched when query has 2x+ more members
+motif_comparator,comparator_members > 2x query_members,motifs,Motif is comparator-associated

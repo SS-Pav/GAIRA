@@ -1,0 +1,6 @@
+rule_name,applies_to,effect,description
+broad_theme_penalty,biochemical_theme,specificity * 0.4,"Themes in {protein, lipid, nucleic acid, carbohydrate, amino acid, membrane} are ubiquitous and penalized"
+generic_hub_downweight,vibrational_mode / functional_group,final_score * 0.5,"Nodes in {stretch, stretching, vibration, breathing, deformation, ring} are structurally generic"
+source_diversity_cap,all_themes,min(sources * 1.0 - 10.0),Source diversity bonus capped at 10 to prevent single-prolific-source bias
+specificity_floor,final_score,max(specificity - 0.1),Specificity floor of 0.1 prevents zero-specificity themes from scoring zero
+geometric_blend,final_score,sqrt(support * specificity),Geometric mean ensures both support AND specificity needed for high rank

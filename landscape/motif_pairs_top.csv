@@ -1,0 +1,51 @@
+motif_1,motif_2,co_occurrence,jaccard,sources_1,sources_2
+phenylalanine,tyrosine,31,0.633,40,40
+phenylalanine,tryptophan,27,0.6,40,32
+tyrosine,tryptophan,26,0.565,40,32
+protein,lipid,31,0.477,52,44
+protein,phenylalanine,28,0.438,52,40
+phenylalanine,collagen,18,0.429,40,20
+protein,amide I,23,0.411,52,27
+tryptophan,proline,15,0.405,32,20
+lipid,phenylalanine,24,0.4,44,40
+phenylalanine,amide I,19,0.396,40,27
+phenylalanine,proline,17,0.395,40,20
+tyrosine,proline,17,0.395,40,20
+lipid,amide I,20,0.392,44,27
+protein,tyrosine,25,0.373,52,40
+tryptophan,amide I,16,0.372,32,27
+tryptophan,collagen,14,0.368,32,20
+lipid,tryptophan,20,0.357,44,32
+proline,guanine,10,0.357,20,18
+protein,tryptophan,22,0.355,52,32
+phenylalanine,adenine,19,0.345,40,34
+tyrosine,adenine,19,0.345,40,34
+lipid,tyrosine,21,0.333,44,40
+ring,C-N,8,0.333,23,9
+proline,carbohydrate,9,0.333,20,16
+carbohydrate,methylene,7,0.333,16,12
+C-C,C-N,5,0.333,11,9
+arginine,mannose,5,0.333,10,10
+adenine,tryptophan,16,0.32,34,32
+guanine,cytosine,7,0.318,18,11
+adenine,collagen,13,0.317,34,20
+tyrosine,amide I,16,0.314,40,27
+guanine,carbohydrate,8,0.308,18,16
+amide I,proline,11,0.306,27,20
+lipid,carbohydrate,14,0.304,44,16
+lipid,adenine,18,0.3,44,34
+adenine,guanine,12,0.3,34,18
+protein,proline,16,0.286,52,20
+arginine,glutathione,4,0.286,10,8
+mannose,glutathione,4,0.286,10,8
+protein,adenine,19,0.284,52,34
+tryptophan,guanine,11,0.282,32,18
+C-H,C-N,5,0.278,14,9
+tyrosine,collagen,13,0.277,40,20
+ring,C-H,8,0.276,23,14
+tryptophan,cytosine,9,0.265,32,11
+tryptophan,carbohydrate,10,0.263,32,16
+ring,C-C,7,0.259,23,11
+amide I,methylene,8,0.258,27,12
+amide I,amino acid,8,0.258,27,12
+adenine,proline,11,0.256,34,20

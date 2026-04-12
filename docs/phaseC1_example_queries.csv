@@ -1,0 +1,11 @@
+query,expected_type,expected_entity,description
+What does GAIRA know about HCC?,condition,HCC,Core liver cancer query — should return protein/lipid/nucleic acid themes with multi-source support
+Show motifs linked to NAFLD,condition,NAFLD_NASH,Non-alcoholic fatty liver — developing module
+What about bacterial identification?,condition,bacterial_identification,Pathogen detection — largest module in graph
+What does peak 1005 mean?,peak,1005,Phenylalanine ring breathing — one of the most consistent Raman peaks
+What does peak 1650 suggest?,peak,1650,Amide I / C=C region — protein/lipid overlap
+What supports lipid signal?,theme,lipid,Lipid biochemical theme — high-degree hub connecting multiple conditions
+What supports nucleic acid?,theme,nucleic acid,Nucleic acid theme — DNA/RNA evidence
+What functional groups link to protein?,chemistry,protein,Not a chemistry keyword — will route as theme
+What links amide I to biology?,chemistry,amide I,Amide I functional group — strong protein inference
+Tell me about cholangiocarcinoma,condition,cholangiocarcinoma,Bile duct cancer — liver cancer subtype

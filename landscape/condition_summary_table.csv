@@ -1,0 +1,60 @@
+condition,aliases,evidence_count,source_count,motif_count,peak_count,sample_types,domains
+liver_cancer_unspecified,,95,10,30,75,plasma; serum,liver
+reference_method,,83,9,31,65,EV; plasma; reference_compound; serum,reference
+hepatitis,,70,2,21,35,serum,liver
+cancer_stem_cell,,67,1,27,60,EV,cancer
+HCC,,42,3,23,41,serum; urine,liver
+environmental_toxicology,,35,1,12,33,cell_line,other
+NAFLD_NASH,,24,2,15,24,serum,liver
+review_or_method,,17,1,11,17,serum,reference
+albumin_detection,,15,1,7,15,reference_compound,liver
+covid19,,13,1,10,13,plasma,infectious
+DILI_hepatotoxicity,,9,1,6,7,serum,liver
+breast_cancer,,8,1,7,8,serum,cancer
+bilirubin_detection,,7,2,5,7,reference_compound,liver
+leukemia,,7,1,6,7,serum,cancer
+serotonin,,5,1,4,3,other,metabolic
+oral_cancer,,4,2,4,4,plasma; saliva,cancer
+bacterial_infection,,3,2,3,3,other,infectious
+cholangiocarcinoma,,3,1,13,3,serum,liver
+creatinine_detection,,3,1,2,3,reference_compound,liver
+fibrosis,,2,2,2,2,serum,liver
+glucose_monitoring,,2,1,1,2,other,metabolic
+miRNA_biomarker,,2,1,2,2,serum,liver
+lung_cancer,,1,1,7,1,serum,cancer
+DILI; hepatotoxicity,,0,0,0,0,,
+T2D,,0,0,0,0,,
+T2D; obesity,,0,0,0,0,,
+acetaminophen_induced_hepatotoxicity,,0,0,5,0,,
+acute_MI,,0,0,0,0,,
+bacterial_identification,,0,0,35,0,,
+cancer_EV,,0,0,0,0,,
+cancer_exosome_diagnosis_context,,0,0,1,0,,
+cholangiocarcinoma; HCC,,0,0,0,0,,
+chronic_kidney_disease,,0,0,0,0,,
+crohns_disease,,0,0,0,0,,
+depression,,0,0,1,0,,
+depression; MCI,,0,0,0,0,,
+diabetic_nephropathy,,0,0,11,0,,
+drug_monitoring,,0,0,0,0,,
+endometrial_cancer,,0,0,0,0,,
+fecal_analysis,,0,0,0,0,,
+glycan_analysis,,0,0,0,0,,
+healthy_control,,0,0,34,0,,
+hepatic_ischemia,,0,0,0,0,,
+lung_tumor,,0,0,3,0,,
+metabolite_profiling,,0,0,0,0,,
+multicancer,,0,0,0,0,,
+multicancer_exosome_diagnosis,,0,0,1,0,,
+multiclass_ev_ml_cancer_context,,0,0,3,0,,
+ovarian_cancer,,0,0,24,0,,
+pathogen_detection,,0,0,0,0,,
+pleural_effusion_malignant,,0,0,0,0,,
+primary_sjogrens_syndrome,,0,0,11,0,,
+prostate_cancer,,0,0,9,0,,
+reference_biomolecule,,0,0,0,0,,
+reference_handbook,,0,0,0,0,,
+renal_cell_carcinoma,,0,0,0,0,,
+sjogrens_syndrome; diabetic_nephropathy,,0,0,0,0,,
+type_2_diabetes_subtype_context,,0,0,1,0,,
+untreated_control,,0,0,5,0,,

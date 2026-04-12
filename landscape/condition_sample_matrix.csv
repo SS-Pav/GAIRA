@@ -1,0 +1,60 @@
+condition,EV,cell_line,other,plasma,reference_compound,saliva,serum,urine
+liver_cancer_unspecified,0,0,0,1,0,0,1,0
+reference_method,1,0,0,1,1,0,1,0
+hepatitis,0,0,0,0,0,0,1,0
+cancer_stem_cell,1,0,0,0,0,0,0,0
+HCC,0,0,0,0,0,0,1,1
+environmental_toxicology,0,1,0,0,0,0,0,0
+NAFLD_NASH,0,0,0,0,0,0,1,0
+review_or_method,0,0,0,0,0,0,1,0
+albumin_detection,0,0,0,0,1,0,0,0
+covid19,0,0,0,1,0,0,0,0
+DILI_hepatotoxicity,0,0,0,0,0,0,1,0
+breast_cancer,0,0,0,0,0,0,1,0
+bilirubin_detection,0,0,0,0,1,0,0,0
+leukemia,0,0,0,0,0,0,1,0
+serotonin,0,0,1,0,0,0,0,0
+oral_cancer,0,0,0,1,0,1,0,0
+bacterial_infection,0,0,1,0,0,0,0,0
+cholangiocarcinoma,0,0,0,0,0,0,1,0
+creatinine_detection,0,0,0,0,1,0,0,0
+fibrosis,0,0,0,0,0,0,1,0
+glucose_monitoring,0,0,1,0,0,0,0,0
+miRNA_biomarker,0,0,0,0,0,0,1,0
+lung_cancer,0,0,0,0,0,0,1,0
+DILI; hepatotoxicity,0,0,0,0,0,0,0,0
+T2D,0,0,0,0,0,0,0,0
+T2D; obesity,0,0,0,0,0,0,0,0
+acetaminophen_induced_hepatotoxicity,0,0,0,0,0,0,0,0
+acute_MI,0,0,0,0,0,0,0,0
+bacterial_identification,0,0,0,0,0,0,0,0
+cancer_EV,0,0,0,0,0,0,0,0
+cancer_exosome_diagnosis_context,0,0,0,0,0,0,0,0
+cholangiocarcinoma; HCC,0,0,0,0,0,0,0,0
+chronic_kidney_disease,0,0,0,0,0,0,0,0
+crohns_disease,0,0,0,0,0,0,0,0
+depression,0,0,0,0,0,0,0,0
+depression; MCI,0,0,0,0,0,0,0,0
+diabetic_nephropathy,0,0,0,0,0,0,0,0
+drug_monitoring,0,0,0,0,0,0,0,0
+endometrial_cancer,0,0,0,0,0,0,0,0
+fecal_analysis,0,0,0,0,0,0,0,0
+glycan_analysis,0,0,0,0,0,0,0,0
+healthy_control,0,0,0,0,0,0,0,0
+hepatic_ischemia,0,0,0,0,0,0,0,0
+lung_tumor,0,0,0,0,0,0,0,0
+metabolite_profiling,0,0,0,0,0,0,0,0
+multicancer,0,0,0,0,0,0,0,0
+multicancer_exosome_diagnosis,0,0,0,0,0,0,0,0
+multiclass_ev_ml_cancer_context,0,0,0,0,0,0,0,0
+ovarian_cancer,0,0,0,0,0,0,0,0
+pathogen_detection,0,0,0,0,0,0,0,0
+pleural_effusion_malignant,0,0,0,0,0,0,0,0
+primary_sjogrens_syndrome,0,0,0,0,0,0,0,0
+prostate_cancer,0,0,0,0,0,0,0,0
+reference_biomolecule,0,0,0,0,0,0,0,0
+reference_handbook,0,0,0,0,0,0,0,0
+renal_cell_carcinoma,0,0,0,0,0,0,0,0
+sjogrens_syndrome; diabetic_nephropathy,0,0,0,0,0,0,0,0
+type_2_diabetes_subtype_context,0,0,0,0,0,0,0,0
+untreated_control,0,0,0,0,0,0,0,0

@@ -1,0 +1,60 @@
+condition,evidence_count,source_count,single_source_flag,dominant_sample_type,mapped_bsv_fraction,nonzero_bsv_components,ontology_class,support_tier,trust_label,caution_note
+DILI; hepatotoxicity,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+DILI_hepatotoxicity,9,1,yes,serum,0.474,0,biological_condition,weak,weak,single-source
+HCC,42,3,no,serum,0.474,8,biological_condition,strong,strong,
+NAFLD_NASH,24,2,no,serum,0.474,4,biological_condition,moderate,moderate,
+T2D,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+T2D; obesity,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+acetaminophen_induced_hepatotoxicity,0,0,no,,0.474,4,unknown_or_misc,absent,absent,
+acute_MI,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+albumin_detection,15,1,yes,reference_compound,0.474,2,context_or_task,weak,weak,single-source
+bacterial_identification,0,0,no,,0.474,7,biological_condition,absent,absent,
+bacterial_infection,3,2,no,other,0.474,1,biological_condition,weak,weak,
+bilirubin_detection,7,2,no,reference_compound,0.474,2,context_or_task,weak,weak,
+breast_cancer,8,1,yes,serum,0.474,3,biological_condition,weak,weak,single-source
+cancer_EV,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+cancer_exosome_diagnosis_context,0,0,no,,0.474,1,context_or_task,absent,absent,
+cancer_stem_cell,67,1,yes,EV,0.474,6,biological_condition,weak,weak,single-source
+cholangiocarcinoma,3,1,yes,serum,0.474,5,biological_condition,weak,weak,single-source
+cholangiocarcinoma; HCC,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+chronic_kidney_disease,0,0,no,,0.0,0,biological_condition,absent,absent,
+covid19,13,1,yes,plasma,0.474,4,biological_condition,weak,weak,single-source
+creatinine_detection,3,1,yes,reference_compound,0.474,0,context_or_task,weak,weak,single-source
+crohns_disease,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+depression,0,0,no,,0.474,1,biological_condition,absent,absent,
+depression; MCI,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+diabetic_nephropathy,0,0,no,,0.474,7,biological_condition,absent,absent,
+drug_monitoring,0,0,no,,0.0,0,context_or_task,absent,absent,
+endometrial_cancer,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+environmental_toxicology,35,1,yes,cell_line,0.474,0,context_or_task,weak,weak,single-source
+fecal_analysis,0,0,no,,0.0,0,context_or_task,absent,absent,
+fibrosis,2,2,no,serum,0.474,2,biological_condition,insufficient,insufficient,
+glucose_monitoring,2,1,yes,other,0.474,0,context_or_task,insufficient,insufficient,single-source
+glycan_analysis,0,0,no,,0.0,0,context_or_task,absent,absent,
+healthy_control,0,0,no,,0.474,7,healthy_or_control,absent,absent,
+hepatic_ischemia,0,0,no,,0.0,0,biological_condition,absent,absent,
+hepatitis,70,2,no,serum,0.474,7,biological_condition,moderate,moderate,
+leukemia,7,1,yes,serum,0.474,5,biological_condition,weak,weak,single-source
+liver_cancer_unspecified,95,10,no,plasma,0.474,6,biological_condition,strong,strong,
+lung_cancer,1,1,yes,serum,0.474,3,biological_condition,insufficient,insufficient,single-source
+lung_tumor,0,0,no,,0.474,2,biological_condition,absent,absent,
+metabolite_profiling,0,0,no,,0.0,0,context_or_task,absent,absent,
+miRNA_biomarker,2,1,yes,serum,0.474,1,context_or_task,insufficient,insufficient,single-source
+multicancer,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+multicancer_exosome_diagnosis,0,0,no,,0.474,1,context_or_task,absent,absent,
+multiclass_ev_ml_cancer_context,0,0,no,,0.474,2,context_or_task,absent,absent,
+oral_cancer,4,2,no,plasma,0.474,3,biological_condition,weak,weak,
+ovarian_cancer,0,0,no,,0.474,6,biological_condition,absent,absent,
+pathogen_detection,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+pleural_effusion_malignant,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+primary_sjogrens_syndrome,0,0,no,,0.474,7,biological_condition,absent,absent,
+prostate_cancer,0,0,no,,0.474,4,biological_condition,absent,absent,
+reference_biomolecule,0,0,no,,0.0,0,method_or_review,absent,absent,
+reference_handbook,0,0,no,,0.0,0,method_or_review,absent,absent,
+reference_method,83,9,no,EV,0.474,7,method_or_review,moderate,low,
+renal_cell_carcinoma,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+review_or_method,17,1,yes,serum,0.474,6,method_or_review,weak,weak,single-source
+serotonin,5,1,yes,other,0.474,1,context_or_task,weak,weak,single-source
+sjogrens_syndrome; diabetic_nephropathy,0,0,no,,0.0,0,unknown_or_misc,absent,absent,
+type_2_diabetes_subtype_context,0,0,no,,0.474,0,context_or_task,absent,absent,
+untreated_control,0,0,no,,0.474,4,healthy_or_control,absent,absent,
