@@ -1,0 +1,168 @@
+# Specific condition labels recovered from condition_A patterns and dataset hints.
+#
+# The mapper applies the rules in order and returns the FIRST match. Rules
+# are case-insensitive and match anywhere inside condition_A unless `regex` is
+# given (full-regex applied with re.search).
+#
+# Each rule may also restrict by `dataset_substr` (any-of match against the
+# dataset name) so identical raw labels in different pilots route to
+# disambiguated specific conditions (e.g. P1_HCC vs P2_HCC).
+
+specific_conditions:
+  # ─── Diabetes EV ─────────────────────────────────────────────────────
+  - label: "OWD"
+    contains: ["OWD", "Impact"]
+    sample_type: "EV"
+    condition_family: "diabetes_metabolic"
+
+  - label: "NWD"
+    contains: ["NWD", "Strong-D", "StrongD"]
+    sample_type: "EV"
+    condition_family: "diabetes_metabolic"
+
+  # ─── SHINE EV hepatotoxicity ────────────────────────────────────────
+  - label: "hepatotoxicity_D2_C40_vs_C0"
+    contains: ["Set9_D2", "Set10_D2"]
+    dataset_substr: ["shine_ev", "shine_regression"]
+    comparison_type_in: ["binary_effect", "endpoint_delta", "dose_response"]
+    sample_type: "EV"
+    condition_family: "toxicity_drug_response"
+
+  - label: "hepatotoxicity_D1"
+    contains: ["Set9_D1", "Set10_D1"]
+    dataset_substr: ["shine_ev"]
+    sample_type: "EV"
+    condition_family: "toxicity_drug_response"
+
+  - label: "hepatotoxicity_D0"
+    contains: ["Set9_D0", "Set10_D0"]
+    dataset_substr: ["shine_ev"]
+    sample_type: "EV"
+    condition_family: "toxicity_drug_response"
+
+  # SHINE classifier-importance / generic comparison fallback
+  - label: "hepatotoxicity_classifier"
+    contains: ["pilot=Set9", "pilot=Set10"]
+    dataset_substr: ["shine_ev"]
+    sample_type: "EV"
+    condition_family: "toxicity_drug_response"
+
+  # ─── Small EV (HT-1080 vs THP-1 mixtures) ───────────────────────────
+  - label: "smallEV_Probe1"
+    contains: ["Probe1"]
+    sample_type: "EV"
+    condition_family: "dual_probe_invariance"
+
+  - label: "smallEV_Probe2"
+    contains: ["Probe2"]
+    sample_type: "EV"
+    condition_family: "dual_probe_invariance"
+
+  # ─── Liver-cancer serum (P1 + P2) ───────────────────────────────────
+  - label: "P1_HCC_vs_CTR"
+    regex: "(?i)P1[_ ]?HCC[_ ]?vs[_ ]?CTR"
+    sample_type: "serum"
+    condition_family: "liver_cancer"
+
+  - label: "P2_HCC_vs_NC"
+    regex: "(?i)P2[_ ]?HCC[_ ]?vs[_ ]?NC"
+    sample_type: "serum"
+    condition_family: "liver_cancer"
+
+  - label: "P2_CCA_vs_NC"
+    regex: "(?i)P2[_ ]?CCA[_ ]?vs[_ ]?NC"
+    sample_type: "serum"
+    condition_family: "liver_cancer"
+
+  - label: "P2_LM_vs_NC"
+    regex: "(?i)P2[_ ]?LM[_ ]?vs[_ ]?NC"
+    sample_type: "serum"
+    condition_family: "liver_cancer"
+
+  - label: "P2_CCA_vs_HCC"
+    regex: "(?i)P2[_ ]?CCA[_ ]?vs[_ ]?HCC"
+    sample_type: "serum"
+    condition_family: "liver_cancer"
+
+  - label: "P2_LM_vs_HCC"
+    regex: "(?i)P2[_ ]?LM[_ ]?vs[_ ]?HCC"
+    sample_type: "serum"
+    condition_family: "liver_cancer"
+
+  - label: "P2_CCA_vs_LM"
+    regex: "(?i)P2[_ ]?CCA[_ ]?vs[_ ]?LM"
+    sample_type: "serum"
+    condition_family: "liver_cancer"
+
+  # Generic HCC / CCA / LM (when not caught by P1/P2 pattern above)
+  - label: "HCC"
+    contains: ["HCC"]
+    sample_type: "serum"
+    condition_family: "liver_cancer"
+  - label: "CCA"
+    contains: ["CCA"]
+    sample_type: "serum"
+    condition_family: "liver_cancer"
+  - label: "LM"
+    contains: ["LM_vs", "_LM"]
+    sample_type: "serum"
+    condition_family: "liver_cancer"
+
+  # ─── COVID serum ────────────────────────────────────────────────────
+  - label: "COVID_vs_Healthy"
+    regex: "(?i)COVID[_ ]?vs[_ ]?Healthy"
+    sample_type: "serum"
+    condition_family: "infection_covid"
+  - label: "Suspected_vs_Healthy"
+    regex: "(?i)Suspected[_ ]?vs[_ ]?Healthy"
+    sample_type: "serum"
+    condition_family: "infection_covid"
+  - label: "COVID_vs_Suspected"
+    regex: "(?i)COVID[_ ]?vs[_ ]?Suspected"
+    sample_type: "serum"
+    condition_family: "infection_covid"
+  - label: "Tube_QC_caution"
+    regex: "(?i)Tube[_ ]?vs"
+    sample_type: "serum"
+    condition_family: "infection_covid"
+  - label: "COVID"
+    contains: ["COVID"]
+    sample_type: "serum"
+    condition_family: "infection_covid"
+
+  # ─── Cross-pilot synthesis (mixed) ──────────────────────────────────
+  - label: "cross_pilot_consensus"
+    dataset_substr: ["cross_pilot_synthesis"]
+    condition_family: "cross_pilot"
+
+  # ─── Cross-disease classifier ──────────────────────────────────────
+  - label: "cross_disease_serum"
+    dataset_substr: ["pilot3c", "cross_disease"]
+    condition_family: "cross_disease"
+
+  # ─── Calibration ────────────────────────────────────────────────────
+  - label: "calibration_self"
+    contains: ["calibration_self", "calibration"]
+    condition_family: "calibration_suite"
+
+  # ─── Diabetes classifier (catch logreg/svm rows from diabetes pilots)
+  - label: "diabetes_classifier"
+    contains: ["logreg", "linSVM"]
+    dataset_substr: ["diabetes_ev"]
+    sample_type: "EV"
+    condition_family: "diabetes_metabolic"
+
+  # ─── Fallbacks (no condition_A token; route by dataset + comparison) ──
+
+  # SHINE MSS top-hit rows have NaN condition_A → mark as MSS layer
+  - label: "hepatotoxicity_mss_layer"
+    dataset_substr: ["shine_ev"]
+    comparison_type_in: ["mss_topK_frequency"]
+    sample_type: "EV"
+    condition_family: "toxicity_drug_response"
+
+  # HCC holdout pilots have generic "comparison" condition_A
+  - label: "P1_HCC_holdout"
+    dataset_substr: ["passive_target_pilot_1"]
+    sample_type: "serum"
+    condition_family: "liver_cancer"

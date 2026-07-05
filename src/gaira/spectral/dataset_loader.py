@@ -1,5 +1,20 @@
 """
 Spectral dataset loader — loads spectra and cohort labels from NPZ or CSV.
+
+Axes-phase loaders (HCC holdout, Pilot 2b/3 DuckDB rows, NPZ-ingested
+pools) are grandfathered on their current ``numpy.interp`` path: changing
+them would break byte-for-byte reproducibility of the frozen
+``gaira_build_axes_v1`` outputs, which the project policy forbids.
+
+**Forward-looking rule (M3+):** new motif-layer code paths must use the
+canonical helpers exposed by :mod:`gaira.spectral.crop_and_interp`:
+
+    from gaira.spectral import crop_before_interpolate, crop_and_interp_batch
+
+These enforce crop-first, deterministic, no-extrapolation behaviour and
+surface partial-coverage explicitly. See
+``canonical_signal_support_rule_v1`` doc for the rule and
+``pipeline_fix_crop_before_interp_v1`` report for the migration plan.
 """
 from __future__ import annotations
 
@@ -30,7 +45,14 @@ class SpectralDataset:
 
 
 def _load_hcc_holdout(master_x: np.ndarray) -> SpectralDataset:
-    """Load HCC holdout (Vornoli 2020) from raw CSV, interpolated to master axis."""
+    """Load HCC holdout (Vornoli 2020) from raw CSV, interpolated to master axis.
+
+    GRANDFATHERED axes-phase loader. The np.interp clamp-at-boundaries
+    behaviour here is preserved byte-for-byte so that
+    ``gaira_build_axes_v1`` (Pilot 1) remains reproducible. M3+ motif-
+    layer code must not depend on this loader's output; use
+    :func:`gaira.spectral.crop_before_interpolate` instead.
+    """
     import pandas as pd
 
     df = pd.read_csv(HCC_HOLDOUT_CSV)

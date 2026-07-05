@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="962.761172pt" height="455.371125pt" viewBox="0 0 962.761172 455.371125" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-01T14:23:24.765866</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 455.371125 
+L 962.761172 455.371125 
+L 962.761172 0 
+L 0 0 
+L 0 455.371125 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 230.264609 393.364312 
+L 670.667109 393.364312 
+L 670.667109 61.51725 
+L 230.264609 61.51725 
+L 230.264609 393.364312 
+z
+" style="fill: none"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 383.738208 393.364312 
+L 517.193511 393.364312 
+L 517.193511 61.51725 
+L 383.738208 61.51725 
+z
+" clip-path="url(#p301e21993e)" style="fill: #e2e8f0; opacity: 0.28; stroke: #e2e8f0; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m856be1f21f" d="M 0 0 
+L 0 3 
+" style="stroke: #94a3b8; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m856be1f21f" x="250.282905" y="393.364312" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #111827" x="250.282905" y="407.755094" transform="rotate(-0 250.282905 407.755094)">−3</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m856be1f21f" x="317.010556" y="393.364312" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #111827" x="317.010556" y="407.755094" transform="rotate(-0 317.010556 407.755094)">−2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m856be1f21f" x="383.738208" y="393.364312" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #111827" x="383.738208" y="407.755094" transform="rotate(-0 383.738208 407.755094)">−1</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m856be1f21f" x="450.465859" y="393.364312" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #111827" x="450.465859" y="407.755094" transform="rotate(-0 450.465859 407.755094)">0</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m856be1f21f" x="517.193511" y="393.364312" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #111827" x="517.193511" y="407.755094" transform="rotate(-0 517.193511 407.755094)">1</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m856be1f21f" x="583.921162" y="393.364312" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #111827" x="583.921162" y="407.755094" transform="rotate(-0 583.921162 407.755094)">2</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m856be1f21f" x="650.648814" y="393.364312" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #111827" x="650.648814" y="407.755094" transform="rotate(-0 650.648814 407.755094)">3</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font-weight: 700; font-size: 12px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #111827" x="450.465859" y="422.837906" transform="rotate(-0 450.465859 422.837906)">Standardized effect size (Cohen's d), OWD − NWD</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_8">
+      <defs>
+       <path id="m25eba7741e" d="M 0 0 
+L -3 0 
+" style="stroke: #94a3b8; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m25eba7741e" x="230.264609" y="378.280355" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(175.316953 377.083519)">Lactate  **</text>
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(10.8 388.556738)">Higher in NWD  ·  Small-molecule metabolism</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m25eba7741e" x="230.264609" y="348.11244" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(177.67125 346.974667)">Tyrosine  </text>
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(105.900469 358.293667)">Higher in NWD  ·  Protein</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m25eba7741e" x="230.264609" y="317.944526" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(177.090469 316.837924)">Uric acid  </text>
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(82.562578 328.09458)">Higher in NWD  ·  Nucleic acid</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m25eba7741e" x="230.264609" y="287.776611" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(171.830625 286.579775)">Oleic acid  </text>
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(66.806016 298.052994)">Higher in OWD  ·  Membrane lipid</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m25eba7741e" x="230.264609" y="257.608696" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(175.312031 256.41186)">Adenine  *</text>
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(81.978516 267.885079)">Higher in OWD  ·  Nucleic acid</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m25eba7741e" x="230.264609" y="227.440781" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(149.048906 226.188984)">Ergothioneine  *</text>
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(108.233437 237.796734)">Higher in OWD  ·  Redox</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m25eba7741e" x="230.264609" y="197.272866" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(149.637891 196.057163)">Hypoxanthine  *</text>
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(81.978516 207.592726)">Higher in OWD  ·  Nucleic acid</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m25eba7741e" x="230.264609" y="167.104952" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(156.649922 165.908116)">Cholesterol  **</text>
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(48.708281 177.381335)">Higher in OWD  ·  Sterol / neutral lipid</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m25eba7741e" x="230.264609" y="136.937037" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(143.792344 135.721334)">Phenylalanine  **</text>
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(105.316406 147.256896)">Higher in OWD  ·  Protein</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m25eba7741e" x="230.264609" y="106.769122" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(156.056016 105.572286)">Glutathione  **</text>
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(108.233437 117.045505)">Higher in OWD  ·  Redox</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m25eba7741e" x="230.264609" y="76.601207" style="fill: #94a3b8; stroke: #94a3b8; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(171.24 75.404371)">Glucose  **</text>
+      <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; fill: #111827" transform="translate(105.905391 86.87759)">Higher in OWD  ·  Glycan</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_19">
+    <path d="M 281.824752 378.280355 
+L 376.730202 378.280355 
+" clip-path="url(#p301e21993e)" style="fill: none; stroke: #059669; stroke-opacity: 0.9; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 378.855202 348.11244 
+L 453.438039 348.11244 
+" clip-path="url(#p301e21993e)" style="fill: none; stroke: #f59e0b; stroke-opacity: 0.9; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_21">
+    <path d="M 390.641391 317.944526 
+L 467.665107 317.944526 
+" clip-path="url(#p301e21993e)" style="fill: none; stroke: #94a3b8; stroke-opacity: 0.9; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_22">
+    <path d="M 431.278468 287.776611 
+L 497.507749 287.776611 
+" clip-path="url(#p301e21993e)" style="fill: none; stroke: #94a3b8; stroke-opacity: 0.9; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_23">
+    <path d="M 454.964093 257.608696 
+L 506.939621 257.608696 
+" clip-path="url(#p301e21993e)" style="fill: none; stroke: #94a3b8; stroke-opacity: 0.9; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_24">
+    <path d="M 468.125292 227.440781 
+L 542.838165 227.440781 
+" clip-path="url(#p301e21993e)" style="fill: none; stroke: #f59e0b; stroke-opacity: 0.9; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_25">
+    <path d="M 483.654995 197.272866 
+L 551.616586 197.272866 
+" clip-path="url(#p301e21993e)" style="fill: none; stroke: #94a3b8; stroke-opacity: 0.9; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_26">
+    <path d="M 491.820289 167.104952 
+L 567.941986 167.104952 
+" clip-path="url(#p301e21993e)" style="fill: none; stroke: #059669; stroke-opacity: 0.9; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_27">
+    <path d="M 514.056211 136.937037 
+L 595.477655 136.937037 
+" clip-path="url(#p301e21993e)" style="fill: none; stroke: #f59e0b; stroke-opacity: 0.9; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_28">
+    <path d="M 530.208841 106.769122 
+L 631.592024 106.769122 
+" clip-path="url(#p301e21993e)" style="fill: none; stroke: #059669; stroke-opacity: 0.9; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_29">
+    <path d="M 553.197085 76.601207 
+L 667.16166 76.601207 
+" clip-path="url(#p301e21993e)" style="fill: none; stroke: #059669; stroke-opacity: 0.9; stroke-width: 2.4; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_30">
+    <path d="M 450.465859 393.364312 
+L 450.465859 61.51725 
+" clip-path="url(#p301e21993e)" style="fill: none; stroke: #374151; stroke-opacity: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 230.264609 393.364312 
+L 230.264609 61.51725 
+" style="fill: none; stroke: #94a3b8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 230.264609 393.364312 
+L 670.667109 393.364312 
+" style="fill: none; stroke: #94a3b8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m5a912dddc5" d="M 0 4.873397 
+C 1.29244 4.873397 2.532119 4.359905 3.446012 3.446012 
+C 4.359905 2.532119 4.873397 1.29244 4.873397 0 
+C 4.873397 -1.29244 4.359905 -2.532119 3.446012 -3.446012 
+C 2.532119 -4.359905 1.29244 -4.873397 0 -4.873397 
+C -1.29244 -4.873397 -2.532119 -4.359905 -3.446012 -3.446012 
+C -4.359905 -2.532119 -4.873397 -1.29244 -4.873397 0 
+C -4.873397 1.29244 -4.359905 2.532119 -3.446012 3.446012 
+C -2.532119 4.359905 -1.29244 4.873397 0 4.873397 
+z
+" style="stroke: #ffffff"/>
+    </defs>
+    <g clip-path="url(#p301e21993e)">
+     <use xlink:href="#m5a912dddc5" x="336.732252" y="378.280355" style="fill: #059669; stroke: #ffffff"/>
+    </g>
+   </g>
+   <g id="PathCollection_2">
+    <defs>
+     <path id="m6e622357e9" d="M 0 4.873397 
+C 1.29244 4.873397 2.532119 4.359905 3.446012 3.446012 
+C 4.359905 2.532119 4.873397 1.29244 4.873397 0 
+C 4.873397 -1.29244 4.359905 -2.532119 3.446012 -3.446012 
+C 2.532119 -4.359905 1.29244 -4.873397 0 -4.873397 
+C -1.29244 -4.873397 -2.532119 -4.359905 -3.446012 -3.446012 
+C -4.359905 -2.532119 -4.873397 -1.29244 -4.873397 0 
+C -4.873397 1.29244 -4.359905 2.532119 -3.446012 3.446012 
+C -2.532119 4.359905 -1.29244 4.873397 0 4.873397 
+z
+" style="stroke: #ffffff"/>
+    </defs>
+    <g clip-path="url(#p301e21993e)">
+     <use xlink:href="#m6e622357e9" x="418.952579" y="348.11244" style="fill: #f59e0b; stroke: #ffffff"/>
+    </g>
+   </g>
+   <g id="PathCollection_3">
+    <defs>
+     <path id="md9340a16b7" d="M 0 4.873397 
+C 1.29244 4.873397 2.532119 4.359905 3.446012 3.446012 
+C 4.359905 2.532119 4.873397 1.29244 4.873397 0 
+C 4.873397 -1.29244 4.359905 -2.532119 3.446012 -3.446012 
+C 2.532119 -4.359905 1.29244 -4.873397 0 -4.873397 
+C -1.29244 -4.873397 -2.532119 -4.359905 -3.446012 -3.446012 
+C -4.359905 -2.532119 -4.873397 -1.29244 -4.873397 0 
+C -4.873397 1.29244 -4.359905 2.532119 -3.446012 3.446012 
+C -2.532119 4.359905 -1.29244 4.873397 0 4.873397 
+z
+" style="stroke: #ffffff"/>
+    </defs>
+    <g clip-path="url(#p301e21993e)">
+     <use xlink:href="#md9340a16b7" x="432.982614" y="317.944526" style="fill: #94a3b8; stroke: #ffffff"/>
+    </g>
+   </g>
+   <g id="PathCollection_4">
+    <g clip-path="url(#p301e21993e)">
+     <use xlink:href="#md9340a16b7" x="462.214584" y="287.776611" style="fill: #94a3b8; stroke: #ffffff"/>
+    </g>
+   </g>
+   <g id="PathCollection_5">
+    <g clip-path="url(#p301e21993e)">
+     <use xlink:href="#md9340a16b7" x="482.786161" y="257.608696" style="fill: #94a3b8; stroke: #ffffff"/>
+    </g>
+   </g>
+   <g id="PathCollection_6">
+    <g clip-path="url(#p301e21993e)">
+     <use xlink:href="#m6e622357e9" x="498.437839" y="227.440781" style="fill: #f59e0b; stroke: #ffffff"/>
+    </g>
+   </g>
+   <g id="PathCollection_7">
+    <g clip-path="url(#p301e21993e)">
+     <use xlink:href="#md9340a16b7" x="514.686008" y="197.272866" style="fill: #94a3b8; stroke: #ffffff"/>
+    </g>
+   </g>
+   <g id="PathCollection_8">
+    <g clip-path="url(#p301e21993e)">
+     <use xlink:href="#m5a912dddc5" x="525.46852" y="167.104952" style="fill: #059669; stroke: #ffffff"/>
+    </g>
+   </g>
+   <g id="PathCollection_9">
+    <g clip-path="url(#p301e21993e)">
+     <use xlink:href="#m6e622357e9" x="549.461896" y="136.937037" style="fill: #f59e0b; stroke: #ffffff"/>
+    </g>
+   </g>
+   <g id="PathCollection_10">
+    <g clip-path="url(#p301e21993e)">
+     <use xlink:href="#m5a912dddc5" x="568.157148" y="106.769122" style="fill: #059669; stroke: #ffffff"/>
+    </g>
+   </g>
+   <g id="PathCollection_11">
+    <g clip-path="url(#p301e21993e)">
+     <use xlink:href="#m5a912dddc5" x="597.895806" y="76.601207" style="fill: #059669; stroke: #ffffff"/>
+    </g>
+   </g>
+   <g id="legend_1">
+    <g id="text_20">
+     <text style="font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="564.773438" y="339.250719" transform="rotate(-0 564.773438 339.250719)">Evidence confidence</text>
+    </g>
+    <g id="line2d_31">
+     <defs>
+      <path id="m37b84203c6" d="M 0 5 
+C 1.326016 5 2.597899 4.473168 3.535534 3.535534 
+C 4.473168 2.597899 5 1.326016 5 0 
+C 5 -1.326016 4.473168 -2.597899 3.535534 -3.535534 
+C 2.597899 -4.473168 1.326016 -5 0 -5 
+C -1.326016 -5 -2.597899 -4.473168 -3.535534 -3.535534 
+C -4.473168 -2.597899 -5 -1.326016 -5 0 
+C -5 1.326016 -4.473168 2.597899 -3.535534 3.535534 
+C -2.597899 4.473168 -1.326016 5 0 5 
+z
+" style="stroke: #059669"/>
+     </defs>
+     <g>
+      <use xlink:href="#m37b84203c6" x="591.438242" y="350.136188" style="fill: #059669; stroke: #059669"/>
+     </g>
+    </g>
+    <g id="text_21">
+     <text style="font-size: 10px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="609.438242" y="353.636188" transform="rotate(-0 609.438242 353.636188)">High</text>
+    </g>
+    <g id="line2d_32">
+     <defs>
+      <path id="m646a67b623" d="M 0 5 
+C 1.326016 5 2.597899 4.473168 3.535534 3.535534 
+C 4.473168 2.597899 5 1.326016 5 0 
+C 5 -1.326016 4.473168 -2.597899 3.535534 -3.535534 
+C 2.597899 -4.473168 1.326016 -5 0 -5 
+C -1.326016 -5 -2.597899 -4.473168 -3.535534 -3.535534 
+C -4.473168 -2.597899 -5 -1.326016 -5 0 
+C -5 1.326016 -4.473168 2.597899 -3.535534 3.535534 
+C -2.597899 4.473168 -1.326016 5 0 5 
+z
+" style="stroke: #f59e0b"/>
+     </defs>
+     <g>
+      <use xlink:href="#m646a67b623" x="591.438242" y="364.522125" style="fill: #f59e0b; stroke: #f59e0b"/>
+     </g>
+    </g>
+    <g id="text_22">
+     <text style="font-size: 10px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="609.438242" y="368.022125" transform="rotate(-0 609.438242 368.022125)">Medium</text>
+    </g>
+    <g id="line2d_33">
+     <defs>
+      <path id="m9a9d931a0b" d="M 0 5 
+C 1.326016 5 2.597899 4.473168 3.535534 3.535534 
+C 4.473168 2.597899 5 1.326016 5 0 
+C 5 -1.326016 4.473168 -2.597899 3.535534 -3.535534 
+C 2.597899 -4.473168 1.326016 -5 0 -5 
+C -1.326016 -5 -2.597899 -4.473168 -3.535534 -3.535534 
+C -4.473168 -2.597899 -5 -1.326016 -5 0 
+C -5 1.326016 -4.473168 2.597899 -3.535534 3.535534 
+C -2.597899 4.473168 -1.326016 5 0 5 
+z
+" style="stroke: #94a3b8"/>
+     </defs>
+     <g>
+      <use xlink:href="#m9a9d931a0b" x="591.438242" y="378.779938" style="fill: #94a3b8; stroke: #94a3b8"/>
+     </g>
+    </g>
+    <g id="text_23">
+     <text style="font-size: 10px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="609.438242" y="382.279938" transform="rotate(-0 609.438242 382.279938)">Low</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_24">
+   <text style="font-weight: 700; font-size: 13.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0f172a" x="12.227109" y="20.62125" transform="rotate(-0 12.227109 20.62125)">Figure 3  ·  Differential grounded analyte evidence between obesity-associated and non-obesity-associated diabetes</text>
+  </g>
+  <g id="text_25">
+   <text style="font-style: italic; font-size: 10.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #334155" x="12.227109" y="36.24525" transform="rotate(-0 12.227109 36.24525)">Analytes ranked by the standardized difference of the grounded evidence score, with 95% bootstrap CIs.</text>
+  </g>
+  <g id="text_26">
+   <text style="font-style: italic; font-size: 9.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #475569" x="12.227109" y="442.46925" transform="rotate(-0 12.227109 442.46925)">Effect direction: 'Higher in OWD' = elevated grounded evidence score in the obesity-associated cohort; 'Higher in NWD' = elevated in the non-obesity-associated cohort. Analytes are latent themes; interpretation is class-level.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p301e21993e">
+   <rect x="230.264609" y="61.51725" width="440.4025" height="331.847062"/>
+  </clipPath>
+ </defs>
+</svg>

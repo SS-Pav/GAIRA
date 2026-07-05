@@ -1,0 +1,52 @@
+app:
+  title: "GAIRA Context Graph Explorer"
+  subtitle: "Recurring biochemical structure across heterogeneous Raman/SERS pilots"
+  version: "v1"
+  layout: "wide"
+
+paths:
+  context_root: "/Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_context_graph_discovery_v1"
+  tables_dir: "tables"
+  figures_dir: "figures"
+  reports_dir: "reports"
+
+# Stable BSV family colours (matched to the v2 explorer)
+bsv_family_colors:
+  G01: "#79c0ff"
+  G02: "#a5d6ff"
+  G03: "#56d4dd"
+  G04: "#bc8cff"
+  G05: "#ffa657"
+  G06: "#7ee787"
+  G07: "#d2a8ff"
+  G08: "#ffdf5d"
+  G09: "#f0883e"
+  G10: "#ff7b72"
+  G11: "#85e89d"
+
+bsv_family_names:
+  G01: "purine_nucleotide"
+  G02: "purine_metabolite"
+  G03: "pyrimidine_nucleotide"
+  G04: "nucleic_acid_phosphate"
+  G05: "glycan_carbohydrate"
+  G06: "protein_peptide_backbone"
+  G07: "aromatic_residue"
+  G08: "lipid_acyl_membrane"
+  G09: "sterol_neutral_lipid"
+  G10: "sulfur_thiol_redox"
+  G11: "metabolic_small_molecule"
+
+sample_type_colors:
+  EV: "#79c0ff"
+  serum: "#bc8cff"
+  mixed: "#aab7b8"
+  pure_Raman: "#7ee787"
+  SERS: "#56d4dd"
+  unknown: "#6e7681"
+
+direction_colors:
+  up: "#ff7b72"
+  down: "#79c0ff"
+  stable: "#aab7b8"
+  ambiguous: "#6e7681"

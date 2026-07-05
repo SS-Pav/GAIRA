@@ -20,10 +20,14 @@ HCC_HOLDOUT_CSV = Path("/Volumes/SSD_Rad/GAIRA_DATA/raw/hcc_serum/data.csv")
 TARGET_DATASETS = [
     {
         "id": "hcc_holdout_vornoli2020",
-        "display": "HCC Holdout — Serum SERS (Vornoli 2020, Au)",
+        "display": "HCC Holdout — Serum SERS (Gurian et al. 2020, Ag plasmonic paper)",
         "source": "csv",
         "family": "serum_liver_hepatobiliary",
-        "note": "72 HCC + 72 healthy. Gold nanoparticle substrate.",
+        "note": (
+            "72 HCC + 72 healthy controls; Bonifacio group, Trieste. "
+            "Substrate: silver plasmonic-paper SERS (per parser provenance). "
+            "Dataset ID is retained for backward compatibility."
+        ),
     },
     {
         "id": "cca_hcc_lm_serum_sers",

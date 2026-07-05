@@ -1,0 +1,3442 @@
+generated: '2026-04-26T17:49:05'
+build_root: /Volumes/SSD_Rad/GAIRA_BUILD
+summary:
+  phases_total: 22
+  phases_present: 22
+  phases_missing: 0
+  artifacts_total: 426
+  csv_total: 207
+  png_total: 126
+  md_total: 93
+missing_phases: []
+phases:
+  gaira_base_4_mss_core_build_v1:
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: grounding_dataset_inventory_full_v4.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/grounding_dataset_inventory_full_v4.csv
+    relative_path: tables/grounding_dataset_inventory_full_v4.csv
+    size_bytes: 1938
+    modified_iso: '2026-04-23T02:37:00'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: grounding_preprocessing_audit_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/grounding_preprocessing_audit_v2.csv
+    relative_path: tables/grounding_preprocessing_audit_v2.csv
+    size_bytes: 75493
+    modified_iso: '2026-04-23T02:37:00'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: grounding_spectra_longform_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/grounding_spectra_longform_v2.csv
+    relative_path: tables/grounding_spectra_longform_v2.csv
+    size_bytes: 8445831
+    modified_iso: '2026-04-23T02:37:00'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: grounding_spectral_primitives_v3.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/grounding_spectral_primitives_v3.csv
+    relative_path: tables/grounding_spectral_primitives_v3.csv
+    size_bytes: 96968
+    modified_iso: '2026-04-23T02:37:00'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: shared_molecular_core_structures_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/shared_molecular_core_structures_v1.csv
+    relative_path: tables/shared_molecular_core_structures_v1.csv
+    size_bytes: 2886
+    modified_iso: '2026-04-23T02:37:00'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: mss_regime_split_summary_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/mss_regime_split_summary_v1.csv
+    relative_path: tables/mss_regime_split_summary_v1.csv
+    size_bytes: 3196
+    modified_iso: '2026-04-23T02:37:00'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: mss_competitor_registry_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/mss_competitor_registry_v2.csv
+    relative_path: tables/mss_competitor_registry_v2.csv
+    size_bytes: 15857
+    modified_iso: '2026-04-23T02:37:00'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: substrate_aware_mss_notes_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/substrate_aware_mss_notes_v1.csv
+    relative_path: tables/substrate_aware_mss_notes_v1.csv
+    size_bytes: 11059
+    modified_iso: '2026-04-23T02:37:01'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: cnn_saliency_summary_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/cnn_saliency_summary_v1.csv
+    relative_path: tables/cnn_saliency_summary_v1.csv
+    size_bytes: 876
+    modified_iso: '2026-04-23T02:37:01'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: cnn_mss_mismatch_flags_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/cnn_mss_mismatch_flags_v1.csv
+    relative_path: tables/cnn_mss_mismatch_flags_v1.csv
+    size_bytes: 1
+    modified_iso: '2026-04-23T02:37:01'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: mss_rank_eval_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/mss_rank_eval_v1.csv
+    relative_path: tables/mss_rank_eval_v1.csv
+    size_bytes: 53482
+    modified_iso: '2026-04-23T02:37:05'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: mss_off_target_activation_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/mss_off_target_activation_v1.csv
+    relative_path: tables/mss_off_target_activation_v1.csv
+    size_bytes: 24871
+    modified_iso: '2026-04-23T02:37:05'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: mss_ambiguity_behavior_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/mss_ambiguity_behavior_v1.csv
+    relative_path: tables/mss_ambiguity_behavior_v1.csv
+    size_bytes: 24494
+    modified_iso: '2026-04-23T02:37:05'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: cross_validation_results_v8.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/cross_validation_results_v8.csv
+    relative_path: tables/cross_validation_results_v8.csv
+    size_bytes: 492
+    modified_iso: '2026-04-23T02:38:22'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: tables
+    extension: .csv
+    name: mss_cross_phase_comparison_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/tables/mss_cross_phase_comparison_v1.csv
+    relative_path: tables/mss_cross_phase_comparison_v1.csv
+    size_bytes: 333
+    modified_iso: '2026-04-23T02:38:22'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: registry
+    extension: .csv
+    name: grounding_molecular_signatures_v4.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/registry/grounding_molecular_signatures_v4.csv
+    relative_path: registry/grounding_molecular_signatures_v4.csv
+    size_bytes: 26255
+    modified_iso: '2026-04-23T02:37:00'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: figures
+    extension: .png
+    name: fig_cnn_saliency_by_analyte_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/figures/fig_cnn_saliency_by_analyte_v1.png
+    relative_path: figures/fig_cnn_saliency_by_analyte_v1.png
+    size_bytes: 86203
+    modified_iso: '2026-04-23T02:37:01'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: figures
+    extension: .png
+    name: fig_cnn_latent_neighborhoods_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/figures/fig_cnn_latent_neighborhoods_v1.png
+    relative_path: figures/fig_cnn_latent_neighborhoods_v1.png
+    size_bytes: 108210
+    modified_iso: '2026-04-23T02:37:02'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: figures
+    extension: .png
+    name: fig_grounding_corpus_composition_v2.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/figures/fig_grounding_corpus_composition_v2.png
+    relative_path: figures/fig_grounding_corpus_composition_v2.png
+    size_bytes: 50143
+    modified_iso: '2026-04-23T02:38:22'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: figures
+    extension: .png
+    name: fig_shared_core_structure_summary_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/figures/fig_shared_core_structure_summary_v1.png
+    relative_path: figures/fig_shared_core_structure_summary_v1.png
+    size_bytes: 35711
+    modified_iso: '2026-04-23T02:38:23'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_regime_split_summary_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/figures/fig_mss_regime_split_summary_v1.png
+    relative_path: figures/fig_mss_regime_split_summary_v1.png
+    size_bytes: 18773
+    modified_iso: '2026-04-23T02:38:23'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_competitor_matrix_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/figures/fig_mss_competitor_matrix_v1.png
+    relative_path: figures/fig_mss_competitor_matrix_v1.png
+    size_bytes: 31263
+    modified_iso: '2026-04-23T02:38:23'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_signature_topk_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/figures/fig_mss_signature_topk_v1.png
+    relative_path: figures/fig_mss_signature_topk_v1.png
+    size_bytes: 32083
+    modified_iso: '2026-04-23T02:38:23'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_off_target_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/figures/fig_mss_off_target_v1.png
+    relative_path: figures/fig_mss_off_target_v1.png
+    size_bytes: 21307
+    modified_iso: '2026-04-23T02:38:23'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_ambiguity_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/figures/fig_mss_ambiguity_v1.png
+    relative_path: figures/fig_mss_ambiguity_v1.png
+    size_bytes: 18755
+    modified_iso: '2026-04-23T02:38:23'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: figures
+    extension: .png
+    name: fig_cv_performance_drop_mss_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/figures/fig_cv_performance_drop_mss_v1.png
+    relative_path: figures/fig_cv_performance_drop_mss_v1.png
+    size_bytes: 56174
+    modified_iso: '2026-04-23T02:38:23'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_mss_core_build_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/reports/REPORT_gaira_base_4_mss_core_build_v1.md
+    relative_path: reports/REPORT_gaira_base_4_mss_core_build_v1.md
+    size_bytes: 5426
+    modified_iso: '2026-04-23T02:38:23'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_mss_regime_and_competitor_audit_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/reports/REPORT_gaira_base_4_mss_regime_and_competitor_audit_v1.md
+    relative_path: reports/REPORT_gaira_base_4_mss_regime_and_competitor_audit_v1.md
+    size_bytes: 1578
+    modified_iso: '2026-04-23T02:38:23'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_readiness_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/reports/REPORT_gaira_base_4_readiness_v1.md
+    relative_path: reports/REPORT_gaira_base_4_readiness_v1.md
+    size_bytes: 564
+    modified_iso: '2026-04-23T02:38:23'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_mss_core_build_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/audit/gaira_base_4_mss_core_build_audit_log.md
+    relative_path: audit/gaira_base_4_mss_core_build_audit_log.md
+    size_bytes: 3180
+    modified_iso: '2026-04-23T02:38:23'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: other
+    extension: .md
+    name: grounding_corpus_summary_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/docs/grounding_corpus_summary_v1.md
+    relative_path: docs/grounding_corpus_summary_v1.md
+    size_bytes: 2361
+    modified_iso: '2026-04-23T02:37:00'
+  - phase: gaira_base_4_mss_core_build_v1
+    kind: other
+    extension: .md
+    name: substrate_aware_pure_sers_mss_notes_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_core_build_v1/docs/substrate_aware_pure_sers_mss_notes_v1.md
+    relative_path: docs/substrate_aware_pure_sers_mss_notes_v1.md
+    size_bytes: 3944
+    modified_iso: '2026-04-23T02:37:01'
+  gaira_base_4_mss_repair_loop_v1:
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: tables
+    extension: .csv
+    name: mss_ontology_decompression_audit_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/tables/mss_ontology_decompression_audit_v1.csv
+    relative_path: tables/mss_ontology_decompression_audit_v1.csv
+    size_bytes: 8395
+    modified_iso: '2026-04-23T03:00:34'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: tables
+    extension: .csv
+    name: grounding_spectral_primitives_v4.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/tables/grounding_spectral_primitives_v4.csv
+    relative_path: tables/grounding_spectral_primitives_v4.csv
+    size_bytes: 139583
+    modified_iso: '2026-04-23T03:00:35'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: tables
+    extension: .csv
+    name: mss_competitor_registry_v3.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/tables/mss_competitor_registry_v3.csv
+    relative_path: tables/mss_competitor_registry_v3.csv
+    size_bytes: 132461
+    modified_iso: '2026-04-23T03:00:35'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: tables
+    extension: .csv
+    name: sidecar_saliency_summary_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/tables/sidecar_saliency_summary_v2.csv
+    relative_path: tables/sidecar_saliency_summary_v2.csv
+    size_bytes: 19352
+    modified_iso: '2026-04-23T03:00:37'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: tables
+    extension: .csv
+    name: sidecar_mss_mismatch_flags_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/tables/sidecar_mss_mismatch_flags_v2.csv
+    relative_path: tables/sidecar_mss_mismatch_flags_v2.csv
+    size_bytes: 1
+    modified_iso: '2026-04-23T03:00:37'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: tables
+    extension: .csv
+    name: sidecar_competitor_discovery_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/tables/sidecar_competitor_discovery_v1.csv
+    relative_path: tables/sidecar_competitor_discovery_v1.csv
+    size_bytes: 2090
+    modified_iso: '2026-04-23T03:00:37'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: tables
+    extension: .csv
+    name: mss_refinement_actions_v3.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/tables/mss_refinement_actions_v3.csv
+    relative_path: tables/mss_refinement_actions_v3.csv
+    size_bytes: 1
+    modified_iso: '2026-04-23T03:00:38'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: tables
+    extension: .csv
+    name: mss_rank_eval_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/tables/mss_rank_eval_v2.csv
+    relative_path: tables/mss_rank_eval_v2.csv
+    size_bytes: 62322
+    modified_iso: '2026-04-23T03:01:05'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: tables
+    extension: .csv
+    name: mss_off_target_activation_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/tables/mss_off_target_activation_v2.csv
+    relative_path: tables/mss_off_target_activation_v2.csv
+    size_bytes: 361558
+    modified_iso: '2026-04-23T03:01:05'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: tables
+    extension: .csv
+    name: mss_ambiguity_behavior_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/tables/mss_ambiguity_behavior_v2.csv
+    relative_path: tables/mss_ambiguity_behavior_v2.csv
+    size_bytes: 24386
+    modified_iso: '2026-04-23T03:01:05'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: tables
+    extension: .csv
+    name: cross_validation_results_v9.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/tables/cross_validation_results_v9.csv
+    relative_path: tables/cross_validation_results_v9.csv
+    size_bytes: 565
+    modified_iso: '2026-04-23T03:05:47'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: tables
+    extension: .csv
+    name: mss_cross_phase_comparison_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/tables/mss_cross_phase_comparison_v2.csv
+    relative_path: tables/mss_cross_phase_comparison_v2.csv
+    size_bytes: 273
+    modified_iso: '2026-04-23T03:05:47'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: registry
+    extension: .csv
+    name: grounding_molecular_signatures_v4_2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/registry/grounding_molecular_signatures_v4_2.csv
+    relative_path: registry/grounding_molecular_signatures_v4_2.csv
+    size_bytes: 175894
+    modified_iso: '2026-04-23T03:00:35'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: figures
+    extension: .png
+    name: fig_sidecar_saliency_by_analyte_v2.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/figures/fig_sidecar_saliency_by_analyte_v2.png
+    relative_path: figures/fig_sidecar_saliency_by_analyte_v2.png
+    size_bytes: 99747
+    modified_iso: '2026-04-23T03:00:37'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: figures
+    extension: .png
+    name: fig_sidecar_latent_neighborhoods_v2.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/figures/fig_sidecar_latent_neighborhoods_v2.png
+    relative_path: figures/fig_sidecar_latent_neighborhoods_v2.png
+    size_bytes: 85553
+    modified_iso: '2026-04-23T03:00:38'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_signature_topk_v2.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/figures/fig_mss_signature_topk_v2.png
+    relative_path: figures/fig_mss_signature_topk_v2.png
+    size_bytes: 39745
+    modified_iso: '2026-04-23T03:05:47'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_off_target_v2.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/figures/fig_mss_off_target_v2.png
+    relative_path: figures/fig_mss_off_target_v2.png
+    size_bytes: 21923
+    modified_iso: '2026-04-23T03:05:47'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_ambiguity_v2.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/figures/fig_mss_ambiguity_v2.png
+    relative_path: figures/fig_mss_ambiguity_v2.png
+    size_bytes: 19249
+    modified_iso: '2026-04-23T03:05:47'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: figures
+    extension: .png
+    name: fig_cv_performance_drop_mss_v2.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/figures/fig_cv_performance_drop_mss_v2.png
+    relative_path: figures/fig_cv_performance_drop_mss_v2.png
+    size_bytes: 58798
+    modified_iso: '2026-04-23T03:05:47'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: figures
+    extension: .png
+    name: fig_ontology_decompression_effect_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/figures/fig_ontology_decompression_effect_v1.png
+    relative_path: figures/fig_ontology_decompression_effect_v1.png
+    size_bytes: 24605
+    modified_iso: '2026-04-23T03:05:47'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_mss_repair_failure_analysis_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/reports/REPORT_gaira_base_4_mss_repair_failure_analysis_v1.md
+    relative_path: reports/REPORT_gaira_base_4_mss_repair_failure_analysis_v1.md
+    size_bytes: 4527
+    modified_iso: '2026-04-23T03:00:34'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_mss_ontology_decompression_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/reports/REPORT_gaira_base_4_mss_ontology_decompression_v1.md
+    relative_path: reports/REPORT_gaira_base_4_mss_ontology_decompression_v1.md
+    size_bytes: 2899
+    modified_iso: '2026-04-23T03:00:34'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_enriched_primitives_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/reports/REPORT_gaira_base_4_enriched_primitives_v1.md
+    relative_path: reports/REPORT_gaira_base_4_enriched_primitives_v1.md
+    size_bytes: 2739
+    modified_iso: '2026-04-23T03:00:35'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_local_competitor_logic_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/reports/REPORT_gaira_base_4_local_competitor_logic_v1.md
+    relative_path: reports/REPORT_gaira_base_4_local_competitor_logic_v1.md
+    size_bytes: 1675
+    modified_iso: '2026-04-23T03:00:35'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_sidecar_audit_v2.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/reports/REPORT_gaira_base_4_sidecar_audit_v2.md
+    relative_path: reports/REPORT_gaira_base_4_sidecar_audit_v2.md
+    size_bytes: 2524
+    modified_iso: '2026-04-23T03:00:38'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_mss_repair_results_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/reports/REPORT_gaira_base_4_mss_repair_results_v1.md
+    relative_path: reports/REPORT_gaira_base_4_mss_repair_results_v1.md
+    size_bytes: 2903
+    modified_iso: '2026-04-23T03:05:47'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_readiness_v2.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/reports/REPORT_gaira_base_4_readiness_v2.md
+    relative_path: reports/REPORT_gaira_base_4_readiness_v2.md
+    size_bytes: 554
+    modified_iso: '2026-04-23T03:05:47'
+  - phase: gaira_base_4_mss_repair_loop_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_mss_repair_loop_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_repair_loop_v1/audit/gaira_base_4_mss_repair_loop_audit_log.md
+    relative_path: audit/gaira_base_4_mss_repair_loop_audit_log.md
+    size_bytes: 2411
+    modified_iso: '2026-04-23T03:05:47'
+  gaira_base_4_mss_decision_enrichment_v1:
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: analyte_confusion_pairs_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/analyte_confusion_pairs_v1.csv
+    relative_path: tables/analyte_confusion_pairs_v1.csv
+    size_bytes: 5255
+    modified_iso: '2026-04-23T03:40:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: analyte_error_neighborhoods_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/analyte_error_neighborhoods_v1.csv
+    relative_path: tables/analyte_error_neighborhoods_v1.csv
+    size_bytes: 14173
+    modified_iso: '2026-04-23T03:40:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: envelope_dominance_flags_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/envelope_dominance_flags_v1.csv
+    relative_path: tables/envelope_dominance_flags_v1.csv
+    size_bytes: 14296
+    modified_iso: '2026-04-23T03:40:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: analyte_local_evidence_tests_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/analyte_local_evidence_tests_v1.csv
+    relative_path: tables/analyte_local_evidence_tests_v1.csv
+    size_bytes: 85351
+    modified_iso: '2026-04-23T03:40:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: mss_evidence_assignment_split_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/mss_evidence_assignment_split_v1.csv
+    relative_path: tables/mss_evidence_assignment_split_v1.csv
+    size_bytes: 4766
+    modified_iso: '2026-04-23T03:40:33'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: local_chemistry_tournament_results_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/local_chemistry_tournament_results_v1.csv
+    relative_path: tables/local_chemistry_tournament_results_v1.csv
+    size_bytes: 4766
+    modified_iso: '2026-04-23T03:40:33'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: singleton_policy_registry_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/singleton_policy_registry_v1.csv
+    relative_path: tables/singleton_policy_registry_v1.csv
+    size_bytes: 23947
+    modified_iso: '2026-04-23T03:40:33'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: counterfactual_confusion_audit_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/counterfactual_confusion_audit_v1.csv
+    relative_path: tables/counterfactual_confusion_audit_v1.csv
+    size_bytes: 3372
+    modified_iso: '2026-04-23T03:41:26'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: analyte_pair_rescue_features_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/analyte_pair_rescue_features_v1.csv
+    relative_path: tables/analyte_pair_rescue_features_v1.csv
+    size_bytes: 2512
+    modified_iso: '2026-04-23T03:41:26'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: mss_decision_enrichment_actions_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/mss_decision_enrichment_actions_v1.csv
+    relative_path: tables/mss_decision_enrichment_actions_v1.csv
+    size_bytes: 4629
+    modified_iso: '2026-04-23T03:41:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: mss_rank_eval_v3.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/mss_rank_eval_v3.csv
+    relative_path: tables/mss_rank_eval_v3.csv
+    size_bytes: 88445
+    modified_iso: '2026-04-23T03:42:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: mss_off_target_activation_v3.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/mss_off_target_activation_v3.csv
+    relative_path: tables/mss_off_target_activation_v3.csv
+    size_bytes: 480143
+    modified_iso: '2026-04-23T03:42:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: mss_ambiguity_behavior_v3.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/mss_ambiguity_behavior_v3.csv
+    relative_path: tables/mss_ambiguity_behavior_v3.csv
+    size_bytes: 30175
+    modified_iso: '2026-04-23T03:42:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: neighborhood_resolution_quality_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/neighborhood_resolution_quality_v1.csv
+    relative_path: tables/neighborhood_resolution_quality_v1.csv
+    size_bytes: 1141
+    modified_iso: '2026-04-23T03:42:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: cross_validation_results_v10.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/cross_validation_results_v10.csv
+    relative_path: tables/cross_validation_results_v10.csv
+    size_bytes: 564
+    modified_iso: '2026-04-23T03:50:28'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: tables
+    extension: .csv
+    name: mss_cross_phase_comparison_v3.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/tables/mss_cross_phase_comparison_v3.csv
+    relative_path: tables/mss_cross_phase_comparison_v3.csv
+    size_bytes: 332
+    modified_iso: '2026-04-23T03:50:28'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: registry
+    extension: .csv
+    name: grounding_molecular_signatures_v4_3.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/registry/grounding_molecular_signatures_v4_3.csv
+    relative_path: registry/grounding_molecular_signatures_v4_3.csv
+    size_bytes: 35184
+    modified_iso: '2026-04-23T03:40:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: figures
+    extension: .png
+    name: fig_counterfactual_confusions_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/figures/fig_counterfactual_confusions_v1.png
+    relative_path: figures/fig_counterfactual_confusions_v1.png
+    size_bytes: 53724
+    modified_iso: '2026-04-23T03:41:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_analyte_topk_v3.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/figures/fig_mss_analyte_topk_v3.png
+    relative_path: figures/fig_mss_analyte_topk_v3.png
+    size_bytes: 34611
+    modified_iso: '2026-04-23T03:50:28'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_ambiguity_v3.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/figures/fig_mss_ambiguity_v3.png
+    relative_path: figures/fig_mss_ambiguity_v3.png
+    size_bytes: 18874
+    modified_iso: '2026-04-23T03:50:28'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_off_target_normalized_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/figures/fig_mss_off_target_normalized_v1.png
+    relative_path: figures/fig_mss_off_target_normalized_v1.png
+    size_bytes: 25329
+    modified_iso: '2026-04-23T03:50:28'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: figures
+    extension: .png
+    name: fig_singleton_vs_replicate_rich_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/figures/fig_singleton_vs_replicate_rich_v1.png
+    relative_path: figures/fig_singleton_vs_replicate_rich_v1.png
+    size_bytes: 30698
+    modified_iso: '2026-04-23T03:50:28'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: figures
+    extension: .png
+    name: fig_neighborhood_resolution_quality_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/figures/fig_neighborhood_resolution_quality_v1.png
+    relative_path: figures/fig_neighborhood_resolution_quality_v1.png
+    size_bytes: 71617
+    modified_iso: '2026-04-23T03:50:28'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_mss_decision_failure_analysis_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/reports/REPORT_gaira_base_4_mss_decision_failure_analysis_v1.md
+    relative_path: reports/REPORT_gaira_base_4_mss_decision_failure_analysis_v1.md
+    size_bytes: 4614
+    modified_iso: '2026-04-23T03:40:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_analyte_decision_templates_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/reports/REPORT_gaira_base_4_analyte_decision_templates_v1.md
+    relative_path: reports/REPORT_gaira_base_4_analyte_decision_templates_v1.md
+    size_bytes: 1622
+    modified_iso: '2026-04-23T03:40:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_anchor_local_evidence_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/reports/REPORT_gaira_base_4_anchor_local_evidence_v1.md
+    relative_path: reports/REPORT_gaira_base_4_anchor_local_evidence_v1.md
+    size_bytes: 1658
+    modified_iso: '2026-04-23T03:40:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_evidence_assignment_policy_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/reports/REPORT_gaira_base_4_evidence_assignment_policy_v1.md
+    relative_path: reports/REPORT_gaira_base_4_evidence_assignment_policy_v1.md
+    size_bytes: 1319
+    modified_iso: '2026-04-23T03:40:33'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_local_tournament_logic_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/reports/REPORT_gaira_base_4_local_tournament_logic_v1.md
+    relative_path: reports/REPORT_gaira_base_4_local_tournament_logic_v1.md
+    size_bytes: 1353
+    modified_iso: '2026-04-23T03:40:33'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_singleton_policy_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/reports/REPORT_gaira_base_4_singleton_policy_v1.md
+    relative_path: reports/REPORT_gaira_base_4_singleton_policy_v1.md
+    size_bytes: 1237
+    modified_iso: '2026-04-23T03:40:33'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_counterfactual_confusion_audit_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/reports/REPORT_gaira_base_4_counterfactual_confusion_audit_v1.md
+    relative_path: reports/REPORT_gaira_base_4_counterfactual_confusion_audit_v1.md
+    size_bytes: 1515
+    modified_iso: '2026-04-23T03:41:27'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_mss_decision_enrichment_results_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/reports/REPORT_gaira_base_4_mss_decision_enrichment_results_v1.md
+    relative_path: reports/REPORT_gaira_base_4_mss_decision_enrichment_results_v1.md
+    size_bytes: 4277
+    modified_iso: '2026-04-23T03:50:28'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_base_4_readiness_v3.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/reports/REPORT_gaira_base_4_readiness_v3.md
+    relative_path: reports/REPORT_gaira_base_4_readiness_v3.md
+    size_bytes: 585
+    modified_iso: '2026-04-23T03:50:28'
+  - phase: gaira_base_4_mss_decision_enrichment_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_mss_decision_enrichment_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_mss_decision_enrichment_v1/audit/gaira_base_4_mss_decision_enrichment_audit_log.md
+    relative_path: audit/gaira_base_4_mss_decision_enrichment_audit_log.md
+    size_bytes: 2215
+    modified_iso: '2026-04-23T03:50:28'
+  gaira_base_4_hybrid_bsv_build_v1:
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: tables
+    extension: .csv
+    name: hybrid_bsv_group_registry_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/tables/hybrid_bsv_group_registry_v1.csv
+    relative_path: tables/hybrid_bsv_group_registry_v1.csv
+    size_bytes: 2561
+    modified_iso: '2026-04-23T08:53:40'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: tables
+    extension: .csv
+    name: analyte_to_hybrid_group_map_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/tables/analyte_to_hybrid_group_map_v1.csv
+    relative_path: tables/analyte_to_hybrid_group_map_v1.csv
+    size_bytes: 24963
+    modified_iso: '2026-04-23T08:53:41'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: tables
+    extension: .csv
+    name: hybrid_bsv_formula_registry_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/tables/hybrid_bsv_formula_registry_v1.csv
+    relative_path: tables/hybrid_bsv_formula_registry_v1.csv
+    size_bytes: 694
+    modified_iso: '2026-04-23T08:53:41'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: tables
+    extension: .csv
+    name: query_hybrid_flow_examples_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/tables/query_hybrid_flow_examples_v1.csv
+    relative_path: tables/query_hybrid_flow_examples_v1.csv
+    size_bytes: 75140
+    modified_iso: '2026-04-23T08:53:50'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: tables
+    extension: .csv
+    name: hybrid_query_case_studies_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/tables/hybrid_query_case_studies_v1.csv
+    relative_path: tables/hybrid_query_case_studies_v1.csv
+    size_bytes: 3675
+    modified_iso: '2026-04-23T08:53:50'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: tables
+    extension: .csv
+    name: hybrid_family_eval_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/tables/hybrid_family_eval_v1.csv
+    relative_path: tables/hybrid_family_eval_v1.csv
+    size_bytes: 45932
+    modified_iso: '2026-04-23T08:54:00'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: tables
+    extension: .csv
+    name: hybrid_confidence_calibration_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/tables/hybrid_confidence_calibration_v1.csv
+    relative_path: tables/hybrid_confidence_calibration_v1.csv
+    size_bytes: 17212
+    modified_iso: '2026-04-23T08:54:00'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: tables
+    extension: .csv
+    name: hybrid_boundary_behavior_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/tables/hybrid_boundary_behavior_v1.csv
+    relative_path: tables/hybrid_boundary_behavior_v1.csv
+    size_bytes: 24866
+    modified_iso: '2026-04-23T08:54:00'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: tables
+    extension: .csv
+    name: hybrid_family_confusion_matrix_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/tables/hybrid_family_confusion_matrix_v1.csv
+    relative_path: tables/hybrid_family_confusion_matrix_v1.csv
+    size_bytes: 1253
+    modified_iso: '2026-04-23T08:54:00'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: figures
+    extension: .png
+    name: fig_hybrid_family_umap_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/figures/fig_hybrid_family_umap_v1.png
+    relative_path: figures/fig_hybrid_family_umap_v1.png
+    size_bytes: 187960
+    modified_iso: '2026-04-23T08:54:00'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: figures
+    extension: .png
+    name: fig_hybrid_group_composition_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/figures/fig_hybrid_group_composition_v1.png
+    relative_path: figures/fig_hybrid_group_composition_v1.png
+    size_bytes: 52693
+    modified_iso: '2026-04-23T08:54:00'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: figures
+    extension: .png
+    name: fig_hybrid_family_confusion_heatmap_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/figures/fig_hybrid_family_confusion_heatmap_v1.png
+    relative_path: figures/fig_hybrid_family_confusion_heatmap_v1.png
+    size_bytes: 65957
+    modified_iso: '2026-04-23T08:54:00'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: figures
+    extension: .png
+    name: fig_hybrid_confidence_vs_accuracy_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/figures/fig_hybrid_confidence_vs_accuracy_v1.png
+    relative_path: figures/fig_hybrid_confidence_vs_accuracy_v1.png
+    size_bytes: 60993
+    modified_iso: '2026-04-23T08:54:00'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: figures
+    extension: .png
+    name: fig_hybrid_bsv_case_studies_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/figures/fig_hybrid_bsv_case_studies_v1.png
+    relative_path: figures/fig_hybrid_bsv_case_studies_v1.png
+    size_bytes: 174532
+    modified_iso: '2026-04-23T08:54:00'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: figures
+    extension: .png
+    name: fig_hybrid_evidence_flow_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/figures/fig_hybrid_evidence_flow_v1.png
+    relative_path: figures/fig_hybrid_evidence_flow_v1.png
+    size_bytes: 85879
+    modified_iso: '2026-04-23T08:54:01'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: figures
+    extension: .png
+    name: fig_hybrid_query_projection_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/figures/fig_hybrid_query_projection_v1.png
+    relative_path: figures/fig_hybrid_query_projection_v1.png
+    size_bytes: 155389
+    modified_iso: '2026-04-23T08:54:01'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: reports
+    extension: .md
+    name: REPORT_hybrid_bsv_group_taxonomy_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/reports/REPORT_hybrid_bsv_group_taxonomy_v1.md
+    relative_path: reports/REPORT_hybrid_bsv_group_taxonomy_v1.md
+    size_bytes: 4843
+    modified_iso: '2026-04-23T08:53:40'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: reports
+    extension: .md
+    name: REPORT_hybrid_analyte_group_mapping_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/reports/REPORT_hybrid_analyte_group_mapping_v1.md
+    relative_path: reports/REPORT_hybrid_analyte_group_mapping_v1.md
+    size_bytes: 2978
+    modified_iso: '2026-04-23T08:53:41'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: reports
+    extension: .md
+    name: REPORT_hybrid_bsv_calculation_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/reports/REPORT_hybrid_bsv_calculation_v1.md
+    relative_path: reports/REPORT_hybrid_bsv_calculation_v1.md
+    size_bytes: 2942
+    modified_iso: '2026-04-23T08:53:41'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: reports
+    extension: .md
+    name: REPORT_hybrid_query_flow_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/reports/REPORT_hybrid_query_flow_v1.md
+    relative_path: reports/REPORT_hybrid_query_flow_v1.md
+    size_bytes: 2342
+    modified_iso: '2026-04-23T08:53:50'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: reports
+    extension: .md
+    name: REPORT_hybrid_bsv_evaluation_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/reports/REPORT_hybrid_bsv_evaluation_v1.md
+    relative_path: reports/REPORT_hybrid_bsv_evaluation_v1.md
+    size_bytes: 2269
+    modified_iso: '2026-04-23T08:54:00'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: reports
+    extension: .md
+    name: REPORT_hybrid_output_policy_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/reports/REPORT_hybrid_output_policy_v1.md
+    relative_path: reports/REPORT_hybrid_output_policy_v1.md
+    size_bytes: 3332
+    modified_iso: '2026-04-23T08:54:01'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: reports
+    extension: .md
+    name: REPORT_hybrid_bsv_strategy_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/reports/REPORT_hybrid_bsv_strategy_v1.md
+    relative_path: reports/REPORT_hybrid_bsv_strategy_v1.md
+    size_bytes: 5444
+    modified_iso: '2026-04-23T08:54:01'
+  - phase: gaira_base_4_hybrid_bsv_build_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_hybrid_bsv_build_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_build_v1/audit/gaira_base_4_hybrid_bsv_build_audit_log.md
+    relative_path: audit/gaira_base_4_hybrid_bsv_build_audit_log.md
+    size_bytes: 2425
+    modified_iso: '2026-04-23T08:54:01'
+  gaira_base_4_hybrid_bsv_calibration_suite_v1:
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: tables
+    extension: .csv
+    name: calibration_dataset_inventory_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/tables/calibration_dataset_inventory_v1.csv
+    relative_path: tables/calibration_dataset_inventory_v1.csv
+    size_bytes: 1941
+    modified_iso: '2026-04-23T14:02:05'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: tables
+    extension: .csv
+    name: calibration_expected_behavior_registry_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/tables/calibration_expected_behavior_registry_v1.csv
+    relative_path: tables/calibration_expected_behavior_registry_v1.csv
+    size_bytes: 1986
+    modified_iso: '2026-04-23T14:02:05'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: tables
+    extension: .csv
+    name: calibration_absolute_bsv_results_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/tables/calibration_absolute_bsv_results_v1.csv
+    relative_path: tables/calibration_absolute_bsv_results_v1.csv
+    size_bytes: 76183
+    modified_iso: '2026-04-23T14:02:23'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: tables
+    extension: .csv
+    name: calibration_per_dataset_summary_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/tables/calibration_per_dataset_summary_v1.csv
+    relative_path: tables/calibration_per_dataset_summary_v1.csv
+    size_bytes: 658
+    modified_iso: '2026-04-23T14:02:23'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: tables
+    extension: .csv
+    name: calibration_family_selectivity_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/tables/calibration_family_selectivity_v1.csv
+    relative_path: tables/calibration_family_selectivity_v1.csv
+    size_bytes: 485
+    modified_iso: '2026-04-23T14:02:23'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: tables
+    extension: .csv
+    name: calibration_delta_bsv_results_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/tables/calibration_delta_bsv_results_v1.csv
+    relative_path: tables/calibration_delta_bsv_results_v1.csv
+    size_bytes: 42549
+    modified_iso: '2026-04-23T14:02:56'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: tables
+    extension: .csv
+    name: calibration_monotonicity_results_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/tables/calibration_monotonicity_results_v1.csv
+    relative_path: tables/calibration_monotonicity_results_v1.csv
+    size_bytes: 529
+    modified_iso: '2026-04-23T14:02:56'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: tables
+    extension: .csv
+    name: calibration_mixture_overlap_results_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/tables/calibration_mixture_overlap_results_v1.csv
+    relative_path: tables/calibration_mixture_overlap_results_v1.csv
+    size_bytes: 585
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: tables
+    extension: .csv
+    name: calibration_replicate_consistency_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/tables/calibration_replicate_consistency_v1.csv
+    relative_path: tables/calibration_replicate_consistency_v1.csv
+    size_bytes: 2082
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: tables
+    extension: .csv
+    name: calibration_regime_robustness_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/tables/calibration_regime_robustness_v1.csv
+    relative_path: tables/calibration_regime_robustness_v1.csv
+    size_bytes: 528
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: tables
+    extension: .csv
+    name: family_calibration_scorecard_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/tables/family_calibration_scorecard_v1.csv
+    relative_path: tables/family_calibration_scorecard_v1.csv
+    size_bytes: 1469
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: tables
+    extension: .csv
+    name: calibration_policy_adjustments_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/tables/calibration_policy_adjustments_v1.csv
+    relative_path: tables/calibration_policy_adjustments_v1.csv
+    size_bytes: 1
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: figures
+    extension: .png
+    name: fig_calibration_family_selectivity_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/figures/fig_calibration_family_selectivity_v1.png
+    relative_path: figures/fig_calibration_family_selectivity_v1.png
+    size_bytes: 33891
+    modified_iso: '2026-04-23T14:02:23'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: figures
+    extension: .png
+    name: fig_calibration_absolute_bsv_case_panels_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/figures/fig_calibration_absolute_bsv_case_panels_v1.png
+    relative_path: figures/fig_calibration_absolute_bsv_case_panels_v1.png
+    size_bytes: 71697
+    modified_iso: '2026-04-23T14:02:23'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: figures
+    extension: .png
+    name: fig_absolute_vs_delta_bsv_comparison_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/figures/fig_absolute_vs_delta_bsv_comparison_v1.png
+    relative_path: figures/fig_absolute_vs_delta_bsv_comparison_v1.png
+    size_bytes: 94694
+    modified_iso: '2026-04-23T14:02:56'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: figures
+    extension: .png
+    name: fig_calibration_delta_bsv_case_panels_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/figures/fig_calibration_delta_bsv_case_panels_v1.png
+    relative_path: figures/fig_calibration_delta_bsv_case_panels_v1.png
+    size_bytes: 47929
+    modified_iso: '2026-04-23T14:02:56'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: figures
+    extension: .png
+    name: fig_calibration_monotonicity_by_family_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/figures/fig_calibration_monotonicity_by_family_v1.png
+    relative_path: figures/fig_calibration_monotonicity_by_family_v1.png
+    size_bytes: 88512
+    modified_iso: '2026-04-23T14:02:56'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: figures
+    extension: .png
+    name: fig_dose_response_family_panels_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/figures/fig_dose_response_family_panels_v1.png
+    relative_path: figures/fig_dose_response_family_panels_v1.png
+    size_bytes: 71972
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: figures
+    extension: .png
+    name: fig_mixture_overlap_family_profiles_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/figures/fig_mixture_overlap_family_profiles_v1.png
+    relative_path: figures/fig_mixture_overlap_family_profiles_v1.png
+    size_bytes: 69125
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: figures
+    extension: .png
+    name: fig_replicate_consistency_by_family_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/figures/fig_replicate_consistency_by_family_v1.png
+    relative_path: figures/fig_replicate_consistency_by_family_v1.png
+    size_bytes: 38975
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: figures
+    extension: .png
+    name: fig_raman_vs_sers_calibration_behavior_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/figures/fig_raman_vs_sers_calibration_behavior_v1.png
+    relative_path: figures/fig_raman_vs_sers_calibration_behavior_v1.png
+    size_bytes: 46831
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: figures
+    extension: .png
+    name: fig_family_scorecard_summary_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/figures/fig_family_scorecard_summary_v1.png
+    relative_path: figures/fig_family_scorecard_summary_v1.png
+    size_bytes: 24057
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: figures
+    extension: .png
+    name: fig_calibration_readiness_summary_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/figures/fig_calibration_readiness_summary_v1.png
+    relative_path: figures/fig_calibration_readiness_summary_v1.png
+    size_bytes: 33724
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_dataset_inventory_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/reports/REPORT_calibration_dataset_inventory_v1.md
+    relative_path: reports/REPORT_calibration_dataset_inventory_v1.md
+    size_bytes: 2523
+    modified_iso: '2026-04-23T14:02:05'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_suite_plan_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/reports/REPORT_calibration_suite_plan_v1.md
+    relative_path: reports/REPORT_calibration_suite_plan_v1.md
+    size_bytes: 1956
+    modified_iso: '2026-04-23T14:02:05'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_absolute_bsv_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/reports/REPORT_calibration_absolute_bsv_v1.md
+    relative_path: reports/REPORT_calibration_absolute_bsv_v1.md
+    size_bytes: 1193
+    modified_iso: '2026-04-23T14:02:23'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_delta_bsv_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/reports/REPORT_calibration_delta_bsv_v1.md
+    relative_path: reports/REPORT_calibration_delta_bsv_v1.md
+    size_bytes: 1940
+    modified_iso: '2026-04-23T14:02:56'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_monotonicity_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/reports/REPORT_calibration_monotonicity_v1.md
+    relative_path: reports/REPORT_calibration_monotonicity_v1.md
+    size_bytes: 1437
+    modified_iso: '2026-04-23T14:02:56'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_mixture_overlap_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/reports/REPORT_calibration_mixture_overlap_v1.md
+    relative_path: reports/REPORT_calibration_mixture_overlap_v1.md
+    size_bytes: 1376
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_replicate_consistency_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/reports/REPORT_calibration_replicate_consistency_v1.md
+    relative_path: reports/REPORT_calibration_replicate_consistency_v1.md
+    size_bytes: 763
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_regime_robustness_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/reports/REPORT_calibration_regime_robustness_v1.md
+    relative_path: reports/REPORT_calibration_regime_robustness_v1.md
+    size_bytes: 568
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: reports
+    extension: .md
+    name: REPORT_family_calibration_scorecard_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/reports/REPORT_family_calibration_scorecard_v1.md
+    relative_path: reports/REPORT_family_calibration_scorecard_v1.md
+    size_bytes: 1289
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_policy_adjustments_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/reports/REPORT_calibration_policy_adjustments_v1.md
+    relative_path: reports/REPORT_calibration_policy_adjustments_v1.md
+    size_bytes: 371
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: reports
+    extension: .md
+    name: REPORT_hybrid_bsv_calibration_suite_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/reports/REPORT_hybrid_bsv_calibration_suite_v1.md
+    relative_path: reports/REPORT_hybrid_bsv_calibration_suite_v1.md
+    size_bytes: 2676
+    modified_iso: '2026-04-23T14:02:57'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_readiness_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/reports/REPORT_calibration_readiness_v1.md
+    relative_path: reports/REPORT_calibration_readiness_v1.md
+    size_bytes: 5438
+    modified_iso: '2026-04-23T14:09:39'
+  - phase: gaira_base_4_hybrid_bsv_calibration_suite_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_hybrid_bsv_calibration_suite_v1_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_suite_v1/audit/gaira_base_4_hybrid_bsv_calibration_suite_v1_audit_log.md
+    relative_path: audit/gaira_base_4_hybrid_bsv_calibration_suite_v1_audit_log.md
+    size_bytes: 2209
+    modified_iso: '2026-04-23T14:02:57'
+  gaira_base_4_hybrid_bsv_calibration_audit_v2:
+  - phase: gaira_base_4_hybrid_bsv_calibration_audit_v2
+    kind: tables
+    extension: .csv
+    name: calibration_dataset_discovery_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_audit_v2/tables/calibration_dataset_discovery_v2.csv
+    relative_path: tables/calibration_dataset_discovery_v2.csv
+    size_bytes: 7461
+    modified_iso: '2026-04-23T14:42:14'
+  - phase: gaira_base_4_hybrid_bsv_calibration_audit_v2
+    kind: tables
+    extension: .csv
+    name: calibration_admissibility_audit_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_audit_v2/tables/calibration_admissibility_audit_v2.csv
+    relative_path: tables/calibration_admissibility_audit_v2.csv
+    size_bytes: 6779
+    modified_iso: '2026-04-23T14:42:14'
+  - phase: gaira_base_4_hybrid_bsv_calibration_audit_v2
+    kind: tables
+    extension: .csv
+    name: calibration_expected_signal_registry_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_audit_v2/tables/calibration_expected_signal_registry_v2.csv
+    relative_path: tables/calibration_expected_signal_registry_v2.csv
+    size_bytes: 5394
+    modified_iso: '2026-04-23T14:42:14'
+  - phase: gaira_base_4_hybrid_bsv_calibration_audit_v2
+    kind: tables
+    extension: .csv
+    name: calibration_substrate_physics_audit_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_audit_v2/tables/calibration_substrate_physics_audit_v1.csv
+    relative_path: tables/calibration_substrate_physics_audit_v1.csv
+    size_bytes: 4189
+    modified_iso: '2026-04-23T14:42:14'
+  - phase: gaira_base_4_hybrid_bsv_calibration_audit_v2
+    kind: tables
+    extension: .csv
+    name: calibration_next_phase_checklist_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_audit_v2/tables/calibration_next_phase_checklist_v1.csv
+    relative_path: tables/calibration_next_phase_checklist_v1.csv
+    size_bytes: 3916
+    modified_iso: '2026-04-23T14:42:14'
+  - phase: gaira_base_4_hybrid_bsv_calibration_audit_v2
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_dataset_discovery_v2.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_audit_v2/reports/REPORT_calibration_dataset_discovery_v2.md
+    relative_path: reports/REPORT_calibration_dataset_discovery_v2.md
+    size_bytes: 6347
+    modified_iso: '2026-04-23T14:42:14'
+  - phase: gaira_base_4_hybrid_bsv_calibration_audit_v2
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_admissibility_audit_v2.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_audit_v2/reports/REPORT_calibration_admissibility_audit_v2.md
+    relative_path: reports/REPORT_calibration_admissibility_audit_v2.md
+    size_bytes: 5306
+    modified_iso: '2026-04-23T14:42:14'
+  - phase: gaira_base_4_hybrid_bsv_calibration_audit_v2
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_expected_signal_registry_v2.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_audit_v2/reports/REPORT_calibration_expected_signal_registry_v2.md
+    relative_path: reports/REPORT_calibration_expected_signal_registry_v2.md
+    size_bytes: 3755
+    modified_iso: '2026-04-23T14:42:14'
+  - phase: gaira_base_4_hybrid_bsv_calibration_audit_v2
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_substrate_physics_audit_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_audit_v2/reports/REPORT_calibration_substrate_physics_audit_v1.md
+    relative_path: reports/REPORT_calibration_substrate_physics_audit_v1.md
+    size_bytes: 4371
+    modified_iso: '2026-04-23T14:42:14'
+  - phase: gaira_base_4_hybrid_bsv_calibration_audit_v2
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_next_phase_checklist_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_audit_v2/reports/REPORT_calibration_next_phase_checklist_v1.md
+    relative_path: reports/REPORT_calibration_next_phase_checklist_v1.md
+    size_bytes: 1704
+    modified_iso: '2026-04-23T14:42:14'
+  - phase: gaira_base_4_hybrid_bsv_calibration_audit_v2
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_gap_analysis_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_audit_v2/reports/REPORT_calibration_gap_analysis_v1.md
+    relative_path: reports/REPORT_calibration_gap_analysis_v1.md
+    size_bytes: 3877
+    modified_iso: '2026-04-23T14:42:14'
+  - phase: gaira_base_4_hybrid_bsv_calibration_audit_v2
+    kind: reports
+    extension: .md
+    name: REPORT_calibration_audit_readiness_v2.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_audit_v2/reports/REPORT_calibration_audit_readiness_v2.md
+    relative_path: reports/REPORT_calibration_audit_readiness_v2.md
+    size_bytes: 4726
+    modified_iso: '2026-04-23T14:42:14'
+  - phase: gaira_base_4_hybrid_bsv_calibration_audit_v2
+    kind: audit
+    extension: .md
+    name: gaira_base_4_hybrid_bsv_calibration_audit_v2_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_hybrid_bsv_calibration_audit_v2/audit/gaira_base_4_hybrid_bsv_calibration_audit_v2_audit_log.md
+    relative_path: audit/gaira_base_4_hybrid_bsv_calibration_audit_v2_audit_log.md
+    size_bytes: 1263
+    modified_iso: '2026-04-23T14:42:14'
+  gaira_base_4_diabetes_ev_bsv_mss_audit_v1:
+  - phase: gaira_base_4_diabetes_ev_bsv_mss_audit_v1
+    kind: tables
+    extension: .csv
+    name: all_pipeline_performance.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_bsv_mss_audit_v1/tables/all_pipeline_performance.csv
+    relative_path: tables/all_pipeline_performance.csv
+    size_bytes: 5248
+    modified_iso: '2026-04-24T21:59:17'
+  - phase: gaira_base_4_diabetes_ev_bsv_mss_audit_v1
+    kind: tables
+    extension: .csv
+    name: fold_log.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_bsv_mss_audit_v1/tables/fold_log.csv
+    relative_path: tables/fold_log.csv
+    size_bytes: 74088
+    modified_iso: '2026-04-24T21:59:17'
+  - phase: gaira_base_4_diabetes_ev_bsv_mss_audit_v1
+    kind: tables
+    extension: .csv
+    name: delta_reference_audit.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_bsv_mss_audit_v1/tables/delta_reference_audit.csv
+    relative_path: tables/delta_reference_audit.csv
+    size_bytes: 709
+    modified_iso: '2026-04-24T21:59:17'
+  - phase: gaira_base_4_diabetes_ev_bsv_mss_audit_v1
+    kind: tables
+    extension: .csv
+    name: leakage_audit.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_bsv_mss_audit_v1/tables/leakage_audit.csv
+    relative_path: tables/leakage_audit.csv
+    size_bytes: 307
+    modified_iso: '2026-04-24T21:59:17'
+  - phase: gaira_base_4_diabetes_ev_bsv_mss_audit_v1
+    kind: tables
+    extension: .csv
+    name: comparison_table.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_bsv_mss_audit_v1/tables/comparison_table.csv
+    relative_path: tables/comparison_table.csv
+    size_bytes: 1059
+    modified_iso: '2026-04-24T21:59:17'
+  - phase: gaira_base_4_diabetes_ev_bsv_mss_audit_v1
+    kind: tables
+    extension: .csv
+    name: auroc_jump_decomposition.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_bsv_mss_audit_v1/tables/auroc_jump_decomposition.csv
+    relative_path: tables/auroc_jump_decomposition.csv
+    size_bytes: 385
+    modified_iso: '2026-04-24T21:59:17'
+  - phase: gaira_base_4_diabetes_ev_bsv_mss_audit_v1
+    kind: tables
+    extension: .csv
+    name: variance_reduction_per_axis.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_bsv_mss_audit_v1/tables/variance_reduction_per_axis.csv
+    relative_path: tables/variance_reduction_per_axis.csv
+    size_bytes: 768
+    modified_iso: '2026-04-24T21:59:17'
+  - phase: gaira_base_4_diabetes_ev_bsv_mss_audit_v1
+    kind: tables
+    extension: .csv
+    name: feature_stability.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_bsv_mss_audit_v1/tables/feature_stability.csv
+    relative_path: tables/feature_stability.csv
+    size_bytes: 649
+    modified_iso: '2026-04-24T21:59:17'
+  - phase: gaira_base_4_diabetes_ev_bsv_mss_audit_v1
+    kind: figures
+    extension: .png
+    name: fig_auroc_all_pipelines.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_bsv_mss_audit_v1/figures/fig_auroc_all_pipelines.png
+    relative_path: figures/fig_auroc_all_pipelines.png
+    size_bytes: 86009
+    modified_iso: '2026-04-24T21:59:18'
+  - phase: gaira_base_4_diabetes_ev_bsv_mss_audit_v1
+    kind: figures
+    extension: .png
+    name: fig_fold_variance.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_bsv_mss_audit_v1/figures/fig_fold_variance.png
+    relative_path: figures/fig_fold_variance.png
+    size_bytes: 69213
+    modified_iso: '2026-04-24T21:59:18'
+  - phase: gaira_base_4_diabetes_ev_bsv_mss_audit_v1
+    kind: figures
+    extension: .png
+    name: fig_feature_stability.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_bsv_mss_audit_v1/figures/fig_feature_stability.png
+    relative_path: figures/fig_feature_stability.png
+    size_bytes: 34395
+    modified_iso: '2026-04-24T21:59:18'
+  - phase: gaira_base_4_diabetes_ev_bsv_mss_audit_v1
+    kind: reports
+    extension: .md
+    name: REPORT_diabetes_ev_bsv_mss_audit_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_bsv_mss_audit_v1/reports/REPORT_diabetes_ev_bsv_mss_audit_v1.md
+    relative_path: reports/REPORT_diabetes_ev_bsv_mss_audit_v1.md
+    size_bytes: 5107
+    modified_iso: '2026-04-24T21:59:18'
+  - phase: gaira_base_4_diabetes_ev_bsv_mss_audit_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_diabetes_ev_bsv_mss_audit_v1_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_bsv_mss_audit_v1/audit/gaira_base_4_diabetes_ev_bsv_mss_audit_v1_audit_log.md
+    relative_path: audit/gaira_base_4_diabetes_ev_bsv_mss_audit_v1_audit_log.md
+    size_bytes: 959
+    modified_iso: '2026-04-24T21:59:18'
+  gaira_base_4_diabetes_ev_pilot_v1:
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: dataset_inventory.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/dataset_inventory.csv
+    relative_path: tables/dataset_inventory.csv
+    size_bytes: 729
+    modified_iso: '2026-04-24T21:57:26'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: label_mapping_audit.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/label_mapping_audit.csv
+    relative_path: tables/label_mapping_audit.csv
+    size_bytes: 5800
+    modified_iso: '2026-04-24T21:57:26'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: per_spectrum_bsv.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/per_spectrum_bsv.csv
+    relative_path: tables/per_spectrum_bsv.csv
+    size_bytes: 3529460
+    modified_iso: '2026-04-24T10:39:26'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: cohort_bsv_means.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/cohort_bsv_means.csv
+    relative_path: tables/cohort_bsv_means.csv
+    size_bytes: 1660
+    modified_iso: '2026-04-24T10:39:26'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: binary_owd_vs_nwd_effects.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/binary_owd_vs_nwd_effects.csv
+    relative_path: tables/binary_owd_vs_nwd_effects.csv
+    size_bytes: 1716
+    modified_iso: '2026-04-24T10:39:26'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: cluster_quality_metrics.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/cluster_quality_metrics.csv
+    relative_path: tables/cluster_quality_metrics.csv
+    size_bytes: 990
+    modified_iso: '2026-04-24T10:40:23'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: latent_cluster_assignments.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/latent_cluster_assignments.csv
+    relative_path: tables/latent_cluster_assignments.csv
+    size_bytes: 736239
+    modified_iso: '2026-04-24T10:40:25'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: cluster_stability_metrics.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/cluster_stability_metrics.csv
+    relative_path: tables/cluster_stability_metrics.csv
+    size_bytes: 683
+    modified_iso: '2026-04-24T10:40:25'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: paper_region_peak_features.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/paper_region_peak_features.csv
+    relative_path: tables/paper_region_peak_features.csv
+    size_bytes: 2209234
+    modified_iso: '2026-04-24T10:40:27'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: paper_region_binary_effects.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/paper_region_binary_effects.csv
+    relative_path: tables/paper_region_binary_effects.csv
+    size_bytes: 1257
+    modified_iso: '2026-04-24T10:40:27'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: paper_region_cluster_means_within_group.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/paper_region_cluster_means_within_group.csv
+    relative_path: tables/paper_region_cluster_means_within_group.csv
+    size_bytes: 3515
+    modified_iso: '2026-04-24T10:40:27'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: classifier_performance.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/classifier_performance.csv
+    relative_path: tables/classifier_performance.csv
+    size_bytes: 1392
+    modified_iso: '2026-04-24T10:40:57'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: classifier_confusion_matrices.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/classifier_confusion_matrices.csv
+    relative_path: tables/classifier_confusion_matrices.csv
+    size_bytes: 506
+    modified_iso: '2026-04-24T10:40:57'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: classifier_feature_importance.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/classifier_feature_importance.csv
+    relative_path: tables/classifier_feature_importance.csv
+    size_bytes: 97446
+    modified_iso: '2026-04-24T10:40:57'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: mss_per_spectrum.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/mss_per_spectrum.csv
+    relative_path: tables/mss_per_spectrum.csv
+    size_bytes: 878449
+    modified_iso: '2026-04-24T10:41:28'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: tables
+    extension: .csv
+    name: mss_top_hits_by_condition.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/tables/mss_top_hits_by_condition.csv
+    relative_path: tables/mss_top_hits_by_condition.csv
+    size_bytes: 817
+    modified_iso: '2026-04-24T10:41:28'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_radar_owd_vs_nwd.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/figures/fig_radar_owd_vs_nwd.png
+    relative_path: figures/fig_radar_owd_vs_nwd.png
+    size_bytes: 235904
+    modified_iso: '2026-04-24T10:39:26'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_heatmap_owd_vs_nwd_cohens_d.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/figures/fig_heatmap_owd_vs_nwd_cohens_d.png
+    relative_path: figures/fig_heatmap_owd_vs_nwd_cohens_d.png
+    size_bytes: 45966
+    modified_iso: '2026-04-24T10:39:27'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_pca_latent_clusters.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/figures/fig_pca_latent_clusters.png
+    relative_path: figures/fig_pca_latent_clusters.png
+    size_bytes: 575508
+    modified_iso: '2026-04-24T10:40:25'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: reports
+    extension: .md
+    name: REPORT_diabetes_ev_gaira_pilot_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/reports/REPORT_diabetes_ev_gaira_pilot_v1.md
+    relative_path: reports/REPORT_diabetes_ev_gaira_pilot_v1.md
+    size_bytes: 5554
+    modified_iso: '2026-04-24T10:42:27'
+  - phase: gaira_base_4_diabetes_ev_pilot_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_diabetes_ev_pilot_v1_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_pilot_v1/audit/gaira_base_4_diabetes_ev_pilot_v1_audit_log.md
+    relative_path: audit/gaira_base_4_diabetes_ev_pilot_v1_audit_log.md
+    size_bytes: 2165
+    modified_iso: '2026-04-24T10:42:53'
+  gaira_base_4_diabetes_ev_mss_classifier_v2:
+  - phase: gaira_base_4_diabetes_ev_mss_classifier_v2
+    kind: tables
+    extension: .csv
+    name: per_spectrum_mss_full_score_matrix_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_mss_classifier_v2/tables/per_spectrum_mss_full_score_matrix_v2.csv
+    relative_path: tables/per_spectrum_mss_full_score_matrix_v2.csv
+    size_bytes: 1653984
+    modified_iso: '2026-04-24T20:27:35'
+  - phase: gaira_base_4_diabetes_ev_mss_classifier_v2
+    kind: tables
+    extension: .csv
+    name: classifier_comparison_mss_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_mss_classifier_v2/tables/classifier_comparison_mss_v1.csv
+    relative_path: tables/classifier_comparison_mss_v1.csv
+    size_bytes: 2389
+    modified_iso: '2026-04-24T20:27:49'
+  - phase: gaira_base_4_diabetes_ev_mss_classifier_v2
+    kind: tables
+    extension: .csv
+    name: classifier_confusion_matrices_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_mss_classifier_v2/tables/classifier_confusion_matrices_v1.csv
+    relative_path: tables/classifier_confusion_matrices_v1.csv
+    size_bytes: 790
+    modified_iso: '2026-04-24T20:27:49'
+  - phase: gaira_base_4_diabetes_ev_mss_classifier_v2
+    kind: tables
+    extension: .csv
+    name: mss_feature_importance_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_mss_classifier_v2/tables/mss_feature_importance_v1.csv
+    relative_path: tables/mss_feature_importance_v1.csv
+    size_bytes: 10483
+    modified_iso: '2026-04-24T20:27:49'
+  - phase: gaira_base_4_diabetes_ev_mss_classifier_v2
+    kind: figures
+    extension: .png
+    name: fig_auroc_comparison_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_mss_classifier_v2/figures/fig_auroc_comparison_v1.png
+    relative_path: figures/fig_auroc_comparison_v1.png
+    size_bytes: 62068
+    modified_iso: '2026-04-24T20:27:49'
+  - phase: gaira_base_4_diabetes_ev_mss_classifier_v2
+    kind: figures
+    extension: .png
+    name: fig_mss_feature_importance_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_mss_classifier_v2/figures/fig_mss_feature_importance_v1.png
+    relative_path: figures/fig_mss_feature_importance_v1.png
+    size_bytes: 77130
+    modified_iso: '2026-04-24T20:27:49'
+  - phase: gaira_base_4_diabetes_ev_mss_classifier_v2
+    kind: figures
+    extension: .png
+    name: fig_patient_pca_mss_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_mss_classifier_v2/figures/fig_patient_pca_mss_v1.png
+    relative_path: figures/fig_patient_pca_mss_v1.png
+    size_bytes: 49625
+    modified_iso: '2026-04-24T20:27:50'
+  - phase: gaira_base_4_diabetes_ev_mss_classifier_v2
+    kind: reports
+    extension: .md
+    name: REPORT_diabetes_ev_mss_classifier_v2.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_diabetes_ev_mss_classifier_v2/reports/REPORT_diabetes_ev_mss_classifier_v2.md
+    relative_path: reports/REPORT_diabetes_ev_mss_classifier_v2.md
+    size_bytes: 3245
+    modified_iso: '2026-04-24T20:27:50'
+  gaira_base_4_shine_ev_gaira_pilot_v1:
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_ingestion_inventory_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_ingestion_inventory_v1.csv
+    relative_path: tables/shine_ingestion_inventory_v1.csv
+    size_bytes: 3325728
+    modified_iso: '2026-04-24T08:39:48'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_wavenumber_calibration_qc_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_wavenumber_calibration_qc_v1.csv
+    relative_path: tables/shine_wavenumber_calibration_qc_v1.csv
+    size_bytes: 243
+    modified_iso: '2026-04-24T08:39:48'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_preprocessing_qc_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_preprocessing_qc_v1.csv
+    relative_path: tables/shine_preprocessing_qc_v1.csv
+    size_bytes: 536257
+    modified_iso: '2026-04-24T08:40:23'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_qc_summary_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_qc_summary_v1.csv
+    relative_path: tables/shine_qc_summary_v1.csv
+    size_bytes: 17
+    modified_iso: '2026-04-24T08:40:23'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_exclusion_log_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_exclusion_log_v1.csv
+    relative_path: tables/shine_exclusion_log_v1.csv
+    size_bytes: 58
+    modified_iso: '2026-04-24T08:40:23'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_per_spectrum_bsv_outputs_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_per_spectrum_bsv_outputs_v1.csv
+    relative_path: tables/shine_per_spectrum_bsv_outputs_v1.csv
+    size_bytes: 3381533
+    modified_iso: '2026-04-24T08:40:45'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_family_axis_hits_per_condition_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_family_axis_hits_per_condition_v1.csv
+    relative_path: tables/shine_family_axis_hits_per_condition_v1.csv
+    size_bytes: 3625
+    modified_iso: '2026-04-24T08:40:45'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_cohort_bsv_means_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_cohort_bsv_means_v1.csv
+    relative_path: tables/shine_cohort_bsv_means_v1.csv
+    size_bytes: 9538
+    modified_iso: '2026-04-24T08:40:45'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_delta_bsv_summaries_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_delta_bsv_summaries_v1.csv
+    relative_path: tables/shine_delta_bsv_summaries_v1.csv
+    size_bytes: 30247
+    modified_iso: '2026-04-24T08:40:45'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_effect_sizes_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_effect_sizes_v1.csv
+    relative_path: tables/shine_effect_sizes_v1.csv
+    size_bytes: 3616
+    modified_iso: '2026-04-24T08:40:45'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_bsv_dose_response_metrics_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_bsv_dose_response_metrics_v1.csv
+    relative_path: tables/shine_bsv_dose_response_metrics_v1.csv
+    size_bytes: 3786
+    modified_iso: '2026-04-24T08:40:45'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_set9_set10_transfer_metrics_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_set9_set10_transfer_metrics_v1.csv
+    relative_path: tables/shine_set9_set10_transfer_metrics_v1.csv
+    size_bytes: 3397
+    modified_iso: '2026-04-24T08:40:45'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_mss_top_hits_per_spectrum_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_mss_top_hits_per_spectrum_v1.csv
+    relative_path: tables/shine_mss_top_hits_per_spectrum_v1.csv
+    size_bytes: 964950
+    modified_iso: '2026-04-24T08:41:08'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_mss_top_hits_by_condition_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_mss_top_hits_by_condition_v1.csv
+    relative_path: tables/shine_mss_top_hits_by_condition_v1.csv
+    size_bytes: 14331
+    modified_iso: '2026-04-24T08:41:08'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_mss_score_effects_by_condition_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_mss_score_effects_by_condition_v1.csv
+    relative_path: tables/shine_mss_score_effects_by_condition_v1.csv
+    size_bytes: 428
+    modified_iso: '2026-04-24T08:41:08'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_otc_drug_detection_per_spectrum_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_otc_drug_detection_per_spectrum_v1.csv
+    relative_path: tables/shine_otc_drug_detection_per_spectrum_v1.csv
+    size_bytes: 1155239
+    modified_iso: '2026-04-24T08:41:15'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_otc_drug_detection_by_condition_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_otc_drug_detection_by_condition_v1.csv
+    relative_path: tables/shine_otc_drug_detection_by_condition_v1.csv
+    size_bytes: 2081
+    modified_iso: '2026-04-24T08:41:15'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: tables
+    extension: .csv
+    name: shine_paracetamol_like_score_dose_response_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/tables/shine_paracetamol_like_score_dose_response_v1.csv
+    relative_path: tables/shine_paracetamol_like_score_dose_response_v1.csv
+    size_bytes: 391
+    modified_iso: '2026-04-24T08:41:15'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_mean_preprocessed_spectra_by_day_dose_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/figures/fig_shine_mean_preprocessed_spectra_by_day_dose_v1.png
+    relative_path: figures/fig_shine_mean_preprocessed_spectra_by_day_dose_v1.png
+    size_bytes: 243263
+    modified_iso: '2026-04-24T08:41:15'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_bsv_dose_response_all_axes_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/figures/fig_shine_bsv_dose_response_all_axes_v1.png
+    relative_path: figures/fig_shine_bsv_dose_response_all_axes_v1.png
+    size_bytes: 134250
+    modified_iso: '2026-04-24T08:41:15'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_delta_bsv_monotonicity_heatmap_Set10_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/figures/fig_shine_delta_bsv_monotonicity_heatmap_Set10_v1.png
+    relative_path: figures/fig_shine_delta_bsv_monotonicity_heatmap_Set10_v1.png
+    size_bytes: 32519
+    modified_iso: '2026-04-24T08:41:16'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_delta_bsv_monotonicity_heatmap_Set9_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/figures/fig_shine_delta_bsv_monotonicity_heatmap_Set9_v1.png
+    relative_path: figures/fig_shine_delta_bsv_monotonicity_heatmap_Set9_v1.png
+    size_bytes: 53000
+    modified_iso: '2026-04-24T08:41:16'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_d2_bsv_radar_by_dose_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/figures/fig_shine_d2_bsv_radar_by_dose_v1.png
+    relative_path: figures/fig_shine_d2_bsv_radar_by_dose_v1.png
+    size_bytes: 251186
+    modified_iso: '2026-04-24T08:41:16'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_d2_delta_bsv_radar_by_dose_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/figures/fig_shine_d2_delta_bsv_radar_by_dose_v1.png
+    relative_path: figures/fig_shine_d2_delta_bsv_radar_by_dose_v1.png
+    size_bytes: 207280
+    modified_iso: '2026-04-24T08:41:16'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_day0_vs_day2_radar_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/figures/fig_shine_day0_vs_day2_radar_v1.png
+    relative_path: figures/fig_shine_day0_vs_day2_radar_v1.png
+    size_bytes: 556950
+    modified_iso: '2026-04-24T08:41:16'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_set9_set10_d2_radar_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/figures/fig_shine_set9_set10_d2_radar_v1.png
+    relative_path: figures/fig_shine_set9_set10_d2_radar_v1.png
+    size_bytes: 582584
+    modified_iso: '2026-04-24T08:41:17'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_set9_set10_d2_transfer_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/figures/fig_shine_set9_set10_d2_transfer_v1.png
+    relative_path: figures/fig_shine_set9_set10_d2_transfer_v1.png
+    size_bytes: 36491
+    modified_iso: '2026-04-24T08:41:17'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_mss_top_hits_by_condition_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/figures/fig_shine_mss_top_hits_by_condition_v1.png
+    relative_path: figures/fig_shine_mss_top_hits_by_condition_v1.png
+    size_bytes: 37349
+    modified_iso: '2026-04-24T08:41:17'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_otc_detection_status_by_condition_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/figures/fig_shine_otc_detection_status_by_condition_v1.png
+    relative_path: figures/fig_shine_otc_detection_status_by_condition_v1.png
+    size_bytes: 45862
+    modified_iso: '2026-04-24T08:41:17'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_paracetamol_like_score_vs_dose_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/figures/fig_shine_paracetamol_like_score_vs_dose_v1.png
+    relative_path: figures/fig_shine_paracetamol_like_score_vs_dose_v1.png
+    size_bytes: 84587
+    modified_iso: '2026-04-24T08:41:17'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_raw_vs_bsv_pca_day_dose_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/figures/fig_shine_raw_vs_bsv_pca_day_dose_v1.png
+    relative_path: figures/fig_shine_raw_vs_bsv_pca_day_dose_v1.png
+    size_bytes: 815763
+    modified_iso: '2026-04-24T08:41:17'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: reports
+    extension: .md
+    name: REPORT_shine_ev_gaira_pilot_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/reports/REPORT_shine_ev_gaira_pilot_v1.md
+    relative_path: reports/REPORT_shine_ev_gaira_pilot_v1.md
+    size_bytes: 3806
+    modified_iso: '2026-04-24T08:41:17'
+  - phase: gaira_base_4_shine_ev_gaira_pilot_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_shine_ev_gaira_pilot_v1_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_ev_gaira_pilot_v1/audit/gaira_base_4_shine_ev_gaira_pilot_v1_audit_log.md
+    relative_path: audit/gaira_base_4_shine_ev_gaira_pilot_v1_audit_log.md
+    size_bytes: 2243
+    modified_iso: '2026-04-24T08:41:17'
+  gaira_base_4_shine_regression_progression_v1:
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: tables
+    extension: .csv
+    name: shine_regression_input_audit_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/tables/shine_regression_input_audit_v1.csv
+    relative_path: tables/shine_regression_input_audit_v1.csv
+    size_bytes: 415
+    modified_iso: '2026-04-24T09:21:39'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: tables
+    extension: .csv
+    name: shine_bsv_regression_performance_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/tables/shine_bsv_regression_performance_v1.csv
+    relative_path: tables/shine_bsv_regression_performance_v1.csv
+    size_bytes: 11068
+    modified_iso: '2026-04-24T09:33:41'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: tables
+    extension: .csv
+    name: shine_bsv_regression_predictions_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/tables/shine_bsv_regression_predictions_v1.csv
+    relative_path: tables/shine_bsv_regression_predictions_v1.csv
+    size_bytes: 10282845
+    modified_iso: '2026-04-24T09:33:41'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: tables
+    extension: .csv
+    name: shine_paper_vs_gaira_regression_comparison_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/tables/shine_paper_vs_gaira_regression_comparison_v1.csv
+    relative_path: tables/shine_paper_vs_gaira_regression_comparison_v1.csv
+    size_bytes: 607
+    modified_iso: '2026-04-24T09:33:42'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: tables
+    extension: .csv
+    name: shine_axis_progression_metrics_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/tables/shine_axis_progression_metrics_v1.csv
+    relative_path: tables/shine_axis_progression_metrics_v1.csv
+    size_bytes: 23131
+    modified_iso: '2026-04-24T09:33:43'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: tables
+    extension: .csv
+    name: shine_mss_analyte_progression_metrics_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/tables/shine_mss_analyte_progression_metrics_v1.csv
+    relative_path: tables/shine_mss_analyte_progression_metrics_v1.csv
+    size_bytes: 4144
+    modified_iso: '2026-04-24T09:33:44'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: tables
+    extension: .csv
+    name: shine_mss_cluster_progression_metrics_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/tables/shine_mss_cluster_progression_metrics_v1.csv
+    relative_path: tables/shine_mss_cluster_progression_metrics_v1.csv
+    size_bytes: 2086
+    modified_iso: '2026-04-24T09:33:44'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: tables
+    extension: .csv
+    name: shine_otc_candidate_progression_metrics_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/tables/shine_otc_candidate_progression_metrics_v1.csv
+    relative_path: tables/shine_otc_candidate_progression_metrics_v1.csv
+    size_bytes: 2813
+    modified_iso: '2026-04-24T09:33:45'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: tables
+    extension: .csv
+    name: shine_paracetamol_like_progression_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/tables/shine_paracetamol_like_progression_v1.csv
+    relative_path: tables/shine_paracetamol_like_progression_v1.csv
+    size_bytes: 619
+    modified_iso: '2026-04-24T09:33:45'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: tables
+    extension: .csv
+    name: shine_integrated_feature_regression_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/tables/shine_integrated_feature_regression_v1.csv
+    relative_path: tables/shine_integrated_feature_regression_v1.csv
+    size_bytes: 5372
+    modified_iso: '2026-04-24T09:44:40'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: tables
+    extension: .csv
+    name: shine_regression_feature_importance_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/tables/shine_regression_feature_importance_v1.csv
+    relative_path: tables/shine_regression_feature_importance_v1.csv
+    size_bytes: 3391
+    modified_iso: '2026-04-24T09:44:46'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_bsv_regression_predicted_vs_actual_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/figures/fig_shine_bsv_regression_predicted_vs_actual_v1.png
+    relative_path: figures/fig_shine_bsv_regression_predicted_vs_actual_v1.png
+    size_bytes: 139185
+    modified_iso: '2026-04-24T09:33:42'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_bsv_regression_bland_altman_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/figures/fig_shine_bsv_regression_bland_altman_v1.png
+    relative_path: figures/fig_shine_bsv_regression_bland_altman_v1.png
+    size_bytes: 64301
+    modified_iso: '2026-04-24T09:33:42'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_paper_vs_gaira_regression_summary_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/figures/fig_shine_paper_vs_gaira_regression_summary_v1.png
+    relative_path: figures/fig_shine_paper_vs_gaira_regression_summary_v1.png
+    size_bytes: 59733
+    modified_iso: '2026-04-24T09:33:42'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_axis_progression_top_axes_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/figures/fig_shine_axis_progression_top_axes_v1.png
+    relative_path: figures/fig_shine_axis_progression_top_axes_v1.png
+    size_bytes: 208623
+    modified_iso: '2026-04-24T09:33:44'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_axis_progression_day_comparison_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/figures/fig_shine_axis_progression_day_comparison_v1.png
+    relative_path: figures/fig_shine_axis_progression_day_comparison_v1.png
+    size_bytes: 132016
+    modified_iso: '2026-04-24T09:33:44'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_mss_candidate_progression_top_hits_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/figures/fig_shine_mss_candidate_progression_top_hits_v1.png
+    relative_path: figures/fig_shine_mss_candidate_progression_top_hits_v1.png
+    size_bytes: 335195
+    modified_iso: '2026-04-24T09:33:44'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_mss_cluster_progression_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/figures/fig_shine_mss_cluster_progression_v1.png
+    relative_path: figures/fig_shine_mss_cluster_progression_v1.png
+    size_bytes: 330293
+    modified_iso: '2026-04-24T09:33:45'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_otc_candidate_rate_by_day_dose_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/figures/fig_shine_otc_candidate_rate_by_day_dose_v1.png
+    relative_path: figures/fig_shine_otc_candidate_rate_by_day_dose_v1.png
+    size_bytes: 97643
+    modified_iso: '2026-04-24T09:33:45'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_paracetamol_like_score_by_day_dose_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/figures/fig_shine_paracetamol_like_score_by_day_dose_v1.png
+    relative_path: figures/fig_shine_paracetamol_like_score_by_day_dose_v1.png
+    size_bytes: 98570
+    modified_iso: '2026-04-24T09:33:45'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_otc_status_stacked_bar_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/figures/fig_shine_otc_status_stacked_bar_v1.png
+    relative_path: figures/fig_shine_otc_status_stacked_bar_v1.png
+    size_bytes: 44628
+    modified_iso: '2026-04-24T09:33:45'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_integrated_feature_regression_comparison_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/figures/fig_shine_integrated_feature_regression_comparison_v1.png
+    relative_path: figures/fig_shine_integrated_feature_regression_comparison_v1.png
+    size_bytes: 56552
+    modified_iso: '2026-04-24T09:44:41'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: figures
+    extension: .png
+    name: fig_shine_regression_feature_importance_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/figures/fig_shine_regression_feature_importance_v1.png
+    relative_path: figures/fig_shine_regression_feature_importance_v1.png
+    size_bytes: 76791
+    modified_iso: '2026-04-24T09:44:46'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: reports
+    extension: .md
+    name: REPORT_shine_regression_progression_analysis_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/reports/REPORT_shine_regression_progression_analysis_v1.md
+    relative_path: reports/REPORT_shine_regression_progression_analysis_v1.md
+    size_bytes: 5647
+    modified_iso: '2026-04-24T09:46:52'
+  - phase: gaira_base_4_shine_regression_progression_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_shine_regression_progression_v1_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_shine_regression_progression_v1/audit/gaira_base_4_shine_regression_progression_v1_audit_log.md
+    relative_path: audit/gaira_base_4_shine_regression_progression_v1_audit_log.md
+    size_bytes: 2226
+    modified_iso: '2026-04-24T09:47:17'
+  gaira_base_4_small_ev_shared_structure_pass_v2:
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: tables
+    extension: .csv
+    name: bsv_pca_axis_loadings_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/tables/bsv_pca_axis_loadings_v2.csv
+    relative_path: tables/bsv_pca_axis_loadings_v2.csv
+    size_bytes: 1969
+    modified_iso: '2026-04-24T00:50:21'
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: tables
+    extension: .csv
+    name: axis_rank_comparison_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/tables/axis_rank_comparison_v2.csv
+    relative_path: tables/axis_rank_comparison_v2.csv
+    size_bytes: 2278
+    modified_iso: '2026-04-24T00:50:21'
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: tables
+    extension: .csv
+    name: top_axis_overlap_probe1_probe2_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/tables/top_axis_overlap_probe1_probe2_v2.csv
+    relative_path: tables/top_axis_overlap_probe1_probe2_v2.csv
+    size_bytes: 848
+    modified_iso: '2026-04-24T00:50:21'
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: tables
+    extension: .csv
+    name: axis_overlap_summary_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/tables/axis_overlap_summary_v2.csv
+    relative_path: tables/axis_overlap_summary_v2.csv
+    size_bytes: 287
+    modified_iso: '2026-04-24T00:50:21'
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: tables
+    extension: .csv
+    name: common_mss_candidates_shared_axes_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/tables/common_mss_candidates_shared_axes_v2.csv
+    relative_path: tables/common_mss_candidates_shared_axes_v2.csv
+    size_bytes: 2179
+    modified_iso: '2026-04-24T00:50:21'
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: tables
+    extension: .csv
+    name: mss_shared_axis_summary_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/tables/mss_shared_axis_summary_v2.csv
+    relative_path: tables/mss_shared_axis_summary_v2.csv
+    size_bytes: 167
+    modified_iso: '2026-04-24T00:50:21'
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: tables
+    extension: .csv
+    name: gaira_invariance_score_components_v2.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/tables/gaira_invariance_score_components_v2.csv
+    relative_path: tables/gaira_invariance_score_components_v2.csv
+    size_bytes: 795
+    modified_iso: '2026-04-24T00:50:21'
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: figures
+    extension: .png
+    name: fig_bsv_pca_axis_loadings_v2.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/figures/fig_bsv_pca_axis_loadings_v2.png
+    relative_path: figures/fig_bsv_pca_axis_loadings_v2.png
+    size_bytes: 84554
+    modified_iso: '2026-04-24T00:50:21'
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: figures
+    extension: .png
+    name: fig_axis_rank_overlap_v2.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/figures/fig_axis_rank_overlap_v2.png
+    relative_path: figures/fig_axis_rank_overlap_v2.png
+    size_bytes: 33874
+    modified_iso: '2026-04-24T00:50:21'
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: figures
+    extension: .png
+    name: fig_common_mss_candidates_shared_axes_v2.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/figures/fig_common_mss_candidates_shared_axes_v2.png
+    relative_path: figures/fig_common_mss_candidates_shared_axes_v2.png
+    size_bytes: 70686
+    modified_iso: '2026-04-24T00:50:21'
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: figures
+    extension: .png
+    name: fig_gaira_invariance_score_v2.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/figures/fig_gaira_invariance_score_v2.png
+    relative_path: figures/fig_gaira_invariance_score_v2.png
+    size_bytes: 57335
+    modified_iso: '2026-04-24T00:50:21'
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: figures
+    extension: .png
+    name: fig_small_ev_killer_cross_probe_gaira_summary_v2.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/figures/fig_small_ev_killer_cross_probe_gaira_summary_v2.png
+    relative_path: figures/fig_small_ev_killer_cross_probe_gaira_summary_v2.png
+    size_bytes: 639891
+    modified_iso: '2026-04-24T00:50:23'
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: reports
+    extension: .md
+    name: REPORT_small_ev_shared_structure_pass_v2.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/reports/REPORT_small_ev_shared_structure_pass_v2.md
+    relative_path: reports/REPORT_small_ev_shared_structure_pass_v2.md
+    size_bytes: 6021
+    modified_iso: '2026-04-24T00:50:23'
+  - phase: gaira_base_4_small_ev_shared_structure_pass_v2
+    kind: audit
+    extension: .md
+    name: gaira_base_4_small_ev_shared_structure_pass_v2_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_shared_structure_pass_v2/audit/gaira_base_4_small_ev_shared_structure_pass_v2_audit_log.md
+    relative_path: audit/gaira_base_4_small_ev_shared_structure_pass_v2_audit_log.md
+    size_bytes: 1491
+    modified_iso: '2026-04-24T00:50:23'
+  gaira_base_4_small_ev_dual_probe_analysis_v1:
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: tables
+    extension: .csv
+    name: pca_probe_separation_metric_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/tables/pca_probe_separation_metric_v1.csv
+    relative_path: tables/pca_probe_separation_metric_v1.csv
+    size_bytes: 114
+    modified_iso: '2026-04-24T00:16:09'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: tables
+    extension: .csv
+    name: bsv_trajectory_per_cohort_per_probe_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/tables/bsv_trajectory_per_cohort_per_probe_v1.csv
+    relative_path: tables/bsv_trajectory_per_cohort_per_probe_v1.csv
+    size_bytes: 10251
+    modified_iso: '2026-04-24T00:16:09'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: tables
+    extension: .csv
+    name: trajectory_correlation_table_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/tables/trajectory_correlation_table_v1.csv
+    relative_path: tables/trajectory_correlation_table_v1.csv
+    size_bytes: 2415
+    modified_iso: '2026-04-24T00:16:09'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: tables
+    extension: .csv
+    name: top_axes_probe1_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/tables/top_axes_probe1_v1.csv
+    relative_path: tables/top_axes_probe1_v1.csv
+    size_bytes: 1086
+    modified_iso: '2026-04-24T00:16:10'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: tables
+    extension: .csv
+    name: top_axes_probe2_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/tables/top_axes_probe2_v1.csv
+    relative_path: tables/top_axes_probe2_v1.csv
+    size_bytes: 1066
+    modified_iso: '2026-04-24T00:16:10'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: tables
+    extension: .csv
+    name: mss_effect_sizes_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/tables/mss_effect_sizes_v1.csv
+    relative_path: tables/mss_effect_sizes_v1.csv
+    size_bytes: 3334
+    modified_iso: '2026-04-24T00:16:54'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: tables
+    extension: .csv
+    name: mss_cross_probe_consistency_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/tables/mss_cross_probe_consistency_v1.csv
+    relative_path: tables/mss_cross_probe_consistency_v1.csv
+    size_bytes: 1015
+    modified_iso: '2026-04-24T00:16:54'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: tables
+    extension: .csv
+    name: mss_topk_frequency_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/tables/mss_topk_frequency_v1.csv
+    relative_path: tables/mss_topk_frequency_v1.csv
+    size_bytes: 9059
+    modified_iso: '2026-04-24T00:16:54'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_raw_vs_bsv_pca_probe_overlay_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/figures/fig_raw_vs_bsv_pca_probe_overlay_v1.png
+    relative_path: figures/fig_raw_vs_bsv_pca_probe_overlay_v1.png
+    size_bytes: 763279
+    modified_iso: '2026-04-24T00:16:09'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_trajectory_plots_all_axes_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/figures/fig_trajectory_plots_all_axes_v1.png
+    relative_path: figures/fig_trajectory_plots_all_axes_v1.png
+    size_bytes: 299364
+    modified_iso: '2026-04-24T00:16:09'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_trajectory_correlation_heatmap_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/figures/fig_trajectory_correlation_heatmap_v1.png
+    relative_path: figures/fig_trajectory_correlation_heatmap_v1.png
+    size_bytes: 75284
+    modified_iso: '2026-04-24T00:16:10'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_trajectory_top_molecules_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/figures/fig_mss_trajectory_top_molecules_v1.png
+    relative_path: figures/fig_mss_trajectory_top_molecules_v1.png
+    size_bytes: 262869
+    modified_iso: '2026-04-24T00:16:54'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_cross_probe_comparison_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/figures/fig_mss_cross_probe_comparison_v1.png
+    relative_path: figures/fig_mss_cross_probe_comparison_v1.png
+    size_bytes: 72211
+    modified_iso: '2026-04-24T00:16:54'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: reports
+    extension: .md
+    name: REPORT_small_ev_dual_probe_analysis_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/reports/REPORT_small_ev_dual_probe_analysis_v1.md
+    relative_path: reports/REPORT_small_ev_dual_probe_analysis_v1.md
+    size_bytes: 2856
+    modified_iso: '2026-04-24T00:16:54'
+  - phase: gaira_base_4_small_ev_dual_probe_analysis_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_small_ev_dual_probe_analysis_v1_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_small_ev_dual_probe_analysis_v1/audit/gaira_base_4_small_ev_dual_probe_analysis_v1_audit_log.md
+    relative_path: audit/gaira_base_4_small_ev_dual_probe_analysis_v1_audit_log.md
+    size_bytes: 1412
+    modified_iso: '2026-04-24T00:16:54'
+  gaira_base_4_otc_pure_raman_mss_build_v1:
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: tables
+    extension: .csv
+    name: otc_file_inventory.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/tables/otc_file_inventory.csv
+    relative_path: tables/otc_file_inventory.csv
+    size_bytes: 1493
+    modified_iso: '2026-04-24T01:33:39'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: tables
+    extension: .csv
+    name: otc_spectrum_metadata.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/tables/otc_spectrum_metadata.csv
+    relative_path: tables/otc_spectrum_metadata.csv
+    size_bytes: 64920
+    modified_iso: '2026-04-24T01:33:46'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: tables
+    extension: .csv
+    name: otc_qc_summary.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/tables/otc_qc_summary.csv
+    relative_path: tables/otc_qc_summary.csv
+    size_bytes: 41289
+    modified_iso: '2026-04-24T01:33:49'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: tables
+    extension: .csv
+    name: otc_peak_per_spectrum.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/tables/otc_peak_per_spectrum.csv
+    relative_path: tables/otc_peak_per_spectrum.csv
+    size_bytes: 181280
+    modified_iso: '2026-04-24T01:33:49'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: tables
+    extension: .csv
+    name: otc_peak_statistics_by_molecule.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/tables/otc_peak_statistics_by_molecule.csv
+    relative_path: tables/otc_peak_statistics_by_molecule.csv
+    size_bytes: 15916
+    modified_iso: '2026-04-24T01:33:49'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: tables
+    extension: .csv
+    name: otc_anchor_companion_candidates.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/tables/otc_anchor_companion_candidates.csv
+    relative_path: tables/otc_anchor_companion_candidates.csv
+    size_bytes: 18763
+    modified_iso: '2026-04-24T01:33:49'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: tables
+    extension: .csv
+    name: otc_collision_matrix.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/tables/otc_collision_matrix.csv
+    relative_path: tables/otc_collision_matrix.csv
+    size_bytes: 2902
+    modified_iso: '2026-04-24T01:33:49'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: tables
+    extension: .csv
+    name: otc_mss_validation_pure.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/tables/otc_mss_validation_pure.csv
+    relative_path: tables/otc_mss_validation_pure.csv
+    size_bytes: 15515
+    modified_iso: '2026-04-24T01:33:49'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: tables
+    extension: .csv
+    name: otc_mss_validation_trademark.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/tables/otc_mss_validation_trademark.csv
+    relative_path: tables/otc_mss_validation_trademark.csv
+    size_bytes: 16833
+    modified_iso: '2026-04-24T01:33:49'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: tables
+    extension: .csv
+    name: otc_mss_validation_trademark_per_brand.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/tables/otc_mss_validation_trademark_per_brand.csv
+    relative_path: tables/otc_mss_validation_trademark_per_brand.csv
+    size_bytes: 141
+    modified_iso: '2026-04-24T01:33:49'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: tables
+    extension: .csv
+    name: otc_false_positive_rates.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/tables/otc_false_positive_rates.csv
+    relative_path: tables/otc_false_positive_rates.csv
+    size_bytes: 105
+    modified_iso: '2026-04-24T01:33:49'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: tables
+    extension: .csv
+    name: otc_confusion_matrix_pure.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/tables/otc_confusion_matrix_pure.csv
+    relative_path: tables/otc_confusion_matrix_pure.csv
+    size_bytes: 300
+    modified_iso: '2026-04-24T01:33:49'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: tables
+    extension: .csv
+    name: otc_confusion_matrix_trademark.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/tables/otc_confusion_matrix_trademark.csv
+    relative_path: tables/otc_confusion_matrix_trademark.csv
+    size_bytes: 300
+    modified_iso: '2026-04-24T01:33:49'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: figures
+    extension: .png
+    name: fig_mean_spectra_per_molecule.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/figures/fig_mean_spectra_per_molecule.png
+    relative_path: figures/fig_mean_spectra_per_molecule.png
+    size_bytes: 190379
+    modified_iso: '2026-04-24T01:33:50'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: figures
+    extension: .png
+    name: fig_pure_vs_trademark_overlays.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/figures/fig_pure_vs_trademark_overlays.png
+    relative_path: figures/fig_pure_vs_trademark_overlays.png
+    size_bytes: 153184
+    modified_iso: '2026-04-24T01:33:51'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: figures
+    extension: .png
+    name: fig_peak_frequency_map.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/figures/fig_peak_frequency_map.png
+    relative_path: figures/fig_peak_frequency_map.png
+    size_bytes: 91764
+    modified_iso: '2026-04-24T01:33:51'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: figures
+    extension: .png
+    name: fig_peak_collision_heatmap.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/figures/fig_peak_collision_heatmap.png
+    relative_path: figures/fig_peak_collision_heatmap.png
+    size_bytes: 67863
+    modified_iso: '2026-04-24T01:33:51'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_confusion_matrices.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/figures/fig_mss_confusion_matrices.png
+    relative_path: figures/fig_mss_confusion_matrices.png
+    size_bytes: 63589
+    modified_iso: '2026-04-24T01:33:52'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: figures
+    extension: .png
+    name: fig_anchor_companion_schematic.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/figures/fig_anchor_companion_schematic.png
+    relative_path: figures/fig_anchor_companion_schematic.png
+    size_bytes: 37172
+    modified_iso: '2026-04-24T01:33:52'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: reports
+    extension: .md
+    name: OTC_MSS_TEMPLATE_SUMMARY.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/reports/OTC_MSS_TEMPLATE_SUMMARY.md
+    relative_path: reports/OTC_MSS_TEMPLATE_SUMMARY.md
+    size_bytes: 2245
+    modified_iso: '2026-04-24T01:33:52'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: reports
+    extension: .md
+    name: OTC_VALIDATION_ASSESSMENT.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/reports/OTC_VALIDATION_ASSESSMENT.md
+    relative_path: reports/OTC_VALIDATION_ASSESSMENT.md
+    size_bytes: 665
+    modified_iso: '2026-04-24T01:33:52'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: reports
+    extension: .md
+    name: REPORT_otc_pure_raman_mss_build_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/reports/REPORT_otc_pure_raman_mss_build_v1.md
+    relative_path: reports/REPORT_otc_pure_raman_mss_build_v1.md
+    size_bytes: 2840
+    modified_iso: '2026-04-24T01:33:52'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_otc_pure_raman_mss_build_v1_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/audit/gaira_base_4_otc_pure_raman_mss_build_v1_audit_log.md
+    relative_path: audit/gaira_base_4_otc_pure_raman_mss_build_v1_audit_log.md
+    size_bytes: 1297
+    modified_iso: '2026-04-24T01:33:52'
+  - phase: gaira_base_4_otc_pure_raman_mss_build_v1
+    kind: registry
+    extension: .csv
+    name: otc_pure_raman_mss_registry_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_pure_raman_mss_build_v1/registry/otc_pure_raman_mss_registry_v1.csv
+    relative_path: registry/otc_pure_raman_mss_registry_v1.csv
+    size_bytes: 1647
+    modified_iso: '2026-04-24T01:33:49'
+  gaira_base_4_otc_bsv_mss_analysis_v1:
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: tables
+    extension: .csv
+    name: bsv_matrix_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/tables/bsv_matrix_v1.csv
+    relative_path: tables/bsv_matrix_v1.csv
+    size_bytes: 137334
+    modified_iso: '2026-04-24T01:47:13'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: tables
+    extension: .csv
+    name: clustering_metrics_raw_vs_bsv_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/tables/clustering_metrics_raw_vs_bsv_v1.csv
+    relative_path: tables/clustering_metrics_raw_vs_bsv_v1.csv
+    size_bytes: 498
+    modified_iso: '2026-04-24T01:47:13'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: tables
+    extension: .csv
+    name: axis_importance_ranking_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/tables/axis_importance_ranking_v1.csv
+    relative_path: tables/axis_importance_ranking_v1.csv
+    size_bytes: 1913
+    modified_iso: '2026-04-24T01:47:13'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: tables
+    extension: .csv
+    name: per_axis_variance_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/tables/per_axis_variance_v1.csv
+    relative_path: tables/per_axis_variance_v1.csv
+    size_bytes: 1990
+    modified_iso: '2026-04-24T01:47:13'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: tables
+    extension: .csv
+    name: subspace_clustering_metrics_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/tables/subspace_clustering_metrics_v1.csv
+    relative_path: tables/subspace_clustering_metrics_v1.csv
+    size_bytes: 155
+    modified_iso: '2026-04-24T01:47:14'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: tables
+    extension: .csv
+    name: per_molecule_per_variant_per_axis_mean_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/tables/per_molecule_per_variant_per_axis_mean_v1.csv
+    relative_path: tables/per_molecule_per_variant_per_axis_mean_v1.csv
+    size_bytes: 2740
+    modified_iso: '2026-04-24T01:47:14'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: tables
+    extension: .csv
+    name: mss_per_spectrum_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/tables/mss_per_spectrum_v1.csv
+    relative_path: tables/mss_per_spectrum_v1.csv
+    size_bytes: 48180
+    modified_iso: '2026-04-24T01:47:15'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: tables
+    extension: .csv
+    name: mss_per_brand_accuracy_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/tables/mss_per_brand_accuracy_v1.csv
+    relative_path: tables/mss_per_brand_accuracy_v1.csv
+    size_bytes: 141
+    modified_iso: '2026-04-24T01:47:15'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: tables
+    extension: .csv
+    name: mss_confusion_matrix_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/tables/mss_confusion_matrix_v1.csv
+    relative_path: tables/mss_confusion_matrix_v1.csv
+    size_bytes: 302
+    modified_iso: '2026-04-24T01:47:15'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: tables
+    extension: .csv
+    name: mss_validation_summary_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/tables/mss_validation_summary_v1.csv
+    relative_path: tables/mss_validation_summary_v1.csv
+    size_bytes: 289
+    modified_iso: '2026-04-24T01:47:15'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: tables
+    extension: .csv
+    name: bsv_mss_role_separation_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/tables/bsv_mss_role_separation_v1.csv
+    relative_path: tables/bsv_mss_role_separation_v1.csv
+    size_bytes: 244
+    modified_iso: '2026-04-24T01:47:15'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_raw_vs_bsv_pca_by_molecule_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/figures/fig_raw_vs_bsv_pca_by_molecule_v1.png
+    relative_path: figures/fig_raw_vs_bsv_pca_by_molecule_v1.png
+    size_bytes: 59914
+    modified_iso: '2026-04-24T01:47:13'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_axis_importance_bar_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/figures/fig_axis_importance_bar_v1.png
+    relative_path: figures/fig_axis_importance_bar_v1.png
+    size_bytes: 77273
+    modified_iso: '2026-04-24T01:47:14'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_pca_top3_axes_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/figures/fig_pca_top3_axes_v1.png
+    relative_path: figures/fig_pca_top3_axes_v1.png
+    size_bytes: 34373
+    modified_iso: '2026-04-24T01:47:14'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_pca_top5_axes_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/figures/fig_pca_top5_axes_v1.png
+    relative_path: figures/fig_pca_top5_axes_v1.png
+    size_bytes: 38257
+    modified_iso: '2026-04-24T01:47:14'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_per_molecule_radar_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/figures/fig_per_molecule_radar_v1.png
+    relative_path: figures/fig_per_molecule_radar_v1.png
+    size_bytes: 332151
+    modified_iso: '2026-04-24T01:47:14'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_confusion_matrix_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/figures/fig_mss_confusion_matrix_v1.png
+    relative_path: figures/fig_mss_confusion_matrix_v1.png
+    size_bytes: 52918
+    modified_iso: '2026-04-24T01:47:15'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: reports
+    extension: .md
+    name: REPORT_otc_bsv_mss_analysis_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/reports/REPORT_otc_bsv_mss_analysis_v1.md
+    relative_path: reports/REPORT_otc_bsv_mss_analysis_v1.md
+    size_bytes: 2557
+    modified_iso: '2026-04-24T01:47:15'
+  - phase: gaira_base_4_otc_bsv_mss_analysis_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_otc_bsv_mss_analysis_v1_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_bsv_mss_analysis_v1/audit/gaira_base_4_otc_bsv_mss_analysis_v1_audit_log.md
+    relative_path: audit/gaira_base_4_otc_bsv_mss_analysis_v1_audit_log.md
+    size_bytes: 1165
+    modified_iso: '2026-04-24T01:47:15'
+  gaira_base_4_otc_drug_detection_toggle_validation_v1:
+  - phase: gaira_base_4_otc_drug_detection_toggle_validation_v1
+    kind: tables
+    extension: .csv
+    name: off_otc.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_drug_detection_toggle_validation_v1/tables/off_otc.csv
+    relative_path: tables/off_otc.csv
+    size_bytes: 42378
+    modified_iso: '2026-04-24T02:19:24'
+  - phase: gaira_base_4_otc_drug_detection_toggle_validation_v1
+    kind: tables
+    extension: .csv
+    name: on_otc.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_drug_detection_toggle_validation_v1/tables/on_otc.csv
+    relative_path: tables/on_otc.csv
+    size_bytes: 80306
+    modified_iso: '2026-04-24T02:19:24'
+  - phase: gaira_base_4_otc_drug_detection_toggle_validation_v1
+    kind: tables
+    extension: .csv
+    name: off_bio.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_drug_detection_toggle_validation_v1/tables/off_bio.csv
+    relative_path: tables/off_bio.csv
+    size_bytes: 64089
+    modified_iso: '2026-04-24T02:19:24'
+  - phase: gaira_base_4_otc_drug_detection_toggle_validation_v1
+    kind: tables
+    extension: .csv
+    name: on_bio.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_drug_detection_toggle_validation_v1/tables/on_bio.csv
+    relative_path: tables/on_bio.csv
+    size_bytes: 107630
+    modified_iso: '2026-04-24T02:19:24'
+  - phase: gaira_base_4_otc_drug_detection_toggle_validation_v1
+    kind: tables
+    extension: .csv
+    name: off_otc_summary.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_drug_detection_toggle_validation_v1/tables/off_otc_summary.csv
+    relative_path: tables/off_otc_summary.csv
+    size_bytes: 200
+    modified_iso: '2026-04-24T02:19:24'
+  - phase: gaira_base_4_otc_drug_detection_toggle_validation_v1
+    kind: tables
+    extension: .csv
+    name: on_otc_summary.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_drug_detection_toggle_validation_v1/tables/on_otc_summary.csv
+    relative_path: tables/on_otc_summary.csv
+    size_bytes: 307
+    modified_iso: '2026-04-24T02:19:24'
+  - phase: gaira_base_4_otc_drug_detection_toggle_validation_v1
+    kind: tables
+    extension: .csv
+    name: off_bio_summary.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_drug_detection_toggle_validation_v1/tables/off_bio_summary.csv
+    relative_path: tables/off_bio_summary.csv
+    size_bytes: 200
+    modified_iso: '2026-04-24T02:19:24'
+  - phase: gaira_base_4_otc_drug_detection_toggle_validation_v1
+    kind: tables
+    extension: .csv
+    name: on_bio_summary.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_drug_detection_toggle_validation_v1/tables/on_bio_summary.csv
+    relative_path: tables/on_bio_summary.csv
+    size_bytes: 327
+    modified_iso: '2026-04-24T02:19:24'
+  - phase: gaira_base_4_otc_drug_detection_toggle_validation_v1
+    kind: figures
+    extension: .png
+    name: fig_toggle_outer_status_distribution_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_drug_detection_toggle_validation_v1/figures/fig_toggle_outer_status_distribution_v1.png
+    relative_path: figures/fig_toggle_outer_status_distribution_v1.png
+    size_bytes: 72213
+    modified_iso: '2026-04-24T02:19:24'
+  - phase: gaira_base_4_otc_drug_detection_toggle_validation_v1
+    kind: reports
+    extension: .md
+    name: REPORT_otc_drug_detection_toggle_validation_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_drug_detection_toggle_validation_v1/reports/REPORT_otc_drug_detection_toggle_validation_v1.md
+    relative_path: reports/REPORT_otc_drug_detection_toggle_validation_v1.md
+    size_bytes: 1965
+    modified_iso: '2026-04-24T02:19:24'
+  - phase: gaira_base_4_otc_drug_detection_toggle_validation_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_otc_drug_detection_toggle_validation_v1_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_drug_detection_toggle_validation_v1/audit/gaira_base_4_otc_drug_detection_toggle_validation_v1_audit_log.md
+    relative_path: audit/gaira_base_4_otc_drug_detection_toggle_validation_v1_audit_log.md
+    size_bytes: 953
+    modified_iso: '2026-04-24T02:19:24'
+  gaira_base_4_otc_mss_detector_validation_v1:
+  - phase: gaira_base_4_otc_mss_detector_validation_v1
+    kind: tables
+    extension: .csv
+    name: otc_per_spectrum_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_mss_detector_validation_v1/tables/otc_per_spectrum_v1.csv
+    relative_path: tables/otc_per_spectrum_v1.csv
+    size_bytes: 66811
+    modified_iso: '2026-04-24T02:05:34'
+  - phase: gaira_base_4_otc_mss_detector_validation_v1
+    kind: tables
+    extension: .csv
+    name: otc_summary_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_mss_detector_validation_v1/tables/otc_summary_v1.csv
+    relative_path: tables/otc_summary_v1.csv
+    size_bytes: 140
+    modified_iso: '2026-04-24T02:05:34'
+  - phase: gaira_base_4_otc_mss_detector_validation_v1
+    kind: tables
+    extension: .csv
+    name: bio_per_spectrum_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_mss_detector_validation_v1/tables/bio_per_spectrum_v1.csv
+    relative_path: tables/bio_per_spectrum_v1.csv
+    size_bytes: 92055
+    modified_iso: '2026-04-24T02:05:40'
+  - phase: gaira_base_4_otc_mss_detector_validation_v1
+    kind: tables
+    extension: .csv
+    name: bio_summary_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_mss_detector_validation_v1/tables/bio_summary_v1.csv
+    relative_path: tables/bio_summary_v1.csv
+    size_bytes: 84
+    modified_iso: '2026-04-24T02:05:40'
+  - phase: gaira_base_4_otc_mss_detector_validation_v1
+    kind: figures
+    extension: .png
+    name: fig_confidence_distribution_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_mss_detector_validation_v1/figures/fig_confidence_distribution_v1.png
+    relative_path: figures/fig_confidence_distribution_v1.png
+    size_bytes: 41795
+    modified_iso: '2026-04-24T02:05:41'
+  - phase: gaira_base_4_otc_mss_detector_validation_v1
+    kind: figures
+    extension: .png
+    name: fig_top1_score_distribution_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_mss_detector_validation_v1/figures/fig_top1_score_distribution_v1.png
+    relative_path: figures/fig_top1_score_distribution_v1.png
+    size_bytes: 45683
+    modified_iso: '2026-04-24T02:05:41'
+  - phase: gaira_base_4_otc_mss_detector_validation_v1
+    kind: figures
+    extension: .png
+    name: fig_fp_by_dataset_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_mss_detector_validation_v1/figures/fig_fp_by_dataset_v1.png
+    relative_path: figures/fig_fp_by_dataset_v1.png
+    size_bytes: 28046
+    modified_iso: '2026-04-24T02:05:41'
+  - phase: gaira_base_4_otc_mss_detector_validation_v1
+    kind: reports
+    extension: .md
+    name: REPORT_otc_mss_detector_validation_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_mss_detector_validation_v1/reports/REPORT_otc_mss_detector_validation_v1.md
+    relative_path: reports/REPORT_otc_mss_detector_validation_v1.md
+    size_bytes: 2428
+    modified_iso: '2026-04-24T02:05:41'
+  - phase: gaira_base_4_otc_mss_detector_validation_v1
+    kind: audit
+    extension: .md
+    name: gaira_base_4_otc_mss_detector_validation_v1_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_base_4_otc_mss_detector_validation_v1/audit/gaira_base_4_otc_mss_detector_validation_v1_audit_log.md
+    relative_path: audit/gaira_base_4_otc_mss_detector_validation_v1_audit_log.md
+    size_bytes: 991
+    modified_iso: '2026-04-24T02:05:41'
+  gaira_representation_cluster_analysis_v1:
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: tables
+    extension: .csv
+    name: mss_cluster_breakdown_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/tables/mss_cluster_breakdown_v1.csv
+    relative_path: tables/mss_cluster_breakdown_v1.csv
+    size_bytes: 2215
+    modified_iso: '2026-04-23T08:22:37'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: tables
+    extension: .csv
+    name: motif_cluster_breakdown_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/tables/motif_cluster_breakdown_v1.csv
+    relative_path: tables/motif_cluster_breakdown_v1.csv
+    size_bytes: 1777
+    modified_iso: '2026-04-23T08:22:37'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: tables
+    extension: .csv
+    name: mss_analyte_embedding_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/tables/mss_analyte_embedding_v1.csv
+    relative_path: tables/mss_analyte_embedding_v1.csv
+    size_bytes: 15509
+    modified_iso: '2026-04-23T08:22:37'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: tables
+    extension: .csv
+    name: motif_analyte_embedding_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/tables/motif_analyte_embedding_v1.csv
+    relative_path: tables/motif_analyte_embedding_v1.csv
+    size_bytes: 15543
+    modified_iso: '2026-04-23T08:22:37'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: tables
+    extension: .csv
+    name: mss_vs_motif_summary_metrics_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/tables/mss_vs_motif_summary_metrics_v1.csv
+    relative_path: tables/mss_vs_motif_summary_metrics_v1.csv
+    size_bytes: 235
+    modified_iso: '2026-04-23T08:22:38'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_umap_by_class_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/figures/fig_mss_umap_by_class_v1.png
+    relative_path: figures/fig_mss_umap_by_class_v1.png
+    size_bytes: 192441
+    modified_iso: '2026-04-23T08:22:37'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_umap_by_cluster_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/figures/fig_mss_umap_by_cluster_v1.png
+    relative_path: figures/fig_mss_umap_by_cluster_v1.png
+    size_bytes: 128833
+    modified_iso: '2026-04-23T08:22:38'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_dendrogram_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/figures/fig_mss_dendrogram_v1.png
+    relative_path: figures/fig_mss_dendrogram_v1.png
+    size_bytes: 42070
+    modified_iso: '2026-04-23T08:22:38'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_mss_cluster_size_vs_dominant_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/figures/fig_mss_cluster_size_vs_dominant_v1.png
+    relative_path: figures/fig_mss_cluster_size_vs_dominant_v1.png
+    size_bytes: 53121
+    modified_iso: '2026-04-23T08:22:38'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_motif_umap_by_class_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/figures/fig_motif_umap_by_class_v1.png
+    relative_path: figures/fig_motif_umap_by_class_v1.png
+    size_bytes: 188771
+    modified_iso: '2026-04-23T08:22:38'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_motif_umap_by_cluster_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/figures/fig_motif_umap_by_cluster_v1.png
+    relative_path: figures/fig_motif_umap_by_cluster_v1.png
+    size_bytes: 114435
+    modified_iso: '2026-04-23T08:22:38'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_motif_dendrogram_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/figures/fig_motif_dendrogram_v1.png
+    relative_path: figures/fig_motif_dendrogram_v1.png
+    size_bytes: 46324
+    modified_iso: '2026-04-23T08:22:38'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_motif_cluster_size_vs_dominant_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/figures/fig_motif_cluster_size_vs_dominant_v1.png
+    relative_path: figures/fig_motif_cluster_size_vs_dominant_v1.png
+    size_bytes: 61035
+    modified_iso: '2026-04-23T08:22:38'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: figures
+    extension: .png
+    name: fig_side_by_side_mss_vs_motif_umap_v1.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/figures/fig_side_by_side_mss_vs_motif_umap_v1.png
+    relative_path: figures/fig_side_by_side_mss_vs_motif_umap_v1.png
+    size_bytes: 223677
+    modified_iso: '2026-04-23T08:22:38'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: reports
+    extension: .md
+    name: REPORT_mss_cluster_analysis_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/reports/REPORT_mss_cluster_analysis_v1.md
+    relative_path: reports/REPORT_mss_cluster_analysis_v1.md
+    size_bytes: 4099
+    modified_iso: '2026-04-23T08:22:38'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: reports
+    extension: .md
+    name: REPORT_motif_cluster_analysis_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/reports/REPORT_motif_cluster_analysis_v1.md
+    relative_path: reports/REPORT_motif_cluster_analysis_v1.md
+    size_bytes: 2881
+    modified_iso: '2026-04-23T08:22:38'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: reports
+    extension: .md
+    name: REPORT_representation_cluster_comparison_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/reports/REPORT_representation_cluster_comparison_v1.md
+    relative_path: reports/REPORT_representation_cluster_comparison_v1.md
+    size_bytes: 3259
+    modified_iso: '2026-04-23T08:22:38'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: reports
+    extension: .md
+    name: REPORT_representation_strategy_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/reports/REPORT_representation_strategy_v1.md
+    relative_path: reports/REPORT_representation_strategy_v1.md
+    size_bytes: 2537
+    modified_iso: '2026-04-23T08:22:38'
+  - phase: gaira_representation_cluster_analysis_v1
+    kind: audit
+    extension: .md
+    name: gaira_representation_cluster_analysis_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_representation_cluster_analysis_v1/audit/gaira_representation_cluster_analysis_audit_log.md
+    relative_path: audit/gaira_representation_cluster_analysis_audit_log.md
+    size_bytes: 1687
+    modified_iso: '2026-04-23T08:22:38'
+  gaira_validate_2_grounding_motif_first_v1:
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: other
+    extension: .csv
+    name: grounding_dataset_inventory_v_motif_first.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/inventory/grounding_dataset_inventory_v_motif_first.csv
+    relative_path: inventory/grounding_dataset_inventory_v_motif_first.csv
+    size_bytes: 796
+    modified_iso: '2026-04-22T15:31:56'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: tables
+    extension: .csv
+    name: grounding_per_spectrum_motif_scores_v_motif_first.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/tables/grounding_per_spectrum_motif_scores_v_motif_first.csv
+    relative_path: tables/grounding_per_spectrum_motif_scores_v_motif_first.csv
+    size_bytes: 2214619
+    modified_iso: '2026-04-22T15:31:57'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: tables
+    extension: .csv
+    name: grounding_per_spectrum_family_scores_v_motif_first.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/tables/grounding_per_spectrum_family_scores_v_motif_first.csv
+    relative_path: tables/grounding_per_spectrum_family_scores_v_motif_first.csv
+    size_bytes: 766303
+    modified_iso: '2026-04-22T15:31:57'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: tables
+    extension: .csv
+    name: grounding_per_spectrum_ambiguity_scores_v_motif_first.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/tables/grounding_per_spectrum_ambiguity_scores_v_motif_first.csv
+    relative_path: tables/grounding_per_spectrum_ambiguity_scores_v_motif_first.csv
+    size_bytes: 33268
+    modified_iso: '2026-04-22T15:31:57'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: tables
+    extension: .csv
+    name: grounding_expected_vs_observed_motif_rank_v_motif_first.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/tables/grounding_expected_vs_observed_motif_rank_v_motif_first.csv
+    relative_path: tables/grounding_expected_vs_observed_motif_rank_v_motif_first.csv
+    size_bytes: 100783
+    modified_iso: '2026-04-22T15:31:57'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: tables
+    extension: .csv
+    name: grounding_expected_vs_observed_family_rank_v_motif_first.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/tables/grounding_expected_vs_observed_family_rank_v_motif_first.csv
+    relative_path: tables/grounding_expected_vs_observed_family_rank_v_motif_first.csv
+    size_bytes: 77484
+    modified_iso: '2026-04-22T15:31:57'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: tables
+    extension: .csv
+    name: grounding_off_target_activation_v_motif_first.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/tables/grounding_off_target_activation_v_motif_first.csv
+    relative_path: tables/grounding_off_target_activation_v_motif_first.csv
+    size_bytes: 131483
+    modified_iso: '2026-04-22T15:31:57'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: tables
+    extension: .csv
+    name: grounding_ambiguity_behavior_v_motif_first.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/tables/grounding_ambiguity_behavior_v_motif_first.csv
+    relative_path: tables/grounding_ambiguity_behavior_v_motif_first.csv
+    size_bytes: 33268
+    modified_iso: '2026-04-22T15:31:57'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: tables
+    extension: .csv
+    name: grounding_miss_list_v_motif_first.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/tables/grounding_miss_list_v_motif_first.csv
+    relative_path: tables/grounding_miss_list_v_motif_first.csv
+    size_bytes: 72593
+    modified_iso: '2026-04-22T15:31:57'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: tables
+    extension: .csv
+    name: grounding_metrics_summary_v_motif_first.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/tables/grounding_metrics_summary_v_motif_first.csv
+    relative_path: tables/grounding_metrics_summary_v_motif_first.csv
+    size_bytes: 420
+    modified_iso: '2026-04-22T15:31:57'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: tables
+    extension: .csv
+    name: grounding_per_family_hit_rates_v_motif_first.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/tables/grounding_per_family_hit_rates_v_motif_first.csv
+    relative_path: tables/grounding_per_family_hit_rates_v_motif_first.csv
+    size_bytes: 810
+    modified_iso: '2026-04-22T15:31:57'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: tables
+    extension: .csv
+    name: grounding_per_dataset_hit_rates_v_motif_first.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/tables/grounding_per_dataset_hit_rates_v_motif_first.csv
+    relative_path: tables/grounding_per_dataset_hit_rates_v_motif_first.csv
+    size_bytes: 301
+    modified_iso: '2026-04-22T15:31:57'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: figures
+    extension: .png
+    name: fig_motif_top_rank_heatmap_motif_first.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/figures/fig_motif_top_rank_heatmap_motif_first.png
+    relative_path: figures/fig_motif_top_rank_heatmap_motif_first.png
+    size_bytes: 193996
+    modified_iso: '2026-04-22T15:31:59'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: figures
+    extension: .png
+    name: fig_family_top_rank_heatmap_motif_first.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/figures/fig_family_top_rank_heatmap_motif_first.png
+    relative_path: figures/fig_family_top_rank_heatmap_motif_first.png
+    size_bytes: 108805
+    modified_iso: '2026-04-22T15:32:00'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: figures
+    extension: .png
+    name: fig_grouped_motif_in_family_examples_motif_first.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/figures/fig_grouped_motif_in_family_examples_motif_first.png
+    relative_path: figures/fig_grouped_motif_in_family_examples_motif_first.png
+    size_bytes: 98595
+    modified_iso: '2026-04-22T15:32:00'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: figures
+    extension: .png
+    name: fig_off_target_activation_heatmap_motif_first.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/figures/fig_off_target_activation_heatmap_motif_first.png
+    relative_path: figures/fig_off_target_activation_heatmap_motif_first.png
+    size_bytes: 190199
+    modified_iso: '2026-04-22T15:32:01'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: figures
+    extension: .png
+    name: fig_ambiguity_panel_motif_first.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/figures/fig_ambiguity_panel_motif_first.png
+    relative_path: figures/fig_ambiguity_panel_motif_first.png
+    size_bytes: 66820
+    modified_iso: '2026-04-22T15:32:01'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: figures
+    extension: .png
+    name: fig_family_hit_rate_motif_first.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/figures/fig_family_hit_rate_motif_first.png
+    relative_path: figures/fig_family_hit_rate_motif_first.png
+    size_bytes: 48837
+    modified_iso: '2026-04-22T15:32:01'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: figures
+    extension: .png
+    name: fig_motif_radar_examples_motif_first.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/figures/fig_motif_radar_examples_motif_first.png
+    relative_path: figures/fig_motif_radar_examples_motif_first.png
+    size_bytes: 407406
+    modified_iso: '2026-04-22T15:32:02'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: figures
+    extension: .png
+    name: fig_sunburst_treemap_exploratory_motif_first.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/figures/fig_sunburst_treemap_exploratory_motif_first.png
+    relative_path: figures/fig_sunburst_treemap_exploratory_motif_first.png
+    size_bytes: 189638
+    modified_iso: '2026-04-22T15:32:05'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_validate_2_grounding_motif_first_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/reports/REPORT_gaira_validate_2_grounding_motif_first_v1.md
+    relative_path: reports/REPORT_gaira_validate_2_grounding_motif_first_v1.md
+    size_bytes: 7685
+    modified_iso: '2026-04-22T15:34:00'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_validate_2_grounding_motif_first_miss_analysis_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/reports/REPORT_gaira_validate_2_grounding_motif_first_miss_analysis_v1.md
+    relative_path: reports/REPORT_gaira_validate_2_grounding_motif_first_miss_analysis_v1.md
+    size_bytes: 4590
+    modified_iso: '2026-04-22T15:32:05'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: audit
+    extension: .md
+    name: gaira_validate_2_grounding_motif_first_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/audit/gaira_validate_2_grounding_motif_first_audit_log.md
+    relative_path: audit/gaira_validate_2_grounding_motif_first_audit_log.md
+    size_bytes: 3215
+    modified_iso: '2026-04-22T15:32:05'
+  - phase: gaira_validate_2_grounding_motif_first_v1
+    kind: other
+    extension: .csv
+    name: grounding_truth_table_motif_first_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_motif_first_v1/truth_table/grounding_truth_table_motif_first_v1.csv
+    relative_path: truth_table/grounding_truth_table_motif_first_v1.csv
+    size_bytes: 63791
+    modified_iso: '2026-04-22T15:31:56'
+  gaira_validate_2_grounding_v1:
+  - phase: gaira_validate_2_grounding_v1
+    kind: other
+    extension: .csv
+    name: grounding_dataset_inventory_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/inventory/grounding_dataset_inventory_v1.csv
+    relative_path: inventory/grounding_dataset_inventory_v1.csv
+    size_bytes: 21898
+    modified_iso: '2026-04-22T13:27:45'
+  - phase: gaira_validate_2_grounding_v1
+    kind: tables
+    extension: .csv
+    name: grounding_per_spectrum_scores_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/tables/grounding_per_spectrum_scores_v1.csv
+    relative_path: tables/grounding_per_spectrum_scores_v1.csv
+    size_bytes: 484814
+    modified_iso: '2026-04-22T13:27:46'
+  - phase: gaira_validate_2_grounding_v1
+    kind: tables
+    extension: .csv
+    name: grounding_expected_vs_observed_motif_rank_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/tables/grounding_expected_vs_observed_motif_rank_v1.csv
+    relative_path: tables/grounding_expected_vs_observed_motif_rank_v1.csv
+    size_bytes: 87418
+    modified_iso: '2026-04-22T13:27:46'
+  - phase: gaira_validate_2_grounding_v1
+    kind: tables
+    extension: .csv
+    name: grounding_expected_vs_observed_axis11_rank_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/tables/grounding_expected_vs_observed_axis11_rank_v1.csv
+    relative_path: tables/grounding_expected_vs_observed_axis11_rank_v1.csv
+    size_bytes: 67061
+    modified_iso: '2026-04-22T13:27:46'
+  - phase: gaira_validate_2_grounding_v1
+    kind: tables
+    extension: .csv
+    name: grounding_off_target_activation_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/tables/grounding_off_target_activation_v1.csv
+    relative_path: tables/grounding_off_target_activation_v1.csv
+    size_bytes: 360063
+    modified_iso: '2026-04-22T13:27:46'
+  - phase: gaira_validate_2_grounding_v1
+    kind: tables
+    extension: .csv
+    name: grounding_ambiguity_behavior_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/tables/grounding_ambiguity_behavior_v1.csv
+    relative_path: tables/grounding_ambiguity_behavior_v1.csv
+    size_bytes: 60352
+    modified_iso: '2026-04-22T13:27:46'
+  - phase: gaira_validate_2_grounding_v1
+    kind: tables
+    extension: .csv
+    name: grounding_miss_list_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/tables/grounding_miss_list_v1.csv
+    relative_path: tables/grounding_miss_list_v1.csv
+    size_bytes: 41130
+    modified_iso: '2026-04-22T13:27:46'
+  - phase: gaira_validate_2_grounding_v1
+    kind: tables
+    extension: .csv
+    name: grounding_metrics_summary_v1.csv
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/tables/grounding_metrics_summary_v1.csv
+    relative_path: tables/grounding_metrics_summary_v1.csv
+    size_bytes: 105
+    modified_iso: '2026-04-22T13:27:46'
+  - phase: gaira_validate_2_grounding_v1
+    kind: figures
+    extension: .png
+    name: fig_11_axis_radar_examples.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/figures/fig_11_axis_radar_examples.png
+    relative_path: figures/fig_11_axis_radar_examples.png
+    size_bytes: 327613
+    modified_iso: '2026-04-22T13:27:47'
+  - phase: gaira_validate_2_grounding_v1
+    kind: figures
+    extension: .png
+    name: fig_grouped_motif_in_axis_examples.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/figures/fig_grouped_motif_in_axis_examples.png
+    relative_path: figures/fig_grouped_motif_in_axis_examples.png
+    size_bytes: 100329
+    modified_iso: '2026-04-22T13:27:47'
+  - phase: gaira_validate_2_grounding_v1
+    kind: figures
+    extension: .png
+    name: fig_ambiguity_panel.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/figures/fig_ambiguity_panel.png
+    relative_path: figures/fig_ambiguity_panel.png
+    size_bytes: 116806
+    modified_iso: '2026-04-22T13:27:47'
+  - phase: gaira_validate_2_grounding_v1
+    kind: figures
+    extension: .png
+    name: fig_motif_top_rank_heatmap.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/figures/fig_motif_top_rank_heatmap.png
+    relative_path: figures/fig_motif_top_rank_heatmap.png
+    size_bytes: 115166
+    modified_iso: '2026-04-22T13:27:48'
+  - phase: gaira_validate_2_grounding_v1
+    kind: figures
+    extension: .png
+    name: fig_axis_top_rank_heatmap.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/figures/fig_axis_top_rank_heatmap.png
+    relative_path: figures/fig_axis_top_rank_heatmap.png
+    size_bytes: 113523
+    modified_iso: '2026-04-22T13:27:48'
+  - phase: gaira_validate_2_grounding_v1
+    kind: figures
+    extension: .png
+    name: fig_off_target_activation_heatmap.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/figures/fig_off_target_activation_heatmap.png
+    relative_path: figures/fig_off_target_activation_heatmap.png
+    size_bytes: 152993
+    modified_iso: '2026-04-22T13:27:48'
+  - phase: gaira_validate_2_grounding_v1
+    kind: figures
+    extension: .png
+    name: fig_family_hit_rate.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/figures/fig_family_hit_rate.png
+    relative_path: figures/fig_family_hit_rate.png
+    size_bytes: 45561
+    modified_iso: '2026-04-22T13:27:48'
+  - phase: gaira_validate_2_grounding_v1
+    kind: figures
+    extension: .png
+    name: fig_sunburst_treemap_exploratory.png
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/figures/fig_sunburst_treemap_exploratory.png
+    relative_path: figures/fig_sunburst_treemap_exploratory.png
+    size_bytes: 212339
+    modified_iso: '2026-04-22T13:27:50'
+  - phase: gaira_validate_2_grounding_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_validate_2_grounding_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/reports/REPORT_gaira_validate_2_grounding_v1.md
+    relative_path: reports/REPORT_gaira_validate_2_grounding_v1.md
+    size_bytes: 4794
+    modified_iso: '2026-04-22T13:27:50'
+  - phase: gaira_validate_2_grounding_v1
+    kind: reports
+    extension: .md
+    name: REPORT_gaira_validate_2_grounding_miss_analysis_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/reports/REPORT_gaira_validate_2_grounding_miss_analysis_v1.md
+    relative_path: reports/REPORT_gaira_validate_2_grounding_miss_analysis_v1.md
+    size_bytes: 35831
+    modified_iso: '2026-04-22T13:27:50'
+  - phase: gaira_validate_2_grounding_v1
+    kind: audit
+    extension: .md
+    name: gaira_validate_2_grounding_audit_log.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/gaira_validate_2_grounding_v1/audit/gaira_validate_2_grounding_audit_log.md
+    relative_path: audit/gaira_validate_2_grounding_audit_log.md
+    size_bytes: 3295
+    modified_iso: '2026-04-22T13:27:50'
+  substrate_physics_v1:
+  - phase: substrate_physics_v1
+    kind: other
+    extension: .md
+    name: substrate_physics_integration_memo_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/substrate_physics_v1/docs/substrate_physics_integration_memo_v1.md
+    relative_path: docs/substrate_physics_integration_memo_v1.md
+    size_bytes: 10061
+    modified_iso: '2026-04-21T14:37:53'
+  - phase: substrate_physics_v1
+    kind: other
+    extension: .md
+    name: substrate_physics_v1_build_plan.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/substrate_physics_v1/docs/substrate_physics_v1_build_plan.md
+    relative_path: docs/substrate_physics_v1_build_plan.md
+    size_bytes: 15108
+    modified_iso: '2026-04-21T14:35:32'
+  - phase: substrate_physics_v1
+    kind: other
+    extension: .md
+    name: substrate_physics_schema_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/substrate_physics_v1/docs/substrate_physics_schema_v1.md
+    relative_path: docs/substrate_physics_schema_v1.md
+    size_bytes: 12951
+    modified_iso: '2026-04-21T14:36:52'
+  - phase: substrate_physics_v1
+    kind: other
+    extension: .md
+    name: pilot_substrate_retest_plan_v1.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/substrate_physics_v1/docs/pilot_substrate_retest_plan_v1.md
+    relative_path: docs/pilot_substrate_retest_plan_v1.md
+    size_bytes: 11640
+    modified_iso: '2026-04-21T14:39:09'
+  atlas:
+  - phase: atlas
+    kind: other
+    extension: .md
+    name: phase4_1_atlas_audit.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/atlas/phase4_1_outputs/zone_700_740/phase4_1_atlas_audit.md
+    relative_path: phase4_1_outputs/zone_700_740/phase4_1_atlas_audit.md
+    size_bytes: 10817
+    modified_iso: '2026-04-18T23:15:18'
+  - phase: atlas
+    kind: other
+    extension: .md
+    name: phase4_1_atlas_summary.md
+    path: /Volumes/SSD_Rad/GAIRA_BUILD/atlas/phase4_1_outputs/zone_700_740/phase4_1_atlas_summary.md
+    relative_path: phase4_1_outputs/zone_700_740/phase4_1_atlas_summary.md
+    size_bytes: 11168
+    modified_iso: '2026-04-18T23:16:40'
