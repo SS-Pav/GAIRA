@@ -150,3 +150,5 @@ checkpoints/
 # Uncomment if needed later
 # *.csv
 # *.json
+.venv/
+.venv_old_migrated/
