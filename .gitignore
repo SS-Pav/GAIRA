@@ -152,3 +152,20 @@ checkpoints/
 # *.json
 .venv/
 .venv_old_migrated/
+
+############################################
+# GAIRA reasoning demo v2 — keep its small bundled + generated data
+# (self-containment: legacy reference CSVs + derived grounding-evidence table).
+# Narrow negations of the broad `data/` rule above; nothing else re-included.
+############################################
+!gaira_demo_reasoning_v2/data/
+!gaira_demo_reasoning_v2/data/legacy/
+!gaira_demo_reasoning_v2/data/legacy/*.csv
+!gaira_demo_reasoning_v2/data/generated/
+!gaira_demo_reasoning_v2/data/generated/*.csv
+!gaira_demo_reasoning_v2/data/generated/*.json
+
+# NOTE: the five Stage-1 reports under reports/ are force-added (git add -f)
+# rather than un-ignored here, because negating individual files under the
+# ignored reports/ directory is not possible without re-including the whole
+# 356-file working area. Once tracked they remain tracked.

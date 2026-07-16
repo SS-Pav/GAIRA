@@ -1,0 +1,41 @@
+contrast_id,sael_contrast_id,axis,testable,expected_direction,expected_confidence,observed_delta,observed_sign,verdict,weight,score,note
+cspp_fig7_ergothioneine_spike,ergothioneine_spike_literature,membrane_lipid,True,up,high,0.014064,up,agree,1.0,1.0,sign matches expected up
+cspp_fig7_ergothioneine_spike,ergothioneine_spike_literature,protein_backbone,True,up,low,0.018728,up,agree,0.3,0.3,sign matches expected up
+cspp_fig7_ergothioneine_spike,ergothioneine_spike_literature,aromatic_amino_acid,False,unknown,low,-0.010568,down,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+cspp_fig7_ergothioneine_spike,ergothioneine_spike_literature,purine_nucleotide,False,unknown,low,0.00266,flat,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+cspp_fig7_ergothioneine_spike,ergothioneine_spike_literature,pyrimidine_nucleotide,False,unknown,low,-0.001951,flat,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+cspp_fig7_ergothioneine_spike,ergothioneine_spike_literature,glycan_carbohydrate,False,unknown,low,-0.00528,down,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+cspp_fig7_ergothioneine_spike,ergothioneine_spike_literature,redox_metabolite,True,up,moderate,0.026994,up,agree,0.6,0.6,sign matches expected up
+cspp_fig7_ergothioneine_spike,ergothioneine_spike_literature,nucleic_acid_backbone,False,unknown,low,-0.013213,down,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+cspp_fig7_hypoxanthine_spike,hypoxanthine_spike_literature,membrane_lipid,True,up,low,-0.000215,flat,flat,0.0,0.0,|Δ|=0.000 below noise — cannot confirm/refute
+cspp_fig7_hypoxanthine_spike,hypoxanthine_spike_literature,protein_backbone,True,up,low,0.000497,flat,flat,0.0,0.0,|Δ|=0.000 below noise — cannot confirm/refute
+cspp_fig7_hypoxanthine_spike,hypoxanthine_spike_literature,aromatic_amino_acid,True,up,low,-0.000397,flat,flat,0.0,0.0,|Δ|=0.000 below noise — cannot confirm/refute
+cspp_fig7_hypoxanthine_spike,hypoxanthine_spike_literature,purine_nucleotide,True,up,moderate,0.007159,up,agree,0.6,0.6,sign matches expected up
+cspp_fig7_hypoxanthine_spike,hypoxanthine_spike_literature,pyrimidine_nucleotide,False,unknown,low,0.001051,flat,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+cspp_fig7_hypoxanthine_spike,hypoxanthine_spike_literature,glycan_carbohydrate,False,unknown,low,0.003054,up,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+cspp_fig7_hypoxanthine_spike,hypoxanthine_spike_literature,redox_metabolite,False,unknown,low,-0.000401,flat,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+cspp_fig7_hypoxanthine_spike,hypoxanthine_spike_literature,nucleic_acid_backbone,False,unknown,low,0.000105,flat,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+ergothioneine_titration_top_vs_zero,ergothioneine_spike_literature,membrane_lipid,True,up,high,0.00497,up,agree,1.0,1.0,sign matches expected up
+ergothioneine_titration_top_vs_zero,ergothioneine_spike_literature,protein_backbone,True,up,low,0.010225,up,agree,0.3,0.3,sign matches expected up
+ergothioneine_titration_top_vs_zero,ergothioneine_spike_literature,aromatic_amino_acid,False,unknown,low,-0.008887,down,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+ergothioneine_titration_top_vs_zero,ergothioneine_spike_literature,purine_nucleotide,False,unknown,low,-0.011249,down,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+ergothioneine_titration_top_vs_zero,ergothioneine_spike_literature,pyrimidine_nucleotide,False,unknown,low,-0.006091,down,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+ergothioneine_titration_top_vs_zero,ergothioneine_spike_literature,glycan_carbohydrate,False,unknown,low,-0.008195,down,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+ergothioneine_titration_top_vs_zero,ergothioneine_spike_literature,redox_metabolite,True,up,moderate,0.03034,up,agree,0.6,0.6,sign matches expected up
+ergothioneine_titration_top_vs_zero,ergothioneine_spike_literature,nucleic_acid_backbone,False,unknown,low,-0.011463,down,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+uricase_sigma_depletion,uricase_depletion_literature,membrane_lipid,True,down,low,0.012174,up,disagree,0.3,-0.3,"expected down, observed up"
+uricase_sigma_depletion,uricase_depletion_literature,protein_backbone,True,down,low,0.023351,up,disagree,0.3,-0.3,"expected down, observed up"
+uricase_sigma_depletion,uricase_depletion_literature,aromatic_amino_acid,True,down,low,-0.003034,down,agree,0.3,0.3,sign matches expected down
+uricase_sigma_depletion,uricase_depletion_literature,purine_nucleotide,True,down,low,0.025272,up,disagree,0.3,-0.3,"expected down, observed up"
+uricase_sigma_depletion,uricase_depletion_literature,pyrimidine_nucleotide,False,unknown,low,0.009836,up,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+uricase_sigma_depletion,uricase_depletion_literature,glycan_carbohydrate,True,down,moderate,0.011506,up,disagree,0.6,-0.6,"expected down, observed up"
+uricase_sigma_depletion,uricase_depletion_literature,redox_metabolite,False,unknown,low,0.001695,flat,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+uricase_sigma_depletion,uricase_depletion_literature,nucleic_acid_backbone,False,unknown,low,0.01995,up,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+uricase_spiked_hypoxanthine_serum,hypoxanthine_spike_literature,membrane_lipid,True,up,low,0.000596,flat,flat,0.0,0.0,|Δ|=0.001 below noise — cannot confirm/refute
+uricase_spiked_hypoxanthine_serum,hypoxanthine_spike_literature,protein_backbone,True,up,low,0.000981,flat,flat,0.0,0.0,|Δ|=0.001 below noise — cannot confirm/refute
+uricase_spiked_hypoxanthine_serum,hypoxanthine_spike_literature,aromatic_amino_acid,True,up,low,-0.001893,flat,flat,0.0,0.0,|Δ|=0.002 below noise — cannot confirm/refute
+uricase_spiked_hypoxanthine_serum,hypoxanthine_spike_literature,purine_nucleotide,True,up,moderate,0.005971,up,agree,0.6,0.6,sign matches expected up
+uricase_spiked_hypoxanthine_serum,hypoxanthine_spike_literature,pyrimidine_nucleotide,False,unknown,low,0.00115,flat,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+uricase_spiked_hypoxanthine_serum,hypoxanthine_spike_literature,glycan_carbohydrate,False,unknown,low,0.000323,flat,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+uricase_spiked_hypoxanthine_serum,hypoxanthine_spike_literature,redox_metabolite,False,unknown,low,-0.001294,flat,not_testable,0.0,0.0,excluded from scoring: direction='unknown'
+uricase_spiked_hypoxanthine_serum,hypoxanthine_spike_literature,nucleic_acid_backbone,False,unknown,low,-0.000869,flat,not_testable,0.0,0.0,excluded from scoring: direction='unknown'

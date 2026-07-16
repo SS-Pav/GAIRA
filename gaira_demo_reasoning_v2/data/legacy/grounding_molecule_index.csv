@@ -1,0 +1,204 @@
+id,component,type,family,sample_substrate,laser_wavelength
+1,12-methyltetradecanoic acid,Lipids/FattyAcids,Lipids,CaF2 slide,785.0
+2,13-methylmyristicacid,Lipids/FattyAcids,Lipids,CaF2 slide,785.0
+3,14-methylhexadecanoic acid,Lipids/FattyAcids,Lipids,CaF2 slide,785.0
+4,14-methylpentadecanoic acid,Lipids/FattyAcids,Lipids,CaF2 slide,785.0
+5,15-methylpalmiticacid,Lipids/FattyAcids,Lipids,CaF2 slide,785.0
+6,acetoacetate,PrimaryMetabolites,PrimaryMetabolites,CaF2 slide,785.0
+7,acetyl coenzyme a,PrimaryMetabolites,PrimaryMetabolites,CaF2 slide,785.0
+8,adenine,NucleicAcids,NucleicAcids,CaF2 slide,785.0
+9,amylopectin,Saccharides/Polysaccharides,Saccharides,CaF2 slide,785.0
+10,amylose,Saccharides/Polysaccharides,Saccharides,CaF2 slide,785.0
+11,ascorbic acid,Vitamins,Vitamins,CaF2 slide,785.0
+12,cellulose,Saccharides/Polysaccharides,Saccharides,CaF2 slide,785.0
+13,chitin,Saccharides/Polysaccharides,Saccharides,CaF2 slide,785.0
+14,citric acid,PrimaryMetabolites,PrimaryMetabolites,CaF2 slide,785.0
+15,coenzyme a,PrimaryMetabolites,PrimaryMetabolites,CaF2 slide,785.0
+16,cytosine,NucleicAcids,NucleicAcids,CaF2 slide,785.0
+17,d-(+)-dextrose,Saccharides/Monosaccharides/Glucose,Saccharides,CaF2 slide,785.0
+18,d-(+)-fucose,Saccharides/Monosaccharides,Saccharides,CaF2 slide,785.0
+19,d-(+)-galactosamine,Saccharides,Saccharides,CaF2 slide,785.0
+20,d-(+)-mannose,Saccharides/Monosaccharides,Saccharides,CaF2 slide,785.0
+21,d-(+)-trehalose,Saccharides/Disaccharides,Saccharides,CaF2 slide,785.0
+22,d-(+)-xylose,Saccharides/Monosaccharides,Saccharides,CaF2 slide,785.0
+23,d-(-)-arabinose,Saccharides/Monosaccharides,Saccharides,CaF2 slide,785.0
+24,d-(-)-fructose,Saccharides/Monosaccharides,Saccharides,CaF2 slide,785.0
+25,d-fructose-6-phosphate,PrimaryMetabolites,PrimaryMetabolites,CaF2 slide,785.0
+26,fumarate,PrimaryMetabolites,PrimaryMetabolites,CaF2 slide,785.0
+27,glutathione,Peptides,Other,CaF2 slide,785.0
+28,glycerol,Lipids,Lipids,CaF2 slide,785.0
+29,glycine,AminoAcids,AminoAcids,CaF2 slide,785.0
+30,guanine,NucleicAcids,NucleicAcids,CaF2 slide,785.0
+31,l-alanine,AminoAcids,AminoAcids,CaF2 slide,785.0
+32,l-arginine,AminoAcids,AminoAcids,CaF2 slide,785.0
+33,l-glutamate,AminoAcids,AminoAcids,CaF2 slide,785.0
+34,l-histidine,AminoAcids,AminoAcids,CaF2 slide,785.0
+35,l-phenylalanine,AminoAcids,AminoAcids,CaF2 slide,785.0
+36,l-proline,AminoAcids,AminoAcids,CaF2 slide,785.0
+37,l-serine,AminoAcids,AminoAcids,CaF2 slide,785.0
+38,l-tryptophan,AminoAcids,AminoAcids,CaF2 slide,785.0
+39,l-tyrosine,AminoAcids,AminoAcids,CaF2 slide,785.0
+40,l-valine,AminoAcids,AminoAcids,CaF2 slide,785.0
+41,lactose,Saccharides/Disaccharides,Saccharides,CaF2 slide,785.0
+42,lauric acid,Lipids/FattyAcids,Lipids,CaF2 slide,785.0
+43,malic acid,PrimaryMetabolites,PrimaryMetabolites,CaF2 slide,785.0
+44,myristic acid,Lipids/FattyAcids,Lipids,CaF2 slide,785.0
+45,n-acetyl- d-glucosamine,Saccharides,Saccharides,CaF2 slide,785.0
+46,oleic acid,Lipids/FattyAcids,Lipids,CaF2 slide,785.0
+47,palmitic acid,Lipids/FattyAcids,Lipids,CaF2 slide,785.0
+48,phosphoenolpyruvate,PrimaryMetabolites,PrimaryMetabolites,CaF2 slide,785.0
+49,pyruvate,PrimaryMetabolites,PrimaryMetabolites,CaF2 slide,785.0
+50,riboﬂavin,Vitamins,Vitamins,CaF2 slide,785.0
+51,stearic acid,Lipids/FattyAcids,Lipids,CaF2 slide,785.0
+52,succinic acid,PrimaryMetabolites,PrimaryMetabolites,CaF2 slide,785.0
+53,thymine,NucleicAcids,NucleicAcids,CaF2 slide,785.0
+54,trilinolein,Lipids/Triglycerides,Lipids,CaF2 slide,785.0
+55,trilinolenin,Lipids/Triglycerides,Lipids,CaF2 slide,785.0
+56,triolein,Lipids/Triglycerides,Lipids,CaF2 slide,785.0
+57,uracil,NucleicAcids,NucleicAcids,CaF2 slide,785.0
+58,vaccenic acid,Lipids/FattyAcids,Lipids,CaF2 slide,785.0
+59,β-carotene,Pigments,Pigments,CaF2 slide,785.0
+60,β-d-glucose,Saccharides/Monosaccharides/Glucose,Saccharides,CaF2 slide,785.0
+61,arachidonic acid,Lipids/FattyAcids,Lipids, CaF2 slide,532.0
+62,α-linolenic acid,Lipids/FattyAcids,Lipids, CaF2 slide,532.0
+63,arachidic acid,Lipids/FattyAcids,Lipids, CaF2 slide,532.0
+64,cholesterol,Lipids/Sterols,Lipids, CaF2 slide,532.0
+65,cholesteryl linoleate,Lipids/Sterols,Lipids, CaF2 slide,532.0
+66,cholesteryl oleate,Lipids/Sterols,Lipids, CaF2 slide,532.0
+67,cholesteryl palmitate,Lipids/Sterols,Lipids, CaF2 slide,532.0
+68,cholesteryl stearate,Lipids/Sterols,Lipids, CaF2 slide,532.0
+69,elaidic acid,Lipids/FattyAcids,Lipids, CaF2 slide,532.0
+70,linoleic acid,Lipids/FattyAcids,Lipids, CaF2 slide,532.0
+71,myristic acid,Lipids/FattyAcids,Lipids, CaF2 slide,532.0
+72,oleic acid,Lipids/FattyAcids,Lipids, CaF2 slide,532.0
+73,palmitic acid,Lipids/FattyAcids,Lipids, CaF2 slide,532.0
+74,l-α-phosphatidylcholine,Lipids/Phospholipids,Lipids, CaF2 slide,532.0
+75,l-α-phosphatidylethanolamine,Lipids/Phospholipids,Lipids, CaF2 slide,532.0
+76,palmitoleic acid,Lipids/FattyAcids,Lipids, CaF2 slide,532.0
+77,stearic acid,Lipids/FattyAcids,Lipids, CaF2 slide,532.0
+78,sphingomyelin,Lipids/Phospholipids,Lipids, CaF2 slide,532.0
+79,triarachidin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+80,tribehenin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+81,tricaproin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+82,tricaprin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+83,tricaprylin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+84,trielaidin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+85,tri-11-eicosenoin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+86,trierucin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+87,trilinolein,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+88,trilinolenin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+89,trilaurin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+90,trimyristin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+91,triolein,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+92,tripalmitin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+93,tripetroselinin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+94,tripalmitolein,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+95,tristearin,Lipids/Triglycerides,Lipids,Metal ring,1064.0
+96,lactalbumin,Proteins,Proteins,Glass microscope slide,488.0
+97,lactalbumin,Proteins,Proteins,Glass microscope slide,532.0
+98,lactalbumin,Proteins,Proteins,Metal rings,1064.0
+99,albumin,Proteins,Proteins,Glass microscope slide,488.0
+100,albumin,Proteins,Proteins,Glass microscope slide,532.0
+101,albumin,Proteins,Proteins,Metal rings,1064.0
+102,carbonic anhydrase,Proteins,Proteins,Glass microscope slide,488.0
+103,carbonic anhydrase,Proteins,Proteins,Glass microscope slide,532.0
+104,carbonic anhydrase,Proteins,Proteins,Metal rings,1064.0
+105,collagen,Proteins,Proteins,Glass microscope slide,488.0
+106,collagen,Proteins,Proteins,Glass microscope slide,532.0
+107,collagen,Proteins,Proteins,Metal rings,1064.0
+108,α-chymotrypsinogen a (type ii),Proteins,Proteins,Glass microscope slide,488.0
+109,α-chymotrypsinogen a (type ii),Proteins,Proteins,Glass microscope slide,532.0
+110,α-chymotrypsinogen a (type ii),Proteins,Proteins,Metal rings,1064.0
+111,elastase,Proteins,Proteins,Glass microscope slide,488.0
+112,elastase,Proteins,Proteins,Glass microscope slide,532.0
+113,elastase,Proteins,Proteins,Metal rings,1064.0
+114,ferritin,Proteins,Proteins,Glass microscope slide,488.0
+115,ferritin,Proteins,Proteins,Glass microscope slide,532.0
+116,ferritin,Proteins,Proteins,Metal rings,1064.0
+117,glutathione transferase,Proteins,Proteins,Glass microscope slide,488.0
+118,glutathione transferase,Proteins,Proteins,Glass microscope slide,532.0
+119,horseradish peroxidase,Proteins,Proteins,Glass microscope slide,488.0
+120,horseradish peroxidase,Proteins,Proteins,Glass microscope slide,532.0
+121,hemoglobin,Proteins/Hemeproteins,Proteins,Glass microscope slide,488.0
+122,hemoglobin,Proteins/Hemeproteins,Proteins,Glass microscope slide,532.0
+123,lectin,Proteins,Proteins,Glass microscope slide,488.0
+124,lectin,Proteins,Proteins,Glass microscope slide,532.0
+125,lectin,Proteins,Proteins,Metal rings,1064.0
+126,myoglobin,Proteins/Hemeproteins,Proteins,Glass microscope slide,488.0
+127,myoglobin,Proteins/Hemeproteins,Proteins,Glass microscope slide,532.0
+128,papain,Proteins,Proteins,Glass microscope slide,488.0
+129,papain,Proteins,Proteins,Glass microscope slide,532.0
+130,papain,Proteins,Proteins,Metal rings,1064.0
+131,pepsin,Proteins,Proteins,Glass microscope slide,488.0
+132,pepsin,Proteins,Proteins,Glass microscope slide,532.0
+133,pepsin,Proteins,Proteins,Metal rings,1064.0
+134,pepsinogen,Proteins,Proteins,Glass microscope slide,488.0
+135,pepsinogen,Proteins,Proteins,Glass microscope slide,532.0
+136,pepsinogen,Proteins,Proteins,Metal rings,1064.0
+137,major proteinase,Proteins,Proteins,Glass microscope slide,488.0
+138,major proteinase,Proteins,Proteins,Glass microscope slide,532.0
+139,major proteinase,Proteins,Proteins,Metal rings,1064.0
+140,superoxide dismutases,Proteins,Proteins,Glass microscope slide,488.0
+141,superoxide dismutases,Proteins,Proteins,Glass microscope slide,532.0
+142,superoxide dismutases,Proteins,Proteins,Metal rings,1064.0
+143,trypsinogen,Proteins,Proteins,Glass microscope slide,488.0
+144,trypsinogen,Proteins,Proteins,Glass microscope slide,532.0
+145,trypsinogen,Proteins,Proteins,Metal rings,1064.0
+146,trypsin inhibitor,Proteins,Proteins,Glass microscope slide,488.0
+147,trypsin inhibitor,Proteins,Proteins,Glass microscope slide,532.0
+148,trypsin inhibitor,Proteins,Proteins,Metal rings,1064.0
+149,thaumatin,Proteins,Proteins,Glass microscope slide,488.0
+150,thaumatin,Proteins,Proteins,Glass microscope slide,532.0
+151,thaumatin,Proteins,Proteins,Metal rings,1064.0
+152,triosephosphate isomerase,Proteins,Proteins,Glass microscope slide,488.0
+153,triosephosphate isomerase,Proteins,Proteins,Glass microscope slide,532.0
+154,triosephosphate isomerase,Proteins,Proteins,Metal rings,1064.0
+155,trypsin,Proteins,Proteins,Glass microscope slide,488.0
+156,trypsin,Proteins,Proteins,Glass microscope slide,532.0
+157,trypsin,Proteins,Proteins,Metal rings,1064.0
+158,ubiquitin,Proteins,Proteins,Glass microscope slide,488.0
+159,ubiquitin,Proteins,Proteins,Glass microscope slide,532.0
+160,ubiquitin,Proteins,Proteins,Metal rings,1064.0
+161,glucose oxidase,Proteins,Proteins,Glass microscope slide,532.0
+162,glucose oxidase,Proteins,Proteins,Metal rings,1064.0
+163,xylanase,Proteins,Proteins,Glass microscope slide,488.0
+164,xylanase,Proteins,Proteins,Glass microscope slide,532.0
+165,xylanase,Proteins,Proteins,Metal rings,1064.0
+166,cytochrome c,Proteins/Hemeproteins,Proteins,Glass microscope slide,488.0
+167,cytochrome c,Proteins/Hemeproteins,Proteins,Glass microscope slide,532.0
+168,a-dna,NucleicAcids,NucleicAcids,,514.5
+169,b-dna,NucleicAcids,NucleicAcids,,514.5
+170,t-rna,NucleicAcids,NucleicAcids,,488.0
+171,ceramide,Lipids,Lipids,Glass tube,1064.0
+172,melanin,Pigments,Pigments,,785.0
+173,melanin,Pigments,Pigments,,632.8
+174,melanin,Pigments,Pigments,,514.5
+175,melanin,Pigments,Pigments,,457.9
+176,2-deoxy-d-ribose,Saccharides/Monosaccharides,Saccharides,Metal discs,1064.0
+177,amylopectin,Saccharides/Polysaccharides,Saccharides,Metal discs,1064.0
+178,amylose,Saccharides/Polysaccharides,Saccharides,Metal discs,1064.0
+179,d-(+)-galactose,Saccharides/Monosaccharides,Saccharides,Metal discs,1064.0
+180,d-(+)-glucose,Saccharides/Monosaccharides,Saccharides,Metal discs,1064.0
+181,d-(+)-lactose monohydrate,Saccharides/Disaccharides,Saccharides,Metal discs,1064.0
+182,d-(+)-maltose monohydrate,Saccharides/Disaccharides,Saccharides,Metal discs,1064.0
+183,d-(+)-raffinose pentahydrate,Saccharides/Trisaccharides,Saccharides,Metal discs,1064.0
+184,d-(+)-sucrose,Saccharides/Disaccharides,Saccharides,Metal discs,1064.0
+185,d-(+)-xylose,Saccharides/Monosaccharides,Saccharides,Metal discs,1064.0
+186,d-(-)-fructose,Saccharides/Monosaccharides,Saccharides,Metal discs,1064.0
+187,d-(-)-ribose,Saccharides/Monosaccharides,Saccharides,Metal discs,1064.0
+188,glycogen,Saccharides/Polysaccharides,Saccharides,Metal discs,1064.0
+189,l-(+)-arabinose,Saccharides/Monosaccharides,Saccharides,Metal discs,1064.0
+190,ceramide,Lipids,Lipids,,850.0
+191,elastin,Proteins,Proteins,,1064.0
+192,keratin,Proteins,Proteins," Sample compartment of the
+instrument",1064.0
+193,l-asparagine,AminoAcids,AminoAcids,,488.0
+194,l-aspartic acid,AminoAcids,AminoAcids,,488.0
+195,glucosamine,Saccharides,Saccharides,,488.0
+196,tubulin,Proteins,Proteins,Coverslip and glass slide,532.0
+197,insulin,Proteins/Hormones,Proteins,Gold-coated glass sustrate,633.0
+198,diethylstilbestrol,Lipids/Hormones,Lipids,,532.0
+199,estradiol,Lipids/Hormones,Lipids,,532.0
+200,estriol,Lipids/Hormones,Lipids,,532.0
+201,estrone,Lipids/Hormones,Lipids,,532.0
+202,ethinylestradiol,Lipids/Hormones,Lipids,,532.0
