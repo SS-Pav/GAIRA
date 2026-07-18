@@ -169,3 +169,14 @@ checkpoints/
 # rather than un-ignored here, because negating individual files under the
 # ignored reports/ directory is not possible without re-including the whole
 # 356-file working area. Once tracked they remain tracked.
+
+############################################
+# GAIRA reasoning demo v3 — keep its small bundled + generated data
+# (legacy reference CSVs + frozen global-coordinate calibration artifacts).
+############################################
+!gaira_demo_reasoning_v3/data/
+!gaira_demo_reasoning_v3/data/legacy/
+!gaira_demo_reasoning_v3/data/legacy/*.csv
+!gaira_demo_reasoning_v3/data/generated/
+!gaira_demo_reasoning_v3/data/generated/*.csv
+!gaira_demo_reasoning_v3/data/generated/*.json

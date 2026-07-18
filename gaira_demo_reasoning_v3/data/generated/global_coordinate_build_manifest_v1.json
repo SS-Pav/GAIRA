@@ -1,0 +1,62 @@
+{
+  "ontology_version": "v1",
+  "calibration_version": "v1",
+  "build_timestamp": "2026-07-17T00:00:00Z",
+  "code_module": "tools/build_global_coordinate_reference.py",
+  "calibration_content_sha256": "6bf0202b8b0521d603cde835d3db55428bfc80532a7b043125a6c5a283ec2ea0",
+  "source_files": {
+    "serum_mean_spectra": {
+      "path": "/Volumes/SSD_Rad/GAIRA_DATA/processed/gaira_autoresearch/gaira_autoresearch_v1/pilot4_1_cca_hcc_lm_serum_patient_level/tables/patient_level_mean_spectra.csv",
+      "sha256": "b62086865559bef358ac688e900b57931e48046c0fb9b18b8a51934e0dcd7738",
+      "n": 212
+    },
+    "ev_sample_spectra": {
+      "path": "/Volumes/SSD_Rad/GAIRA_DATA/processed/gaira_autoresearch/gaira_autoresearch_v1/pilot2_target_validation_v1/tables/sample_query_spectra.csv",
+      "sha256": "87ef46ea5134145cd54e64e5349ece6c745d41603a1d2c0b33124440d8c0caff",
+      "n": 63
+    },
+    "ergothioneine": {
+      "path": "/Volumes/SSD_Rad/GAIRA_DATA/raw/ergothioneine_serum/ERG_calibration.csv",
+      "sha256": "527e8734447a9feaf20b30a9a2627db902c9a65cd31647ea12a5ab426226b536",
+      "n": 55
+    },
+    "adenine_files": [
+      {
+        "path": "/Volumes/SSD_Rad/GAIRA_DATA/raw/adenine_sers_control/Adenine_bAgNPs_10pg.CSV",
+        "sha256": "2c3d162fa510168ff19c581736d67c11baf326ef92ca4bed7e8cd3f60b41a6a6"
+      },
+      {
+        "path": "/Volumes/SSD_Rad/GAIRA_DATA/raw/adenine_sers_control/Adenine_bAgNPs_100pg.CSV",
+        "sha256": "3984ecc43a96139ed161f935cfc095b9df5ed07cab1ab6096151265f78e38a92"
+      },
+      {
+        "path": "/Volumes/SSD_Rad/GAIRA_DATA/raw/adenine_sers_control/Adenine_bAgNPs_10nano.CSV",
+        "sha256": "6da53e914de3a2e7d1c881f9c67c78387c31f8f2cc701db1c0d00958a808c626"
+      },
+      {
+        "path": "/Volumes/SSD_Rad/GAIRA_DATA/raw/adenine_sers_control/Adenine_bAgNPs_100nano.CSV",
+        "sha256": "144ea17c2d6fc7e4dba7dc59cfb4f8347ec3111de84a74c0d0c0084eb54ce4c4"
+      },
+      {
+        "path": "/Volumes/SSD_Rad/GAIRA_DATA/raw/adenine_sers_control/Adenine_bAgNPs_1micro.CSV",
+        "sha256": "3187d9425deb9101db26e8654dabb7a28e4142104db6615d1b3d9d322903f2d3"
+      },
+      {
+        "path": "/Volumes/SSD_Rad/GAIRA_DATA/raw/adenine_sers_control/Adenine_bAgNPs_10micro.CSV",
+        "sha256": "ed16a0ebbdef04a5ad0e17ff0229b3a73faef933c036c705c0fbbee89e7eb327"
+      }
+    ]
+  },
+  "reference_population": {
+    "total": 336,
+    "biological": 275,
+    "calibration": 61,
+    "by_dataset": {
+      "serum_liver": 212,
+      "ev_diabetes": 63,
+      "ergothioneine": 55,
+      "adenine": 6
+    }
+  },
+  "determinism": "raw projection + robust stats are deterministic; timestamp excluded from content hash"
+}

@@ -1,0 +1,104 @@
+{
+  "ontology_version": "v1",
+  "calibration_version": "v1",
+  "axes": [
+    "G01_purine_nucleotide",
+    "G02_purine_metabolite",
+    "G03_pyrimidine_nucleotide",
+    "G04_nucleic_acid_phosphate",
+    "G05_glycan_carbohydrate",
+    "G06_protein_peptide_backbone",
+    "G07_aromatic_residue",
+    "G08_lipid_acyl_membrane",
+    "G09_sterol_neutral_lipid",
+    "G10_sulfur_thiol_redox",
+    "G11_metabolic_small_molecule"
+  ],
+  "transform": "robust_z_median_mad",
+  "formula": "global_j = (raw_bsv_j - center_j) / scale_j ; display = clip(global, -clip, clip)",
+  "scale_floor": 0.02,
+  "clip": 4.0,
+  "reference_quantile_low_pct": 2.5,
+  "reference_quantile_high_pct": 97.5,
+  "axis_center": {
+    "G01_purine_nucleotide": 0.00588684569579051,
+    "G02_purine_metabolite": 0.019152909401972024,
+    "G03_pyrimidine_nucleotide": 0.004519487013128045,
+    "G04_nucleic_acid_phosphate": 0.003964496377713965,
+    "G05_glycan_carbohydrate": 0.06868497453032878,
+    "G06_protein_peptide_backbone": 0.04274711723953318,
+    "G07_aromatic_residue": 0.26630746864278343,
+    "G08_lipid_acyl_membrane": 0.05003713153587971,
+    "G09_sterol_neutral_lipid": 0.0641985707065508,
+    "G10_sulfur_thiol_redox": 0.05117461347000606,
+    "G11_metabolic_small_molecule": 0.0708127613787157
+  },
+  "axis_scale": {
+    "G01_purine_nucleotide": 0.02,
+    "G02_purine_metabolite": 0.02,
+    "G03_pyrimidine_nucleotide": 0.02,
+    "G04_nucleic_acid_phosphate": 0.02,
+    "G05_glycan_carbohydrate": 0.02844789632749882,
+    "G06_protein_peptide_backbone": 0.020988669503523818,
+    "G07_aromatic_residue": 0.060451433934653735,
+    "G08_lipid_acyl_membrane": 0.02,
+    "G09_sterol_neutral_lipid": 0.03520337975193109,
+    "G10_sulfur_thiol_redox": 0.02065447711387259,
+    "G11_metabolic_small_molecule": 0.02
+  },
+  "reference_q_low": {
+    "G01_purine_nucleotide": 0.00266233819963034,
+    "G02_purine_metabolite": 0.009908838773446595,
+    "G03_pyrimidine_nucleotide": 0.001952576106243994,
+    "G04_nucleic_acid_phosphate": 0.002494015806273581,
+    "G05_glycan_carbohydrate": 0.015727662372732012,
+    "G06_protein_peptide_backbone": 0.012150645821116596,
+    "G07_aromatic_residue": 0.010936435274318602,
+    "G08_lipid_acyl_membrane": 0.005267759638758638,
+    "G09_sterol_neutral_lipid": 0.00325297050136216,
+    "G10_sulfur_thiol_redox": 0.018962312160257684,
+    "G11_metabolic_small_molecule": 0.024718411244492464
+  },
+  "reference_q_high": {
+    "G01_purine_nucleotide": 0.010384406723287425,
+    "G02_purine_metabolite": 0.053294794524284136,
+    "G03_pyrimidine_nucleotide": 0.023264824402237202,
+    "G04_nucleic_acid_phosphate": 0.06165649563971417,
+    "G05_glycan_carbohydrate": 0.1631686649263298,
+    "G06_protein_peptide_backbone": 0.07905992076349,
+    "G07_aromatic_residue": 0.3300867650518397,
+    "G08_lipid_acyl_membrane": 0.06818999898700731,
+    "G09_sterol_neutral_lipid": 0.10635827593098873,
+    "G10_sulfur_thiol_redox": 0.1609552477684859,
+    "G11_metabolic_small_molecule": 0.11057137969886223
+  },
+  "n_reference_analytes": 202,
+  "fit_population_role": "biological_range",
+  "n_fit_population": 275,
+  "n_calibration_spectra": 61,
+  "n_biological_spectra": 275,
+  "n_total_reference_population": 336,
+  "matrix_composition": {
+    "serum": 212,
+    "extracellular_vesicle": 63,
+    "serum_calibration": 55,
+    "reference_calibration": 6
+  },
+  "substrate_composition": {
+    "Ag colloid SERS": 336
+  },
+  "population_by_dataset": {
+    "serum_liver": 212,
+    "ev_diabetes": 63,
+    "ergothioneine": 55,
+    "adenine": 6
+  },
+  "population_by_role": {
+    "biological_range": 275,
+    "calibration_behavior": 61
+  },
+  "labels_used_in_fit": false,
+  "limitations": "Fit population is 100% Ag-colloid SERS biological spectra (serum+EV); center/scale reflect that biological Ag-SERS range. Raman-regime samples project off-distribution. Axis meaning is fixed by the engine's motif/MSS definitions, not by this population. Three legacy split families (purine/lipid/redox) are not independently grounded (see ontology).",
+  "content_sha256": "6bf0202b8b0521d603cde835d3db55428bfc80532a7b043125a6c5a283ec2ea0",
+  "build_timestamp": "2026-07-17T00:00:00Z"
+}

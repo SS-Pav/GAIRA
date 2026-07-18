@@ -1,0 +1,679 @@
+{
+  "variance_before_after": [
+    {
+      "axis": "G01_purine_nucleotide",
+      "axis_short": "Purine-nuc",
+      "raw_variance": 0.0006690917676213502,
+      "global_variance": 1.672729419053375,
+      "raw_dyn_range": 0.1667078072790449,
+      "global_dyn_range": 8.335390363952246,
+      "raw_var_rank": 6,
+      "global_var_rank": 4
+    },
+    {
+      "axis": "G02_purine_metabolite",
+      "axis_short": "Purine-met",
+      "raw_variance": 0.0005142078114577017,
+      "global_variance": 1.2855195286442542,
+      "raw_dyn_range": 0.09098878478904769,
+      "global_dyn_range": 4.5494392394523855,
+      "raw_var_rank": 7,
+      "global_var_rank": 6
+    },
+    {
+      "axis": "G03_pyrimidine_nucleotide",
+      "axis_short": "Pyrimidine",
+      "raw_variance": 0.00023086492328226992,
+      "global_variance": 0.5771623082056747,
+      "raw_dyn_range": 0.1644919774013488,
+      "global_dyn_range": 8.224598870067439,
+      "raw_var_rank": 10,
+      "global_var_rank": 10
+    },
+    {
+      "axis": "G04_nucleic_acid_phosphate",
+      "axis_short": "Nuc-phosphate",
+      "raw_variance": 0.00022028582268701456,
+      "global_variance": 0.5507145567175362,
+      "raw_dyn_range": 0.1334867533457133,
+      "global_dyn_range": 6.674337667285663,
+      "raw_var_rank": 11,
+      "global_var_rank": 11
+    },
+    {
+      "axis": "G05_glycan_carbohydrate",
+      "axis_short": "Glycan",
+      "raw_variance": 0.0012609483598138935,
+      "global_variance": 1.5581059566648972,
+      "raw_dyn_range": 0.2617954942942214,
+      "global_dyn_range": 9.202631058563018,
+      "raw_var_rank": 3,
+      "global_var_rank": 5
+    },
+    {
+      "axis": "G06_protein_peptide_backbone",
+      "axis_short": "Protein",
+      "raw_variance": 0.00036152208641557535,
+      "global_variance": 0.820663308419755,
+      "raw_dyn_range": 0.10099773988200601,
+      "global_dyn_range": 4.812012493933901,
+      "raw_var_rank": 8,
+      "global_var_rank": 9
+    },
+    {
+      "axis": "G07_aromatic_residue",
+      "axis_short": "Aromatic",
+      "raw_variance": 0.015291195468483313,
+      "global_variance": 4.184352139569833,
+      "raw_dyn_range": 0.3462206662907933,
+      "global_dyn_range": 5.72725316433433,
+      "raw_var_rank": 1,
+      "global_var_rank": 1
+    },
+    {
+      "axis": "G08_lipid_acyl_membrane",
+      "axis_short": "Lipid",
+      "raw_variance": 0.00034687131453625187,
+      "global_variance": 0.8671782863406294,
+      "raw_dyn_range": 0.07807974118322421,
+      "global_dyn_range": 3.90398705916121,
+      "raw_var_rank": 9,
+      "global_var_rank": 8
+    },
+    {
+      "axis": "G09_sterol_neutral_lipid",
+      "axis_short": "Sterol",
+      "raw_variance": 0.0011280704720236189,
+      "global_variance": 0.9102643000323661,
+      "raw_dyn_range": 0.13790943129551259,
+      "global_dyn_range": 3.917505428948129,
+      "raw_var_rank": 4,
+      "global_var_rank": 7
+    },
+    {
+      "axis": "G10_sulfur_thiol_redox",
+      "axis_short": "Redox",
+      "raw_variance": 0.0016063103314048655,
+      "global_variance": 3.7653126454119397,
+      "raw_dyn_range": 0.18115093146376068,
+      "global_dyn_range": 8.770540666076247,
+      "raw_var_rank": 2,
+      "global_var_rank": 2
+    },
+    {
+      "axis": "G11_metabolic_small_molecule",
+      "axis_short": "Metabolite",
+      "raw_variance": 0.0006893309466458175,
+      "global_variance": 1.7233273666145434,
+      "raw_dyn_range": 0.1378545384000934,
+      "global_dyn_range": 6.8927269200046695,
+      "raw_var_rank": 5,
+      "global_var_rank": 3
+    }
+  ],
+  "redox_dominance": {
+    "redox_axis": "G10_sulfur_thiol_redox",
+    "raw_dynamic_range": 0.18115093146376068,
+    "global_dynamic_range": 8.770540666076247,
+    "raw_variance_rank": 2,
+    "global_variance_rank": 2,
+    "raw_max_abs": 0.1861040658577527,
+    "global_max_abs": 6.532697566917404,
+    "n_axes": 11
+  },
+  "serum_effect_sizes": {
+    "CCA_vs_HA": [
+      {
+        "axis": "G06_protein_peptide_backbone",
+        "axis_short": "Protein",
+        "mean_a": -0.7200557219558292,
+        "mean_b": 0.3627664441902638,
+        "cohens_d": -2.0333788660194174
+      },
+      {
+        "axis": "G09_sterol_neutral_lipid",
+        "axis_short": "Sterol",
+        "mean_a": -0.11033437366126973,
+        "mean_b": 0.4816450623367458,
+        "cohens_d": -0.8863535449270091
+      },
+      {
+        "axis": "G05_glycan_carbohydrate",
+        "axis_short": "Glycan",
+        "mean_a": -0.20697276518157381,
+        "mean_b": 1.0881534761575513,
+        "cohens_d": -0.8637893738709063
+      },
+      {
+        "axis": "G02_purine_metabolite",
+        "axis_short": "Purine-met",
+        "mean_a": 0.0843574467271144,
+        "mean_b": -0.16657113602544793,
+        "cohens_d": 0.8024515042755201
+      },
+      {
+        "axis": "G01_purine_nucleotide",
+        "axis_short": "Purine-nuc",
+        "mean_a": 0.08939502109343407,
+        "mean_b": -0.012636383582095206,
+        "cohens_d": 0.6133420242781309
+      },
+      {
+        "axis": "G04_nucleic_acid_phosphate",
+        "axis_short": "Nuc-phosphate",
+        "mean_a": 0.5809215691254923,
+        "mean_b": 0.11628223444093927,
+        "cohens_d": 0.5465939853851819
+      },
+      {
+        "axis": "G11_metabolic_small_molecule",
+        "axis_short": "Metabolite",
+        "mean_a": 0.20975161506066217,
+        "mean_b": -0.3701511115418665,
+        "cohens_d": 0.5020366048253128
+      },
+      {
+        "axis": "G10_sulfur_thiol_redox",
+        "axis_short": "Redox",
+        "mean_a": -0.4102030159969802,
+        "mean_b": -0.09316752131461857,
+        "cohens_d": -0.3873139967321649
+      },
+      {
+        "axis": "G03_pyrimidine_nucleotide",
+        "axis_short": "Pyrimidine",
+        "mean_a": 0.16159213092942787,
+        "mean_b": 0.047641995496215346,
+        "cohens_d": 0.19821105186531304
+      },
+      {
+        "axis": "G08_lipid_acyl_membrane",
+        "axis_short": "Lipid",
+        "mean_a": -0.08127510819674438,
+        "mean_b": 0.0006179383723144324,
+        "cohens_d": -0.108841314631387
+      },
+      {
+        "axis": "G07_aromatic_residue",
+        "axis_short": "Aromatic",
+        "mean_a": -0.12437996123354418,
+        "mean_b": -0.06345650750363994,
+        "cohens_d": -0.057204134785297706
+      }
+    ],
+    "HCC_vs_HA": [
+      {
+        "axis": "G05_glycan_carbohydrate",
+        "axis_short": "Glycan",
+        "mean_a": 0.2523428895207551,
+        "mean_b": 1.0881534761575513,
+        "cohens_d": -0.6388409957752376
+      },
+      {
+        "axis": "G02_purine_metabolite",
+        "axis_short": "Purine-met",
+        "mean_a": -0.06731527794048368,
+        "mean_b": -0.16657113602544793,
+        "cohens_d": 0.5335136079719214
+      },
+      {
+        "axis": "G07_aromatic_residue",
+        "axis_short": "Aromatic",
+        "mean_a": 0.2988259297918316,
+        "mean_b": -0.06345650750363994,
+        "cohens_d": 0.4124279536111478
+      },
+      {
+        "axis": "G11_metabolic_small_molecule",
+        "axis_short": "Metabolite",
+        "mean_a": -0.049066915717770505,
+        "mean_b": -0.3701511115418665,
+        "cohens_d": 0.3694126059374509
+      },
+      {
+        "axis": "G06_protein_peptide_backbone",
+        "axis_short": "Protein",
+        "mean_a": 0.5571544038786028,
+        "mean_b": 0.3627664441902638,
+        "cohens_d": 0.3488578246057317
+      },
+      {
+        "axis": "G08_lipid_acyl_membrane",
+        "axis_short": "Lipid",
+        "mean_a": 0.2198271876003691,
+        "mean_b": 0.0006179383723144324,
+        "cohens_d": 0.34450396578083625
+      },
+      {
+        "axis": "G09_sterol_neutral_lipid",
+        "axis_short": "Sterol",
+        "mean_a": 0.5885808995155933,
+        "mean_b": 0.4816450623367458,
+        "cohens_d": 0.24295879092439573
+      },
+      {
+        "axis": "G01_purine_nucleotide",
+        "axis_short": "Purine-nuc",
+        "mean_a": -0.0004907714860438028,
+        "mean_b": -0.012636383582095206,
+        "cohens_d": 0.24115955885626564
+      },
+      {
+        "axis": "G04_nucleic_acid_phosphate",
+        "axis_short": "Nuc-phosphate",
+        "mean_a": 0.24094888336943643,
+        "mean_b": 0.11628223444093927,
+        "cohens_d": 0.16743298045233057
+      },
+      {
+        "axis": "G03_pyrimidine_nucleotide",
+        "axis_short": "Pyrimidine",
+        "mean_a": 0.03503342926148366,
+        "mean_b": 0.047641995496215346,
+        "cohens_d": -0.03331409675787449
+      },
+      {
+        "axis": "G10_sulfur_thiol_redox",
+        "axis_short": "Redox",
+        "mean_a": -0.10333142977079225,
+        "mean_b": -0.09316752131461857,
+        "cohens_d": -0.01823663520422142
+      }
+    ],
+    "LM_vs_HA": [
+      {
+        "axis": "G06_protein_peptide_backbone",
+        "axis_short": "Protein",
+        "mean_a": -0.558732583023067,
+        "mean_b": 0.3627664441902638,
+        "cohens_d": -1.4042299494474475
+      },
+      {
+        "axis": "G09_sterol_neutral_lipid",
+        "axis_short": "Sterol",
+        "mean_a": -0.17890363227116,
+        "mean_b": 0.4816450623367458,
+        "cohens_d": -1.1754834365506563
+      },
+      {
+        "axis": "G02_purine_metabolite",
+        "axis_short": "Purine-met",
+        "mean_a": 0.0987436071822567,
+        "mean_b": -0.16657113602544793,
+        "cohens_d": 0.9238796847360202
+      },
+      {
+        "axis": "G01_purine_nucleotide",
+        "axis_short": "Purine-nuc",
+        "mean_a": 0.07358025357539591,
+        "mean_b": -0.012636383582095206,
+        "cohens_d": 0.9104151398286274
+      },
+      {
+        "axis": "G11_metabolic_small_molecule",
+        "axis_short": "Metabolite",
+        "mean_a": 0.4310936566865356,
+        "mean_b": -0.3701511115418665,
+        "cohens_d": 0.7713036324179664
+      },
+      {
+        "axis": "G05_glycan_carbohydrate",
+        "axis_short": "Glycan",
+        "mean_a": 0.17982085634020942,
+        "mean_b": 1.0881534761575513,
+        "cohens_d": -0.6167777432436301
+      },
+      {
+        "axis": "G03_pyrimidine_nucleotide",
+        "axis_short": "Pyrimidine",
+        "mean_a": 0.5032705335983211,
+        "mean_b": 0.047641995496215346,
+        "cohens_d": 0.3617395275570004
+      },
+      {
+        "axis": "G04_nucleic_acid_phosphate",
+        "axis_short": "Nuc-phosphate",
+        "mean_a": 0.298593736874102,
+        "mean_b": 0.11628223444093927,
+        "cohens_d": 0.34031950892016655
+      },
+      {
+        "axis": "G10_sulfur_thiol_redox",
+        "axis_short": "Redox",
+        "mean_a": 0.10448587553648755,
+        "mean_b": -0.09316752131461857,
+        "cohens_d": 0.189589557683647
+      },
+      {
+        "axis": "G08_lipid_acyl_membrane",
+        "axis_short": "Lipid",
+        "mean_a": 0.06674219416604421,
+        "mean_b": 0.0006179383723144324,
+        "cohens_d": 0.0940518721949225
+      },
+      {
+        "axis": "G07_aromatic_residue",
+        "axis_short": "Aromatic",
+        "mean_a": -0.0033255218980742284,
+        "mean_b": -0.06345650750363994,
+        "cohens_d": 0.0575012689709635
+      }
+    ]
+  },
+  "ev_effect_sizes": [
+    {
+      "axis": "G10_sulfur_thiol_redox",
+      "axis_short": "Redox",
+      "mean_a": 4.176028473077303,
+      "mean_b": 1.1049973309916215,
+      "cohens_d": 2.2214073407123345
+    },
+    {
+      "axis": "G01_purine_nucleotide",
+      "axis_short": "Purine-nuc",
+      "mean_a": -0.033282721955589255,
+      "mean_b": -0.11383166027048519,
+      "cohens_d": 1.4525938864018284
+    },
+    {
+      "axis": "G07_aromatic_residue",
+      "axis_short": "Aromatic",
+      "mean_a": -3.6726146668920503,
+      "mean_b": -4.099640787453384,
+      "cohens_d": 1.3994225842382872
+    },
+    {
+      "axis": "G09_sterol_neutral_lipid",
+      "axis_short": "Sterol",
+      "mean_a": -1.3658117634157643,
+      "mean_b": -1.630995518912936,
+      "cohens_d": 1.2228762754757012
+    },
+    {
+      "axis": "G11_metabolic_small_molecule",
+      "axis_short": "Metabolite",
+      "mean_a": -0.5523648805062603,
+      "mean_b": -0.11928514456391931,
+      "cohens_d": -0.5780952948774138
+    },
+    {
+      "axis": "G06_protein_peptide_backbone",
+      "axis_short": "Protein",
+      "mean_a": 0.21453374265299452,
+      "mean_b": 0.6447425673913056,
+      "cohens_d": -0.43322550616585004
+    },
+    {
+      "axis": "G04_nucleic_acid_phosphate",
+      "axis_short": "Nuc-phosphate",
+      "mean_a": 0.1886643376421168,
+      "mean_b": 0.06596707422148305,
+      "cohens_d": 0.2707696948351569
+    },
+    {
+      "axis": "G03_pyrimidine_nucleotide",
+      "axis_short": "Pyrimidine",
+      "mean_a": -0.009212488939848983,
+      "mean_b": -0.04238951901261445,
+      "cohens_d": 0.25231457709106725
+    },
+    {
+      "axis": "G08_lipid_acyl_membrane",
+      "axis_short": "Lipid",
+      "mean_a": -1.8742136263561213,
+      "mean_b": -1.9208962213402752,
+      "cohens_d": 0.18890814712689197
+    },
+    {
+      "axis": "G05_glycan_carbohydrate",
+      "axis_short": "Glycan",
+      "mean_a": -0.7657987103831685,
+      "mean_b": -0.5998851481255398,
+      "cohens_d": -0.15379566560612404
+    },
+    {
+      "axis": "G02_purine_metabolite",
+      "axis_short": "Purine-met",
+      "mean_a": 1.0224987531064218,
+      "mean_b": 1.050741407691145,
+      "cohens_d": -0.04714455221030861
+    }
+  ],
+  "nuisance_dataset_eta2": [
+    {
+      "axis": "G01_purine_nucleotide",
+      "axis_short": "Purine-nuc",
+      "eta_squared": 0.9197233640501697
+    },
+    {
+      "axis": "G02_purine_metabolite",
+      "axis_short": "Purine-met",
+      "eta_squared": 0.8596248636749559
+    },
+    {
+      "axis": "G07_aromatic_residue",
+      "axis_short": "Aromatic",
+      "eta_squared": 0.8456176284910514
+    },
+    {
+      "axis": "G09_sterol_neutral_lipid",
+      "axis_short": "Sterol",
+      "eta_squared": 0.6531154181365079
+    },
+    {
+      "axis": "G08_lipid_acyl_membrane",
+      "axis_short": "Lipid",
+      "eta_squared": 0.6283852874958136
+    },
+    {
+      "axis": "G10_sulfur_thiol_redox",
+      "axis_short": "Redox",
+      "eta_squared": 0.6071306791283356
+    },
+    {
+      "axis": "G11_metabolic_small_molecule",
+      "axis_short": "Metabolite",
+      "eta_squared": 0.48553987065864584
+    },
+    {
+      "axis": "G05_glycan_carbohydrate",
+      "axis_short": "Glycan",
+      "eta_squared": 0.1490102536747463
+    },
+    {
+      "axis": "G06_protein_peptide_backbone",
+      "axis_short": "Protein",
+      "eta_squared": 0.11821596599147191
+    },
+    {
+      "axis": "G04_nucleic_acid_phosphate",
+      "axis_short": "Nuc-phosphate",
+      "eta_squared": 0.07618393786361403
+    },
+    {
+      "axis": "G03_pyrimidine_nucleotide",
+      "axis_short": "Pyrimidine",
+      "eta_squared": 0.027151900376692073
+    }
+  ],
+  "nuisance_matrix_eta2": [
+    {
+      "axis": "G07_aromatic_residue",
+      "axis_short": "Aromatic",
+      "eta_squared": 0.7685525392369565
+    },
+    {
+      "axis": "G08_lipid_acyl_membrane",
+      "axis_short": "Lipid",
+      "eta_squared": 0.6305515694975076
+    },
+    {
+      "axis": "G02_purine_metabolite",
+      "axis_short": "Purine-met",
+      "eta_squared": 0.5537765511638765
+    },
+    {
+      "axis": "G09_sterol_neutral_lipid",
+      "axis_short": "Sterol",
+      "eta_squared": 0.5509367696527112
+    },
+    {
+      "axis": "G10_sulfur_thiol_redox",
+      "axis_short": "Redox",
+      "eta_squared": 0.5273441445002615
+    },
+    {
+      "axis": "G01_purine_nucleotide",
+      "axis_short": "Purine-nuc",
+      "eta_squared": 0.10678017344201472
+    },
+    {
+      "axis": "G05_glycan_carbohydrate",
+      "axis_short": "Glycan",
+      "eta_squared": 0.09624994096681541
+    },
+    {
+      "axis": "G06_protein_peptide_backbone",
+      "axis_short": "Protein",
+      "eta_squared": 0.06281774846118386
+    },
+    {
+      "axis": "G11_metabolic_small_molecule",
+      "axis_short": "Metabolite",
+      "eta_squared": 0.03312153536130134
+    },
+    {
+      "axis": "G03_pyrimidine_nucleotide",
+      "axis_short": "Pyrimidine",
+      "eta_squared": 0.01096980445673683
+    },
+    {
+      "axis": "G04_nucleic_acid_phosphate",
+      "axis_short": "Nuc-phosphate",
+      "eta_squared": 0.01027629979013722
+    }
+  ],
+  "mean_dataset_eta2": 0.48815446995836403,
+  "shine_projection": [
+    {
+      "cohort": "Day 0 \u00b7 C0",
+      "raw_nonzero_axes": 2,
+      "G01_purine_nucleotide": -0.29,
+      "G02_purine_metabolite": -0.96,
+      "G03_pyrimidine_nucleotide": -0.23,
+      "G04_nucleic_acid_phosphate": 4.0,
+      "G05_glycan_carbohydrate": -2.41,
+      "G06_protein_peptide_backbone": -2.04,
+      "G07_aromatic_residue": -4.0,
+      "G08_lipid_acyl_membrane": -2.5,
+      "G09_sterol_neutral_lipid": -1.82,
+      "G10_sulfur_thiol_redox": -2.48,
+      "G11_metabolic_small_molecule": 4.0
+    },
+    {
+      "cohort": "Day 0 \u00b7 C10",
+      "raw_nonzero_axes": 2,
+      "G01_purine_nucleotide": -0.29,
+      "G02_purine_metabolite": -0.96,
+      "G03_pyrimidine_nucleotide": -0.23,
+      "G04_nucleic_acid_phosphate": 4.0,
+      "G05_glycan_carbohydrate": -2.41,
+      "G06_protein_peptide_backbone": -2.04,
+      "G07_aromatic_residue": -4.0,
+      "G08_lipid_acyl_membrane": -2.5,
+      "G09_sterol_neutral_lipid": -1.82,
+      "G10_sulfur_thiol_redox": -2.48,
+      "G11_metabolic_small_molecule": 4.0
+    },
+    {
+      "cohort": "Day 0 \u00b7 C20",
+      "raw_nonzero_axes": 2,
+      "G01_purine_nucleotide": -0.29,
+      "G02_purine_metabolite": -0.96,
+      "G03_pyrimidine_nucleotide": -0.23,
+      "G04_nucleic_acid_phosphate": 4.0,
+      "G05_glycan_carbohydrate": -2.41,
+      "G06_protein_peptide_backbone": -2.04,
+      "G07_aromatic_residue": -4.0,
+      "G08_lipid_acyl_membrane": -2.5,
+      "G09_sterol_neutral_lipid": -1.82,
+      "G10_sulfur_thiol_redox": -2.48,
+      "G11_metabolic_small_molecule": 4.0
+    },
+    {
+      "cohort": "Day 0 \u00b7 C40",
+      "raw_nonzero_axes": 2,
+      "G01_purine_nucleotide": -0.29,
+      "G02_purine_metabolite": -0.96,
+      "G03_pyrimidine_nucleotide": -0.23,
+      "G04_nucleic_acid_phosphate": 4.0,
+      "G05_glycan_carbohydrate": -2.41,
+      "G06_protein_peptide_backbone": -2.04,
+      "G07_aromatic_residue": -4.0,
+      "G08_lipid_acyl_membrane": -2.5,
+      "G09_sterol_neutral_lipid": -1.82,
+      "G10_sulfur_thiol_redox": -2.48,
+      "G11_metabolic_small_molecule": 4.0
+    },
+    {
+      "cohort": "Day 2 \u00b7 C0",
+      "raw_nonzero_axes": 2,
+      "G01_purine_nucleotide": -0.29,
+      "G02_purine_metabolite": -0.96,
+      "G03_pyrimidine_nucleotide": -0.23,
+      "G04_nucleic_acid_phosphate": 4.0,
+      "G05_glycan_carbohydrate": -2.41,
+      "G06_protein_peptide_backbone": -2.04,
+      "G07_aromatic_residue": -4.0,
+      "G08_lipid_acyl_membrane": -2.5,
+      "G09_sterol_neutral_lipid": -1.82,
+      "G10_sulfur_thiol_redox": -2.48,
+      "G11_metabolic_small_molecule": 4.0
+    },
+    {
+      "cohort": "Day 2 \u00b7 C10",
+      "raw_nonzero_axes": 2,
+      "G01_purine_nucleotide": -0.29,
+      "G02_purine_metabolite": -0.96,
+      "G03_pyrimidine_nucleotide": -0.23,
+      "G04_nucleic_acid_phosphate": 4.0,
+      "G05_glycan_carbohydrate": -2.41,
+      "G06_protein_peptide_backbone": -2.04,
+      "G07_aromatic_residue": -4.0,
+      "G08_lipid_acyl_membrane": -2.5,
+      "G09_sterol_neutral_lipid": -1.82,
+      "G10_sulfur_thiol_redox": -2.48,
+      "G11_metabolic_small_molecule": 4.0
+    },
+    {
+      "cohort": "Day 2 \u00b7 C20",
+      "raw_nonzero_axes": 2,
+      "G01_purine_nucleotide": -0.29,
+      "G02_purine_metabolite": -0.96,
+      "G03_pyrimidine_nucleotide": -0.23,
+      "G04_nucleic_acid_phosphate": 4.0,
+      "G05_glycan_carbohydrate": -2.41,
+      "G06_protein_peptide_backbone": -2.04,
+      "G07_aromatic_residue": -4.0,
+      "G08_lipid_acyl_membrane": -2.5,
+      "G09_sterol_neutral_lipid": -1.82,
+      "G10_sulfur_thiol_redox": -2.48,
+      "G11_metabolic_small_molecule": 4.0
+    },
+    {
+      "cohort": "Day 2 \u00b7 C40",
+      "raw_nonzero_axes": 2,
+      "G01_purine_nucleotide": -0.29,
+      "G02_purine_metabolite": -0.96,
+      "G03_pyrimidine_nucleotide": -0.23,
+      "G04_nucleic_acid_phosphate": 4.0,
+      "G05_glycan_carbohydrate": -2.41,
+      "G06_protein_peptide_backbone": -2.04,
+      "G07_aromatic_residue": -4.0,
+      "G08_lipid_acyl_membrane": -2.5,
+      "G09_sterol_neutral_lipid": -1.82,
+      "G10_sulfur_thiol_redox": -2.48,
+      "G11_metabolic_small_molecule": 4.0
+    }
+  ]
+}
