@@ -180,3 +180,13 @@ checkpoints/
 !gaira_demo_reasoning_v3/data/generated/
 !gaira_demo_reasoning_v3/data/generated/*.csv
 !gaira_demo_reasoning_v3/data/generated/*.json
+
+############################################
+# GAIRA reasoning demo v3.1 — bundled + generated data (incl. diabetes
+# equivalence artifacts and frozen calibration copy).
+############################################
+!gaira_demo_reasoning_v3_1/data/
+!gaira_demo_reasoning_v3_1/data/legacy/
+!gaira_demo_reasoning_v3_1/data/legacy/*.csv
+!gaira_demo_reasoning_v3_1/data/generated/
+!gaira_demo_reasoning_v3_1/data/generated/**

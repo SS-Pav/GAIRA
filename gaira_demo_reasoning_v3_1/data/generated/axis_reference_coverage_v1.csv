@@ -1,0 +1,12 @@
+axis,axis_short,unique_reference_analytes,measured_reference_spectra,direct_spectral_sources,supporting_literature_sources,calibration_datasets,biological_datasets_occupying,ontology_independence_status,insufficient_grounding_flag
+G01_purine_nucleotide,Purine-nuc,NA,NA (corpus-level: 160),NA (corpus-level: 12 unique),NA (corpus-level: 16 unique),"adenine (6 conc, live Ag-SERS)",serum_liver(100%); ev_diabetes(100%),derived_split,True
+G02_purine_metabolite,Purine-met,NA,NA (corpus-level: 160),NA (corpus-level: 12 unique),NA (corpus-level: 16 unique),"uric-acid/hypoxanthine/uricase (SAEL contrasts, cached)",serum_liver(100%); ev_diabetes(100%),derived_split,True
+G03_pyrimidine_nucleotide,Pyrimidine,13,NA (corpus-level: 160),NA (corpus-level: 12 unique),NA (corpus-level: 16 unique),none,serum_liver(100%); ev_diabetes(100%),partially_grounded,False
+G04_nucleic_acid_phosphate,Nuc-phosphate,31,NA (corpus-level: 160),NA (corpus-level: 12 unique),NA (corpus-level: 16 unique),none,serum_liver(100%); ev_diabetes(100%),independently_grounded,False
+G05_glycan_carbohydrate,Glycan,25,NA (corpus-level: 160),NA (corpus-level: 12 unique),NA (corpus-level: 16 unique),none,serum_liver(100%); ev_diabetes(100%),independently_grounded,False
+G06_protein_peptide_backbone,Protein,81,NA (corpus-level: 160),NA (corpus-level: 12 unique),NA (corpus-level: 16 unique),none,serum_liver(100%); ev_diabetes(100%),independently_grounded,False
+G07_aromatic_residue,Aromatic,12,NA (corpus-level: 160),NA (corpus-level: 12 unique),NA (corpus-level: 16 unique),none,serum_liver(100%); ev_diabetes(100%),partially_grounded,False
+G08_lipid_acyl_membrane,Lipid,NA,NA (corpus-level: 160),NA (corpus-level: 12 unique),NA (corpus-level: 16 unique),none,serum_liver(100%); ev_diabetes(100%),derived_split,True
+G09_sterol_neutral_lipid,Sterol,NA,NA (corpus-level: 160),NA (corpus-level: 12 unique),NA (corpus-level: 16 unique),none,serum_liver(100%); ev_diabetes(100%),derived_split,True
+G10_sulfur_thiol_redox,Redox,NA,NA (corpus-level: 160),NA (corpus-level: 12 unique),NA (corpus-level: 16 unique),"ergothioneine (55 spectra, live Ag-SERS)",serum_liver(100%); ev_diabetes(100%),insufficiently_grounded,True
+G11_metabolic_small_molecule,Metabolite,NA,NA (corpus-level: 160),NA (corpus-level: 12 unique),NA (corpus-level: 16 unique),none,serum_liver(100%); ev_diabetes(100%),insufficiently_grounded,True

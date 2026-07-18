@@ -1,0 +1,245 @@
+# GAIRA Biochemical Ontology v1
+# ---------------------------------------------------------------------------
+# The first operational interpretable coordinate system for the GAIRA
+# transparent heuristic band-evidence engine. This ontology is DISEASE-LABEL
+# INDEPENDENT: axis meaning derives only from spectral motifs, curated MSS
+# reference analytes, and the RamanBioLib reference-analyte family mapping —
+# never from disease/cohort labels.
+#
+# Statement (ontology-level):
+#   The 11-axis ontology is the first operational interpretable coordinate
+#   system. Future evidence may justify merging, splitting, retiring, or
+#   hierarchically reorganizing axes. Eleven axes are NOT assumed to be
+#   scientifically final, and several are inherited (by proportional split)
+#   from a lower-dimensional legacy 8-axis grounding rather than independently
+#   measured.
+#
+# grounding_status vocabulary (per axis):
+#   independently_grounded  - 1:1 legacy map AND its own motif/MSS support with
+#                             a non-trivial reference-analyte count
+#   partially_grounded      - 1:1 legacy map but thin independent support
+#                             (few analytes / single motif)
+#   derived_split           - value inherited by proportional split of a legacy
+#                             axis shared with a sibling; not independently
+#                             resolvable at v11 resolution
+#   insufficiently_grounded - shared pool is very small; treat as provisional
+# ---------------------------------------------------------------------------
+
+ontology_version: "v1"
+ontology_name: "GAIRA Biochemical Ontology v1"
+n_axes: 11
+disease_label_independent: true
+legacy_source: "8-axis grounding_molecule ontology (RamanBioLib dominant-axis)"
+notes: >
+  Axis meaning comes from the fixed motif_scoring / mss_scoring definitions and
+  the 202-molecule reference-analyte dominant-axis mapping. Global coordinate
+  scale (V3) is a separate, frozen calibration and does NOT redefine axis
+  meaning. The three legacy split families (purine, lipid, redox) produce two
+  v11 children each whose values are proportional divisions of one shared
+  legacy signal — they are marked derived_split.
+
+# Legacy 8-axis -> v11 mapping (mirrors gaira_core/config.LEGACY8_TO_V11).
+legacy8_to_v11:
+  membrane_lipid:        [G08_lipid_acyl_membrane, G09_sterol_neutral_lipid]   # split
+  protein_backbone:      [G06_protein_peptide_backbone]                        # 1:1
+  aromatic_amino_acid:   [G07_aromatic_residue]                                # 1:1
+  purine_nucleotide:     [G01_purine_nucleotide, G02_purine_metabolite]        # split
+  pyrimidine_nucleotide: [G03_pyrimidine_nucleotide]                           # 1:1
+  glycan_carbohydrate:   [G05_glycan_carbohydrate]                             # 1:1
+  redox_metabolite:      [G10_sulfur_thiol_redox, G11_metabolic_small_molecule]# split
+  nucleic_acid_backbone: [G04_nucleic_acid_phosphate]                          # 1:1
+
+axes:
+  - id: G01_purine_nucleotide
+    display_name: "Purine-nucleotide-associated"
+    scientific_name: "purine-nucleotide-associated signal"
+    interpretation: "Purine ring-breathing evidence (adenine-type nucleobase); class-level, not a molecule call."
+    legacy_source_axis: purine_nucleotide
+    from_legacy_split: true
+    split_siblings: [G02_purine_metabolite]
+    contributing_motifs: [purine_ring_breathing_720_735]
+    contributing_mss_analytes: [adenine]
+    known_collisions:
+      - "720-740 cm-1 purine ring breathing shared with G02 (purine metabolite) and imidazole (ergothioneine, G10)"
+    substrate_sensitivities:
+      - "Ag colloid SERS amplifies 720-740 x3-10; engine dampens x0.65 to keep class-level"
+    evidence_confidence: moderate
+    validation_status: "adenine dose-response supported (live Ag-SERS)"
+    grounding_status: derived_split
+    limitations: "Cannot be resolved from G02 at 8-axis grounding resolution; shares a 12-analyte purine pool."
+
+  - id: G02_purine_metabolite
+    display_name: "Purine-metabolite-associated"
+    scientific_name: "purine-metabolite-associated signal"
+    interpretation: "Oxidized/catabolic purine evidence (uric acid / hypoxanthine type); class-level."
+    legacy_source_axis: purine_nucleotide
+    from_legacy_split: true
+    split_siblings: [G01_purine_nucleotide]
+    contributing_motifs: [uric_acid_doublet_640_891]
+    contributing_mss_analytes: [uric_acid, hypoxanthine]
+    known_collisions:
+      - "720 cm-1 shared with G01; 1517 cm-1 uric-acid band overlaps carotenoid C=C in serum SERS"
+    substrate_sensitivities:
+      - "Carotenoid 1517 overlap in serum Ag-SERS soft-dampens specificity x0.85"
+    evidence_confidence: moderate
+    validation_status: "hypoxanthine/uricase contrasts mixed (one inconsistent) — see calibration report"
+    grounding_status: derived_split
+    limitations: "Shares the 12-analyte purine pool with G01; substrate-confounded in serum."
+
+  - id: G03_pyrimidine_nucleotide
+    display_name: "Pyrimidine-nucleotide-associated"
+    scientific_name: "pyrimidine-nucleotide-associated signal"
+    interpretation: "Pyrimidine ring-breathing evidence (~780 cm-1)."
+    legacy_source_axis: pyrimidine_nucleotide
+    from_legacy_split: false
+    split_siblings: []
+    contributing_motifs: [pyrimidine_ring_780]
+    contributing_mss_analytes: []
+    known_collisions:
+      - "780 cm-1 overlaps cytosine/uracil and some nucleic-acid backbone modes"
+    substrate_sensitivities: []
+    evidence_confidence: moderate
+    validation_status: "no dedicated calibration analyte in curated MSS set"
+    grounding_status: partially_grounded
+    limitations: "1:1 legacy map (13 reference analytes) but no curated MSS analyte anchors it directly."
+
+  - id: G04_nucleic_acid_phosphate
+    display_name: "Nucleic-acid-phosphate-associated"
+    scientific_name: "nucleic-acid phosphate-associated signal"
+    interpretation: "Symmetric PO2- backbone evidence (~1080 cm-1)."
+    legacy_source_axis: nucleic_acid_backbone
+    from_legacy_split: false
+    split_siblings: []
+    contributing_motifs: [phosphate_po2_1080]
+    contributing_mss_analytes: []
+    known_collisions:
+      - "1080 cm-1 overlaps glycan C-O (G05) and lipid C-C"
+    substrate_sensitivities:
+      - "Phosphate signal weakens on Ag-SERS unless adsorbed"
+    evidence_confidence: moderate
+    validation_status: "31 reference analytes map here"
+    grounding_status: independently_grounded
+    limitations: "Band overlaps glycan; co-band logic needed for specificity."
+
+  - id: G05_glycan_carbohydrate
+    display_name: "Glycan/carbohydrate-associated"
+    scientific_name: "glycan/carbohydrate-associated signal"
+    interpretation: "Carbohydrate C-O/C-C stretch evidence (1020-1150 cm-1)."
+    legacy_source_axis: glycan_carbohydrate
+    from_legacy_split: false
+    split_siblings: []
+    contributing_motifs: [glycan_co_co_1050_1150]
+    contributing_mss_analytes: [glucose]
+    known_collisions:
+      - "845 cm-1 anomeric overlaps lactate C-C-O (G11); 1080 overlaps phosphate (G04)"
+    substrate_sensitivities: []
+    evidence_confidence: moderate
+    validation_status: "25 reference analytes; glucose MSS anchor"
+    grounding_status: independently_grounded
+    limitations: "Broad band; class-level."
+
+  - id: G06_protein_peptide_backbone
+    display_name: "Protein/peptide-backbone-associated"
+    scientific_name: "protein/peptide-backbone-associated signal"
+    interpretation: "Amide-III backbone evidence (1230-1300 cm-1)."
+    legacy_source_axis: protein_backbone
+    from_legacy_split: false
+    split_siblings: []
+    contributing_motifs: [protein_amide_iii_1230_1300]
+    contributing_mss_analytes: []
+    known_collisions:
+      - "Amide envelope overlaps aromatic residue bands (G07); amide-I overlaps lipid C=C"
+    substrate_sensitivities:
+      - "Amide-III reliable in Raman; SERS rebalances toward adsorbed species"
+    evidence_confidence: moderate
+    validation_status: "81 reference analytes map here (largest family)"
+    grounding_status: independently_grounded
+    limitations: "Amide-III window is broad and mixes with several chemistries."
+
+  - id: G07_aromatic_residue
+    display_name: "Aromatic-residue-associated"
+    scientific_name: "aromatic-amino-acid-residue-associated signal"
+    interpretation: "Aromatic ring-breathing evidence (phenylalanine ~1003 cm-1)."
+    legacy_source_axis: aromatic_amino_acid
+    from_legacy_split: false
+    split_siblings: []
+    contributing_motifs: [aromatic_phe_1003]
+    contributing_mss_analytes: [phenylalanine, tyrosine]
+    known_collisions:
+      - "Shares protein amide/aromatic envelope with G06"
+    substrate_sensitivities:
+      - "1003 cm-1 stable across regimes; SERS may down-weight intensity"
+    evidence_confidence: moderate
+    validation_status: "12 reference analytes; Phe/Tyr MSS anchors; single sharp motif"
+    grounding_status: partially_grounded
+    limitations: "Rests largely on one narrow 1003 cm-1 motif."
+
+  - id: G08_lipid_acyl_membrane
+    display_name: "Lipid-acyl/membrane-associated"
+    scientific_name: "lipid-acyl/membrane-associated signal"
+    interpretation: "CH2 deformation + C=C evidence (1440 + 1655 cm-1)."
+    legacy_source_axis: membrane_lipid
+    from_legacy_split: true
+    split_siblings: [G09_sterol_neutral_lipid]
+    contributing_motifs: [lipid_acyl_1440_1655]
+    contributing_mss_analytes: [oleic_acid]
+    known_collisions:
+      - "1440 CH2 shared with sterol (G09); 1655 C=C overlaps amide-I (G06)"
+    substrate_sensitivities:
+      - "Amide-I/lipid C=C overlap soft-dampened x0.92 in protein-dominant matrices"
+    evidence_confidence: moderate
+    validation_status: "shares 25-analyte lipid pool with G09"
+    grounding_status: derived_split
+    limitations: "Not resolvable from G09 at 8-axis grounding resolution."
+
+  - id: G09_sterol_neutral_lipid
+    display_name: "Sterol/neutral-lipid-associated"
+    scientific_name: "sterol/neutral-lipid-associated signal"
+    interpretation: "Sterol ring-deformation evidence (~548 cm-1)."
+    legacy_source_axis: membrane_lipid
+    from_legacy_split: true
+    split_siblings: [G08_lipid_acyl_membrane]
+    contributing_motifs: [sterol_ring_548]
+    contributing_mss_analytes: [cholesterol]
+    known_collisions:
+      - "1440 CH2 shared with lipid acyl (G08); sterol-specific call needs 548 cm-1"
+    substrate_sensitivities: []
+    evidence_confidence: moderate
+    validation_status: "shares 25-analyte lipid pool with G08"
+    grounding_status: derived_split
+    limitations: "Sterol-specific only when 548 cm-1 co-fires; otherwise inherits lipid split."
+
+  - id: G10_sulfur_thiol_redox
+    display_name: "Sulfur/thiol/redox-associated"
+    scientific_name: "sulfur/thiol/redox-associated signal"
+    interpretation: "Thione/C-S stretch evidence (490-500 cm-1); ergothioneine/thiol redox."
+    legacy_source_axis: redox_metabolite
+    from_legacy_split: true
+    split_siblings: [G11_metabolic_small_molecule]
+    contributing_motifs: [thione_c_s_490_500]
+    contributing_mss_analytes: [ergothioneine, glutathione]
+    known_collisions:
+      - "Imidazole 720 cm-1 (ergothioneine) collides with adenine purine (G01)"
+    substrate_sensitivities:
+      - "Thiol/thione affinity for Ag surface; small boost x1.20 on Ag-SERS"
+    evidence_confidence: moderate
+    validation_status: "ergothioneine dose-response supported; shares 3-analyte redox pool with G11"
+    grounding_status: insufficiently_grounded
+    limitations: "Very small (3-analyte) legacy redox pool; derived split from G11; high dynamic range."
+
+  - id: G11_metabolic_small_molecule
+    display_name: "Metabolic-small-molecule-associated"
+    scientific_name: "metabolic-small-molecule-associated signal"
+    interpretation: "Small-molecule metabolite evidence (lactate-like C-C-O 845 + 925 cm-1)."
+    legacy_source_axis: redox_metabolite
+    from_legacy_split: true
+    split_siblings: [G10_sulfur_thiol_redox]
+    contributing_motifs: [lactate_c_co_845_925]
+    contributing_mss_analytes: [lactate]
+    known_collisions:
+      - "845 cm-1 overlaps glycan anomeric (G05)"
+    substrate_sensitivities: []
+    evidence_confidence: moderate
+    validation_status: "shares 3-analyte redox pool with G10"
+    grounding_status: insufficiently_grounded
+    limitations: "Derived split from the small 3-analyte redox_metabolite pool."

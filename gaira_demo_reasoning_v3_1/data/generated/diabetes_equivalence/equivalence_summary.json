@@ -1,0 +1,38 @@
+{
+  "n_samples": 63,
+  "n_OWD": 39,
+  "n_NWD": 24,
+  "engine_effect_axes_nonzero": [
+    "G10_sulfur_thiol_redox"
+  ],
+  "engine_max_abs_by_axis": {
+    "G01_purine_nucleotide": 0.0,
+    "G02_purine_metabolite": 0.0,
+    "G03_pyrimidine_nucleotide": 0.0,
+    "G04_nucleic_acid_phosphate": 0.0,
+    "G05_glycan_carbohydrate": 0.0,
+    "G06_protein_peptide_backbone": 0.0,
+    "G07_aromatic_residue": 0.0,
+    "G08_lipid_acyl_membrane": 0.0,
+    "G09_sterol_neutral_lipid": 0.0,
+    "G10_sulfur_thiol_redox": 0.02727247052315629,
+    "G11_metabolic_small_molecule": 0.0
+  },
+  "historical_1304_vs_1322_nonzero_axes": [
+    "G10_sulfur_thiol_redox"
+  ],
+  "historical_zscore_reproduction_max_abs": 1.6375789613221059e-15,
+  "redox_rank_by_variant": {
+    "raw": 1,
+    "historical_cohort_z": 1,
+    "robust_cohort_z": 5,
+    "v3_frozen_global": 2,
+    "cohort_standardized_global": 1,
+    "historical_cohort_z_exact": 3
+  },
+  "label_mapping": {
+    "Impact": "OWD",
+    "Strong-D": "NWD",
+    "rule": "direct group_raw->group_2 map (run_diabetes_gaira_audit.py:205); bmi>=25 rule exists (_map_bmi_group) but was NOT used for group_2"
+  }
+}
