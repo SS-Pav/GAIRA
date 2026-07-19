@@ -1,0 +1,265 @@
+{
+  "version": "0.1 (provisional \u2014 NOT frozen)",
+  "basis": "frozen NMF k=24 Raman reference atlas, audited post-hoc",
+  "tiers": {
+    "high_confidence": 6,
+    "moderate_confidence": 10,
+    "low_confidence": 6,
+    "unknown": 2
+  },
+  "entries": {
+    "high_confidence": [
+      {
+        "component": 2,
+        "theme": "protein",
+        "class": "protein/peptide",
+        "purity": 0.803,
+        "enrichment": 4.19,
+        "stability": 0.965,
+        "variance": 0.1028,
+        "bands_cm": "[764.0, 856.0, 1000.0, 1130.0, 1240.0, 1336.0, 1456.0, 1550.0]"
+      },
+      {
+        "component": 4,
+        "theme": "saccharide",
+        "class": "carbohydrate",
+        "purity": 0.429,
+        "enrichment": 2.65,
+        "stability": 0.769,
+        "variance": 0.0309,
+        "bands_cm": "[464.0, 528.0, 598.0, 816.0, 872.0, 1060.0, 1086.0, 1268.0]"
+      },
+      {
+        "component": 10,
+        "theme": "saccharide",
+        "class": "carbohydrate",
+        "purity": 0.521,
+        "enrichment": 3.22,
+        "stability": 0.653,
+        "variance": 0.0229,
+        "bands_cm": "[842.0, 916.0, 1054.0, 1108.0, 1266.0, 1346.0, 1374.0, 1458.0]"
+      },
+      {
+        "component": 12,
+        "theme": "saccharide",
+        "class": "carbohydrate",
+        "purity": 0.544,
+        "enrichment": 3.37,
+        "stability": 0.788,
+        "variance": 0.0313,
+        "bands_cm": "[540.0, 774.0, 966.0, 1020.0, 1074.0, 1122.0, 1150.0, 1274.0]"
+      },
+      {
+        "component": 20,
+        "theme": "saccharide",
+        "class": "carbohydrate",
+        "purity": 0.4,
+        "enrichment": 2.48,
+        "stability": 0.768,
+        "variance": 0.0212,
+        "bands_cm": "[468.0, 592.0, 626.0, 818.0, 1038.0, 1472.0]"
+      },
+      {
+        "component": 23,
+        "theme": "organic_acid",
+        "class": "cofactor/small-molecule",
+        "purity": 0.428,
+        "enrichment": 5.95,
+        "stability": 0.781,
+        "variance": 0.0196,
+        "bands_cm": "[732.0, 782.0, 944.0, 1382.0, 1628.0, 1698.0]"
+      }
+    ],
+    "moderate_confidence": [
+      {
+        "component": 0,
+        "theme": "protein",
+        "class": "protein/peptide",
+        "purity": 0.333,
+        "enrichment": 1.74,
+        "stability": 0.81,
+        "variance": 0.0351,
+        "bands_cm": "[754.0, 1178.0, 1224.0, 1348.0, 1456.0, 1578.0]"
+      },
+      {
+        "component": 1,
+        "theme": "triglyceride",
+        "class": "lipid",
+        "purity": 0.322,
+        "enrichment": 3.36,
+        "stability": 0.955,
+        "variance": 0.1186,
+        "bands_cm": "[1302.0, 1442.0]"
+      },
+      {
+        "component": 6,
+        "theme": "protein",
+        "class": "protein/peptide",
+        "purity": 0.335,
+        "enrichment": 1.75,
+        "stability": 0.872,
+        "variance": 0.0439,
+        "bands_cm": "[1006.0]"
+      },
+      {
+        "component": 8,
+        "theme": "protein",
+        "class": "protein/peptide",
+        "purity": 0.36,
+        "enrichment": 1.88,
+        "stability": 0.927,
+        "variance": 0.0314,
+        "bands_cm": "[1134.0, 1306.0, 1362.0, 1590.0]"
+      },
+      {
+        "component": 11,
+        "theme": "amino_acid",
+        "class": "protein/peptide",
+        "purity": 0.371,
+        "enrichment": 3.64,
+        "stability": 0.886,
+        "variance": 0.0403,
+        "bands_cm": "[852.0, 1322.0, 1360.0, 1464.0]"
+      },
+      {
+        "component": 14,
+        "theme": "organic_acid",
+        "class": "protein/peptide",
+        "purity": 0.28,
+        "enrichment": 3.89,
+        "stability": 0.769,
+        "variance": 0.0295,
+        "bands_cm": "[588.0, 940.0, 1398.0]"
+      },
+      {
+        "component": 15,
+        "theme": "purine",
+        "class": "protein/peptide",
+        "purity": 0.303,
+        "enrichment": 10.11,
+        "stability": 0.787,
+        "variance": 0.0217,
+        "bands_cm": "[650.0, 938.0, 1230.0, 1264.0, 1330.0, 1428.0, 1550.0]"
+      },
+      {
+        "component": 16,
+        "theme": "triglyceride",
+        "class": "lipid",
+        "purity": 0.35,
+        "enrichment": 3.66,
+        "stability": 0.847,
+        "variance": 0.0397,
+        "bands_cm": "[892.0, 1062.0, 1130.0, 1296.0, 1466.0]"
+      },
+      {
+        "component": 17,
+        "theme": "pyrimidine",
+        "class": "nucleic",
+        "purity": 0.253,
+        "enrichment": 14.06,
+        "stability": 0.819,
+        "variance": 0.0211,
+        "bands_cm": "[556.0, 578.0, 790.0, 1236.0, 1396.0]"
+      },
+      {
+        "component": 18,
+        "theme": "saccharide",
+        "class": "carbohydrate",
+        "purity": 0.367,
+        "enrichment": 2.27,
+        "stability": 0.882,
+        "variance": 0.037,
+        "bands_cm": "[478.0, 578.0, 914.0, 1022.0, 1088.0, 1120.0, 1258.0, 1332.0]"
+      }
+    ],
+    "low_confidence": [
+      {
+        "component": 3,
+        "theme": "sterol",
+        "class": "lipid",
+        "purity": 0.217,
+        "enrichment": 4.03,
+        "stability": 0.823,
+        "variance": 0.0315,
+        "bands_cm": "[536.0, 722.0, 1250.0, 1334.0, 1486.0]"
+      },
+      {
+        "component": 5,
+        "theme": "amino_acid",
+        "class": "protein/peptide",
+        "purity": 0.281,
+        "enrichment": 2.76,
+        "stability": 0.737,
+        "variance": 0.0237,
+        "bands_cm": "[640.0, 828.0, 1178.0, 1326.0, 1614.0]"
+      },
+      {
+        "component": 7,
+        "theme": "protein",
+        "class": "lipid",
+        "purity": 0.293,
+        "enrichment": 1.53,
+        "stability": 0.951,
+        "variance": 0.0679,
+        "bands_cm": "[1260.0, 1318.0, 1430.0, 1654.0]"
+      },
+      {
+        "component": 9,
+        "theme": "amino_acid",
+        "class": "protein/peptide",
+        "purity": 0.242,
+        "enrichment": 2.38,
+        "stability": 0.709,
+        "variance": 0.0257,
+        "bands_cm": "[506.0, 896.0, 1034.0, 1326.0, 1412.0, 1444.0]"
+      },
+      {
+        "component": 21,
+        "theme": "saccharide",
+        "class": "carbohydrate",
+        "purity": 0.293,
+        "enrichment": 1.81,
+        "stability": 0.769,
+        "variance": 0.0235,
+        "bands_cm": "[512.0, 552.0, 576.0, 612.0, 928.0, 978.0, 1068.0, 1272.0]"
+      },
+      {
+        "component": 22,
+        "theme": "protein",
+        "class": "protein/peptide",
+        "purity": 0.222,
+        "enrichment": 1.16,
+        "stability": 0.735,
+        "variance": 0.0289,
+        "bands_cm": "[640.0, 760.0, 866.0, 916.0, 1290.0, 1356.0, 1424.0, 1704.0]"
+      }
+    ],
+    "unknown": [
+      {
+        "component": 13,
+        "theme": "pyrimidine",
+        "class": "nucleic",
+        "purity": 0.187,
+        "enrichment": 10.39,
+        "stability": 0.664,
+        "variance": 0.0197,
+        "bands_cm": "[480.0, 558.0, 616.0, 742.0, 806.0, 984.0, 1370.0, 1490.0]"
+      },
+      {
+        "component": 19,
+        "theme": "protein",
+        "class": "cofactor/small-molecule",
+        "purity": 0.192,
+        "enrichment": 1.0,
+        "stability": 0.825,
+        "variance": 0.0184,
+        "bands_cm": "[578.0, 606.0, 640.0, 674.0, 838.0, 904.0, 1208.0, 1418.0]"
+      }
+    ]
+  },
+  "caveats": [
+    "Themes are tentative interpretations of latent components, not molecular assignments.",
+    "Mean component class purity is only 0.35: most components are chemically enriched rather than chemically pure.",
+    "The atlas resolves molecular CLASS reliably; species within a class are frequently not resolved (see P12)."
+  ]
+}

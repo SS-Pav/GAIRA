@@ -1,0 +1,15 @@
+group,n_components,components,dominant_family,dominant_fraction,second_family,top_analytes,share_of_atlas
+1,2,"[1, 16]",triglyceride,0.314,fatty_acid,"['triarachidin', 'tribehenin', 'tristearin', 'trimyristin', 'tripalmitin', 'trilaurin', 'lauric acid', 'arachidic acid']",0.213
+2,2,"[2, 7]",protein,0.572,fatty_acid,"['arachidonic acid', 'superoxide dismutases', 'ubiquitin', 'major proteinase', 'trilinolenin', 'trypsin', 'elastin', 'trypsin inhibitor']",0.108
+3,2,"[17, 23]",organic_acid,0.201,pyrimidine,"['uracil', 'cytosine', 'phosphoenolpyruvate', 't-rna', 'citrate', 'pyruvate', 'a-dna', 'b-dna']",0.054
+4,3,"[0, 8, 13]",protein,0.282,cofactor,"['thymine', 'melanin', 'hemoglobin', 'myoglobin', 'cytochrome c', 'riboflavin', 'riboﬂavin', 'horseradish peroxidase']",0.073
+5,2,"[14, 22]",organic_acid,0.259,protein,"['succinic acid', 'aspartic acid', 'asparagine', 'phosphate', 'glutamate', 'fumarate', 'acetoacetate', 'aspartate']",0.097
+6,1,[9],amino_acid,0.242,saccharide,"['glycine', '(+)-xylose', 'proline', 'chitin', 'glucosamine', 'gluth', '(-)-ribose', 'glutathione']",0.031
+7,1,[19],protein,0.192,saccharide,"['creatinine', 'tubulin', 'gluth', 'ergothioneine', 'cysteine', '(-)-arabinose', 'mannose', 'phosphatidylinositol']",0.036
+8,1,[3],sterol,0.217,purine,"['adenine', 'acetyl coenzyme a', 'estrone', 'coenzyme a', 'methionine', 'acetyl-coa', 'estradiol', 'estriol']",0.026
+9,1,[15],purine,0.303,protein,"['guanine', 'xanthine', 'cysteine', '(+)-galactose', 'methionine', 'tyrosine', 'histidine', 'papain']",0.025
+10,1,[5],amino_acid,0.281,saccharide,"['tyrosine', '(+)-raffinose pentahydrate', 'acetoacetate', 'diethylstilbestrol', 'phenylalanine', 'carotene', 'insulin', '(+)-mannose']",0.019
+11,4,"[10, 11, 12, 18]",saccharide,0.403,amino_acid,"['(+)-dextrose', 'β-d-glucose', '(+)-glucose', 'alanine', 'glucose', 'hydroxyproline', '(+)-lactose', 'lactose']",0.18
+12,2,"[4, 20]",saccharide,0.414,protein,"['fructose', '(-)-fructose', '(+)-galactosamine', 'urate', 'galactose', '2-deoxy-d-ribose', '(+)-fucose', 'ascorbate']",0.065
+13,1,[21],saccharide,0.293,amino_acid,"['fructose-6-phosphate', 'arginine', 'n-acetyl- d-glucosamine', 'histidine', 'ergothioneine', 'n-acetylglucosamine', 'ure', 'malic acid']",0.034
+14,1,[6],protein,0.335,amino_acid,"['urea', 'ure', 'phenylalanine', 'β-carotene', 'carotene', 'tryptophan', 'lectin', 'carbonic anhydrase']",0.039

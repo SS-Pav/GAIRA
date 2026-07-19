@@ -1,0 +1,196 @@
+{
+  "atlas": {
+    "representation": "NMF",
+    "k": 24,
+    "fingerprint": "09ed804a40836f4a05a91ba10900cded",
+    "verified_unchanged": true
+  },
+  "corpus": {
+    "n_spectra": 375,
+    "n_analytes": 167
+  },
+  "grouping_recommendation_k": 14,
+  "grouping_ranking": [
+    {
+      "n_groups": 14,
+      "silhouette": 0.09488494334589333,
+      "bootstrap_reproducibility": 0.96875,
+      "chemical_coherence": 0.3079921557050169,
+      "spectral_coherence": 0.23140825419901148,
+      "interpretable_group_fraction": 0.21428571428571427,
+      "singleton_groups": 7,
+      "r_silhouette": 1.0,
+      "r_bootstrap_reproducibility": 0.9240631163708095,
+      "r_chemical_coherence": 0.919283148171666,
+      "r_interpretable_group_fraction": 1.0,
+      "composite": 0.9530038793627427
+    },
+    {
+      "n_groups": 16,
+      "silhouette": 0.08305205258502732,
+      "bootstrap_reproducibility": 0.9757246376811594,
+      "chemical_coherence": 0.31228121257149366,
+      "spectral_coherence": 0.23918702661924426,
+      "interpretable_group_fraction": 0.1875,
+      "singleton_groups": 9,
+      "r_silhouette": 0.6669231579191219,
+      "r_bootstrap_reproducibility": 1.0,
+      "r_chemical_coherence": 1.0,
+      "r_interpretable_group_fraction": 0.875,
+      "composite": 0.9083846315838244
+    },
+    {
+      "n_groups": 12,
+      "silhouette": 0.09369145442709659,
+      "bootstrap_reproducibility": 0.9603260869565219,
+      "chemical_coherence": 0.30759919226350213,
+      "spectral_coherence": 0.22117524423912738,
+      "interpretable_group_fraction": 0.16666666666666666,
+      "singleton_groups": 4,
+      "r_silhouette": 0.9664052066257522,
+      "r_bootstrap_reproducibility": 0.8323471400394502,
+      "r_chemical_coherence": 0.9118878692396901,
+      "r_interpretable_group_fraction": 0.7777777777777778,
+      "composite": 0.8721070996644481
+    },
+    {
+      "n_groups": 10,
+      "silhouette": 0.07861108257512031,
+      "bootstrap_reproducibility": 0.9383152173913043,
+      "chemical_coherence": 0.2806031859283743,
+      "spectral_coherence": 0.20987924778361144,
+      "interpretable_group_fraction": 0.1,
+      "singleton_groups": 2,
+      "r_silhouette": 0.5419169953026545,
+      "r_bootstrap_reproducibility": 0.5927021696252472,
+      "r_chemical_coherence": 0.40384316124325476,
+      "r_interpretable_group_fraction": 0.46666666666666673,
+      "composite": 0.5006803316544148
+    },
+    {
+      "n_groups": 8,
+      "silhouette": 0.0775635771264536,
+      "bootstrap_reproducibility": 0.8999094202898551,
+      "chemical_coherence": 0.2603383666534504,
+      "spectral_coherence": 0.207447052374691,
+      "interpretable_group_fraction": 0.0,
+      "singleton_groups": 1,
+      "r_silhouette": 0.5124314018026866,
+      "r_bootstrap_reproducibility": 0.17455621301775343,
+      "r_chemical_coherence": 0.02247437419668358,
+      "r_interpretable_group_fraction": 0.0,
+      "composite": 0.16159545652486842
+    },
+    {
+      "n_groups": 6,
+      "silhouette": 0.05935893473196293,
+      "bootstrap_reproducibility": 0.8838768115942027,
+      "chemical_coherence": 0.2591441442973424,
+      "spectral_coherence": 0.16769629641900533,
+      "interpretable_group_fraction": 0.0,
+      "singleton_groups": 1,
+      "r_silhouette": 0.0,
+      "r_bootstrap_reproducibility": 0.0,
+      "r_chemical_coherence": 0.0,
+      "r_interpretable_group_fraction": 0.0,
+      "composite": 0.0
+    }
+  ],
+  "mean_class_purity": 0.34687093498906396,
+  "family_coherence": {
+    "triglyceride": {
+      "n_analytes": 15,
+      "within_family_bsv_cos": 0.797,
+      "null_mean": 0.252,
+      "p_value": 0.005,
+      "dominant_component": 1,
+      "coheres": true
+    },
+    "fatty_acid": {
+      "n_analytes": 12,
+      "within_family_bsv_cos": 0.643,
+      "null_mean": 0.258,
+      "p_value": 0.005,
+      "dominant_component": 1,
+      "coheres": true
+    },
+    "sterol": {
+      "n_analytes": 9,
+      "within_family_bsv_cos": 0.576,
+      "null_mean": 0.253,
+      "p_value": 0.005,
+      "dominant_component": 1,
+      "coheres": true
+    },
+    "saccharide": {
+      "n_analytes": 27,
+      "within_family_bsv_cos": 0.4,
+      "null_mean": 0.254,
+      "p_value": 0.005,
+      "dominant_component": 12,
+      "coheres": true
+    },
+    "polysaccharide": {
+      "n_analytes": 5,
+      "within_family_bsv_cos": 0.872,
+      "null_mean": 0.254,
+      "p_value": 0.005,
+      "dominant_component": 18,
+      "coheres": true
+    },
+    "protein": {
+      "n_analytes": 32,
+      "within_family_bsv_cos": 0.59,
+      "null_mean": 0.253,
+      "p_value": 0.005,
+      "dominant_component": 2,
+      "coheres": true
+    },
+    "amino_acid": {
+      "n_analytes": 17,
+      "within_family_bsv_cos": 0.299,
+      "null_mean": 0.252,
+      "p_value": 0.1393,
+      "dominant_component": 11,
+      "coheres": false
+    },
+    "purine": {
+      "n_analytes": 5,
+      "within_family_bsv_cos": 0.287,
+      "null_mean": 0.254,
+      "p_value": 0.2836,
+      "dominant_component": 15,
+      "coheres": false
+    },
+    "pyrimidine": {
+      "n_analytes": 3,
+      "within_family_bsv_cos": 0.286,
+      "null_mean": 0.239,
+      "p_value": 0.3234,
+      "dominant_component": 17,
+      "coheres": false
+    },
+    "cofactor": {
+      "n_analytes": 6,
+      "within_family_bsv_cos": 0.381,
+      "null_mean": 0.245,
+      "p_value": 0.0647,
+      "dominant_component": 0,
+      "coheres": false
+    },
+    "organic_acid": {
+      "n_analytes": 15,
+      "within_family_bsv_cos": 0.299,
+      "null_mean": 0.252,
+      "p_value": 0.1443,
+      "dominant_component": 14,
+      "coheres": false
+    }
+  },
+  "out_of_domain_sets": {
+    "adenine_series": 6,
+    "ergothioneine_calibration": 55,
+    "uricase_depletion": 20
+  },
+  "runtime_s": 5.8
+}

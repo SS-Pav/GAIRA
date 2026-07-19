@@ -1,0 +1,37 @@
+{
+  "recommendation": "C_hierarchical",
+  "rationale": [
+    "The 24-component layer is stable (mean bootstrap stability 0.812) and is the level at which the atlas is actually reproducible, so it should remain canonical and frozen.",
+    "It is NOT the level at which the atlas is interpretable: mean class purity is 0.35 and only 13/24 components reach high interpretive confidence.",
+    "Grouping is reproducible (bootstrap 0.969) but geometrically weak (silhouette 0.095), so the group layer should be treated as an interpretive overlay that can be revised, never as the frozen numerical basis.",
+    "A hierarchy keeps both properties: numbers from the components, meaning from the themes."
+  ],
+  "options": {
+    "A_24_canonical": {
+      "description": "Use all 24 latent components directly as BSV coordinates.",
+      "interpretability": "low\u2013moderate \u2014 11/24 components are only moderately interpretable and mean class purity is 0.35",
+      "stability": "high \u2014 mean bootstrap component stability 0.812",
+      "extensibility": "high \u2014 new analytes project without changing the basis",
+      "clinical_usability": "poor \u2014 24 weakly-named axes are not communicable",
+      "verdict": "retain as the CANONICAL numerical layer, not as the reported BSV"
+    },
+    "B_compressed": {
+      "description": "Replace the 24 components with ~14 higher-order coordinates.",
+      "interpretability": "moderate \u2014 groups gain names but lose component detail",
+      "stability": "grouping bootstrap reproducibility 0.969 but silhouette only 0.095",
+      "extensibility": "moderate \u2014 a new chemistry may not fit existing groups",
+      "clinical_usability": "good",
+      "verdict": "not sufficient alone \u2014 discards resolution the atlas actually has"
+    },
+    "C_hierarchical": {
+      "description": "24 latent components (canonical, frozen) \u2192 higher-order biochemical themes (reported) \u2192 optional visual summary.",
+      "interpretability": "good \u2014 evidence is traceable from a reported theme back to components, bands and reference analytes",
+      "stability": "inherits component stability; group layer is re-derivable and versionable",
+      "extensibility": "high \u2014 the numerical layer never changes when the ontology is revised",
+      "clinical_usability": "good",
+      "verdict": "RECOMMENDED"
+    }
+  },
+  "not_frozen": true,
+  "recommended_group_count_if_adopted": 14
+}

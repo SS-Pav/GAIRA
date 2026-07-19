@@ -1,0 +1,75 @@
+{
+  "n_analytes": 167,
+  "nearest_neighbour_relation_counts": {
+    "family": 66,
+    "homolog": 33,
+    "distinct": 32,
+    "same_class": 26,
+    "duplicate": 10
+  },
+  "n_low_uniqueness(<0.15)": 134,
+  "low_uniqueness_relation_counts": {
+    "family": 57,
+    "homolog": 28,
+    "same_class": 23,
+    "distinct": 16,
+    "duplicate": 10
+  },
+  "fraction_of_low_uniqueness_explained_by_chemistry": 0.881,
+  "class_level_resolution": "atlas separates molecular CLASS; within-class species are often not resolved",
+  "median_uniqueness_all": 0.053,
+  "median_uniqueness_vs_distinct_chemistry": 0.148,
+  "n_genuine_confusions": 16,
+  "genuine_confusion_examples": [
+    {
+      "analyte": "xylanase",
+      "nn1": "amylopectin",
+      "nn1_sim": 0.9968
+    },
+    {
+      "analyte": "(+)-lactose",
+      "nn1": "lactate",
+      "nn1_sim": 0.993
+    },
+    {
+      "analyte": "lactate",
+      "nn1": "(+)-lactose",
+      "nn1_sim": 0.993
+    },
+    {
+      "analyte": "lactose",
+      "nn1": "lactate",
+      "nn1_sim": 0.9796
+    },
+    {
+      "analyte": "creatinine",
+      "nn1": "tubulin",
+      "nn1_sim": 0.9652
+    },
+    {
+      "analyte": "tubulin",
+      "nn1": "creatinine",
+      "nn1_sim": 0.9652
+    },
+    {
+      "analyte": "ure",
+      "nn1": "urea",
+      "nn1_sim": 0.9468
+    },
+    {
+      "analyte": "urea",
+      "nn1": "ure",
+      "nn1_sim": 0.9468
+    },
+    {
+      "analyte": "acetyl coenzyme a",
+      "nn1": "acetyl-coa",
+      "nn1_sim": 0.9186
+    },
+    {
+      "analyte": "arginine",
+      "nn1": "fructose-6-phosphate",
+      "nn1_sim": 0.9068
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+dataset,label,conc_M,ood_distance,max_sim_to_reference,nearest_reference_analytes,dominant_components,top_component_share
+adenine_series,100nano,1e-07,0.29112372763189565,0.7272808019960986,"['aspartic acid', 'coenzyme a', 'estrone']","[14, 3, 13]",0.5580069499842327
+adenine_series,100pg,1e-10,0.28257959682413836,0.7385432907690336,"['aspartic acid', 'phosphate', 'succinic acid']","[14, 13, 3]",0.5057090299070817
+adenine_series,10micro,1e-05,0.21311605352848173,0.7897529029478693,"['adenine', 'estrone', 'coenzyme a']","[3, 13, 14]",0.7359048791242684
+adenine_series,10nano,1e-08,0.25885323120193726,0.7728642306256213,"['aspartic acid', 'succinic acid', 'asparagine']","[14, 13, 22]",0.49350761259614506
+adenine_series,10pg,1e-11,0.22269579718359522,0.8151855443839481,"['coenzyme a', 'hypoxanthine', 'b-dna']","[14, 3, 13]",0.36754339113404355
+adenine_series,1micro,1e-06,0.21844128008309316,0.788243580980069,"['adenine', 'estrone', 'coenzyme a']","[3, 14, 13]",0.7086630805101374
+ergothioneine_calibration,0.0,0.0,0.21655751683382563,0.811438809538592,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[20, 15, 3]",0.48791143433366124
+ergothioneine_calibration,0.0,0.0,0.22024410834610886,0.8073878146247633,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[20, 15, 3]",0.48182310030770337
+ergothioneine_calibration,0.0,0.0,0.21085836526546609,0.8223547207782781,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[20, 15, 3]",0.48367313976778936
+ergothioneine_calibration,0.0,0.0,0.2311978004132248,0.7881252565622939,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[20, 15, 3]",0.4832337518455992
+ergothioneine_calibration,0.0,0.0,0.2214918748276039,0.8055378887510335,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[20, 15, 3]",0.4843914061900685
+ergothioneine_calibration,0.2,0.2,0.2493670314770292,0.7731624617920255,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[20, 15, 3]",0.48372607825363717
+ergothioneine_calibration,0.2,0.2,0.2607678243447784,0.7575059532999769,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[20, 15, 18]",0.4893333641220011
+ergothioneine_calibration,0.2,0.2,0.2618895933151121,0.75471427299222,"['acetyl-coa', 'cysteine', 'acetyl coenzyme a']","[20, 15, 18]",0.48553883542899406
+ergothioneine_calibration,0.2,0.2,0.2555319480054612,0.7650549914646891,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[20, 15, 18]",0.481784450336775
+ergothioneine_calibration,0.2,0.2,0.2553398214426086,0.7676355793416306,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[20, 15, 18]",0.47973912704102617
+ergothioneine_calibration,0.4,0.4,0.22291427919876705,0.8111320260798068,"['acetyl-coa', 'acetyl coenzyme a', 'ethinylestradiol']","[20, 15, 3]",0.45407962437230764
+ergothioneine_calibration,0.4,0.4,0.2373001706148289,0.7961717734853171,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[20, 15, 3]",0.4652827211981825
+ergothioneine_calibration,0.4,0.4,0.23482648939738038,0.7955736116095956,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[20, 15, 3]",0.46097687955260946
+ergothioneine_calibration,0.4,0.4,0.24166822530553778,0.7838443230589056,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[20, 15, 3]",0.4647876339649677
+ergothioneine_calibration,0.4,0.4,0.24609284677452847,0.7780049505840573,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[20, 15, 3]",0.4660255436134761
+ergothioneine_calibration,0.6,0.6,0.26280768684132505,0.7665646904700046,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[15, 20, 18]",0.46936193315096697
+ergothioneine_calibration,0.6,0.6,0.24798026029739662,0.7903241008045159,"['acetyl-coa', 'acetyl coenzyme a', 'ethinylestradiol']","[15, 20, 18]",0.4371387225249266
+ergothioneine_calibration,0.6,0.6,0.26136565465692674,0.7712094385165577,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[15, 20, 18]",0.46176098751305794
+ergothioneine_calibration,0.6,0.6,0.2619166307357872,0.76835385340268,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[15, 20, 18]",0.46352444713542174
+ergothioneine_calibration,0.6,0.6,0.2554938377654915,0.777319161298705,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[15, 20, 18]",0.4498532746136896
+ergothioneine_calibration,0.8,0.8,0.25986351549461073,0.779306729277749,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[15, 20, 18]",0.446335392635523
+ergothioneine_calibration,0.8,0.8,0.2661508043613393,0.7735522978980262,"['acetyl-coa', 'acetyl coenzyme a', 'ethinylestradiol']","[15, 18, 20]",0.443949385834268
+ergothioneine_calibration,0.8,0.8,0.27672852407370807,0.7619651829117303,"['acetyl-coa', 'acetyl coenzyme a', 'ethinylestradiol']","[18, 15, 20]",0.43465825955926424
+ergothioneine_calibration,0.8,0.8,0.2804090869138568,0.7602851086915997,"['acetyl-coa', 'acetyl coenzyme a', 'ethinylestradiol']","[18, 15, 20]",0.457862067087075
+ergothioneine_calibration,0.8,0.8,0.280679893321232,0.7570221736615361,"['acetyl-coa', 'acetyl coenzyme a', 'ethinylestradiol']","[18, 15, 20]",0.4482860784341336
+ergothioneine_calibration,1.0,1.0,0.2881898345788292,0.747523477888239,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[18, 15, 20]",0.47095771052320734
+ergothioneine_calibration,1.0,1.0,0.28713235532156356,0.7483817199440936,"['acetyl-coa', 'acetyl coenzyme a', 'ethinylestradiol']","[18, 15, 20]",0.4616236077182724
+ergothioneine_calibration,1.0,1.0,0.28567438409079027,0.7500145384808065,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[18, 15, 20]",0.46162101239769104
+ergothioneine_calibration,1.0,1.0,0.27501708511034517,0.7617240717165702,"['acetyl-coa', 'acetyl coenzyme a', 'ethinylestradiol']","[18, 15, 20]",0.45265031411914625
+ergothioneine_calibration,1.0,1.0,0.28866850189811943,0.7435149793609748,"['acetyl-coa', 'acetyl coenzyme a', 'cysteine']","[18, 15, 20]",0.47070341244147557
+ergothioneine_calibration,1.2,1.2,0.2811753324959112,0.7492328007766473,"['acetyl-coa', 'ethinylestradiol', 'glycogen']","[18, 15, 3]",0.4321915334319322
+ergothioneine_calibration,1.2,1.2,0.28199110656056514,0.7505477322234522,"['acetyl-coa', 'acetyl coenzyme a', 'ethinylestradiol']","[18, 15, 20]",0.44564696944627835
+ergothioneine_calibration,1.2,1.2,0.2857282640472507,0.7285287912111035,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 3]",0.428801095437916
+ergothioneine_calibration,1.2,1.2,0.28714697737137806,0.7461479372837149,"['acetyl-coa', 'acetyl coenzyme a', 'glycogen']","[18, 15, 20]",0.4597254232642647
+ergothioneine_calibration,1.2,1.2,0.2828257665306776,0.7515029184823836,"['acetyl-coa', 'acetyl coenzyme a', 'ethinylestradiol']","[18, 15, 20]",0.4482469126863361
+ergothioneine_calibration,1.4,1.4,0.28717443564478395,0.7267333018694832,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 3]",0.4308969410757575
+ergothioneine_calibration,1.4,1.4,0.28861999939006366,0.7231302378558032,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 3]",0.43466547741637757
+ergothioneine_calibration,1.4,1.4,0.28529127277490596,0.7364946446375203,"['acetyl-coa', 'glycogen', 'ethinylestradiol']","[18, 15, 20]",0.442773046361436
+ergothioneine_calibration,1.4,1.4,0.2916600839044423,0.7201115809166702,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.43805104170576
+ergothioneine_calibration,1.4,1.4,0.28895344020863534,0.7333956098178441,"['acetyl-coa', 'glycogen', 'acetyl coenzyme a']","[18, 15, 20]",0.45585006520185156
+ergothioneine_calibration,1.6,1.6,0.2878296264879967,0.7322575751841245,"['acetyl-coa', 'glycogen', 'ethinylestradiol']","[18, 15, 3]",0.4343441096995183
+ergothioneine_calibration,1.6,1.6,0.28956943389494794,0.7361580913135978,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.4430846335598685
+ergothioneine_calibration,1.6,1.6,0.2884653822340715,0.7306793432296196,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.45538992452311905
+ergothioneine_calibration,1.6,1.6,0.2988385768766809,0.723405281785624,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.47012870715027855
+ergothioneine_calibration,1.6,1.6,0.28097586910608063,0.7455581400528283,"['glycogen', 'lactose', 'lactate']","[18, 15, 1]",0.4461467446982243
+ergothioneine_calibration,1.8,1.8,0.2945225907268937,0.7161006677369436,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.4532485724580775
+ergothioneine_calibration,1.8,1.8,0.3051809805042722,0.7070726086417007,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.46730596863314416
+ergothioneine_calibration,1.8,1.8,0.29592347245931183,0.7157065042971855,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.4386039298166011
+ergothioneine_calibration,1.8,1.8,0.2981635676048967,0.7158212334786017,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.452874254292826
+ergothioneine_calibration,1.8,1.8,0.29484575174077676,0.7180738558970996,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.4588777920656266
+ergothioneine_calibration,2.0,2.0,0.2896673344158346,0.7199931609833793,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.43948374676774815
+ergothioneine_calibration,2.0,2.0,0.29413113371471167,0.7185845071924238,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.4537936086320933
+ergothioneine_calibration,2.0,2.0,0.29176796313524334,0.7193526262751658,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.45085454582206885
+ergothioneine_calibration,2.0,2.0,0.29902614822008955,0.7121677931858476,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.4680622388633064
+ergothioneine_calibration,2.0,2.0,0.30111312813356383,0.7149603200925935,"['acetyl-coa', 'glycogen', 'lactose']","[18, 15, 20]",0.47243411764380827
+uricase_depletion,serum_spiked,,0.29191745409041947,0.7190608286725827,"['cysteine', 'ascorbate', 'xanthine']","[20, 15, 7]",0.5661143424389095
+uricase_depletion,serum_spiked,,0.28891183060526193,0.7314228976743636,"['cysteine', 'ascorbate', 'xanthine']","[20, 15, 7]",0.5570944122094672
+uricase_depletion,serum_spiked,,0.2932725641833531,0.7208012527311797,"['cysteine', 'ascorbate', 'xanthine']","[15, 20, 7]",0.5423087992065369
+uricase_depletion,serum_spiked,,0.2910776366108393,0.7329566323303546,"['cysteine', 'ascorbate', 'xanthine']","[20, 15, 7]",0.5471819385559453
+uricase_depletion,serum_spiked,,0.28970969981880224,0.7274563074046168,"['cysteine', 'ascorbate', 'xanthine']","[20, 15, 7]",0.5591267152055466
+uricase_depletion,serum_spiked+uricase,,0.15097998444774097,0.8617234172502989,"['hypoxanthine', 'acetyl-coa', 'coenzyme a']","[3, 15, 1]",0.3931416454927418
+uricase_depletion,serum_spiked+uricase,,0.15971480043537323,0.86540091003149,"['hypoxanthine', 'coenzyme a', 'estrone']","[3, 15, 19]",0.41366221780221024
+uricase_depletion,serum_spiked+uricase,,0.1492067654633894,0.8804350391265948,"['hypoxanthine', 'acetyl-coa', 'ethinylestradiol']","[3, 15, 19]",0.378189973315544
+uricase_depletion,serum_spiked+uricase,,0.18612005882295612,0.8279870562905447,"['hypoxanthine', 'acetyl-coa', 'ethinylestradiol']","[3, 15, 20]",0.4108787331403718
+uricase_depletion,serum_spiked+uricase,,0.16047898615694067,0.8550914755112451,"['hypoxanthine', 'acetyl-coa', 'coenzyme a']","[3, 15, 1]",0.41122678697691945
+uricase_depletion,serum_reference,,0.2769848137423041,0.7550421614630838,"['cysteine', 'ascorbate', 'urate']","[20, 15, 7]",0.5794112769763137
+uricase_depletion,serum_reference,,0.2785831936136278,0.7635566122383537,"['cysteine', 'ascorbate', 'xanthine']","[15, 20, 7]",0.5864496521481934
+uricase_depletion,serum_reference,,0.27882266876330797,0.7671527395105219,"['cysteine', 'xanthine', 'ascorbate']","[15, 20, 7]",0.5817018580655363
+uricase_depletion,serum_reference,,0.27969228566625826,0.7673363823549264,"['cysteine', 'xanthine', 'ascorbate']","[15, 20, 7]",0.5734488332499619
+uricase_depletion,serum_reference,,0.2834507110324449,0.7584965178504979,"['cysteine', 'xanthine', 'ascorbate']","[15, 20, 7]",0.5729022064325118
+uricase_depletion,serum_spiked+uricase,,0.2049165561070928,0.8048061123900565,"['phosphatidylinositol', 'cysteine', 'hypoxanthine']","[15, 19, 20]",0.3728553248230253
+uricase_depletion,serum_spiked+uricase,,0.1712787718489489,0.8499880342184953,"['phosphatidylinositol', 'hypoxanthine', 'cysteine']","[15, 19, 3]",0.36851041576738836
+uricase_depletion,serum_spiked+uricase,,0.13083636341021432,0.8747934146266143,"['phosphatidylinositol', 'hypoxanthine', 'ethinylestradiol']","[3, 14, 19]",0.32302095225307004
+uricase_depletion,serum_spiked+uricase,,0.1604597776443013,0.8614214716197713,"['phosphatidylinositol', 'hypoxanthine', 'acetyl-coa']","[19, 15, 3]",0.35267956096860537
+uricase_depletion,serum_spiked+uricase,,0.14568498886797465,0.8773907976635293,"['phosphatidylinositol', 'hypoxanthine', 'cysteine']","[15, 19, 3]",0.33349549504486975
