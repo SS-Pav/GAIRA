@@ -1,0 +1,2850 @@
+{
+  "datasets": [
+    {
+      "dataset": "ils_adenine",
+      "n_spectra": 3381,
+      "n_analytes": 1,
+      "n_concentrations": 43,
+      "conc_range_uM": "0\u20139",
+      "replicates_per_condition": 54.0,
+      "batches": 3,
+      "labs_instruments": 15,
+      "substrates": "cAg|cAu|sAg|sAu",
+      "lasers_nm": "532|785",
+      "matrix": "buffer",
+      "modality": "Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas)",
+      "cosmic_spikes_removed_total": -3381,
+      "preprocessing_applied": "despike \u2192 ASLS \u2192 Savitzky-Golay \u2192 L2 on 450\u20131800 @2 cm\u207b\u00b9 (atlas-native; mandatory for a valid projection)"
+    },
+    {
+      "dataset": "spiked_serum",
+      "n_spectra": 265,
+      "n_analytes": 53,
+      "n_concentrations": 33,
+      "conc_range_uM": "0.4\u20136.5e+03",
+      "replicates_per_condition": 5.0,
+      "batches": 1,
+      "labs_instruments": 1,
+      "substrates": "Ag colloid",
+      "lasers_nm": "785",
+      "matrix": "serum",
+      "modality": "Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas)",
+      "cosmic_spikes_removed_total": 375,
+      "preprocessing_applied": "despike \u2192 ASLS \u2192 Savitzky-Golay \u2192 L2 on 450\u20131800 @2 cm\u207b\u00b9 (atlas-native; mandatory for a valid projection)"
+    },
+    {
+      "dataset": "serum_baseline",
+      "n_spectra": 15,
+      "n_analytes": 1,
+      "n_concentrations": 1,
+      "conc_range_uM": "0\u20130",
+      "replicates_per_condition": 15.0,
+      "batches": 1,
+      "labs_instruments": 1,
+      "substrates": "Ag colloid",
+      "lasers_nm": "785",
+      "matrix": "serum",
+      "modality": "Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas)",
+      "cosmic_spikes_removed_total": 24,
+      "preprocessing_applied": "despike \u2192 ASLS \u2192 Savitzky-Golay \u2192 L2 on 450\u20131800 @2 cm\u207b\u00b9 (atlas-native; mandatory for a valid projection)"
+    },
+    {
+      "dataset": "pure_sers",
+      "n_spectra": 265,
+      "n_analytes": 53,
+      "n_concentrations": NaN,
+      "conc_range_uM": "n/a",
+      "replicates_per_condition": 5.0,
+      "batches": 1,
+      "labs_instruments": 1,
+      "substrates": "Ag colloid",
+      "lasers_nm": "785",
+      "matrix": "buffer",
+      "modality": "Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas)",
+      "cosmic_spikes_removed_total": 280,
+      "preprocessing_applied": "despike \u2192 ASLS \u2192 Savitzky-Golay \u2192 L2 on 450\u20131800 @2 cm\u207b\u00b9 (atlas-native; mandatory for a valid projection)"
+    },
+    {
+      "dataset": "uricase",
+      "n_spectra": 20,
+      "n_analytes": 1,
+      "n_concentrations": 0,
+      "conc_range_uM": "n/a",
+      "replicates_per_condition": NaN,
+      "batches": 1,
+      "labs_instruments": 1,
+      "substrates": "Ag colloid",
+      "lasers_nm": "785",
+      "matrix": "serum",
+      "modality": "Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas)",
+      "cosmic_spikes_removed_total": 21,
+      "preprocessing_applied": "despike \u2192 ASLS \u2192 Savitzky-Golay \u2192 L2 on 450\u20131800 @2 cm\u207b\u00b9 (atlas-native; mandatory for a valid projection)"
+    },
+    {
+      "dataset": "isotopic",
+      "n_spectra": 73,
+      "n_analytes": 1,
+      "n_concentrations": 0,
+      "conc_range_uM": "n/a",
+      "replicates_per_condition": NaN,
+      "batches": 1,
+      "labs_instruments": 1,
+      "substrates": "Ag colloid",
+      "lasers_nm": "785",
+      "matrix": "buffer",
+      "modality": "Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas)",
+      "cosmic_spikes_removed_total": 99,
+      "preprocessing_applied": "despike \u2192 ASLS \u2192 Savitzky-Golay \u2192 L2 on 450\u20131800 @2 cm\u207b\u00b9 (atlas-native; mandatory for a valid projection)"
+    },
+    {
+      "dataset": "ergothioneine",
+      "n_spectra": 55,
+      "n_analytes": 1,
+      "n_concentrations": 11,
+      "conc_range_uM": "0\u20132",
+      "replicates_per_condition": 5.0,
+      "batches": 1,
+      "labs_instruments": 1,
+      "substrates": "cAg",
+      "lasers_nm": "785",
+      "matrix": "buffer",
+      "modality": "Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas)",
+      "cosmic_spikes_removed_total": 429,
+      "preprocessing_applied": "despike \u2192 ASLS \u2192 Savitzky-Golay \u2192 L2 on 450\u20131800 @2 cm\u207b\u00b9 (atlas-native; mandatory for a valid projection)"
+    }
+  ],
+  "preprocessing_contract": "Projection into a frozen NMF basis requires the atlas-native representation; the final pipeline (ASLS + Savitzky-Golay + L2, 450-1800 cm-1 @ 2 cm-1) is therefore fixed and is NOT a tunable parameter of this study. Only the pre-steps (cosmic-ray removal, replicate outlier flagging) were evaluated.",
+  "exclusions": [
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.09, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.09, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.09, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.09, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.2, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.2, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.2, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.2, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.2, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.2, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.2, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.23, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.23, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.23, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.23, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.23, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.28, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.28, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.28, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.28, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.4, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.4, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.4, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.4, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.4, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.4, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.4, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.4, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.5, 'cAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.6, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.6, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.6, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.6, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.6, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.6, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.6, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.61, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.61, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.61, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.61, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.61, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.61, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.8, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.8, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.8, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.8, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 0.93, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.03, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.03, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.03, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.03, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.03, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.03, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.2, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.2, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.2, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.2, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.2, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.2, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.2, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.4, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.5, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.5, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.6, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.6, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.6, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.6, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.6, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.6, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.8, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.8, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.8, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.8, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.8, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.82, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.82, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.82, 'cAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.82, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 1.82, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.33, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.33, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.33, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.33, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.33, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.33, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.33, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.33, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.8, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.8, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.8, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.8, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.8, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.8, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.8, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.8, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.8, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 2.8, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.0, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.27, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.27, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.27, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.27, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.27, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.27, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.27, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.27, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.27, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.27, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.5, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.5, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 3.5, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.0, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.2, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.2, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 4.5, 'sAu', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 5.13, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 6.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 7.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 8.87, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 532)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ils_adenine",
+      "condition": "('adenine', 9.0, 'sAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('acetoacetate', 10.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Acetoacet_10uM_05.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('acetyl-coa', 100.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_AcCoA_100uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('adenine', 0.4, 'Ag colloid', 785)",
+      "file": "SERS_spike_Ade_0.4uM_03.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('alanine', 400.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Ala_400uM_03.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('albumin', 600.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Alb_600uM_03.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('arginine', 130.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Arg_130uM_04.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('cholesterol', 6200.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Chol_6200uM_05.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('citrate', 200.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Citric_200uM_04.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('coenzyme a', 10.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_CoA_10uM_02.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('creatinine', 80.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Creat_80uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('creatinine', 80.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Creat_80uM_02.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('cysteine', 0.4, 'Ag colloid', 785)",
+      "file": "SERS_spike_Cys_0.4uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('dna', nan, 'Ag colloid', 785)",
+      "file": "SERS_spike_DNA_30ngmL_03.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('fructose', 30.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Fruct_30uM_05.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('fructose-6-phosphate', 10.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Dfruct6P_10uM_03.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('glucose', 5400.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Gluc_5400uM_04.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('glutamate', 30.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Glutamic_30uM_05.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('glycerol', 40.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Glycerol_40uM_02.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('glycogen', 40.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Glycogen_40uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('guanine', 10.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Gua_10uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('guanine', 10.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Gua_10uM_04.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('hydroxyproline', 100.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Hydroxypro_100uM_04.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('hypoxanthine', 10.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Hypox_10uM_03.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('isoleucine', 80.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Ile_80uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('lactate', 100.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Lact_100uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('leucine', 125.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Leu_125uM_02.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('leucine', 125.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Leu_125uM_04.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('oleate', 150.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Oleic_150uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('oleate', 150.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Oleic_150uM_05.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('phosphate', 100.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Phosph_100uM_03.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('phosphate', 100.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Phosph_100uM_05.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('phosphatidylinositol', 100.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_PhInositol_100uM_04.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('tyrosine', 55.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Tyr_55uM_03.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('tyrosine', 55.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Tyr_55uM_05.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "spiked_serum",
+      "condition": "('urea', 6500.0, 'Ag colloid', 785)",
+      "file": "SERS_spike_Urea_6500uM_05.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "serum_baseline",
+      "condition": "('unspiked_serum', 0.0, 'Ag colloid', 785)",
+      "file": "011_01_SerumMerck_.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "serum_baseline",
+      "condition": "('unspiked_serum', 0.0, 'Ag colloid', 785)",
+      "file": "015_05_SerumMerck_.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('adenine', 'Ag colloid', 785)",
+      "file": "SERS_met_Ade_0.3uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('alanine', 'Ag colloid', 785)",
+      "file": "SERS_met_Ala_400uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('alanine', 'Ag colloid', 785)",
+      "file": "SERS_met_Ala_400uM_02.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('cholesterol', 'Ag colloid', 785)",
+      "file": "SERS_met_Chol_6.2mM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('cholesterol', 'Ag colloid', 785)",
+      "file": "SERS_met_Chol_6.2mM_02.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('coenzyme a', 'Ag colloid', 785)",
+      "file": "SERS_met_CoA_100uM_05.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('creatinine', 'Ag colloid', 785)",
+      "file": "SERS_met_Creat_80uM_05.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('dna', 'Ag colloid', 785)",
+      "file": "SERS_met_DNA_30ngmL_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('fructose-6-phosphate', 'Ag colloid', 785)",
+      "file": "SERS_met_Dfruct6P_10uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('glucose', 'Ag colloid', 785)",
+      "file": "SERS_met_Gluc_5.4mM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('lactate', 'Ag colloid', 785)",
+      "file": "SERS_met_Lact_100uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('lactate', 'Ag colloid', 785)",
+      "file": "SERS_met_Lact_100uM_02.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('leucine', 'Ag colloid', 785)",
+      "file": "SERS_met_Leu_125uM_04.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('leucine', 'Ag colloid', 785)",
+      "file": "SERS_met_Leu_125uM_05.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('phenylalanine', 'Ag colloid', 785)",
+      "file": "SERS_met_Phe_78uM_05.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('pyruvate', 'Ag colloid', 785)",
+      "file": "SERS_met_Pyr_35uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('riboflavin', 'Ag colloid', 785)",
+      "file": "SERS_met_Ribo_0.84uM_03.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('serine', 'Ag colloid', 785)",
+      "file": "SERS_met_Ser_160uM_05.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('thymine', 'Ag colloid', 785)",
+      "file": "SERS_met_Thy_100uM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('tryptophan', 'Ag colloid', 785)",
+      "file": "SERS_met_Trp_55uM_04.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "pure_sers",
+      "condition": "('urea', 'Ag colloid', 785)",
+      "file": "SERS_met_Urea_6.5mM_01.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "001_01_UA.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "002_02_UA.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "003_03_UA.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "004_04_UA.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "005_05_UA.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "035_01_UA+HSAfilterLower.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "036_02_UA+HSAfilterLower.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "037_03_UA+HSAfilterLower.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "038_04_UA+HSAfilterLower.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "039_05_UA+HSAfilterLower.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "040_06_UA+HSAfilterLower.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "041_07_UA+HSAfilterLower.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "042_08_UA+HSAfilterLower.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "043_09_UA+HSAfilterLower.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UA', nan, 'Ag colloid', 785)",
+      "file": "044_10_UA+HSAfilterLower.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UAiso', nan, 'Ag colloid', 785)",
+      "file": "069_05_UAiso+HSAfilterUpper.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UAiso', nan, 'Ag colloid', 785)",
+      "file": "070_06_UAiso+HSAfilterUpper.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "isotopic",
+      "condition": "('urate', 'UAiso', nan, 'Ag colloid', 785)",
+      "file": "071_07_UAiso+HSAfilterUpper.txt",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ergothioneine",
+      "condition": "('ergothioneine', 0.6, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ergothioneine",
+      "condition": "('ergothioneine', 0.6, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ergothioneine",
+      "condition": "('ergothioneine', 1.0, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ergothioneine",
+      "condition": "('ergothioneine', 1.4, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ergothioneine",
+      "condition": "('ergothioneine', 1.4, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    },
+    {
+      "dataset": "ergothioneine",
+      "condition": "('ergothioneine', 1.6, 'cAg', 785)",
+      "file": "",
+      "reason": "replicate cosine robust-z > 3.5 vs group median"
+    }
+  ],
+  "runtime_s": 25.9
+}

@@ -1,0 +1,21 @@
+dataset,analyte,condition,conc_uM,replicate,file,n_cosmic,substrate,laser_nm,matrix
+uricase,urate,spiked,,01,001_01_Serumspiked_Prot1.txt,2,Ag colloid,785,serum
+uricase,urate,spiked,,02,002_02_Serumspiked_Prot1.txt,1,Ag colloid,785,serum
+uricase,urate,spiked,,03,003_03_Serumspiked_Prot1.txt,2,Ag colloid,785,serum
+uricase,urate,spiked,,04,004_04_Serumspiked_Prot1.txt,1,Ag colloid,785,serum
+uricase,urate,spiked,,05,005_05_Serumspiked_Prot1.txt,2,Ag colloid,785,serum
+uricase,urate,spiked+uricase,,01,006_01_Serumspiked+Enzyme_Prot1.txt,1,Ag colloid,785,serum
+uricase,urate,spiked+uricase,,02,007_02_Serumspiked+Enzyme_Prot1.txt,1,Ag colloid,785,serum
+uricase,urate,spiked+uricase,,03,008_03_Serumspiked+Enzyme_Prot1.txt,0,Ag colloid,785,serum
+uricase,urate,spiked+uricase,,04,009_04_Serumspiked+Enzyme_Prot1.txt,0,Ag colloid,785,serum
+uricase,urate,spiked+uricase,,05,010_05_Serumspiked+Enzyme_Prot1.txt,1,Ag colloid,785,serum
+uricase,urate,serum_reference,,01,011_01_SerumSigma_Prot1.txt,2,Ag colloid,785,serum
+uricase,urate,serum_reference,,02,012_02_SerumSigma_Prot1.txt,1,Ag colloid,785,serum
+uricase,urate,serum_reference,,03,013_03_SerumSigma_Prot1.txt,1,Ag colloid,785,serum
+uricase,urate,serum_reference,,04,014_04_SerumSigma_Prot1.txt,3,Ag colloid,785,serum
+uricase,urate,serum_reference,,05,015_05_SerumSigma_Prot1.txt,0,Ag colloid,785,serum
+uricase,urate,spiked+uricase,,01,016_01_SerumSigma+Enzyme_Prot1.txt,0,Ag colloid,785,serum
+uricase,urate,spiked+uricase,,02,017_02_SerumSigma+Enzyme_Prot1.txt,1,Ag colloid,785,serum
+uricase,urate,spiked+uricase,,03,018_03_SerumSigma+Enzyme_Prot1.txt,1,Ag colloid,785,serum
+uricase,urate,spiked+uricase,,04,019_04_SerumSigma+Enzyme_Prot1.txt,1,Ag colloid,785,serum
+uricase,urate,spiked+uricase,,05,020_05_SerumSigma+Enzyme_Prot1.txt,0,Ag colloid,785,serum

@@ -1,0 +1,4 @@
+{
+  "feasible": false,
+  "reason": "Each analyte was spiked into serum individually at a single concentration; no combinatorial A+B spike exists in this corpus, so Delta(A+B) vs Delta(A)+Delta(B) cannot be tested. The uricase experiment is a depletion, not a mixture."
+}

@@ -1,0 +1,27 @@
+{
+  "unspiked_serum": {
+    "n": 15,
+    "coord_cos_mean": 0.9988138051815624,
+    "median_ood": 0.2816727516720009
+  },
+  "ils_blanks": {
+    "n": 225,
+    "coord_cos_mean": 0.5936537493670219,
+    "median_ood": 0.24994703600325519,
+    "batch_drift_from_grand_mean": {
+      "1": 0.022084712356000385,
+      "2": 0.009473339993753029,
+      "3": 0.02356980762375036
+    },
+    "max_batch_drift": 0.02356980762375036
+  },
+  "uricase_depletion": {
+    "displacement_norm": 0.24982648594441403,
+    "cos_vs_urate_raman_direction": -0.6079009745678059,
+    "interpretation_note": "enzymatic removal of urate should move AWAY from the urate direction, i.e. a NEGATIVE cosine is the chemically expected sign"
+  },
+  "isotopic_UA_vs_UAiso": {
+    "coordinate_distance": 0.19598276026445652,
+    "cosine": 0.8679365902250105
+  }
+}

@@ -1,0 +1,8 @@
+dataset,n_spectra,n_analytes,n_concentrations,conc_range_uM,replicates_per_condition,batches,labs_instruments,substrates,lasers_nm,matrix,modality,cosmic_spikes_removed_total,preprocessing_applied
+ils_adenine,3381,1,43.0,0–9,54.0,3,15,cAg|cAu|sAg|sAu,532|785,buffer,Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas),-3381,despike → ASLS → Savitzky-Golay → L2 on 450–1800 @2 cm⁻¹ (atlas-native; mandatory for a valid projection)
+spiked_serum,265,53,33.0,0.4–6.5e+03,5.0,1,1,Ag colloid,785,serum,Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas),375,despike → ASLS → Savitzky-Golay → L2 on 450–1800 @2 cm⁻¹ (atlas-native; mandatory for a valid projection)
+serum_baseline,15,1,1.0,0–0,15.0,1,1,Ag colloid,785,serum,Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas),24,despike → ASLS → Savitzky-Golay → L2 on 450–1800 @2 cm⁻¹ (atlas-native; mandatory for a valid projection)
+pure_sers,265,53,,n/a,5.0,1,1,Ag colloid,785,buffer,Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas),280,despike → ASLS → Savitzky-Golay → L2 on 450–1800 @2 cm⁻¹ (atlas-native; mandatory for a valid projection)
+uricase,20,1,0.0,n/a,,1,1,Ag colloid,785,serum,Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas),21,despike → ASLS → Savitzky-Golay → L2 on 450–1800 @2 cm⁻¹ (atlas-native; mandatory for a valid projection)
+isotopic,73,1,0.0,n/a,,1,1,Ag colloid,785,buffer,Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas),99,despike → ASLS → Savitzky-Golay → L2 on 450–1800 @2 cm⁻¹ (atlas-native; mandatory for a valid projection)
+ergothioneine,55,1,11.0,0–2,5.0,1,1,cAg,785,buffer,Ag/Au-SERS (OUT OF DOMAIN for a Raman atlas),429,despike → ASLS → Savitzky-Golay → L2 on 450–1800 @2 cm⁻¹ (atlas-native; mandatory for a valid projection)

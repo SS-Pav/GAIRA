@@ -1,0 +1,14 @@
+{
+  "n_analytes": 53,
+  "matched_cos_vs_pureSERS_median": -0.012350636607394381,
+  "null_cos_vs_pureSERS_median": -0.03613894052506841,
+  "matched_cos_vs_pureSERS_mean": 0.029667203202415292,
+  "null_cos_vs_pureSERS_mean": -0.023074262606926937,
+  "p_matched_gt_null_sers": 0.448210922787194,
+  "matched_cos_vs_pureRaman_median": 0.04254132142443464,
+  "null_cos_vs_pureRaman_median": -0.013930348672881412,
+  "median_angle_vs_pureSERS_deg": 90.70765734348022,
+  "median_distance_ratio": 0.54893026568041,
+  "median_replicate_direction_cos": 0.8677999588660377,
+  "n_analytes_cos_above_null_p05": 7
+}
