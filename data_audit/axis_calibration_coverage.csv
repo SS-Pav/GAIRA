@@ -1,0 +1,12 @@
+axis,calibration_datasets,verdict,note
+G01_purine_nucleotide,adenine_bagnp; adenine_european_ils; serum_ag_colloid(adenine spike),supportive,adenine dose Spearman 0.83; but substrate blindness limits cross-substrate
+G02_purine_metabolite,serum_ag_colloid_uricase; cspp_hypoxanthine,partially_supportive,hypoxanthine spike agree; uricase depletion INCONSISTENT (preserved)
+G03_pyrimidine_nucleotide,(none),not_tested,no dedicated calibration analyte
+G04_nucleic_acid_phosphate,(none direct),not_tested,only incidental in adenine
+G05_glycan_carbohydrate,serum_ag_colloid(glucose spike),insufficient,glucose present in 53-metabolite spike but not isolated as a calibration
+G06_protein_peptide_backbone,amino_acid_raman_20(partial),insufficient,reference panel only; no dose/perturbation
+G07_aromatic_residue,"amino_acid_raman_20(Phe,Trp)",insufficient,reference only
+G08_lipid_acyl_membrane,(none),not_tested,no lipid calibration series
+G09_sterol_neutral_lipid,(none),not_tested,no sterol calibration series
+G10_sulfur_thiol_redox,ergothioneine_cag; cspp_ergothioneine; serum_ag_colloid(ergothioneine spike),supportive,ergothioneine dose Spearman 0.94
+G11_metabolic_small_molecule,serum_ag_colloid(53 metabolites),insufficient,many metabolites present but none run as a demo calibration series
