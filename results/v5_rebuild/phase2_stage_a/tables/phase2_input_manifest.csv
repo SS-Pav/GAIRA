@@ -1,0 +1,714 @@
+spectrum_id,canonical_analyte,raw_name,modality,source,excitation_nm,replicate,concentration,intended_role,raw_or_processed,admission_gate_ok,admission_gate_reason,is_785,entered_representation,exclude_reason,non_small_molecule_flag,wavenumber_min,wavenumber_max,point_count
+ramanbiolib::1,12-methyltetradecanoic acid,12-methyltetradecanoic acid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::2,13-methylmyristicacid,13-methylmyristicacid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::3,14-methylhexadecanoic acid,14-methylhexadecanoic acid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::4,14-methylpentadecanoic acid,14-methylpentadecanoic acid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::5,15-methylpalmiticacid,15-methylpalmiticacid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::6,acetoacetate,acetoacetate,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::7,acetyl coenzyme a,acetyl coenzyme a,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::8,adenine,adenine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::9,amylopectin,amylopectin,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::10,amylose,amylose,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::11,ascorbate,ascorbic acid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::12,cellulose,cellulose,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::13,chitin,chitin,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::14,citrate,citric acid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::15,coenzyme a,coenzyme a,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,True,450.0,1800.0,1351
+ramanbiolib::16,cytosine,cytosine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::17,(+)-dextrose,d-(+)-dextrose,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::18,(+)-fucose,d-(+)-fucose,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::19,(+)-galactosamine,d-(+)-galactosamine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::20,(+)-mannose,d-(+)-mannose,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::21,(+)-trehalose,d-(+)-trehalose,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::22,(+)-xylose,d-(+)-xylose,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::23,(-)-arabinose,d-(-)-arabinose,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::24,(-)-fructose,d-(-)-fructose,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::25,fructose-6-phosphate,d-fructose-6-phosphate,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::26,fumarate,fumarate,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::27,glutathione,glutathione,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::28,glycerol,glycerol,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::29,glycine,glycine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::30,guanine,guanine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::31,alanine,l-alanine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::32,arginine,l-arginine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::33,glutamate,l-glutamate,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::34,histidine,l-histidine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::35,phenylalanine,l-phenylalanine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::36,proline,l-proline,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::37,serine,l-serine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::38,tryptophan,l-tryptophan,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::39,tyrosine,l-tyrosine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::40,valine,l-valine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::41,lactose,lactose,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::42,lauric acid,lauric acid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::43,malic acid,malic acid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::44,myristic acid,myristic acid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::45,n-acetyl- d-glucosamine,n-acetyl- d-glucosamine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::46,oleate,oleic acid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::47,palmitic acid,palmitic acid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::48,phosphoenolpyruvate,phosphoenolpyruvate,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::49,pyruvate,pyruvate,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::50,riboﬂavin,riboﬂavin,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::51,stearate,stearic acid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::52,succinic acid,succinic acid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::53,thymine,thymine,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::54,trilinolein,trilinolein,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::55,trilinolenin,trilinolenin,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::56,triolein,triolein,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::57,uracil,uracil,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::58,vaccenic acid,vaccenic acid,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::59,β-carotene,β-carotene,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::60,β-d-glucose,β-d-glucose,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::61,arachidonic acid,arachidonic acid,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::62,α-linolenic acid,α-linolenic acid,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::63,arachidic acid,arachidic acid,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::64,cholesterol,cholesterol,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::65,cholesteryl linoleate,cholesteryl linoleate,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::66,cholesteryl oleate,cholesteryl oleate,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::67,cholesteryl palmitate,cholesteryl palmitate,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::68,cholesteryl stearate,cholesteryl stearate,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::69,elaidic acid,elaidic acid,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::70,linoleic acid,linoleic acid,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::71,myristic acid,myristic acid,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::72,oleate,oleic acid,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::73,palmitic acid,palmitic acid,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::74,α-phosphatidylcholine,l-α-phosphatidylcholine,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::75,α-phosphatidylethanolamine,l-α-phosphatidylethanolamine,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::76,palmitoleic acid,palmitoleic acid,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::77,stearate,stearic acid,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::78,sphingomyelin,sphingomyelin,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::79,triarachidin,triarachidin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::80,tribehenin,tribehenin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::81,tricaproin,tricaproin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::82,tricaprin,tricaprin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::83,tricaprylin,tricaprylin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::84,trielaidin,trielaidin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::85,tri-11-eicosenoin,tri-11-eicosenoin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::86,trierucin,trierucin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::87,trilinolein,trilinolein,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::88,trilinolenin,trilinolenin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::89,trilaurin,trilaurin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::90,trimyristin,trimyristin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::91,triolein,triolein,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::92,tripalmitin,tripalmitin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::93,tripetroselinin,tripetroselinin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::94,tripalmitolein,tripalmitolein,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::95,tristearin,tristearin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::96,lactalbumin,lactalbumin,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::97,lactalbumin,lactalbumin,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::98,lactalbumin,lactalbumin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::99,albumin,albumin,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),True,450.0,1800.0,1351
+ramanbiolib::100,albumin,albumin,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),True,450.0,1800.0,1351
+ramanbiolib::101,albumin,albumin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),True,450.0,1800.0,1351
+ramanbiolib::102,carbonic anhydrase,carbonic anhydrase,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::103,carbonic anhydrase,carbonic anhydrase,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::104,carbonic anhydrase,carbonic anhydrase,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::105,collagen,collagen,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::106,collagen,collagen,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::107,collagen,collagen,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::108,α-chymotrypsinogen a (type ii),α-chymotrypsinogen a (type ii),raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::109,α-chymotrypsinogen a (type ii),α-chymotrypsinogen a (type ii),raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::110,α-chymotrypsinogen a (type ii),α-chymotrypsinogen a (type ii),raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::111,elastase,elastase,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::112,elastase,elastase,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::113,elastase,elastase,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::114,ferritin,ferritin,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::115,ferritin,ferritin,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::116,ferritin,ferritin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::117,glutathione transferase,glutathione transferase,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::118,glutathione transferase,glutathione transferase,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::119,horseradish peroxidase,horseradish peroxidase,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::120,horseradish peroxidase,horseradish peroxidase,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::121,hemoglobin,hemoglobin,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::122,hemoglobin,hemoglobin,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::123,lectin,lectin,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::124,lectin,lectin,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::125,lectin,lectin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::126,myoglobin,myoglobin,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::127,myoglobin,myoglobin,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::128,papain,papain,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::129,papain,papain,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::130,papain,papain,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::131,pepsin,pepsin,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::132,pepsin,pepsin,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::133,pepsin,pepsin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::134,pepsinogen,pepsinogen,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::135,pepsinogen,pepsinogen,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::136,pepsinogen,pepsinogen,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::137,major proteinase,major proteinase,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::138,major proteinase,major proteinase,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::139,major proteinase,major proteinase,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::140,superoxide dismutases,superoxide dismutases,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::141,superoxide dismutases,superoxide dismutases,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::142,superoxide dismutases,superoxide dismutases,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::143,trypsinogen,trypsinogen,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::144,trypsinogen,trypsinogen,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::145,trypsinogen,trypsinogen,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::146,trypsin inhibitor,trypsin inhibitor,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::147,trypsin inhibitor,trypsin inhibitor,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::148,trypsin inhibitor,trypsin inhibitor,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::149,thaumatin,thaumatin,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::150,thaumatin,thaumatin,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::151,thaumatin,thaumatin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::152,triosephosphate isomerase,triosephosphate isomerase,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::153,triosephosphate isomerase,triosephosphate isomerase,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::154,triosephosphate isomerase,triosephosphate isomerase,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::155,trypsin,trypsin,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::156,trypsin,trypsin,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::157,trypsin,trypsin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::158,ubiquitin,ubiquitin,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::159,ubiquitin,ubiquitin,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::160,ubiquitin,ubiquitin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::161,glucose oxidase,glucose oxidase,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::162,glucose oxidase,glucose oxidase,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::163,xylanase,xylanase,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::164,xylanase,xylanase,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::165,xylanase,xylanase,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::166,cytochrome c,cytochrome c,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),True,450.0,1800.0,1351
+ramanbiolib::167,cytochrome c,cytochrome c,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),True,450.0,1800.0,1351
+ramanbiolib::168,a-dna,a-dna,raman,RamanBioLib,514.5,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(514.5),False,450.0,1800.0,1351
+ramanbiolib::169,b-dna,b-dna,raman,RamanBioLib,514.5,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(514.5),False,450.0,1800.0,1351
+ramanbiolib::170,t-rna,t-rna,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::171,ceramide,ceramide,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::172,melanin,melanin,raman,RamanBioLib,785.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,True,True,,False,450.0,1800.0,1351
+ramanbiolib::173,melanin,melanin,raman,RamanBioLib,632.8,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(632.8),False,450.0,1800.0,1351
+ramanbiolib::174,melanin,melanin,raman,RamanBioLib,514.5,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(514.5),False,450.0,1800.0,1351
+ramanbiolib::175,melanin,melanin,raman,RamanBioLib,457.9,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(457.9),False,450.0,1800.0,1351
+ramanbiolib::176,2-deoxy-d-ribose,2-deoxy-d-ribose,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::177,amylopectin,amylopectin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::178,amylose,amylose,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::179,(+)-galactose,d-(+)-galactose,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::180,(+)-glucose,d-(+)-glucose,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::181,(+)-lactose,d-(+)-lactose monohydrate,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::182,(+)-maltose,d-(+)-maltose monohydrate,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::183,(+)-raffinose pentahydrate,d-(+)-raffinose pentahydrate,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::184,(+)-sucrose,d-(+)-sucrose,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::185,(+)-xylose,d-(+)-xylose,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::186,(-)-fructose,d-(-)-fructose,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::187,(-)-ribose,d-(-)-ribose,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::188,glycogen,glycogen,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),True,450.0,1800.0,1351
+ramanbiolib::189,(+)-arabinose,l-(+)-arabinose,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::190,ceramide,ceramide,raman,RamanBioLib,850.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(850.0),False,450.0,1800.0,1351
+ramanbiolib::191,elastin,elastin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::192,keratin,keratin,raman,RamanBioLib,1064.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(1064.0),False,450.0,1800.0,1351
+ramanbiolib::193,asparagine,l-asparagine,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::194,aspartic acid,l-aspartic acid,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::195,glucosamine,glucosamine,raman,RamanBioLib,488.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(488.0),False,450.0,1800.0,1351
+ramanbiolib::196,tubulin,tubulin,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::197,insulin,insulin,raman,RamanBioLib,633.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(633.0),False,450.0,1800.0,1351
+ramanbiolib::198,diethylstilbestrol,diethylstilbestrol,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::199,estradiol,estradiol,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::200,estriol,estriol,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::201,estrone,estrone,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+ramanbiolib::202,ethinylestradiol,ethinylestradiol,raman,RamanBioLib,532.0,1,n/a,grounding,"processed(digitized,norm)",True,ok,False,False,non-785(532.0),False,450.0,1800.0,1351
+metabolite63::l-cysteine,cysteine,L-Cysteine,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,500.592,1999.13,716
+metabolite63::tetrahydrofolate,tetrahydrofolate,Tetrahydrofolate,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.505,1995.28,716
+metabolite63::dihydrofolate,dihydrofolate,Dihydrofolate,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.505,1995.28,716
+metabolite63::l-cystine,cystine,L-Cystine,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.505,1995.28,716
+metabolite63::l-tryptophan,tryptophan,L-Tryptophan,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.505,1995.28,716
+metabolite63::nicotinamide,nicotinamide,Nicotinamide,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.505,1995.28,716
+metabolite63::cys-gly,cys-gly,Cys-Gly,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.505,1995.28,716
+metabolite63::bis(3-aminopropyl)amine,bis(3-aminopropyl)amine,BIS(3-AMINOPROPYL)AMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::homocysteine,homocysteine,HOMOCYSTEINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::caffeine,caffeine,CAFFEINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::kynurenine,kynurenine,KYNURENINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::l-lysine,lysine,L-LYSINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::l-arginine,arginine,L-ARGININE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::homocystine,homocystine,HOMOCYSTINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::thiamine,thiamine,THIAMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::octopamine,octopamine,OCTOPAMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::selenocystamine,selenocystamine,SELENOCYSTAMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::histamine,histamine,HISTAMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::cytochrome c,cytochrome c,CYTOCHROME C,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),True,505.089,2002.21,716
+metabolite63::riboflavin,riboflavin,RIBOFLAVIN,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::glutathione,glutathione,GLUTATHIONE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::n-acetyl-l-cysteine,n-acetyl-l-cysteine,N-ACETYL-L-CYSTEINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::4-imidazoleacetic acid,4-imidazoleacetic acid,4-IMIDAZOLEACETIC ACID,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+"metabolite63::3',5'-cyclic amp","3',5'-cyclic amp","3',5'-CYCLIC AMP",sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::l-methionine sulfoximine,methionine sulfoximine,L-METHIONINE SULFOXIMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::l-histidine,histidine,L-HISTIDINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::spermidine,spermidine,SPERMIDINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::biliverdin,biliverdin,BILIVERDIN,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::cysteamine,cysteamine,CYSTEAMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::vitamin b12,vitamin b12,VITAMIN B12,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::tyramine,tyramine,TYRAMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::tryptamine,tryptamine,TRYPTAMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::lumichrome,lumichrome,LUMICHROME,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::n-methyltryptamine,n-methyltryptamine,N-METHYLTRYPTAMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::lipoamide,lipoamide,LIPOAMIDE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::3-methoxytyramine,3-methoxytyramine,3-METHOXYTYRAMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::2-quinolinecarboxylic acid,2-quinolinecarboxylic acid,2-QUINOLINECARBOXYLIC ACID,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::pterin,pterin,PTERIN,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::indole-3-acetic acid,indole-3-acetic acid,INDOLE-3-ACETIC ACID,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,505.089,2002.21,716
+metabolite63::l-asparagine,asparagine,L-ASPARAGINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.183,2000.07,716
+metabolite63::n-acetyl-d-tryptophan,n-acetyl-d-tryptophan,N-ACETYL-D-TRYPTOPHAN,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.183,2000.07,716
+metabolite63::leucine,leucine,LEUCINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.183,2000.07,716
+metabolite63::selenomethionine,selenomethionine,SELENOMETHIONINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.183,2000.07,716
+metabolite63::methylguanidine,methylguanidine,METHYLGUANIDINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.183,2000.07,716
+metabolite63::dopamine,dopamine,DOPAMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.183,2000.07,716
+metabolite63::l-cystathionine,cystathionine,L-CYSTATHIONINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.183,2000.07,716
+metabolite63::thyrotropin releasing hormone,thyrotropin releasing hormone,THYROTROPIN RELEASING HORMONE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.183,2000.07,716
+metabolite63::n-methyl-d-aspartic acid,n-methyl-d-aspartic acid,N-METHYL-D-ASPARTIC ACID,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.183,2000.07,716
+metabolite63::carbamoyl phosphate,carbamoyl phosphate,CARBAMOYL PHOSPHATE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.183,2000.07,716
+metabolite63::agmatine sulfate,agmatine,AGMATINE SULFATE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.183,2000.07,716
+metabolite63::l-cysteic acid,cysteic acid,L-CYSTEIC ACID,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.183,2000.07,716
+metabolite63::1-methylnicotinamide,1-methylnicotinamide,1-METHYLNICOTINAMIDE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,501.395,1998.74,716
+metabolite63::n-acetyl-dl-glutamic acid,n-acetyl-dl-glutamic acid,N-ACETYL-DL-GLUTAMIC ACID,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,500.741,1999.32,716
+metabolite63::mandelic acid,mandelic acid,MANDELIC ACID,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,500.741,1999.32,716
+metabolite63::l-tryptophanamide,tryptophanamide,L-TRYPTOPHANAMIDE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,500.741,1999.32,716
+metabolite63::dethiobiotin,dethiobiotin,DETHIOBIOTIN,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,498.747,1994.23,716
+metabolite63::phenethylamine,phenethylamine,PHENETHYLAMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,498.747,1994.23,716
+metabolite63::methyl indole-3-acetate,methyl indole-3-acetate,METHYL INDOLE-3-ACETATE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,498.747,1994.23,716
+"metabolite63::n,n-dimethyl-1,4-phenylenediamine","n,n-dimethyl-1,4-phenylenediamine","N,N-DIMETHYL-1,4-PHENYLENEDIAMINE",sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,498.747,1994.23,716
+metabolite63::1-naphthylamine,1-naphthylamine,1-NAPHTHYLAMINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,498.747,1994.23,716
+metabolite63::pipecolate,pipecolate,PIPECOLATE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,499.272,1999.92,716
+metabolite63::5-oxo-l-proline,5-oxo-l-proline,5-OXO-L-PROLINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,499.272,1999.92,716
+metabolite63::3-methyladenine,3-methyladenine,3-METHYLADENINE,sers,sers_metabolite_63(PMC6989628),633.0,avg(3 scans),physiological,grounding,"processed(avg,bg-subtracted)",True,ok,False,False,633nm(not 785),False,499.272,1999.92,716
+adenine::100nano,adenine,Adenine,sers,adenine_sers_control,785.0,1,100nano,grounding,raw,True,ok,True,False,adenine_conc_series(controlled_perturbation_eval),False,99.78549,3500.155,7054
+adenine::100pg,adenine,Adenine,sers,adenine_sers_control,785.0,1,100pg,grounding,raw,True,ok,True,False,adenine_conc_series(controlled_perturbation_eval),False,99.78549,3500.155,7054
+adenine::10micro,adenine,Adenine,sers,adenine_sers_control,785.0,1,10micro,grounding,raw,True,ok,True,False,adenine_conc_series(controlled_perturbation_eval),False,99.78549,3500.155,7054
+adenine::10nano,adenine,Adenine,sers,adenine_sers_control,785.0,1,10nano,grounding,raw,True,ok,True,False,adenine_conc_series(controlled_perturbation_eval),False,99.78549,3500.155,7054
+adenine::10pg,adenine,Adenine,sers,adenine_sers_control,785.0,1,10pg,grounding,raw,True,ok,True,False,adenine_conc_series(controlled_perturbation_eval),False,99.79721,3500.167,7054
+adenine::1micro,adenine,Adenine,sers,adenine_sers_control,785.0,1,1micro,grounding,raw,True,ok,True,False,adenine_conc_series(controlled_perturbation_eval),False,99.78549,3500.155,7054
+gobbato_sers_metabolites::AcCoA::01,acetyl-coa,acetyl-coa,sers,gobbato_sers_metabolites,785.0,01,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::AcCoA::02,acetyl-coa,acetyl-coa,sers,gobbato_sers_metabolites,785.0,02,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::AcCoA::03,acetyl-coa,acetyl-coa,sers,gobbato_sers_metabolites,785.0,03,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::AcCoA::04,acetyl-coa,acetyl-coa,sers,gobbato_sers_metabolites,785.0,04,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::AcCoA::05,acetyl-coa,acetyl-coa,sers,gobbato_sers_metabolites,785.0,05,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Acetoacet::01,acetoacetate,acetoacetate,sers,gobbato_sers_metabolites,785.0,01,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Acetoacet::02,acetoacetate,acetoacetate,sers,gobbato_sers_metabolites,785.0,02,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Acetoacet::03,acetoacetate,acetoacetate,sers,gobbato_sers_metabolites,785.0,03,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Acetoacet::04,acetoacetate,acetoacetate,sers,gobbato_sers_metabolites,785.0,04,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Acetoacet::05,acetoacetate,acetoacetate,sers,gobbato_sers_metabolites,785.0,05,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ade::01,adenine,adenine,sers,gobbato_sers_metabolites,785.0,01,0.3uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ade::02,adenine,adenine,sers,gobbato_sers_metabolites,785.0,02,0.3uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ade::03,adenine,adenine,sers,gobbato_sers_metabolites,785.0,03,0.3uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ade::04,adenine,adenine,sers,gobbato_sers_metabolites,785.0,04,0.3uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ade::05,adenine,adenine,sers,gobbato_sers_metabolites,785.0,05,0.3uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ala::01,alanine,alanine,sers,gobbato_sers_metabolites,785.0,01,400uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ala::02,alanine,alanine,sers,gobbato_sers_metabolites,785.0,02,400uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ala::03,alanine,alanine,sers,gobbato_sers_metabolites,785.0,03,400uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ala::04,alanine,alanine,sers,gobbato_sers_metabolites,785.0,04,400uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ala::05,alanine,alanine,sers,gobbato_sers_metabolites,785.0,05,400uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Alb::01,albumin,albumin,sers,gobbato_sers_metabolites,785.0,01,600uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Alb::02,albumin,albumin,sers,gobbato_sers_metabolites,785.0,02,600uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Alb::03,albumin,albumin,sers,gobbato_sers_metabolites,785.0,03,600uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Alb::04,albumin,albumin,sers,gobbato_sers_metabolites,785.0,04,600uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Alb::05,albumin,albumin,sers,gobbato_sers_metabolites,785.0,05,600uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Arg::01,arginine,arginine,sers,gobbato_sers_metabolites,785.0,01,130uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Arg::02,arginine,arginine,sers,gobbato_sers_metabolites,785.0,02,130uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Arg::03,arginine,arginine,sers,gobbato_sers_metabolites,785.0,03,130uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Arg::04,arginine,arginine,sers,gobbato_sers_metabolites,785.0,04,130uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Arg::05,arginine,arginine,sers,gobbato_sers_metabolites,785.0,05,130uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Asc::01,ascorbate,ascorbate,sers,gobbato_sers_metabolites,785.0,01,60uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Asc::02,ascorbate,ascorbate,sers,gobbato_sers_metabolites,785.0,02,60uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Asc::03,ascorbate,ascorbate,sers,gobbato_sers_metabolites,785.0,03,60uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Asc::04,ascorbate,ascorbate,sers,gobbato_sers_metabolites,785.0,04,60uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Asc::05,ascorbate,ascorbate,sers,gobbato_sers_metabolites,785.0,05,60uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Chol::01,cholesterol,cholesterol,sers,gobbato_sers_metabolites,785.0,01,6.2mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Chol::02,cholesterol,cholesterol,sers,gobbato_sers_metabolites,785.0,02,6.2mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Chol::03,cholesterol,cholesterol,sers,gobbato_sers_metabolites,785.0,03,6.2mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Chol::04,cholesterol,cholesterol,sers,gobbato_sers_metabolites,785.0,04,6.2mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Chol::05,cholesterol,cholesterol,sers,gobbato_sers_metabolites,785.0,05,6.2mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Citric::01,citrate,citrate,sers,gobbato_sers_metabolites,785.0,01,200uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Citric::02,citrate,citrate,sers,gobbato_sers_metabolites,785.0,02,200uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Citric::03,citrate,citrate,sers,gobbato_sers_metabolites,785.0,03,200uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Citric::04,citrate,citrate,sers,gobbato_sers_metabolites,785.0,04,200uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Citric::05,citrate,citrate,sers,gobbato_sers_metabolites,785.0,05,200uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::CoA::01,coenzyme a,coenzyme a,sers,gobbato_sers_metabolites,785.0,01,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::CoA::02,coenzyme a,coenzyme a,sers,gobbato_sers_metabolites,785.0,02,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::CoA::03,coenzyme a,coenzyme a,sers,gobbato_sers_metabolites,785.0,03,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::CoA::04,coenzyme a,coenzyme a,sers,gobbato_sers_metabolites,785.0,04,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::CoA::05,coenzyme a,coenzyme a,sers,gobbato_sers_metabolites,785.0,05,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Creat::01,creatinine,creatinine,sers,gobbato_sers_metabolites,785.0,01,80uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Creat::02,creatinine,creatinine,sers,gobbato_sers_metabolites,785.0,02,80uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Creat::03,creatinine,creatinine,sers,gobbato_sers_metabolites,785.0,03,80uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Creat::04,creatinine,creatinine,sers,gobbato_sers_metabolites,785.0,04,80uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Creat::05,creatinine,creatinine,sers,gobbato_sers_metabolites,785.0,05,80uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Cys::01,cysteine,cysteine,sers,gobbato_sers_metabolites,785.0,01,0.2uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Cys::02,cysteine,cysteine,sers,gobbato_sers_metabolites,785.0,02,0.2uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Cys::03,cysteine,cysteine,sers,gobbato_sers_metabolites,785.0,03,0.2uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Cys::04,cysteine,cysteine,sers,gobbato_sers_metabolites,785.0,04,0.2uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Cys::05,cysteine,cysteine,sers,gobbato_sers_metabolites,785.0,05,0.2uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::DNA::01,dna,dna,sers,gobbato_sers_metabolites,785.0,01,30ngmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::DNA::02,dna,dna,sers,gobbato_sers_metabolites,785.0,02,30ngmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::DNA::03,dna,dna,sers,gobbato_sers_metabolites,785.0,03,30ngmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::DNA::04,dna,dna,sers,gobbato_sers_metabolites,785.0,04,30ngmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::DNA::05,dna,dna,sers,gobbato_sers_metabolites,785.0,05,30ngmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Dfruct6P::01,fructose-6-phosphate,fructose-6-phosphate,sers,gobbato_sers_metabolites,785.0,01,10uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Dfruct6P::02,fructose-6-phosphate,fructose-6-phosphate,sers,gobbato_sers_metabolites,785.0,02,10uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Dfruct6P::03,fructose-6-phosphate,fructose-6-phosphate,sers,gobbato_sers_metabolites,785.0,03,10uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Dfruct6P::04,fructose-6-phosphate,fructose-6-phosphate,sers,gobbato_sers_metabolites,785.0,04,10uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Dfruct6P::05,fructose-6-phosphate,fructose-6-phosphate,sers,gobbato_sers_metabolites,785.0,05,10uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ergo::01,ergothioneine,ergothioneine,sers,gobbato_sers_metabolites,785.0,01,5uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ergo::02,ergothioneine,ergothioneine,sers,gobbato_sers_metabolites,785.0,02,5uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ergo::03,ergothioneine,ergothioneine,sers,gobbato_sers_metabolites,785.0,03,5uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ergo::04,ergothioneine,ergothioneine,sers,gobbato_sers_metabolites,785.0,04,5uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ergo::05,ergothioneine,ergothioneine,sers,gobbato_sers_metabolites,785.0,05,5uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Fruct::01,fructose,fructose,sers,gobbato_sers_metabolites,785.0,01,30uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Fruct::02,fructose,fructose,sers,gobbato_sers_metabolites,785.0,02,30uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Fruct::03,fructose,fructose,sers,gobbato_sers_metabolites,785.0,03,30uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Fruct::04,fructose,fructose,sers,gobbato_sers_metabolites,785.0,04,30uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Fruct::05,fructose,fructose,sers,gobbato_sers_metabolites,785.0,05,30uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Galact::01,galactose,galactose,sers,gobbato_sers_metabolites,785.0,01,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Galact::02,galactose,galactose,sers,gobbato_sers_metabolites,785.0,02,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Galact::03,galactose,galactose,sers,gobbato_sers_metabolites,785.0,03,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Galact::04,galactose,galactose,sers,gobbato_sers_metabolites,785.0,04,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Galact::05,galactose,galactose,sers,gobbato_sers_metabolites,785.0,05,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gluc::01,glucose,glucose,sers,gobbato_sers_metabolites,785.0,01,5.4mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gluc::02,glucose,glucose,sers,gobbato_sers_metabolites,785.0,02,5.4mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gluc::03,glucose,glucose,sers,gobbato_sers_metabolites,785.0,03,5.4mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gluc::04,glucose,glucose,sers,gobbato_sers_metabolites,785.0,04,5.4mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gluc::05,glucose,glucose,sers,gobbato_sers_metabolites,785.0,05,5.4mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glut::01,glutathione,glutathione,sers,gobbato_sers_metabolites,785.0,01,85uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glut::02,glutathione,glutathione,sers,gobbato_sers_metabolites,785.0,02,85uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glut::03,glutathione,glutathione,sers,gobbato_sers_metabolites,785.0,03,85uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glut::04,glutathione,glutathione,sers,gobbato_sers_metabolites,785.0,04,85uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glut::05,glutathione,glutathione,sers,gobbato_sers_metabolites,785.0,05,85uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glutamic::01,glutamate,glutamate,sers,gobbato_sers_metabolites,785.0,01,30uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glutamic::02,glutamate,glutamate,sers,gobbato_sers_metabolites,785.0,02,30uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glutamic::03,glutamate,glutamate,sers,gobbato_sers_metabolites,785.0,03,30uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glutamic::04,glutamate,glutamate,sers,gobbato_sers_metabolites,785.0,04,30uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glutamic::05,glutamate,glutamate,sers,gobbato_sers_metabolites,785.0,05,30uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gly::01,glycine,glycine,sers,gobbato_sers_metabolites,785.0,01,230uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gly::02,glycine,glycine,sers,gobbato_sers_metabolites,785.0,02,230uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gly::03,glycine,glycine,sers,gobbato_sers_metabolites,785.0,03,230uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gly::04,glycine,glycine,sers,gobbato_sers_metabolites,785.0,04,230uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gly::05,glycine,glycine,sers,gobbato_sers_metabolites,785.0,05,230uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glycerol::01,glycerol,glycerol,sers,gobbato_sers_metabolites,785.0,01,40uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glycerol::02,glycerol,glycerol,sers,gobbato_sers_metabolites,785.0,02,40uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glycerol::03,glycerol,glycerol,sers,gobbato_sers_metabolites,785.0,03,40uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glycerol::04,glycerol,glycerol,sers,gobbato_sers_metabolites,785.0,04,40uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glycerol::05,glycerol,glycerol,sers,gobbato_sers_metabolites,785.0,05,40uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glycogen::01,glycogen,glycogen,sers,gobbato_sers_metabolites,785.0,01,1mgmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glycogen::02,glycogen,glycogen,sers,gobbato_sers_metabolites,785.0,02,1mgmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glycogen::03,glycogen,glycogen,sers,gobbato_sers_metabolites,785.0,03,1mgmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glycogen::04,glycogen,glycogen,sers,gobbato_sers_metabolites,785.0,04,1mgmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Glycogen::05,glycogen,glycogen,sers,gobbato_sers_metabolites,785.0,05,1mgmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gua::01,guanine,guanine,sers,gobbato_sers_metabolites,785.0,01,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gua::02,guanine,guanine,sers,gobbato_sers_metabolites,785.0,02,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gua::03,guanine,guanine,sers,gobbato_sers_metabolites,785.0,03,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gua::04,guanine,guanine,sers,gobbato_sers_metabolites,785.0,04,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Gua::05,guanine,guanine,sers,gobbato_sers_metabolites,785.0,05,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::His::01,histidine,histidine,sers,gobbato_sers_metabolites,785.0,01,90uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::His::02,histidine,histidine,sers,gobbato_sers_metabolites,785.0,02,90uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::His::03,histidine,histidine,sers,gobbato_sers_metabolites,785.0,03,90uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::His::04,histidine,histidine,sers,gobbato_sers_metabolites,785.0,04,90uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::His::05,histidine,histidine,sers,gobbato_sers_metabolites,785.0,05,90uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Hydroxypro::01,hydroxyproline,hydroxyproline,sers,gobbato_sers_metabolites,785.0,01,10uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Hydroxypro::02,hydroxyproline,hydroxyproline,sers,gobbato_sers_metabolites,785.0,02,10uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Hydroxypro::03,hydroxyproline,hydroxyproline,sers,gobbato_sers_metabolites,785.0,03,10uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Hydroxypro::04,hydroxyproline,hydroxyproline,sers,gobbato_sers_metabolites,785.0,04,10uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Hydroxypro::05,hydroxyproline,hydroxyproline,sers,gobbato_sers_metabolites,785.0,05,10uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Hypox::01,hypoxanthine,hypoxanthine,sers,gobbato_sers_metabolites,785.0,01,2.3uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Hypox::02,hypoxanthine,hypoxanthine,sers,gobbato_sers_metabolites,785.0,02,2.3uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Hypox::03,hypoxanthine,hypoxanthine,sers,gobbato_sers_metabolites,785.0,03,2.3uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Hypox::04,hypoxanthine,hypoxanthine,sers,gobbato_sers_metabolites,785.0,04,2.3uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Hypox::05,hypoxanthine,hypoxanthine,sers,gobbato_sers_metabolites,785.0,05,2.3uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ile::01,isoleucine,isoleucine,sers,gobbato_sers_metabolites,785.0,01,80uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ile::02,isoleucine,isoleucine,sers,gobbato_sers_metabolites,785.0,02,80uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ile::03,isoleucine,isoleucine,sers,gobbato_sers_metabolites,785.0,03,80uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ile::04,isoleucine,isoleucine,sers,gobbato_sers_metabolites,785.0,04,80uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ile::05,isoleucine,isoleucine,sers,gobbato_sers_metabolites,785.0,05,80uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Lact::01,lactate,lactate,sers,gobbato_sers_metabolites,785.0,01,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Lact::02,lactate,lactate,sers,gobbato_sers_metabolites,785.0,02,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Lact::03,lactate,lactate,sers,gobbato_sers_metabolites,785.0,03,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Lact::04,lactate,lactate,sers,gobbato_sers_metabolites,785.0,04,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Lact::05,lactate,lactate,sers,gobbato_sers_metabolites,785.0,05,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Leu::01,leucine,leucine,sers,gobbato_sers_metabolites,785.0,01,125uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Leu::02,leucine,leucine,sers,gobbato_sers_metabolites,785.0,02,125uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Leu::03,leucine,leucine,sers,gobbato_sers_metabolites,785.0,03,125uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Leu::04,leucine,leucine,sers,gobbato_sers_metabolites,785.0,04,125uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Leu::05,leucine,leucine,sers,gobbato_sers_metabolites,785.0,05,125uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Mann::01,mannose,mannose,sers,gobbato_sers_metabolites,785.0,01,65uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Mann::02,mannose,mannose,sers,gobbato_sers_metabolites,785.0,02,65uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Mann::03,mannose,mannose,sers,gobbato_sers_metabolites,785.0,03,65uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Mann::04,mannose,mannose,sers,gobbato_sers_metabolites,785.0,04,65uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Mann::05,mannose,mannose,sers,gobbato_sers_metabolites,785.0,05,65uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Methio::01,methionine,methionine,sers,gobbato_sers_metabolites,785.0,01,25uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Methio::02,methionine,methionine,sers,gobbato_sers_metabolites,785.0,02,25uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Methio::03,methionine,methionine,sers,gobbato_sers_metabolites,785.0,03,25uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Methio::04,methionine,methionine,sers,gobbato_sers_metabolites,785.0,04,25uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Methio::05,methionine,methionine,sers,gobbato_sers_metabolites,785.0,05,25uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::NacDgluc::01,n-acetylglucosamine,n-acetylglucosamine,sers,gobbato_sers_metabolites,785.0,01,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::NacDgluc::02,n-acetylglucosamine,n-acetylglucosamine,sers,gobbato_sers_metabolites,785.0,02,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::NacDgluc::03,n-acetylglucosamine,n-acetylglucosamine,sers,gobbato_sers_metabolites,785.0,03,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::NacDgluc::04,n-acetylglucosamine,n-acetylglucosamine,sers,gobbato_sers_metabolites,785.0,04,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::NacDgluc::05,n-acetylglucosamine,n-acetylglucosamine,sers,gobbato_sers_metabolites,785.0,05,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Oleic::01,oleate,oleate,sers,gobbato_sers_metabolites,785.0,01,150uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Oleic::02,oleate,oleate,sers,gobbato_sers_metabolites,785.0,02,150uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Oleic::03,oleate,oleate,sers,gobbato_sers_metabolites,785.0,03,150uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Oleic::04,oleate,oleate,sers,gobbato_sers_metabolites,785.0,04,150uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Oleic::05,oleate,oleate,sers,gobbato_sers_metabolites,785.0,05,150uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::PEP::01,phosphoenolpyruvate,phosphoenolpyruvate,sers,gobbato_sers_metabolites,785.0,01,17uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::PEP::02,phosphoenolpyruvate,phosphoenolpyruvate,sers,gobbato_sers_metabolites,785.0,02,17uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::PEP::03,phosphoenolpyruvate,phosphoenolpyruvate,sers,gobbato_sers_metabolites,785.0,03,17uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::PEP::04,phosphoenolpyruvate,phosphoenolpyruvate,sers,gobbato_sers_metabolites,785.0,04,17uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::PEP::05,phosphoenolpyruvate,phosphoenolpyruvate,sers,gobbato_sers_metabolites,785.0,05,17uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::PhInositol::01,phosphatidylinositol,phosphatidylinositol,sers,gobbato_sers_metabolites,785.0,01,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::PhInositol::02,phosphatidylinositol,phosphatidylinositol,sers,gobbato_sers_metabolites,785.0,02,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::PhInositol::03,phosphatidylinositol,phosphatidylinositol,sers,gobbato_sers_metabolites,785.0,03,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::PhInositol::04,phosphatidylinositol,phosphatidylinositol,sers,gobbato_sers_metabolites,785.0,04,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::PhInositol::05,phosphatidylinositol,phosphatidylinositol,sers,gobbato_sers_metabolites,785.0,05,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Phe::01,phenylalanine,phenylalanine,sers,gobbato_sers_metabolites,785.0,01,78uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Phe::02,phenylalanine,phenylalanine,sers,gobbato_sers_metabolites,785.0,02,78uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Phe::03,phenylalanine,phenylalanine,sers,gobbato_sers_metabolites,785.0,03,78uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Phe::04,phenylalanine,phenylalanine,sers,gobbato_sers_metabolites,785.0,04,78uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Phe::05,phenylalanine,phenylalanine,sers,gobbato_sers_metabolites,785.0,05,78uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Phosph::01,phosphate,phosphate,sers,gobbato_sers_metabolites,785.0,01,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Phosph::02,phosphate,phosphate,sers,gobbato_sers_metabolites,785.0,02,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Phosph::03,phosphate,phosphate,sers,gobbato_sers_metabolites,785.0,03,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Phosph::04,phosphate,phosphate,sers,gobbato_sers_metabolites,785.0,04,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Phosph::05,phosphate,phosphate,sers,gobbato_sers_metabolites,785.0,05,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Pro::01,proline,proline,sers,gobbato_sers_metabolites,785.0,01,168uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Pro::02,proline,proline,sers,gobbato_sers_metabolites,785.0,02,168uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Pro::03,proline,proline,sers,gobbato_sers_metabolites,785.0,03,168uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Pro::04,proline,proline,sers,gobbato_sers_metabolites,785.0,04,168uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Pro::05,proline,proline,sers,gobbato_sers_metabolites,785.0,05,168uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Pyr::01,pyruvate,pyruvate,sers,gobbato_sers_metabolites,785.0,01,35uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Pyr::02,pyruvate,pyruvate,sers,gobbato_sers_metabolites,785.0,02,35uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Pyr::03,pyruvate,pyruvate,sers,gobbato_sers_metabolites,785.0,03,35uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Pyr::04,pyruvate,pyruvate,sers,gobbato_sers_metabolites,785.0,04,35uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Pyr::05,pyruvate,pyruvate,sers,gobbato_sers_metabolites,785.0,05,35uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::RNA::01,rna,rna,sers,gobbato_sers_metabolites,785.0,01,5ngmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::RNA::02,rna,rna,sers,gobbato_sers_metabolites,785.0,02,5ngmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::RNA::03,rna,rna,sers,gobbato_sers_metabolites,785.0,03,5ngmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::RNA::04,rna,rna,sers,gobbato_sers_metabolites,785.0,04,5ngmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::RNA::05,rna,rna,sers,gobbato_sers_metabolites,785.0,05,5ngmL,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ribo::01,riboflavin,riboflavin,sers,gobbato_sers_metabolites,785.0,01,0.84uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ribo::02,riboflavin,riboflavin,sers,gobbato_sers_metabolites,785.0,02,0.84uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ribo::03,riboflavin,riboflavin,sers,gobbato_sers_metabolites,785.0,03,0.84uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ribo::04,riboflavin,riboflavin,sers,gobbato_sers_metabolites,785.0,04,0.84uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ribo::05,riboflavin,riboflavin,sers,gobbato_sers_metabolites,785.0,05,0.84uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ser::01,serine,serine,sers,gobbato_sers_metabolites,785.0,01,160uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ser::02,serine,serine,sers,gobbato_sers_metabolites,785.0,02,160uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ser::03,serine,serine,sers,gobbato_sers_metabolites,785.0,03,160uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ser::04,serine,serine,sers,gobbato_sers_metabolites,785.0,04,160uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ser::05,serine,serine,sers,gobbato_sers_metabolites,785.0,05,160uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Stearic::01,stearate,stearate,sers,gobbato_sers_metabolites,785.0,01,85uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Stearic::02,stearate,stearate,sers,gobbato_sers_metabolites,785.0,02,85uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Stearic::03,stearate,stearate,sers,gobbato_sers_metabolites,785.0,03,85uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Stearic::04,stearate,stearate,sers,gobbato_sers_metabolites,785.0,04,85uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Stearic::05,stearate,stearate,sers,gobbato_sers_metabolites,785.0,05,85uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Thy::01,thymine,thymine,sers,gobbato_sers_metabolites,785.0,01,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Thy::02,thymine,thymine,sers,gobbato_sers_metabolites,785.0,02,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Thy::03,thymine,thymine,sers,gobbato_sers_metabolites,785.0,03,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Thy::04,thymine,thymine,sers,gobbato_sers_metabolites,785.0,04,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Thy::05,thymine,thymine,sers,gobbato_sers_metabolites,785.0,05,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Triolein::01,triolein,triolein,sers,gobbato_sers_metabolites,785.0,01,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Triolein::02,triolein,triolein,sers,gobbato_sers_metabolites,785.0,02,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Triolein::03,triolein,triolein,sers,gobbato_sers_metabolites,785.0,03,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Triolein::04,triolein,triolein,sers,gobbato_sers_metabolites,785.0,04,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Triolein::05,triolein,triolein,sers,gobbato_sers_metabolites,785.0,05,100uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Trp::01,tryptophan,tryptophan,sers,gobbato_sers_metabolites,785.0,01,55uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Trp::02,tryptophan,tryptophan,sers,gobbato_sers_metabolites,785.0,02,55uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Trp::03,tryptophan,tryptophan,sers,gobbato_sers_metabolites,785.0,03,55uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Trp::04,tryptophan,tryptophan,sers,gobbato_sers_metabolites,785.0,04,55uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Trp::05,tryptophan,tryptophan,sers,gobbato_sers_metabolites,785.0,05,55uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Tyr::01,tyrosine,tyrosine,sers,gobbato_sers_metabolites,785.0,01,55uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Tyr::02,tyrosine,tyrosine,sers,gobbato_sers_metabolites,785.0,02,55uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Tyr::03,tyrosine,tyrosine,sers,gobbato_sers_metabolites,785.0,03,55uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Tyr::04,tyrosine,tyrosine,sers,gobbato_sers_metabolites,785.0,04,55uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Tyr::05,tyrosine,tyrosine,sers,gobbato_sers_metabolites,785.0,05,55uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::UA::01,urate,urate,sers,gobbato_sers_metabolites,785.0,01,280uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::UA::02,urate,urate,sers,gobbato_sers_metabolites,785.0,02,280uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::UA::03,urate,urate,sers,gobbato_sers_metabolites,785.0,03,280uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::UA::04,urate,urate,sers,gobbato_sers_metabolites,785.0,04,280uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::UA::05,urate,urate,sers,gobbato_sers_metabolites,785.0,05,280uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ura::01,uracil,uracil,sers,gobbato_sers_metabolites,785.0,01,2uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ura::02,uracil,uracil,sers,gobbato_sers_metabolites,785.0,02,2uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ura::03,uracil,uracil,sers,gobbato_sers_metabolites,785.0,03,2uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ura::04,uracil,uracil,sers,gobbato_sers_metabolites,785.0,04,2uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Ura::05,uracil,uracil,sers,gobbato_sers_metabolites,785.0,05,2uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Urea::01,urea,urea,sers,gobbato_sers_metabolites,785.0,01,6.5mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Urea::02,urea,urea,sers,gobbato_sers_metabolites,785.0,02,6.5mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Urea::03,urea,urea,sers,gobbato_sers_metabolites,785.0,03,6.5mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Urea::04,urea,urea,sers,gobbato_sers_metabolites,785.0,04,6.5mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Urea::05,urea,urea,sers,gobbato_sers_metabolites,785.0,05,6.5mM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Val::01,valine,valine,sers,gobbato_sers_metabolites,785.0,01,117uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Val::02,valine,valine,sers,gobbato_sers_metabolites,785.0,02,117uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Val::03,valine,valine,sers,gobbato_sers_metabolites,785.0,03,117uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Val::04,valine,valine,sers,gobbato_sers_metabolites,785.0,04,117uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Val::05,valine,valine,sers,gobbato_sers_metabolites,785.0,05,117uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Xanth::01,xanthine,xanthine,sers,gobbato_sers_metabolites,785.0,01,50uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Xanth::02,xanthine,xanthine,sers,gobbato_sers_metabolites,785.0,02,50uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Xanth::03,xanthine,xanthine,sers,gobbato_sers_metabolites,785.0,03,50uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Xanth::04,xanthine,xanthine,sers,gobbato_sers_metabolites,785.0,04,50uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_sers_metabolites::Xanth::05,xanthine,xanthine,sers,gobbato_sers_metabolites,785.0,05,50uM,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::AcCoA::01,acetyl-coa,acetyl-coa,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_raman_metabolites::AcCoA::02,acetyl-coa,acetyl-coa,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_raman_metabolites::AcCoA::03,acetyl-coa,acetyl-coa,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_raman_metabolites::Acetoacet::01,acetoacetate,acetoacetate,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Acetoacet::02,acetoacetate,acetoacetate,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Acetoacet::03,acetoacetate,acetoacetate,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ade::01,adenine,adenine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ade::02,adenine,adenine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ade::03,adenine,adenine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ala::01,alanine,alanine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ala::02,alanine,alanine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ala::03,alanine,alanine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Alb::01,albumin,albumin,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_raman_metabolites::Alb::02,albumin,albumin,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_raman_metabolites::Alb::03,albumin,albumin,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_raman_metabolites::Arg::01,arginine,arginine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Arg::02,arginine,arginine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Arg::03,arginine,arginine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Asc::01,ascorbate,ascorbate,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Asc::02,ascorbate,ascorbate,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Asc::03,ascorbate,ascorbate,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Chol::01,cholesterol,cholesterol,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Chol::02,cholesterol,cholesterol,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Chol::03,cholesterol,cholesterol,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Citric::01,citrate,citrate,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Citric::02,citrate,citrate,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Citric::03,citrate,citrate,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::CoA::01,coenzyme a,coenzyme a,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_raman_metabolites::CoA::02,coenzyme a,coenzyme a,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_raman_metabolites::CoA::03,coenzyme a,coenzyme a,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_raman_metabolites::Creat::01,creatinine,creatinine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Creat::02,creatinine,creatinine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Creat::03,creatinine,creatinine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Cys::01,cysteine,cysteine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Cys::02,cysteine,cysteine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Cys::03,cysteine,cysteine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Dfruct6P::01,fructose-6-phosphate,fructose-6-phosphate,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Dfruct6P::02,fructose-6-phosphate,fructose-6-phosphate,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Dfruct6P::03,fructose-6-phosphate,fructose-6-phosphate,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ergo::01,ergothioneine,ergothioneine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ergo::02,ergothioneine,ergothioneine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ergo::03,ergothioneine,ergothioneine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Fruct::01,fructose,fructose,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Fruct::02,fructose,fructose,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Fruct::03,fructose,fructose,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Galact::01,galactose,galactose,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Galact::02,galactose,galactose,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Galact::03,galactose,galactose,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Gluc::01,glucose,glucose,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Gluc::02,glucose,glucose,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Gluc::03,glucose,glucose,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Glut::01,glutathione,glutathione,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Glut::02,glutathione,glutathione,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Glut::03,glutathione,glutathione,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Glutamic::01,glutamate,glutamate,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Glutamic::02,glutamate,glutamate,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Glutamic::03,glutamate,glutamate,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Gly::01,glycine,glycine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Gly::02,glycine,glycine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Gly::03,glycine,glycine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Glycerol::01,glycerol,glycerol,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Glycerol::02,glycerol,glycerol,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Glycerol::03,glycerol,glycerol,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Glycogen::01,glycogen,glycogen,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_raman_metabolites::Glycogen::02,glycogen,glycogen,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_raman_metabolites::Glycogen::03,glycogen,glycogen,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,True,-309.99,3270.66,2048
+gobbato_raman_metabolites::Gua::01,guanine,guanine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Gua::02,guanine,guanine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Gua::03,guanine,guanine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::His::01,histidine,histidine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::His::02,histidine,histidine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::His::03,histidine,histidine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Hydroxypro::01,hydroxyproline,hydroxyproline,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Hydroxypro::02,hydroxyproline,hydroxyproline,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Hydroxypro::03,hydroxyproline,hydroxyproline,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Hypox::01,hypoxanthine,hypoxanthine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Hypox::02,hypoxanthine,hypoxanthine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Hypox::03,hypoxanthine,hypoxanthine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ile::01,isoleucine,isoleucine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ile::02,isoleucine,isoleucine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ile::03,isoleucine,isoleucine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Lact::01,lactate,lactate,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Lact::02,lactate,lactate,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Lact::03,lactate,lactate,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Leu::01,leucine,leucine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Leu::02,leucine,leucine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Leu::03,leucine,leucine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Mann::01,mannose,mannose,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Mann::02,mannose,mannose,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Mann::03,mannose,mannose,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Methio::01,methionine,methionine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Methio::02,methionine,methionine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Methio::03,methionine,methionine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::NacDgluc::01,n-acetylglucosamine,n-acetylglucosamine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::NacDgluc::02,n-acetylglucosamine,n-acetylglucosamine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::NacDgluc::03,n-acetylglucosamine,n-acetylglucosamine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Oleic::01,oleate,oleate,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Oleic::02,oleate,oleate,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Oleic::03,oleate,oleate,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::PEP::01,phosphoenolpyruvate,phosphoenolpyruvate,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::PEP::02,phosphoenolpyruvate,phosphoenolpyruvate,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::PEP::03,phosphoenolpyruvate,phosphoenolpyruvate,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::PhInositol::01,phosphatidylinositol,phosphatidylinositol,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::PhInositol::02,phosphatidylinositol,phosphatidylinositol,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::PhInositol::03,phosphatidylinositol,phosphatidylinositol,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Phe::01,phenylalanine,phenylalanine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Phe::02,phenylalanine,phenylalanine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Phe::03,phenylalanine,phenylalanine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Phosph::01,phosphate,phosphate,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Phosph::02,phosphate,phosphate,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Phosph::03,phosphate,phosphate,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Pro::01,proline,proline,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Pro::02,proline,proline,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Pro::03,proline,proline,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Pyr::01,pyruvate,pyruvate,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Pyr::02,pyruvate,pyruvate,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Pyr::03,pyruvate,pyruvate,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ribo::01,riboflavin,riboflavin,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ribo::02,riboflavin,riboflavin,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ribo::03,riboflavin,riboflavin,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ser::01,serine,serine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ser::02,serine,serine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ser::03,serine,serine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Stearic::01,stearate,stearate,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Stearic::02,stearate,stearate,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Stearic::03,stearate,stearate,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Thy::01,thymine,thymine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Thy::02,thymine,thymine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Thy::03,thymine,thymine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Triolein::01,triolein,triolein,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Triolein::02,triolein,triolein,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Triolein::03,triolein,triolein,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Trp::01,tryptophan,tryptophan,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Trp::02,tryptophan,tryptophan,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Trp::03,tryptophan,tryptophan,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Tyr::01,tyrosine,tyrosine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Tyr::02,tyrosine,tyrosine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Tyr::03,tyrosine,tyrosine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::UA::01,urate,urate,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::UA::02,urate,urate,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::UA::03,urate,urate,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ura::01,uracil,uracil,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ura::02,uracil,uracil,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Ura::03,uracil,uracil,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Urea::01,urea,urea,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Urea::02,urea,urea,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Urea::03,urea,urea,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Val::01,valine,valine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Val::02,valine,valine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Val::03,valine,valine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Xanth::01,xanthine,xanthine,raman,gobbato_raman_metabolites,785.0,01,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Xanth::02,xanthine,xanthine,raman,gobbato_raman_metabolites,785.0,02,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+gobbato_raman_metabolites::Xanth::03,xanthine,xanthine,raman,gobbato_raman_metabolites,785.0,03,neat,grounding,raw(bwtek dark-subtracted),True,ok,True,True,,False,-309.99,3270.66,2048
+orc_ag::1-hydroxy-2-naphthoic acid,1-hydroxy-2-naphthoic acid,1-Hydroxy-2-naphthoic acid,sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,20
+orc_ag::2-(methylamino)isobutyric acid,2-(methylamino)isobutyric acid,2-(Methylamino)isobutyric acid,sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,23
+orc_ag::cer(d18:1/24:1(15z)),cer(d18:1/24:1(15z)),Cer(d18:1/24:1(15Z)),sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,19
+orc_ag::hypaphorine,hypaphorine,Hypaphorine,sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,25
+orc_ag::l-aspartyl-l-phenylalanine,aspartyl-l-phenylalanine,L-Aspartyl-L-phenylalanine,sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,11
+orc_ag::l-leucyl-l-isoleucine,leucyl-l-isoleucine,L-leucyl-L-isoleucine,sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,20
+orc_ag::lpc(0:0/14:0),lpc(0:0/14:0),LPC(0:0/14:0),sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,27
+orc_ag::lpc(16:0/0:0),lpc(16:0/0:0),LPC(16:0/0:0),sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,18
+orc_ag::lpc(17:0/0:0),lpc(17:0/0:0),LPC(17:0/0:0),sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,18
+orc_ag::lpc(20:0/0:0),lpc(20:0/0:0),LPC(20:0/0:0),sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,12
+orc_ag::lpc(o-18:0/0:0),lpc(o-18:0/0:0),LPC(O-18:0/0:0),sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,19
+orc_ag::leu-leu,leu-leu,Leu-Leu,sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,22
+orc_ag::pc(12:0/12:0),pc(12:0/12:0),PC(12:0/12:0),sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,15
+orc_ag::pc(18:0/18:1(9z)),pc(18:0/18:1(9z)),PC(18:0/18:1(9Z)),sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,17
+orc_ag::pc(18:1(9z)/18:1(9z)),pc(18:1(9z)/18:1(9z)),PC(18:1(9Z)/18:1(9Z)),sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,26
+orc_ag::pc(o-16:0/0:0),pc(o-16:0/0:0),PC(O-16:0/0:0),sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,21
+"orc_ag::pc(o-16:0/20:5(5z,8z,11z,14z,17z))","pc(o-16:0/20:5(5z,8z,11z,14z,17z))","PC(O-16:0/20:5(5Z,8Z,11Z,14Z,17Z))",sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,17
+orc_ag::phenylacetylglutamine,phenylacetylglutamine,Phenylacetylglutamine,sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,8
+orc_ag::sm(d18:1/16:0),sm(d18:1/16:0),SM(d18:1/16:0),sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,17
+orc_ag::sm(d18:1/18:0),sm(d18:1/18:0),SM(d18:1/18:0),sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,23
+orc_ag::sm(d18:1/24:1(15z)),sm(d18:1/24:1(15z)),SM(d18:1/24:1(15Z)),sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,18
+orc_ag::sphinganine,sphinganine,Sphinganine,sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,17
+orc_ag::taurine,taurine,Taurine,sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,22
+orc_ag::gamma-glu-leu,gamma-glu-leu,gamma-Glu-leu,sers,ag_flakes_metabolites_24,,spatial-avg,unknown,peak_evidence,peak_table,False,peak-only evidence (no full spectrum) — excluded from full-spectrum joint analysis,False,False,"peak_only(MSS, no full spectrum)",False,,,19
