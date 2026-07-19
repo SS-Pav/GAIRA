@@ -1,0 +1,4 @@
+registry,source,rule
+controlled_perturbation_registry,data_audit/v4_controlled_perturbation_evaluation_registry.csv,held out from axis/observation/coordinate/motif fitting and training
+biological_dataset_registry,data_audit/biological_dataset_registry.csv,challenge only; never defines molecular coordinate system
+physics_evidence_registry,data_audit/v4_ag_flakes_metabolite24_peak_registry.csv + physics_atlas_registry.csv,peak/ambiguity/collision evidence; not full-spectrum grounding

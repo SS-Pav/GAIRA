@@ -1,0 +1,16 @@
+substrate_material,substrate_geometry,modality,n_spectra,sources
+ CaF2 slide,none,raman,18,['RamanBioLib']
+" Sample compartment of the
+instrument",none,raman,1,['RamanBioLib']
+Ag citrate colloid (Lee-Meisel),colloid,sers,63,['sers_metabolite_63(PMC6989628)']
+CaF2 slide,none,raman,60,['RamanBioLib']
+Coverslip and glass slide,none,raman,1,['RamanBioLib']
+Glass microscope slide,none,raman,51,['RamanBioLib']
+Glass tube,none,raman,1,['RamanBioLib']
+Gold-coated glass sustrate,none,raman,1,['RamanBioLib']
+Metal discs,none,raman,14,['RamanBioLib']
+Metal ring,none,raman,17,['RamanBioLib']
+Metal rings,none,raman,21,['RamanBioLib']
+ORC-roughened Ag,orc_roughened,sers,24,['ag_flakes_metabolites_24']
+bAgNPs,colloid,sers,6,['adenine_sers_control']
+nan,none,raman,17,['RamanBioLib']

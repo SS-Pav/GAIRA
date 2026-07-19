@@ -190,3 +190,9 @@ checkpoints/
 !gaira_demo_reasoning_v3_1/data/legacy/*.csv
 !gaira_demo_reasoning_v3_1/data/generated/
 !gaira_demo_reasoning_v3_1/data/generated/**
+
+############################################
+# GAIRA V5 canonical source package src/gaira/data (source code, not a data dir)
+############################################
+!src/gaira/data/
+!src/gaira/data/*.py

@@ -1,0 +1,12 @@
+modality,substrate_geometry,excitation_nm,n_spectra,n_analytes,sources
+raman,none,457.9,1,1,['RamanBioLib']
+raman,none,488.0,29,29,['RamanBioLib']
+raman,none,514.5,3,3,['RamanBioLib']
+raman,none,532.0,50,50,['RamanBioLib']
+raman,none,632.8,1,1,['RamanBioLib']
+raman,none,633.0,1,1,['RamanBioLib']
+raman,none,785.0,61,61,['RamanBioLib']
+raman,none,850.0,1,1,['RamanBioLib']
+raman,none,1064.0,55,55,['RamanBioLib']
+sers,colloid,633.0,63,63,['sers_metabolite_63(PMC6989628)']
+sers,colloid,785.0,6,1,['adenine_sers_control']
