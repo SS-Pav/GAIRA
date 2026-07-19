@@ -1,0 +1,51 @@
+{
+  "adenine::cAg@532": {
+    "path_length": 0.19320524165326775,
+    "net_displacement": 0.10420172225842732,
+    "straightness": 0.5393317560446507,
+    "mean_curvature_deg": 89.9265103157398,
+    "dominant_theme_shift": "nucleic_purine"
+  },
+  "adenine::cAg@785": {
+    "path_length": 0.19297279387524052,
+    "net_displacement": 0.17921758067270238,
+    "straightness": 0.9287194172440713,
+    "mean_curvature_deg": 42.62756469562839,
+    "dominant_theme_shift": "nucleic_purine"
+  },
+  "adenine::cAu@785": {
+    "path_length": 0.19064224265845203,
+    "net_displacement": 0.1490791716670186,
+    "straightness": 0.7819839380158868,
+    "mean_curvature_deg": 73.67368462894235,
+    "dominant_theme_shift": "nucleic_purine"
+  },
+  "adenine::sAg@532": {
+    "path_length": 0.14769831162630762,
+    "net_displacement": 0.08195965813356941,
+    "straightness": 0.5549126271692334,
+    "mean_curvature_deg": 89.02849495957793,
+    "dominant_theme_shift": "nucleic_purine"
+  },
+  "adenine::sAg@785": {
+    "path_length": 0.3371379511091973,
+    "net_displacement": 0.2400212283673758,
+    "straightness": 0.7119377322457601,
+    "mean_curvature_deg": 97.47551815168617,
+    "dominant_theme_shift": "nucleic_purine"
+  },
+  "adenine::sAu@785": {
+    "path_length": 0.17462973503366003,
+    "net_displacement": 0.11000805999991872,
+    "straightness": 0.6299503345068045,
+    "mean_curvature_deg": 95.82187813288985,
+    "dominant_theme_shift": "saccharide_glycan"
+  },
+  "ergothioneine": {
+    "path_length": 0.10648033033563936,
+    "net_displacement": 0.06396896853089944,
+    "straightness": 0.6007585469415849,
+    "mean_curvature_deg": 78.34754635327434,
+    "dominant_theme_shift": "nucleic_purine"
+  }
+}

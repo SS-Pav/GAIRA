@@ -1,0 +1,7 @@
+group,n,median_ood,median_confidence
+pure_raman_reference,375,0.038,0.39
+pure_sers,265,0.153,0.206
+spiked_serum,265,0.276,0.266
+serum_baseline,15,0.282,0.259
+serum_spike_STRONG_adsorbers,30,0.273,0.269
+serum_spike_WEAK_adsorbers,235,0.276,0.266

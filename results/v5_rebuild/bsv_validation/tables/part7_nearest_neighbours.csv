@@ -1,0 +1,12 @@
+analyte,nearest,cosine,second
+adenine,xanthine,0.956,hypoxanthine
+ergothioneine,hypoxanthine,0.955,urate
+glucose,(+)-glucose,0.998,urate
+(+)-glucose,glucose,0.998,urate
+cholesterol,albumin,0.968,hypoxanthine
+hypoxanthine,ergothioneine,0.955,adenine
+xanthine,guanine,0.982,adenine
+guanine,xanthine,0.982,adenine
+urate,ergothioneine,0.952,hypoxanthine
+phenylalanine,albumin,0.896,ergothioneine
+albumin,cholesterol,0.968,ergothioneine

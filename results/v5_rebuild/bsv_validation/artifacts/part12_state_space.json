@@ -1,0 +1,20 @@
+{
+  "n_biochemical_themes": 11,
+  "effective_dimensionality_entropy": 4.2,
+  "n_components_90pct_variance": 4,
+  "explained_variance_ratio": [
+    0.499,
+    0.208,
+    0.141,
+    0.068,
+    0.053,
+    0.014,
+    0.009,
+    0.004,
+    0.002,
+    0.001,
+    0.0
+  ],
+  "theme_correlation_mean_abs_offdiag": 0.244,
+  "theme_correlation_max_abs_offdiag": 0.65
+}

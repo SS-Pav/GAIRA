@@ -1,0 +1,14 @@
+{
+  "part1_implementation_verified": true,
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "monotonicity_target_spearman_median": 0.6305332011304837,
+  "specificity_margin_median": 0.199,
+  "theme_orthogonality_mean_abs_r": 0.244,
+  "effective_dimensionality": 4.2,
+  "confidence_tracks_ood": -0.5669654672657681,
+  "confidence_strong_vs_weak_adsorbers": {
+    "strong": 0.269,
+    "weak": 0.266
+  },
+  "runtime_s": 10.7
+}

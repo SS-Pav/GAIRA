@@ -1,0 +1,8 @@
+experiment,target_theme,component_turnover_low_to_high,profile_corr_low_high,dominant_driver_component,mode
+adenine::cAg@532,nucleic_purine,0.8,0.132,3,redistribution (different components)
+adenine::cAg@785,nucleic_purine,0.6,0.297,3,redistribution (different components)
+adenine::cAu@785,nucleic_purine,0.6,0.448,13,redistribution (different components)
+adenine::sAg@532,nucleic_purine,0.6,0.328,3,redistribution (different components)
+adenine::sAg@785,nucleic_purine,0.8,-0.246,3,redistribution (different components)
+adenine::sAu@785,nucleic_purine,0.6,0.346,13,redistribution (different components)
+ergothioneine,sulfur_antioxidant,0.2,0.806,18,scaling (same components)

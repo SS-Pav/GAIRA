@@ -1,0 +1,8 @@
+experiment,target,target_rho_abs,mean_offtarget_rho_abs,specificity_margin,leakage_ratio
+adenine::cAg@532,nucleic_purine,0.448,0.292,0.156,0.652
+adenine::cAg@785,nucleic_purine,0.773,0.54,0.233,0.699
+adenine::cAu@785,nucleic_purine,0.912,0.713,0.199,0.781
+adenine::sAg@532,nucleic_purine,0.338,0.27,0.067,0.801
+adenine::sAg@785,nucleic_purine,0.631,0.519,0.112,0.822
+adenine::sAu@785,nucleic_purine,0.62,0.408,0.213,0.657
+ergothioneine,sulfur_antioxidant,0.965,0.719,0.246,0.745

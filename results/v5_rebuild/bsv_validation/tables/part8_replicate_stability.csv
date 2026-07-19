@@ -1,0 +1,7 @@
+experiment,target,icc_purine,within_dose_cv_median,ood_cv,conf_cv
+adenine::cAg@532,nucleic_purine,0.153,0.194,0.302,0.132
+adenine::cAg@785,nucleic_purine,0.671,0.102,0.184,0.141
+adenine::cAu@785,nucleic_purine,0.834,0.053,0.128,0.16
+adenine::sAg@532,nucleic_purine,0.137,0.184,0.351,0.14
+adenine::sAg@785,nucleic_purine,0.515,0.155,0.174,0.154
+adenine::sAu@785,nucleic_purine,0.455,0.066,0.128,0.081
