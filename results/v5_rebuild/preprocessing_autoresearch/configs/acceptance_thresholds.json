@@ -1,0 +1,13 @@
+{
+  "outer_mrr_improvement_abs": 0.08,
+  "outer_top1_improvement_abs": 0.05,
+  "mrr_bootstrap_ci_excludes_zero": true,
+  "peak_effect_relative_improvement": 0.5,
+  "sers_replicate_min_frac_of_L2": 0.9,
+  "within_modality_retrieval_min_frac": 0.9,
+  "peak_retention_min": 0.9,
+  "peak_invention_max": 0.02,
+  "duplicate_collapse_increase_allowed": 0.0,
+  "min_fraction_outer_folds_stable": 0.8,
+  "reference_baseline": "BASE_asls_sg_l2"
+}

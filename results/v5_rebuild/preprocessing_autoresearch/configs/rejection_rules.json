@@ -1,0 +1,11 @@
+{
+  "replicate_drop_frac": 0.9,
+  "chem_drop_frac": 0.9,
+  "min_peak_retention": 0.9,
+  "max_peak_invention": 0.02,
+  "max_width_ratio": 1.25,
+  "min_effective_rank_frac": 0.7,
+  "max_duplicate_frac": 0.05,
+  "max_negative_lobe": 0.6,
+  "max_edge_artefact": 3.0
+}

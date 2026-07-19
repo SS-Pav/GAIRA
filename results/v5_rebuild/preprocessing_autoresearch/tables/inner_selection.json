@@ -1,0 +1,23 @@
+{
+  "reference_baseline": "BASE_asls_sg_l2",
+  "baseline_metrics": {
+    "cm_mrr": 0.38085269086973633,
+    "cm_top1": 0.1865909090909091,
+    "pk_effect_vs_mismatched": 0.014942392866113425,
+    "rep_sers_replicate_cos": 0.9466389543376316,
+    "chem_raman_1nn": 0.9820671777482921
+  },
+  "arm_winners": {
+    "A": "A_morph8_max",
+    "B": "B_1_savgol1",
+    "C": "C_huber",
+    "D": "D_none0",
+    "E": "E_d0"
+  },
+  "selection": {
+    "selected": null,
+    "reason": "no candidate improved MRR and peak specificity over the baseline while passing rejection rules",
+    "n_eligible": 0
+  },
+  "n_candidates": 120
+}

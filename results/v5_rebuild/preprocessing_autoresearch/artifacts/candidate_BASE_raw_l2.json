@@ -1,0 +1,28 @@
+{
+  "cid": "BASE_raw_l2",
+  "arm": "baseline",
+  "raman": {
+    "baseline": "none",
+    "baseline_params": {},
+    "smooth": "none",
+    "smooth_params": {}
+  },
+  "sers": {
+    "baseline": "none",
+    "baseline_params": {},
+    "smooth": "none",
+    "smooth_params": {}
+  },
+  "background": {
+    "method": "none",
+    "params": {}
+  },
+  "aggregate": "mean",
+  "derivative": 0,
+  "norm_raman": "l2",
+  "norm_sers": "l2",
+  "peak_transform": "full",
+  "n_stages": 1,
+  "n_hyperparams": 0,
+  "fingerprint": "ebbb0f9bd109418675d70405a3630767"
+}

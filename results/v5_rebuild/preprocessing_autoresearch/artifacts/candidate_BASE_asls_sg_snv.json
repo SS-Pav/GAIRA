@@ -1,0 +1,38 @@
+{
+  "cid": "BASE_asls_sg_snv",
+  "arm": "baseline",
+  "raman": {
+    "baseline": "asls",
+    "baseline_params": {
+      "lam": 100000.0
+    },
+    "smooth": "savgol",
+    "smooth_params": {
+      "window": 9,
+      "poly": 3
+    }
+  },
+  "sers": {
+    "baseline": "asls",
+    "baseline_params": {
+      "lam": 100000.0
+    },
+    "smooth": "savgol",
+    "smooth_params": {
+      "window": 9,
+      "poly": 3
+    }
+  },
+  "background": {
+    "method": "none",
+    "params": {}
+  },
+  "aggregate": "mean",
+  "derivative": 0,
+  "norm_raman": "snv",
+  "norm_sers": "snv",
+  "peak_transform": "full",
+  "n_stages": 5,
+  "n_hyperparams": 6,
+  "fingerprint": "151905c6f4ccac044c28d5d1cd4138cf"
+}

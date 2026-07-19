@@ -1,0 +1,72 @@
+{
+  "study": "GAIRA V5 Stage B0 \u2014 Preprocessing AutoResearch",
+  "corpus": {
+    "n_spectra": 479,
+    "n_raman": 214,
+    "n_sers": 265,
+    "n_analytes": 87,
+    "n_matched": 51
+  },
+  "grid": "520-1750 cm-1 @ 2 cm-1 (fixed)",
+  "n_candidates_evaluated": 120,
+  "n_rejected_by_integrity_rules": 66,
+  "outer_design": {
+    "n_outer": 5,
+    "n_inner": 4,
+    "seed": 0,
+    "outer_test_used_once": true
+  },
+  "outcome": "P4",
+  "frozen_pipeline": null,
+  "reference_baseline": "BASE_asls_sg_l2",
+  "outer_test_results": {
+    "BASE_raw_l2": {
+      "mrr": 0.3586916079563139,
+      "top1": 0.1764705882352941,
+      "peak_effect": 0.0353530037500625,
+      "sers_replicate_cos": 0.9984870519406156,
+      "raman_1nn": 0.9779014308426074,
+      "sers_1nn": 0.8225454545454545
+    },
+    "BASE_asls_sg_l2": {
+      "mrr": 0.3660912344735875,
+      "top1": 0.1764705882352941,
+      "peak_effect": 0.0216008536700674,
+      "sers_replicate_cos": 0.9463734527363592,
+      "raman_1nn": 0.9670190779014308,
+      "sers_1nn": 0.8963636363636363
+    },
+    "BASE_asls_sg_snv": {
+      "mrr": 0.4224478680361033,
+      "top1": 0.2352941176470588,
+      "peak_effect": 0.0216008536700674,
+      "sers_replicate_cos": 0.5146405655523794,
+      "raman_1nn": 0.9670190779014308,
+      "sers_1nn": 0.8807272727272727
+    },
+    "BASE_asls_sg_l2_bgmean": {
+      "mrr": 0.3513393741334918,
+      "top1": 0.1666666666666666,
+      "peak_effect": -0.0021224701884238,
+      "sers_replicate_cos": 0.8097676493236659,
+      "raman_1nn": 0.9670190779014308,
+      "sers_1nn": 0.8963636363636363
+    },
+    "B_0_savgol6": {
+      "mrr": 0.4635705797470503,
+      "top1": 0.284313725490196,
+      "peak_effect": 0.0144029726297997,
+      "sers_replicate_cos": 0.6203026313948097,
+      "raman_1nn": 0.9837837837837838,
+      "sers_1nn": 0.8610909090909091
+    },
+    "D_scaled_mean2": {
+      "mrr": 0.4342712842712844,
+      "top1": 0.2549019607843137,
+      "peak_effect": 0.0204939038826984,
+      "sers_replicate_cos": 0.5791566884199358,
+      "raman_1nn": 0.9729014308426074,
+      "sers_1nn": 0.9163636363636364
+    }
+  }
+}

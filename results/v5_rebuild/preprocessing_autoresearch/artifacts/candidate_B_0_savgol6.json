@@ -1,0 +1,34 @@
+{
+  "cid": "B_0_savgol6",
+  "arm": "B_smoothing",
+  "raman": {
+    "baseline": "poly3",
+    "baseline_params": {},
+    "smooth": "savgol",
+    "smooth_params": {
+      "window": 21,
+      "poly": 3
+    }
+  },
+  "sers": {
+    "baseline": "poly3",
+    "baseline_params": {},
+    "smooth": "savgol",
+    "smooth_params": {
+      "window": 21,
+      "poly": 3
+    }
+  },
+  "background": {
+    "method": "none",
+    "params": {}
+  },
+  "aggregate": "mean",
+  "derivative": 0,
+  "norm_raman": "l2",
+  "norm_sers": "l2",
+  "peak_transform": "full",
+  "n_stages": 5,
+  "n_hyperparams": 4,
+  "fingerprint": "a363564e4fa89262ba3d5397c7d4b0c3"
+}

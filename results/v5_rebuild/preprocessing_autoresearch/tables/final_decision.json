@@ -1,0 +1,134 @@
+{
+  "outcome": "P4",
+  "headline": "apparent improvement is caused by overprocessing",
+  "reasons": [
+    "Inner selection produced NO eligible candidate: of 120 pipelines, none improved cross-modal retrieval AND matched-peak specificity while satisfying the spectral-integrity rejection rules.",
+    "characterisation B_0_savgol6: \u0394MRR +0.097, Ag-SERS replicate cosine 0.620 vs baseline 0.946 (integrity_ok=False), \u0394peak-specificity -0.0072.",
+    "characterisation D_scaled_mean2: \u0394MRR +0.068, Ag-SERS replicate cosine 0.579 vs baseline 0.946 (integrity_ok=False), \u0394peak-specificity -0.0011.",
+    "Cross-modal retrieval rises only for pipelines that strip the broad shared component, which collapses Ag-SERS replicate agreement without any gain in matched-vs-mismatched peak specificity \u2014 appearance, not shared chemistry."
+  ],
+  "baseline": {
+    "mrr": 0.36609123447358755,
+    "top1": 0.17647058823529413,
+    "top3": 0.4117647058823529,
+    "top5": 0.6666666666666666,
+    "median_rank": 5.0,
+    "mrr_ci": [
+      0.3093954071527601,
+      0.4301581642758113
+    ],
+    "delta_mrr_vs_base": 0.0,
+    "delta_top1_vs_base": 0.0,
+    "delta_mrr_ci": [
+      0.0,
+      0.0
+    ],
+    "peak_effect": 0.021600853670067477,
+    "peak_matched": 0.6783308645337212,
+    "peak_mismatched": 0.6567300108636539,
+    "peak_random": 0.4893031696783843,
+    "sers_replicate_cos": 0.9463734527363593,
+    "raman_replicate_cos": 0.9895435782947205,
+    "sers_replicate_margin": 0.10418890180160019,
+    "raman_1nn": 0.9670190779014309,
+    "sers_1nn": 0.8963636363636363,
+    "peak_retention": 1.0,
+    "peak_invention": 0.0,
+    "duplicate_frac": 0.0,
+    "effective_rank": 82.24360953952305,
+    "bg_variance_explained": 0.0,
+    "fold_mrr": [
+      0.3162173684900958,
+      0.3119444444444444,
+      0.36791666666666667,
+      0.45714285714285713,
+      0.3822222222222222
+    ],
+    "perm_mrr_p": 0.512743628185907
+  },
+  "selected": null,
+  "characterisation": [
+    "B_0_savgol6",
+    "D_scaled_mean2"
+  ],
+  "summary": {
+    "B_0_savgol6": {
+      "mrr": 0.46357057974705035,
+      "top1": 0.28431372549019607,
+      "top3": 0.5196078431372549,
+      "top5": 0.7254901960784313,
+      "median_rank": 3.0,
+      "mrr_ci": [
+        0.3965984335653454,
+        0.534730294895736
+      ],
+      "delta_mrr_vs_base": 0.0974793452734628,
+      "delta_top1_vs_base": 0.10784313725490194,
+      "delta_mrr_ci": [
+        0.00812085313923551,
+        0.19073767259429023
+      ],
+      "peak_effect": 0.01440297262979973,
+      "peak_matched": 0.4045098384978064,
+      "peak_mismatched": 0.3901068658680067,
+      "peak_random": 0.2899224841483531,
+      "sers_replicate_cos": 0.6203026313948097,
+      "raman_replicate_cos": 0.9758576809079976,
+      "sers_replicate_margin": 0.39481821111765025,
+      "raman_1nn": 0.9837837837837838,
+      "sers_1nn": 0.8610909090909091,
+      "peak_retention": 0.888888888888889,
+      "peak_invention": 0.0,
+      "duplicate_frac": 0.0,
+      "effective_rank": 77.92139539673325,
+      "bg_variance_explained": 0.0,
+      "fold_mrr": [
+        0.4118358913813459,
+        0.3402579365079365,
+        0.5617857142857143,
+        0.5264484126984127,
+        0.48269841269841274
+      ],
+      "perm_mrr_p": 0.9860069965017492
+    },
+    "D_scaled_mean2": {
+      "mrr": 0.4342712842712844,
+      "top1": 0.2549019607843137,
+      "top3": 0.47058823529411764,
+      "top5": 0.696078431372549,
+      "median_rank": 4.0,
+      "mrr_ci": [
+        0.3677695194239312,
+        0.5048916511048864
+      ],
+      "delta_mrr_vs_base": 0.06818004979769687,
+      "delta_top1_vs_base": 0.07843137254901958,
+      "delta_mrr_ci": [
+        -0.02315787426081536,
+        0.157803976388535
+      ],
+      "peak_effect": 0.020493903882698443,
+      "peak_matched": 0.8345227009361136,
+      "peak_mismatched": 0.8140287970534151,
+      "peak_random": 0.6522824401197317,
+      "sers_replicate_cos": 0.5791566884199358,
+      "raman_replicate_cos": 0.986816206344631,
+      "sers_replicate_margin": 0.3468659656972754,
+      "raman_1nn": 0.9729014308426074,
+      "sers_1nn": 0.9163636363636364,
+      "peak_retention": 1.0,
+      "peak_invention": 0.0,
+      "duplicate_frac": 0.0,
+      "effective_rank": 98.90728777718532,
+      "bg_variance_explained": 0.4039611303593479,
+      "fold_mrr": [
+        0.3779237176964449,
+        0.3556150793650793,
+        0.506031746031746,
+        0.4701984126984128,
+        0.46722222222222226
+      ],
+      "perm_mrr_p": 0.10294852573713144
+    }
+  }
+}

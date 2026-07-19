@@ -1,0 +1,22 @@
+{
+  "seed": 0,
+  "n_outer": 5,
+  "n_inner": 4,
+  "n_spectra": 479,
+  "n_analytes": 87,
+  "n_matched_analytes": 51,
+  "n_raman": 214,
+  "n_sers": 265,
+  "splits_fingerprint": "708564c4234c7e14af12f9b8ba0bd929",
+  "outer_test_used": true,
+  "grid": "520-1750 cm-1 @ 2 cm-1 (fixed, not optimised)",
+  "outer_test_timestamp": "2026-07-19 09:56:56",
+  "outer_test_candidates": [
+    "BASE_raw_l2",
+    "BASE_asls_sg_l2",
+    "BASE_asls_sg_snv",
+    "BASE_asls_sg_l2_bgmean",
+    "B_0_savgol6",
+    "D_scaled_mean2"
+  ]
+}

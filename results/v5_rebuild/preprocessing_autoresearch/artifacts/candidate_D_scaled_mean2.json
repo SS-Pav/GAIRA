@@ -1,0 +1,40 @@
+{
+  "cid": "D_scaled_mean2",
+  "arm": "D_background",
+  "raman": {
+    "baseline": "asls",
+    "baseline_params": {
+      "lam": 1000000.0
+    },
+    "smooth": "savgol",
+    "smooth_params": {
+      "window": 5,
+      "poly": 2
+    }
+  },
+  "sers": {
+    "baseline": "asls",
+    "baseline_params": {
+      "lam": 1000000.0
+    },
+    "smooth": "savgol",
+    "smooth_params": {
+      "window": 5,
+      "poly": 2
+    }
+  },
+  "background": {
+    "method": "scaled_mean",
+    "params": {
+      "alpha": "ls"
+    }
+  },
+  "aggregate": "huber",
+  "derivative": 0,
+  "norm_raman": "l2",
+  "norm_sers": "l2",
+  "peak_transform": "full",
+  "n_stages": 7,
+  "n_hyperparams": 7,
+  "fingerprint": "94769e3aaa2ff297368e2f3a54e760e3"
+}
