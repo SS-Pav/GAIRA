@@ -1,0 +1,1064 @@
+{
+  "A1_asls_savgol_l2": {
+    "preproc": "A1_asls_savgol_l2",
+    "signed_representation": false,
+    "raman_only": {
+      "n": 112,
+      "n_analytes": 85,
+      "pca": {
+        "explained_variance_ratio": [
+          0.10831955610626591,
+          0.0707197896158471,
+          0.050264044320038885,
+          0.04795441571913149,
+          0.04627758923207171,
+          0.03877000550091258,
+          0.0373211406621815,
+          0.03609494084206203,
+          0.03331910957654671,
+          0.03126995065181345
+        ],
+        "cum_var_6": 0.3623054004942677,
+        "loading_stability_mean": [
+          0.8247833431831075,
+          0.6261970789807642,
+          0.3582386666970901,
+          0.32919100916149885,
+          0.2741114923766627,
+          0.2484254389170314
+        ],
+        "loading_stability_p5": [
+          0.2593325811508138,
+          0.12005272712706899,
+          0.052588067008531685,
+          0.0516210725553418,
+          0.036707457017091674,
+          0.01488173253636731
+        ]
+      },
+      "factorization": {
+        "nmf": "skipped: NMF requires non-negative input; got signed representation (SNV/derivative). Do not apply NMF here.",
+        "sparse_pca_nonzero_frac": 0.0
+      },
+      "clustering": {
+        "cophenetic_corr": 0.7689236472961996,
+        "k": 85,
+        "n_clusters_formed": 85,
+        "silhouette_cosine": 0.3878848985787936,
+        "ari_vs": {
+          "analyte": 0.4893305771982827,
+          "source": -0.004498239562498795
+        }
+      },
+      "leakage": {
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.6491491841491841,
+          "balanced_accuracy_std": 0.045106078660317836,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5446428571428571,
+          "n_splits_used": 5
+        }
+      }
+    },
+    "sers_only": {
+      "n": 53,
+      "n_analytes": 53,
+      "pca": {
+        "explained_variance_ratio": [
+          0.19895276356102323,
+          0.1226040029814679,
+          0.11484446798963498,
+          0.09394537441827484,
+          0.0702230386270166,
+          0.05361033144388035,
+          0.045227943096813134,
+          0.03780725250372249,
+          0.029495943490225017,
+          0.023366465668524555
+        ],
+        "cum_var_6": 0.654179979021298,
+        "loading_stability_mean": [
+          0.684182137775026,
+          0.4541769576772663,
+          0.3938674587175462,
+          0.36348702808571165,
+          0.3173125187719756,
+          0.29196157000139444
+        ],
+        "loading_stability_p5": [
+          0.08330864237583395,
+          0.06752857933675496,
+          0.030564026021028787,
+          0.02344942917226863,
+          0.02938592769214801,
+          0.015513798115444104
+        ]
+      },
+      "factorization": {
+        "nmf": "skipped: NMF requires non-negative input; got signed representation (SNV/derivative). Do not apply NMF here.",
+        "sparse_pca_nonzero_frac": 0.0
+      },
+      "clustering": {
+        "cophenetic_corr": 0.9868438185695952,
+        "k": 52,
+        "n_clusters_formed": 52,
+        "silhouette_cosine": 0.006671358347942447,
+        "ari_vs": {
+          "analyte": 0.0
+        }
+      },
+      "leakage": {}
+    },
+    "joint": {
+      "n": 165,
+      "n_analytes": 87,
+      "pca": {
+        "explained_variance_ratio": [
+          0.12186223324171686,
+          0.07973754481699181,
+          0.061397839833189985,
+          0.04359572733121234,
+          0.04071189502463163,
+          0.04056756533560441,
+          0.0342879816098532,
+          0.03247169986681046,
+          0.030077371847899163,
+          0.02811509489649391
+        ],
+        "cum_var_6": 0.387872805583347,
+        "loading_stability_mean": [
+          0.9281703293652076,
+          0.7086275037123535,
+          0.5829433473866815,
+          0.3737197895275914,
+          0.30810051278465117,
+          0.26754044050263415
+        ],
+        "loading_stability_p5": [
+          0.7936332300497757,
+          0.19336896585150282,
+          0.10794366879578894,
+          0.06795321206173795,
+          0.029926805722032372,
+          0.03599799229402354
+        ]
+      },
+      "factorization": {
+        "nmf": "skipped: NMF requires non-negative input; got signed representation (SNV/derivative). Do not apply NMF here.",
+        "sparse_pca_nonzero_frac": 0.0
+      },
+      "clustering": {
+        "cophenetic_corr": 0.8825786354075905,
+        "k": 87,
+        "n_clusters_formed": 87,
+        "silhouette_cosine": 0.45565484172984,
+        "ari_vs": {
+          "analyte": 0.020964644753191007,
+          "modality": 0.11598015536262159,
+          "source": 0.2619813159826831
+        }
+      },
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.9445078110295502,
+          "balanced_accuracy_std": 0.016804368230463235,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.6787878787878788,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.6769075369075369,
+          "balanced_accuracy_std": 0.0619175611613646,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.3696969696969697,
+          "n_splits_used": 5
+        }
+      }
+    },
+    "matched_retrieval": {
+      "n_matched": 51,
+      "top_k": {
+        "top1": 0.0784313725490196,
+        "top3": 0.19607843137254902,
+        "top5": 0.3137254901960784
+      },
+      "mrr": 0.19225297396591245,
+      "reciprocal_nn_rate": 0.058823529411764705,
+      "mean_matched_cos": 0.5663538905155959,
+      "mean_unmatched_cos": 0.533259297608162,
+      "matched_minus_unmatched": 0.033094592907433884,
+      "ranks": [
+        30,
+        2,
+        20,
+        35,
+        39,
+        4,
+        21,
+        49,
+        35,
+        5,
+        1,
+        13,
+        19,
+        17,
+        24,
+        4,
+        14,
+        28,
+        2,
+        5,
+        15,
+        15,
+        2,
+        29,
+        20,
+        2,
+        12,
+        31,
+        20,
+        23,
+        6,
+        14,
+        23,
+        39,
+        25,
+        41,
+        5,
+        35,
+        32,
+        38,
+        35,
+        5,
+        3,
+        2,
+        1,
+        15,
+        27,
+        48,
+        1,
+        16,
+        1
+      ],
+      "analytes": [
+        "acetoacetate",
+        "acetyl-coa",
+        "adenine",
+        "alanine",
+        "albumin",
+        "arginine",
+        "ascorbate",
+        "cholesterol",
+        "citrate",
+        "coenzyme a",
+        "creatinine",
+        "cysteine",
+        "ergothioneine",
+        "fructose",
+        "fructose-6-phosphate",
+        "galactose",
+        "glucose",
+        "glutamate",
+        "glutathione",
+        "glycerol",
+        "glycine",
+        "glycogen",
+        "guanine",
+        "histidine",
+        "hydroxyproline",
+        "hypoxanthine",
+        "isoleucine",
+        "lactate",
+        "leucine",
+        "mannose",
+        "methionine",
+        "n-acetylglucosamine",
+        "oleate",
+        "phenylalanine",
+        "phosphate",
+        "phosphatidylinositol",
+        "phosphoenolpyruvate",
+        "proline",
+        "pyruvate",
+        "riboflavin",
+        "serine",
+        "stearate",
+        "thymine",
+        "triolein",
+        "tryptophan",
+        "tyrosine",
+        "uracil",
+        "urate",
+        "urea",
+        "valine",
+        "xanthine"
+      ],
+      "permutation_null": {
+        "top1": {
+          "observed": 0.0784313725490196,
+          "null_mean": 0.019519607843137256,
+          "null_ci95": [
+            0.0,
+            0.058823529411764705
+          ],
+          "p_value": 0.020989505247376312
+        },
+        "mrr": {
+          "observed": 0.19225297396591245,
+          "null_mean": 0.08878363043687355,
+          "null_ci95": [
+            0.05520220097111161,
+            0.13865818085698955
+          ],
+          "p_value": 0.0014992503748125937
+        },
+        "matched_cos": {
+          "observed": 0.5663538905155959,
+          "null_mean": 0.5340122647431846,
+          "null_ci95": [
+            0.5248570041589946,
+            0.5450292804074671
+          ],
+          "p_value": 0.0004997501249375312
+        },
+        "n_perm": 2000
+      },
+      "peak_overlap_matched_mean": 0.40426500832322515,
+      "peak_overlap_mismatched_mean": 0.42298967662467385
+    },
+    "consensus_joint": {
+      "mean_consensus": 0.32362231674737524,
+      "consensus_ambiguity": 0.14441309674513222,
+      "k": 20,
+      "n_boot": 150
+    },
+    "spectrum_level": {
+      "n_spectra": 479,
+      "mean_within_analyte_modality_dispersion": 0.0074067364428130585
+    }
+  },
+  "A2_asls_savgol_snv": {
+    "preproc": "A2_asls_savgol_snv",
+    "signed_representation": true,
+    "raman_only": {
+      "n": 112,
+      "n_analytes": 85,
+      "pca": {
+        "explained_variance_ratio": [
+          0.10236559026141477,
+          0.07349637575684094,
+          0.05498514628296977,
+          0.05020667352969026,
+          0.045610775561608446,
+          0.0389715567971298,
+          0.03856080709096974,
+          0.034398941329796956,
+          0.033006485234022075,
+          0.02999329518228582
+        ],
+        "cum_var_6": 0.365636118189654,
+        "loading_stability_mean": [
+          0.7570331227848366,
+          0.5897081724725179,
+          0.364522812022126,
+          0.34693431762841687,
+          0.2815740585842885,
+          0.2664234945599033
+        ],
+        "loading_stability_p5": [
+          0.1359730342073922,
+          0.05717912074580904,
+          0.024233943348303123,
+          0.03969716231777186,
+          0.012535080326921801,
+          0.023709148066213402
+        ]
+      },
+      "factorization": {
+        "nmf": "skipped: signed representation (non-negativity violated)",
+        "sparse_pca_nonzero_frac": 0.39664502164502163
+      },
+      "clustering": {
+        "cophenetic_corr": 0.8073528532487573,
+        "k": 85,
+        "n_clusters_formed": 85,
+        "silhouette_cosine": 0.39412963025870645,
+        "ari_vs": {
+          "analyte": 0.522276991572587,
+          "source": -0.0051423551377232255
+        }
+      },
+      "leakage": {
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.6578671328671329,
+          "balanced_accuracy_std": 0.08675994120512515,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5446428571428571,
+          "n_splits_used": 5
+        }
+      }
+    },
+    "sers_only": {
+      "n": 53,
+      "n_analytes": 53,
+      "pca": {
+        "explained_variance_ratio": [
+          0.12042081845775174,
+          0.07798167254205332,
+          0.07092885922375097,
+          0.06108217092747614,
+          0.05353417758430399,
+          0.045712033465583744,
+          0.04113892838448471,
+          0.03895785301660808,
+          0.03605419760900815,
+          0.032240930780089334
+        ],
+        "cum_var_6": 0.4296597322009199,
+        "loading_stability_mean": [
+          0.73697624734601,
+          0.45993861620799675,
+          0.36381473418783866,
+          0.3501733843581109,
+          0.24055555321548278,
+          0.25702329892283887
+        ],
+        "loading_stability_p5": [
+          0.31253345757903095,
+          0.04948394900760784,
+          0.030604810607563523,
+          0.01321070941929545,
+          0.029618511674126085,
+          0.024212353175951024
+        ]
+      },
+      "factorization": {
+        "nmf": "skipped: signed representation (non-negativity violated)",
+        "sparse_pca_nonzero_frac": 0.1956168831168831
+      },
+      "clustering": {
+        "cophenetic_corr": 0.8754260287665713,
+        "k": 52,
+        "n_clusters_formed": 52,
+        "silhouette_cosine": 0.02413823517386121,
+        "ari_vs": {
+          "analyte": 0.0
+        }
+      },
+      "leakage": {}
+    },
+    "joint": {
+      "n": 165,
+      "n_analytes": 87,
+      "pca": {
+        "explained_variance_ratio": [
+          0.08346297531359657,
+          0.06464115650993482,
+          0.06166697729855109,
+          0.044480553143509426,
+          0.04096868742061135,
+          0.03853628603205052,
+          0.03342199066884141,
+          0.032344007811972,
+          0.029020872120690832,
+          0.027017219283600163
+        ],
+        "cum_var_6": 0.3337566357182537,
+        "loading_stability_mean": [
+          0.7185702550371889,
+          0.5071716255445716,
+          0.42024643041681364,
+          0.3653594210167624,
+          0.36131965953267564,
+          0.28782446807616746
+        ],
+        "loading_stability_p5": [
+          0.09767968919932743,
+          0.07415464253512577,
+          0.02268211882820061,
+          0.025665577003826958,
+          0.04103389469460498,
+          0.012171564320212882
+        ]
+      },
+      "factorization": {
+        "nmf": "skipped: signed representation (non-negativity violated)",
+        "sparse_pca_nonzero_frac": 0.45616883116883117
+      },
+      "clustering": {
+        "cophenetic_corr": 0.7894202694927946,
+        "k": 87,
+        "n_clusters_formed": 87,
+        "silhouette_cosine": 0.40483711626195545,
+        "ari_vs": {
+          "analyte": 0.14963944620167924,
+          "modality": 0.01812222194107774,
+          "source": 0.021721941703398487
+        }
+      },
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.8304178430265386,
+          "balanced_accuracy_std": 0.040551084341453415,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.6787878787878788,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.6633177933177933,
+          "balanced_accuracy_std": 0.08406657345550654,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.3696969696969697,
+          "n_splits_used": 5
+        }
+      }
+    },
+    "matched_retrieval": {
+      "n_matched": 51,
+      "top_k": {
+        "top1": 0.1568627450980392,
+        "top3": 0.2549019607843137,
+        "top5": 0.3137254901960784
+      },
+      "mrr": 0.2492050102555364,
+      "reciprocal_nn_rate": 0.17647058823529413,
+      "mean_matched_cos": 0.14614656201258516,
+      "mean_unmatched_cos": 0.07085837151451958,
+      "matched_minus_unmatched": 0.07528819049806558,
+      "ranks": [
+        22,
+        2,
+        16,
+        43,
+        1,
+        5,
+        24,
+        40,
+        40,
+        6,
+        1,
+        13,
+        1,
+        23,
+        38,
+        3,
+        15,
+        36,
+        1,
+        6,
+        17,
+        13,
+        2,
+        39,
+        23,
+        1,
+        14,
+        33,
+        22,
+        30,
+        6,
+        18,
+        23,
+        50,
+        32,
+        46,
+        6,
+        48,
+        43,
+        40,
+        40,
+        5,
+        5,
+        1,
+        2,
+        16,
+        19,
+        3,
+        1,
+        22,
+        1
+      ],
+      "analytes": [
+        "acetoacetate",
+        "acetyl-coa",
+        "adenine",
+        "alanine",
+        "albumin",
+        "arginine",
+        "ascorbate",
+        "cholesterol",
+        "citrate",
+        "coenzyme a",
+        "creatinine",
+        "cysteine",
+        "ergothioneine",
+        "fructose",
+        "fructose-6-phosphate",
+        "galactose",
+        "glucose",
+        "glutamate",
+        "glutathione",
+        "glycerol",
+        "glycine",
+        "glycogen",
+        "guanine",
+        "histidine",
+        "hydroxyproline",
+        "hypoxanthine",
+        "isoleucine",
+        "lactate",
+        "leucine",
+        "mannose",
+        "methionine",
+        "n-acetylglucosamine",
+        "oleate",
+        "phenylalanine",
+        "phosphate",
+        "phosphatidylinositol",
+        "phosphoenolpyruvate",
+        "proline",
+        "pyruvate",
+        "riboflavin",
+        "serine",
+        "stearate",
+        "thymine",
+        "triolein",
+        "tryptophan",
+        "tyrosine",
+        "uracil",
+        "urate",
+        "urea",
+        "valine",
+        "xanthine"
+      ],
+      "permutation_null": {
+        "top1": {
+          "observed": 0.1568627450980392,
+          "null_mean": 0.02007843137254902,
+          "null_ci95": [
+            0.0,
+            0.058823529411764705
+          ],
+          "p_value": 0.0004997501249375312
+        },
+        "mrr": {
+          "observed": 0.2492050102555364,
+          "null_mean": 0.08911098031926631,
+          "null_ci95": [
+            0.05489981308750574,
+            0.13733936348606618
+          ],
+          "p_value": 0.0004997501249375312
+        },
+        "matched_cos": {
+          "observed": 0.14614656201258516,
+          "null_mean": 0.07265662767714161,
+          "null_ci95": [
+            0.048212752992619866,
+            0.09912792279798664
+          ],
+          "p_value": 0.0004997501249375312
+        },
+        "n_perm": 2000
+      },
+      "peak_overlap_matched_mean": 0.5134076172265467,
+      "peak_overlap_mismatched_mean": 0.5188497495860341
+    },
+    "consensus_joint": {
+      "mean_consensus": 0.10289075146189508,
+      "consensus_ambiguity": 0.06791753683934101,
+      "k": 20,
+      "n_boot": 150
+    },
+    "spectrum_level": {
+      "n_spectra": 479,
+      "mean_within_analyte_modality_dispersion": 0.07124532861419319
+    }
+  },
+  "A3_deriv_l2": {
+    "preproc": "A3_deriv_l2",
+    "signed_representation": true,
+    "raman_only": {
+      "n": 112,
+      "n_analytes": 85,
+      "pca": {
+        "explained_variance_ratio": [
+          0.06946639037465839,
+          0.04617728388108206,
+          0.04480744651930418,
+          0.04207902860057792,
+          0.03967778967716408,
+          0.037857561497934386,
+          0.03342009646454762,
+          0.03134792663155928,
+          0.0292679869378516,
+          0.026570742184130504
+        ],
+        "cum_var_6": 0.28006550055072105,
+        "loading_stability_mean": [
+          0.6411608591945853,
+          0.32518017218886824,
+          0.24112228677134365,
+          0.2507696492144095,
+          0.22557512899079138,
+          0.22993390607156305
+        ],
+        "loading_stability_p5": [
+          0.07365861583800405,
+          0.04791133551551673,
+          0.01745673747202548,
+          0.02353293856290936,
+          0.012518680735476215,
+          0.016725106864269784
+        ]
+      },
+      "factorization": {
+        "nmf": "skipped: signed representation (non-negativity violated)",
+        "sparse_pca_nonzero_frac": 0.00027056277056277056
+      },
+      "clustering": {
+        "cophenetic_corr": 0.8023359690558579,
+        "k": 85,
+        "n_clusters_formed": 85,
+        "silhouette_cosine": 0.3649403079414166,
+        "ari_vs": {
+          "analyte": 0.522276991572587,
+          "source": -0.0051423551377232255
+        }
+      },
+      "leakage": {
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.6895337995337996,
+          "balanced_accuracy_std": 0.0955372445593574,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5446428571428571,
+          "n_splits_used": 5
+        }
+      }
+    },
+    "sers_only": {
+      "n": 53,
+      "n_analytes": 53,
+      "pca": {
+        "explained_variance_ratio": [
+          0.09519118167356369,
+          0.06583321439759816,
+          0.059695331597921716,
+          0.04972704321271327,
+          0.04382708798124643,
+          0.042555056779344756,
+          0.03980366348965337,
+          0.03847553201877239,
+          0.03280517293060366,
+          0.03144919669670729
+        ],
+        "cum_var_6": 0.356828915642388,
+        "loading_stability_mean": [
+          0.5339832549430684,
+          0.3546080410340028,
+          0.3042101255608742,
+          0.2409081251813993,
+          0.21343749499527964,
+          0.22657117940722696
+        ],
+        "loading_stability_p5": [
+          0.046115685844493076,
+          0.037155273265628466,
+          0.02884304968139557,
+          0.02411699295814762,
+          0.010379282449960916,
+          0.027878740957713803
+        ]
+      },
+      "factorization": {
+        "nmf": "skipped: signed representation (non-negativity violated)",
+        "sparse_pca_nonzero_frac": 0.0
+      },
+      "clustering": {
+        "cophenetic_corr": 0.8671300930815624,
+        "k": 52,
+        "n_clusters_formed": 52,
+        "silhouette_cosine": 0.0029124397654408285,
+        "ari_vs": {
+          "analyte": 0.0
+        }
+      },
+      "leakage": {}
+    },
+    "joint": {
+      "n": 165,
+      "n_analytes": 87,
+      "pca": {
+        "explained_variance_ratio": [
+          0.07399872780971047,
+          0.0502287355582398,
+          0.036564625575712814,
+          0.034399400583472343,
+          0.03408755932140062,
+          0.03343657775268718,
+          0.030862048634493593,
+          0.025937048271270177,
+          0.0247242897796472,
+          0.023563812567522532
+        ],
+        "cum_var_6": 0.2627156266012232,
+        "loading_stability_mean": [
+          0.8637820037499669,
+          0.5317733907228521,
+          0.2904292548521219,
+          0.2771946077092,
+          0.2443846564719837,
+          0.21846650386899333
+        ],
+        "loading_stability_p5": [
+          0.6257832728886954,
+          0.0878864229218877,
+          0.01934900230120286,
+          0.02731513864193964,
+          0.01935967001040628,
+          0.011044653358119648
+        ]
+      },
+      "factorization": {
+        "nmf": "skipped: signed representation (non-negativity violated)",
+        "sparse_pca_nonzero_frac": 0.0008116883116883117
+      },
+      "clustering": {
+        "cophenetic_corr": 0.8576919665369273,
+        "k": 87,
+        "n_clusters_formed": 87,
+        "silhouette_cosine": 0.39234907672407565,
+        "ari_vs": {
+          "analyte": 0.14568624074392975,
+          "modality": 0.01471105066703767,
+          "source": 0.02041348810979669
+        }
+      },
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.9349651797477886,
+          "balanced_accuracy_std": 0.050680149097041244,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.6787878787878788,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.6400155400155401,
+          "balanced_accuracy_std": 0.06189004582404761,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.3696969696969697,
+          "n_splits_used": 5
+        }
+      }
+    },
+    "matched_retrieval": {
+      "n_matched": 51,
+      "top_k": {
+        "top1": 0.0392156862745098,
+        "top3": 0.1568627450980392,
+        "top5": 0.21568627450980393
+      },
+      "mrr": 0.1437264973860129,
+      "reciprocal_nn_rate": 0.09803921568627451,
+      "mean_matched_cos": 0.10463690296011907,
+      "mean_unmatched_cos": 0.08746591015345438,
+      "matched_minus_unmatched": 0.01717099280666469,
+      "ranks": [
+        34,
+        5,
+        38,
+        51,
+        10,
+        12,
+        4,
+        39,
+        34,
+        13,
+        1,
+        22,
+        46,
+        29,
+        25,
+        11,
+        41,
+        11,
+        23,
+        10,
+        31,
+        23,
+        17,
+        14,
+        46,
+        1,
+        11,
+        50,
+        24,
+        34,
+        4,
+        11,
+        2,
+        48,
+        43,
+        35,
+        28,
+        34,
+        41,
+        23,
+        24,
+        13,
+        2,
+        3,
+        2,
+        3,
+        45,
+        50,
+        21,
+        6,
+        2
+      ],
+      "analytes": [
+        "acetoacetate",
+        "acetyl-coa",
+        "adenine",
+        "alanine",
+        "albumin",
+        "arginine",
+        "ascorbate",
+        "cholesterol",
+        "citrate",
+        "coenzyme a",
+        "creatinine",
+        "cysteine",
+        "ergothioneine",
+        "fructose",
+        "fructose-6-phosphate",
+        "galactose",
+        "glucose",
+        "glutamate",
+        "glutathione",
+        "glycerol",
+        "glycine",
+        "glycogen",
+        "guanine",
+        "histidine",
+        "hydroxyproline",
+        "hypoxanthine",
+        "isoleucine",
+        "lactate",
+        "leucine",
+        "mannose",
+        "methionine",
+        "n-acetylglucosamine",
+        "oleate",
+        "phenylalanine",
+        "phosphate",
+        "phosphatidylinositol",
+        "phosphoenolpyruvate",
+        "proline",
+        "pyruvate",
+        "riboflavin",
+        "serine",
+        "stearate",
+        "thymine",
+        "triolein",
+        "tryptophan",
+        "tyrosine",
+        "uracil",
+        "urate",
+        "urea",
+        "valine",
+        "xanthine"
+      ],
+      "permutation_null": {
+        "top1": {
+          "observed": 0.0392156862745098,
+          "null_mean": 0.01948039215686274,
+          "null_ci95": [
+            0.0,
+            0.058823529411764705
+          ],
+          "p_value": 0.2623688155922039
+        },
+        "mrr": {
+          "observed": 0.1437264973860129,
+          "null_mean": 0.08837532292164485,
+          "null_ci95": [
+            0.05403127856073001,
+            0.13601763878037806
+          ],
+          "p_value": 0.013993003498250875
+        },
+        "matched_cos": {
+          "observed": 0.10463690296011907,
+          "null_mean": 0.08807074605624442,
+          "null_ci95": [
+            0.07170748327644559,
+            0.1060555377929873
+          ],
+          "p_value": 0.03248375812093953
+        },
+        "n_perm": 2000
+      },
+      "peak_overlap_matched_mean": 0.6171796101449427,
+      "peak_overlap_mismatched_mean": 0.6164297218485475
+    },
+    "consensus_joint": {
+      "mean_consensus": 0.18263817380501612,
+      "consensus_ambiguity": 0.11573653964130781,
+      "k": 20,
+      "n_boot": 150
+    },
+    "spectrum_level": {
+      "n_spectra": 479,
+      "mean_within_analyte_modality_dispersion": 0.07296176473308895
+    }
+  }
+}

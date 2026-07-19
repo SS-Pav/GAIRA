@@ -1,0 +1,70 @@
+{
+  "weights": {
+    "cross_modal_identity": 0.35,
+    "chemistry_over_nuisance": 0.25,
+    "low_modality_leakage": 0.2,
+    "component_stability": 0.1,
+    "preprocessing_robustness": 0.1
+  },
+  "dimension_scores": {
+    "cross_modal_identity": 0.3137254901960784,
+    "chemistry_over_nuisance": 0.9263916816609359,
+    "low_modality_leakage": 0.3391643139469227,
+    "component_stability": 0.548662770332858,
+    "preprocessing_robustness": 1.0
+  },
+  "weighted_total": 0.5641009818065318,
+  "thresholds": {
+    "retrieval_top1_shared": 0.3,
+    "retrieval_p": 0.05,
+    "modality_leak_shared_max": 0.75,
+    "ari_chem_over_nuisance": 0.05,
+    "stability_ok": 0.8,
+    "direct_adequate_min_score": 0.45
+  },
+  "best_preproc_for_shared": "A2_asls_savgol_snv",
+  "per_preproc_signals": {
+    "A1_asls_savgol_l2": {
+      "top1": 0.0784313725490196,
+      "top1_p": 0.020989505247376312,
+      "matched_minus_unmatched": 0.033094592907433884,
+      "ari_analyte": 0.020964644753191007,
+      "ari_nuisance_max": 0.2619813159826831,
+      "modality_leak": 0.9445078110295502,
+      "pc_stability_top3": 0.7399137268214142,
+      "raman_only_ari_analyte": 0.4893305771982827,
+      "n_matched": 51
+    },
+    "A2_asls_savgol_snv": {
+      "top1": 0.1568627450980392,
+      "top1_p": 0.0004997501249375312,
+      "matched_minus_unmatched": 0.07528819049806558,
+      "ari_analyte": 0.14963944620167924,
+      "ari_nuisance_max": 0.021721941703398487,
+      "modality_leak": 0.8304178430265386,
+      "pc_stability_top3": 0.548662770332858,
+      "raman_only_ari_analyte": 0.522276991572587,
+      "n_matched": 51
+    },
+    "A3_deriv_l2": {
+      "top1": 0.0392156862745098,
+      "top1_p": 0.2623688155922039,
+      "matched_minus_unmatched": 0.01717099280666469,
+      "ari_analyte": 0.14568624074392975,
+      "ari_nuisance_max": 0.02041348810979669,
+      "modality_leak": 0.9349651797477886,
+      "pc_stability_top3": 0.5619948831083137,
+      "raman_only_ari_analyte": 0.522276991572587,
+      "n_matched": 51
+    }
+  },
+  "raw_signals": {
+    "retrieval_top1": 0.1568627450980392,
+    "retrieval_top1_p": 0.0004997501249375312,
+    "modality_leak_bal_acc": 0.8304178430265386,
+    "ari_analyte": 0.14963944620167924,
+    "ari_nuisance_max": 0.021721941703398487,
+    "pc_stability_top3": 0.548662770332858,
+    "raman_only_ari_analyte": 0.522276991572587
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "outcome": "B",
+  "reasons": [
+    "direct spectra carry real chemistry (Raman-only ARI=0.52; best-preproc joint ARI_analyte=0.15 vs nuisance=0.02) and a statistically-significant but WEAK cross-modal signal exists (top1=0.16, p=0.000; significant), but modality remains too separable (bal_acc=0.83>0.75) and retrieval too weak (top1=0.16<0.3) for a single shared coordinate system \u2192 modality-stratified representation defensible; align at analyte/ontology level. Recommend Stage B chemical features to test whether the residual cross-modal signal can be strengthened."
+  ],
+  "signals": {
+    "cross_modal_ok": false,
+    "modality_leak_ok": false,
+    "chemistry_recovered": true,
+    "cross_modal_significant": true,
+    "weighted_score": 0.5641009818065318,
+    "n_matched": 51,
+    "best_preproc_for_shared": "A2_asls_savgol_snv"
+  }
+}

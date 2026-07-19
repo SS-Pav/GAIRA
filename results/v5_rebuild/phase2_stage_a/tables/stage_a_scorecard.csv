@@ -1,0 +1,6 @@
+dimension,weight,score
+cross_modal_identity,0.35,0.3137254901960784
+chemistry_over_nuisance,0.25,0.9263916816609359
+low_modality_leakage,0.2,0.3391643139469227
+component_stability,0.1,0.548662770332858
+preprocessing_robustness,0.1,1.0
