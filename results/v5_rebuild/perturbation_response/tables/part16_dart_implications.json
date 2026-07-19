@@ -1,0 +1,14 @@
+{
+  "premise": "A DART experiment applies a controlled electrochemical perturbation and records a time/potential series of spectra. Projected into the frozen atlas, each such series is a TRAJECTORY of the same type this study built for chemical dose series.",
+  "what_this_study_provides": [
+    "A trajectory-fingerprint schema (path length, straightness, curvature, component turnover, response entropy, OOD evolution) already computed for 7 chemical dose trajectories \u2014 the first reference library a DART trajectory could be compared against.",
+    "Evidence that dose trajectories are monotonic and saturating and that the strongest responding component often matches analyte identity \u2014 so a DART trajectory that redox-cycles a known species has a concrete, testable expectation (motion along that species' component)."
+  ],
+  "grounded_limitations": [
+    "Every dataset here is Ag/Au-SERS projected into a Raman atlas and is out of domain; a DART measurement in yet another modality would be further out of domain still.",
+    "Pure-vs-serum consistency is ~0, so a component response is matrix-specific; a DART trajectory in an electrochemical cell cannot be assumed to reuse buffer-derived fingerprints.",
+    "Theme labels on low-purity components are unreliable; DART interpretation must anchor on component IDENTITY (reference loadings), not on the coarse theme."
+  ],
+  "recommended_first_dart_test": "Redox-cycle a single strong Ag adsorber with a known atlas component (e.g. a purine) and check whether the projected trajectory moves predominantly along that component and returns toward baseline on the reverse sweep \u2014 a direct falsifiable prediction.",
+  "no_overclaim": "This study does not demonstrate DART compatibility; it provides the trajectory vocabulary and one falsifiable prediction for a future DART experiment."
+}

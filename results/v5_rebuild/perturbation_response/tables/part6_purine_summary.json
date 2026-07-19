@@ -1,0 +1,92 @@
+{
+  "adenine": {
+    "top_up": [
+      3,
+      20,
+      22,
+      13,
+      16
+    ],
+    "top_down": [
+      7,
+      15,
+      19,
+      8,
+      2
+    ],
+    "activates_c15_purine": -0.02614812664045782,
+    "n_significant": 13
+  },
+  "hypoxanthine": {
+    "top_up": [
+      3,
+      13,
+      22,
+      16,
+      20
+    ],
+    "top_down": [
+      19,
+      15,
+      7,
+      8,
+      18
+    ],
+    "activates_c15_purine": -0.030007539253032123,
+    "n_significant": 16
+  },
+  "xanthine": {
+    "top_up": [
+      15,
+      19,
+      3,
+      0,
+      12
+    ],
+    "top_down": [
+      20,
+      7,
+      18,
+      9,
+      6
+    ],
+    "activates_c15_purine": 0.0733387579061695,
+    "n_significant": 17
+  },
+  "guanine": {
+    "top_up": [
+      15,
+      19,
+      3,
+      12,
+      0
+    ],
+    "top_down": [
+      7,
+      20,
+      18,
+      9,
+      8
+    ],
+    "activates_c15_purine": 0.05085105738820356,
+    "n_significant": 17
+  },
+  "urate": {
+    "top_up": [
+      8,
+      22,
+      20,
+      18,
+      12
+    ],
+    "top_down": [
+      7,
+      3,
+      15,
+      9,
+      6
+    ],
+    "activates_c15_purine": -0.015304439167551004,
+    "n_significant": 14
+  }
+}

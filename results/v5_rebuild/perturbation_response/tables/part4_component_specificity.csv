@@ -1,0 +1,25 @@
+component,theme,theme_class,n_activators,n_suppressors,n_classes_activating,top_activators,activation_gini,specificity
+10,saccharide,carbohydrate,1,0,1,['albumin'],0.9811320755076304,specific
+21,saccharide,carbohydrate,1,0,1,['albumin'],0.981132075478423,specific
+4,saccharide,carbohydrate,3,0,2,"['oleate', 'albumin', 'serine']",0.9688388913848237,specific
+11,amino_acid,protein/peptide,2,0,2,"['oleate', 'albumin']",0.9661009230929296,specific
+14,organic_acid,protein/peptide,5,0,4,"['oleate', 'albumin', 'arginine', 'adenine', 'galactose']",0.9611438874927322,generic
+2,protein,protein/peptide,4,49,4,"['ergothioneine', 'oleate', 'xanthine', 'albumin']",0.9536627786032366,generic
+23,organic_acid,cofactor/small-molecule,9,44,5,"['oleate', 'albumin', 'serine', 'phosphate', 'xanthine']",0.9430234277362339,generic
+6,protein,protein/peptide,6,47,3,"['serine', 'oleate', 'riboflavin', 'ergothioneine', 'albumin']",0.9296514618571387,intermediate
+8,protein,protein/peptide,11,42,5,"['urate', 'ascorbate', 'glucose', 'glycerol', 'cholesterol']",0.924689711772387,generic
+0,protein,protein/peptide,9,44,5,"['xanthine', 'guanine', 'adenine', 'oleate', 'albumin']",0.921899057532497,generic
+7,protein,lipid,8,45,3,"['glycerol', 'leucine', 'urea', 'glucose', 'glycine']",0.9177514679866775,intermediate
+15,purine,protein/peptide,26,27,5,"['xanthine', 'guanine', 'pyruvate', 'methionine', 'cholesterol']",0.866251030172914,generic
+5,amino_acid,protein/peptide,16,37,5,"['ergothioneine', 'oleate', 'urate', 'phosphoenolpyruvate', 'fructose']",0.8584182990192057,generic
+19,protein,cofactor/small-molecule,18,35,5,"['xanthine', 'guanine', 'oleate', 'serine', 'creatinine']",0.8514014192838646,generic
+9,amino_acid,protein/peptide,16,37,5,"['ergothioneine', 'fructose', 'rna', 'riboflavin', 'thymine']",0.8191080506915102,generic
+13,pyrimidine,nucleic,27,26,5,"['hypoxanthine', 'adenine', 'phosphate', 'histidine', 'hydroxyproline']",0.7962208292848456,generic
+12,saccharide,carbohydrate,31,22,5,"['albumin', 'oleate', 'guanine', 'hydroxyproline', 'xanthine']",0.6839461818792428,generic
+16,triglyceride,lipid,24,29,5,"['oleate', 'adenine', 'histidine', 'hydroxyproline', 'acetoacetate']",0.6833721579689711,generic
+3,sterol,lipid,29,24,5,"['hypoxanthine', 'adenine', 'acetoacetate', 'guanine', 'phenylalanine']",0.6454544162650556,generic
+18,saccharide,carbohydrate,45,8,5,"['ergothioneine', 'urate', 'histidine', 'mannose', 'dna']",0.576670717871184,generic
+22,protein,protein/peptide,45,8,5,"['ergothioneine', 'urate', 'albumin', 'hypoxanthine', 'fructose']",0.42834499683379973,generic
+20,saccharide,carbohydrate,47,6,5,"['galactose', 'hydroxyproline', 'arginine', 'isoleucine', 'glycogen']",0.35951052107176584,generic
+1,triglyceride,lipid,0,0,0,[],0.0,intermediate
+17,pyrimidine,nucleic,0,0,0,[],0.0,intermediate

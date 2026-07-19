@@ -1,0 +1,45 @@
+{
+  "1_loop_closed": "Partially, and at the level of component IDENTITY rather than theme label. For adenine, the single strongest-responding component is c3 \u2014 whose top reference analyte IS adenine \u2014 in 4 of 6 substrate x laser arms, a reproducible closure across substrates and lasers. For ergothioneine the own-encoding component (c19) responds but is not the strongest, and c19 is a low-purity generic component, so that closure is weak. Overall, the analyte loads its responding component in 7/128 responsive-component instances, concentrated in the strongest responders.",
+  "2_audit_predicts_response": "The component AUDIT predicts response identity well but its THEME LABELS predict it poorly. Theme-label agreement is only 15/128, because several low-purity components carry misleading coarse labels (c3 labelled 'sterol' actually encodes adenine; c13 labelled 'pyrimidine' is thymine-dominated). The underlying components are chemically real; the labels are the weak link.",
+  "3_response_supports_ontology": "It supports the ontology's HIGH-CONFIDENCE, chemically-focused entries and challenges the coarse labels on low-purity entries. The purine sub-structure recovered from perturbation (two anti-correlated pairs) is finer than the single 'purine' ontology axis.",
+  "4_ontology_gains_confidence": [
+    3
+  ],
+  "5_ontology_loses_confidence": [
+    3
+  ],
+  "6_components_needing_reinterpretation": [
+    {
+      "component": 3,
+      "current_label": "sterol",
+      "driven_by": "adenine",
+      "reference_top": [
+        "adenine",
+        "acetyl coenzyme a",
+        "estrone",
+        "coenzyme a"
+      ]
+    }
+  ],
+  "purine_substructure": {
+    "adenine_hypoxanthine_cos": 0.8798077942858328,
+    "xanthine_guanine_cos": 0.9022618631847212,
+    "across_pair_cos": -0.3122863895689939,
+    "reading": "perturbation fingerprints split the purines into {adenine, hypoxanthine} (6-amino/oxo) and {xanthine, guanine} (2,6-dioxo/oxo-amino), anti-correlated across the divide \u2014 a chemically correct sub-classification the atlas was never told about"
+  },
+  "uricase_selectivity": {
+    "purine_c15_change": -0.10551102658558031,
+    "selective": true,
+    "reading": "enzymatic urate depletion produces a SELECTIVE loss in a purine-encoding component rather than a global change \u2014 mechanistically consistent with removing a purine"
+  },
+  "response_families_vs_spectra": "Response fingerprints recover chemical family better than raw spike spectra (ARI 0.146 vs 0.078), though both are modest \u2014 the response representation adds chemical structure that the raw background-dominated Ag-SERS spectra obscure.",
+  "candidate_bsv_anchor_components": [
+    2,
+    1,
+    11,
+    18,
+    16,
+    17
+  ],
+  "consistency_caveat": "Pure-vs-spike consistency is near zero (median cos -0.012): an analyte does NOT in general activate the same components in serum as in buffer, so these fingerprints are matrix-specific and must not be treated as matrix-invariant signatures."
+}
