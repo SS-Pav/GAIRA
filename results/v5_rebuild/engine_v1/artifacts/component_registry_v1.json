@@ -1,0 +1,4949 @@
+{
+  "schema": "component_registry_v1",
+  "version": "1.0",
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "n_components": 24,
+  "basis_reference": "results/v5_rebuild/foundation/artifacts/manifold_components.npz",
+  "generated_utc": null,
+  "provenance_note": "Every component field carries its source study. Basis spectra are referenced (not duplicated) from the frozen atlas npz.",
+  "components": [
+    {
+      "component_id": {
+        "value": 0,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          754.0,
+          1178.0,
+          1224.0,
+          1348.0,
+          1456.0,
+          1578.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 21.1,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "riboflavin",
+            "contribution_pct": 11.46,
+            "family": "cofactor"
+          },
+          {
+            "analyte": "ribo\ufb02avin",
+            "contribution_pct": 11.43,
+            "family": "cofactor"
+          },
+          {
+            "analyte": "tryptophan",
+            "contribution_pct": 3.81,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "hemoglobin",
+            "contribution_pct": 3.12,
+            "family": "protein"
+          },
+          {
+            "analyte": "myoglobin",
+            "contribution_pct": 2.93,
+            "family": "protein"
+          },
+          {
+            "analyte": "histidine",
+            "contribution_pct": 2.73,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "leucine",
+            "contribution_pct": 2.67,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "(+)-glucose",
+            "contribution_pct": 2.12,
+            "family": "saccharide"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "cofactor": 0.568,
+          "amino_acid": 0.229,
+          "protein": 0.15,
+          "saccharide": 0.053
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.81,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.333,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 7,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": 0.873,
+            "direction": "up",
+            "effect_size": 11.0,
+            "saturating_r2": 0.944
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": 0.96,
+            "direction": "up",
+            "effect_size": 7.69,
+            "saturating_r2": 0.964
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": 0.859,
+            "direction": "up",
+            "effect_size": 6.05,
+            "saturating_r2": 0.915
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": 0.978,
+            "direction": "up",
+            "effect_size": 19.65,
+            "saturating_r2": 0.983
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": 0.855,
+            "direction": "up",
+            "effect_size": 18.01,
+            "saturating_r2": 0.966
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": 0.925,
+            "direction": "up",
+            "effect_size": 14.87,
+            "saturating_r2": 0.97
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": 0.964,
+            "direction": "up",
+            "effect_size": 15.74,
+            "saturating_r2": 0.926
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "xanthine",
+              "delta": 0.0078
+            },
+            {
+              "analyte": "guanine",
+              "delta": 0.0074
+            },
+            {
+              "analyte": "adenine",
+              "delta": 0.0044
+            },
+            {
+              "analyte": "oleate",
+              "delta": 0.0041
+            },
+            {
+              "analyte": "albumin",
+              "delta": 0.0015
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "rna",
+              "delta": -0.0032
+            },
+            {
+              "analyte": "dna",
+              "delta": -0.0032
+            },
+            {
+              "analyte": "methionine",
+              "delta": -0.0031
+            },
+            {
+              "analyte": "fructose",
+              "delta": -0.0031
+            },
+            {
+              "analyte": "hypoxanthine",
+              "delta": -0.0031
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0135,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "protein",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by cofactor chemistry (top analyte riboflavin). Perturbation-responsive in 7 dose experiment(s) (up). Serum-spike activators: xanthine, guanine, adenine.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "moderate",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 1,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          1302.0,
+          1442.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 24.9,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "elaidic acid",
+            "contribution_pct": 2.68,
+            "family": "fatty_acid"
+          },
+          {
+            "analyte": "tripalmitolein",
+            "contribution_pct": 2.59,
+            "family": "triglyceride"
+          },
+          {
+            "analyte": "tricaprylin",
+            "contribution_pct": 2.37,
+            "family": "triglyceride"
+          },
+          {
+            "analyte": "tri-11-eicosenoin",
+            "contribution_pct": 2.37,
+            "family": "triglyceride"
+          },
+          {
+            "analyte": "tricaproin",
+            "contribution_pct": 2.35,
+            "family": "triglyceride"
+          },
+          {
+            "analyte": "trierucin",
+            "contribution_pct": 2.29,
+            "family": "triglyceride"
+          },
+          {
+            "analyte": "vaccenic acid",
+            "contribution_pct": 2.22,
+            "family": "fatty_acid"
+          },
+          {
+            "analyte": "trielaidin",
+            "contribution_pct": 2.1,
+            "family": "triglyceride"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "triglyceride": 0.742,
+          "fatty_acid": 0.258
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.955,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.322,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 4,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": 0.714,
+            "direction": "up",
+            "effect_size": 2.73,
+            "saturating_r2": 0.736
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": 0.93,
+            "direction": "up",
+            "effect_size": 14.47,
+            "saturating_r2": 0.977
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": 0.9,
+            "direction": "up",
+            "effect_size": 17.49,
+            "saturating_r2": 0.943
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": 0.891,
+            "direction": "up",
+            "effect_size": 15.7,
+            "saturating_r2": 0.893
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [],
+          "top_suppressors": []
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0573,
+          "note": "increased by urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "triglyceride",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by triglyceride chemistry (top analyte elaidic acid). Perturbation-responsive in 4 dose experiment(s) (up). ",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "moderate",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 2,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          764.0,
+          856.0,
+          1000.0,
+          1130.0,
+          1240.0,
+          1336.0,
+          1456.0,
+          1550.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 22.0,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "superoxide dismutases",
+            "contribution_pct": 4.37,
+            "family": "protein"
+          },
+          {
+            "analyte": "ubiquitin",
+            "contribution_pct": 4.26,
+            "family": "protein"
+          },
+          {
+            "analyte": "trypsin",
+            "contribution_pct": 4.1,
+            "family": "protein"
+          },
+          {
+            "analyte": "major proteinase",
+            "contribution_pct": 4.03,
+            "family": "protein"
+          },
+          {
+            "analyte": "elastin",
+            "contribution_pct": 3.94,
+            "family": "protein"
+          },
+          {
+            "analyte": "lectin",
+            "contribution_pct": 3.86,
+            "family": "protein"
+          },
+          {
+            "analyte": "thaumatin",
+            "contribution_pct": 3.84,
+            "family": "protein"
+          },
+          {
+            "analyte": "trypsinogen",
+            "contribution_pct": 3.76,
+            "family": "protein"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "protein": 1.0
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.965,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.803,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 5,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": -0.864,
+            "direction": "down",
+            "effect_size": -12.6,
+            "saturating_r2": 0.927
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.798,
+            "direction": "down",
+            "effect_size": -22.08,
+            "saturating_r2": 0.886
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.846,
+            "direction": "down",
+            "effect_size": -15.87,
+            "saturating_r2": 0.7
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": -0.95,
+            "direction": "down",
+            "effect_size": -11.43,
+            "saturating_r2": 0.953
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": 0.973,
+            "direction": "up",
+            "effect_size": 31.31,
+            "saturating_r2": 0.972
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "ergothioneine",
+              "delta": 0.0137
+            },
+            {
+              "analyte": "oleate",
+              "delta": 0.0136
+            },
+            {
+              "analyte": "xanthine",
+              "delta": 0.0033
+            },
+            {
+              "analyte": "albumin",
+              "delta": 0.0009
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "acetoacetate",
+              "delta": -0.0031
+            },
+            {
+              "analyte": "stearate",
+              "delta": -0.0031
+            },
+            {
+              "analyte": "histidine",
+              "delta": -0.0031
+            },
+            {
+              "analyte": "hydroxyproline",
+              "delta": -0.0031
+            },
+            {
+              "analyte": "valine",
+              "delta": -0.0031
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0108,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "protein",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by protein chemistry (top analyte superoxide dismutases). Perturbation-responsive in 5 dose experiment(s) (up/down). Serum-spike activators: ergothioneine, oleate, xanthine.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "high",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 3,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          536.0,
+          722.0,
+          1250.0,
+          1334.0,
+          1486.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 14.3,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "adenine",
+            "contribution_pct": 10.92,
+            "family": "purine"
+          },
+          {
+            "analyte": "acetyl coenzyme a",
+            "contribution_pct": 7.74,
+            "family": "protein"
+          },
+          {
+            "analyte": "estrone",
+            "contribution_pct": 7.31,
+            "family": "sterol"
+          },
+          {
+            "analyte": "coenzyme a",
+            "contribution_pct": 5.26,
+            "family": "cofactor"
+          },
+          {
+            "analyte": "methionine",
+            "contribution_pct": 5.12,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "acetyl-coa",
+            "contribution_pct": 4.63,
+            "family": "cofactor"
+          },
+          {
+            "analyte": "estradiol",
+            "contribution_pct": 3.87,
+            "family": "sterol"
+          },
+          {
+            "analyte": "estriol",
+            "contribution_pct": 3.86,
+            "family": "sterol"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "sterol": 0.309,
+          "purine": 0.224,
+          "cofactor": 0.203,
+          "protein": 0.159,
+          "amino_acid": 0.105
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.823,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.217,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 7,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": 0.969,
+            "direction": "up",
+            "effect_size": 12.65,
+            "saturating_r2": 0.97
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": 0.996,
+            "direction": "up",
+            "effect_size": 26.23,
+            "saturating_r2": 0.992
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": 0.996,
+            "direction": "up",
+            "effect_size": 30.17,
+            "saturating_r2": 0.988
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": 0.987,
+            "direction": "up",
+            "effect_size": 25.33,
+            "saturating_r2": 0.984
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": 0.982,
+            "direction": "up",
+            "effect_size": 19.17,
+            "saturating_r2": 0.98
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": 0.929,
+            "direction": "up",
+            "effect_size": 23.1,
+            "saturating_r2": 0.959
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": -0.936,
+            "direction": "down",
+            "effect_size": -21.09,
+            "saturating_r2": 0.823
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "hypoxanthine",
+              "delta": 0.0941
+            },
+            {
+              "analyte": "adenine",
+              "delta": 0.0468
+            },
+            {
+              "analyte": "acetoacetate",
+              "delta": 0.0238
+            },
+            {
+              "analyte": "guanine",
+              "delta": 0.0232
+            },
+            {
+              "analyte": "phenylalanine",
+              "delta": 0.0222
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "urate",
+              "delta": -0.0174
+            },
+            {
+              "analyte": "cholesterol",
+              "delta": -0.0046
+            },
+            {
+              "analyte": "n-acetylglucosamine",
+              "delta": -0.0045
+            },
+            {
+              "analyte": "ascorbate",
+              "delta": -0.0038
+            },
+            {
+              "analyte": "glycine",
+              "delta": -0.0037
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0745,
+          "note": "increased by urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "sterol",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by sterol chemistry (top analyte adenine). Perturbation-responsive in 7 dose experiment(s) (up/down). Serum-spike activators: hypoxanthine, adenine, acetoacetate.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "moderate",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [
+          "low chemical purity \u2014 the audit's coarse label is unreliable; trust the reference loadings and perturbation identity over the label."
+        ],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 4,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          464.0,
+          528.0,
+          598.0,
+          816.0,
+          872.0,
+          1060.0,
+          1086.0,
+          1268.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 13.7,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "(+)-galactosamine",
+            "contribution_pct": 6.87,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "galactose",
+            "contribution_pct": 5.42,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(-)-fructose",
+            "contribution_pct": 3.83,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "fructose",
+            "contribution_pct": 3.63,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(+)-fucose",
+            "contribution_pct": 3.54,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(+)-mannose",
+            "contribution_pct": 2.95,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(-)-ribose",
+            "contribution_pct": 2.77,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(+)-raffinose pentahydrate",
+            "contribution_pct": 2.31,
+            "family": "saccharide"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "saccharide": 1.0
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.769,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.429,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 5,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.833,
+            "direction": "down",
+            "effect_size": -18.66,
+            "saturating_r2": 0.969
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": -0.793,
+            "direction": "down",
+            "effect_size": -4.51,
+            "saturating_r2": 0.783
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": -0.974,
+            "direction": "down",
+            "effect_size": -16.63,
+            "saturating_r2": 0.977
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.96,
+            "direction": "down",
+            "effect_size": -22.16,
+            "saturating_r2": 0.967
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": -0.921,
+            "direction": "down",
+            "effect_size": -17.95,
+            "saturating_r2": 0.987
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "oleate",
+              "delta": 0.0168
+            },
+            {
+              "analyte": "albumin",
+              "delta": 0.0047
+            },
+            {
+              "analyte": "serine",
+              "delta": 0.0014
+            }
+          ],
+          "top_suppressors": []
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0358,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "saccharide",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by saccharide chemistry (top analyte (+)-galactosamine). Perturbation-responsive in 5 dose experiment(s) (down). Serum-spike activators: oleate, albumin, serine.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "low",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 5,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          640.0,
+          828.0,
+          1178.0,
+          1326.0,
+          1614.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 12.1,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "tyrosine",
+            "contribution_pct": 15.63,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "(+)-raffinose pentahydrate",
+            "contribution_pct": 5.58,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "acetoacetate",
+            "contribution_pct": 4.87,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "diethylstilbestrol",
+            "contribution_pct": 4.02,
+            "family": "sterol"
+          },
+          {
+            "analyte": "phenylalanine",
+            "contribution_pct": 3.59,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "carotene",
+            "contribution_pct": 2.84,
+            "family": "carotenoid"
+          },
+          {
+            "analyte": "insulin",
+            "contribution_pct": 2.77,
+            "family": "protein"
+          },
+          {
+            "analyte": "(+)-mannose",
+            "contribution_pct": 2.75,
+            "family": "saccharide"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "amino_acid": 0.457,
+          "saccharide": 0.198,
+          "organic_acid": 0.116,
+          "sterol": 0.096,
+          "carotenoid": 0.068,
+          "protein": 0.066
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.737,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.281,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 7,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": -0.96,
+            "direction": "down",
+            "effect_size": -16.18,
+            "saturating_r2": 0.945
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.996,
+            "direction": "down",
+            "effect_size": -15.08,
+            "saturating_r2": 0.983
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": -0.996,
+            "direction": "down",
+            "effect_size": -7.27,
+            "saturating_r2": 0.993
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": -0.943,
+            "direction": "down",
+            "effect_size": -10.36,
+            "saturating_r2": 0.863
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.89,
+            "direction": "down",
+            "effect_size": -17.44,
+            "saturating_r2": 0.893
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": -0.95,
+            "direction": "down",
+            "effect_size": -12.29,
+            "saturating_r2": 0.96
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": 0.936,
+            "direction": "up",
+            "effect_size": 19.28,
+            "saturating_r2": 0.825
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "ergothioneine",
+              "delta": 0.0046
+            },
+            {
+              "analyte": "oleate",
+              "delta": 0.0041
+            },
+            {
+              "analyte": "urate",
+              "delta": 0.0023
+            },
+            {
+              "analyte": "phosphoenolpyruvate",
+              "delta": 0.0013
+            },
+            {
+              "analyte": "fructose",
+              "delta": 0.0013
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "xanthine",
+              "delta": -0.0079
+            },
+            {
+              "analyte": "guanine",
+              "delta": -0.0045
+            },
+            {
+              "analyte": "glutathione",
+              "delta": -0.0019
+            },
+            {
+              "analyte": "glucose",
+              "delta": -0.0018
+            },
+            {
+              "analyte": "glycerol",
+              "delta": -0.0017
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": -0.0024,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "amino_acid",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by amino_acid chemistry (top analyte tyrosine). Perturbation-responsive in 7 dose experiment(s) (up/down). Serum-spike activators: ergothioneine, oleate, urate.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "low",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [
+          "low chemical purity \u2014 the audit's coarse label is unreliable; trust the reference loadings and perturbation identity over the label.",
+          "below-threshold bootstrap stability; may be partly a fitting mixture."
+        ],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 6,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          1006.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 16.4,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "urea",
+            "contribution_pct": 11.87,
+            "family": "small_nitrogenous"
+          },
+          {
+            "analyte": "ure",
+            "contribution_pct": 11.17,
+            "family": "unknown"
+          },
+          {
+            "analyte": "phenylalanine",
+            "contribution_pct": 7.33,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "\u03b2-carotene",
+            "contribution_pct": 3.62,
+            "family": "carotenoid"
+          },
+          {
+            "analyte": "carotene",
+            "contribution_pct": 3.39,
+            "family": "carotenoid"
+          },
+          {
+            "analyte": "tryptophan",
+            "contribution_pct": 3.3,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "lectin",
+            "contribution_pct": 2.92,
+            "family": "protein"
+          },
+          {
+            "analyte": "carbonic anhydrase",
+            "contribution_pct": 2.65,
+            "family": "protein"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "small_nitrogenous": 0.257,
+          "unknown": 0.241,
+          "amino_acid": 0.23,
+          "carotenoid": 0.152,
+          "protein": 0.12
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.872,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.335,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 5,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": 0.886,
+            "direction": "up",
+            "effect_size": 3.2,
+            "saturating_r2": 0.781
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": 0.802,
+            "direction": "up",
+            "effect_size": 2.59,
+            "saturating_r2": 0.761
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": -0.991,
+            "direction": "down",
+            "effect_size": -11.67,
+            "saturating_r2": 0.974
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": -0.907,
+            "direction": "down",
+            "effect_size": -7.14,
+            "saturating_r2": 0.926
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": 0.791,
+            "direction": "up",
+            "effect_size": 2.75,
+            "saturating_r2": 0.523
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "serine",
+              "delta": 0.0102
+            },
+            {
+              "analyte": "oleate",
+              "delta": 0.0064
+            },
+            {
+              "analyte": "riboflavin",
+              "delta": 0.0029
+            },
+            {
+              "analyte": "ergothioneine",
+              "delta": 0.0028
+            },
+            {
+              "analyte": "albumin",
+              "delta": 0.0021
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "guanine",
+              "delta": -0.0103
+            },
+            {
+              "analyte": "xanthine",
+              "delta": -0.0096
+            },
+            {
+              "analyte": "coenzyme a",
+              "delta": -0.0057
+            },
+            {
+              "analyte": "glutathione",
+              "delta": -0.0055
+            },
+            {
+              "analyte": "glycogen",
+              "delta": -0.0055
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0197,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "protein",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by small_nitrogenous chemistry (top analyte urea). Perturbation-responsive in 5 dose experiment(s) (up/down). Serum-spike activators: serine, oleate, riboflavin.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "moderate",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 7,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          1260.0,
+          1318.0,
+          1430.0,
+          1654.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 17.6,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "arachidonic acid",
+            "contribution_pct": 6.79,
+            "family": "fatty_acid"
+          },
+          {
+            "analyte": "trilinolenin",
+            "contribution_pct": 6.05,
+            "family": "triglyceride"
+          },
+          {
+            "analyte": "\u03b1-linolenic acid",
+            "contribution_pct": 5.66,
+            "family": "fatty_acid"
+          },
+          {
+            "analyte": "trilinolein",
+            "contribution_pct": 4.85,
+            "family": "triglyceride"
+          },
+          {
+            "analyte": "linoleic acid",
+            "contribution_pct": 4.6,
+            "family": "fatty_acid"
+          },
+          {
+            "analyte": "palmitoleic acid",
+            "contribution_pct": 3.02,
+            "family": "fatty_acid"
+          },
+          {
+            "analyte": "ascorbate",
+            "contribution_pct": 2.68,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "fumarate",
+            "contribution_pct": 2.45,
+            "family": "organic_acid"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "fatty_acid": 0.556,
+          "triglyceride": 0.302,
+          "organic_acid": 0.142
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.951,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.293,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 3,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": -0.982,
+            "direction": "down",
+            "effect_size": -5.4,
+            "saturating_r2": 0.93
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.974,
+            "direction": "down",
+            "effect_size": -8.46,
+            "saturating_r2": 0.95
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": -0.973,
+            "direction": "down",
+            "effect_size": -37.39,
+            "saturating_r2": 0.977
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "glycerol",
+              "delta": 0.0148
+            },
+            {
+              "analyte": "leucine",
+              "delta": 0.008
+            },
+            {
+              "analyte": "urea",
+              "delta": 0.0063
+            },
+            {
+              "analyte": "glucose",
+              "delta": 0.0038
+            },
+            {
+              "analyte": "glycine",
+              "delta": 0.003
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "ergothioneine",
+              "delta": -0.0372
+            },
+            {
+              "analyte": "albumin",
+              "delta": -0.0372
+            },
+            {
+              "analyte": "xanthine",
+              "delta": -0.0351
+            },
+            {
+              "analyte": "adenine",
+              "delta": -0.0331
+            },
+            {
+              "analyte": "hydroxyproline",
+              "delta": -0.031
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": -0.075,
+          "note": "selectively decreased by urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "protein",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by fatty_acid chemistry (top analyte arachidonic acid). Perturbation-responsive in 3 dose experiment(s) (down). Serum-spike activators: glycerol, leucine, urea.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "moderate",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [
+          "low chemical purity \u2014 the audit's coarse label is unreliable; trust the reference loadings and perturbation identity over the label."
+        ],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 8,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          1134.0,
+          1306.0,
+          1362.0,
+          1590.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 37.2,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "melanin",
+            "contribution_pct": 16.37,
+            "family": "unknown"
+          },
+          {
+            "analyte": "myoglobin",
+            "contribution_pct": 8.54,
+            "family": "protein"
+          },
+          {
+            "analyte": "hemoglobin",
+            "contribution_pct": 7.64,
+            "family": "protein"
+          },
+          {
+            "analyte": "diethylstilbestrol",
+            "contribution_pct": 6.85,
+            "family": "sterol"
+          },
+          {
+            "analyte": "horseradish peroxidase",
+            "contribution_pct": 6.64,
+            "family": "protein"
+          },
+          {
+            "analyte": "cytochrome c",
+            "contribution_pct": 6.1,
+            "family": "protein"
+          },
+          {
+            "analyte": "estriol",
+            "contribution_pct": 3.67,
+            "family": "sterol"
+          },
+          {
+            "analyte": "estradiol",
+            "contribution_pct": 3.67,
+            "family": "sterol"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "protein": 0.486,
+          "unknown": 0.275,
+          "sterol": 0.238
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.927,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.36,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 6,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": -0.969,
+            "direction": "down",
+            "effect_size": -8.68,
+            "saturating_r2": 0.969
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.974,
+            "direction": "down",
+            "effect_size": -10.28,
+            "saturating_r2": 0.949
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": -0.974,
+            "direction": "down",
+            "effect_size": -8.4,
+            "saturating_r2": 0.947
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": -0.956,
+            "direction": "down",
+            "effect_size": -11.5,
+            "saturating_r2": 0.934
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.959,
+            "direction": "down",
+            "effect_size": -24.01,
+            "saturating_r2": 0.987
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": -0.911,
+            "direction": "down",
+            "effect_size": -12.15,
+            "saturating_r2": 0.902
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "urate",
+              "delta": 0.0208
+            },
+            {
+              "analyte": "ascorbate",
+              "delta": 0.0044
+            },
+            {
+              "analyte": "glucose",
+              "delta": 0.0028
+            },
+            {
+              "analyte": "glycerol",
+              "delta": 0.0026
+            },
+            {
+              "analyte": "cholesterol",
+              "delta": 0.0022
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "serine",
+              "delta": -0.0154
+            },
+            {
+              "analyte": "guanine",
+              "delta": -0.0126
+            },
+            {
+              "analyte": "adenine",
+              "delta": -0.0115
+            },
+            {
+              "analyte": "phenylalanine",
+              "delta": -0.0107
+            },
+            {
+              "analyte": "arginine",
+              "delta": -0.0099
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": -0.018,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "protein",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by protein chemistry (top analyte melanin). Perturbation-responsive in 6 dose experiment(s) (down). Serum-spike activators: urate, ascorbate, glucose.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "moderate",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 9,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          506.0,
+          896.0,
+          1034.0,
+          1326.0,
+          1412.0,
+          1444.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 15.6,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "glycine",
+            "contribution_pct": 13.64,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "(+)-xylose",
+            "contribution_pct": 5.49,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "proline",
+            "contribution_pct": 4.81,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "chitin",
+            "contribution_pct": 3.61,
+            "family": "polysaccharide"
+          },
+          {
+            "analyte": "glucosamine",
+            "contribution_pct": 3.45,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "gluth",
+            "contribution_pct": 3.1,
+            "family": "unknown"
+          },
+          {
+            "analyte": "(-)-ribose",
+            "contribution_pct": 2.96,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "glutathione",
+            "contribution_pct": 2.92,
+            "family": "cofactor"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "amino_acid": 0.461,
+          "saccharide": 0.298,
+          "polysaccharide": 0.09,
+          "unknown": 0.078,
+          "cofactor": 0.073
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.709,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.242,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 6,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": 0.851,
+            "direction": "up",
+            "effect_size": 7.53,
+            "saturating_r2": 0.93
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.982,
+            "direction": "down",
+            "effect_size": -5.17,
+            "saturating_r2": 0.942
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": -0.96,
+            "direction": "down",
+            "effect_size": -10.37,
+            "saturating_r2": 0.965
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": 0.89,
+            "direction": "up",
+            "effect_size": 4.29,
+            "saturating_r2": 0.871
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.93,
+            "direction": "down",
+            "effect_size": -9.77,
+            "saturating_r2": 0.894
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": -0.875,
+            "direction": "down",
+            "effect_size": -9.06,
+            "saturating_r2": 0.88
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "ergothioneine",
+              "delta": 0.0075
+            },
+            {
+              "analyte": "fructose",
+              "delta": 0.0065
+            },
+            {
+              "analyte": "rna",
+              "delta": 0.0046
+            },
+            {
+              "analyte": "riboflavin",
+              "delta": 0.0038
+            },
+            {
+              "analyte": "thymine",
+              "delta": 0.0032
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "guanine",
+              "delta": -0.0183
+            },
+            {
+              "analyte": "oleate",
+              "delta": -0.0164
+            },
+            {
+              "analyte": "xanthine",
+              "delta": -0.0131
+            },
+            {
+              "analyte": "albumin",
+              "delta": -0.0103
+            },
+            {
+              "analyte": "glycerol",
+              "delta": -0.009
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": -0.0374,
+          "note": "selectively decreased by urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "amino_acid",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by amino_acid chemistry (top analyte glycine). Perturbation-responsive in 6 dose experiment(s) (up/down). Serum-spike activators: ergothioneine, fructose, rna.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "low",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [
+          "low chemical purity \u2014 the audit's coarse label is unreliable; trust the reference loadings and perturbation identity over the label.",
+          "below-threshold bootstrap stability; may be partly a fitting mixture."
+        ],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 10,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          842.0,
+          916.0,
+          1054.0,
+          1108.0,
+          1266.0,
+          1346.0,
+          1374.0,
+          1458.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 23.0,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "(-)-arabinose",
+            "contribution_pct": 6.2,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(+)-dextrose",
+            "contribution_pct": 6.08,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "\u03b2-d-glucose",
+            "contribution_pct": 5.77,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(+)-glucose",
+            "contribution_pct": 5.05,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(+)-arabinose",
+            "contribution_pct": 4.97,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "proline",
+            "contribution_pct": 4.85,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "glucose",
+            "contribution_pct": 4.17,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(+)-raffinose pentahydrate",
+            "contribution_pct": 3.79,
+            "family": "saccharide"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "saccharide": 0.881,
+          "amino_acid": 0.119
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.653,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.521,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 4,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.899,
+            "direction": "down",
+            "effect_size": -3.34,
+            "saturating_r2": 0.734
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": -0.991,
+            "direction": "down",
+            "effect_size": -15.98,
+            "saturating_r2": 0.993
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.846,
+            "direction": "down",
+            "effect_size": -13.11,
+            "saturating_r2": 0.938
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": -0.804,
+            "direction": "down",
+            "effect_size": -11.38,
+            "saturating_r2": 0.943
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "albumin",
+              "delta": 0.0011
+            }
+          ],
+          "top_suppressors": []
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0015,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "saccharide",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by saccharide chemistry (top analyte (-)-arabinose). Perturbation-responsive in 4 dose experiment(s) (down). Serum-spike activators: albumin.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "low",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [
+          "below-threshold bootstrap stability; may be partly a fitting mixture."
+        ],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 11,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          852.0,
+          1322.0,
+          1360.0,
+          1464.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 13.4,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "hydroxyproline",
+            "contribution_pct": 9.14,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "alanine",
+            "contribution_pct": 7.18,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "serine",
+            "contribution_pct": 6.64,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "(+)-arabinose",
+            "contribution_pct": 3.99,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(+)-sucrose",
+            "contribution_pct": 3.41,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "glycerol",
+            "contribution_pct": 3.17,
+            "family": "polyol"
+          },
+          {
+            "analyte": "glucosamine",
+            "contribution_pct": 2.77,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(-)-arabinose",
+            "contribution_pct": 2.64,
+            "family": "saccharide"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "amino_acid": 0.59,
+          "saccharide": 0.329,
+          "polyol": 0.081
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.886,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.371,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 5,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.991,
+            "direction": "down",
+            "effect_size": -10.7,
+            "saturating_r2": 0.981
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": -0.996,
+            "direction": "down",
+            "effect_size": -8.58,
+            "saturating_r2": 0.974
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.947,
+            "direction": "down",
+            "effect_size": -27.68,
+            "saturating_r2": 0.989
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": -0.979,
+            "direction": "down",
+            "effect_size": -18.38,
+            "saturating_r2": 0.981
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": 0.882,
+            "direction": "up",
+            "effect_size": 13.43,
+            "saturating_r2": 0.892
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "oleate",
+              "delta": 0.0107
+            },
+            {
+              "analyte": "albumin",
+              "delta": 0.0071
+            }
+          ],
+          "top_suppressors": []
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0277,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "amino_acid",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by amino_acid chemistry (top analyte hydroxyproline). Perturbation-responsive in 5 dose experiment(s) (up/down). Serum-spike activators: oleate, albumin.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "moderate",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 12,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          540.0,
+          774.0,
+          966.0,
+          1020.0,
+          1074.0,
+          1122.0,
+          1150.0,
+          1274.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 14.6,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "(+)-dextrose",
+            "contribution_pct": 7.27,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "\u03b2-d-glucose",
+            "contribution_pct": 6.33,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(+)-glucose",
+            "contribution_pct": 4.71,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "glucose",
+            "contribution_pct": 4.58,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "valine",
+            "contribution_pct": 4.26,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "(-)-ribose",
+            "contribution_pct": 4.21,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(+)-trehalose",
+            "contribution_pct": 3.83,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(+)-galactosamine",
+            "contribution_pct": 3.67,
+            "family": "saccharide"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "saccharide": 0.89,
+          "amino_acid": 0.11
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.788,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.544,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 5,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": -0.73,
+            "direction": "down",
+            "effect_size": -34.89,
+            "saturating_r2": 0.993
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.969,
+            "direction": "down",
+            "effect_size": -4.61,
+            "saturating_r2": 0.951
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": -0.978,
+            "direction": "down",
+            "effect_size": -11.7,
+            "saturating_r2": 0.974
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": -0.955,
+            "direction": "down",
+            "effect_size": -7.89,
+            "saturating_r2": 0.845
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.922,
+            "direction": "down",
+            "effect_size": -8.07,
+            "saturating_r2": 0.937
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "albumin",
+              "delta": 0.0175
+            },
+            {
+              "analyte": "oleate",
+              "delta": 0.0122
+            },
+            {
+              "analyte": "guanine",
+              "delta": 0.0087
+            },
+            {
+              "analyte": "hydroxyproline",
+              "delta": 0.0071
+            },
+            {
+              "analyte": "xanthine",
+              "delta": 0.0047
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "hypoxanthine",
+              "delta": -0.0066
+            },
+            {
+              "analyte": "ergothioneine",
+              "delta": -0.0066
+            },
+            {
+              "analyte": "glycerol",
+              "delta": -0.0044
+            },
+            {
+              "analyte": "urea",
+              "delta": -0.0044
+            },
+            {
+              "analyte": "leucine",
+              "delta": -0.0041
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.002,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "saccharide",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by saccharide chemistry (top analyte (+)-dextrose). Perturbation-responsive in 5 dose experiment(s) (down). Serum-spike activators: albumin, oleate, guanine.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "low",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 13,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          480.0,
+          558.0,
+          616.0,
+          742.0,
+          806.0,
+          984.0,
+          1370.0,
+          1490.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 12.6,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "thymine",
+            "contribution_pct": 18.66,
+            "family": "pyrimidine"
+          },
+          {
+            "analyte": "cytochrome c",
+            "contribution_pct": 4.0,
+            "family": "protein"
+          },
+          {
+            "analyte": "hemoglobin",
+            "contribution_pct": 3.54,
+            "family": "protein"
+          },
+          {
+            "analyte": "b-dna",
+            "contribution_pct": 2.96,
+            "family": "nucleic_acid"
+          },
+          {
+            "analyte": "cholesteryl linoleate",
+            "contribution_pct": 2.69,
+            "family": "sterol"
+          },
+          {
+            "analyte": "myoglobin",
+            "contribution_pct": 2.59,
+            "family": "protein"
+          },
+          {
+            "analyte": "trielaidin",
+            "contribution_pct": 2.57,
+            "family": "triglyceride"
+          },
+          {
+            "analyte": "cholesterol",
+            "contribution_pct": 2.46,
+            "family": "lipid"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "pyrimidine": 0.473,
+          "protein": 0.257,
+          "nucleic_acid": 0.075,
+          "sterol": 0.068,
+          "triglyceride": 0.065,
+          "lipid": 0.062
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.664,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.187,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 7,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": 0.925,
+            "direction": "up",
+            "effect_size": 11.42,
+            "saturating_r2": 0.937
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": 0.996,
+            "direction": "up",
+            "effect_size": 19.13,
+            "saturating_r2": 0.992
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": 0.991,
+            "direction": "up",
+            "effect_size": 19.91,
+            "saturating_r2": 0.994
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": 0.93,
+            "direction": "up",
+            "effect_size": 16.9,
+            "saturating_r2": 0.878
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": 0.921,
+            "direction": "up",
+            "effect_size": 25.07,
+            "saturating_r2": 0.978
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": 0.954,
+            "direction": "up",
+            "effect_size": 17.0,
+            "saturating_r2": 0.959
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": -0.955,
+            "direction": "down",
+            "effect_size": -38.28,
+            "saturating_r2": 0.962
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "hypoxanthine",
+              "delta": 0.0184
+            },
+            {
+              "analyte": "adenine",
+              "delta": 0.0109
+            },
+            {
+              "analyte": "phosphate",
+              "delta": 0.0031
+            },
+            {
+              "analyte": "histidine",
+              "delta": 0.0024
+            },
+            {
+              "analyte": "hydroxyproline",
+              "delta": 0.0021
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "ergothioneine",
+              "delta": -0.0131
+            },
+            {
+              "analyte": "glutathione",
+              "delta": -0.005
+            },
+            {
+              "analyte": "serine",
+              "delta": -0.0049
+            },
+            {
+              "analyte": "oleate",
+              "delta": -0.0047
+            },
+            {
+              "analyte": "alanine",
+              "delta": -0.0044
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": -0.0052,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "pyrimidine",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by pyrimidine chemistry (top analyte thymine). Perturbation-responsive in 7 dose experiment(s) (up/down). Serum-spike activators: hypoxanthine, adenine, phosphate.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "low",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [
+          "low chemical purity \u2014 the audit's coarse label is unreliable; trust the reference loadings and perturbation identity over the label.",
+          "below-threshold bootstrap stability; may be partly a fitting mixture."
+        ],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 14,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          588.0,
+          940.0,
+          1398.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 23.5,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "phosphate",
+            "contribution_pct": 7.53,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "succinic acid",
+            "contribution_pct": 6.8,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "aspartic acid",
+            "contribution_pct": 6.32,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "citrate",
+            "contribution_pct": 4.14,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "asparagine",
+            "contribution_pct": 3.97,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "amylopectin",
+            "contribution_pct": 3.29,
+            "family": "polysaccharide"
+          },
+          {
+            "analyte": "amylose",
+            "contribution_pct": 3.12,
+            "family": "polysaccharide"
+          },
+          {
+            "analyte": "xylanase",
+            "contribution_pct": 3.11,
+            "family": "protein"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "organic_acid": 0.647,
+          "polysaccharide": 0.168,
+          "amino_acid": 0.104,
+          "protein": 0.081
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.769,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.28,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 6,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": -0.956,
+            "direction": "down",
+            "effect_size": -4.27,
+            "saturating_r2": 0.95
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.987,
+            "direction": "down",
+            "effect_size": -7.57,
+            "saturating_r2": 0.948
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": -0.969,
+            "direction": "down",
+            "effect_size": -10.91,
+            "saturating_r2": 0.98
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": -0.956,
+            "direction": "down",
+            "effect_size": -14.37,
+            "saturating_r2": 0.939
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.974,
+            "direction": "down",
+            "effect_size": -30.89,
+            "saturating_r2": 0.98
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": -0.957,
+            "direction": "down",
+            "effect_size": -17.47,
+            "saturating_r2": 0.974
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "oleate",
+              "delta": 0.0219
+            },
+            {
+              "analyte": "albumin",
+              "delta": 0.0188
+            },
+            {
+              "analyte": "arginine",
+              "delta": 0.0013
+            },
+            {
+              "analyte": "adenine",
+              "delta": 0.0002
+            },
+            {
+              "analyte": "galactose",
+              "delta": 0.0001
+            }
+          ],
+          "top_suppressors": []
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0627,
+          "note": "increased by urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "organic_acid",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by organic_acid chemistry (top analyte phosphate). Perturbation-responsive in 6 dose experiment(s) (down). Serum-spike activators: oleate, albumin, arginine.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "low",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [
+          "low chemical purity \u2014 the audit's coarse label is unreliable; trust the reference loadings and perturbation identity over the label."
+        ],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 15,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          650.0,
+          938.0,
+          1230.0,
+          1264.0,
+          1330.0,
+          1428.0,
+          1550.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 12.9,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "guanine",
+            "contribution_pct": 15.65,
+            "family": "purine"
+          },
+          {
+            "analyte": "xanthine",
+            "contribution_pct": 13.75,
+            "family": "purine"
+          },
+          {
+            "analyte": "cysteine",
+            "contribution_pct": 5.13,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "(+)-galactose",
+            "contribution_pct": 3.56,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "methionine",
+            "contribution_pct": 2.75,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "tyrosine",
+            "contribution_pct": 2.65,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "histidine",
+            "contribution_pct": 2.01,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "papain",
+            "contribution_pct": 1.8,
+            "family": "protein"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "purine": 0.622,
+          "amino_acid": 0.265,
+          "saccharide": 0.075,
+          "protein": 0.038
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.787,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.303,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 4,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": 0.965,
+            "direction": "up",
+            "effect_size": 8.54,
+            "saturating_r2": 0.964
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": -0.947,
+            "direction": "down",
+            "effect_size": -15.3,
+            "saturating_r2": 0.948
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.736,
+            "direction": "down",
+            "effect_size": -6.69,
+            "saturating_r2": 0.836
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": -0.818,
+            "direction": "down",
+            "effect_size": -8.13,
+            "saturating_r2": 0.774
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "xanthine",
+              "delta": 0.0733
+            },
+            {
+              "analyte": "guanine",
+              "delta": 0.0509
+            },
+            {
+              "analyte": "pyruvate",
+              "delta": 0.007
+            },
+            {
+              "analyte": "methionine",
+              "delta": 0.0068
+            },
+            {
+              "analyte": "cholesterol",
+              "delta": 0.0049
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "oleate",
+              "delta": -0.0667
+            },
+            {
+              "analyte": "albumin",
+              "delta": -0.0448
+            },
+            {
+              "analyte": "hypoxanthine",
+              "delta": -0.03
+            },
+            {
+              "analyte": "adenine",
+              "delta": -0.0261
+            },
+            {
+              "analyte": "ergothioneine",
+              "delta": -0.0207
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": -0.1055,
+          "note": "selectively decreased by urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "purine",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by purine chemistry (top analyte guanine). Perturbation-responsive in 4 dose experiment(s) (up/down). Serum-spike activators: xanthine, guanine, pyruvate.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "low",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 16,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          892.0,
+          1062.0,
+          1130.0,
+          1296.0,
+          1466.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 13.2,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "myristic acid",
+            "contribution_pct": 4.66,
+            "family": "fatty_acid"
+          },
+          {
+            "analyte": "arachidic acid",
+            "contribution_pct": 4.35,
+            "family": "fatty_acid"
+          },
+          {
+            "analyte": "palmitic acid",
+            "contribution_pct": 4.24,
+            "family": "fatty_acid"
+          },
+          {
+            "analyte": "lauric acid",
+            "contribution_pct": 4.18,
+            "family": "fatty_acid"
+          },
+          {
+            "analyte": "tribehenin",
+            "contribution_pct": 4.13,
+            "family": "triglyceride"
+          },
+          {
+            "analyte": "triarachidin",
+            "contribution_pct": 4.08,
+            "family": "triglyceride"
+          },
+          {
+            "analyte": "tristearin",
+            "contribution_pct": 4.08,
+            "family": "triglyceride"
+          },
+          {
+            "analyte": "tripalmitin",
+            "contribution_pct": 3.9,
+            "family": "triglyceride"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "fatty_acid": 0.518,
+          "triglyceride": 0.482
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.847,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.35,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 5,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": 0.811,
+            "direction": "up",
+            "effect_size": 1.27,
+            "saturating_r2": 0.763
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.895,
+            "direction": "down",
+            "effect_size": -6.28,
+            "saturating_r2": 0.936
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": 0.833,
+            "direction": "up",
+            "effect_size": 8.25,
+            "saturating_r2": 0.788
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.842,
+            "direction": "down",
+            "effect_size": -8.91,
+            "saturating_r2": 0.868
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": -0.9,
+            "direction": "down",
+            "effect_size": -20.54,
+            "saturating_r2": 0.887
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "oleate",
+              "delta": 0.0139
+            },
+            {
+              "analyte": "adenine",
+              "delta": 0.0088
+            },
+            {
+              "analyte": "histidine",
+              "delta": 0.008
+            },
+            {
+              "analyte": "hydroxyproline",
+              "delta": 0.0079
+            },
+            {
+              "analyte": "acetoacetate",
+              "delta": 0.0076
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "ergothioneine",
+              "delta": -0.0198
+            },
+            {
+              "analyte": "riboflavin",
+              "delta": -0.0035
+            },
+            {
+              "analyte": "glutamate",
+              "delta": -0.0035
+            },
+            {
+              "analyte": "cholesterol",
+              "delta": -0.003
+            },
+            {
+              "analyte": "pyruvate",
+              "delta": -0.0029
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": -0.0096,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "triglyceride",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by fatty_acid chemistry (top analyte myristic acid). Perturbation-responsive in 5 dose experiment(s) (up/down). Serum-spike activators: oleate, adenine, histidine.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "moderate",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 17,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          556.0,
+          578.0,
+          790.0,
+          1236.0,
+          1396.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 11.2,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "uracil",
+            "contribution_pct": 16.91,
+            "family": "pyrimidine"
+          },
+          {
+            "analyte": "cytosine",
+            "contribution_pct": 8.27,
+            "family": "pyrimidine"
+          },
+          {
+            "analyte": "t-rna",
+            "contribution_pct": 5.35,
+            "family": "nucleic_acid"
+          },
+          {
+            "analyte": "ribo\ufb02avin",
+            "contribution_pct": 4.33,
+            "family": "cofactor"
+          },
+          {
+            "analyte": "b-dna",
+            "contribution_pct": 3.21,
+            "family": "nucleic_acid"
+          },
+          {
+            "analyte": "a-dna",
+            "contribution_pct": 3.02,
+            "family": "nucleic_acid"
+          },
+          {
+            "analyte": "(+)-galactose",
+            "contribution_pct": 2.65,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "urate",
+            "contribution_pct": 2.32,
+            "family": "purine"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "pyrimidine": 0.547,
+          "nucleic_acid": 0.251,
+          "cofactor": 0.094,
+          "saccharide": 0.058,
+          "purine": 0.05
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.819,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.253,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 5,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.965,
+            "direction": "down",
+            "effect_size": -10.29,
+            "saturating_r2": 0.974
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": -0.987,
+            "direction": "down",
+            "effect_size": -10.73,
+            "saturating_r2": 0.984
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.735,
+            "direction": "down",
+            "effect_size": -11.76,
+            "saturating_r2": 0.779
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": -0.757,
+            "direction": "down",
+            "effect_size": -6.63,
+            "saturating_r2": 0.847
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": 0.801,
+            "direction": "up",
+            "effect_size": 2.67,
+            "saturating_r2": 0.588
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [],
+          "top_suppressors": []
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "pyrimidine",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by pyrimidine chemistry (top analyte uracil). Perturbation-responsive in 5 dose experiment(s) (up/down). ",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "moderate",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [
+          "low chemical purity \u2014 the audit's coarse label is unreliable; trust the reference loadings and perturbation identity over the label."
+        ],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 18,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          478.0,
+          578.0,
+          914.0,
+          1022.0,
+          1088.0,
+          1120.0,
+          1258.0,
+          1332.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 22.0,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "cellulose",
+            "contribution_pct": 6.2,
+            "family": "polysaccharide"
+          },
+          {
+            "analyte": "lactose",
+            "contribution_pct": 5.62,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "lactate",
+            "contribution_pct": 5.43,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "(+)-lactose",
+            "contribution_pct": 5.17,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "amylopectin",
+            "contribution_pct": 5.07,
+            "family": "polysaccharide"
+          },
+          {
+            "analyte": "amylose",
+            "contribution_pct": 4.79,
+            "family": "polysaccharide"
+          },
+          {
+            "analyte": "xylanase",
+            "contribution_pct": 4.61,
+            "family": "protein"
+          },
+          {
+            "analyte": "chitin",
+            "contribution_pct": 3.76,
+            "family": "polysaccharide"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "polysaccharide": 0.488,
+          "saccharide": 0.266,
+          "organic_acid": 0.133,
+          "protein": 0.113
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.882,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.367,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 6,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": -0.837,
+            "direction": "down",
+            "effect_size": -9.85,
+            "saturating_r2": 0.941
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.991,
+            "direction": "down",
+            "effect_size": -10.88,
+            "saturating_r2": 0.994
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": -0.744,
+            "direction": "down",
+            "effect_size": -4.79,
+            "saturating_r2": 0.513
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.908,
+            "direction": "down",
+            "effect_size": -14.72,
+            "saturating_r2": 0.89
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": -0.818,
+            "direction": "down",
+            "effect_size": -7.83,
+            "saturating_r2": 0.757
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": 0.982,
+            "direction": "up",
+            "effect_size": 47.84,
+            "saturating_r2": 0.973
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "ergothioneine",
+              "delta": 0.0694
+            },
+            {
+              "analyte": "urate",
+              "delta": 0.0138
+            },
+            {
+              "analyte": "histidine",
+              "delta": 0.0091
+            },
+            {
+              "analyte": "mannose",
+              "delta": 0.0082
+            },
+            {
+              "analyte": "dna",
+              "delta": 0.0072
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "guanine",
+              "delta": -0.021
+            },
+            {
+              "analyte": "xanthine",
+              "delta": -0.0142
+            },
+            {
+              "analyte": "oleate",
+              "delta": -0.0124
+            },
+            {
+              "analyte": "hypoxanthine",
+              "delta": -0.0068
+            },
+            {
+              "analyte": "adenine",
+              "delta": -0.0021
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": -0.0322,
+          "note": "selectively decreased by urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "saccharide",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by polysaccharide chemistry (top analyte cellulose). Perturbation-responsive in 6 dose experiment(s) (up/down). Serum-spike activators: ergothioneine, urate, histidine.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "moderate",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 19,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          578.0,
+          606.0,
+          640.0,
+          674.0,
+          838.0,
+          904.0,
+          1208.0,
+          1418.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 14.6,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "creatinine",
+            "contribution_pct": 13.93,
+            "family": "small_nitrogenous"
+          },
+          {
+            "analyte": "tubulin",
+            "contribution_pct": 8.83,
+            "family": "protein"
+          },
+          {
+            "analyte": "gluth",
+            "contribution_pct": 3.56,
+            "family": "unknown"
+          },
+          {
+            "analyte": "ergothioneine",
+            "contribution_pct": 3.37,
+            "family": "cofactor"
+          },
+          {
+            "analyte": "cysteine",
+            "contribution_pct": 2.97,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "(-)-arabinose",
+            "contribution_pct": 2.9,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "mannose",
+            "contribution_pct": 2.9,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "phosphatidylinositol",
+            "contribution_pct": 2.64,
+            "family": "lipid"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "small_nitrogenous": 0.339,
+          "protein": 0.215,
+          "saccharide": 0.141,
+          "unknown": 0.087,
+          "cofactor": 0.082,
+          "amino_acid": 0.072,
+          "lipid": 0.064
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.825,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.192,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 5,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": -0.754,
+            "direction": "down",
+            "effect_size": -15.92,
+            "saturating_r2": 0.972
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.86,
+            "direction": "down",
+            "effect_size": -12.21,
+            "saturating_r2": 0.972
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": -0.978,
+            "direction": "down",
+            "effect_size": -20.47,
+            "saturating_r2": 0.99
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.864,
+            "direction": "down",
+            "effect_size": -10.34,
+            "saturating_r2": 0.575
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": 0.945,
+            "direction": "up",
+            "effect_size": 16.35,
+            "saturating_r2": 0.785
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "xanthine",
+              "delta": 0.0493
+            },
+            {
+              "analyte": "guanine",
+              "delta": 0.0302
+            },
+            {
+              "analyte": "oleate",
+              "delta": 0.0184
+            },
+            {
+              "analyte": "serine",
+              "delta": 0.0096
+            },
+            {
+              "analyte": "creatinine",
+              "delta": 0.0085
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "hypoxanthine",
+              "delta": -0.0454
+            },
+            {
+              "analyte": "adenine",
+              "delta": -0.0256
+            },
+            {
+              "analyte": "ergothioneine",
+              "delta": -0.0156
+            },
+            {
+              "analyte": "hydroxyproline",
+              "delta": -0.0156
+            },
+            {
+              "analyte": "acetoacetate",
+              "delta": -0.0141
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0571,
+          "note": "increased by urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "protein",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by small_nitrogenous chemistry (top analyte creatinine). Perturbation-responsive in 5 dose experiment(s) (up/down). Serum-spike activators: xanthine, guanine, oleate.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "moderate",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [
+          "low chemical purity \u2014 the audit's coarse label is unreliable; trust the reference loadings and perturbation identity over the label."
+        ],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 20,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          468.0,
+          592.0,
+          626.0,
+          818.0,
+          1038.0,
+          1472.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 14.3,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "fructose",
+            "contribution_pct": 11.19,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "(-)-fructose",
+            "contribution_pct": 10.26,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "urate",
+            "contribution_pct": 6.08,
+            "family": "purine"
+          },
+          {
+            "analyte": "ascorbate",
+            "contribution_pct": 4.78,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "cysteine",
+            "contribution_pct": 3.79,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "acetyl coenzyme a",
+            "contribution_pct": 3.4,
+            "family": "protein"
+          },
+          {
+            "analyte": "2-deoxy-d-ribose",
+            "contribution_pct": 3.38,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "diethylstilbestrol",
+            "contribution_pct": 3.25,
+            "family": "sterol"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "saccharide": 0.538,
+          "purine": 0.132,
+          "organic_acid": 0.104,
+          "amino_acid": 0.082,
+          "protein": 0.074,
+          "sterol": 0.07
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.768,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.4,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 4,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": -0.925,
+            "direction": "down",
+            "effect_size": -6.1,
+            "saturating_r2": 0.957
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": 0.903,
+            "direction": "up",
+            "effect_size": 2.92,
+            "saturating_r2": 0.912
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": -0.96,
+            "direction": "down",
+            "effect_size": -17.37,
+            "saturating_r2": 0.949
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": -0.891,
+            "direction": "down",
+            "effect_size": -17.84,
+            "saturating_r2": 0.907
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "galactose",
+              "delta": 0.026
+            },
+            {
+              "analyte": "hydroxyproline",
+              "delta": 0.0253
+            },
+            {
+              "analyte": "arginine",
+              "delta": 0.0245
+            },
+            {
+              "analyte": "isoleucine",
+              "delta": 0.0242
+            },
+            {
+              "analyte": "glycogen",
+              "delta": 0.0234
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "xanthine",
+              "delta": -0.0679
+            },
+            {
+              "analyte": "oleate",
+              "delta": -0.0521
+            },
+            {
+              "analyte": "albumin",
+              "delta": -0.025
+            },
+            {
+              "analyte": "guanine",
+              "delta": -0.0217
+            },
+            {
+              "analyte": "ergothioneine",
+              "delta": -0.0174
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": -0.1481,
+          "note": "selectively decreased by urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "saccharide",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by saccharide chemistry (top analyte fructose). Perturbation-responsive in 4 dose experiment(s) (up/down). Serum-spike activators: galactose, hydroxyproline, arginine.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "low",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 21,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          512.0,
+          552.0,
+          576.0,
+          612.0,
+          928.0,
+          978.0,
+          1068.0,
+          1272.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 16.7,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "fructose-6-phosphate",
+            "contribution_pct": 9.4,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "arginine",
+            "contribution_pct": 8.57,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "n-acetyl- d-glucosamine",
+            "contribution_pct": 6.04,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "histidine",
+            "contribution_pct": 5.46,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "ergothioneine",
+            "contribution_pct": 5.27,
+            "family": "cofactor"
+          },
+          {
+            "analyte": "n-acetylglucosamine",
+            "contribution_pct": 4.33,
+            "family": "saccharide"
+          },
+          {
+            "analyte": "ure",
+            "contribution_pct": 3.51,
+            "family": "unknown"
+          },
+          {
+            "analyte": "malic acid",
+            "contribution_pct": 2.73,
+            "family": "organic_acid"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "saccharide": 0.436,
+          "amino_acid": 0.31,
+          "cofactor": 0.116,
+          "unknown": 0.078,
+          "organic_acid": 0.06
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.769,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.293,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 6,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": -0.978,
+            "direction": "down",
+            "effect_size": -5.61,
+            "saturating_r2": 0.914
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.855,
+            "direction": "down",
+            "effect_size": -5.92,
+            "saturating_r2": 0.691
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": -0.943,
+            "direction": "down",
+            "effect_size": -6.6,
+            "saturating_r2": 0.865
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": -0.912,
+            "direction": "down",
+            "effect_size": -5.17,
+            "saturating_r2": 0.919
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.96,
+            "direction": "down",
+            "effect_size": -15.51,
+            "saturating_r2": 0.962
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": -0.729,
+            "direction": "down",
+            "effect_size": -2.95,
+            "saturating_r2": 0.606
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "albumin",
+              "delta": 0.0056
+            }
+          ],
+          "top_suppressors": []
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0124,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "saccharide",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by saccharide chemistry (top analyte fructose-6-phosphate). Perturbation-responsive in 6 dose experiment(s) (down). Serum-spike activators: albumin.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "low",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [
+          "low chemical purity \u2014 the audit's coarse label is unreliable; trust the reference loadings and perturbation identity over the label."
+        ],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 22,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          640.0,
+          760.0,
+          866.0,
+          916.0,
+          1290.0,
+          1356.0,
+          1424.0,
+          1704.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 17.8,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "fumarate",
+            "contribution_pct": 5.59,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "asparagine",
+            "contribution_pct": 3.98,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "acetoacetate",
+            "contribution_pct": 3.8,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "glutamate",
+            "contribution_pct": 3.69,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "aspartate",
+            "contribution_pct": 3.63,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "tryptophan",
+            "contribution_pct": 3.58,
+            "family": "amino_acid"
+          },
+          {
+            "analyte": "gluth",
+            "contribution_pct": 3.2,
+            "family": "unknown"
+          },
+          {
+            "analyte": "methionine",
+            "contribution_pct": 2.61,
+            "family": "amino_acid"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "amino_acid": 0.461,
+          "organic_acid": 0.433,
+          "unknown": 0.106
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.735,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.222,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 6,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": -0.745,
+            "direction": "down",
+            "effect_size": -8.28,
+            "saturating_r2": 0.895
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.974,
+            "direction": "down",
+            "effect_size": -13.17,
+            "saturating_r2": 0.977
+          },
+          {
+            "experiment": "adenine::cAu@785nm",
+            "spearman_rho": -0.965,
+            "direction": "down",
+            "effect_size": -13.38,
+            "saturating_r2": 0.987
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": -0.864,
+            "direction": "down",
+            "effect_size": -9.62,
+            "saturating_r2": 0.841
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.897,
+            "direction": "down",
+            "effect_size": -11.33,
+            "saturating_r2": 0.914
+          },
+          {
+            "experiment": "ergothioneine",
+            "spearman_rho": -0.918,
+            "direction": "down",
+            "effect_size": -22.86,
+            "saturating_r2": 0.885
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "ergothioneine",
+              "delta": 0.0381
+            },
+            {
+              "analyte": "urate",
+              "delta": 0.0197
+            },
+            {
+              "analyte": "albumin",
+              "delta": 0.0178
+            },
+            {
+              "analyte": "hypoxanthine",
+              "delta": 0.015
+            },
+            {
+              "analyte": "fructose",
+              "delta": 0.0112
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "xanthine",
+              "delta": -0.0051
+            },
+            {
+              "analyte": "guanine",
+              "delta": -0.0051
+            },
+            {
+              "analyte": "serine",
+              "delta": -0.004
+            },
+            {
+              "analyte": "glycerol",
+              "delta": -0.0016
+            },
+            {
+              "analyte": "glycogen",
+              "delta": -0.0005
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0189,
+          "note": "stable under urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "protein",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by amino_acid chemistry (top analyte fumarate). Perturbation-responsive in 6 dose experiment(s) (down). Serum-spike activators: ergothioneine, urate, albumin.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "low",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [
+          "low chemical purity \u2014 the audit's coarse label is unreliable; trust the reference loadings and perturbation identity over the label.",
+          "below-threshold bootstrap stability; may be partly a fitting mixture."
+        ],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    },
+    {
+      "component_id": {
+        "value": 23,
+        "provenance": "frozen atlas index"
+      },
+      "dominant_raman_peaks_cm": {
+        "value": [
+          732.0,
+          782.0,
+          944.0,
+          1382.0,
+          1628.0,
+          1698.0
+        ],
+        "provenance": "Component Audit p5 (find_peaks on basis loading)"
+      },
+      "spectral_bandwidth_cm": {
+        "value": 12.9,
+        "provenance": "Component Audit p5"
+      },
+      "reference_analyte_loadings": {
+        "value": [
+          {
+            "analyte": "phosphoenolpyruvate",
+            "contribution_pct": 11.66,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "citrate",
+            "contribution_pct": 10.59,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "pyruvate",
+            "contribution_pct": 9.05,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "cytosine",
+            "contribution_pct": 6.22,
+            "family": "pyrimidine"
+          },
+          {
+            "analyte": "a-dna",
+            "contribution_pct": 5.27,
+            "family": "nucleic_acid"
+          },
+          {
+            "analyte": "aspartic acid",
+            "contribution_pct": 5.0,
+            "family": "organic_acid"
+          },
+          {
+            "analyte": "t-rna",
+            "contribution_pct": 4.97,
+            "family": "nucleic_acid"
+          },
+          {
+            "analyte": "b-dna",
+            "contribution_pct": 4.56,
+            "family": "nucleic_acid"
+          }
+        ],
+        "provenance": "Component Audit p2 composition"
+      },
+      "top_biochemical_families": {
+        "value": {
+          "organic_acid": 0.633,
+          "nucleic_acid": 0.258,
+          "pyrimidine": 0.108
+        },
+        "provenance": "Component Audit p2 (family shares)"
+      },
+      "bootstrap_stability": {
+        "value": 0.781,
+        "provenance": "Component Audit p1 (analyte bootstrap)"
+      },
+      "purity": {
+        "value": 0.428,
+        "provenance": "Component Audit p4 (dominant-family fraction)"
+      },
+      "n_dose_experiments_responsive": {
+        "value": 5,
+        "provenance": "Perturbation Response part1"
+      },
+      "dose_response_evidence": {
+        "value": [
+          {
+            "experiment": "adenine::cAg@532nm",
+            "spearman_rho": -0.886,
+            "direction": "down",
+            "effect_size": -8.1,
+            "saturating_r2": 0.928
+          },
+          {
+            "experiment": "adenine::cAg@785nm",
+            "spearman_rho": -0.952,
+            "direction": "down",
+            "effect_size": -5.97,
+            "saturating_r2": 0.92
+          },
+          {
+            "experiment": "adenine::sAg@532nm",
+            "spearman_rho": -0.837,
+            "direction": "down",
+            "effect_size": -5.34,
+            "saturating_r2": 0.648
+          },
+          {
+            "experiment": "adenine::sAg@785nm",
+            "spearman_rho": -0.749,
+            "direction": "down",
+            "effect_size": -5.85,
+            "saturating_r2": 0.739
+          },
+          {
+            "experiment": "adenine::sAu@785nm",
+            "spearman_rho": 0.754,
+            "direction": "up",
+            "effect_size": 1.68,
+            "saturating_r2": 0.334
+          }
+        ],
+        "provenance": "Perturbation Response part1"
+      },
+      "serum_spike_evidence": {
+        "value": {
+          "top_activators": [
+            {
+              "analyte": "oleate",
+              "delta": 0.0372
+            },
+            {
+              "analyte": "albumin",
+              "delta": 0.0298
+            },
+            {
+              "analyte": "serine",
+              "delta": 0.0078
+            },
+            {
+              "analyte": "phosphate",
+              "delta": 0.0033
+            },
+            {
+              "analyte": "xanthine",
+              "delta": 0.0021
+            }
+          ],
+          "top_suppressors": [
+            {
+              "analyte": "glutathione",
+              "delta": -0.0028
+            },
+            {
+              "analyte": "galactose",
+              "delta": -0.0028
+            },
+            {
+              "analyte": "ergothioneine",
+              "delta": -0.0028
+            },
+            {
+              "analyte": "glycogen",
+              "delta": -0.0028
+            },
+            {
+              "analyte": "glucose",
+              "delta": -0.0027
+            }
+          ]
+        },
+        "provenance": "Perturbation Response part2 fingerprints"
+      },
+      "depletion_evidence": {
+        "value": {
+          "uricase_delta": 0.0396,
+          "note": "increased by urate depletion"
+        },
+        "provenance": "Perturbation Response part8 (uricase)"
+      },
+      "audit_label_v0_1": {
+        "value": "organic_acid",
+        "provenance": "Component Audit p1 (coarse label \u2014 UNRELIABLE on low purity)"
+      },
+      "current_interpretation": {
+        "value": "Latent Raman motif whose reference loadings are dominated by organic_acid chemistry (top analyte phosphoenolpyruvate). Perturbation-responsive in 5 dose experiment(s) (up/down). Serum-spike activators: oleate, albumin, serine.",
+        "provenance": "engine v1 synthesis of loading+dose+spike evidence"
+      },
+      "interpretation_confidence": {
+        "value": "low",
+        "provenance": "engine v1 rubric (stability x purity x perturbation agreement)"
+      },
+      "known_caveats": {
+        "value": [],
+        "provenance": "engine v1"
+      },
+      "outstanding_uncertainties": {
+        "value": [
+          "shares evidence across multiple chemical families (mixture motif)",
+          "theme attribution is fractional (see component_theme_weights_v1)",
+          "responses are matrix-specific (pure vs serum consistency ~0)"
+        ],
+        "provenance": "engine v1"
+      },
+      "version_history": [
+        {
+          "version": "1.0",
+          "change": "initial registry from frozen v0.1 evidence"
+        }
+      ]
+    }
+  ]
+}

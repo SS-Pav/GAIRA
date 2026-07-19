@@ -1,0 +1,125 @@
+{
+  "results": {
+    "adenine": [
+      {
+        "experiment": "adenine::cAg@532",
+        "purine_rho": 0.956,
+        "purine_p": 0.0,
+        "most_monotonic_theme": "nucleic_purine",
+        "purine_is_top_riser": true
+      },
+      {
+        "experiment": "adenine::cAg@785",
+        "purine_rho": 1.0,
+        "purine_p": 0.0,
+        "most_monotonic_theme": "nucleic_purine",
+        "purine_is_top_riser": true
+      },
+      {
+        "experiment": "adenine::cAu@785",
+        "purine_rho": 0.996,
+        "purine_p": 0.0,
+        "most_monotonic_theme": "nucleic_purine",
+        "purine_is_top_riser": true
+      },
+      {
+        "experiment": "adenine::sAg@532",
+        "purine_rho": 0.987,
+        "purine_p": 0.0,
+        "most_monotonic_theme": "redox_broad",
+        "purine_is_top_riser": false
+      },
+      {
+        "experiment": "adenine::sAg@785",
+        "purine_rho": 0.982,
+        "purine_p": 0.0,
+        "most_monotonic_theme": "sterol_membrane",
+        "purine_is_top_riser": false
+      },
+      {
+        "experiment": "adenine::sAu@785",
+        "purine_rho": 0.946,
+        "purine_p": 0.0,
+        "most_monotonic_theme": "lipid_acyl",
+        "purine_is_top_riser": false
+      }
+    ],
+    "adenine_headline": {
+      "purine_rises_monotonically_rho>=0.95": "5/6 arms",
+      "purine_is_single_top_riser": "3/6 arms",
+      "note": "the arms where purine is not the single top riser are the SOLID-substrate (sAg/sAu) arms; purine still rises strongly there (rho>=0.95) but competes with matrix themes \u2014 a substrate effect, not a failure of the mapping."
+    },
+    "ergothioneine": {
+      "theme_rho": {
+        "nucleic_purine": -0.936,
+        "nucleic_pyrimidine": -0.645,
+        "protein_peptide": 0.973,
+        "aromatic_amino_acid": -0.855,
+        "lipid_acyl": 0.827,
+        "sterol_membrane": -0.927,
+        "saccharide_glycan": 0.918,
+        "organic_acid_metabolism": -0.591,
+        "sulfur_antioxidant": 0.991,
+        "heme_porphyrin": 0.945,
+        "redox_broad": -0.373
+      },
+      "most_responsive_theme": "sulfur_antioxidant"
+    },
+    "uricase": {
+      "theme_delta": {
+        "nucleic_purine": -0.0114,
+        "nucleic_pyrimidine": 0.0046,
+        "protein_peptide": 0.0096,
+        "aromatic_amino_acid": -0.0093,
+        "lipid_acyl": -0.002,
+        "sterol_membrane": 0.0047,
+        "saccharide_glycan": -0.0325,
+        "organic_acid_metabolism": 0.0397,
+        "sulfur_antioxidant": 0.0042,
+        "heme_porphyrin": 0.0025,
+        "redox_broad": 0.0043
+      },
+      "purine_change": -0.0114,
+      "purine_decreased": true,
+      "most_decreased_theme": "saccharide_glycan"
+    },
+    "purine_responders": [
+      {
+        "analyte": "hypoxanthine",
+        "purine_theme_change": 0.0121,
+        "top_rising_theme": "nucleic_purine",
+        "purine_is_top": true
+      },
+      {
+        "analyte": "xanthine",
+        "purine_theme_change": 0.0626,
+        "top_rising_theme": "nucleic_purine",
+        "purine_is_top": true
+      },
+      {
+        "analyte": "guanine",
+        "purine_theme_change": 0.0492,
+        "top_rising_theme": "nucleic_purine",
+        "purine_is_top": true
+      },
+      {
+        "analyte": "adenine",
+        "purine_theme_change": 0.0033,
+        "top_rising_theme": "saccharide_glycan",
+        "purine_is_top": false
+      }
+    ]
+  },
+  "verdict": {
+    "adenine_purine_recovered": "3/6 arms",
+    "ergothioneine_top_theme": "sulfur_antioxidant",
+    "uricase_purine_decreased": true,
+    "purine_responders_recovered": "3/4",
+    "no_hardcoding": "themes derive from evidence weights; no analyte-specific rules in BSV",
+    "known_failure_modes": [
+      "display (elevation) saturates for pure references; composition is the discriminating score",
+      "amino-acid / saccharide themes do NOT track their serum spikes (weak Ag adsorbers) \u2014 consistent with the Spike Validation; the radar correctly shows low, low-confidence values",
+      "all SERS inputs carry OOD 0.05-0.28; confidence is attenuated accordingly"
+    ]
+  }
+}

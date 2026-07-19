@@ -1,0 +1,25 @@
+{
+  "versions": {
+    "reference_atlas": "v0.1",
+    "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+    "component_registry": "v1.0",
+    "biochemical_ontology": "v2.0",
+    "component_theme_weights": "v1.0",
+    "reference_normalization": "v1.0",
+    "bsv": "v2.0",
+    "radar": "v2.0",
+    "interpretation_engine": "v1.0",
+    "engine_build": "v1.0"
+  },
+  "layer_independence": {
+    "reference_atlas": "frozen \u2014 changing it invalidates everything above",
+    "component_registry": "may add evidence fields; must not change component identity",
+    "biochemical_ontology": "may re-theme freely; does not touch atlas coordinates",
+    "component_theme_weights": "may re-weight; recomputed from registry + ontology",
+    "reference_normalization": "recomputed only if the atlas changes",
+    "bsv": "may change aggregation/normalisation math; documented in equations",
+    "radar": "presentation only",
+    "interpretation_engine": "domain context + evidence prose; no numeric effect on BSV"
+  },
+  "principle": "The ontology can evolve without changing the frozen Raman coordinates."
+}
