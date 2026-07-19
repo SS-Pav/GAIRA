@@ -4,6 +4,8 @@
 
 > **Decision: Phase 1.5 succeeded. Phase 2 (Canonical Representation Discovery) is now scientifically justified. STOP here; do not begin representation discovery until instructed.**
 
+> **[2026-07-18 correction, applied during Phase 2 §4 input audit]** The 6 adenine bAgNPs Ag-SERS spectra were re-examined and found to be a **controlled concentration series** (10 pg → 10 µg/mL), i.e. controlled-perturbation *evaluation* data, not independent molecular grounding. They are therefore **excluded from representation fitting** (data-role separation, Phase-2 §3). Adenine remains a matched grounding analyte via the Gobbato Raman + Ag-SERS references, so **the matched analyte count (51) and unique analyte count (87) are unchanged**. Corrected corpus totals for representation: **485 → 479 spectra; 271 → 265 Ag-SERS spectra** (214 Raman unchanged). The corpus-composition and exclusion tables below reflect the original Phase 1.5 assembly; the authoritative Phase-2 input is `results/v5_rebuild/phase2_stage_a/tables/phase2_input_manifest.csv`.
+
 ## What was built (canonical, in `src/gaira`)
 - `src/gaira/data/gobbato.py` — loader for the Gobbato pure-metabolite corpus (B&WTek 785 nm; parses Raman-Shift + Dark-Subtracted columns; extracts the zip to a temp cache, never into source).
 - `src/gaira/data/synonyms.py` — abbreviation/synonym/salt/hydrate reconciler → canonical analyte names.

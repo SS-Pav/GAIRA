@@ -135,8 +135,16 @@ Hypothesis **H1**: *"A shared biochemical representation exists across Raman and
 
 ---
 
-## 6. Phase 2 — Canonical Representation Discovery (renamed; was "observation-layer feasibility"; DO NOT begin yet)
+## 6. Phase 2 — Canonical Representation Discovery (renamed; was "observation-layer feasibility")
 **Objective:** determine whether stable biochemical structure emerges from the completed 785 nm grounding corpus (Stage A→B→C). The matched-analyte observation-layer feasibility detail below is subsumed and pursued only if H1 is supported after Phase 1.5.
+
+### Stage A — Direct Spectral Representations — COMPLETE (2026-07-18)
+**Decision: Outcome B — modality-stratified representation defensible.** Evidence (479-spectrum audited corpus: 214 Raman + 265 Ag-SERS, 87 analytes, 51 matched; adenine concentration series excluded as controlled perturbation):
+- Direct spectra recover chemistry **within** a modality (Raman-only clustering ARI vs analyte 0.49–0.52; PC1 loadings bootstrap-stable).
+- They do **not** support a single shared Raman/Ag-SERS coordinate system: even under the best preprocessing (SNV), a modality classifier scores balanced accuracy 0.83 (chance 0.50) and cross-modal top-1 retrieval is only 0.16.
+- A **weak but statistically-significant** residual cross-modal signal exists (matched > unmatched cosine, permutation p ≤ 0.02); peak positions do **not** align across modalities (SERS shifts/re-weights bands).
+- **Preprocessing is decisive:** SNV suppresses modality (bal-acc 0.83, joint chemistry ARI 0.15 > nuisance 0.02); L2 lets modality/source dominate (bal-acc 0.94, nuisance ARI 0.26).
+**Implication:** represent Raman and Ag-SERS separately; align at analyte/ontology level, not in raw spectral space (supports **H4-preliminary** over **H1**). **Next:** Stage B chemical features — test whether chemistry-aware, modality-invariant features strengthen the residual cross-modal signal before revisiting a shared space. Report: `GAIRA_V5_PHASE2_STAGE_A_DIRECT_REPRESENTATION_REPORT.md`; notebook `results/v5_rebuild/phase2_stage_a/`. **Stage B/C not started.**
 
 ### (retained) matched-analyte observation-layer feasibility
 **Objective:** learn how acquisition mode changes the observed spectrum of the *same* analyte. Build matched-analyte sets across RamanBioLib Raman, Gobbato Raman, Gobbato Ag-SERS, metabolite-63 Ag-SERS, adenine Ag-SERS, ORC-Ag peak evidence, future Au-SERS. **Determine exact analyte overlap first** (e.g., adenine, hypoxanthine, uric acid, ergothioneine, glucose, amino acids appear in multiple sources).
