@@ -1,0 +1,623 @@
+{
+  "n_matched_analytes": 51,
+  "preprocessing": "A2_asls_savgol_snv",
+  "match_tolerance_cm": 12.0,
+  "distributions": {
+    "cosine": {
+      "mean": 0.14701843169739193,
+      "median": 0.10093659196844242,
+      "std": 0.16288177617719699,
+      "min": -0.11325397538046038,
+      "max": 0.5409442102040167,
+      "q25": 0.044204264144723775,
+      "q75": 0.24491045324487687
+    },
+    "pearson": {
+      "mean": 0.14701843169739223,
+      "median": 0.10093659196844268,
+      "std": 0.16288177617719732,
+      "min": -0.11325397538046067,
+      "max": 0.5409442102040176,
+      "q25": 0.04420426414472387,
+      "q75": 0.24491045324487748
+    },
+    "spearman": {
+      "mean": 0.15922719814026146,
+      "median": 0.11264939050442792,
+      "std": 0.15974315537219447,
+      "min": -0.16836584195813276,
+      "max": 0.6880149971074798,
+      "q25": 0.05880939744766736,
+      "q75": 0.24402460442731527
+    },
+    "spectral_angle_deg": {
+      "mean": 81.39023884809671,
+      "median": 84.20689385332413,
+      "std": 9.666609060096519,
+      "min": 57.25206151782448,
+      "max": 96.50292725142145,
+      "q25": 75.82215242711683,
+      "q75": 87.46645467219125
+    },
+    "nrmse": {
+      "mean": 0.16904984424842656,
+      "median": 0.15735012411116583,
+      "std": 0.043465080719866774,
+      "min": 0.08106962886482261,
+      "max": 0.2740964314090311,
+      "q25": 0.14002762515126077,
+      "q75": 0.1932513563065955
+    },
+    "dtw": {
+      "mean": 0.3110943466321699,
+      "median": 0.32265095364532126,
+      "std": 0.0589772961499316,
+      "min": 0.16856147561756019,
+      "max": 0.4272283256223024,
+      "q25": 0.2785913193949057,
+      "q75": 0.3502595358727828
+    },
+    "derivative_corr": {
+      "mean": 0.03402648798664009,
+      "median": 0.03268932079416068,
+      "std": 0.10066223627645686,
+      "min": -0.1475607227509429,
+      "max": 0.37132234790895247,
+      "q25": -0.040093189486486235,
+      "q75": 0.08781023588804346
+    },
+    "peak_f1": {
+      "mean": 0.3340687854194058,
+      "median": 0.34285714285714286,
+      "std": 0.11783302180804255,
+      "min": 0.08695652173913043,
+      "max": 0.5555555555555555,
+      "q25": 0.2376470588235294,
+      "q75": 0.40512820512820513
+    },
+    "peak_jaccard": {
+      "mean": 0.20643527496560687,
+      "median": 0.20689655172413793,
+      "std": 0.08542856195929217,
+      "min": 0.045454545454545456,
+      "max": 0.38461538461538464,
+      "q25": 0.13484848484848483,
+      "q75": 0.2540322580645161
+    },
+    "mean_abs_shift": {
+      "mean": 6.1097320224983696,
+      "median": 5.818181818181818,
+      "std": 1.6542616099427674,
+      "min": 3.5,
+      "max": 10.0,
+      "q25": 4.78030303030303,
+      "q75": 7.0
+    },
+    "matched_pct_of_raman": {
+      "mean": 72.69597714902153,
+      "median": 80.0,
+      "std": 25.89775634580845,
+      "min": 7.6923076923076925,
+      "max": 100.0,
+      "q25": 57.77777777777778,
+      "q75": 92.58241758241758
+    },
+    "unmatched_pct_of_raman": {
+      "mean": 27.304022850978477,
+      "median": 19.999999999999996,
+      "std": 25.89775634580845,
+      "min": 0.0,
+      "max": 92.3076923076923,
+      "q25": 7.417582417582413,
+      "q75": 42.22222222222222
+    },
+    "peak_correspondence_score": {
+      "mean": 0.17109209465122385,
+      "median": 0.17486338797814208,
+      "std": 0.08457031664659177,
+      "min": 0.028985507246376815,
+      "max": 0.3373493975903614,
+      "q25": 0.10510510510510512,
+      "q75": 0.23211410167931906
+    },
+    "red_intensity_redistribution_index": {
+      "mean": 0.2303870331321194,
+      "median": 0.2348308457060017,
+      "std": 0.07286574536593639,
+      "min": 0.07464021323564586,
+      "max": 0.45290686075373165,
+      "q25": 0.18249474097015467,
+      "q75": 0.25758945628215746
+    },
+    "red_peak_rank_corr": {
+      "mean": 0.06047856201502207,
+      "median": 0.12280701754385966,
+      "std": 0.440296414252258,
+      "min": -0.9999999999999999,
+      "max": 1.0,
+      "q25": -0.2885281385281385,
+      "q75": 0.37662337662337664
+    },
+    "red_norm_intensity_corr": {
+      "mean": 0.15684826816421804,
+      "median": 0.20695852060640973,
+      "std": 0.3686811523878409,
+      "min": -0.7994020525404993,
+      "max": 0.94014038923785,
+      "q25": -0.059920470276093304,
+      "q75": 0.41695319273896186
+    },
+    "red_band_ratio_preservation": {
+      "mean": 0.08990519014107436,
+      "median": 0.13416169053201682,
+      "std": 0.47753470786541824,
+      "min": -0.9810544935970391,
+      "max": 0.9644307216677398,
+      "q25": -0.2142764041886934,
+      "q75": 0.4487065876914764
+    },
+    "within_raman_cos": {
+      "mean": 0.9378214778600534,
+      "median": 0.9861214959188965,
+      "std": 0.11145097348795888,
+      "min": 0.4895801838769498,
+      "max": 0.9998807369812566,
+      "q25": 0.9506760154974845,
+      "q75": 0.9919407299300154
+    },
+    "within_sers_cos": {
+      "mean": 0.5358711233296745,
+      "median": 0.49062333433596084,
+      "std": 0.21172390600484817,
+      "min": 0.2457989204304949,
+      "max": 0.9948296447021997,
+      "q25": 0.38497241607831356,
+      "q75": 0.6244782234344601
+    },
+    "cosine_vs_ceiling": {
+      "mean": 0.18874758572224992,
+      "median": 0.15274263568216437,
+      "std": 0.2057512312654873,
+      "min": -0.20233843201583357,
+      "max": 0.6367759553817851,
+      "q25": 0.06075472067697322,
+      "q75": 0.3181983576391829
+    },
+    "align_optimal_shift_cm": {
+      "mean": -0.19607843137254902,
+      "median": 0.0,
+      "std": 7.675987513911516,
+      "min": -10.0,
+      "max": 10.0,
+      "q25": -7.0,
+      "q75": 8.0
+    },
+    "align_cosine_gain": {
+      "mean": 0.0645291384837373,
+      "median": 0.03569244264379313,
+      "std": 0.07244711568370013,
+      "min": 0.0,
+      "max": 0.28594952181851274,
+      "q25": 0.010761731368709879,
+      "q75": 0.09778923585615348
+    }
+  },
+  "rankings": {
+    "top10_best_match_cosine": [
+      {
+        "analyte": "urea",
+        "family": "small_nitrogenous",
+        "cosine": 0.5409442102040167
+      },
+      {
+        "analyte": "albumin",
+        "family": "protein",
+        "cosine": 0.5099631647181558
+      },
+      {
+        "analyte": "hypoxanthine",
+        "family": "purine",
+        "cosine": 0.48647347982663813
+      },
+      {
+        "analyte": "creatinine",
+        "family": "small_nitrogenous",
+        "cosine": 0.4745725238281452
+      },
+      {
+        "analyte": "xanthine",
+        "family": "purine",
+        "cosine": 0.4264555275761604
+      },
+      {
+        "analyte": "acetyl-coa",
+        "family": "cofactor",
+        "cosine": 0.37773020880830144
+      },
+      {
+        "analyte": "glycerol",
+        "family": "polyol",
+        "cosine": 0.34770531246454406
+      },
+      {
+        "analyte": "triolein",
+        "family": "lipid",
+        "cosine": 0.34509400871748314
+      },
+      {
+        "analyte": "ergothioneine",
+        "family": "cofactor",
+        "cosine": 0.2996597820308895
+      },
+      {
+        "analyte": "guanine",
+        "family": "purine",
+        "cosine": 0.2969510946645046
+      }
+    ],
+    "top10_worst_match_cosine": [
+      {
+        "analyte": "proline",
+        "family": "amino_acid",
+        "cosine": -0.11325397538046038
+      },
+      {
+        "analyte": "phenylalanine",
+        "family": "amino_acid",
+        "cosine": -0.09225605940042261
+      },
+      {
+        "analyte": "pyruvate",
+        "family": "organic_acid",
+        "cosine": -0.08698381693885258
+      },
+      {
+        "analyte": "fructose-6-phosphate",
+        "family": "saccharide",
+        "cosine": -0.05240223065493026
+      },
+      {
+        "analyte": "ascorbate",
+        "family": "organic_acid",
+        "cosine": -0.03673452723024194
+      },
+      {
+        "analyte": "citrate",
+        "family": "organic_acid",
+        "cosine": -0.03219678477998364
+      },
+      {
+        "analyte": "uracil",
+        "family": "pyrimidine",
+        "cosine": -0.020747872425631288
+      },
+      {
+        "analyte": "phosphate",
+        "family": "organic_acid",
+        "cosine": -0.020307678185619175
+      },
+      {
+        "analyte": "acetoacetate",
+        "family": "organic_acid",
+        "cosine": 0.0005867707922053616
+      },
+      {
+        "analyte": "serine",
+        "family": "amino_acid",
+        "cosine": 0.0190648557425907
+      }
+    ],
+    "top10_best_peak_correspondence": [
+      {
+        "analyte": "valine",
+        "family": "amino_acid",
+        "peak_correspondence_score": 0.3373493975903614
+      },
+      {
+        "analyte": "tryptophan",
+        "family": "amino_acid",
+        "peak_correspondence_score": 0.33333333333333337
+      },
+      {
+        "analyte": "isoleucine",
+        "family": "amino_acid",
+        "peak_correspondence_score": 0.3055555555555555
+      },
+      {
+        "analyte": "glycogen",
+        "family": "polysaccharide",
+        "peak_correspondence_score": 0.30092592592592593
+      },
+      {
+        "analyte": "histidine",
+        "family": "amino_acid",
+        "peak_correspondence_score": 0.2953586497890295
+      },
+      {
+        "analyte": "hypoxanthine",
+        "family": "purine",
+        "peak_correspondence_score": 0.2948717948717948
+      },
+      {
+        "analyte": "galactose",
+        "family": "saccharide",
+        "peak_correspondence_score": 0.2657004830917875
+      },
+      {
+        "analyte": "coenzyme a",
+        "family": "cofactor",
+        "peak_correspondence_score": 0.2512820512820513
+      },
+      {
+        "analyte": "phosphatidylinositol",
+        "family": "lipid",
+        "peak_correspondence_score": 0.24882629107981216
+      },
+      {
+        "analyte": "tyrosine",
+        "family": "amino_acid",
+        "peak_correspondence_score": 0.24285714285714283
+      }
+    ],
+    "top10_worst_peak_correspondence": [
+      {
+        "analyte": "urate",
+        "family": "purine",
+        "peak_correspondence_score": 0.028985507246376815
+      },
+      {
+        "analyte": "urea",
+        "family": "small_nitrogenous",
+        "peak_correspondence_score": 0.033333333333333326
+      },
+      {
+        "analyte": "phosphate",
+        "family": "organic_acid",
+        "peak_correspondence_score": 0.03636363636363637
+      },
+      {
+        "analyte": "ergothioneine",
+        "family": "cofactor",
+        "peak_correspondence_score": 0.03703703703703703
+      },
+      {
+        "analyte": "fructose-6-phosphate",
+        "family": "saccharide",
+        "peak_correspondence_score": 0.04232804232804235
+      },
+      {
+        "analyte": "guanine",
+        "family": "purine",
+        "peak_correspondence_score": 0.052631578947368425
+      },
+      {
+        "analyte": "glutathione",
+        "family": "cofactor",
+        "peak_correspondence_score": 0.058823529411764705
+      },
+      {
+        "analyte": "hydroxyproline",
+        "family": "amino_acid",
+        "peak_correspondence_score": 0.06666666666666667
+      },
+      {
+        "analyte": "phenylalanine",
+        "family": "amino_acid",
+        "peak_correspondence_score": 0.06896551724137932
+      },
+      {
+        "analyte": "oleate",
+        "family": "lipid",
+        "peak_correspondence_score": 0.07189542483660132
+      }
+    ],
+    "top10_largest_mean_abs_shift": [
+      {
+        "analyte": "urea",
+        "family": "small_nitrogenous",
+        "mean_abs_shift": 10.0
+      },
+      {
+        "analyte": "ergothioneine",
+        "family": "cofactor",
+        "mean_abs_shift": 10.0
+      },
+      {
+        "analyte": "fructose-6-phosphate",
+        "family": "saccharide",
+        "mean_abs_shift": 9.714285714285714
+      },
+      {
+        "analyte": "glutathione",
+        "family": "cofactor",
+        "mean_abs_shift": 9.0
+      },
+      {
+        "analyte": "guanine",
+        "family": "purine",
+        "mean_abs_shift": 9.0
+      },
+      {
+        "analyte": "hydroxyproline",
+        "family": "amino_acid",
+        "mean_abs_shift": 8.666666666666666
+      },
+      {
+        "analyte": "urate",
+        "family": "purine",
+        "mean_abs_shift": 8.0
+      },
+      {
+        "analyte": "phosphate",
+        "family": "organic_acid",
+        "mean_abs_shift": 8.0
+      },
+      {
+        "analyte": "creatinine",
+        "family": "small_nitrogenous",
+        "mean_abs_shift": 7.777777777777778
+      },
+      {
+        "analyte": "lactate",
+        "family": "organic_acid",
+        "mean_abs_shift": 7.666666666666667
+      }
+    ],
+    "top10_strongest_intensity_redistribution": [
+      {
+        "analyte": "cholesterol",
+        "family": "lipid",
+        "red_intensity_redistribution_index": 0.45290686075373165
+      },
+      {
+        "analyte": "glutamate",
+        "family": "amino_acid",
+        "red_intensity_redistribution_index": 0.36559433217212045
+      },
+      {
+        "analyte": "glycine",
+        "family": "amino_acid",
+        "red_intensity_redistribution_index": 0.3649308780182052
+      },
+      {
+        "analyte": "thymine",
+        "family": "pyrimidine",
+        "red_intensity_redistribution_index": 0.3306770890065115
+      },
+      {
+        "analyte": "riboflavin",
+        "family": "cofactor",
+        "red_intensity_redistribution_index": 0.3300628981192837
+      },
+      {
+        "analyte": "hydroxyproline",
+        "family": "amino_acid",
+        "red_intensity_redistribution_index": 0.31615309193982283
+      },
+      {
+        "analyte": "citrate",
+        "family": "organic_acid",
+        "red_intensity_redistribution_index": 0.31355046979245954
+      },
+      {
+        "analyte": "fructose-6-phosphate",
+        "family": "saccharide",
+        "red_intensity_redistribution_index": 0.3042174213761339
+      },
+      {
+        "analyte": "cysteine",
+        "family": "amino_acid",
+        "red_intensity_redistribution_index": 0.29812315177618753
+      },
+      {
+        "analyte": "proline",
+        "family": "amino_acid",
+        "red_intensity_redistribution_index": 0.2586286676565325
+      }
+    ],
+    "top10_visually_identical": [
+      {
+        "analyte": "glycogen",
+        "family": "polysaccharide",
+        "peak_f1": 0.5555555555555555
+      },
+      {
+        "analyte": "xanthine",
+        "family": "purine",
+        "peak_f1": 0.5454545454545454
+      },
+      {
+        "analyte": "tryptophan",
+        "family": "amino_acid",
+        "peak_f1": 0.5
+      },
+      {
+        "analyte": "isoleucine",
+        "family": "amino_acid",
+        "peak_f1": 0.4999999999999999
+      },
+      {
+        "analyte": "galactose",
+        "family": "saccharide",
+        "peak_f1": 0.4927536231884058
+      },
+      {
+        "analyte": "n-acetylglucosamine",
+        "family": "saccharide",
+        "peak_f1": 0.49275362318840576
+      },
+      {
+        "analyte": "valine",
+        "family": "amino_acid",
+        "peak_f1": 0.4819277108433735
+      },
+      {
+        "analyte": "histidine",
+        "family": "amino_acid",
+        "peak_f1": 0.48101265822784806
+      },
+      {
+        "analyte": "phosphatidylinositol",
+        "family": "lipid",
+        "peak_f1": 0.4788732394366197
+      },
+      {
+        "analyte": "lactate",
+        "family": "organic_acid",
+        "peak_f1": 0.46153846153846156
+      }
+    ],
+    "top10_visually_different": [
+      {
+        "analyte": "urate",
+        "family": "purine",
+        "peak_f1": 0.08695652173913043
+      },
+      {
+        "analyte": "phosphate",
+        "family": "organic_acid",
+        "peak_f1": 0.10909090909090909
+      },
+      {
+        "analyte": "oleate",
+        "family": "lipid",
+        "peak_f1": 0.11764705882352941
+      },
+      {
+        "analyte": "adenine",
+        "family": "purine",
+        "peak_f1": 0.16216216216216214
+      },
+      {
+        "analyte": "triolein",
+        "family": "lipid",
+        "peak_f1": 0.163265306122449
+      },
+      {
+        "analyte": "phenylalanine",
+        "family": "amino_acid",
+        "peak_f1": 0.1724137931034483
+      },
+      {
+        "analyte": "urea",
+        "family": "small_nitrogenous",
+        "peak_f1": 0.2
+      },
+      {
+        "analyte": "guanine",
+        "family": "purine",
+        "peak_f1": 0.2105263157894737
+      },
+      {
+        "analyte": "glycine",
+        "family": "amino_acid",
+        "peak_f1": 0.21428571428571427
+      },
+      {
+        "analyte": "fructose-6-phosphate",
+        "family": "saccharide",
+        "peak_f1": 0.22222222222222224
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "A1_asls_savgol_l2": {
+    "raman": {
+      "n_spectra": 180,
+      "n_analytes": 51,
+      "chance_acc": 0.0196078431372549,
+      "loo_1nn_acc": 0.9611111111111111,
+      "loo_1nn_acc_common_removed": 0.9611111111111111,
+      "same_analyte_cos": 0.9940968305306159,
+      "diff_analyte_cos": 0.32383533615863563,
+      "separation_raw": 0.6702614943719802,
+      "same_analyte_cos_residual": 0.9875843110623121,
+      "diff_analyte_cos_residual": -0.04141363708631741,
+      "separation_residual": 1.0289979481486295
+    },
+    "sers": {
+      "n_spectra": 255,
+      "n_analytes": 51,
+      "chance_acc": 0.0196078431372549,
+      "loo_1nn_acc": 0.7294117647058823,
+      "loo_1nn_acc_common_removed": 0.7137254901960784,
+      "same_analyte_cos": 0.9499966458063442,
+      "diff_analyte_cos": 0.9022763082532221,
+      "separation_raw": 0.047720337553122105,
+      "same_analyte_cos_residual": 0.4369212001933064,
+      "diff_analyte_cos_residual": -0.012576839141410582,
+      "separation_residual": 0.44949803933471694
+    }
+  },
+  "A2_asls_savgol_snv": {
+    "raman": {
+      "n_spectra": 180,
+      "n_analytes": 51,
+      "chance_acc": 0.0196078431372549,
+      "loo_1nn_acc": 0.9611111111111111,
+      "loo_1nn_acc_common_removed": 0.9611111111111111,
+      "same_analyte_cos": 0.9893487304643866,
+      "diff_analyte_cos": 0.0424448052491367,
+      "separation_raw": 0.9469039252152499,
+      "same_analyte_cos_residual": 0.9878722116925487,
+      "diff_analyte_cos_residual": -0.04245698254962516,
+      "separation_residual": 1.030329194242174
+    },
+    "sers": {
+      "n_spectra": 255,
+      "n_analytes": 51,
+      "chance_acc": 0.0196078431372549,
+      "loo_1nn_acc": 0.7098039215686275,
+      "loo_1nn_acc_common_removed": 0.7294117647058823,
+      "same_analyte_cos": 0.5121077070704102,
+      "diff_analyte_cos": 0.1274763875627699,
+      "separation_raw": 0.3846313195076403,
+      "same_analyte_cos_residual": 0.4001011012858018,
+      "diff_analyte_cos_residual": -0.016686084278024208,
+      "separation_residual": 0.416787185563826
+    }
+  }
+}

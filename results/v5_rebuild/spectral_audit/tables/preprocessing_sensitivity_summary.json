@@ -1,0 +1,28 @@
+{
+  "A2_asls_savgol_snv": {
+    "label": "SNV (Stage B primary)",
+    "median_n_raman_peaks": 12.0,
+    "median_n_sers_peaks": 46.0,
+    "median_recall": 0.8,
+    "median_precision": 0.2222222222222222,
+    "median_f1": 0.34285714285714286,
+    "median_mean_abs_shift": 5.818181818181818,
+    "median_pcs": 0.17486338797814208,
+    "median_excess_over_mismatched_null": 0.07857142857142863,
+    "n_analytes_specific_p05": 0,
+    "n_analytes": 51
+  },
+  "A1_asls_savgol_l2": {
+    "label": "L2 (sensitivity)",
+    "median_n_raman_peaks": 13.0,
+    "median_n_sers_peaks": 41.0,
+    "median_recall": 0.7692307692307693,
+    "median_precision": 0.23255813953488372,
+    "median_f1": 0.3404255319148936,
+    "median_mean_abs_shift": 5.833333333333333,
+    "median_pcs": 0.1871345029239766,
+    "median_excess_over_mismatched_null": 0.11294117647058821,
+    "n_analytes_specific_p05": 0,
+    "n_analytes": 51
+  }
+}

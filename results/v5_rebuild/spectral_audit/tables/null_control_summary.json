@@ -1,0 +1,18 @@
+{
+  "tolerance_cm": 12.0,
+  "all_SERS_peaks": {
+    "observed_recall_median": 0.8,
+    "mismatched_null_median": 0.7085714285714287,
+    "random_null_median": 0.5966666666666667,
+    "median_excess_over_mismatched": 0.07857142857142863,
+    "n_analytes_specific_p05": 0
+  },
+  "topK_matched_counts": {
+    "observed_recall_median": 0.3076923076923077,
+    "mismatched_null_median": 0.2622222222222222,
+    "random_null_median": 0.22428571428571428,
+    "median_excess_over_mismatched": 0.020999999999999963,
+    "n_analytes_specific_p05": 5
+  },
+  "n_analytes": 51
+}
