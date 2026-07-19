@@ -1,0 +1,88 @@
+canonical_analyte,n_raman,n_sers,sources,raw_names,in_raman_785,in_sers_785,matched_785
+(+)-dextrose,1,0,['RamanBioLib'],['d-(+)-dextrose'],True,False,False
+(+)-fucose,1,0,['RamanBioLib'],['d-(+)-fucose'],True,False,False
+(+)-galactosamine,1,0,['RamanBioLib'],['d-(+)-galactosamine'],True,False,False
+(+)-mannose,1,0,['RamanBioLib'],['d-(+)-mannose'],True,False,False
+(+)-trehalose,1,0,['RamanBioLib'],['d-(+)-trehalose'],True,False,False
+(+)-xylose,1,0,['RamanBioLib'],['d-(+)-xylose'],True,False,False
+(-)-arabinose,1,0,['RamanBioLib'],['d-(-)-arabinose'],True,False,False
+(-)-fructose,1,0,['RamanBioLib'],['d-(-)-fructose'],True,False,False
+12-methyltetradecanoic acid,1,0,['RamanBioLib'],['12-methyltetradecanoic acid'],True,False,False
+13-methylmyristicacid,1,0,['RamanBioLib'],['13-methylmyristicacid'],True,False,False
+14-methylhexadecanoic acid,1,0,['RamanBioLib'],['14-methylhexadecanoic acid'],True,False,False
+14-methylpentadecanoic acid,1,0,['RamanBioLib'],['14-methylpentadecanoic acid'],True,False,False
+15-methylpalmiticacid,1,0,['RamanBioLib'],['15-methylpalmiticacid'],True,False,False
+acetoacetate,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['acetoacetate'],True,True,True
+acetyl coenzyme a,1,0,['RamanBioLib'],['acetyl coenzyme a'],True,False,False
+acetyl-coa,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['acetyl-coa'],True,True,True
+adenine,4,11,"['RamanBioLib', 'adenine_sers_control', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['Adenine', 'adenine']",True,True,True
+alanine,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['alanine', 'l-alanine']",True,True,True
+albumin,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['albumin'],True,True,True
+amylopectin,1,0,['RamanBioLib'],['amylopectin'],True,False,False
+amylose,1,0,['RamanBioLib'],['amylose'],True,False,False
+arginine,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['arginine', 'l-arginine']",True,True,True
+ascorbate,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['ascorbate', 'ascorbic acid']",True,True,True
+cellulose,1,0,['RamanBioLib'],['cellulose'],True,False,False
+chitin,1,0,['RamanBioLib'],['chitin'],True,False,False
+cholesterol,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['cholesterol'],True,True,True
+citrate,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['citrate', 'citric acid']",True,True,True
+coenzyme a,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['coenzyme a'],True,True,True
+creatinine,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['creatinine'],True,True,True
+cysteine,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['cysteine'],True,True,True
+cytosine,1,0,['RamanBioLib'],['cytosine'],True,False,False
+dna,0,5,['gobbato_sers_metabolites'],['dna'],False,True,False
+ergothioneine,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['ergothioneine'],True,True,True
+fructose,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['fructose'],True,True,True
+fructose-6-phosphate,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['d-fructose-6-phosphate', 'fructose-6-phosphate']",True,True,True
+fumarate,1,0,['RamanBioLib'],['fumarate'],True,False,False
+galactose,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['galactose'],True,True,True
+glucose,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['glucose'],True,True,True
+glutamate,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['glutamate', 'l-glutamate']",True,True,True
+glutathione,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['glutathione'],True,True,True
+glycerol,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['glycerol'],True,True,True
+glycine,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['glycine'],True,True,True
+glycogen,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['glycogen'],True,True,True
+guanine,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['guanine'],True,True,True
+histidine,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['histidine', 'l-histidine']",True,True,True
+hydroxyproline,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['hydroxyproline'],True,True,True
+hypoxanthine,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['hypoxanthine'],True,True,True
+isoleucine,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['isoleucine'],True,True,True
+lactate,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['lactate'],True,True,True
+lactose,1,0,['RamanBioLib'],['lactose'],True,False,False
+lauric acid,1,0,['RamanBioLib'],['lauric acid'],True,False,False
+leucine,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['leucine'],True,True,True
+malic acid,1,0,['RamanBioLib'],['malic acid'],True,False,False
+mannose,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['mannose'],True,True,True
+melanin,1,0,['RamanBioLib'],['melanin'],True,False,False
+methionine,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['methionine'],True,True,True
+myristic acid,1,0,['RamanBioLib'],['myristic acid'],True,False,False
+n-acetyl- d-glucosamine,1,0,['RamanBioLib'],['n-acetyl- d-glucosamine'],True,False,False
+n-acetylglucosamine,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['n-acetylglucosamine'],True,True,True
+oleate,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['oleate', 'oleic acid']",True,True,True
+palmitic acid,1,0,['RamanBioLib'],['palmitic acid'],True,False,False
+phenylalanine,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['l-phenylalanine', 'phenylalanine']",True,True,True
+phosphate,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['phosphate'],True,True,True
+phosphatidylinositol,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['phosphatidylinositol'],True,True,True
+phosphoenolpyruvate,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['phosphoenolpyruvate'],True,True,True
+proline,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['l-proline', 'proline']",True,True,True
+pyruvate,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['pyruvate'],True,True,True
+riboflavin,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['riboflavin'],True,True,True
+riboﬂavin,1,0,['RamanBioLib'],['riboﬂavin'],True,False,False
+rna,0,5,['gobbato_sers_metabolites'],['rna'],False,True,False
+serine,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['l-serine', 'serine']",True,True,True
+stearate,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['stearate', 'stearic acid']",True,True,True
+succinic acid,1,0,['RamanBioLib'],['succinic acid'],True,False,False
+thymine,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['thymine'],True,True,True
+trilinolein,1,0,['RamanBioLib'],['trilinolein'],True,False,False
+trilinolenin,1,0,['RamanBioLib'],['trilinolenin'],True,False,False
+triolein,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['triolein'],True,True,True
+tryptophan,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['l-tryptophan', 'tryptophan']",True,True,True
+tyrosine,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['l-tyrosine', 'tyrosine']",True,True,True
+uracil,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['uracil'],True,True,True
+urate,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['urate'],True,True,True
+urea,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['urea'],True,True,True
+vaccenic acid,1,0,['RamanBioLib'],['vaccenic acid'],True,False,False
+valine,4,5,"['RamanBioLib', 'gobbato_raman_metabolites', 'gobbato_sers_metabolites']","['l-valine', 'valine']",True,True,True
+xanthine,3,5,"['gobbato_raman_metabolites', 'gobbato_sers_metabolites']",['xanthine'],True,True,True
+β-carotene,1,0,['RamanBioLib'],['β-carotene'],True,False,False
+β-d-glucose,1,0,['RamanBioLib'],['β-d-glucose'],True,False,False
