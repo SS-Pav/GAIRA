@@ -101,9 +101,44 @@ Canonical registries: `grounding_spectrum_registry`, `grounding_analyte_registry
 **Decision gate — proceed if** replicates become internally consistent, known analyte features are preserved, spectra share a defensible common wavenumber space, and source effects are measurable/interpretable. **Stop or stratify if** preprocessing removes analyte-specific bands, source/instrument effects dominate irreducibly, modality-specific pipelines are required, or peak-only and full-spectrum data cannot combine directly.
 **Output:** `reports/GAIRA_V5_PHASE1_PREPROCESSING_AND_COMPARABILITY_REPORT.md` — recommends **one global pipeline OR explicitly separate modality-specific pipelines.**
 
+**Phase 1 outcome (2026-07-18):** completed. Spectra share a common window; but same-analyte cross-modality similarity is low (cosine 0.25–0.53), modality leaks into structure, and only **7 analytes were matched** across the loaded Raman/Ag-SERS sources — too thin to estimate any cross-mode model. **Root cause: an observation model was being attempted before the molecular grounding corpus was fully integrated (the Gobbato pure Raman + pure Ag-SERS corpus, which alone holds ~43 internally-matched analytes at 785 nm, had not been loaded).** Scientific sequencing error, corrected by inserting Phase 1.5.
+
 ---
 
-## 6. Phase 2 — matched-analyte observation-layer feasibility (only after Phase 1)
+## 5.5 Phase 1.5 — Canonical Grounding Corpus Completion (MANDATORY before any observation-model work)
+
+**Rationale.** No representation or observation-model decision may be made on an incomplete grounding corpus. Phase 1.5 completes the corpus and re-quantifies matched analytes before anything else.
+
+### V5 simplification — 785 nm only
+The V5 canonical biochemical coordinate system is built **using 785 nm spectra only.** All other excitation wavelengths are **excluded from the V5 representation pipeline** (not deleted) and remain fully indexed with provenance so they can later support multi-excitation observation models. Purpose: remove excitation wavelength as a nuisance variable while we test whether biochemical structure emerges. RamanBioLib's 785-nm subset qualifies; its 532/1064/488/… subsets are indexed-but-excluded; **metabolite-63 is 633 nm → excluded from V5**.
+
+### Objectives
+1. **Re-audit every direct grounding source** and decide eligibility. **Include** iff: direct molecular reference · 785 nm · sufficient metadata · usable full spectra. **Exclude** biological mixtures, controlled-perturbation datasets, peak-only datasets, and non-785 spectra. Peak-only (ORC-Ag) stays available later for MSS.
+2. **Fully integrate the Gobbato corpus** (highest priority): parse + load pure **Raman** metabolite powders and pure **Ag-SERS** metabolite spectra (B&WTek 785 nm) → analytes, spectra, matched analytes, replicates, concentrations, preprocessing needs; one canonical registry.
+3. **Reconcile analyte synonyms** — synonyms, capitalization, salt/hydrate forms, common names, abbreviations → `canonical_analyte_registry_v5` (no duplicate analytes).
+4. **Rebuild the grounding summary** — analytes; 785 Raman spectra; 785 Ag-SERS spectra; matched Raman/Ag analytes; spectra entering representation learning; spectra excluded + reasons.
+5. **Re-run the overlap analysis** — analytes available in BOTH 785 Raman AND 785 Ag-SERS. **Only quantify overlap; do not estimate an observation model.**
+
+### Prohibited in Phase 1.5
+PCA, hierarchical clustering, NMF, embeddings, ontology construction, observation-model fitting, BSV, MSS.
+
+### Output & gate
+`GAIRA_V5_PHASE1_5_GROUNDING_COMPLETION_REPORT.md`. Proceed to Phase 2 only if the completed 785 nm corpus provides enough matched analytes + coverage that emergent-structure analysis is defensible; otherwise trigger a further data-acquisition phase.
+
+---
+
+## Representation philosophy (explicit staged hierarchy)
+The post-Phase-1.5 question is **not** "can we build an observation model?" It is **"Does the completed 785 nm molecular grounding corpus contain stable biochemical structure?"** Stages, each attempted only if the prior fails: **Stage A — direct spectra · Stage B — chemically-constrained features · Stage C — learned embeddings** (grounding-only, nuisance-invariant).
+
+## Observation model — a hypothesis, not an assumption
+Hypothesis **H1**: *"A shared biochemical representation exists across Raman and Ag-SERS observations."* Observation-model development begins **only** if the completed corpus supports H1; otherwise maintain **modality-stratified representations**.
+
+---
+
+## 6. Phase 2 — Canonical Representation Discovery (renamed; was "observation-layer feasibility"; DO NOT begin yet)
+**Objective:** determine whether stable biochemical structure emerges from the completed 785 nm grounding corpus (Stage A→B→C). The matched-analyte observation-layer feasibility detail below is subsumed and pursued only if H1 is supported after Phase 1.5.
+
+### (retained) matched-analyte observation-layer feasibility
 **Objective:** learn how acquisition mode changes the observed spectrum of the *same* analyte. Build matched-analyte sets across RamanBioLib Raman, Gobbato Raman, Gobbato Ag-SERS, metabolite-63 Ag-SERS, adenine Ag-SERS, ORC-Ag peak evidence, future Au-SERS. **Determine exact analyte overlap first** (e.g., adenine, hypoxanthine, uric acid, ergothioneine, glucose, amino acids appear in multiple sources).
 
 Per matched analyte compare: peak presence/absence/shifts; relative-intensity changes; substrate-exclusive peaks; enhancement/suppression; band reliability; within- vs between-mode variance.
