@@ -1,0 +1,60 @@
+{
+  "domain": "Raman only (canonical observation domain)",
+  "excluded_domains": [
+    "Ag-SERS",
+    "Au-SERS",
+    "DART",
+    "serum Ag-colloid",
+    "metabolite-63 (633 nm Ag-SERS)",
+    "adenine Ag-SERS series",
+    "european_multi_instrument_adenine (cAg/sAg/cAu substrates)"
+  ],
+  "n_spectra": 375,
+  "n_analytes": 167,
+  "n_bins": 676,
+  "window_cm": [
+    450.0,
+    1800.0
+  ],
+  "grid_step_cm": 2.0,
+  "preprocessing": {
+    "baseline": "asls",
+    "smooth": "savgol",
+    "norm": "l2"
+  },
+  "sources": {
+    "RamanBioLib": 202,
+    "gobbato_raman_metabolites": 153,
+    "amino_acid_raman_grounding": 20
+  },
+  "excitations": {
+    "785.0": 234,
+    "1064.0": 55,
+    "532.0": 50,
+    "488.0": 29,
+    "514.5": 3,
+    "632.8": 1,
+    "457.9": 1,
+    "850.0": 1,
+    "633.0": 1
+  },
+  "n_analytes_multi_excitation": 41,
+  "replicate_groups": {
+    "n": 272,
+    "median_size": 1.0,
+    "max_size": 3
+  },
+  "analytes_with_replicates": 87,
+  "provenance": {
+    "RamanBioLib": "digitized reference library, 141 compounds, 9 excitations",
+    "gobbato_raman_metabolites": "B&WTek 785 nm pure metabolite powders",
+    "amino_acid_raman_grounding": "20 pure amino-acid Raman references"
+  },
+  "external_validation_sets": {
+    "covid_serum_raman": "biological serum Raman (COVID/suspected/healthy/tube) \u2014 projection only, never used for fitting"
+  },
+  "notes": [
+    "Excitation is tracked as a nuisance factor and tested for leakage; all sources share the 450-1800 cm-1 window.",
+    "The Ag-SERS-constrained 520-1750 window of Stage A/B is not used here."
+  ]
+}

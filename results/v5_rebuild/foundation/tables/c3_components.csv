@@ -1,0 +1,25 @@
+component,theme,theme_purity,top_analytes,dominant_bands_cm,coactivation_cluster,mean_activation,max_activation,axis_theme,axis
+0,cofactor,0.413,"['riboflavin', 'riboﬂavin', 'tryptophan', 'leucine', 'histidine', 'hemoglobin']","[754.0, 1178.0, 1224.0, 1348.0, 1578.0]",3,0.011880812203041503,0.15015541041457492,cofactor,12
+1,triglyceride,0.412,"['tricaprylin', 'tricaproin', 'tri-11-eicosenoin', 'elaidic acid', 'tripalmitolein', 'cholesteryl oleate']","[1302.0, 1442.0]",1,0.0829140162720287,0.34043471736463526,triglyceride,1
+2,protein,1.0,"['superoxide dismutases', 'trypsin', 'ubiquitin', 'trypsin inhibitor', 'thaumatin', 'elastin']","[1000.0, 1130.0, 1240.0, 1336.0, 1456.0, 1676.0]",2,0.03484464290815705,0.22699695733485778,protein,4
+3,sterol,0.316,"['adenine', 'acetyl coenzyme a', 'estrone', 'coenzyme a', 'acetyl-coa', 'methionine']","[722.0, 1250.0, 1334.0, 1486.0]",3,0.01775018098024259,0.2649595052360545,sterol,10
+4,saccharide,0.925,"['galactose', '(+)-galactosamine', '(-)-fructose', 'fructose', '(+)-fucose', '(+)-mannose']","[464.0, 528.0, 872.0, 1060.0, 1086.0, 1268.0]",3,0.019954126417223852,0.18266832351693307,saccharide,2
+5,amino_acid,0.265,"['tyrosine', 'acetoacetate', '(+)-raffinose pentahydrate', 'aspartate', 'insulin', 'diethylstilbestrol']","[640.0, 828.0, 1178.0, 1614.0]",3,0.011574130480094052,0.23151319620612726,unassigned,8
+6,protein,0.389,"['ure', 'urea', 'phenylalanine', 'tryptophan', 'lectin', 'alb']",[1006.0],2,0.02098204381021866,0.26428966697406736,protein,4
+7,fatty_acid,0.374,"['arachidonic acid', 'trilinolenin', 'α-linolenic acid', 'linoleic acid', 'trilinolein', 'ascorbate']","[1260.0, 1430.0, 1654.0]",2,0.026259533804270794,0.1876299176257225,fatty_acid,9
+8,protein,0.498,"['melanin', 'myoglobin', 'horseradish peroxidase', 'hemoglobin', 'diethylstilbestrol', 'cytochrome c']","[1306.0, 1362.0, 1590.0]",3,0.014162961501700995,0.2450797076965141,protein,4
+9,amino_acid,0.365,"['glycine', '(+)-xylose', 'proline', 'chitin', 'gluth', 'glutathione']","[506.0, 896.0, 1034.0, 1326.0, 1412.0, 1444.0]",3,0.020824331025419838,0.38250395566521006,amino_acid,5
+10,saccharide,0.812,"['(-)-arabinose', 'β-d-glucose', '(+)-dextrose', 'proline', '(+)-arabinose', '(+)-glucose']","[842.0, 916.0, 1054.0, 1266.0, 1374.0, 1458.0]",3,0.021565595916340965,0.20617992365641716,saccharide,2
+11,amino_acid,0.562,"['hydroxyproline', 'serine', 'alanine', '(+)-sucrose', '(+)-arabinose', 'glycerol']","[852.0, 1322.0, 1360.0, 1464.0]",3,0.026436468469591606,0.3443098757754306,amino_acid,5
+12,saccharide,0.825,"['(+)-dextrose', 'β-d-glucose', 'valine', 'glucose', '(-)-ribose', '(+)-glucose']","[540.0, 774.0, 1020.0, 1122.0, 1354.0, 1458.0]",3,0.030030453011218063,0.3082672113977985,saccharide,2
+13,pyrimidine,0.4,"['thymine', 'b-dna', 'cytochrome c', 'cholesterol', 'hemoglobin', 'a-dna']","[616.0, 742.0, 806.0, 984.0, 1370.0, 1672.0]",3,0.017424220424797764,0.49680405912603687,pyrimidine,7
+14,organic_acid,0.582,"['phosphate', 'aspartic acid', 'succinic acid', 'citrate', 'amylopectin', 'xylanase']",[940.0],3,0.03215103493267624,0.4640346366687416,organic_acid,3
+15,purine,0.557,"['guanine', 'xanthine', 'cysteine', '(+)-galactose', 'methionine', 'phosphatidylinositol']","[650.0, 1230.0, 1264.0, 1330.0, 1550.0]",3,0.016937462059383058,0.46957335285030194,purine,11
+16,triglyceride,0.561,"['myristic acid', 'arachidic acid', 'palmitic acid', 'lauric acid', 'tribehenin', 'tristearin']","[892.0, 1062.0, 1130.0, 1296.0, 1466.0]",1,0.043775312943953114,0.34866682474187227,triglyceride,1
+17,pyrimidine,0.46,"['uracil', 'cytosine', 't-rna', 'b-dna', 'a-dna', '(+)-galactose']","[556.0, 578.0, 790.0, 1236.0, 1396.0]",3,0.019983685302279338,0.5174027805393191,pyrimidine,7
+18,polysaccharide,0.5,"['amylopectin', 'amylose', 'xylanase', 'lactate', 'lactose', 'cellulose']","[478.0, 1022.0, 1120.0, 1258.0, 1332.0, 1380.0]",3,0.04008927575593376,0.38433667178610437,polysaccharide,6
+19,small_nitrogenous,0.285,"['creatinine', 'tubulin', 'gluth', 'phosphatidylinositol', 'mannose', 'cysteine']","[606.0, 674.0, 838.0, 904.0, 1208.0, 1418.0]",3,0.02531862961478275,0.5932166959614219,unassigned,8
+20,saccharide,0.465,"['fructose', '(-)-fructose', 'urate', 'ascorbate', 'cysteine', 'acetyl coenzyme a']","[468.0, 626.0, 818.0, 1038.0, 1472.0]",3,0.02258098889421336,0.3817280709050463,saccharide,2
+21,saccharide,0.503,"['fructose-6-phosphate', 'arginine', 'n-acetyl- d-glucosamine', 'n-acetylglucosamine', 'histidine', 'ergothioneine']","[512.0, 576.0, 612.0, 978.0, 1068.0, 1318.0]",3,0.022881440141936153,0.42669071254937435,saccharide,2
+22,organic_acid,0.434,"['aspartate', 'acetoacetate', 'fumarate', 'gluth', 'glutamate', 'asparagine']","[640.0, 760.0, 866.0, 1356.0, 1424.0, 1704.0]",3,0.03329050827715101,0.2623416399297073,organic_acid,3
+23,organic_acid,0.605,"['citrate', 'phosphoenolpyruvate', 'pyruvate', 'a-dna', 'b-dna', 't-rna']","[782.0, 944.0, 1382.0, 1698.0]",3,0.01679071955841281,0.34717457634607607,organic_acid,3

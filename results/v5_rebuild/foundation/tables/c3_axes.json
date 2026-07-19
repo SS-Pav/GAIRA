@@ -1,0 +1,619 @@
+{
+  "clustering": {
+    "n_axes": 3,
+    "silhouette": 0.13091870246986922
+  },
+  "axes": [
+    {
+      "axis": 1,
+      "tentative_theme": "triglyceride",
+      "n_components": 2,
+      "components": [
+        1,
+        16
+      ],
+      "mean_component_purity": 0.487,
+      "dominant_bands_cm": [
+        892.0,
+        1062.0,
+        1130.0,
+        1296.0,
+        1302.0,
+        1442.0,
+        1466.0
+      ],
+      "top_analytes": [
+        "tripalmitin",
+        "tristearin",
+        "triarachidin",
+        "trimyristin",
+        "tribehenin",
+        "trilaurin",
+        "arachidic acid",
+        "tricaprin",
+        "lauric acid",
+        "14-methylpentadecanoic acid"
+      ],
+      "top_analyte_families": {
+        "triglyceride": 7,
+        "fatty_acid": 3
+      },
+      "literature_hits": 8,
+      "literature_groups": {
+        "Proteins": 3,
+        "Lipids-FattyAcids": 3,
+        "Saccharides-Monosaccharides": 2
+      },
+      "literature_supports_theme": true,
+      "expected_literature_group": "Lipids-FattyAcids",
+      "theme_basis": "chemistry of top-loading reference analytes (mean purity 0.49); corroborated by literature group 'Lipids-FattyAcids'",
+      "theme_confidence": "medium",
+      "uncertainty_note": "TENTATIVE post-hoc interpretation of an unsupervised decomposition. Themes were not used to fit the manifold and are not molecular assignments.",
+      "variance_share": 0.20096575474053519
+    },
+    {
+      "axis": 2,
+      "tentative_theme": "saccharide",
+      "n_components": 5,
+      "components": [
+        4,
+        10,
+        12,
+        20,
+        21
+      ],
+      "mean_component_purity": 0.706,
+      "dominant_bands_cm": [
+        464.0,
+        468.0,
+        512.0,
+        528.0,
+        540.0,
+        576.0,
+        612.0,
+        626.0,
+        774.0,
+        818.0,
+        842.0,
+        872.0,
+        916.0,
+        978.0
+      ],
+      "top_analytes": [
+        "fructose-6-phosphate",
+        "fructose",
+        "(-)-fructose",
+        "(+)-dextrose",
+        "\u03b2-d-glucose",
+        "arginine",
+        "(-)-ribose",
+        "glucose",
+        "(+)-glucose",
+        "n-acetyl- d-glucosamine"
+      ],
+      "top_analyte_families": {
+        "saccharide": 9,
+        "amino_acid": 1
+      },
+      "literature_hits": 30,
+      "literature_groups": {
+        "Proteins": 9,
+        "Lipids-FattyAcids": 8,
+        "NucleicAcids": 6,
+        "Lipids-Hormones": 3,
+        "AminoAcids": 2,
+        "Saccharides-Monosaccharides": 2
+      },
+      "literature_supports_theme": true,
+      "expected_literature_group": "Saccharides-Monosaccharides",
+      "theme_basis": "chemistry of top-loading reference analytes (mean purity 0.71); corroborated by literature group 'Saccharides-Monosaccharides'",
+      "theme_confidence": "medium-high",
+      "uncertainty_note": "TENTATIVE post-hoc interpretation of an unsupervised decomposition. Themes were not used to fit the manifold and are not molecular assignments.",
+      "variance_share": 0.18561568286055186
+    },
+    {
+      "axis": 3,
+      "tentative_theme": "organic_acid",
+      "n_components": 3,
+      "components": [
+        14,
+        22,
+        23
+      ],
+      "mean_component_purity": 0.54,
+      "dominant_bands_cm": [
+        640.0,
+        760.0,
+        782.0,
+        866.0,
+        940.0,
+        944.0,
+        1356.0,
+        1382.0,
+        1424.0,
+        1698.0,
+        1704.0
+      ],
+      "top_analytes": [
+        "citrate",
+        "aspartic acid",
+        "phosphate",
+        "succinic acid",
+        "asparagine",
+        "acetoacetate",
+        "pyruvate",
+        "phosphoenolpyruvate",
+        "glutamate",
+        "aspartate"
+      ],
+      "top_analyte_families": {
+        "organic_acid": 8,
+        "amino_acid": 2
+      },
+      "literature_hits": 17,
+      "literature_groups": {
+        "Lipids-FattyAcids": 7,
+        "NucleicAcids": 4,
+        "Proteins": 2,
+        "Saccharides-Polysaccharides": 2,
+        "AminoAcids": 1,
+        "Lipids-Hormones": 1
+      },
+      "literature_supports_theme": false,
+      "expected_literature_group": null,
+      "theme_basis": "chemistry of top-loading reference analytes (mean purity 0.54); no literature corroboration",
+      "theme_confidence": "low",
+      "uncertainty_note": "TENTATIVE post-hoc interpretation of an unsupervised decomposition. Themes were not used to fit the manifold and are not molecular assignments.",
+      "variance_share": 0.13044404649951089
+    },
+    {
+      "axis": 4,
+      "tentative_theme": "protein",
+      "n_components": 3,
+      "components": [
+        2,
+        6,
+        8
+      ],
+      "mean_component_purity": 0.629,
+      "dominant_bands_cm": [
+        1000.0,
+        1006.0,
+        1130.0,
+        1240.0,
+        1306.0,
+        1336.0,
+        1362.0,
+        1456.0,
+        1590.0,
+        1676.0
+      ],
+      "top_analytes": [
+        "lectin",
+        "thaumatin",
+        "carbonic anhydrase",
+        "pepsinogen",
+        "horseradish peroxidase",
+        "superoxide dismutases",
+        "ubiquitin",
+        "ure",
+        "elastase",
+        "trypsin"
+      ],
+      "top_analyte_families": {
+        "protein": 9,
+        "unknown": 1
+      },
+      "literature_hits": 8,
+      "literature_groups": {
+        "AminoAcids": 2,
+        "NucleicAcids": 2,
+        "Proteins": 2,
+        "Lipids-FattyAcids": 2
+      },
+      "literature_supports_theme": true,
+      "expected_literature_group": "Proteins",
+      "theme_basis": "chemistry of top-loading reference analytes (mean purity 0.63); corroborated by literature group 'Proteins'",
+      "theme_confidence": "medium-high",
+      "uncertainty_note": "TENTATIVE post-hoc interpretation of an unsupervised decomposition. Themes were not used to fit the manifold and are not molecular assignments.",
+      "variance_share": 0.11102373471875569
+    },
+    {
+      "axis": 5,
+      "tentative_theme": "amino_acid",
+      "n_components": 2,
+      "components": [
+        9,
+        11
+      ],
+      "mean_component_purity": 0.464,
+      "dominant_bands_cm": [
+        506.0,
+        852.0,
+        896.0,
+        1034.0,
+        1322.0,
+        1326.0,
+        1360.0,
+        1412.0,
+        1444.0,
+        1464.0
+      ],
+      "top_analytes": [
+        "glycine",
+        "serine",
+        "hydroxyproline",
+        "alanine",
+        "glucosamine",
+        "proline",
+        "(+)-xylose",
+        "(+)-sucrose",
+        "(+)-arabinose",
+        "glycerol"
+      ],
+      "top_analyte_families": {
+        "amino_acid": 5,
+        "saccharide": 4,
+        "polyol": 1
+      },
+      "literature_hits": 15,
+      "literature_groups": {
+        "Proteins": 7,
+        "Lipids-FattyAcids": 3,
+        "AminoAcids": 2,
+        "Saccharides-Monosaccharides": 2,
+        "NucleicAcids": 1
+      },
+      "literature_supports_theme": true,
+      "expected_literature_group": "AminoAcids",
+      "theme_basis": "chemistry of top-loading reference analytes (mean purity 0.46); corroborated by literature group 'AminoAcids'",
+      "theme_confidence": "medium",
+      "uncertainty_note": "TENTATIVE post-hoc interpretation of an unsupervised decomposition. Themes were not used to fit the manifold and are not molecular assignments.",
+      "variance_share": 0.07496923615377336
+    },
+    {
+      "axis": 6,
+      "tentative_theme": "polysaccharide",
+      "n_components": 1,
+      "components": [
+        18
+      ],
+      "mean_component_purity": 0.5,
+      "dominant_bands_cm": [
+        478.0,
+        1022.0,
+        1120.0,
+        1258.0,
+        1332.0,
+        1380.0
+      ],
+      "top_analytes": [
+        "amylopectin",
+        "amylose",
+        "xylanase",
+        "lactate",
+        "lactose",
+        "cellulose",
+        "(+)-lactose",
+        "chitin",
+        "glycogen",
+        "(+)-mannose"
+      ],
+      "top_analyte_families": {
+        "polysaccharide": 5,
+        "saccharide": 3,
+        "protein": 1,
+        "organic_acid": 1
+      },
+      "literature_hits": 8,
+      "literature_groups": {
+        "Proteins": 4,
+        "Saccharides-Monosaccharides": 1,
+        "Lipids-FattyAcids": 1,
+        "NucleicAcids": 1,
+        "Lipids-Hormones": 1
+      },
+      "literature_supports_theme": false,
+      "expected_literature_group": "Saccharides-Polysaccharides",
+      "theme_basis": "chemistry of top-loading reference analytes (mean purity 0.50); no literature corroboration",
+      "theme_confidence": "low",
+      "uncertainty_note": "TENTATIVE post-hoc interpretation of an unsupervised decomposition. Themes were not used to fit the manifold and are not molecular assignments.",
+      "variance_share": 0.06359313455324803
+    },
+    {
+      "axis": 7,
+      "tentative_theme": "pyrimidine",
+      "n_components": 2,
+      "components": [
+        13,
+        17
+      ],
+      "mean_component_purity": 0.43,
+      "dominant_bands_cm": [
+        556.0,
+        578.0,
+        616.0,
+        742.0,
+        790.0,
+        806.0,
+        984.0,
+        1236.0,
+        1370.0,
+        1396.0,
+        1672.0
+      ],
+      "top_analytes": [
+        "uracil",
+        "thymine",
+        "b-dna",
+        "cytosine",
+        "t-rna",
+        "a-dna",
+        "(+)-galactose",
+        "ribo\ufb02avin",
+        "hemoglobin",
+        "urate"
+      ],
+      "top_analyte_families": {
+        "pyrimidine": 3,
+        "nucleic_acid": 3,
+        "saccharide": 1,
+        "cofactor": 1,
+        "protein": 1,
+        "purine": 1
+      },
+      "literature_hits": 15,
+      "literature_groups": {
+        "Proteins": 7,
+        "NucleicAcids": 3,
+        "Lipids-FattyAcids": 2,
+        "Saccharides-Monosaccharides": 2,
+        "AminoAcids": 1
+      },
+      "literature_supports_theme": true,
+      "expected_literature_group": "NucleicAcids",
+      "theme_basis": "chemistry of top-loading reference analytes (mean purity 0.43); corroborated by literature group 'NucleicAcids'",
+      "theme_confidence": "medium",
+      "uncertainty_note": "TENTATIVE post-hoc interpretation of an unsupervised decomposition. Themes were not used to fit the manifold and are not molecular assignments.",
+      "variance_share": 0.059339709620599077
+    },
+    {
+      "axis": 8,
+      "tentative_theme": "unassigned",
+      "n_components": 2,
+      "components": [
+        5,
+        19
+      ],
+      "mean_component_purity": 0.275,
+      "dominant_bands_cm": [
+        606.0,
+        640.0,
+        674.0,
+        828.0,
+        838.0,
+        904.0,
+        1178.0,
+        1208.0,
+        1418.0,
+        1614.0
+      ],
+      "top_analytes": [
+        "creatinine",
+        "tubulin",
+        "tyrosine",
+        "mannose",
+        "gluth",
+        "phosphatidylinositol",
+        "cysteine",
+        "(+)-mannose",
+        "ergothioneine",
+        "acetoacetate"
+      ],
+      "top_analyte_families": {
+        "amino_acid": 2,
+        "saccharide": 2,
+        "small_nitrogenous": 1,
+        "protein": 1,
+        "unknown": 1,
+        "lipid": 1,
+        "cofactor": 1,
+        "organic_acid": 1
+      },
+      "literature_hits": 14,
+      "literature_groups": {
+        "Proteins": 11,
+        "Lipids-FattyAcids": 2,
+        "Saccharides-Monosaccharides": 1
+      },
+      "literature_supports_theme": false,
+      "expected_literature_group": null,
+      "theme_basis": "chemistry of top-loading reference analytes (mean purity 0.28); no literature corroboration",
+      "theme_confidence": "low",
+      "uncertainty_note": "TENTATIVE post-hoc interpretation of an unsupervised decomposition. Themes were not used to fit the manifold and are not molecular assignments.",
+      "variance_share": 0.05852254031820321
+    },
+    {
+      "axis": 9,
+      "tentative_theme": "fatty_acid",
+      "n_components": 1,
+      "components": [
+        7
+      ],
+      "mean_component_purity": 0.374,
+      "dominant_bands_cm": [
+        1260.0,
+        1430.0,
+        1654.0
+      ],
+      "top_analytes": [
+        "arachidonic acid",
+        "trilinolenin",
+        "\u03b1-linolenic acid",
+        "linoleic acid",
+        "trilinolein",
+        "ascorbate",
+        "palmitoleic acid",
+        "tripalmitolein",
+        "fumarate",
+        "oleate"
+      ],
+      "top_analyte_families": {
+        "fatty_acid": 3,
+        "triglyceride": 3,
+        "organic_acid": 3,
+        "lipid": 1
+      },
+      "literature_hits": 1,
+      "literature_groups": {
+        "Lipids-FattyAcids": 1
+      },
+      "literature_supports_theme": true,
+      "expected_literature_group": "Lipids-FattyAcids",
+      "theme_basis": "chemistry of top-loading reference analytes (mean purity 0.37); corroborated by literature group 'Lipids-FattyAcids'",
+      "theme_confidence": "medium",
+      "uncertainty_note": "TENTATIVE post-hoc interpretation of an unsupervised decomposition. Themes were not used to fit the manifold and are not molecular assignments.",
+      "variance_share": 0.04165518171710512
+    },
+    {
+      "axis": 10,
+      "tentative_theme": "sterol",
+      "n_components": 1,
+      "components": [
+        3
+      ],
+      "mean_component_purity": 0.316,
+      "dominant_bands_cm": [
+        722.0,
+        1250.0,
+        1334.0,
+        1486.0
+      ],
+      "top_analytes": [
+        "adenine",
+        "acetyl coenzyme a",
+        "estrone",
+        "coenzyme a",
+        "acetyl-coa",
+        "methionine",
+        "hypoxanthine",
+        "ethinylestradiol",
+        "estradiol",
+        "estriol"
+      ],
+      "top_analyte_families": {
+        "sterol": 4,
+        "purine": 2,
+        "cofactor": 2,
+        "protein": 1,
+        "amino_acid": 1
+      },
+      "literature_hits": 6,
+      "literature_groups": {
+        "NucleicAcids": 3,
+        "Proteins": 2,
+        "AminoAcids": 1
+      },
+      "literature_supports_theme": false,
+      "expected_literature_group": "Lipids-Hormones",
+      "theme_basis": "chemistry of top-loading reference analytes (mean purity 0.32); no literature corroboration",
+      "theme_confidence": "low",
+      "uncertainty_note": "TENTATIVE post-hoc interpretation of an unsupervised decomposition. Themes were not used to fit the manifold and are not molecular assignments.",
+      "variance_share": 0.0281568979767362
+    },
+    {
+      "axis": 11,
+      "tentative_theme": "purine",
+      "n_components": 1,
+      "components": [
+        15
+      ],
+      "mean_component_purity": 0.557,
+      "dominant_bands_cm": [
+        650.0,
+        1230.0,
+        1264.0,
+        1330.0,
+        1550.0
+      ],
+      "top_analytes": [
+        "guanine",
+        "xanthine",
+        "cysteine",
+        "(+)-galactose",
+        "methionine",
+        "phosphatidylinositol",
+        "glutathione",
+        "tyrosine",
+        "papain",
+        "histidine"
+      ],
+      "top_analyte_families": {
+        "amino_acid": 4,
+        "purine": 2,
+        "saccharide": 1,
+        "lipid": 1,
+        "cofactor": 1,
+        "protein": 1
+      },
+      "literature_hits": 6,
+      "literature_groups": {
+        "Proteins": 3,
+        "Lipids-FattyAcids": 2,
+        "NucleicAcids": 1
+      },
+      "literature_supports_theme": true,
+      "expected_literature_group": "NucleicAcids",
+      "theme_basis": "chemistry of top-loading reference analytes (mean purity 0.56); corroborated by literature group 'NucleicAcids'",
+      "theme_confidence": "medium",
+      "uncertainty_note": "TENTATIVE post-hoc interpretation of an unsupervised decomposition. Themes were not used to fit the manifold and are not molecular assignments.",
+      "variance_share": 0.026867691756029134
+    },
+    {
+      "axis": 12,
+      "tentative_theme": "cofactor",
+      "n_components": 1,
+      "components": [
+        0
+      ],
+      "mean_component_purity": 0.413,
+      "dominant_bands_cm": [
+        754.0,
+        1178.0,
+        1224.0,
+        1348.0,
+        1578.0
+      ],
+      "top_analytes": [
+        "riboflavin",
+        "ribo\ufb02avin",
+        "tryptophan",
+        "leucine",
+        "histidine",
+        "hemoglobin",
+        "myoglobin",
+        "(+)-glucose",
+        "isoleucine",
+        "valine"
+      ],
+      "top_analyte_families": {
+        "amino_acid": 5,
+        "cofactor": 2,
+        "protein": 2,
+        "saccharide": 1
+      },
+      "literature_hits": 7,
+      "literature_groups": {
+        "NucleicAcids": 3,
+        "AminoAcids": 2,
+        "Proteins": 2
+      },
+      "literature_supports_theme": false,
+      "expected_literature_group": null,
+      "theme_basis": "chemistry of top-loading reference analytes (mean purity 0.41); no literature corroboration",
+      "theme_confidence": "low",
+      "uncertainty_note": "TENTATIVE post-hoc interpretation of an unsupervised decomposition. Themes were not used to fit the manifold and are not molecular assignments.",
+      "variance_share": 0.01884638908494273
+    }
+  ]
+}

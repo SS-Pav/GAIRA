@@ -1,0 +1,30 @@
+{
+  "n_spectra": 477,
+  "groups": {
+    "COVID": 159,
+    "Suspected": 156,
+    "Healthy": 150,
+    "Tube": 12
+  },
+  "axis_columns": [
+    "axis1_triglyceride",
+    "axis2_saccharide",
+    "axis3_organic_acid",
+    "axis4_protein",
+    "axis5_amino_acid",
+    "axis6_polysaccharide",
+    "axis7_pyrimidine",
+    "axis8_unassigned",
+    "axis9_fatty_acid",
+    "axis10_sterol",
+    "axis11_purine",
+    "axis12_cofactor"
+  ],
+  "median_ood": 0.1637931713864058,
+  "ood_by_group": {
+    "COVID": 0.1632,
+    "Healthy": 0.1619,
+    "Suspected": 0.1661,
+    "Tube": 0.1885
+  }
+}

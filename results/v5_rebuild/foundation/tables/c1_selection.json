@@ -1,0 +1,31 @@
+{
+  "representation": "NMF",
+  "k": 24,
+  "total_score": 0.7863732611512955,
+  "tie_break": "5 candidates within 0.020 of the top score (ICA@k=32:0.787, NMF@k=24:0.786, ICA@k=24:0.775, ICA@k=16:0.774, NMF@k=32:0.767) \u2014 statistically indistinguishable. Tie broken by constraint: restricted to non-negative (parts-based) decompositions, because Raman spectra of mixtures are non-negative sums of molecular contributions and BSV coordinates must mean 'how much of this theme is present'; then by benchmark score, then by smaller k. Selected NMF k=24 (score 0.786, sparsity 0.819, stability 0.812).",
+  "runner_up": {
+    "representation": "ICA",
+    "k": 32,
+    "total_score": 0.7866435868993379
+  },
+  "metrics": {
+    "recon_rel_error": 0.5503827851599326,
+    "neighbourhood_preservation": 0.6705931137039579,
+    "replicate_robustness": 0.6242904318919826,
+    "component_stability": 0.8120091745965464,
+    "loading_sparsity": 0.8192811368883713,
+    "band_localisation": 0.0539940828402366,
+    "excitation_leakage": 0.0185244634772228,
+    "source_leakage": 0.0626734286273948
+  },
+  "weights": {
+    "neighbourhood_preservation": 0.25,
+    "replicate_robustness": 0.25,
+    "component_stability": 0.2,
+    "interpretability": 0.15,
+    "reconstruction": 0.1,
+    "nuisance_control": 0.05
+  },
+  "tie_tolerance": 0.02,
+  "benchmark_ranking_note": "PCA ranked 3rd (0.752); Autoencoder 4th (0.581, component stability 0.162); SparseDict last (0.429). PCA was NOT selected by default."
+}

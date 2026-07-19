@@ -1,0 +1,8 @@
+{
+  "neighbourhood_preservation": 0.25,
+  "replicate_robustness": 0.25,
+  "component_stability": 0.2,
+  "interpretability": 0.15,
+  "reconstruction": 0.1,
+  "nuisance_control": 0.05
+}

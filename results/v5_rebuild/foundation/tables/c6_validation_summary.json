@@ -1,0 +1,47 @@
+{
+  "excluded_out_of_domain": {
+    "adenine_sers_control": "Ag-SERS (bAgNPs) concentration series \u2014 not Raman",
+    "european_multi_instrument_adenine": "cAg/sAg/cAu substrates \u2014 SERS/Au-SERS",
+    "metabolite_sers63": "633 nm Ag-SERS",
+    "serum_ag_colloids (uricase, spike-ins)": "Ag-SERS serum colloid"
+  },
+  "heldout_analyte": {
+    "neighbourhood_preservation": 0.6705931137039579,
+    "bsv_margin": 0.6242904318919826,
+    "within_analyte_cos": 0.9211797645270865,
+    "between_analyte_cos": 0.2968893326351037,
+    "recon_rel_error": 0.5503827851599326
+  },
+  "excitation_transfer": {
+    "n_analytes": 41,
+    "mean_cross_excitation_cos": 0.9182506062534317,
+    "null_different_analyte_cos": 0.23286281692139812
+  },
+  "source_transfer": {
+    "n_analytes": 34,
+    "mean_cross_source_cos": 0.847405951118943,
+    "null_different_analyte_cos": 0.23286281692139812
+  },
+  "blank_control": {
+    "COVID": {
+      "n": 159,
+      "max_similarity_to_any_reference": 0.8550663477675574,
+      "mean_similarity_to_references": 0.3814571194358037
+    },
+    "Suspected": {
+      "n": 156,
+      "max_similarity_to_any_reference": 0.8509368789126354,
+      "mean_similarity_to_references": 0.3840713842465577
+    },
+    "Healthy": {
+      "n": 150,
+      "max_similarity_to_any_reference": 0.8545803078017247,
+      "mean_similarity_to_references": 0.38328615518468495
+    },
+    "Tube": {
+      "n": 12,
+      "max_similarity_to_any_reference": 0.837836106281545,
+      "mean_similarity_to_references": 0.3611139970874474
+    }
+  }
+}
