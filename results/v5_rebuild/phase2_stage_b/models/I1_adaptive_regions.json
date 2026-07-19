@@ -1,0 +1,10 @@
+{
+  "name": "I1_adaptive_regions",
+  "branch": "interpretable",
+  "modality_specific": false,
+  "params": {
+    "n_regions": 32
+  },
+  "n_features": 32,
+  "artifact": "I1_adaptive_regions.npz"
+}

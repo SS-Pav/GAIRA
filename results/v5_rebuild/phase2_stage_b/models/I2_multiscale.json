@@ -1,0 +1,18 @@
+{
+  "name": "I2_multiscale",
+  "branch": "interpretable",
+  "modality_specific": false,
+  "params": {
+    "scales": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "stride": 4
+  },
+  "n_features": 924,
+  "artifact": "I2_multiscale.npz"
+}

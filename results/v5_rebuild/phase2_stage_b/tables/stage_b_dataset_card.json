@@ -1,0 +1,129 @@
+{
+  "preproc": "A2_asls_savgol_snv",
+  "n_spectra": 479,
+  "n_bins": 616,
+  "wavenumber_range": [
+    520.0,
+    1750.0
+  ],
+  "n_raman": 214,
+  "n_sers": 265,
+  "n_analytes": 87,
+  "n_matched_analytes": 51,
+  "matched_analytes": [
+    "acetoacetate",
+    "acetyl-coa",
+    "adenine",
+    "alanine",
+    "albumin",
+    "arginine",
+    "ascorbate",
+    "cholesterol",
+    "citrate",
+    "coenzyme a",
+    "creatinine",
+    "cysteine",
+    "ergothioneine",
+    "fructose",
+    "fructose-6-phosphate",
+    "galactose",
+    "glucose",
+    "glutamate",
+    "glutathione",
+    "glycerol",
+    "glycine",
+    "glycogen",
+    "guanine",
+    "histidine",
+    "hydroxyproline",
+    "hypoxanthine",
+    "isoleucine",
+    "lactate",
+    "leucine",
+    "mannose",
+    "methionine",
+    "n-acetylglucosamine",
+    "oleate",
+    "phenylalanine",
+    "phosphate",
+    "phosphatidylinositol",
+    "phosphoenolpyruvate",
+    "proline",
+    "pyruvate",
+    "riboflavin",
+    "serine",
+    "stearate",
+    "thymine",
+    "triolein",
+    "tryptophan",
+    "tyrosine",
+    "uracil",
+    "urate",
+    "urea",
+    "valine",
+    "xanthine"
+  ],
+  "sources": {
+    "gobbato_sers_metabolites": 265,
+    "gobbato_raman_metabolites": 153,
+    "RamanBioLib": 61
+  },
+  "source_by_modality": {
+    "RamanBioLib": {
+      "raman": 61,
+      "sers": 0
+    },
+    "gobbato_raman_metabolites": {
+      "raman": 153,
+      "sers": 0
+    },
+    "gobbato_sers_metabolites": {
+      "raman": 0,
+      "sers": 265
+    }
+  },
+  "family_counts_by_analyte": {
+    "unknown": 33,
+    "amino_acid": 16,
+    "organic_acid": 7,
+    "saccharide": 6,
+    "purine": 5,
+    "cofactor": 5,
+    "lipid": 5,
+    "pyrimidine": 3,
+    "small_nitrogenous": 2,
+    "nucleic_acid": 2,
+    "polyol": 1,
+    "protein": 1,
+    "polysaccharide": 1
+  },
+  "n_family_unknown": 33,
+  "n_family_ambiguous_analytes": 4,
+  "non_small_molecule_analytes": [
+    "acetyl-coa",
+    "albumin",
+    "coenzyme a",
+    "dna",
+    "glycogen",
+    "rna"
+  ],
+  "replicate_group_size": {
+    "min": 1,
+    "median": 3.0,
+    "max": 5,
+    "n_groups": 165
+  },
+  "missingness": {
+    "outside_grid_fraction_mean": 0.0
+  },
+  "imbalance_notes": [
+    "Ag-SERS is single-source (Gobbato colloid) \u2192 no cross-source SERS split possible (Split D infeasible for SERS).",
+    "Matched pairs are largely one instrument ecosystem (Gobbato) \u2192 cross-modal results are within-corpus, not observation-domain-invariant.",
+    "Raman spans 2 sources (RamanBioLib 785 + Gobbato powders); SERS 1 source."
+  ],
+  "generalization_limits": [
+    "Held-out-analyte splits test chemical-family generalization, NOT exact-analyte retrieval (impossible for unseen identities).",
+    "51 matched analytes is a feasibility scale, not a production-encoder scale (H7 high-risk).",
+    "Technical replicates are not independent semantic samples; grouped splits enforced."
+  ]
+}

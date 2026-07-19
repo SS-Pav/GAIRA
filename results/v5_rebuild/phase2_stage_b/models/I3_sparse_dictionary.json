@@ -1,0 +1,11 @@
+{
+  "name": "I3_sparse_dictionary",
+  "branch": "interpretable",
+  "modality_specific": false,
+  "params": {
+    "n_atoms": 24,
+    "alpha": 1.0
+  },
+  "n_features": 24,
+  "artifact": "I3_sparse_dictionary.npz"
+}

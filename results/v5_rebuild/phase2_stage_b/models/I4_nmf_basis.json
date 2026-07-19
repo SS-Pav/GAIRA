@@ -1,0 +1,10 @@
+{
+  "name": "I4_nmf_basis",
+  "branch": "interpretable",
+  "modality_specific": false,
+  "params": {
+    "n_basis": 16
+  },
+  "n_features": 16,
+  "artifact": "I4_nmf_basis.npz"
+}

@@ -1,0 +1,1563 @@
+{
+  "held_out_B": {
+    "direct_SNV": {
+      "n_folds": 5,
+      "n_query_analytes": 51,
+      "fold_sizes": [
+        11,
+        10,
+        10,
+        10,
+        10
+      ],
+      "chance_top1": 0.09818181818181818,
+      "top_k": {
+        "top1": 0.27450980392156865,
+        "top3": 0.5098039215686274,
+        "top5": 0.7058823529411765,
+        "top10": 1.0
+      },
+      "mrr": 0.4521942110177404,
+      "reciprocal_nn_rate": 0.33090909090909093,
+      "mean_matched_cos": 0.14666200803889207,
+      "mean_unmatched_cos": 0.07147968257911379,
+      "matched_minus_unmatched": 0.07518232545977828,
+      "median_rank": 3.0,
+      "perm_top1_p": 0.0013324450366422385,
+      "perm_mrr_p": 0.0006662225183211193,
+      "perm_top1_null_mean": 0.09806535947712418,
+      "perm_mrr_null_mean": 0.2888225150666327,
+      "mrr_bootstrap_ci95": [
+        0.35252762215997513,
+        0.5444549486461252
+      ]
+    },
+    "direct_L2": {
+      "n_folds": 5,
+      "n_query_analytes": 51,
+      "fold_sizes": [
+        11,
+        10,
+        10,
+        10,
+        10
+      ],
+      "chance_top1": 0.09818181818181818,
+      "top_k": {
+        "top1": 0.2549019607843137,
+        "top3": 0.49019607843137253,
+        "top5": 0.7058823529411765,
+        "top10": 0.9803921568627451
+      },
+      "mrr": 0.4491292476586594,
+      "reciprocal_nn_rate": 0.13636363636363638,
+      "mean_matched_cos": 0.5728533198363973,
+      "mean_unmatched_cos": 0.5386494081096302,
+      "matched_minus_unmatched": 0.03420391172676707,
+      "median_rank": 4.0,
+      "perm_top1_p": 0.0006662225183211193,
+      "perm_mrr_p": 0.0006662225183211193,
+      "perm_top1_null_mean": 0.09805228758169934,
+      "perm_mrr_null_mean": 0.2887438455516887,
+      "mrr_bootstrap_ci95": [
+        0.35602458407605464,
+        0.5412899831649831
+      ]
+    },
+    "direct_deriv": {
+      "n_folds": 5,
+      "n_query_analytes": 51,
+      "fold_sizes": [
+        11,
+        10,
+        10,
+        10,
+        10
+      ],
+      "chance_top1": 0.09818181818181818,
+      "top_k": {
+        "top1": 0.23529411764705882,
+        "top3": 0.4117647058823529,
+        "top5": 0.5882352941176471,
+        "top10": 0.9607843137254902
+      },
+      "mrr": 0.40575149251619835,
+      "reciprocal_nn_rate": 0.23272727272727273,
+      "mean_matched_cos": 0.12042189490801411,
+      "mean_unmatched_cos": 0.09693379823807198,
+      "matched_minus_unmatched": 0.02348809666994213,
+      "median_rank": 4.0,
+      "perm_top1_p": 0.002664890073284477,
+      "perm_mrr_p": 0.0013324450366422385,
+      "perm_top1_null_mean": 0.09772549019607842,
+      "perm_mrr_null_mean": 0.28915318120514194,
+      "mrr_bootstrap_ci95": [
+        0.31360152646917355,
+        0.5028899463825933
+      ]
+    },
+    "I1_regions": {
+      "n_folds": 5,
+      "n_query_analytes": 51,
+      "fold_sizes": [
+        11,
+        10,
+        10,
+        10,
+        10
+      ],
+      "chance_top1": 0.09818181818181818,
+      "top_k": {
+        "top1": 0.29411764705882354,
+        "top3": 0.5098039215686274,
+        "top5": 0.6470588235294118,
+        "top10": 0.9803921568627451
+      },
+      "mrr": 0.4597735053617406,
+      "reciprocal_nn_rate": 0.43090909090909085,
+      "mean_matched_cos": 0.21944934607396505,
+      "mean_unmatched_cos": 0.1107103141182828,
+      "matched_minus_unmatched": 0.10873903195568224,
+      "median_rank": 3.0,
+      "perm_top1_p": 0.0006662225183211193,
+      "perm_mrr_p": 0.0006662225183211193,
+      "perm_top1_null_mean": 0.09870588235294118,
+      "perm_mrr_null_mean": 0.28890900649822215,
+      "mrr_bootstrap_ci95": [
+        0.3619609257844552,
+        0.5606369896443425
+      ]
+    },
+    "I2_wavelets": {
+      "n_folds": 5,
+      "n_query_analytes": 51,
+      "fold_sizes": [
+        11,
+        10,
+        10,
+        10,
+        10
+      ],
+      "chance_top1": 0.09818181818181818,
+      "top_k": {
+        "top1": 0.23529411764705882,
+        "top3": 0.5490196078431373,
+        "top5": 0.6862745098039216,
+        "top10": 0.9803921568627451
+      },
+      "mrr": 0.43152887417593294,
+      "reciprocal_nn_rate": 0.3527272727272727,
+      "mean_matched_cos": 0.15473376556407661,
+      "mean_unmatched_cos": 0.07779813364665553,
+      "matched_minus_unmatched": 0.07693563191742109,
+      "median_rank": 3.0,
+      "perm_top1_p": 0.005329780146568954,
+      "perm_mrr_p": 0.0006662225183211193,
+      "perm_top1_null_mean": 0.09831372549019608,
+      "perm_mrr_null_mean": 0.2889051655679106,
+      "mrr_bootstrap_ci95": [
+        0.33653306524630044,
+        0.5202363445378151
+      ]
+    },
+    "I3_dictionary": {
+      "n_folds": 5,
+      "n_query_analytes": 51,
+      "fold_sizes": [
+        11,
+        10,
+        10,
+        10,
+        10
+      ],
+      "chance_top1": 0.09818181818181818,
+      "top_k": {
+        "top1": 0.17647058823529413,
+        "top3": 0.39215686274509803,
+        "top5": 0.5686274509803921,
+        "top10": 1.0
+      },
+      "mrr": 0.37478991596638656,
+      "reciprocal_nn_rate": 0.38909090909090915,
+      "mean_matched_cos": 0.14906358991361296,
+      "mean_unmatched_cos": 0.08567847818689289,
+      "matched_minus_unmatched": 0.06338511172672007,
+      "median_rank": 5.0,
+      "perm_top1_p": 0.0626249167221852,
+      "perm_mrr_p": 0.014656895403064623,
+      "perm_top1_null_mean": 0.09869281045751634,
+      "perm_mrr_null_mean": 0.28916435739278873,
+      "mrr_bootstrap_ci95": [
+        0.2853625894802365,
+        0.4547545129162776
+      ]
+    },
+    "I4_nmf": {
+      "n_folds": 5,
+      "n_query_analytes": 51,
+      "fold_sizes": [
+        11,
+        10,
+        10,
+        10,
+        10
+      ],
+      "chance_top1": 0.09818181818181818,
+      "top_k": {
+        "top1": 0.23529411764705882,
+        "top3": 0.47058823529411764,
+        "top5": 0.6078431372549019,
+        "top10": 0.9607843137254902
+      },
+      "mrr": 0.4138124946948476,
+      "reciprocal_nn_rate": 0.21454545454545454,
+      "mean_matched_cos": 0.5396842088052173,
+      "mean_unmatched_cos": 0.4868418475833514,
+      "matched_minus_unmatched": 0.05284236122186586,
+      "median_rank": 4.0,
+      "perm_top1_p": 0.0033311125916055963,
+      "perm_mrr_p": 0.0013324450366422385,
+      "perm_top1_null_mean": 0.09742483660130719,
+      "perm_mrr_null_mean": 0.28834368663290233,
+      "mrr_bootstrap_ci95": [
+        0.31522859901536376,
+        0.5066050384800385
+      ]
+    },
+    "E1_shared_supcon": {
+      "n_folds": 5,
+      "n_query_analytes": 51,
+      "fold_sizes": [
+        11,
+        10,
+        10,
+        10,
+        10
+      ],
+      "chance_top1": 0.09818181818181818,
+      "top_k": {
+        "top1": 0.17647058823529413,
+        "top3": 0.3137254901960784,
+        "top5": 0.5490196078431373,
+        "top10": 0.9803921568627451
+      },
+      "mrr": 0.33776914806326575,
+      "reciprocal_nn_rate": 0.23454545454545456,
+      "mean_matched_cos": 0.9725773930549622,
+      "mean_unmatched_cos": 0.9721434712409973,
+      "matched_minus_unmatched": 0.00043392181396484375,
+      "median_rank": 5.0,
+      "perm_top1_p": 0.01798800799467022,
+      "perm_mrr_p": 0.021319120586275817,
+      "perm_top1_null_mean": 0.0976732026143791,
+      "perm_mrr_null_mean": 0.28912358694319484,
+      "mrr_bootstrap_ci95": [
+        0.25002465127465123,
+        0.433638468013468
+      ]
+    },
+    "E2_dual_supcon_infonce": {
+      "n_folds": 5,
+      "n_query_analytes": 51,
+      "fold_sizes": [
+        11,
+        10,
+        10,
+        10,
+        10
+      ],
+      "chance_top1": 0.09818181818181818,
+      "top_k": {
+        "top1": 0.13725490196078433,
+        "top3": 0.3137254901960784,
+        "top5": 0.5098039215686274,
+        "top10": 0.9803921568627451
+      },
+      "mrr": 0.3115319865319865,
+      "reciprocal_nn_rate": 0.13636363636363638,
+      "mean_matched_cos": 0.000773040927015245,
+      "mean_unmatched_cos": 0.0003187626716680825,
+      "matched_minus_unmatched": 0.0004542782553471625,
+      "median_rank": 5.0,
+      "perm_top1_p": 0.06928714190539641,
+      "perm_mrr_p": 0.06329113924050633,
+      "perm_top1_null_mean": 0.09758169934640523,
+      "perm_mrr_null_mean": 0.2884307727131256,
+      "mrr_bootstrap_ci95": [
+        0.23998486263192143,
+        0.395461229946524
+      ]
+    },
+    "E2_dual_supcon_infonce_vicreg": {
+      "n_folds": 5,
+      "n_query_analytes": 51,
+      "fold_sizes": [
+        11,
+        10,
+        10,
+        10,
+        10
+      ],
+      "chance_top1": 0.09818181818181818,
+      "top_k": {
+        "top1": 0.0784313725490196,
+        "top3": 0.2549019607843137,
+        "top5": 0.49019607843137253,
+        "top10": 1.0
+      },
+      "mrr": 0.26491596638655457,
+      "reciprocal_nn_rate": 0.15818181818181817,
+      "mean_matched_cos": 0.6199528574943542,
+      "mean_unmatched_cos": 0.6229734420776367,
+      "matched_minus_unmatched": -0.0030205845832824707,
+      "median_rank": 6.0,
+      "perm_top1_p": 0.8294470353097935,
+      "perm_mrr_p": 0.8421052631578947,
+      "perm_top1_null_mean": 0.09705882352941175,
+      "perm_mrr_null_mean": 0.28808017900762994,
+      "mrr_bootstrap_ci95": [
+        0.19989301276065977,
+        0.3329896125116712
+      ]
+    },
+    "E2_dual_triplet_infonce": {
+      "n_folds": 5,
+      "n_query_analytes": 51,
+      "fold_sizes": [
+        11,
+        10,
+        10,
+        10,
+        10
+      ],
+      "chance_top1": 0.09818181818181818,
+      "top_k": {
+        "top1": 0.11764705882352941,
+        "top3": 0.3333333333333333,
+        "top5": 0.5490196078431373,
+        "top10": 0.9803921568627451
+      },
+      "mrr": 0.3094155844155844,
+      "reciprocal_nn_rate": 0.11818181818181817,
+      "mean_matched_cos": 0.3725859522819519,
+      "mean_unmatched_cos": 0.3728298544883728,
+      "matched_minus_unmatched": -0.00024390220642089844,
+      "median_rank": 5.0,
+      "perm_top1_p": 0.18254497001998668,
+      "perm_mrr_p": 0.008660892738174551,
+      "perm_top1_null_mean": 0.09816993464052287,
+      "perm_mrr_null_mean": 0.2891226131530053,
+      "mrr_bootstrap_ci95": [
+        0.23613280918427973,
+        0.38716124833771887
+      ]
+    },
+    "E3_dual_within_only": {
+      "n_folds": 5,
+      "n_query_analytes": 51,
+      "fold_sizes": [
+        11,
+        10,
+        10,
+        10,
+        10
+      ],
+      "chance_top1": 0.09818181818181818,
+      "top_k": {
+        "top1": 0.13725490196078433,
+        "top3": 0.29411764705882354,
+        "top5": 0.5098039215686274,
+        "top10": 0.9803921568627451
+      },
+      "mrr": 0.31759329994624114,
+      "reciprocal_nn_rate": 0.11818181818181817,
+      "mean_matched_cos": 0.2940521836280823,
+      "mean_unmatched_cos": 0.2935642600059509,
+      "matched_minus_unmatched": 0.00048792362213134766,
+      "median_rank": 5.0,
+      "perm_top1_p": 0.11925383077948035,
+      "perm_mrr_p": 0.03264490339773484,
+      "perm_top1_null_mean": 0.09894117647058825,
+      "perm_mrr_null_mean": 0.28934827971592675,
+      "mrr_bootstrap_ci95": [
+        0.23912114845938373,
+        0.4056903771609654
+      ]
+    },
+    "E4_hybrid": {
+      "n_folds": 5,
+      "n_query_analytes": 51,
+      "fold_sizes": [
+        11,
+        10,
+        10,
+        10,
+        10
+      ],
+      "chance_top1": 0.09818181818181818,
+      "top_k": {
+        "top1": 0.2549019607843137,
+        "top3": 0.49019607843137253,
+        "top5": 0.6862745098039216,
+        "top10": 0.9803921568627451
+      },
+      "mrr": 0.4383138103726339,
+      "reciprocal_nn_rate": 0.46909090909090906,
+      "mean_matched_cos": 0.6396158826800831,
+      "mean_unmatched_cos": 0.5876158907193745,
+      "matched_minus_unmatched": 0.05199999196070859,
+      "median_rank": 4.0,
+      "perm_top1_p": 0.001998667554963358,
+      "perm_mrr_p": 0.0006662225183211193,
+      "perm_top1_null_mean": 0.09856209150326797,
+      "perm_mrr_null_mean": 0.2890568542568543,
+      "mrr_bootstrap_ci95": [
+        0.3474161962764904,
+        0.5344979557479557
+      ]
+    }
+  },
+  "within_modality_C": {
+    "direct_SNV": {
+      "raman": {
+        "nn_same_analyte_rate": 0.746269157321302,
+        "ari_analyte": 0.9441333579271532,
+        "n_folds": 5
+      },
+      "sers": {
+        "nn_same_analyte_rate": 0.9016938616938617,
+        "ari_analyte": 0.5476907079167378,
+        "n_folds": 5
+      }
+    },
+    "direct_L2": {
+      "raman": {
+        "nn_same_analyte_rate": 0.746269157321302,
+        "ari_analyte": 0.9441333579271532,
+        "n_folds": 5
+      },
+      "sers": {
+        "nn_same_analyte_rate": 0.9114374514374515,
+        "ari_analyte": 0.6518148320187083,
+        "n_folds": 5
+      }
+    },
+    "direct_deriv": {
+      "raman": {
+        "nn_same_analyte_rate": 0.746269157321302,
+        "ari_analyte": 0.934186536443498,
+        "n_folds": 5
+      },
+      "sers": {
+        "nn_same_analyte_rate": 0.9145143745143745,
+        "ari_analyte": 0.6501873814653961,
+        "n_folds": 5
+      }
+    },
+    "I1_regions": {
+      "raman": {
+        "nn_same_analyte_rate": 0.7505244764702381,
+        "ari_analyte": 0.9413656476457346,
+        "n_folds": 5
+      },
+      "sers": {
+        "nn_same_analyte_rate": 0.6276923076923077,
+        "ari_analyte": 0.28942530368085445,
+        "n_folds": 5
+      }
+    },
+    "I2_wavelets": {
+      "raman": {
+        "nn_same_analyte_rate": 0.7505244764702381,
+        "ari_analyte": 0.9590233018201184,
+        "n_folds": 5
+      },
+      "sers": {
+        "nn_same_analyte_rate": 0.8801787101787102,
+        "ari_analyte": 0.4518461557320297,
+        "n_folds": 5
+      }
+    },
+    "I3_dictionary": {
+      "raman": {
+        "nn_same_analyte_rate": 0.7505244764702381,
+        "ari_analyte": 0.8810302471039556,
+        "n_folds": 5
+      },
+      "sers": {
+        "nn_same_analyte_rate": 0.5807264957264957,
+        "ari_analyte": 0.1899978442458576,
+        "n_folds": 5
+      }
+    },
+    "I4_nmf": {
+      "raman": {
+        "nn_same_analyte_rate": 0.7407136017657464,
+        "ari_analyte": 0.8750797650373559,
+        "n_folds": 5
+      },
+      "sers": {
+        "nn_same_analyte_rate": 0.5402525252525252,
+        "ari_analyte": 0.3544646997843509,
+        "n_folds": 5
+      }
+    },
+    "E1_shared_supcon": {
+      "raman": {
+        "nn_same_analyte_rate": 0.7280550281037159,
+        "ari_analyte": 0.8376160900500913,
+        "n_folds": 5
+      },
+      "sers": {
+        "nn_same_analyte_rate": 0.3394250194250194,
+        "ari_analyte": 0.2440089848061054,
+        "n_folds": 5
+      }
+    },
+    "E2_dual_supcon_infonce": {
+      "raman": {
+        "nn_same_analyte_rate": 0.7119490833157516,
+        "ari_analyte": 0.7702983895531066,
+        "n_folds": 5
+      },
+      "sers": {
+        "nn_same_analyte_rate": 0.3595182595182595,
+        "ari_analyte": 0.2122606454282237,
+        "n_folds": 5
+      }
+    },
+    "E2_dual_supcon_infonce_vicreg": {
+      "raman": {
+        "nn_same_analyte_rate": 0.7334106929364731,
+        "ari_analyte": 0.8215931234884787,
+        "n_folds": 5
+      },
+      "sers": {
+        "nn_same_analyte_rate": 0.3729059829059829,
+        "ari_analyte": 0.20824867001159827,
+        "n_folds": 5
+      }
+    },
+    "E2_dual_triplet_infonce": {
+      "raman": {
+        "nn_same_analyte_rate": 0.7249000546386009,
+        "ari_analyte": 0.8251688494175481,
+        "n_folds": 5
+      },
+      "sers": {
+        "nn_same_analyte_rate": 0.3273038073038073,
+        "ari_analyte": 0.1858936262942661,
+        "n_folds": 5
+      }
+    },
+    "E3_dual_within_only": {
+      "raman": {
+        "nn_same_analyte_rate": 0.7237072020167594,
+        "ari_analyte": 0.80633288685651,
+        "n_folds": 5
+      },
+      "sers": {
+        "nn_same_analyte_rate": 0.40818958818958817,
+        "ari_analyte": 0.20236073368622748,
+        "n_folds": 5
+      }
+    },
+    "E4_hybrid": {
+      "raman": {
+        "nn_same_analyte_rate": 0.7505244764702381,
+        "ari_analyte": 0.9413656476457346,
+        "n_folds": 5
+      },
+      "sers": {
+        "nn_same_analyte_rate": 0.6346620046620046,
+        "ari_analyte": 0.2869281500442781,
+        "n_folds": 5
+      }
+    }
+  },
+  "family_A": {
+    "direct_SNV": {
+      "family_knn_purity": 0.7402805948539937,
+      "chance_purity": 0.25220415554078734,
+      "n_folds": 5
+    },
+    "direct_L2": {
+      "family_knn_purity": 0.7443290265585658,
+      "chance_purity": 0.25220415554078734,
+      "n_folds": 5
+    },
+    "direct_deriv": {
+      "family_knn_purity": 0.7123671526469809,
+      "chance_purity": 0.25220415554078734,
+      "n_folds": 5
+    },
+    "I1_regions": {
+      "family_knn_purity": 0.6432604766072938,
+      "chance_purity": 0.25220415554078734,
+      "n_folds": 5
+    },
+    "I2_wavelets": {
+      "family_knn_purity": 0.716788505959258,
+      "chance_purity": 0.25220415554078734,
+      "n_folds": 5
+    },
+    "I3_dictionary": {
+      "family_knn_purity": 0.5921141247223163,
+      "chance_purity": 0.25220415554078734,
+      "n_folds": 5
+    },
+    "I4_nmf": {
+      "family_knn_purity": 0.6149140780999998,
+      "chance_purity": 0.25220415554078734,
+      "n_folds": 5
+    },
+    "E1_shared_supcon": {
+      "family_knn_purity": 0.4793174175382718,
+      "chance_purity": 0.25220415554078734,
+      "n_folds": 5
+    },
+    "E2_dual_supcon_infonce": {
+      "family_knn_purity": 0.5001324283703407,
+      "chance_purity": 0.25220415554078734,
+      "n_folds": 5
+    }
+  },
+  "insample": {
+    "direct_SNV": {
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.8550001522395169,
+          "balanced_accuracy_std": 0.04602300150791307,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.6082175602175603,
+          "balanced_accuracy_std": 0.05001174554396373,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        }
+      },
+      "collapse": {
+        "n_features": 616,
+        "effective_rank": 188.65294631798258,
+        "singular_frac_top1": 5.49568504855886,
+        "mean_dim_std": 0.03768166729753694,
+        "min_dim_std": 0.00755161983925501,
+        "duplicate_fraction": 0.15031315240083507,
+        "cross_analyte_duplicate_fraction": 0.0,
+        "pairwise_dist_mean": 0.9135368942907178,
+        "pairwise_dist_std": 0.14983144413817048
+      },
+      "signal_shortcut": {
+        "pc1_vs_total_intensity": 0.0,
+        "pc1_vs_baseline": 0.6046373135399548,
+        "pc1_vs_smoothness": 0.4839737733899164,
+        "norm_vs_total_intensity": 0.0
+      },
+      "family_neighborhood": {
+        "family_knn_purity": 0.7121588089330024,
+        "chance_purity": 0.18705244167503032,
+        "k": 5,
+        "n_known_family": 403,
+        "families": {
+          "amino_acid": 139,
+          "cofactor": 25,
+          "lipid": 43,
+          "organic_acid": 61,
+          "polyol": 9,
+          "purine": 42,
+          "pyrimidine": 19,
+          "saccharide": 49,
+          "small_nitrogenous": 16
+        }
+      },
+      "insample_cross_modal": {
+        "top_k": {
+          "top1": 0.13725490196078433,
+          "top3": 0.2549019607843137,
+          "top5": 0.27450980392156865
+        },
+        "mrr": 0.23690744759916252,
+        "reciprocal_nn_rate": 0.19607843137254902,
+        "matched_minus_unmatched": 0.07430459870259072
+      }
+    },
+    "direct_L2": {
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.9238073605350973,
+          "balanced_accuracy_std": 0.03173392662065879,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.6650458430458431,
+          "balanced_accuracy_std": 0.026925081622567695,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        }
+      },
+      "collapse": {
+        "n_features": 616,
+        "effective_rank": 148.0707386704699,
+        "singular_frac_top1": 5.326830594507653,
+        "mean_dim_std": 0.025477197973070995,
+        "min_dim_std": 0.004784784049127909,
+        "duplicate_fraction": 0.1544885177453027,
+        "cross_analyte_duplicate_fraction": 0.0,
+        "pairwise_dist_mean": 0.427205816302433,
+        "pairwise_dist_std": 0.24063648511589783
+      },
+      "signal_shortcut": {
+        "pc1_vs_total_intensity": 0.9775329180285219,
+        "pc1_vs_baseline": 0.6197691183764263,
+        "pc1_vs_smoothness": 0.47962213257509645,
+        "norm_vs_total_intensity": 0.0
+      },
+      "family_neighborhood": {
+        "family_knn_purity": 0.7032258064516128,
+        "chance_purity": 0.18705244167503032,
+        "k": 5,
+        "n_known_family": 403,
+        "families": {
+          "amino_acid": 139,
+          "cofactor": 25,
+          "lipid": 43,
+          "organic_acid": 61,
+          "polyol": 9,
+          "purine": 42,
+          "pyrimidine": 19,
+          "saccharide": 49,
+          "small_nitrogenous": 16
+        }
+      },
+      "insample_cross_modal": {
+        "top_k": {
+          "top1": 0.09803921568627451,
+          "top3": 0.17647058823529413,
+          "top5": 0.2549019607843137
+        },
+        "mrr": 0.19475815924375917,
+        "reciprocal_nn_rate": 0.0392156862745098,
+        "matched_minus_unmatched": 0.03298829572576867
+      }
+    },
+    "direct_deriv": {
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.8955501543266717,
+          "balanced_accuracy_std": 0.05133923774942039,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.7013022533022533,
+          "balanced_accuracy_std": 0.03548216142768814,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        }
+      },
+      "collapse": {
+        "n_features": 616,
+        "effective_rank": 240.49386007322244,
+        "singular_frac_top1": 5.081235393747324,
+        "mean_dim_std": 0.03684829017439014,
+        "min_dim_std": 0.02349714346119235,
+        "duplicate_fraction": 0.07724425887265135,
+        "cross_analyte_duplicate_fraction": 0.0,
+        "pairwise_dist_mean": 0.8980464763590401,
+        "pairwise_dist_std": 0.135383628898263
+      },
+      "signal_shortcut": {
+        "pc1_vs_total_intensity": 0.12094096202768158,
+        "pc1_vs_baseline": 0.098605054091982,
+        "pc1_vs_smoothness": 0.8030683753260627,
+        "norm_vs_total_intensity": 0.0
+      },
+      "family_neighborhood": {
+        "family_knn_purity": 0.711166253101737,
+        "chance_purity": 0.18705244167503032,
+        "k": 5,
+        "n_known_family": 403,
+        "families": {
+          "amino_acid": 139,
+          "cofactor": 25,
+          "lipid": 43,
+          "organic_acid": 61,
+          "polyol": 9,
+          "purine": 42,
+          "pyrimidine": 19,
+          "saccharide": 49,
+          "small_nitrogenous": 16
+        }
+      },
+      "insample_cross_modal": {
+        "top_k": {
+          "top1": 0.0392156862745098,
+          "top3": 0.1568627450980392,
+          "top5": 0.21568627450980393
+        },
+        "mrr": 0.14963692901364856,
+        "reciprocal_nn_rate": 0.09803921568627451,
+        "matched_minus_unmatched": 0.02103197226730695
+      }
+    },
+    "I1_regions": {
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.7924742310062787,
+          "balanced_accuracy_std": 0.0514116292969454,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.6082548562548562,
+          "balanced_accuracy_std": 0.021690082446998184,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        }
+      },
+      "collapse": {
+        "n_features": 32,
+        "effective_rank": 28.750379273906788,
+        "singular_frac_top1": 6.600064532217411,
+        "mean_dim_std": 0.16045864295717138,
+        "min_dim_std": 0.09531641216475921,
+        "duplicate_fraction": 0.18162839248434237,
+        "cross_analyte_duplicate_fraction": 0.0,
+        "pairwise_dist_mean": 0.8632419677598179,
+        "pairwise_dist_std": 0.2317137884598628
+      },
+      "signal_shortcut": {
+        "pc1_vs_total_intensity": 0.0,
+        "pc1_vs_baseline": 0.5770282823130408,
+        "pc1_vs_smoothness": 0.48154810928358505,
+        "norm_vs_total_intensity": 0.0
+      },
+      "family_neighborhood": {
+        "family_knn_purity": 0.598014888337469,
+        "chance_purity": 0.18705244167503032,
+        "k": 5,
+        "n_known_family": 403,
+        "families": {
+          "amino_acid": 139,
+          "cofactor": 25,
+          "lipid": 43,
+          "organic_acid": 61,
+          "polyol": 9,
+          "purine": 42,
+          "pyrimidine": 19,
+          "saccharide": 49,
+          "small_nitrogenous": 16
+        }
+      },
+      "insample_cross_modal": {
+        "top_k": {
+          "top1": 0.09803921568627451,
+          "top3": 0.19607843137254902,
+          "top5": 0.2549019607843137
+        },
+        "mrr": 0.19750798977769957,
+        "reciprocal_nn_rate": 0.23529411764705882,
+        "matched_minus_unmatched": 0.10746592559561503
+      }
+    },
+    "I2_wavelets": {
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.8593120075235788,
+          "balanced_accuracy_std": 0.06029508273853414,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.6555773115773117,
+          "balanced_accuracy_std": 0.035175089803782957,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        }
+      },
+      "collapse": {
+        "n_features": 924,
+        "effective_rank": 146.8130032207502,
+        "singular_frac_top1": 5.535883383781195,
+        "mean_dim_std": 0.030522338978306043,
+        "min_dim_std": 0.013194744864901345,
+        "duplicate_fraction": 0.15031315240083507,
+        "cross_analyte_duplicate_fraction": 0.0,
+        "pairwise_dist_mean": 0.9088294907201442,
+        "pairwise_dist_std": 0.1652450760174729
+      },
+      "signal_shortcut": {
+        "pc1_vs_total_intensity": 0.0,
+        "pc1_vs_baseline": 0.30401673470542334,
+        "pc1_vs_smoothness": 0.1939964132813924,
+        "norm_vs_total_intensity": 0.0
+      },
+      "family_neighborhood": {
+        "family_knn_purity": 0.6823821339950372,
+        "chance_purity": 0.18705244167503032,
+        "k": 5,
+        "n_known_family": 403,
+        "families": {
+          "amino_acid": 139,
+          "cofactor": 25,
+          "lipid": 43,
+          "organic_acid": 61,
+          "polyol": 9,
+          "purine": 42,
+          "pyrimidine": 19,
+          "saccharide": 49,
+          "small_nitrogenous": 16
+        }
+      },
+      "insample_cross_modal": {
+        "top_k": {
+          "top1": 0.09803921568627451,
+          "top3": 0.23529411764705882,
+          "top5": 0.2549019607843137
+        },
+        "mrr": 0.20433476791234245,
+        "reciprocal_nn_rate": 0.19607843137254902,
+        "matched_minus_unmatched": 0.07624388342795962
+      }
+    },
+    "I3_dictionary": {
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.8590158574645244,
+          "balanced_accuracy_std": 0.035546496666035446,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.6365143745143745,
+          "balanced_accuracy_std": 0.05623319857667094,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        }
+      },
+      "collapse": {
+        "n_features": 24,
+        "effective_rank": 22.279806517294215,
+        "singular_frac_top1": 8.215770465891735,
+        "mean_dim_std": 0.18152488778990628,
+        "min_dim_std": 0.10549071034951488,
+        "duplicate_fraction": 0.19624217118997914,
+        "cross_analyte_duplicate_fraction": 0.0041753653444676405,
+        "pairwise_dist_mean": 0.889026414765395,
+        "pairwise_dist_std": 0.26656528435766436
+      },
+      "signal_shortcut": {
+        "pc1_vs_total_intensity": 0.0,
+        "pc1_vs_baseline": 0.6421004890083807,
+        "pc1_vs_smoothness": 0.5602090497196905,
+        "norm_vs_total_intensity": 0.0
+      },
+      "family_neighborhood": {
+        "family_knn_purity": 0.5895781637717121,
+        "chance_purity": 0.18705244167503032,
+        "k": 5,
+        "n_known_family": 403,
+        "families": {
+          "amino_acid": 139,
+          "cofactor": 25,
+          "lipid": 43,
+          "organic_acid": 61,
+          "polyol": 9,
+          "purine": 42,
+          "pyrimidine": 19,
+          "saccharide": 49,
+          "small_nitrogenous": 16
+        }
+      },
+      "insample_cross_modal": {
+        "top_k": {
+          "top1": 0.0784313725490196,
+          "top3": 0.11764705882352941,
+          "top5": 0.21568627450980393
+        },
+        "mrr": 0.15516653465578498,
+        "reciprocal_nn_rate": 0.19607843137254902,
+        "matched_minus_unmatched": 0.07778511478373903
+      }
+    },
+    "I4_nmf": {
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.9229806704922984,
+          "balanced_accuracy_std": 0.030034326129450315,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.6545470085470085,
+          "balanced_accuracy_std": 0.06704711680787084,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        }
+      },
+      "collapse": {
+        "n_features": 16,
+        "effective_rank": 15.340239152140642,
+        "singular_frac_top1": 7.3439008755970265,
+        "mean_dim_std": 0.17581563782464904,
+        "min_dim_std": 0.13477811399824408,
+        "duplicate_fraction": 0.2755741127348643,
+        "cross_analyte_duplicate_fraction": 0.012526096033402923,
+        "pairwise_dist_mean": 0.5157060333726898,
+        "pairwise_dist_std": 0.3003421431206004
+      },
+      "signal_shortcut": {
+        "pc1_vs_total_intensity": 0.8980072295421254,
+        "pc1_vs_baseline": 0.6448915085850172,
+        "pc1_vs_smoothness": 0.4252550860213394,
+        "norm_vs_total_intensity": 0.0
+      },
+      "family_neighborhood": {
+        "family_knn_purity": 0.5880893300248139,
+        "chance_purity": 0.18705244167503032,
+        "k": 5,
+        "n_known_family": 403,
+        "families": {
+          "amino_acid": 139,
+          "cofactor": 25,
+          "lipid": 43,
+          "organic_acid": 61,
+          "polyol": 9,
+          "purine": 42,
+          "pyrimidine": 19,
+          "saccharide": 49,
+          "small_nitrogenous": 16
+        }
+      },
+      "insample_cross_modal": {
+        "top_k": {
+          "top1": 0.09803921568627451,
+          "top3": 0.21568627450980393,
+          "top5": 0.2549019607843137
+        },
+        "mrr": 0.21109056968653248,
+        "reciprocal_nn_rate": 0.13725490196078433,
+        "matched_minus_unmatched": 0.06879624628730197
+      }
+    },
+    "E1_shared_supcon": {
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.9085835095137421,
+          "balanced_accuracy_std": 0.04090640850856912,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.6085687645687646,
+          "balanced_accuracy_std": 0.04130762249697155,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        }
+      },
+      "collapse": {
+        "n_features": 16,
+        "effective_rank": 4.7815704345703125,
+        "singular_frac_top1": 2.2018792629241943,
+        "mean_dim_std": 0.02581452764570713,
+        "min_dim_std": 0.004279566928744316,
+        "duplicate_fraction": 0.9979123173277662,
+        "cross_analyte_duplicate_fraction": 0.9958246346555324,
+        "pairwise_dist_mean": 0.013729605823755264,
+        "pairwise_dist_std": 0.013715886510908604
+      },
+      "signal_shortcut": {
+        "pc1_vs_total_intensity": 0.0,
+        "pc1_vs_baseline": 0.7477062079673785,
+        "pc1_vs_smoothness": 0.9027653508363699,
+        "norm_vs_total_intensity": 0.0
+      },
+      "family_neighborhood": {
+        "family_knn_purity": 0.43126550868486346,
+        "chance_purity": 0.18705244167503032,
+        "k": 5,
+        "n_known_family": 403,
+        "families": {
+          "amino_acid": 139,
+          "cofactor": 25,
+          "lipid": 43,
+          "organic_acid": 61,
+          "polyol": 9,
+          "purine": 42,
+          "pyrimidine": 19,
+          "saccharide": 49,
+          "small_nitrogenous": 16
+        }
+      },
+      "insample_cross_modal": {
+        "top_k": {
+          "top1": 0.0,
+          "top3": 0.058823529411764705,
+          "top5": 0.1568627450980392
+        },
+        "mrr": 0.08608527847598044,
+        "reciprocal_nn_rate": 0.13725490196078433,
+        "matched_minus_unmatched": 6.812810897827148e-05
+      }
+    },
+    "E2_dual_supcon_infonce": {
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 1.0,
+          "balanced_accuracy_std": 0.0,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.6829914529914529,
+          "balanced_accuracy_std": 0.04070243053626706,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        }
+      },
+      "collapse": {
+        "n_features": 16,
+        "effective_rank": 3.674198865890503,
+        "singular_frac_top1": 11.009353637695312,
+        "mean_dim_std": 0.11464449018239975,
+        "min_dim_std": 0.03298552706837654,
+        "duplicate_fraction": 0.9895615866388309,
+        "cross_analyte_duplicate_fraction": 0.9624217118997912,
+        "pairwise_dist_mean": 0.26970306038856506,
+        "pairwise_dist_std": 0.2564087510108948
+      },
+      "signal_shortcut": {
+        "pc1_vs_total_intensity": 0.0,
+        "pc1_vs_baseline": 0.8523235246053543,
+        "pc1_vs_smoothness": 0.8241141688046743,
+        "norm_vs_total_intensity": 0.0
+      },
+      "family_neighborhood": {
+        "family_knn_purity": 0.45012406947890826,
+        "chance_purity": 0.18705244167503032,
+        "k": 5,
+        "n_known_family": 403,
+        "families": {
+          "amino_acid": 139,
+          "cofactor": 25,
+          "lipid": 43,
+          "organic_acid": 61,
+          "polyol": 9,
+          "purine": 42,
+          "pyrimidine": 19,
+          "saccharide": 49,
+          "small_nitrogenous": 16
+        }
+      },
+      "insample_cross_modal": {
+        "top_k": {
+          "top1": 0.0196078431372549,
+          "top3": 0.058823529411764705,
+          "top5": 0.09803921568627451
+        },
+        "mrr": 0.09127284221239723,
+        "reciprocal_nn_rate": 0.0196078431372549,
+        "matched_minus_unmatched": 0.0003280341625213623
+      }
+    },
+    "E2_dual_supcon_infonce_vicreg": {
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 0.92654887747911,
+          "balanced_accuracy_std": 0.03196303870197674,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.7362750582750582,
+          "balanced_accuracy_std": 0.07700301303698473,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        }
+      },
+      "collapse": {
+        "n_features": 16,
+        "effective_rank": 7.932586193084717,
+        "singular_frac_top1": 7.106330871582031,
+        "mean_dim_std": 0.1011950746178627,
+        "min_dim_std": 0.05884682387113571,
+        "duplicate_fraction": 0.7473903966597077,
+        "cross_analyte_duplicate_fraction": 0.4321503131524008,
+        "pairwise_dist_mean": 0.17555832862854004,
+        "pairwise_dist_std": 0.1267799288034439
+      },
+      "signal_shortcut": {
+        "pc1_vs_total_intensity": 0.0,
+        "pc1_vs_baseline": 0.8601092075593385,
+        "pc1_vs_smoothness": 0.900484141382547,
+        "norm_vs_total_intensity": 0.0
+      },
+      "family_neighborhood": {
+        "family_knn_purity": 0.4947890818858562,
+        "chance_purity": 0.18705244167503032,
+        "k": 5,
+        "n_known_family": 403,
+        "families": {
+          "amino_acid": 139,
+          "cofactor": 25,
+          "lipid": 43,
+          "organic_acid": 61,
+          "polyol": 9,
+          "purine": 42,
+          "pyrimidine": 19,
+          "saccharide": 49,
+          "small_nitrogenous": 16
+        }
+      },
+      "insample_cross_modal": {
+        "top_k": {
+          "top1": 0.0392156862745098,
+          "top3": 0.09803921568627451,
+          "top5": 0.09803921568627451
+        },
+        "mrr": 0.11005704421484773,
+        "reciprocal_nn_rate": 0.0784313725490196,
+        "matched_minus_unmatched": 0.01905214786529541
+      }
+    },
+    "E2_dual_triplet_infonce": {
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 1.0,
+          "balanced_accuracy_std": 0.0,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.6644522144522144,
+          "balanced_accuracy_std": 0.03063995942608751,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        }
+      },
+      "collapse": {
+        "n_features": 16,
+        "effective_rank": 2.688674211502075,
+        "singular_frac_top1": 9.436446189880371,
+        "mean_dim_std": 0.09860588610172272,
+        "min_dim_std": 0.03297295793890953,
+        "duplicate_fraction": 0.9958246346555324,
+        "cross_analyte_duplicate_fraction": 0.9853862212943633,
+        "pairwise_dist_mean": 0.1888977289199829,
+        "pairwise_dist_std": 0.18890883028507233
+      },
+      "signal_shortcut": {
+        "pc1_vs_total_intensity": 0.0,
+        "pc1_vs_baseline": 0.8407666453921617,
+        "pc1_vs_smoothness": 0.8022412444153633,
+        "norm_vs_total_intensity": 0.0
+      },
+      "family_neighborhood": {
+        "family_knn_purity": 0.4496277915632755,
+        "chance_purity": 0.18705244167503032,
+        "k": 5,
+        "n_known_family": 403,
+        "families": {
+          "amino_acid": 139,
+          "cofactor": 25,
+          "lipid": 43,
+          "organic_acid": 61,
+          "polyol": 9,
+          "purine": 42,
+          "pyrimidine": 19,
+          "saccharide": 49,
+          "small_nitrogenous": 16
+        }
+      },
+      "insample_cross_modal": {
+        "top_k": {
+          "top1": 0.0196078431372549,
+          "top3": 0.058823529411764705,
+          "top5": 0.09803921568627451
+        },
+        "mrr": 0.08871939098113037,
+        "reciprocal_nn_rate": 0.0196078431372549,
+        "matched_minus_unmatched": 0.00010645389556884766
+      }
+    },
+    "E3_dual_within_only": {
+      "leakage": {
+        "modality": {
+          "classes": [
+            "raman",
+            "sers"
+          ],
+          "n_classes": 2,
+          "balanced_accuracy_mean": 1.0,
+          "balanced_accuracy_std": 0.0,
+          "chance_balanced_accuracy": 0.5,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        },
+        "source": {
+          "classes": [
+            "RamanBioLib",
+            "gobbato_raman_metabolites",
+            "gobbato_sers_metabolites"
+          ],
+          "n_classes": 3,
+          "balanced_accuracy_mean": 0.6591996891996892,
+          "balanced_accuracy_std": 0.05169180907703055,
+          "chance_balanced_accuracy": 0.3333333333333333,
+          "majority_fraction": 0.5532359081419624,
+          "n_splits_used": 5
+        }
+      },
+      "collapse": {
+        "n_features": 16,
+        "effective_rank": 3.557563304901123,
+        "singular_frac_top1": 10.012880325317383,
+        "mean_dim_std": 0.10100805759429932,
+        "min_dim_std": 0.021905096247792244,
+        "duplicate_fraction": 0.9958246346555324,
+        "cross_analyte_duplicate_fraction": 0.9728601252609603,
+        "pairwise_dist_mean": 0.22946280241012573,
+        "pairwise_dist_std": 0.21185250580310822
+      },
+      "signal_shortcut": {
+        "pc1_vs_total_intensity": 0.0,
+        "pc1_vs_baseline": 0.8597833989522952,
+        "pc1_vs_smoothness": 0.8340238842624247,
+        "norm_vs_total_intensity": 0.0
+      },
+      "family_neighborhood": {
+        "family_knn_purity": 0.46550868486352365,
+        "chance_purity": 0.18705244167503032,
+        "k": 5,
+        "n_known_family": 403,
+        "families": {
+          "amino_acid": 139,
+          "cofactor": 25,
+          "lipid": 43,
+          "organic_acid": 61,
+          "polyol": 9,
+          "purine": 42,
+          "pyrimidine": 19,
+          "saccharide": 49,
+          "small_nitrogenous": 16
+        }
+      },
+      "insample_cross_modal": {
+        "top_k": {
+          "top1": 0.0196078431372549,
+          "top3": 0.058823529411764705,
+          "top5": 0.09803921568627451
+        },
+        "mrr": 0.09188848682023662,
+        "reciprocal_nn_rate": 0.0196078431372549,
+        "matched_minus_unmatched": 0.00019407272338867188
+      }
+    }
+  },
+  "seed_stability": {
+    "E1_shared_supcon": {
+      "mrr_mean": 0.3079711682652859,
+      "mrr_std": 0.023962813077934082,
+      "top1_mean": 0.13725490196078433,
+      "top1_std": 0.032019473761871614,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "mrr_per_seed": [
+        0.33776914806326575,
+        0.27909416291769235,
+        0.3070501938148997
+      ]
+    },
+    "E2_dual_supcon_infonce": {
+      "mrr_mean": 0.29249214837450127,
+      "mrr_std": 0.014768445133725924,
+      "top1_mean": 0.1111111111111111,
+      "top1_std": 0.01848645179572674,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "mrr_per_seed": [
+        0.3115319865319865,
+        0.2904068698186345,
+        0.27553758877288287
+      ]
+    }
+  },
+  "interpretability": {
+    "attribution_stability_raman": {
+      "mean_replicate_attribution_corr": 0.9490591135246481,
+      "n_groups": 12,
+      "method": "occlusion"
+    },
+    "sparse_probe_embed_to_regions": {
+      "r2": 0.01343571795982659,
+      "nonzero_fraction": 0.013671875,
+      "alpha": 0.01,
+      "coef_shape": [
+        32,
+        16
+      ]
+    }
+  },
+  "uncertainty": {
+    "cross_modal_agreement_mean": 0.4732542575574389,
+    "cross_modal_agreement_min": 0.3818836808204651,
+    "n_matched_refs": 51
+  },
+  "hybrid_from": {
+    "encoder": "E1_shared_supcon",
+    "interpretable": "I1_regions"
+  },
+  "runtime_s": 2515.7
+}

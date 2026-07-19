@@ -1,0 +1,15 @@
+{
+  "outcome": "B4",
+  "headline": "Modality-stratified representations retained (no shared representation supported)",
+  "reasons": [
+    "No representation materially beats the direct_SNV held-out cross-modal baseline (top1=0.275, MRR=0.452); best held-out MRR = 0.460 (I1_regions). Retain modality-stratified representations; align at ontology level."
+  ],
+  "best_overall": "I1_regions",
+  "best_encoder": "E1_shared_supcon",
+  "best_interpretable": "I1_regions",
+  "hybrid_mrr": 0.4383138103726339,
+  "any_candidate_beats_direct": false,
+  "primary_encoder_seed_std": 0.014768445133725924,
+  "frozen_representation": null,
+  "source_generalization_caveat": "Ag-SERS is single-source (Gobbato); leave-source-out is impossible for SERS. Cross-modal results are within the present 785 nm matched corpus, NOT observation-domain-invariant."
+}
