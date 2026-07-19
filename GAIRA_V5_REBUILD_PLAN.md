@@ -146,15 +146,43 @@ Hypothesis **H1**: *"A shared biochemical representation exists across Raman and
 - **Preprocessing is decisive:** SNV suppresses modality (bal-acc 0.83, joint chemistry ARI 0.15 > nuisance 0.02); L2 lets modality/source dominate (bal-acc 0.94, nuisance ARI 0.26).
 **Implication:** represent Raman and Ag-SERS separately; align at analyte/ontology level, not in raw spectral space (supports **H4-preliminary** over **H1**). **Next:** Stage B chemical features — test whether chemistry-aware, modality-invariant features strengthen the residual cross-modal signal before revisiting a shared space. Report: `GAIRA_V5_PHASE2_STAGE_A_DIRECT_REPRESENTATION_REPORT.md`; notebook `results/v5_rebuild/phase2_stage_a/`. **Stage B/C not started.**
 
-### (retained) matched-analyte observation-layer feasibility
-**Objective:** learn how acquisition mode changes the observed spectrum of the *same* analyte. Build matched-analyte sets across RamanBioLib Raman, Gobbato Raman, Gobbato Ag-SERS, metabolite-63 Ag-SERS, adenine Ag-SERS, ORC-Ag peak evidence, future Au-SERS. **Determine exact analyte overlap first** (e.g., adenine, hypoxanthine, uric acid, ergothioneine, glucose, amino acids appear in multiple sources).
+The distinction Stage A forces: **observation** ≠ **biochemical representation**. The shared layer, if any, represents biochemical *evidence*, not a shared raw spectral space (see `GAIRA_V5_ARCHITECTURE_AND_SCIENTIFIC_CONTEXT.md`).
 
-Per matched analyte compare: peak presence/absence/shifts; relative-intensity changes; substrate-exclusive peaks; enhancement/suppression; band reliability; within- vs between-mode variance.
+### Stage B — Biochemical Representation Strategy Benchmark — COMPLETE (2026-07-19)
+**Decision: Outcome B4 — modality-stratified representations retained; no shared biochemical representation supported by the current corpus.** Under a leakage-safe framework (splits A held-out-analytes / B held-out-matched-pairs / C replicate-group / D source — D infeasible for single-source Ag-SERS), evaluated on held-out matched-analyte cross-modal retrieval (chance top-1 ≈ 0.098):
+- **Best held-out MRR = 0.460 (I1 adaptive regions) ≈ direct_SNV 0.452** — CIs overlap, i.e. no material improvement over direct spectra by any interpretable or encoder representation.
+- **Encoders underperform and collapse:** cross-modal top-1 0.08–0.18 (< direct 0.28); cross-analyte duplicate embedding 0.96–1.00; modality leakage driven to 0.91–1.00; held-out-analyte family retrieval 0.48–0.50 (< direct 0.74); within-modality Raman ARI 0.53–0.77 (< direct 0.94). Dual < shared encoder; VICReg avoids collapse only by destroying retrieval.
+- **Candidates tested:** direct (SNV/L2/deriv reproduction), interpretable I1 regions / I2 multiscale / I3 sparse dictionary / I4 NMF, encoders E1 shared / E2 dual / E3 modality-specific / E2+triplet / E2+VICReg, and E4 hybrid (E1+I1). **Failed approaches:** all encoders (collapse + underperformance) and the hybrid (< direct).
+- **Frozen representation:** **none as a shared representation.** Working representation for any interim downstream use = modality-stratified direct SNV (Raman held-out within-modality ARI 0.94), with I1 adaptive regions as an auditable interpretable companion.
+- **Source-generalization caveat (unresolved):** Ag-SERS single-source → no observation-domain-invariance claim; cross-modal results are within the present 785 nm matched corpus.
+- **Hypotheses:** H1 not supported by current corpus; H1c/H1d/H1e/H3 rejected; H2 not supported / H2a weakly supported; H4 reaffirmed; H7 rejected (encoder corpus-insufficiency confirmed).
+Report: `GAIRA_V5_PHASE2_STAGE_B_REPRESENTATION_STRATEGY_REPORT.md`; notebook `results/v5_rebuild/phase2_stage_b/`; code `src/gaira/evidence/`. **Stage C/D not started.**
 
-**Escalating approaches (do not jump to a complex model):** L0 metadata-only stratification · L1 domain-specific reliability weighting · L2 matched-analyte band/feature alignment · L3 domain adaptation (Procrustes, CCA, PLS, domain whitening, shared/private factor models, multiblock PCA, generalized CCA; contrastive only if data permit).
-**Required tests:** leave-one-analyte-out cross-mode ID; leave-one-dataset-out family retrieval; same-analyte cross-mode neighborhood consistency; family preservation; off-target collision reduction; substrate/analyte classification before vs after transform; uncertainty for unmatched analytes.
-**Required decision (choose one):** A. no cross-mode correction (separate domains); B. reliability-weighted shared feature space; C. empirically-supported aligned canonical space; D. insufficient overlap → acquire more matched data first.
-**Output:** `reports/GAIRA_V5_PHASE2_OBSERVATION_LAYER_REPORT.md`. **The observation layer must never fabricate spectral bands.**
+<details><summary>Original Stage B authorization spec (for reference)</summary>
+
+### Stage B — Biochemical Representation Strategy Benchmark — (authorized 2026-07-19)
+**Objective:** decide *how* to represent biochemical evidence so that shared chemistry is preserved across observation domains, by comparing two branches (plus an optional hybrid) under one leakage-safe evaluation framework. **This is an encoder feasibility study and representation benchmark, not foundation-model training.** Corpus is small (479 spectra, 87 analytes, 51 matched, largely single-source Ag-SERS) → small regularized models only; no transformer; no pretraining; training-set performance not interpreted; replicates are not independent semantic samples; no biological/perturbation/disease data.
+
+- **Branch I — interpretable evidence representations:** I1 adaptive spectral regions · I2 multiscale/wavelet coefficients · I3 sparse dictionary codes · I4 non-negative basis activations. Fitted on **training data only**, mappable back to wavenumber space.
+- **Branch II — encoder embeddings (small, regularized):** E1 shared 1D encoder · E2 dual encoder (primary hypothesis) · E3 modality-specific encoders (no cross-modal alignment) · E4 hybrid encoder + sparse evidence projection (only if E1–E3 are stable).
+- **Objectives compared (predeclared, compact):** supervised contrastive (analyte identity), cross-modal InfoNCE, triplet/margin, VICReg-style regularization; reconstruction only as auxiliary; modality-adversarial only as a secondary experiment. Chemical-family labels are **evaluation-only** in the primary benchmark.
+- **Evaluation (same framework for all reps):** held-out-analyte and held-out-matched-pair cross-modal retrieval (top-k, MRR, RNN, permutation nulls, analyte-bootstrap CIs); modality/source leakage; within-modality chemistry retention; seed/split stability; embedding-collapse & source-shortcut diagnostics; interpretability (attribution/sparse probes) and uncertainty.
+- **Predeclared splits:** A held-out analytes · B held-out matched pairs · C replicate-group holdout · D source sensitivity (noted where impossible due to single-source Ag-SERS). Hyperparameters chosen on nested/validation splits, never on the final test set.
+- **Decision gate (choose exactly one):** **B1** interpretable selected · **B2** encoder selected (state shared/dual/modality-specific) · **B3** hybrid selected · **B4** modality-stratified retained (no shared representation supported) · **B5** corpus insufficient for encoder conclusions (recommend exact data additions). Do not force a winner; do not present encoders as inherently superior.
+**Outputs:** `GAIRA_V5_PHASE2_STAGE_B_REPRESENTATION_STRATEGY_REPORT.md`; notebook `results/v5_rebuild/phase2_stage_b/`; code under `src/gaira/evidence/`.
+</details>
+
+### Stage C — Targeted grounding-data acquisition & interpretable refinement — RE-SCOPED (post-B4)
+Stage B selected **B4**, so Stage C is **NOT** encoder scaling. It is re-scoped to remove the corpus bottleneck that made every encoder collapse and made a shared representation unsupportable, then to re-run the Stage B benchmark:
+- **Data (the operative gap):** multi-source Ag-SERS (break the single-source confound so Split D becomes feasible); Au-SERS references (currently zero); external matched analytes beyond the Gobbato instrument ecosystem; more matched analytes overall (51 is feasibility, not training, scale).
+- **Interpretable refinement:** iterate I1 adaptive regions / I2 multiscale as the retained auditable representation.
+- **Re-benchmark:** only after the above, re-run Stage B with the enlarged corpus; encoders are revisited **only** if the enlarged corpus first shows a shared signal that direct/interpretable can exploit. Do not scale an encoder on the current corpus.
+**Encoder scaling / pretraining / transformers remain OUT of scope until a shared signal is demonstrated on a larger, multi-source corpus.**
+
+### Stage D — Emergent biochemical ontology — GATED
+Begins only after a representation is **frozen** (by Stage B, or Stage C if scaling was required). Then: stable latent-factor analysis, clustering, biochemical interpretation, ontology versioning. **Ontology construction is not pre-authorized** and starts only when a sufficiently stable representation exists.
+
+**The representation/observation layer must never fabricate spectral bands.**
 
 ---
 
