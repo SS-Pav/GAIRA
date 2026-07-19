@@ -1,0 +1,87 @@
+{
+  "table_defining_202": "/Users/surajpg/projects/GAIRA/streamlit_apps/gaira_demo/data/grounding_molecule_bsv.csv",
+  "n_rows_202_table": 202,
+  "unique_analyte_names": 141,
+  "duplicate_analyte_names": 61,
+  "entity_type_distribution": {
+    "Proteins": 69,
+    "Lipids/FattyAcids": 21,
+    "Lipids/Triglycerides": 20,
+    "AminoAcids": 13,
+    "Saccharides/Monosaccharides": 12,
+    "PrimaryMetabolites": 10,
+    "NucleicAcids": 8,
+    "Saccharides/Polysaccharides": 7,
+    "Proteins/Hemeproteins": 6,
+    "Lipids/Sterols": 5,
+    "Pigments": 5,
+    "Lipids/Hormones": 5,
+    "Saccharides/Disaccharides": 5,
+    "Saccharides": 3,
+    "Lipids/Phospholipids": 3,
+    "Lipids": 3,
+    "Saccharides/Monosaccharides/Glucose": 2,
+    "Vitamins": 2,
+    "Peptides": 1,
+    "Saccharides/Trisaccharides": 1,
+    "Proteins/Hormones": 1
+  },
+  "modality_distribution_202": {
+    "Raman": 133,
+    "SERS(likely)": 52,
+    "unknown": 17
+  },
+  "substrate_distribution_202": {
+    "CaF2 slide": 60,
+    "Glass microscope slide": 51,
+    "Metal rings": 21,
+    " CaF2 slide": 18,
+    "Metal ring": 17,
+    "Metal discs": 14,
+    "Glass tube": 1,
+    " Sample compartment of the\ninstrument": 1,
+    "Coverslip and glass slide": 1,
+    "Gold-coated glass sustrate": 1
+  },
+  "dominant_axis_distribution": {
+    "protein_backbone": 81,
+    "nucleic_acid_backbone": 31,
+    "membrane_lipid": 25,
+    "glycan_carbohydrate": 25,
+    "pyrimidine_nucleotide": 13,
+    "purine_nucleotide": 12,
+    "aromatic_amino_acid": 12,
+    "redox_metabolite": 3
+  },
+  "measured_reference_spectra_by_source": {
+    "adenine_sers_control": 12,
+    "amino_acid_raman_grounding": 20,
+    "metabolite_sers63_support": 64,
+    "serum_ag_colloids_grounding": 64
+  },
+  "total_measured_reference_spectra": 160,
+  "measured_by_modality": {
+    "raman": 20,
+    "sers": 140
+  },
+  "warehouse": {
+    "n_rows": 43,
+    "unique_source_ids": 28,
+    "source_family": {
+      "disease_or_stress_paper": 30,
+      "reference_molecule": 12,
+      "serum_grounding": 1
+    },
+    "modality": {
+      "raman": 22,
+      "mixed": 14,
+      "sers": 7
+    },
+    "biosample_type": {
+      "none": 37,
+      "ev": 4,
+      "serum": 2
+    }
+  },
+  "note_202": "202 = rows in grounding_molecule_bsv.csv; each is one analyte with a precomputed 8-axis BSV. Raw spectra for these 202 are NOT co-located in this table; only the warehouse reference sources (adenine 12, amino_acid 20, metabolite63 64, serum_ag 64) carry counted MEASURED spectra."
+}

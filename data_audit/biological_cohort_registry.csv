@@ -1,0 +1,9 @@
+dataset_id,cohort_name,cohort_definition,n_patients,n_samples,n_spectra,timepoints,dose_or_condition,paired_status,source_table
+cca_hcc_lm_serum_sers,HA(healthy adult/NC),serum control,48,48,~48,n/a,n/a,no,pilot4_1 patient_level_bsv
+cca_hcc_lm_serum_sers,CCA,cholangiocarcinoma,67,67,67(+SER-CCA-58 dup),n/a,n/a,no,pilot4_1
+cca_hcc_lm_serum_sers,HCC,hepatocellular carcinoma,49,49,49,n/a,n/a,no,pilot4_1
+cca_hcc_lm_serum_sers,LM,liver metastasis,49,49,49,n/a,n/a,no,pilot4_1
+diabetes_plasma_ev_sers,OWD(Impact),overweight diabetic arm,39,39,441-1089 scans,1,OWD,no,pilot2 sample_query
+diabetes_plasma_ev_sers,NWD(Strong-D),normal-weight diabetic arm,24,24,441 scans,1,NWD,no,pilot2
+shine_ev_sers,D0_C0..D2_C40,dose x day EV,0,~41 wells,810-2284/cell,"D0,D1,D2",C0/10/20/40,no,pilot3
+covid_serum_raman,COVID/Healthy,confirmed vs control,~103,309(as spectra),~3/patient,1,group,no,pilot5

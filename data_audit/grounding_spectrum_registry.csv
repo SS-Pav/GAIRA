@@ -1,0 +1,5 @@
+source_id,source_family,modality,measured_spectra,detected_peaks,class_count,raw_or_processed,used_in_demo,notes
+adenine_sers_control,reference_molecule,sers,12,68.0,12,measured/summary,True,measured reference spectra counted in the grounding warehouse
+amino_acid_raman_grounding,reference_molecule,raman,20,245.0,20,measured/summary,False,measured reference spectra counted in the grounding warehouse
+metabolite_sers63_support,reference_molecule,sers,64,604.0,64,measured/summary,False,measured reference spectra counted in the grounding warehouse
+serum_ag_colloids_grounding,serum_grounding,sers,64,515.0,62,measured/summary,False,measured reference spectra counted in the grounding warehouse
