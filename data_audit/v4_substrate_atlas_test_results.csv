@@ -1,0 +1,5 @@
+experiment,engine,purine_G01_by_substrate,cross_substrate_CV,purine_top1_fraction
+A_cross_substrate,demo_rules,"{'cAg': np.float64(0.196), 'cAu': np.float64(0.163), 'sAg': np.float64(0.139), 'sAu': np.float64(0.198)}",0.141,1.0
+A_cross_substrate,demo_norules,"{'cAg': np.float64(0.29), 'cAu': np.float64(0.242), 'sAg': np.float64(0.203), 'sAu': np.float64(0.295)}",0.146,1.0
+A_cross_substrate,prod,"{'cAg': np.float64(1.0), 'cAu': np.float64(1.0), 'sAg': np.float64(1.0), 'sAu': np.float64(1.0)}",0.0,1.0
+atlas_collision_numeric_effect,demo,0 caveats generated,n/a,BSV unchanged by caveats (0 numeric effect)
