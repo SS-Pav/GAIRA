@@ -1,0 +1,7 @@
+pipeline,coverage_raman,coverage_sers,matched_xmod_cosine_mean,null_xmod_cosine_mean,modality_leakage_cv_acc,class_balance
+P0_raw_l2,1.0,0.997,0.527,0.41,0.823,0.745
+P1_asls_l2,1.0,0.997,0.483,0.332,0.841,0.745
+P2_asls_savgol_l2,1.0,0.997,0.484,0.333,0.841,0.745
+P3_asls_savgol_snv,1.0,0.997,0.253,0.022,0.856,0.745
+P4_poly_savgol_l2,1.0,0.997,0.248,0.037,0.86,0.745
+P5_asls_savgol_area,1.0,0.997,0.484,0.333,0.745,0.745

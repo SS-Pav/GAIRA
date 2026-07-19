@@ -1,0 +1,106 @@
+{
+  "pipelines": {
+    "P0_raw_l2": {
+      "coverage_raman": 1.0,
+      "coverage_sers": 0.997,
+      "matched_xmod_cosine_mean": 0.527,
+      "matched_xmod_cosine_vals": [
+        0.37,
+        0.491,
+        0.416,
+        0.591,
+        0.626,
+        0.506,
+        0.689
+      ],
+      "null_xmod_cosine_mean": 0.41,
+      "modality_leakage_cv_acc": 0.823,
+      "class_balance": 0.745
+    },
+    "P1_asls_l2": {
+      "coverage_raman": 1.0,
+      "coverage_sers": 0.997,
+      "matched_xmod_cosine_mean": 0.483,
+      "matched_xmod_cosine_vals": [
+        0.386,
+        0.383,
+        0.342,
+        0.566,
+        0.674,
+        0.348,
+        0.683
+      ],
+      "null_xmod_cosine_mean": 0.332,
+      "modality_leakage_cv_acc": 0.841,
+      "class_balance": 0.745
+    },
+    "P2_asls_savgol_l2": {
+      "coverage_raman": 1.0,
+      "coverage_sers": 0.997,
+      "matched_xmod_cosine_mean": 0.484,
+      "matched_xmod_cosine_vals": [
+        0.387,
+        0.384,
+        0.344,
+        0.566,
+        0.676,
+        0.349,
+        0.683
+      ],
+      "null_xmod_cosine_mean": 0.333,
+      "modality_leakage_cv_acc": 0.841,
+      "class_balance": 0.745
+    },
+    "P3_asls_savgol_snv": {
+      "coverage_raman": 1.0,
+      "coverage_sers": 0.997,
+      "matched_xmod_cosine_mean": 0.253,
+      "matched_xmod_cosine_vals": [
+        0.232,
+        0.072,
+        0.055,
+        0.377,
+        0.489,
+        -0.001,
+        0.545
+      ],
+      "null_xmod_cosine_mean": 0.022,
+      "modality_leakage_cv_acc": 0.856,
+      "class_balance": 0.745
+    },
+    "P4_poly_savgol_l2": {
+      "coverage_raman": 1.0,
+      "coverage_sers": 0.997,
+      "matched_xmod_cosine_mean": 0.248,
+      "matched_xmod_cosine_vals": [
+        0.161,
+        0.039,
+        0.061,
+        0.439,
+        0.478,
+        0.014,
+        0.545
+      ],
+      "null_xmod_cosine_mean": 0.037,
+      "modality_leakage_cv_acc": 0.86,
+      "class_balance": 0.745
+    },
+    "P5_asls_savgol_area": {
+      "coverage_raman": 1.0,
+      "coverage_sers": 0.997,
+      "matched_xmod_cosine_mean": 0.484,
+      "matched_xmod_cosine_vals": [
+        0.387,
+        0.384,
+        0.344,
+        0.566,
+        0.676,
+        0.349,
+        0.683
+      ],
+      "null_xmod_cosine_mean": 0.333,
+      "modality_leakage_cv_acc": 0.745,
+      "class_balance": 0.745
+    }
+  }
+}
