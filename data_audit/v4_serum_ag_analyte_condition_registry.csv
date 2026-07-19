@@ -1,0 +1,10 @@
+analyte,matrix,pure_or_serum,substrate,excitation,concentration,n_spectra,n_replicates,controlled_intervention,raw_data_available,current_GAIRA_role,recommended_GAIRA_role
+"53 pure metabolites (adenine,hypoxanthine,uric_acid,ergothioneine,glucose,urea,AAs...)",aqueous,pure,Ag colloid,785,physiological,265,5,pure standard,YES(907 txt),grounding(DB 368),DIRECT GROUNDING (Ag-SERS pure metabolites)
+51 metabolite powders,none,powder,none,785,neat,153,-,Raman reference,YES,grounding,DIRECT GROUNDING (Raman)
+hypoxanthine,commercial serum,spiked serum,Ag colloid,785,spike,5,5,spike,YES(dataset uricase),SAEL contrast,PERTURBATION EVALUATION (not grounding)
+uric_acid,serum+uricase,enzyme-treated serum,Ag colloid,785,endogenous,10,5,uricase depletion,YES,SAEL contrast (INCONSISTENT),PERTURBATION EVALUATION (held-out)
+uric_acid vs 15N-UA,aqueous+/-HSA,pure+binding,Ag colloid,785,280uM,73,varies,isotope+binding,YES(isotopic),unused,"PERTURBATION EVAL (isotope, mechanistic)"
+53 metabolites spiked into serum,Merck serum,spiked serum,Ag colloid,785,physiological,270,5,spike,YES,unused,PERTURBATION EVAL (analytical challenge set)
+ergothioneine (cspp),pooled serum,spiked serum,Ag colloid,785,25uM,50,~50,spike,YES(cspp Fig7),SAEL contrast,PERTURBATION EVAL
+81 healthy donor serum,donor serum,untreated serum,Ag colloid,785,none,81,1,cohort,YES(donors),unused,BIOLOGICAL CHALLENGE (serum reference cohort)
+literature band assignments (De Gelder/Kim/Stewart),n/a,digitized,n/a,n/a,n/a,0,-,none,digitized only,literature,CANDIDATE ASSIGNMENT ONLY (not measured)
