@@ -1,0 +1,8 @@
+test,layer,metric,with_layer,without_layer,verdict,note
+adenine_dose,substrate_weighting,G01_dose_spearman,0.829,0.829,no_detectable_utility,substrate dampen ×0.65 lowers G01 magnitude but preserves dose ordering
+adenine_dose,substrate_weighting,G01_max,0.1679,0.2488,demonstrated_utility,"dampening reduces peak G01 (keeps call class-level) — a magnitude effect, not a validated correction"
+adenine_dose,substrate_weighting,offtarget_spillover,0.0247,0.0246,suggestive_utility,substrate rule does not change off-target axes (only the purine motif)
+european_adenine,substrate_weighting,cross_substrate_G01_CV,0.131,n/a,not_testable_with_current_data,"demo maps ALL of ['cAg', 'cAu', 'sAg', 'sAu'] to one rule ('Ag colloid SERS'); it is BLIND to Au vs Ag and colloid vs planar. G01 by substrate: cAg=0.185, cAu=0.167, sAg=0.133, sAu=0.190"
+european_adenine,modality_excitation,G01_532_vs_785,0.105,0.181,not_testable_with_current_data,demo has NO excitation-wavelength awareness; 532 and 785 treated identically
+adenine_highconc,physics_caveats_collision,caveats_change_bsv,no,no,no_detectable_utility,"0 caveats generated but BSV numbers are unaffected by caveats/collision (caveat generator only, not a numerical correction)"
+ergothioneine_highdose,substrate_weighting,G10_thiol_boost,0.1295,0.11,suggestive_utility,"Ag-SERS thiol ×1.20 boost raises G10 at high ergothioneine dose (heuristic, not validated vs ground truth)"

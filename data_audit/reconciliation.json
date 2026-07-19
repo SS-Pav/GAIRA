@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "check": "202_table_rows",
+      "pass": true,
+      "detail": "rows=202"
+    },
+    {
+      "check": "202_unique_analytes_141",
+      "pass": true,
+      "detail": "unique=141"
+    },
+    {
+      "check": "202_duplicates_61",
+      "pass": true,
+      "detail": "dups=61"
+    },
+    {
+      "check": "measured_grounding_160_summary",
+      "pass": true,
+      "detail": "summary-level measured=160 (DB grounding_metadata=468)"
+    },
+    {
+      "check": "calibration_datasets_ge7",
+      "pass": true,
+      "detail": "n=8"
+    },
+    {
+      "check": "axis_coverage_11",
+      "pass": true,
+      "detail": "n=11"
+    },
+    {
+      "check": "axes_with_support_3",
+      "pass": true,
+      "detail": "supportive axes=['G01_purine_nucleotide', 'G02_purine_metabolite', 'G10_sulfur_thiol_redox']"
+    },
+    {
+      "check": "biological_datasets_13",
+      "pass": true,
+      "detail": "n=13"
+    },
+    {
+      "check": "canonical_has_all_roles",
+      "pass": true,
+      "detail": "{'biological_mixtures': 13, 'calibration': 7, 'molecular_grounding': 5, 'supporting_literature': 2}"
+    },
+    {
+      "check": "corpus_totals_5_roles",
+      "pass": true,
+      "detail": "roles=['molecular_grounding', 'calibration', 'biological_mixtures', 'supporting_literature', 'substrate_physics']"
+    },
+    {
+      "check": "big_number_augmentation_flag",
+      "pass": true,
+      "detail": "small2023 flagged augmented"
+    },
+    {
+      "check": "demo_does_not_read_duckdb",
+      "pass": true,
+      "detail": "gaira.duckdb v3_1_tab=NONE"
+    },
+    {
+      "check": "prod_substrate_dormant",
+      "pass": true,
+      "detail": "src/gaira substrate engine has no importer"
+    }
+  ],
+  "passed": 13,
+  "total": 13
+}
