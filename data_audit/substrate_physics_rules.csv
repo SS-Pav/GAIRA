@@ -1,0 +1,11 @@
+rule_id,substrate_or_mode,affected_band_or_axis,operation,multiplier_or_penalty,scientific_basis,code_location,used_in_v3_1,used_in_src_gaira,validated,classification,risk_or_note
+ag_sers_purine_amplify,Ag colloid SERS,motif purine_720_735 / G01,multiply,0.65,Ag purine over-amplification,demo/substrate_physics.py,yes,no,no,heuristic_multiplier,dampens G01; no dose-ordering benefit (ablation)
+ag_sers_carotenoid_overlap,Ag colloid SERS,axis G02,caveat,0.85,carotenoid 1517 vs UA,demo/substrate_physics.py,yes(caveat),no,no,caveat_generator,no numeric BSV change
+raman_amide_protein,Raman,motif amide-III / G06,none,1.0,amide-III reliable,demo/substrate_physics.py,yes(no-op),no,no,metadata_only,no effect
+raman_amide_i_lipid_overlap,Raman,axis G08,caveat,0.92,amide-I vs lipid C=C,demo/substrate_physics.py,yes(caveat),no,no,caveat_generator,no numeric BSV change
+ag_sers_thiol_amplify,Ag colloid SERS,motif thione_490_500 / G10,multiply,1.2,thiol Ag affinity,demo/substrate_physics.py,yes,no,no,heuristic_multiplier,raises G10; suggestive not validated
+diabetes_g10_window_tighten,Ag/plasma,motif thione 490-505,spectral_mask,-,reduce Ag-oxide/citrate baseline,analysis/_diabetes_overrides.py,opt-in tool,no,partial,spectral_mask,most defensible; audit-reasoned
+diabetes_coband_thiol_gate,Ag SERS + 720 co-band,G10,gated_multiply,1.20/1.0,require imidazole co-band,analysis/_diabetes_overrides.py,opt-in tool,no,partial,evidence_gating,most defensible substrate rule
+domain_context_weights,EV/serum domain,G08/G09/G02,rank_weight,0.7,matrix-expected downweight,gaira_core/domain_context.py,yes(ranking),no,no,evidence_reranking,ranking + caveat only; never changes coords
+prod_substrate_engine_42,substrate family+band,axis/motif/band,compose_multiply,0.40-1.15,source-backed evidence registry,src/gaira/substrate/* + GAIRA_BUILD,no,loadable_no_importer,source-backed,evidence_reranking_engine,DORMANT — most rigorous but unused
+prod_atlas_band_constraints,wavenumber band,band,constrain/ambiguity,-,evidence-derived band atlas,src/gaira/atlas/atlas_loader.py,no,loadable_no_importer,evidence-derived,spectral_constraint_engine,DORMANT
