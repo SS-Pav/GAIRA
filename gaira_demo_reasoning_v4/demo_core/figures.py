@@ -457,6 +457,87 @@ def reasoning_cascade(bridge, coord, dose_label="", domain="buffer"):
     return fig
 
 
+# ══════════════════════════════════════════════════════════════════════════════
+# Page 7 — Future DART (CONCEPTUAL figures — clearly labelled, no measurements)
+# ══════════════════════════════════════════════════════════════════════════════
+
+def dart_concept_ladder():
+    """static point → dose trajectory → DART (potential×time) trajectory."""
+    fig, axes = plt.subplots(1, 3, figsize=(8.2, 2.9))
+    for ax in axes:
+        ax.set_xticks([]); ax.set_yticks([]); ax.set_xlim(-1.2, 1.2); ax.set_ylim(-1.2, 1.2)
+    axes[0].scatter([0], [0.1], s=120, color=T.PRIMARY, zorder=3)
+    axes[0].set_title("Static spectrum\n→ one BSV point", fontsize=9.5)
+    t = np.linspace(0, 1, 8)
+    axes[1].plot(t - 0.5, 0.7 * t - 0.3, "-o", color=T.PRIMARY, markersize=4)
+    axes[1].set_title("Dose series\n→ BSV trajectory", fontsize=9.5)
+    th = np.linspace(0, 2.3 * np.pi, 60)
+    axes[2].plot(0.7 * np.cos(th) * (1 - th / 20), 0.7 * np.sin(th) * (1 - th / 20),
+                 color=T.UP, linewidth=1.8)
+    axes[2].set_title("DART: potential × time\n→ dynamic trajectory", fontsize=9.5)
+    fig.suptitle("CONCEPTUAL — how a static point becomes a trajectory", fontsize=10.5,
+                 fontweight="700", color=T.MUTED, y=1.06)
+    fig.tight_layout()
+    return fig
+
+
+def trajectory_gallery():
+    """Eight conceptual electrochemical-trajectory classes (illustrative only)."""
+    specs = ["scaling", "redistribution", "reversible loop", "hysteresis",
+             "threshold", "delayed kinetics", "irreversible drift", "adsorption switch"]
+    fig, axes = plt.subplots(2, 4, figsize=(8.4, 4.4))
+    t = np.linspace(0, 1, 80)
+    for ax, name in zip(axes.ravel(), specs):
+        ax.set_xticks([]); ax.set_yticks([]); ax.set_title(name, fontsize=9.2, color=T.INK)
+        if name == "scaling":
+            ax.plot(t, t, color=T.PRIMARY, lw=2)
+        elif name == "redistribution":
+            ax.plot(t, np.sin(t * 2.2), color=T.PRIMARY, lw=2)
+        elif name == "reversible loop":
+            th = np.linspace(0, 2 * np.pi, 80); ax.plot(np.cos(th), np.sin(th) * 0.6, color=T.UP, lw=2)
+        elif name == "hysteresis":
+            ax.plot(t, t ** 2, color=T.DOWN, lw=2); ax.plot(t, np.sqrt(t), color=T.UP, lw=2)
+        elif name == "threshold":
+            ax.plot(t, (t > 0.5).astype(float), color=T.PRIMARY, lw=2)
+        elif name == "delayed kinetics":
+            ax.plot(t, 1 - np.exp(-6 * np.clip(t - 0.3, 0, 1)), color=T.PRIMARY, lw=2)
+        elif name == "irreversible drift":
+            ax.plot(t, t, color=T.DOWN, lw=2); ax.plot(t, t * 0.4 + 0.1, color=T.UP, lw=2,
+                                                       linestyle="--")
+        else:  # adsorption switch
+            ax.plot(t, 0.5 + 0.4 * np.sign(np.sin(t * 12)), color=T.PRIMARY, lw=1.6)
+    fig.suptitle("CONCEPTUAL trajectory vocabulary — illustrative shapes, not measurements",
+                 fontsize=10.5, fontweight="700", color=T.MUTED, y=1.02)
+    fig.tight_layout()
+    return fig
+
+
+def dart_data_model():
+    """The future DART acquisition tensor + processing path (schematic)."""
+    fig, ax = plt.subplots(figsize=(8.0, 2.4)); ax.axis("off")
+    axes_lbl = ["intensity", "×  wavenumber", "×  potential", "×  time", "×  electrode", "×  waveform"]
+    for i, s in enumerate(axes_lbl):
+        ax.add_patch(FancyBboxPatch((i * 1.34 + 0.05, 1.05), 1.24, 0.6,
+                     boxstyle="round,pad=0.02,rounding_size=0.08", facecolor="#fdeef0",
+                     edgecolor=T.UP, linewidth=1.1))
+        ax.text(i * 1.34 + 0.67, 1.35, s, ha="center", va="center", fontsize=8.8, color=T.INK)
+    path = ["DART spectrum sequence", "frozen-atlas projection / t", "component → MSS → BSV / t",
+            "electrochemical-response readout"]
+    for i, s in enumerate(path):
+        ax.add_patch(FancyBboxPatch((i * 2.05 + 0.05, 0.1), 1.9, 0.55,
+                     boxstyle="round,pad=0.02,rounding_size=0.08", facecolor="#eef5fa",
+                     edgecolor=T.PRIMARY, linewidth=1.0))
+        ax.text(i * 2.05 + 1.0, 0.37, s, ha="center", va="center", fontsize=8.0, color=T.INK)
+        if i < len(path) - 1:
+            ax.annotate("", xy=(i * 2.05 + 2.0, 0.37), xytext=(i * 2.05 + 1.95, 0.37),
+                        arrowprops=dict(arrowstyle="-|>", color=T.FAINT, lw=1.2))
+    ax.set_xlim(0, 8.1); ax.set_ylim(0, 1.8)
+    ax.text(4.05, 0.85, "each time point → the SAME frozen coordinate system", ha="center",
+            fontsize=8.4, color=T.FAINT, style="italic")
+    fig.tight_layout()
+    return fig
+
+
 # ── uricase depletion: difference (before/after) ──
 def difference_bars(labels, before, after, title="Difference (after − before)",
                     xlabel="Δ share", diverging=True):
