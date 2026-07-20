@@ -45,6 +45,39 @@ def main():
                                 [b.infer(Z[i]).bsv.composition["nucleic_purine"] for i in range(len(Z))],
                                 xlabel="adenine (uM)", ylabel="purine share"),
     }
+    # ── Page 4 (Calibration) figures ──
+    from demo_core import calibration as CAL
+    names = {m.id: m.name for m in b.mss.motifs}
+    s_ade = CAL.build_dose_series(D.calibration("adenine"), method=CAL.ADENINE_METHOD)
+    evo = CAL.motif_evolution(b, s_ade, [m.id for m in b.mss.biochemical()])
+    mean, rl, rs = CAL.theme_series(b, s_ade, "nucleic_purine")
+    comp = CAL.component_series(b, s_ade)
+    topj = list(int(x) for x in np.argsort(-(comp.max(0) - comp.min(0)))[:6])
+    vecs = CAL.bsv_theme_vectors(b, s_ade.mean_coord); proj, var = CAL.trajectory_2d(vecs)
+    J = CAL.joint_trajectories(b)
+    U = CAL.uricase_conditions(b)
+    ids = [m.id for m in b.mss.biochemical()]
+    mb = {a.id: a.composition for a in b.bsv_and_mss(U["spiked"])[1]}
+    ma = {a.id: a.composition for a in b.bsv_and_mss(U["spiked+uricase"])[1]}
+    print(f"adenine purine ρ={CAL.spearman(rl, rs):.2f} · joint traj classes: "
+          f"{[v['class'] for v in J.values()]}")
+    figs.update({
+        "cal_cascade": F.reasoning_cascade(b, s_ade.mean_coord[-1], f"{s_ade.levels[-1]:.1f} µM"),
+        "cal_schematic": F.experimental_schematic("adenine", "cAg", "785"),
+        "cal_mss_evolution": F.mss_evolution(s_ade.levels, evo, "purine_ring_breathing", names),
+        "cal_dose_langmuir": F.dose_response_langmuir(s_ade.levels, mean, rl, rs,
+                                                      CAL.langmuir_fit(rl, rs), "adenine",
+                                                      "nucleic_purine", CAL.spearman(rl, rs)),
+        "cal_component_evo": F.component_evolution(s_ade.levels, comp, topj),
+        "cal_trajectory": F.trajectory_2d(proj, s_ade.levels, var),
+        "cal_uricase_diff_mss": F.difference_bars([names[i] for i in ids],
+                                                  [mb[i] for i in ids], [ma[i] for i in ids]),
+        "cal_compare": F.compare_trajectories([
+            {"name": "adenine", "proj": J["adenine"]["proj"], "color": F.T.PRIMARY, "marker": "o"},
+            {"name": "ergothioneine", "proj": J["ergothioneine"]["proj"], "color": F.T.GOOD, "marker": "s"},
+            {"name": "uricase", "proj": J["uricase"]["proj"], "color": F.T.UP, "marker": "^"}]),
+    })
+
     for name, fig in figs.items():
         p = OUT / f"{name}.png"
         fig.savefig(p, bbox_inches="tight"); plt.close(fig)

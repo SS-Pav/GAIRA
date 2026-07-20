@@ -14,9 +14,22 @@ streamlit run app.py      # or:  ./run_demo.sh
   `gaira.engine` + the derived MSS layer in `gaira.engine.mss`. The atlas,
   preprocessing, NMF, ontology, component registry, theme weights, BSV equations,
   confidence engine and MSS layer are **frozen** and are never modified here.
-- It is built **page by page** on that frozen engine. Pages 1, 3, and the live
-  panels of 2/4/8 are wired to the engine; pages 5–7 render their scientific frame
-  and are being wired next (each page states its status honestly).
+- It is built **page by page** on that frozen engine. Pages 1, 3 and 4 are complete;
+  pages 2/8 have live panels; pages 5–7 render their scientific frame and are being
+  wired next (each page states its status honestly).
+
+### Page 4 — Calibration (the strongest page)
+
+Three controlled perturbations validate the frozen coordinate system, each shown
+with the same reasoning workflow and the **signature reasoning-cascade** figure
+(Spectrum → Components → MSS → BSV → Radar) driven by a concentration slider:
+
+- **Adenine** — addition that *redistributes* components (c3/c13 rise, others fall).
+- **Ergothioneine** — addition that *scales* one motif; near-textbook Langmuir
+  (ρ≈0.96, R²≈0.95).
+- **Uricase depletion** — a knock-out; the MSS layer resolves that the *oxopurine*
+  motif falls specifically, which the coarse purine theme almost entirely hides.
+- **Compare** — all three trajectory classes in one shared BSV space.
 
 ## The reasoning hierarchy (this demo's spine)
 

@@ -63,6 +63,13 @@ class Bridge:
         W, grid = self.reg.basis()
         return grid, W[j]
 
+    def reconstruct(self, coord):
+        """The frozen atlas's reconstruction of a spectrum from its 24 coordinates
+        (coord @ basis). This is exactly what the engine 'sees' — derived from the
+        frozen NMF basis, always available, no raw-file dependency."""
+        W, grid = self.reg.basis()
+        return grid, np.asarray(coord, float) @ W
+
     def theme_meta(self, theme_id):
         t = self.onto.theme(theme_id)
         return {"id": theme_id, "name": t.get("name", theme_id),

@@ -72,3 +72,74 @@ def test_all_pages_import_and_expose_render():
     for m in (p1_overview, p2_reference_atlas, p3_reasoning, p4_calibration,
               p5_serum, p6_biological, p7_dart, p8_methods):
         assert callable(getattr(m, "render", None)), m.__name__
+
+
+# ── Page 4 (Calibration) — the strongest page ──
+@needs_art
+def test_calibration_adenine_monotonic_purine():
+    """Adenine dose (recoverable cAg@785) must drive the purine theme monotonically up."""
+    from demo_core.engine_bridge import Bridge
+    from demo_core import calibration as CAL, data as D
+    b = Bridge()
+    s = CAL.build_dose_series(D.calibration("adenine"), method=CAL.ADENINE_METHOD)
+    mean, rl, rs = CAL.theme_series(b, s, "nucleic_purine")
+    assert CAL.spearman(rl, rs) > 0.5              # monotone increasing
+    assert mean[-1] > mean[0]
+    fit = CAL.langmuir_fit(rl, rs)
+    assert fit is not None and fit[3] > 0.3        # a saturating fit exists
+
+
+@needs_art
+def test_calibration_ergothioneine_cleanest():
+    """Ergothioneine → sulfur is the cleanest dose-response (near-monotone Langmuir)."""
+    from demo_core.engine_bridge import Bridge
+    from demo_core import calibration as CAL, data as D
+    b = Bridge()
+    s = CAL.build_dose_series(D.calibration("ergothioneine"))
+    _, rl, rs = CAL.theme_series(b, s, "sulfur_antioxidant")
+    assert CAL.spearman(rl, rs) > 0.85
+
+
+@needs_art
+def test_calibration_adenine_mss_evolution_purine_on_top():
+    from demo_core.engine_bridge import Bridge
+    from demo_core import calibration as CAL, data as D
+    b = Bridge()
+    s = CAL.build_dose_series(D.calibration("adenine"), method=CAL.ADENINE_METHOD)
+    evo = CAL.motif_evolution(b, s, [m.id for m in b.mss.biochemical()])
+    # purine motif has the largest elevation at the top dose of any biochemical motif
+    top_dose = {m: v[-1] for m, v in evo.items()}
+    assert max(top_dose, key=top_dose.get) == "purine_ring_breathing"
+
+
+@needs_art
+def test_uricase_depletes_oxopurine_specifically():
+    """Uricase (urate knock-out) must drop the oxopurine motif more than the adenine
+    purine-ring motif — the MSS layer resolves the specific depletion."""
+    from demo_core.engine_bridge import Bridge
+    from demo_core import calibration as CAL
+    b = Bridge()
+    cond = CAL.uricase_conditions(b)
+    before, after = cond["spiked"], cond["spiked+uricase"]
+    mb = {a.id: a.composition for a in b.bsv_and_mss(before)[1]}
+    ma = {a.id: a.composition for a in b.bsv_and_mss(after)[1]}
+    d_oxo = ma["oxopurine_carbonyl"] - mb["oxopurine_carbonyl"]
+    d_pur = ma["purine_ring_breathing"] - mb["purine_ring_breathing"]
+    assert d_oxo < 0                       # oxopurine falls on urate removal
+    assert d_oxo < d_pur                   # and falls more than the adenine-type motif
+
+
+@needs_art
+def test_joint_trajectories_three_classes_render():
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from demo_core.engine_bridge import Bridge
+    from demo_core import calibration as CAL, figures as F, data as D
+    b = Bridge()
+    J = CAL.joint_trajectories(b)
+    assert {v["class"] for v in J.values()} == {"redistribution", "scaling", "depletion"}
+    s = CAL.build_dose_series(D.calibration("adenine"), method=CAL.ADENINE_METHOD)
+    fig = F.reasoning_cascade(b, s.mean_coord[-1], "1.8 µM")   # the signature figure renders
+    assert fig is not None
+    plt.close(fig)
