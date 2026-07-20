@@ -94,6 +94,24 @@ def main():
         "p5_confidence_limitation": F.confidence_limitation(cdf),
     })
 
+    # ── Page 6 (Biological) figures ──
+    from demo_core import biological as BIO
+    if BIO.available():
+        art = BIO.load("diabetes_plasma_ev_sers")
+        if art is not None:
+            gc = BIO.group_contrast(art)
+            proj, var = BIO.pca_2d(art["themes_mat"])
+            print(f"biological: {list(BIO.available().keys())} · diabetes top Δtheme "
+                  f"{gc['rows'][0]['theme']} δ={gc['rows'][0]['cliffs_delta']:+.2f}")
+            figs.update({
+                "p6_forest": F.forest_plot(gc["rows"], gc["a"], gc["b"]),
+                "p6_radar": F.multi_radar([{"name": g, "axes": BIO.group_radar_axes(art, g)}
+                                           for g in art["groups"]]),
+                "p6_pca": F.bio_pca(proj, art["group"], var),
+                "p6_quality": F.group_quality(art),
+                "p6_centroids": F.study_centroid_map(BIO.study_centroids()),
+            })
+
     for name, fig in figs.items():
         p = OUT / f"{name}.png"
         fig.savefig(p, bbox_inches="tight"); plt.close(fig)

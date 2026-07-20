@@ -1,0 +1,39 @@
+{
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "datasets": {
+    "covid_serum_raman": {
+      "display_name": "COVID serum Raman",
+      "status": "REAL",
+      "aggregation": "spectrum",
+      "domain": "serum",
+      "n_units": 465,
+      "n_by_group": {
+        "COVID": 159,
+        "Healthy": 150,
+        "Suspected": 156
+      }
+    },
+    "hcc_serum": {
+      "display_name": "HCC serum SERS",
+      "status": "REAL",
+      "aggregation": "spectrum",
+      "domain": "serum",
+      "n_units": 144,
+      "n_by_group": {
+        "HCC": 72,
+        "control": 72
+      }
+    },
+    "diabetes_plasma_ev_sers": {
+      "display_name": "Diabetes plasma-EV SERS",
+      "status": "REAL",
+      "aggregation": "patient",
+      "domain": "ev",
+      "n_units": 63,
+      "n_by_group": {
+        "Impact": 39,
+        "Strong-D": 24
+      }
+    }
+  }
+}

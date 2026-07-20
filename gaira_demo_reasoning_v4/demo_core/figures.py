@@ -579,6 +579,109 @@ def confidence_limitation(cdf, title="Confidence does not track recoverability")
     return fig
 
 
+# ══════════════════════════════════════════════════════════════════════════════
+# Page 6 — Biological Studies figures
+# ══════════════════════════════════════════════════════════════════════════════
+
+GROUP_COLORS = [T.PRIMARY, T.UP, T.GOOD, T.WARN]
+
+
+def multi_radar(series, title="Group biochemical state (absolute atlas position)"):
+    """Overlay several groups' absolute-BSV radars (composition share)."""
+    peak = max(max(a["score"] for a in s["axes"]) for s in series)
+    vmax = peak * 1.18 if peak > 0 else 1.0
+    fig, ax = plt.subplots(figsize=(5.8, 5.8), subplot_kw={"polar": True})
+    labels = [THEME_SHORT.get(a["theme"], a["theme"]) for a in series[0]["axes"]]
+    ang = np.linspace(0, 2 * np.pi, len(labels), endpoint=False)
+    ang_c = np.concatenate([ang, ang[:1]])
+    ax.set_theta_offset(np.pi / 2); ax.set_theta_direction(-1); ax.set_ylim(0, vmax)
+    ax.set_yticks([vmax / 2]); ax.set_yticklabels([f"{vmax/2:.2f}"], color=T.FAINT, fontsize=7.5)
+    ax.set_xticks(ang); ax.set_xticklabels(labels, fontsize=8.6, color=T.INK)
+    for k, s in enumerate(series):
+        v = [a["score"] for a in s["axes"]]; vc = np.array(v + v[:1])
+        c = s.get("color", GROUP_COLORS[k % len(GROUP_COLORS)])
+        ax.plot(ang_c, vc, color=c, linewidth=2.0, label=s["name"])
+        ax.fill(ang_c, vc, color=c, alpha=0.10)
+    ax.grid(color=T.GRID, linewidth=0.7); ax.spines["polar"].set_color(T.PANEL_EDGE)
+    ax.set_title(title, fontsize=11.5, color=T.INK, pad=20)
+    ax.legend(loc="upper right", bbox_to_anchor=(1.28, 1.12), fontsize=8.6)
+    fig.tight_layout()
+    return fig
+
+
+def forest_plot(rows, a, b, title="ΔBSV effect sizes with 95% bootstrap CI"):
+    """Signed theme difference (a−b) with bootstrap CI, coloured by FDR significance,
+    Cliff's delta annotated. Effect size is emphasised over the p-value."""
+    rows = sorted(rows, key=lambda r: r["delta"])
+    y = np.arange(len(rows))
+    delta = [r["delta"] for r in rows]
+    lo = [r["delta"] - r["ci_lo"] for r in rows]; hi = [r["ci_hi"] - r["delta"] for r in rows]
+    colors = [T.GOOD if r["sig"] else T.FAINT for r in rows]
+    fig, ax = plt.subplots(figsize=(7.4, max(3.0, 0.42 * len(rows))))
+    ax.errorbar(delta, y, xerr=[lo, hi], fmt="none", ecolor=T.FAINT, elinewidth=1.2, capsize=3, zorder=1)
+    ax.scatter(delta, y, c=colors, s=55, zorder=3, edgecolor="white", linewidth=0.6)
+    ax.axvline(0, color=T.MUTED, linewidth=0.9)
+    ax.set_yticks(y); ax.set_yticklabels([THEME_SHORT.get(r["theme"], r["theme"]) for r in rows],
+                                         fontsize=9)
+    for yi, r in enumerate(rows):
+        ax.text(max(hi[yi] + r["delta"], r["delta"]) + 0.001 * (1 if r["delta"] >= 0 else 1),
+                yi, f"  δ={r['cliffs_delta']:+.2f}", va="center", fontsize=7.4, color=T.MUTED)
+    ax.set_xlabel(f"Δ evidence share ({a} − {b})")
+    ax.set_title(title + f"  ·  green = FDR q<0.05", fontsize=10.8, pad=8)
+    ax.grid(axis="y", visible=False); ax.margins(x=0.22)
+    fig.tight_layout()
+    return fig
+
+
+def bio_pca(proj, groups, var, title="Sample space (PCA of BSV)"):
+    fig, ax = plt.subplots(figsize=(6.4, 5.0))
+    for k, g in enumerate(sorted(set(groups))):
+        m = np.array(groups) == g
+        c = GROUP_COLORS[k % len(GROUP_COLORS)]
+        ax.scatter(proj[m, 0], proj[m, 1], s=34, color=c, alpha=0.65,
+                   edgecolor="white", linewidth=0.4, label=g)
+        # group centroid
+        ax.scatter(proj[m, 0].mean(), proj[m, 1].mean(), s=180, color=c, marker="X",
+                   edgecolor=T.INK, linewidth=1.0, zorder=5)
+    ax.set_xlabel(f"BSV-PC1 ({var[0]:.0%})"); ax.set_ylabel(f"BSV-PC2 ({var[1]:.0%})")
+    ax.set_title(title, fontsize=11.5, pad=8); ax.legend(fontsize=8.6, loc="best")
+    fig.tight_layout()
+    return fig
+
+
+def group_quality(art, title="Data-quality panel"):
+    """OOD / confidence / background-share distributions per group (box)."""
+    groups = sorted(set(art["group"]))
+    fig, axes = plt.subplots(1, 3, figsize=(7.8, 3.0))
+    for ax, key, lab in zip(axes, ["ood", "conf", "bg"], ["OOD", "confidence", "matrix share"]):
+        data = [art[key][art["group"] == g] for g in groups]
+        bp = ax.boxplot(data, patch_artist=True, widths=0.6)
+        for k, box in enumerate(bp["boxes"]):
+            box.set(facecolor=GROUP_COLORS[k % len(GROUP_COLORS)], alpha=0.55)
+        for med in bp["medians"]:
+            med.set(color=T.INK, linewidth=1.2)
+        ax.set_xticklabels(groups, fontsize=7.6, rotation=15); ax.set_title(lab, fontsize=10)
+        ax.grid(axis="x", visible=False)
+    fig.suptitle(title, fontsize=11.5, fontweight="700", y=1.05)
+    fig.tight_layout()
+    return fig
+
+
+def study_centroid_map(sc, title="Cross-study biochemical centroids (BSV space)"):
+    fig, ax = plt.subplots(figsize=(7.2, 5.2))
+    proj, labels, ood = sc["proj"], sc["labels"], sc["ood"]
+    sctr = ax.scatter(proj[:, 0], proj[:, 1], c=ood, cmap="magma_r", s=120,
+                      edgecolor=T.INK, linewidth=0.8, zorder=3)
+    for (x, y), lab in zip(proj, labels):
+        ax.annotate(lab, (x, y), fontsize=7.8, color=T.INK, xytext=(5, 4),
+                    textcoords="offset points")
+    cb = fig.colorbar(sctr, ax=ax, shrink=0.8); cb.set_label("mean OOD", fontsize=9)
+    ax.set_xlabel(f"BSV-PC1 ({sc['var'][0]:.0%})"); ax.set_ylabel(f"BSV-PC2 ({sc['var'][1]:.0%})")
+    ax.set_title(title, fontsize=11.0, pad=8)
+    fig.tight_layout()
+    return fig
+
+
 # ── compare all three trajectory classes in one BSV space ──
 def compare_trajectories(trajs, title="Three perturbation classes in BSV space"):
     """trajs: list of dicts {name, proj (n,2), color, marker}."""
