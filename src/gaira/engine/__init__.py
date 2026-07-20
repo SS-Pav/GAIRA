@@ -14,6 +14,7 @@ versioned interpretation. Additive — the historical inference stack is untouch
 """
 from .pipeline import GAIRAEngine, GAIRAInference          # noqa: F401
 from .bsv import BSVBuilder, BSV                            # noqa: F401
+from .mss import MSSLayer, MSSMotif, MSSActivation          # noqa: F401
 from .ontology import Ontology                              # noqa: F401
 from .registry import ComponentRegistry                    # noqa: F401
 from .evidence import EvidenceEngine                        # noqa: F401

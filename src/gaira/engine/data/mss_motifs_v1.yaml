@@ -1,0 +1,155 @@
+# GAIRA Molecular Spectral Signatures (MSS) v1 — curated motif definitions.
+#
+# MSS motifs are the interpretable MIDDLE layer of the GAIRA hierarchy:
+#
+#     Radar (13 themes)  ->  MSS (this file: validated spectral motifs)
+#                        ->  24 latent Raman components  ->  reference analytes
+#
+# WHAT IS CURATED HERE (domain knowledge, textbook Raman spectroscopy):
+#   - the motif's NAME and short description
+#   - its characteristic Raman band positions (cm^-1)  [region, not exact-peak]
+#   - a handful of EXEMPLAR reference chemistries that display the motif
+#   - the parent biochemical theme it maps to
+#
+# WHAT IS *NOT* SET HERE (derived from the frozen atlas by mss.py, never asserted):
+#   - which of the 24 latent components express the motif   (derived)
+#   - the component->motif weights                          (derived)
+#   - the motif's confidence                                (derived)
+#   - the perturbation evidence supporting it               (derived)
+#
+# An MSS motif is NOT a molecule. It is a validated spectral pattern that recurs
+# across a family of chemistries. "peak != molecule" and "spectra are mixtures"
+# both hold: multiple motifs can contribute to one spectral region (see the
+# collisions section of the demo).
+#
+# Bands are grounded in canonical solution/solid Raman references; matching in
+# mss.py is region-based (+/- tolerance), never exact-peak. Motifs are frozen
+# alongside the ontology and are additive to it (they do not feed the BSV, which
+# still maps components -> themes directly; MSS is a parallel interpretive view).
+
+version: "mss_v1"
+band_match_tolerance_cm: 16          # region-based matching window (+/-)
+derivation:
+  weights: {band: 0.40, exemplar: 0.35, theme: 0.25}
+  keep_threshold: 0.15               # minimum raw score for a component to contribute
+  max_contributors: 6                # cap contributors per motif
+  exemplar_saturation_pct: 12.0      # loading %% at which exemplar_score saturates to 1
+
+motifs:
+  - id: purine_ring_breathing
+    name: "Purine ring breathing"
+    description: >
+      Ring-breathing and stretching modes of the purine scaffold (adenine-type).
+      The dominant SERS reporter for nucleic-purine chemistry; strong Ag adsorber.
+    bands_cm: [720, 730, 1250, 1334, 1480, 1580]
+    exemplars: [adenine, guanine, hypoxanthine, xanthine]
+    parent_theme: nucleic_purine
+
+  - id: oxopurine_carbonyl
+    name: "Oxopurine carbonyl"
+    description: >
+      2,6-dioxopurine ring + carbonyl modes shared by xanthine/urate/guanine. The
+      subgroup that responds when purines are oxidised (e.g. uricase depletion).
+    bands_cm: [640, 938, 1230, 1330, 1580, 1660]
+    exemplars: [xanthine, guanine, urate, hypoxanthine]
+    parent_theme: nucleic_purine
+
+  - id: pyrimidine_ring
+    name: "Pyrimidine ring"
+    description: >
+      Ring modes of the pyrimidine scaffold (uracil / cytosine / thymine). Weaker
+      Ag adsorber than purines; distinguished by the ~790 cm^-1 ring mode.
+    bands_cm: [560, 578, 790, 1236, 1396, 1660]
+    exemplars: [uracil, cytosine, thymine, uridine]
+    parent_theme: nucleic_pyrimidine
+
+  - id: aromatic_ring_residue
+    name: "Aromatic amino-acid residue"
+    description: >
+      Aromatic side-chain ring modes — phenylalanine 1004 cm^-1 ring breathing,
+      tyrosine 828/850 Fermi doublet, tryptophan ring modes.
+    bands_cm: [640, 828, 852, 1006, 1178, 1614]
+    exemplars: [phenylalanine, tyrosine, tryptophan]
+    parent_theme: aromatic_amino_acid
+
+  - id: protein_amide_backbone
+    name: "Protein amide backbone"
+    description: >
+      Peptide backbone signature — amide I (~1650), amide III (~1240), Cα-C and
+      backbone skeletal modes. Broad, mixture-dominated in real proteins.
+    bands_cm: [856, 1000, 1130, 1240, 1336, 1654]
+    exemplars: [albumin, ubiquitin, trypsin, superoxide dismutases]
+    parent_theme: protein_peptide
+
+  - id: lipid_acyl_chain
+    name: "Lipid acyl chain"
+    description: >
+      Aliphatic acyl-chain modes — CH2 twist (~1300), scissor (~1440), C-C
+      skeletal (~1060/1130), C=C (~1654). Shared by fatty acids and triglycerides.
+    bands_cm: [1062, 1130, 1260, 1302, 1442, 1654]
+    exemplars: [elaidic acid, arachidonic acid, palmitic acid, tripalmitolein]
+    parent_theme: lipid_acyl
+
+  - id: sterol_ring_system
+    name: "Sterol ring system"
+    description: >
+      Fused steroid ring skeletal modes (cholesterol / estrone family). Weakly
+      represented in the reference corpus — a low-coverage motif, flagged as such.
+    bands_cm: [536, 700, 1250, 1440, 1670]
+    exemplars: [estrone, cholesterol, diethylstilbestrol]
+    parent_theme: sterol_membrane
+
+  - id: glycan_co_network
+    name: "Glycan C-O network"
+    description: >
+      Carbohydrate C-O / C-C / C-O-C ring and anomeric modes. Congested
+      450-1150 cm^-1 region shared across mono- and poly-saccharides.
+    bands_cm: [816, 872, 916, 1054, 1108, 1122]
+    exemplars: [glucose, galactose, fructose, cellulose]
+    parent_theme: saccharide_glycan
+
+  - id: carboxylate_organic_acid
+    name: "Carboxylate / organic acid"
+    description: >
+      Carboxylate symmetric stretch (~1400) and C-COO / skeletal modes of small
+      TCA-cycle and metabolic acids.
+    bands_cm: [760, 940, 1382, 1398, 1628]
+    exemplars: [citrate, succinic acid, pyruvate, fumarate]
+    parent_theme: organic_acid_metabolism
+
+  - id: sulfur_heterocycle_thione
+    name: "Sulfur heterocycle / thione"
+    description: >
+      Thione / thiol and C-S modes — the ergothioneine thione ring and cysteine/
+      glutathione thiols. Strong Ag chemisorbers; the cleanest SERS antioxidant reporter.
+    bands_cm: [536, 640, 674, 838, 970, 1200]
+    exemplars: [ergothioneine, cysteine, glutathione, methionine]
+    parent_theme: sulfur_antioxidant
+
+  - id: porphyrin_macrocycle
+    name: "Porphyrin macrocycle"
+    description: >
+      Resonance-enhanced tetrapyrrole macrocycle modes of heme proteins
+      (hemoglobin, myoglobin, cytochrome c) — pyrrole breathing and Cα-Cm stretches.
+    bands_cm: [750, 1130, 1362, 1590, 1620]
+    exemplars: [hemoglobin, myoglobin, cytochrome c, melanin]
+    parent_theme: heme_porphyrin
+
+  - id: flavin_redox_cofactor
+    name: "Flavin / redox cofactor"
+    description: >
+      Isoalloxazine (flavin) and related redox-cofactor ring modes — riboflavin/
+      FAD, ubiquinone. Resonance-enhanced; the dominant redox reporter.
+    bands_cm: [754, 1178, 1348, 1408, 1578]
+    exemplars: [riboflavin, ubiquinone, nadh, fad]
+    parent_theme: redox_broad
+
+  - id: colloid_matrix_background
+    name: "Colloid / matrix background"
+    description: >
+      Non-biochemical substrate + matrix contribution (citrate capping, buffer,
+      serum background). Reported for honesty; NOT a biochemical motif.
+    bands_cm: [930, 1050, 1400]
+    exemplars: [citrate, phosphate, urea]
+    parent_theme: background_matrix
+    non_biochemical: true

@@ -1,0 +1,1644 @@
+{
+  "version": "mss_v1",
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "ontology_version": "2.0",
+  "band_match_tolerance_cm": 16.0,
+  "derivation": {
+    "weights": {
+      "band": 0.4,
+      "exemplar": 0.35,
+      "theme": 0.25
+    },
+    "keep_threshold": 0.15,
+    "max_contributors": 6,
+    "exemplar_saturation_pct": 12.0
+  },
+  "n_motifs": 13,
+  "motifs": [
+    {
+      "id": "purine_ring_breathing",
+      "name": "Purine ring breathing",
+      "description": "Ring-breathing and stretching modes of the purine scaffold (adenine-type). The dominant SERS reporter for nucleic-purine chemistry; strong Ag adsorber.",
+      "bands_cm": [
+        720,
+        730,
+        1250,
+        1334,
+        1480,
+        1580
+      ],
+      "exemplars": [
+        "adenine",
+        "guanine",
+        "hypoxanthine",
+        "xanthine"
+      ],
+      "parent_theme": "nucleic_purine",
+      "non_biochemical": false,
+      "contributors": [
+        {
+          "component": 3,
+          "weight": 0.3736,
+          "band": 0.833,
+          "exemplar": 0.91,
+          "theme": 0.473,
+          "matched_analytes": [
+            "adenine"
+          ]
+        },
+        {
+          "component": 15,
+          "weight": 0.3159,
+          "band": 0.333,
+          "exemplar": 1.0,
+          "theme": 0.672,
+          "matched_analytes": [
+            "guanine",
+            "xanthine"
+          ]
+        },
+        {
+          "component": 23,
+          "weight": 0.1059,
+          "band": 0.333,
+          "exemplar": 0.0,
+          "theme": 0.34,
+          "matched_analytes": []
+        },
+        {
+          "component": 13,
+          "weight": 0.1028,
+          "band": 0.333,
+          "exemplar": 0.0,
+          "theme": 0.314,
+          "matched_analytes": []
+        },
+        {
+          "component": 0,
+          "weight": 0.1018,
+          "band": 0.333,
+          "exemplar": 0.0,
+          "theme": 0.306,
+          "matched_analytes": []
+        }
+      ],
+      "confidence": 0.263,
+      "stability": 0.79,
+      "evidence_breadth": 0.333,
+      "reference_analytes": [
+        "adenine",
+        "guanine",
+        "xanthine"
+      ],
+      "perturbation": {
+        "dose_responsive_components": [
+          {
+            "component": 3,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 15,
+            "n_dose_experiments": 4
+          },
+          {
+            "component": 23,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 13,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 0,
+            "n_dose_experiments": 7
+          }
+        ],
+        "serum_spike_matches": [
+          {
+            "component": 3,
+            "analyte": "hypoxanthine",
+            "delta": 0.0941
+          },
+          {
+            "component": 3,
+            "analyte": "adenine",
+            "delta": 0.0468
+          },
+          {
+            "component": 3,
+            "analyte": "guanine",
+            "delta": 0.0232
+          },
+          {
+            "component": 15,
+            "analyte": "xanthine",
+            "delta": 0.0733
+          },
+          {
+            "component": 15,
+            "analyte": "guanine",
+            "delta": 0.0509
+          },
+          {
+            "component": 23,
+            "analyte": "xanthine",
+            "delta": 0.0021
+          },
+          {
+            "component": 13,
+            "analyte": "hypoxanthine",
+            "delta": 0.0184
+          },
+          {
+            "component": 13,
+            "analyte": "adenine",
+            "delta": 0.0109
+          },
+          {
+            "component": 0,
+            "analyte": "xanthine",
+            "delta": 0.0078
+          },
+          {
+            "component": 0,
+            "analyte": "guanine",
+            "delta": 0.0074
+          },
+          {
+            "component": 0,
+            "analyte": "adenine",
+            "delta": 0.0044
+          }
+        ],
+        "depletion_matches": [
+          {
+            "component": 3,
+            "uricase_delta": 0.0745,
+            "note": "increased by urate depletion"
+          },
+          {
+            "component": 15,
+            "uricase_delta": -0.1055,
+            "note": "selectively decreased by urate depletion"
+          },
+          {
+            "component": 23,
+            "uricase_delta": 0.0396,
+            "note": "increased by urate depletion"
+          },
+          {
+            "component": 13,
+            "uricase_delta": -0.0052,
+            "note": "stable under urate depletion"
+          },
+          {
+            "component": 0,
+            "uricase_delta": 0.0135,
+            "note": "stable under urate depletion"
+          }
+        ]
+      }
+    },
+    {
+      "id": "oxopurine_carbonyl",
+      "name": "Oxopurine carbonyl",
+      "description": "2,6-dioxopurine ring + carbonyl modes shared by xanthine/urate/guanine. The subgroup that responds when purines are oxidised (e.g. uricase depletion).",
+      "bands_cm": [
+        640,
+        938,
+        1230,
+        1330,
+        1580,
+        1660
+      ],
+      "exemplars": [
+        "xanthine",
+        "guanine",
+        "urate",
+        "hypoxanthine"
+      ],
+      "parent_theme": "nucleic_purine",
+      "non_biochemical": false,
+      "contributors": [
+        {
+          "component": 15,
+          "weight": 0.4424,
+          "band": 0.667,
+          "exemplar": 1.0,
+          "theme": 0.672,
+          "matched_analytes": [
+            "guanine",
+            "xanthine"
+          ]
+        },
+        {
+          "component": 20,
+          "weight": 0.1529,
+          "band": 0.167,
+          "exemplar": 0.507,
+          "theme": 0.109,
+          "matched_analytes": [
+            "urate"
+          ]
+        },
+        {
+          "component": 0,
+          "weight": 0.1183,
+          "band": 0.333,
+          "exemplar": 0.0,
+          "theme": 0.306,
+          "matched_analytes": []
+        },
+        {
+          "component": 3,
+          "weight": 0.1043,
+          "band": 0.167,
+          "exemplar": 0.0,
+          "theme": 0.473,
+          "matched_analytes": []
+        },
+        {
+          "component": 5,
+          "weight": 0.0938,
+          "band": 0.333,
+          "exemplar": 0.0,
+          "theme": 0.132,
+          "matched_analytes": []
+        },
+        {
+          "component": 17,
+          "weight": 0.0883,
+          "band": 0.167,
+          "exemplar": 0.193,
+          "theme": 0.089,
+          "matched_analytes": [
+            "urate"
+          ]
+        }
+      ],
+      "confidence": 0.263,
+      "stability": 0.789,
+      "evidence_breadth": 0.333,
+      "reference_analytes": [
+        "guanine",
+        "urate",
+        "xanthine"
+      ],
+      "perturbation": {
+        "dose_responsive_components": [
+          {
+            "component": 15,
+            "n_dose_experiments": 4
+          },
+          {
+            "component": 20,
+            "n_dose_experiments": 4
+          },
+          {
+            "component": 0,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 3,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 5,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 17,
+            "n_dose_experiments": 5
+          }
+        ],
+        "serum_spike_matches": [
+          {
+            "component": 15,
+            "analyte": "xanthine",
+            "delta": 0.0733
+          },
+          {
+            "component": 15,
+            "analyte": "guanine",
+            "delta": 0.0509
+          },
+          {
+            "component": 0,
+            "analyte": "xanthine",
+            "delta": 0.0078
+          },
+          {
+            "component": 0,
+            "analyte": "guanine",
+            "delta": 0.0074
+          },
+          {
+            "component": 3,
+            "analyte": "hypoxanthine",
+            "delta": 0.0941
+          },
+          {
+            "component": 3,
+            "analyte": "guanine",
+            "delta": 0.0232
+          },
+          {
+            "component": 5,
+            "analyte": "urate",
+            "delta": 0.0023
+          }
+        ],
+        "depletion_matches": [
+          {
+            "component": 15,
+            "uricase_delta": -0.1055,
+            "note": "selectively decreased by urate depletion"
+          },
+          {
+            "component": 20,
+            "uricase_delta": -0.1481,
+            "note": "selectively decreased by urate depletion"
+          },
+          {
+            "component": 0,
+            "uricase_delta": 0.0135,
+            "note": "stable under urate depletion"
+          },
+          {
+            "component": 3,
+            "uricase_delta": 0.0745,
+            "note": "increased by urate depletion"
+          },
+          {
+            "component": 5,
+            "uricase_delta": -0.0024,
+            "note": "stable under urate depletion"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pyrimidine_ring",
+      "name": "Pyrimidine ring",
+      "description": "Ring modes of the pyrimidine scaffold (uracil / cytosine / thymine). Weaker Ag adsorber than purines; distinguished by the ~790 cm^-1 ring mode.",
+      "bands_cm": [
+        560,
+        578,
+        790,
+        1236,
+        1396,
+        1660
+      ],
+      "exemplars": [
+        "uracil",
+        "cytosine",
+        "thymine",
+        "uridine"
+      ],
+      "parent_theme": "nucleic_pyrimidine",
+      "non_biochemical": false,
+      "contributors": [
+        {
+          "component": 17,
+          "weight": 0.4286,
+          "band": 0.833,
+          "exemplar": 1.0,
+          "theme": 0.468,
+          "matched_analytes": [
+            "cytosine",
+            "uracil"
+          ]
+        },
+        {
+          "component": 13,
+          "weight": 0.2991,
+          "band": 0.333,
+          "exemplar": 1.0,
+          "theme": 0.301,
+          "matched_analytes": [
+            "thymine"
+          ]
+        },
+        {
+          "component": 23,
+          "weight": 0.1911,
+          "band": 0.333,
+          "exemplar": 0.518,
+          "theme": 0.169,
+          "matched_analytes": [
+            "cytosine"
+          ]
+        },
+        {
+          "component": 21,
+          "weight": 0.0811,
+          "band": 0.333,
+          "exemplar": 0.0,
+          "theme": 0.073,
+          "matched_analytes": []
+        }
+      ],
+      "confidence": 0.254,
+      "stability": 0.761,
+      "evidence_breadth": 0.333,
+      "reference_analytes": [
+        "cytosine",
+        "thymine",
+        "uracil"
+      ],
+      "perturbation": {
+        "dose_responsive_components": [
+          {
+            "component": 17,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 13,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 23,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 21,
+            "n_dose_experiments": 6
+          }
+        ],
+        "serum_spike_matches": [],
+        "depletion_matches": []
+      }
+    },
+    {
+      "id": "aromatic_ring_residue",
+      "name": "Aromatic amino-acid residue",
+      "description": "Aromatic side-chain ring modes \u2014 phenylalanine 1004 cm^-1 ring breathing, tyrosine 828/850 Fermi doublet, tryptophan ring modes.",
+      "bands_cm": [
+        640,
+        828,
+        852,
+        1006,
+        1178,
+        1614
+      ],
+      "exemplars": [
+        "phenylalanine",
+        "tyrosine",
+        "tryptophan"
+      ],
+      "parent_theme": "aromatic_amino_acid",
+      "non_biochemical": false,
+      "contributors": [
+        {
+          "component": 5,
+          "weight": 0.3172,
+          "band": 0.667,
+          "exemplar": 1.0,
+          "theme": 0.189,
+          "matched_analytes": [
+            "phenylalanine",
+            "tyrosine"
+          ]
+        },
+        {
+          "component": 6,
+          "weight": 0.1977,
+          "band": 0.167,
+          "exemplar": 0.886,
+          "theme": 0.148,
+          "matched_analytes": [
+            "phenylalanine",
+            "tryptophan"
+          ]
+        },
+        {
+          "component": 11,
+          "weight": 0.152,
+          "band": 0.167,
+          "exemplar": 0.598,
+          "theme": 0.168,
+          "matched_analytes": [
+            "alanine"
+          ]
+        },
+        {
+          "component": 22,
+          "weight": 0.1332,
+          "band": 0.333,
+          "exemplar": 0.298,
+          "theme": 0.164,
+          "matched_analytes": [
+            "tryptophan"
+          ]
+        },
+        {
+          "component": 19,
+          "weight": 0.1042,
+          "band": 0.5,
+          "exemplar": 0.0,
+          "theme": 0.072,
+          "matched_analytes": []
+        },
+        {
+          "component": 0,
+          "weight": 0.0956,
+          "band": 0.167,
+          "exemplar": 0.318,
+          "theme": 0.089,
+          "matched_analytes": [
+            "tryptophan"
+          ]
+        }
+      ],
+      "confidence": 0.267,
+      "stability": 0.802,
+      "evidence_breadth": 0.333,
+      "reference_analytes": [
+        "alanine",
+        "phenylalanine",
+        "tryptophan",
+        "tyrosine"
+      ],
+      "perturbation": {
+        "dose_responsive_components": [
+          {
+            "component": 5,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 6,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 11,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 22,
+            "n_dose_experiments": 6
+          },
+          {
+            "component": 19,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 0,
+            "n_dose_experiments": 7
+          }
+        ],
+        "serum_spike_matches": [],
+        "depletion_matches": []
+      }
+    },
+    {
+      "id": "protein_amide_backbone",
+      "name": "Protein amide backbone",
+      "description": "Peptide backbone signature \u2014 amide I (~1650), amide III (~1240), C\u03b1-C and backbone skeletal modes. Broad, mixture-dominated in real proteins.",
+      "bands_cm": [
+        856,
+        1000,
+        1130,
+        1240,
+        1336,
+        1654
+      ],
+      "exemplars": [
+        "albumin",
+        "ubiquitin",
+        "trypsin",
+        "superoxide dismutases"
+      ],
+      "parent_theme": "protein_peptide",
+      "non_biochemical": false,
+      "contributors": [
+        {
+          "component": 2,
+          "weight": 0.4889,
+          "band": 0.833,
+          "exemplar": 1.0,
+          "theme": 0.476,
+          "matched_analytes": [
+            "superoxide dismutases",
+            "trypsin",
+            "trypsinogen",
+            "ubiquitin"
+          ]
+        },
+        {
+          "component": 0,
+          "weight": 0.1058,
+          "band": 0.333,
+          "exemplar": 0.0,
+          "theme": 0.161,
+          "matched_analytes": []
+        },
+        {
+          "component": 3,
+          "weight": 0.1044,
+          "band": 0.333,
+          "exemplar": 0.0,
+          "theme": 0.152,
+          "matched_analytes": []
+        },
+        {
+          "component": 11,
+          "weight": 0.1042,
+          "band": 0.333,
+          "exemplar": 0.0,
+          "theme": 0.151,
+          "matched_analytes": []
+        },
+        {
+          "component": 15,
+          "weight": 0.0999,
+          "band": 0.333,
+          "exemplar": 0.0,
+          "theme": 0.122,
+          "matched_analytes": []
+        },
+        {
+          "component": 18,
+          "weight": 0.0968,
+          "band": 0.333,
+          "exemplar": 0.0,
+          "theme": 0.102,
+          "matched_analytes": []
+        }
+      ],
+      "confidence": 0.3,
+      "stability": 0.9,
+      "evidence_breadth": 0.333,
+      "reference_analytes": [
+        "superoxide dismutases",
+        "trypsin",
+        "trypsinogen",
+        "ubiquitin"
+      ],
+      "perturbation": {
+        "dose_responsive_components": [
+          {
+            "component": 2,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 0,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 3,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 11,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 15,
+            "n_dose_experiments": 4
+          },
+          {
+            "component": 18,
+            "n_dose_experiments": 6
+          }
+        ],
+        "serum_spike_matches": [
+          {
+            "component": 2,
+            "analyte": "albumin",
+            "delta": 0.0009
+          },
+          {
+            "component": 0,
+            "analyte": "albumin",
+            "delta": 0.0015
+          },
+          {
+            "component": 11,
+            "analyte": "albumin",
+            "delta": 0.0071
+          }
+        ],
+        "depletion_matches": []
+      }
+    },
+    {
+      "id": "lipid_acyl_chain",
+      "name": "Lipid acyl chain",
+      "description": "Aliphatic acyl-chain modes \u2014 CH2 twist (~1300), scissor (~1440), C-C skeletal (~1060/1130), C=C (~1654). Shared by fatty acids and triglycerides.",
+      "bands_cm": [
+        1062,
+        1130,
+        1260,
+        1302,
+        1442,
+        1654
+      ],
+      "exemplars": [
+        "elaidic acid",
+        "arachidonic acid",
+        "palmitic acid",
+        "tripalmitolein"
+      ],
+      "parent_theme": "lipid_acyl",
+      "non_biochemical": false,
+      "contributors": [
+        {
+          "component": 7,
+          "weight": 0.2844,
+          "band": 0.667,
+          "exemplar": 0.566,
+          "theme": 0.491,
+          "matched_analytes": [
+            "arachidonic acid"
+          ]
+        },
+        {
+          "component": 16,
+          "weight": 0.2262,
+          "band": 0.5,
+          "exemplar": 0.353,
+          "theme": 0.575,
+          "matched_analytes": [
+            "palmitic acid"
+          ]
+        },
+        {
+          "component": 1,
+          "weight": 0.2115,
+          "band": 0.333,
+          "exemplar": 0.439,
+          "theme": 0.6,
+          "matched_analytes": [
+            "elaidic acid",
+            "tripalmitolein"
+          ]
+        },
+        {
+          "component": 12,
+          "weight": 0.1039,
+          "band": 0.5,
+          "exemplar": 0.0,
+          "theme": 0.059,
+          "matched_analytes": []
+        },
+        {
+          "component": 10,
+          "weight": 0.1005,
+          "band": 0.5,
+          "exemplar": 0.0,
+          "theme": 0.031,
+          "matched_analytes": []
+        },
+        {
+          "component": 8,
+          "weight": 0.0735,
+          "band": 0.333,
+          "exemplar": 0.0,
+          "theme": 0.074,
+          "matched_analytes": []
+        }
+      ],
+      "confidence": 0.293,
+      "stability": 0.88,
+      "evidence_breadth": 0.333,
+      "reference_analytes": [
+        "arachidonic acid",
+        "elaidic acid",
+        "palmitic acid",
+        "tripalmitolein"
+      ],
+      "perturbation": {
+        "dose_responsive_components": [
+          {
+            "component": 7,
+            "n_dose_experiments": 3
+          },
+          {
+            "component": 16,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 1,
+            "n_dose_experiments": 4
+          },
+          {
+            "component": 12,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 10,
+            "n_dose_experiments": 4
+          },
+          {
+            "component": 8,
+            "n_dose_experiments": 6
+          }
+        ],
+        "serum_spike_matches": [],
+        "depletion_matches": []
+      }
+    },
+    {
+      "id": "sterol_ring_system",
+      "name": "Sterol ring system",
+      "description": "Fused steroid ring skeletal modes (cholesterol / estrone family). Weakly represented in the reference corpus \u2014 a low-coverage motif, flagged as such.",
+      "bands_cm": [
+        536,
+        700,
+        1250,
+        1440,
+        1670
+      ],
+      "exemplars": [
+        "estrone",
+        "cholesterol",
+        "diethylstilbestrol"
+      ],
+      "parent_theme": "sterol_membrane",
+      "non_biochemical": false,
+      "contributors": [
+        {
+          "component": 3,
+          "weight": 0.3374,
+          "band": 0.4,
+          "exemplar": 0.609,
+          "theme": 0.125,
+          "matched_analytes": [
+            "estrone"
+          ]
+        },
+        {
+          "component": 7,
+          "weight": 0.209,
+          "band": 0.6,
+          "exemplar": 0.0,
+          "theme": 0.042,
+          "matched_analytes": []
+        },
+        {
+          "component": 8,
+          "weight": 0.1866,
+          "band": 0.0,
+          "exemplar": 0.571,
+          "theme": 0.095,
+          "matched_analytes": [
+            "diethylstilbestrol"
+          ]
+        },
+        {
+          "component": 2,
+          "weight": 0.1335,
+          "band": 0.4,
+          "exemplar": 0.0,
+          "theme": 0.0,
+          "matched_analytes": []
+        },
+        {
+          "component": 15,
+          "weight": 0.1335,
+          "band": 0.4,
+          "exemplar": 0.0,
+          "theme": 0.0,
+          "matched_analytes": []
+        }
+      ],
+      "confidence": 0.294,
+      "stability": 0.883,
+      "evidence_breadth": 0.333,
+      "reference_analytes": [
+        "diethylstilbestrol",
+        "estrone"
+      ],
+      "perturbation": {
+        "dose_responsive_components": [
+          {
+            "component": 3,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 7,
+            "n_dose_experiments": 3
+          },
+          {
+            "component": 8,
+            "n_dose_experiments": 6
+          },
+          {
+            "component": 2,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 15,
+            "n_dose_experiments": 4
+          }
+        ],
+        "serum_spike_matches": [
+          {
+            "component": 8,
+            "analyte": "cholesterol",
+            "delta": 0.0022
+          },
+          {
+            "component": 15,
+            "analyte": "cholesterol",
+            "delta": 0.0049
+          }
+        ],
+        "depletion_matches": []
+      }
+    },
+    {
+      "id": "glycan_co_network",
+      "name": "Glycan C-O network",
+      "description": "Carbohydrate C-O / C-C / C-O-C ring and anomeric modes. Congested 450-1150 cm^-1 region shared across mono- and poly-saccharides.",
+      "bands_cm": [
+        816,
+        872,
+        916,
+        1054,
+        1108,
+        1122
+      ],
+      "exemplars": [
+        "glucose",
+        "galactose",
+        "fructose",
+        "cellulose"
+      ],
+      "parent_theme": "saccharide_glycan",
+      "non_biochemical": false,
+      "contributors": [
+        {
+          "component": 10,
+          "weight": 0.2008,
+          "band": 0.667,
+          "exemplar": 1.0,
+          "theme": 0.553,
+          "matched_analytes": [
+            "d glucose",
+            "glucose"
+          ]
+        },
+        {
+          "component": 4,
+          "weight": 0.1829,
+          "band": 0.5,
+          "exemplar": 1.0,
+          "theme": 0.55,
+          "matched_analytes": [
+            "fructose",
+            "galactose"
+          ]
+        },
+        {
+          "component": 18,
+          "weight": 0.176,
+          "band": 0.5,
+          "exemplar": 1.0,
+          "theme": 0.447,
+          "matched_analytes": [
+            "cellulose",
+            "lactose"
+          ]
+        },
+        {
+          "component": 12,
+          "weight": 0.16,
+          "band": 0.333,
+          "exemplar": 1.0,
+          "theme": 0.473,
+          "matched_analytes": [
+            "d glucose",
+            "glucose"
+          ]
+        },
+        {
+          "component": 20,
+          "weight": 0.1523,
+          "band": 0.333,
+          "exemplar": 1.0,
+          "theme": 0.356,
+          "matched_analytes": [
+            "fructose"
+          ]
+        },
+        {
+          "component": 21,
+          "weight": 0.128,
+          "band": 0.333,
+          "exemplar": 0.783,
+          "theme": 0.295,
+          "matched_analytes": [
+            "fructose 6 phosphate"
+          ]
+        }
+      ],
+      "confidence": 0.256,
+      "stability": 0.768,
+      "evidence_breadth": 0.333,
+      "reference_analytes": [
+        "cellulose",
+        "d glucose",
+        "fructose",
+        "fructose 6 phosphate",
+        "galactose",
+        "glucose",
+        "lactose"
+      ],
+      "perturbation": {
+        "dose_responsive_components": [
+          {
+            "component": 10,
+            "n_dose_experiments": 4
+          },
+          {
+            "component": 4,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 18,
+            "n_dose_experiments": 6
+          },
+          {
+            "component": 12,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 20,
+            "n_dose_experiments": 4
+          },
+          {
+            "component": 21,
+            "n_dose_experiments": 6
+          }
+        ],
+        "serum_spike_matches": [
+          {
+            "component": 20,
+            "analyte": "galactose",
+            "delta": 0.026
+          }
+        ],
+        "depletion_matches": []
+      }
+    },
+    {
+      "id": "carboxylate_organic_acid",
+      "name": "Carboxylate / organic acid",
+      "description": "Carboxylate symmetric stretch (~1400) and C-COO / skeletal modes of small TCA-cycle and metabolic acids.",
+      "bands_cm": [
+        760,
+        940,
+        1382,
+        1398,
+        1628
+      ],
+      "exemplars": [
+        "citrate",
+        "succinic acid",
+        "pyruvate",
+        "fumarate"
+      ],
+      "parent_theme": "organic_acid_metabolism",
+      "non_biochemical": false,
+      "contributors": [
+        {
+          "component": 23,
+          "weight": 0.3968,
+          "band": 0.8,
+          "exemplar": 1.0,
+          "theme": 0.342,
+          "matched_analytes": [
+            "citrate",
+            "phosphoenolpyruvate",
+            "pyruvate"
+          ]
+        },
+        {
+          "component": 14,
+          "weight": 0.3486,
+          "band": 0.6,
+          "exemplar": 0.912,
+          "theme": 0.419,
+          "matched_analytes": [
+            "citrate",
+            "succinic acid"
+          ]
+        },
+        {
+          "component": 22,
+          "weight": 0.1652,
+          "band": 0.2,
+          "exemplar": 0.466,
+          "theme": 0.286,
+          "matched_analytes": [
+            "fumarate"
+          ]
+        },
+        {
+          "component": 17,
+          "weight": 0.0894,
+          "band": 0.4,
+          "exemplar": 0.0,
+          "theme": 0.041,
+          "matched_analytes": []
+        }
+      ],
+      "confidence": 0.258,
+      "stability": 0.773,
+      "evidence_breadth": 0.333,
+      "reference_analytes": [
+        "citrate",
+        "fumarate",
+        "phosphoenolpyruvate",
+        "pyruvate",
+        "succinic acid"
+      ],
+      "perturbation": {
+        "dose_responsive_components": [
+          {
+            "component": 23,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 14,
+            "n_dose_experiments": 6
+          },
+          {
+            "component": 22,
+            "n_dose_experiments": 6
+          },
+          {
+            "component": 17,
+            "n_dose_experiments": 5
+          }
+        ],
+        "serum_spike_matches": [],
+        "depletion_matches": []
+      }
+    },
+    {
+      "id": "sulfur_heterocycle_thione",
+      "name": "Sulfur heterocycle / thione",
+      "description": "Thione / thiol and C-S modes \u2014 the ergothioneine thione ring and cysteine/ glutathione thiols. Strong Ag chemisorbers; the cleanest SERS antioxidant reporter.",
+      "bands_cm": [
+        536,
+        640,
+        674,
+        838,
+        970,
+        1200
+      ],
+      "exemplars": [
+        "ergothioneine",
+        "cysteine",
+        "glutathione",
+        "methionine"
+      ],
+      "parent_theme": "sulfur_antioxidant",
+      "non_biochemical": false,
+      "contributors": [
+        {
+          "component": 19,
+          "weight": 0.2814,
+          "band": 0.667,
+          "exemplar": 0.528,
+          "theme": 0.084,
+          "matched_analytes": [
+            "cysteine",
+            "ergothioneine"
+          ]
+        },
+        {
+          "component": 21,
+          "weight": 0.1861,
+          "band": 0.333,
+          "exemplar": 0.439,
+          "theme": 0.102,
+          "matched_analytes": [
+            "ergothioneine"
+          ]
+        },
+        {
+          "component": 15,
+          "weight": 0.1765,
+          "band": 0.167,
+          "exemplar": 0.657,
+          "theme": 0.0,
+          "matched_analytes": [
+            "cysteine",
+            "methionine"
+          ]
+        },
+        {
+          "component": 3,
+          "weight": 0.1362,
+          "band": 0.167,
+          "exemplar": 0.427,
+          "theme": 0.051,
+          "matched_analytes": [
+            "methionine"
+          ]
+        },
+        {
+          "component": 20,
+          "weight": 0.1118,
+          "band": 0.167,
+          "exemplar": 0.316,
+          "theme": 0.042,
+          "matched_analytes": [
+            "cysteine"
+          ]
+        },
+        {
+          "component": 5,
+          "weight": 0.1079,
+          "band": 0.333,
+          "exemplar": 0.0,
+          "theme": 0.192,
+          "matched_analytes": []
+        }
+      ],
+      "confidence": 0.264,
+      "stability": 0.792,
+      "evidence_breadth": 0.333,
+      "reference_analytes": [
+        "cysteine",
+        "ergothioneine",
+        "methionine"
+      ],
+      "perturbation": {
+        "dose_responsive_components": [
+          {
+            "component": 19,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 21,
+            "n_dose_experiments": 6
+          },
+          {
+            "component": 15,
+            "n_dose_experiments": 4
+          },
+          {
+            "component": 3,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 20,
+            "n_dose_experiments": 4
+          },
+          {
+            "component": 5,
+            "n_dose_experiments": 7
+          }
+        ],
+        "serum_spike_matches": [
+          {
+            "component": 15,
+            "analyte": "methionine",
+            "delta": 0.0068
+          },
+          {
+            "component": 5,
+            "analyte": "ergothioneine",
+            "delta": 0.0046
+          }
+        ],
+        "depletion_matches": []
+      }
+    },
+    {
+      "id": "porphyrin_macrocycle",
+      "name": "Porphyrin macrocycle",
+      "description": "Resonance-enhanced tetrapyrrole macrocycle modes of heme proteins (hemoglobin, myoglobin, cytochrome c) \u2014 pyrrole breathing and C\u03b1-Cm stretches.",
+      "bands_cm": [
+        750,
+        1130,
+        1362,
+        1590,
+        1620
+      ],
+      "exemplars": [
+        "hemoglobin",
+        "myoglobin",
+        "cytochrome c",
+        "melanin"
+      ],
+      "parent_theme": "heme_porphyrin",
+      "non_biochemical": false,
+      "contributors": [
+        {
+          "component": 8,
+          "weight": 0.3305,
+          "band": 0.6,
+          "exemplar": 1.0,
+          "theme": 0.099,
+          "matched_analytes": [
+            "cytochrome c",
+            "hemoglobin",
+            "melanin",
+            "myoglobin"
+          ]
+        },
+        {
+          "component": 13,
+          "weight": 0.2527,
+          "band": 0.4,
+          "exemplar": 0.844,
+          "theme": 0.058,
+          "matched_analytes": [
+            "cytochrome c",
+            "hemoglobin",
+            "myoglobin"
+          ]
+        },
+        {
+          "component": 0,
+          "weight": 0.2304,
+          "band": 0.6,
+          "exemplar": 0.504,
+          "theme": 0.049,
+          "matched_analytes": [
+            "hemoglobin",
+            "myoglobin"
+          ]
+        },
+        {
+          "component": 2,
+          "weight": 0.0963,
+          "band": 0.4,
+          "exemplar": 0.0,
+          "theme": 0.076,
+          "matched_analytes": []
+        },
+        {
+          "component": 22,
+          "weight": 0.0901,
+          "band": 0.4,
+          "exemplar": 0.0,
+          "theme": 0.03,
+          "matched_analytes": []
+        }
+      ],
+      "confidence": 0.273,
+      "stability": 0.82,
+      "evidence_breadth": 0.333,
+      "reference_analytes": [
+        "cytochrome c",
+        "hemoglobin",
+        "melanin",
+        "myoglobin"
+      ],
+      "perturbation": {
+        "dose_responsive_components": [
+          {
+            "component": 8,
+            "n_dose_experiments": 6
+          },
+          {
+            "component": 13,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 0,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 2,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 22,
+            "n_dose_experiments": 6
+          }
+        ],
+        "serum_spike_matches": [],
+        "depletion_matches": []
+      }
+    },
+    {
+      "id": "flavin_redox_cofactor",
+      "name": "Flavin / redox cofactor",
+      "description": "Isoalloxazine (flavin) and related redox-cofactor ring modes \u2014 riboflavin/ FAD, ubiquinone. Resonance-enhanced; the dominant redox reporter.",
+      "bands_cm": [
+        754,
+        1178,
+        1348,
+        1408,
+        1578
+      ],
+      "exemplars": [
+        "riboflavin",
+        "ubiquinone",
+        "nadh",
+        "fad"
+      ],
+      "parent_theme": "redox_broad",
+      "non_biochemical": false,
+      "contributors": [
+        {
+          "component": 0,
+          "weight": 0.4747,
+          "band": 0.8,
+          "exemplar": 1.0,
+          "theme": 0.09,
+          "matched_analytes": [
+            "riboflavin"
+          ]
+        },
+        {
+          "component": 22,
+          "weight": 0.1645,
+          "band": 0.6,
+          "exemplar": 0.0,
+          "theme": 0.0,
+          "matched_analytes": []
+        },
+        {
+          "component": 17,
+          "weight": 0.1414,
+          "band": 0.2,
+          "exemplar": 0.361,
+          "theme": 0.0,
+          "matched_analytes": [
+            "riboflavin"
+          ]
+        },
+        {
+          "component": 2,
+          "weight": 0.1097,
+          "band": 0.4,
+          "exemplar": 0.0,
+          "theme": 0.0,
+          "matched_analytes": []
+        },
+        {
+          "component": 8,
+          "weight": 0.1097,
+          "band": 0.4,
+          "exemplar": 0.0,
+          "theme": 0.0,
+          "matched_analytes": []
+        }
+      ],
+      "confidence": 0.276,
+      "stability": 0.829,
+      "evidence_breadth": 0.333,
+      "reference_analytes": [
+        "riboflavin"
+      ],
+      "perturbation": {
+        "dose_responsive_components": [
+          {
+            "component": 0,
+            "n_dose_experiments": 7
+          },
+          {
+            "component": 22,
+            "n_dose_experiments": 6
+          },
+          {
+            "component": 17,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 2,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 8,
+            "n_dose_experiments": 6
+          }
+        ],
+        "serum_spike_matches": [],
+        "depletion_matches": []
+      }
+    },
+    {
+      "id": "colloid_matrix_background",
+      "name": "Colloid / matrix background",
+      "description": "Non-biochemical substrate + matrix contribution (citrate capping, buffer, serum background). Reported for honesty; NOT a biochemical motif.",
+      "bands_cm": [
+        930,
+        1050,
+        1400
+      ],
+      "exemplars": [
+        "citrate",
+        "phosphate",
+        "urea"
+      ],
+      "parent_theme": "background_matrix",
+      "non_biochemical": true,
+      "contributors": [
+        {
+          "component": 14,
+          "weight": 0.2505,
+          "band": 0.667,
+          "exemplar": 0.973,
+          "theme": 0.084,
+          "matched_analytes": [
+            "citrate",
+            "phosphate"
+          ]
+        },
+        {
+          "component": 21,
+          "weight": 0.2182,
+          "band": 0.333,
+          "exemplar": 1.0,
+          "theme": 0.254,
+          "matched_analytes": [
+            "fructose 6 phosphate",
+            "ure"
+          ]
+        },
+        {
+          "component": 23,
+          "weight": 0.1789,
+          "band": 0.333,
+          "exemplar": 0.882,
+          "theme": 0.025,
+          "matched_analytes": [
+            "citrate"
+          ]
+        },
+        {
+          "component": 6,
+          "weight": 0.1396,
+          "band": 0.0,
+          "exemplar": 1.0,
+          "theme": 0.0,
+          "matched_analytes": [
+            "ure",
+            "urea"
+          ]
+        },
+        {
+          "component": 9,
+          "weight": 0.1064,
+          "band": 0.667,
+          "exemplar": 0.0,
+          "theme": 0.0,
+          "matched_analytes": []
+        },
+        {
+          "component": 10,
+          "weight": 0.1064,
+          "band": 0.667,
+          "exemplar": 0.0,
+          "theme": 0.0,
+          "matched_analytes": []
+        }
+      ],
+      "confidence": 0.256,
+      "stability": 0.767,
+      "evidence_breadth": 0.333,
+      "reference_analytes": [
+        "citrate",
+        "fructose 6 phosphate",
+        "phosphate",
+        "ure",
+        "urea"
+      ],
+      "perturbation": {
+        "dose_responsive_components": [
+          {
+            "component": 14,
+            "n_dose_experiments": 6
+          },
+          {
+            "component": 21,
+            "n_dose_experiments": 6
+          },
+          {
+            "component": 23,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 6,
+            "n_dose_experiments": 5
+          },
+          {
+            "component": 9,
+            "n_dose_experiments": 6
+          },
+          {
+            "component": 10,
+            "n_dose_experiments": 4
+          }
+        ],
+        "serum_spike_matches": [
+          {
+            "component": 23,
+            "analyte": "phosphate",
+            "delta": 0.0033
+          }
+        ],
+        "depletion_matches": []
+      }
+    }
+  ]
+}
