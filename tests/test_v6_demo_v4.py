@@ -143,3 +143,128 @@ def test_joint_trajectories_three_classes_render():
     fig = F.reasoning_cascade(b, s.mean_coord[-1], "1.8 µM")   # the signature figure renders
     assert fig is not None
     plt.close(fig)
+
+
+# ── Page 2 (Reference Atlas) ──
+@needs_art
+def test_page2_reference_map_and_sankey_from_frozen():
+    from demo_core.engine_bridge import Bridge
+    b = Bridge()
+    rm = b.reference_map()
+    assert rm["coords"].shape == (167, 24)
+    assert abs(rm["coords"].sum(1).mean() - 1.0) < 1e-6            # L1 (engine convention)
+    assert len(set(rm["families"])) > 5
+    sk = b.sankey_links()
+    assert len(sk["comp_nodes"]) == 24 and len(sk["theme_nodes"]) == 11
+    # many-to-many: at least one component feeds >1 MSS motif (no false one-to-one)
+    assert any(len(b.component_linked_motifs(j)) > 1 for j in range(24))
+    # c3 educational case: purine is its TOP theme despite the old "sterol" label
+    tw = b.component_theme_weights(3)
+    assert tw[0]["theme"] == "nucleic_purine"
+
+
+# ── Page 5 (Serum Spike) ──
+@needs_art
+def test_page5_tiers_from_validated_table():
+    from demo_core import serum as S
+    summ = S.recoverability_summary()
+    assert summ["n_analytes"] == 53
+    assert summ["n_strong"] + summ["n_partial"] + summ["n_poor"] == 53
+    # strong tier is dominated by strong Ag adsorbers (oxopurines + ergothioneine)
+    assert {"hypoxanthine", "xanthine", "ergothioneine"} <= set(summ["strong_analytes"])
+
+
+@needs_art
+def test_page5_failure_is_not_absence_and_confidence_limitation():
+    from demo_core.engine_bridge import Bridge
+    from demo_core import serum as S
+    b = Bridge()
+    df = S.load_recoverability()
+    # phenylalanine is a failure (poor tier) — but it IS present (spike moves the state)
+    phe = df[df.analyte == "phenylalanine"].iloc[0]
+    assert phe.tier == "poor"
+    ba = S.before_after(b, "phenylalanine")
+    assert ba is not None                                          # present, just not recovered
+    # the confidence limitation: strong-tier ≈ poor-tier confidence (does NOT track recovery)
+    cdf = S.confidence_recoverability(b, df)
+    gap = abs(cdf[cdf.tier == "strong"].confidence.mean() - cdf[cdf.tier == "poor"].confidence.mean())
+    assert gap < 0.05
+
+
+# ── Page 6 (Biological) ──
+@needs_art
+def test_page6_artifacts_are_genuine_v6_not_legacy():
+    """Each stored theme vector must equal the live engine's BSV of the stored coord —
+    proving the artifact is real V6 output, not a relabelled legacy radar."""
+    from demo_core.engine_bridge import Bridge
+    from demo_core import biological as B
+    if not B.available():
+        pytest.skip("biological artifacts not built")
+    b = Bridge()
+    art = B.load("diabetes_plasma_ev_sers")
+    r = art["records"][0]
+    bsv = b.infer(np.array(r["coord"]), domain=art["domain"]).bsv
+    live = [round(float(bsv.composition[t]), 5) for t in art["theme_ids"]]
+    assert np.allclose(live, r["themes"], atol=1e-4)
+
+
+@needs_art
+def test_page6_patient_level_and_absolute_vs_delta_separate():
+    from demo_core import biological as B
+    if not B.available():
+        pytest.skip("biological artifacts not built")
+    art = B.load("diabetes_plasma_ev_sers")
+    assert art["aggregation"] == "patient"                        # no per-scan pseudoreplication
+    assert art["n_units"] == 63 and art["n_by_group"] == {"Impact": 39, "Strong-D": 24}
+    _, means = B.group_theme_means(art)                           # absolute atlas position
+    gc = B.group_contrast(art)                                    # signed ΔBSV — a separate object
+    assert set(means) == {"Impact", "Strong-D"}
+    assert "delta" in gc["rows"][0] and "ci_lo" in gc["rows"][0]
+    # the real patient-level finding: purine differs with FDR significance + large effect
+    pur = next(r for r in gc["rows"] if r["theme"] == "nucleic_purine")
+    assert pur["sig"] and abs(pur["cliffs_delta"]) > 0.5
+
+
+@needs_art
+def test_page6_no_demographics_leak():
+    import json
+    from demo_core.biological import ART, CONTRAST
+    import re
+    for key in CONTRAST:
+        p = ART / f"{key}.json"
+        if not p.exists():
+            continue
+        txt = p.read_text().lower()
+        for tok in [r"hba1c", r"\bbmi\b", r"race", r"ethnic", r"gender", r"\bage\b",
+                    r"weight_kg", r"height_cm", r"waist", r"patient_data", r"2151-"]:
+            assert not re.search(tok, txt), f"{key} leaks {tok}"
+
+
+@needs_art
+def test_page6_unavailable_studies_fabricate_nothing():
+    from demo_core.pages.p6_biological import DEFERRED
+    from demo_core import biological as B
+    for key in DEFERRED:
+        assert B.load(key) is None                                # no artifact => no output
+
+
+# ── Page 8 (Methods) & cross-page ──
+@needs_art
+def test_page8_fingerprint_resolves():
+    from demo_core.engine_bridge import Bridge
+    from gaira.engine.versioning import VERSIONS
+    b = Bridge()
+    s = b.platform_stats()
+    assert s["fingerprint"] == VERSIONS.atlas_fingerprint == b.eng.atlas.meta["fingerprint"]
+
+
+@needs_art
+def test_related_links_are_valid_page_labels():
+    import re
+    from pathlib import Path
+    app = (DEMO / "app.py").read_text()
+    labels = set(re.findall(r'"(\d · [^"]+)"', app))
+    for p in (DEMO / "demo_core/pages").glob("p*.py"):
+        for call in re.findall(r"C\.related\(\[([^\]]+)\]\)", p.read_text()):
+            for lab in re.findall(r'"([^"]+)"', call):
+                assert lab in labels, f"{p.name}: invalid related link {lab}"
