@@ -78,6 +78,22 @@ def main():
             {"name": "uricase", "proj": J["uricase"]["proj"], "color": F.T.UP, "marker": "^"}]),
     })
 
+    # ── Page 5 (Serum Spike) figures ──
+    from demo_core import serum as SER
+    rdf = SER.load_recoverability()
+    cdf = SER.confidence_recoverability(b, rdf)
+    ex = ["hypoxanthine", "xanthine", "guanine", "ergothioneine", "adenine",
+          "phenylalanine", "lactate", "glucose"]
+    hmat, hthemes = SER.theme_delta_matrix(b, ex)
+    print(f"serum tiers: {int((rdf.tier=='strong').sum())} strong / "
+          f"{int((rdf.tier=='partial').sum())} partial / {int((rdf.tier=='poor').sum())} poor")
+    figs.update({
+        "p5_reco_cascade": F.recoverability_cascade(),
+        "p5_reco_scatter": F.recoverability_scatter(rdf, annotate=["hypoxanthine", "phenylalanine", "lactate"]),
+        "p5_reco_heatmap": F.recoverability_heatmap(ex, hmat, hthemes),
+        "p5_confidence_limitation": F.confidence_limitation(cdf),
+    })
+
     for name, fig in figs.items():
         p = OUT / f"{name}.png"
         fig.savefig(p, bbox_inches="tight"); plt.close(fig)

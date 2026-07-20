@@ -492,6 +492,93 @@ def difference_spectrum(grid, before, after, bands=None,
     return fig
 
 
+# ══════════════════════════════════════════════════════════════════════════════
+# Page 5 — Serum Spike Stress Test figures
+# ══════════════════════════════════════════════════════════════════════════════
+
+TIER_COLOR = {"strong": "#2f7d4f", "partial": "#b7791f", "poor": "#b23a48"}
+
+
+def recoverability_cascade():
+    """bulk abundance ≠ surface occupancy ≠ hotspot ≠ recoverable signal."""
+    steps = ["Bulk\nabundance", "Surface\noccupancy", "Hotspot\ncontribution",
+             "Recoverable\nSERS signal"]
+    fig, ax = plt.subplots(figsize=(7.8, 1.7)); ax.axis("off")
+    ax.set_xlim(0, len(steps)); ax.set_ylim(0, 1)
+    fade = ["#eef5fa", "#dbe9f2", "#cfe0ec", "#c3d8e8"]
+    for i, s in enumerate(steps):
+        ax.add_patch(FancyBboxPatch((i + 0.06, 0.15), 0.88, 0.7,
+                     boxstyle="round,pad=0.02,rounding_size=0.08",
+                     facecolor=fade[i], edgecolor=T.PRIMARY, linewidth=1.1))
+        ax.text(i + 0.5, 0.5, s, ha="center", va="center", fontsize=9.5,
+                fontweight="600", color=T.INK)
+        if i < len(steps) - 1:
+            ax.text(i + 1.0, 0.5, "≠", ha="center", va="center", fontsize=15,
+                    color=T.BAD, fontweight="700")
+    fig.tight_layout()
+    return fig
+
+
+def recoverability_scatter(df, annotate=None):
+    """All 53 analytes: identity match (x) vs replicate consistency (y), by tier."""
+    fig, ax = plt.subplots(figsize=(7.6, 4.8))
+    for tier in ("poor", "partial", "strong"):
+        d = df[df.tier == tier]
+        ax.scatter(d.cos_spike_vs_pureSERS, d.replicate_direction_cos,
+                   s=30 + 400 * d.spike_displacement_norm, color=TIER_COLOR[tier],
+                   alpha=0.75, edgecolor="white", linewidth=0.6,
+                   label=f"{tier} (n={len(d)})")
+    ax.axvline(0.35, color=T.FAINT, linestyle="--", linewidth=0.8)
+    ax.axvline(0.10, color=T.FAINT, linestyle=":", linewidth=0.8)
+    for a in (annotate or []):
+        r = df[df.analyte == a]
+        if len(r):
+            ax.annotate(a, (r.cos_spike_vs_pureSERS.iloc[0], r.replicate_direction_cos.iloc[0]),
+                        fontsize=8.2, color=T.INK, xytext=(4, 4), textcoords="offset points")
+    ax.set_xlabel("identity recovery  ·  cos(serum-spike, pure-SERS fingerprint)")
+    ax.set_ylabel("replicate direction consistency")
+    ax.set_title("Serum recoverability of 53 spiked analytes  ·  marker size = displacement",
+                 fontsize=11.0, pad=8)
+    ax.legend(fontsize=8.4, loc="lower left")
+    fig.tight_layout()
+    return fig
+
+
+def recoverability_heatmap(analytes, matrix, themes, title="ΔBSV per analyte × theme"):
+    m = np.asarray(matrix, float)
+    vmax = np.abs(m).max() or 1.0
+    fig, ax = plt.subplots(figsize=(7.8, max(3.2, 0.34 * len(analytes))))
+    im = ax.imshow(m, aspect="auto", cmap="RdBu_r", vmin=-vmax, vmax=vmax)
+    ax.set_xticks(range(len(themes)))
+    ax.set_xticklabels([THEME_SHORT.get(t, t) for t in themes], rotation=45, ha="right", fontsize=8)
+    ax.set_yticks(range(len(analytes))); ax.set_yticklabels(analytes, fontsize=8)
+    cb = fig.colorbar(im, ax=ax, shrink=0.7); cb.set_label("Δ evidence share", fontsize=8.5)
+    ax.set_title(title, fontsize=11.0, pad=8)
+    fig.tight_layout()
+    return fig
+
+
+def confidence_limitation(cdf, title="Confidence does not track recoverability"):
+    """Engine confidence vs identity recovery — the key limitation to surface."""
+    fig, ax = plt.subplots(figsize=(7.2, 4.4))
+    for tier in ("poor", "partial", "strong"):
+        d = cdf[cdf.tier == tier]
+        ax.scatter(d.cos, d.confidence, s=45, color=TIER_COLOR[tier], alpha=0.75,
+                   edgecolor="white", linewidth=0.6, label=tier)
+    # trend
+    if len(cdf) > 2:
+        z = np.polyfit(cdf.cos, cdf.confidence, 1)
+        xs = np.linspace(cdf.cos.min(), cdf.cos.max(), 20)
+        ax.plot(xs, np.polyval(z, xs), "--", color=T.FAINT, linewidth=1.2,
+                label=f"slope {z[0]:+.03f}")
+    ax.set_xlabel("identity recovery  ·  cos(serum-spike, pure-SERS)")
+    ax.set_ylabel("engine overall confidence")
+    ax.set_title(title, fontsize=11.0, pad=8)
+    ax.legend(fontsize=8.4, loc="best")
+    fig.tight_layout()
+    return fig
+
+
 # ── compare all three trajectory classes in one BSV space ──
 def compare_trajectories(trajs, title="Three perturbation classes in BSV space"):
     """trajs: list of dicts {name, proj (n,2), color, marker}."""
