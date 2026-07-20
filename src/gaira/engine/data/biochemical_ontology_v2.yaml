@@ -1,0 +1,243 @@
+# GAIRA Biochemical Ontology v2
+# ---------------------------------------------------------------------------
+# Converts LATENT RAMAN MOTIFS (the 24 frozen NMF components of Raman Reference
+# Atlas v0.1) into BIOCHEMICAL THEMES. This is an interpretive OVERLAY: it never
+# changes the frozen atlas coordinates and can be revised without regenerating NMF.
+#
+# Design decisions grounded in the completed studies:
+#   * Ontology v0.1 (Component Audit) assigned ONE coarse label per component and
+#     was shown to be unreliable on low-purity components (Perturbation Response
+#     Audit: c3 labelled 'sterol' actually encodes adenine). v2 therefore defines
+#     THEMES that receive weighted, fractional evidence from MULTIPLE components,
+#     and each component contributes to MULTIPLE themes.
+#   * Themes, band assignments and literature are curated from established Raman
+#     spectroscopy; component contributors are DERIVED (see component_theme_weights).
+#   * Every theme carries explicit confidence, ambiguities and domain caveats.
+#
+# characteristic_bands_cm: well-established Raman band positions (cm-1) used only to
+# corroborate a theme, never to assign a molecule.
+# literature: source group in raman_knowledge_core/peak_assignments.csv where one
+# exists; otherwise a standard textbook assignment class (marked textbook).
+version: "2.0"
+supersedes: "biochemical_ontology_v0.1 (Component Audit p10)"
+atlas_fingerprint: "09ed804a40836f4a05a91ba10900cded"
+provenance:
+  derived_from:
+    - "Raman Reference Atlas v0.1 (NMF k=24, frozen)"
+    - "Component Audit (p1 inventory, p2 composition, p4 coherence)"
+    - "Perturbation Response Audit (part1 dose-response, part6 purine, part8 uricase)"
+    - "raman_knowledge_core/peak_assignments.csv (literature groups)"
+  principle: >
+    Themes are tentative biochemical interpretations of reproducible Raman motifs.
+    They are NEVER molecular assignments. Confidence reflects the agreement between
+    reference-loading, spectral-band and perturbation evidence.
+
+themes:
+  - id: nucleic_purine
+    name: "Purine / nucleic-acid-associated"
+    description: >
+      Ring-breathing and imidazole modes of purine bases and their nucleic-acid
+      context. The best-validated theme in GAIRA: adenine perturbation drives its
+      own encoding component, and enzymatic urate depletion selectively removes a
+      purine component.
+    characteristic_bands_cm: [650, 725, 1330, 1420, 1480, 1580]
+    literature: "NucleicAcids"
+    reference_families: [purine, nucleic_acid, nucleoside, nucleotide]
+    confidence: high
+    ambiguities: >
+      Purine sub-classes split into {adenine,hypoxanthine} and {xanthine,guanine};
+      a single axis cannot resolve them. Pyrimidines are a separate theme.
+    domain_caveats: >
+      In serum, purine bands (adenine 725, hypoxanthine) are among the few reliably
+      recovered because purines chemisorb strongly to Ag; elsewhere weaker.
+
+  - id: nucleic_pyrimidine
+    name: "Pyrimidine / nucleobase-associated"
+    description: >
+      Ring modes of pyrimidine bases (uracil, thymine, cytosine) and DNA/RNA
+      pyrimidine context. Distinct from the purine theme.
+    characteristic_bands_cm: [560, 785, 1240, 1370, 1660]
+    literature: "NucleicAcids"
+    reference_families: [pyrimidine, nucleic_acid]
+    confidence: moderate
+    ambiguities: >
+      Overlaps the purine theme through shared nucleic-acid backbone modes;
+      component c13 (thymine-dominated) and c17 (uracil) are the main contributors.
+    domain_caveats: "Weaker Ag adsorption than purines; low reliability in serum."
+
+  - id: protein_peptide
+    name: "Protein / peptide"
+    description: >
+      Amide I/III backbone modes and aromatic side-chain rings. The most
+      mathematically stable motif family (c2 stability 0.965) and dominant in serum.
+    characteristic_bands_cm: [1004, 1240, 1340, 1450, 1550, 1655]
+    literature: "Proteins"
+    reference_families: [protein]
+    confidence: high
+    ambiguities: >
+      Amide bands overlap lipid CH2 (1450) and aromatic amino-acid rings; the
+      protein theme and aromatic-amino-acid theme share evidence.
+    domain_caveats: "Albumin dominates serum; a large protein signal is expected and non-specific."
+
+  - id: aromatic_amino_acid
+    name: "Aromatic amino-acid"
+    description: >
+      Ring-breathing modes of phenylalanine (1004), tyrosine (Fermi doublet
+      830/850) and tryptophan (759, 1552). Present both free and within proteins.
+    characteristic_bands_cm: [644, 759, 830, 850, 1004, 1552, 1615]
+    literature: "AminoAcids"
+    reference_families: [amino_acid]
+    confidence: moderate
+    ambiguities: >
+      The phenylalanine 1004 ring-breathing mode also anchors the protein theme;
+      free vs protein-bound cannot be distinguished by the atlas.
+    domain_caveats: "Free aromatic amino acids are dilute in serum relative to protein-bound."
+
+  - id: lipid_acyl
+    name: "Lipid acyl-chain"
+    description: >
+      CH2 twisting (1300), CH2 scissoring (1440) and C=C (1650) of fatty-acyl
+      chains in triacylglycerols, fatty acids and phospholipids. c1 (bands 1302,
+      1442) is the archetypal contributor.
+    characteristic_bands_cm: [1064, 1130, 1300, 1440, 1655, 1745]
+    literature: "Lipids-FattyAcids"
+    reference_families: [lipid, fatty_acid, triglyceride, phospholipid]
+    confidence: high
+    ambiguities: >
+      Acyl-chain bands are shared across ALL lipid subclasses; the atlas resolves
+      lipid CLASS but not species (saturated triacylglycerols are indistinguishable).
+    domain_caveats: "Serum lipoproteins carry a large, matrix-level acyl signal."
+
+  - id: sterol_membrane
+    name: "Sterol / membrane order"
+    description: >
+      Steroid ring and C=C modes (cholesterol 700, 1440, 1670) reporting membrane
+      order and cholesteryl esters.
+    characteristic_bands_cm: [700, 1090, 1440, 1670]
+    literature: "Lipids-Hormones"
+    reference_families: [sterol]
+    confidence: moderate
+    ambiguities: >
+      Sterol ring modes overlap the acyl CH2 band (1440); the sterol theme and
+      lipid-acyl theme share evidence. c3 was mislabelled 'sterol' but encodes adenine.
+    domain_caveats: "Cholesterol is a dominant serum reference; a strong signal is expected."
+
+  - id: saccharide_glycan
+    name: "Saccharide / glycan"
+    description: >
+      C-O/C-C stretching and C-O-C glycosidic modes of mono- and polysaccharides
+      (glucose 1060/1120, glycogen). Several stable components contribute.
+    characteristic_bands_cm: [850, 915, 1050, 1120, 1340, 1460]
+    literature: "Saccharides-Monosaccharides"
+    reference_families: [saccharide, polysaccharide, polyol]
+    confidence: high
+    ambiguities: >
+      Monosaccharide isomers (glucose/fructose/galactose) share nearly identical
+      fingerprint-region spectra; glycan branching is not resolved.
+    domain_caveats: "Serum glucose is millimolar; expect a large, non-specific saccharide signal."
+
+  - id: organic_acid_metabolism
+    name: "Organic acid / central metabolism"
+    description: >
+      Carboxylate symmetric stretch (~1400) and C-C skeletal modes of small
+      central-metabolism acids (citrate, lactate, pyruvate, ascorbate).
+    characteristic_bands_cm: [900, 1000, 1400, 1600]
+    literature: "textbook: carboxylate COO- symmetric stretch"
+    reference_families: [organic_acid, small_nitrogenous]
+    confidence: moderate
+    ambiguities: >
+      The 1400 cm-1 carboxylate band is generic to many anions and to Ag-carboxylate
+      adsorption; a strong 1400 signal is not specific to any one acid.
+    domain_caveats: "Ag-colloid adsorption itself produces carboxylate-like bands; treat with caution."
+
+  - id: sulfur_antioxidant
+    name: "Sulfur / antioxidant"
+    description: >
+      C-S and S-H modes of thiol/thione antioxidants (glutathione, cysteine,
+      ergothioneine). Ergothioneine perturbation drives components in this theme.
+    characteristic_bands_cm: [510, 630, 680, 1400]
+    literature: "textbook: C-S stretch 630-680, S-S 510"
+    reference_families: [cofactor]
+    confidence: low
+    ambiguities: >
+      Ergothioneine's encoding component (c19) is low-purity and generic; the
+      sulfur theme is supported by perturbation but not by a clean atlas component.
+    domain_caveats: "Thione sulfur binds Ag strongly, so serum ergothioneine is one of the few recoverable cofactors."
+
+  - id: heme_porphyrin
+    name: "Heme / porphyrin"
+    description: >
+      Resonance-enhanced porphyrin ring modes of heme proteins (haemoglobin,
+      cytochrome c, myoglobin) at 750, 1130, 1370, 1580.
+    characteristic_bands_cm: [750, 1130, 1370, 1580, 1620]
+    literature: "textbook: porphyrin nu4/nu2 resonance modes"
+    reference_families: [protein]
+    confidence: low
+    ambiguities: >
+      Heme resonance depends strongly on excitation; the reference corpus contains
+      few heme proteins and no single component isolates them. Provisional theme.
+    domain_caveats: "Haemoglobin resonance dominates whole-blood Raman but is diluted in serum."
+
+  - id: redox_broad
+    name: "Broad redox-associated"
+    description: >
+      A cross-cutting theme for components whose activation tracks the general
+      oxidation/adsorption state rather than a specific chemistry. Intended as the
+      natural home for future DART electrochemical trajectories.
+    characteristic_bands_cm: []
+    literature: "textbook: no single band signature (state, not species)"
+    reference_families: []
+    confidence: low
+    ambiguities: >
+      Defined by behaviour, not by a band. Populated primarily by perturbation
+      evidence (dose-responsive but chemically generic components) and reserved for
+      DART. Do not over-interpret in static spectra.
+    domain_caveats: "Only meaningful for controlled perturbation / DART; ignore for one-shot serum."
+
+  - id: background_matrix
+    name: "Background / matrix"
+    description: >
+      Colloid, citrate, buffer and instrument background captured by generic hub
+      components. Explicitly modelled so it can be DISCOUNTED, not read as chemistry.
+    characteristic_bands_cm: [240, 1400, 1600]
+    literature: "textbook: citrate/Ag-colloid background"
+    reference_families: []
+    confidence: high
+    ambiguities: "By design absorbs shared/background variance; a high score here lowers overall confidence."
+    domain_caveats: "Dominant in Ag-SERS (background-dominated, per Spike Validation); a large matrix score flags an untrustworthy spectrum."
+
+  - id: unknown_mixed
+    name: "Unknown / mixed"
+    description: >
+      Residual evidence not confidently attributable to any theme above. Preserves
+      honesty: unexplained signal is surfaced, never forced into a named theme.
+    characteristic_bands_cm: []
+    literature: "n/a"
+    reference_families: [unknown]
+    confidence: high
+    ambiguities: "Catch-all; a large unknown score means the spectrum is poorly explained by the atlas."
+    domain_caveats: "Rises for out-of-domain inputs; read together with the OOD score."
+
+# maps chemical FAMILIES (from families_raman) onto themes for reference-loading
+# evidence. A family may support several themes (fractional split).
+family_theme_affinity:
+  purine:          {nucleic_purine: 1.0}
+  pyrimidine:      {nucleic_pyrimidine: 1.0}
+  nucleic_acid:    {nucleic_purine: 0.5, nucleic_pyrimidine: 0.5}
+  nucleoside:      {nucleic_purine: 0.6, nucleic_pyrimidine: 0.4}
+  nucleotide:      {nucleic_purine: 0.6, nucleic_pyrimidine: 0.4}
+  protein:         {protein_peptide: 0.8, heme_porphyrin: 0.1, aromatic_amino_acid: 0.1}
+  amino_acid:      {aromatic_amino_acid: 0.5, protein_peptide: 0.3, organic_acid_metabolism: 0.2}
+  lipid:           {lipid_acyl: 0.7, sterol_membrane: 0.3}
+  fatty_acid:      {lipid_acyl: 1.0}
+  triglyceride:    {lipid_acyl: 1.0}
+  phospholipid:    {lipid_acyl: 0.8, sterol_membrane: 0.2}
+  sterol:          {sterol_membrane: 0.8, lipid_acyl: 0.2}
+  carotenoid:      {lipid_acyl: 0.5, redox_broad: 0.5}
+  saccharide:      {saccharide_glycan: 1.0}
+  polysaccharide:  {saccharide_glycan: 1.0}
+  polyol:          {saccharide_glycan: 1.0}
+  organic_acid:    {organic_acid_metabolism: 1.0}
+  small_nitrogenous: {organic_acid_metabolism: 0.6, protein_peptide: 0.4}
+  cofactor:        {sulfur_antioxidant: 0.5, redox_broad: 0.3, organic_acid_metabolism: 0.2}
+  unknown:         {unknown_mixed: 1.0}
