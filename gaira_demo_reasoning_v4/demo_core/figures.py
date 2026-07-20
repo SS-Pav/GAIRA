@@ -160,6 +160,24 @@ def basis_spectrum(grid, spectrum, bands=None, title="Basis spectrum"):
     return fig
 
 
+# ── corpus source / excitation breakdown ──
+def corpus_breakdown(sources, excitations, title="Reference corpus composition"):
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(7.8, 3.0))
+    s = dict(sorted(sources.items(), key=lambda kv: kv[1]))
+    a1.barh(list(s.keys()), list(s.values()), color=T.PRIMARY, height=0.6)
+    for i, v in enumerate(s.values()):
+        a1.text(v, i, f" {v}", va="center", fontsize=8.5, color=T.MUTED)
+    a1.set_title("Raman sources (spectra)", fontsize=10.5); a1.grid(axis="y", visible=False)
+    ex = {str(int(float(k))): v for k, v in excitations.items()}
+    ex = dict(sorted(ex.items(), key=lambda kv: -kv[1])[:6])
+    a2.bar(list(ex.keys()), list(ex.values()), color=T.SEQ[3], width=0.7)
+    a2.set_title("Excitation lines (nm)", fontsize=10.5); a2.grid(axis="x", visible=False)
+    a2.tick_params(axis="x", labelsize=8.5)
+    fig.suptitle(title, fontsize=12.0, fontweight="700", color=T.INK, y=1.04)
+    fig.tight_layout()
+    return fig
+
+
 # ── spectral collisions map ──
 def band_collision_map(motifs, tol=16.0, title="Spectral collisions: where motifs share bands"):
     """Each biochemical motif's characteristic bands as ticks on a shared cm⁻¹ axis.

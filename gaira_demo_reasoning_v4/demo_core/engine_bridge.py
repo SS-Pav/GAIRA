@@ -85,6 +85,61 @@ class Bridge:
     def motif_by_id(self, mid):
         return next(m for m in self.mss.motifs if m.id == mid)
 
+    def component_linked_motifs(self, j):
+        """MSS motifs that component j contributes to, with the motif weight."""
+        out = []
+        for m in self.mss.motifs:
+            for c in m.contributors:
+                if c["component"] == j:
+                    out.append({"id": m.id, "name": m.name, "weight": c["weight"],
+                                "parent_theme": m.parent_theme})
+        return sorted(out, key=lambda x: -x["weight"])
+
+    def component_theme_weights(self, j, top=6):
+        """component→theme weights (many-to-many) with the three evidence lines."""
+        W = self.onto.W
+        rows = []
+        for ti, t in enumerate(self.all_themes):
+            w = float(W[j, ti])
+            if w > 0.02:
+                ev = self.onto.weight_evidence(j, t) or {}
+                rows.append({"theme": t, "weight": w, "evidence": ev.get("evidence", {})})
+        return sorted(rows, key=lambda r: -r["weight"])[:top]
+
+    def reference_map(self):
+        """167 reference analytes as frozen L1 coordinates + biochemical family.
+        Used by the Page-2 reference PCA (explanatory only, not the inference model)."""
+        import pandas as pd
+        df = pd.read_csv(REPO / "results/v5_rebuild/foundation/tables/c3_analyte_activation_matrix.csv")
+        cols = [str(j) for j in range(K)]
+        A = df[cols].values.astype(float)
+        A = A / (A.sum(1, keepdims=True) + 1e-12)          # L1 shares (engine convention)
+        # family per analyte from the frozen registry loadings (deterministic)
+        fam = {}
+        for j in range(K):
+            for l in self.reg.value(j, "reference_analyte_loadings"):
+                fam.setdefault(l["analyte"].strip().lower(), l["family"])
+        families = [fam.get(a.strip().lower(), "unassigned") for a in df["analyte"]]
+        return {"analytes": list(df["analyte"]), "coords": A, "families": families}
+
+    def sankey_links(self):
+        """(components → MSS motifs → biochemical themes) flow for the atlas Sankey.
+        Many-to-many by construction (never one-to-one)."""
+        motifs = self.mss.biochemical()
+        comp_nodes = [f"c{j}" for j in range(K)]
+        motif_nodes = [m.name for m in motifs]
+        theme_nodes = [t for t in self.bio_themes]
+        idx = {**{n: i for i, n in enumerate(comp_nodes)},
+               **{n: K + i for i, n in enumerate(motif_nodes)},
+               **{n: K + len(motif_nodes) + i for i, n in enumerate(theme_nodes)}}
+        links = []
+        for mi, m in enumerate(motifs):
+            for c in m.contributors:
+                links.append((idx[f"c{c['component']}"], idx[m.name], c["weight"]))
+            links.append((idx[m.name], idx[m.parent_theme], max(m.confidence, 0.05)))
+        return {"comp_nodes": comp_nodes, "motif_nodes": motif_nodes,
+                "theme_nodes": theme_nodes, "links": links}
+
     # ── platform stats (Overview) ──
     def platform_stats(self):
         cc = self.eng.atlas.meta.get("corpus_card", {})
