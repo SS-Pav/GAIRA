@@ -167,4 +167,5 @@ def render(bridge):
         "MSS is a parallel interpretive view; it does not alter the BSV, which maps components to "
         "themes directly.",
     ])
+    C.related(["2 · Reference Atlas", "4 · Calibration", "8 · Methods & Provenance"])
     C.provenance_footer(s)

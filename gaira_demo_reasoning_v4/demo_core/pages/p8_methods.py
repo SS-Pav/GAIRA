@@ -175,4 +175,5 @@ def render(bridge):
 
     with st.expander("Raw version manifest (JSON)"):
         st.code(json.dumps(s["versions"], indent=2), language="json")
+    C.related(["2 · Reference Atlas", "4 · Calibration", "6 · Biological Studies"])
     C.provenance_footer(s)

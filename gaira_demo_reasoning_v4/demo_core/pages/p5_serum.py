@@ -210,4 +210,5 @@ def render(bridge):
         "Confidence does not yet distinguish strong from weak Ag adsorbers within serum "
         "(Section D).",
     ])
+    C.related(["3 · How GAIRA Reasons", "4 · Calibration", "6 · Biological Studies"])
     C.provenance_footer(s)

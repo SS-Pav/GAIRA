@@ -44,15 +44,21 @@ PAGES = [
 def main():
     C.inject_css()
     bridge = _bridge()
+    labels = [p[0] for p in PAGES]
+    # consume a cross-page navigation request from a "related pages" button
+    if st.session_state.get("_pending_nav") in labels:
+        st.session_state["_page"] = st.session_state.pop("_pending_nav")
+    if st.session_state.get("_page") not in labels:
+        st.session_state["_page"] = labels[0]
     with st.sidebar:
         st.markdown("### GAIRA")
         st.caption("V6 Converged Reasoning Engine")
-        labels = [p[0] for p in PAGES]
-        choice = st.radio("Sections", labels, label_visibility="collapsed")
+        choice = st.radio("Sections", labels, index=labels.index(st.session_state["_page"]),
+                          label_visibility="collapsed")
+        st.session_state["_page"] = choice
         st.markdown("---")
         st.caption(f"atlas `{bridge.eng.atlas.meta['fingerprint'][:10]}…` · frozen · deterministic")
-    page = dict(zip([p[0] for p in PAGES], [p[1] for p in PAGES]))[choice]
-    page.render(bridge)
+    dict(PAGES)[choice].render(bridge)
 
 
 if __name__ == "__main__":

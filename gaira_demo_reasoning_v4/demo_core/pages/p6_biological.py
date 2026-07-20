@@ -204,4 +204,5 @@ def render(bridge):
         "or diagnoses.",
         "Impact / Strong-D / H0T are the sources' own labels, shown verbatim.",
     ])
+    C.related(["3 · How GAIRA Reasons", "5 · Serum Spike Stress Test", "8 · Methods & Provenance"])
     C.provenance_footer(s)

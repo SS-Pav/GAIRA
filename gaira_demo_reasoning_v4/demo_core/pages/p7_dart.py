@@ -88,4 +88,5 @@ def render(bridge):
         "Everything on this page except the calibration-trajectory figure is conceptual.",
         "No DART or Au-SERS data has been acquired or modelled; predictions are hypotheses.",
     ])
+    C.related(["4 · Calibration", "5 · Serum Spike Stress Test"])
     C.provenance_footer(s)

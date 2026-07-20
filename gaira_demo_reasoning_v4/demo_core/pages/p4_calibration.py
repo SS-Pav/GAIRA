@@ -308,4 +308,5 @@ def render(bridge):
     with t_cmp:
         _compare(bridge)
 
+    C.related(["3 · How GAIRA Reasons", "5 · Serum Spike Stress Test", "7 · Future DART"])
     C.provenance_footer(s)

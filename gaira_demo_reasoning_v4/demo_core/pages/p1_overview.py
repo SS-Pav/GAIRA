@@ -80,4 +80,5 @@ def render(bridge):
         "molecules — radar axes are not independent quantities.",
         "MSS motifs are validated spectral <i>patterns</i>, never exact molecule claims.",
     ])
+    C.related(["2 · Reference Atlas", "3 · How GAIRA Reasons", "4 · Calibration"])
     C.provenance_footer(s)

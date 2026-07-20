@@ -75,6 +75,23 @@ def provenance_footer(stats):
         f'it does not modify it.</div>', unsafe_allow_html=True)
 
 
+def goto(label):
+    """Request a jump to another page (consumed by app.py before the nav radio)."""
+    st.session_state["_pending_nav"] = label
+    st.rerun()
+
+
+def related(pairs):
+    """Render 'related pages' navigation buttons. pairs: list of page labels."""
+    st.markdown('<div class="gaira-caption" style="margin-top:1.5rem;">Related pages</div>',
+                unsafe_allow_html=True)
+    cols = st.columns(len(pairs))
+    for col, label in zip(cols, pairs):
+        with col:
+            if st.button(f"→ {label}", key=f"rel_{label}", use_container_width=True):
+                goto(label)
+
+
 def scaffold_note(planned):
     """Honest placeholder for a page still being built out (page-by-page cadence)."""
     body = "".join(f"<li>{x}</li>" for x in planned)

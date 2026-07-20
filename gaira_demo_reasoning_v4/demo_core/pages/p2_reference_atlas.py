@@ -220,4 +220,5 @@ def render(bridge):
         "Sterol and heme chemistries are under-represented in the corpus — a coverage limit.",
         "The PCA and Sankey are explanatory views; the inference model is the fixed NMF basis.",
     ])
+    C.related(["3 · How GAIRA Reasons", "4 · Calibration", "8 · Methods & Provenance"])
     C.provenance_footer(s)
