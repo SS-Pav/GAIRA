@@ -225,6 +225,40 @@ def test_component_distance_matrix_valid_and_deterministic():
 
 
 @needs_art
+def test_nmf_decomposition_and_reconstruction():
+    """A reference analyte decomposes into components; reconstructing from more
+    components monotonically approaches the full atlas reconstruction."""
+    from demo_core.engine_bridge import Bridge
+    b = Bridge()
+    coeff = b.analyte_coeffs("adenine")
+    order = list(np.argsort(-coeff))
+    assert order[0] == 3                                    # adenine's top motif is c3
+    grid, full = b.reconstruct_from(coeff)
+    err = []
+    for k in (1, 3, 8):
+        _, partial = b.reconstruct_from(coeff, keep=order[:k])
+        err.append(float(np.linalg.norm(full - partial)))
+    assert err[0] > err[1] > err[2]                        # more components → closer to full
+
+
+@needs_art
+def test_component_ego_network_and_clustered_heatmap_render():
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from demo_core.engine_bridge import Bridge
+    from demo_core import figures as F, biological as B
+    b = Bridge()
+    fig = F.component_ego_network(3, b.component_linked_motifs(3))
+    assert fig is not None; plt.close(fig)
+    art = B.load("shine_ev_sers")
+    if art is not None:
+        Z, g, l, strata = B.heatmap_matrix(art, "themes_mat")
+        assert strata is not None                          # SHINE carries dose strata
+        fig = F.sample_heatmap(Z, g, l, strata=strata); assert fig is not None; plt.close(fig)
+
+
+@needs_art
 def test_component_mds_and_sankey_cover_all_components():
     import matplotlib
     matplotlib.use("Agg")

@@ -1,5 +1,6 @@
-"""Page 2 — Reference Atlas. What biochemical evidence GAIRA knows, and how the
-frozen coordinate system is constructed. Fully grounded in committed frozen artifacts.
+"""Page 2 — Building the Reference Space. How GAIRA's biochemical coordinate system is
+constructed from pure Raman spectra, taught step by step. Fully grounded in committed
+frozen artifacts; NMF-native throughout (PCA is a labelled appendix).
 """
 from __future__ import annotations
 import numpy as np
@@ -30,11 +31,11 @@ def _conf_tier(v):
         return "moderate"
 
 
-# ── Section A ──
+# ── A · corpus summary ──
 def _corpus_summary(b, s):
-    st.markdown("### A · Corpus summary")
-    st.markdown('<div class="gaira-caption">Every count below is read live from the frozen atlas '
-                'manifest and registries — never hard-coded. Corpus stages are labelled precisely '
+    st.markdown("### A · What GAIRA knows — the reference corpus")
+    st.markdown('<div class="gaira-caption">Every count is read live from the frozen atlas '
+                'manifest + registries — never hard-coded. Corpus stages are labelled precisely '
                 'and are <b>not</b> merged.</div>', unsafe_allow_html=True)
     C.stat_row([
         (f"{s['n_reference_analytes']}", "reference analytes"),
@@ -48,84 +49,76 @@ def _corpus_summary(b, s):
     c1, c2 = st.columns([1.1, 1.0], gap="large")
     with c1:
         C.figure(F.corpus_breakdown(s["sources"], s["excitations"]),
-                 cap="Spectra per Raman source and per excitation line, from the atlas corpus card.")
+                 cap="Spectra per Raman source and per excitation line (atlas corpus card).")
     with c2:
-        st.markdown("**Corpus stages (labelled, not merged)**")
         ex785 = s["excitations"].get("785.0", s["excitations"].get("785"))
+        st.markdown("**Corpus stages (labelled, not merged)**")
         st.table({
-            "stage": ["Frozen atlas input", "785 nm subset", "Raman sources",
-                      "Latent representation", "Interpretation layers",
-                      "Calibration (Ag-SERS, excluded)", "Excluded domains"],
+            "stage": ["Frozen atlas input", "785 nm subset", "Latent representation",
+                      "Interpretation layers", "Calibration (Ag-SERS, excluded)", "Excluded domains"],
             "count / detail": [
                 f"{s['n_reference_spectra']} spectra · {s['n_reference_analytes']} analytes",
                 f"{ex785} spectra @ 785 nm",
-                " · ".join(f"{k} ({v})" for k, v in s["sources"].items()),
                 f"NMF k={s['n_components']} · {s['n_biochemical_mss']} MSS · "
                 f"{s['n_biochemical_themes']} themes",
                 "Component Registry v1 · MSS v1 · Ontology v2",
                 "adenine · ergothioneine · uricase (Pages 4–5)",
-                ", ".join(b.eng.atlas.meta["corpus_card"].get("excluded_domains", [])[:4]) + " …",
-            ]})
-    st.markdown('<div class="gaira-caveat"><b>Not shown as atlas counts.</b> Matched cross-modality '
-                'Ag-SERS subsets, biological cohorts and the full acquisition pool are separate '
-                'corpus stages presented on the Serum Spike (Page 5) and Biological Studies '
-                '(Page 6) pages — they are NOT part of the frozen Raman atlas and are not merged '
-                'into the counts above.</div>', unsafe_allow_html=True)
+                ", ".join(b.eng.atlas.meta["corpus_card"].get("excluded_domains", [])[:4]) + " …"]})
 
 
-# ── Section B — NMF-native (primary): the learned representation itself ──
-def _component_map(b):
-    st.markdown("### B · The learned representation — NMF component map")
-    st.markdown('<div class="gaira-caption">GAIRA inference IS the frozen NMF decomposition, so '
-                'the primary atlas view is the 24 components themselves — not a PCA of spectra. '
-                'This map visualises component SIMILARITY (classical MDS on cosine distance between '
-                'basis spectra); it is not the inference space.</div>', unsafe_allow_html=True)
-    D = b.component_distance()
-    tbc = {j: b.component_dominant_theme(j) for j in range(24)}
-    m1, m2 = st.columns([1.05, 1.0], gap="large")
-    with m1:
-        C.figure(F.component_similarity_map(D, tbc),
-                 cap="24 NMF components (MDS on basis-spectrum cosine distance), coloured by "
-                     "dominant biochemical theme. Deterministic and distance-preserving.",
-                 interp="Components with similar basis spectra sit together (e.g. the glycan and "
-                         "purine families). This is the representation GAIRA reasons in.",
-                 limits="A 2-D projection of a 24×24 distance; read clusters, not exact positions.")
-    with m2:
-        C.figure(F.component_dendrogram(D, tbc),
-                 cap="Hierarchical clustering (average linkage) of the same basis-spectrum "
-                     "distances, annotated by dominant theme.")
+# ── B · how NMF builds the space (educational, Part 3) ──
+def _nmf_education(b):
+    st.markdown("### B · How the reference space is built — NMF")
+    st.markdown('<div class="gaira-caption">GAIRA does not memorise spectra. Non-negative matrix '
+                'factorisation (NMF) discovers <b>recurring spectral motifs</b> shared across the '
+                'reference corpus — from spectroscopy alone.</div>', unsafe_allow_html=True)
 
+    st.markdown("##### Step 1 · the factorisation")
+    C.figure(F.nmf_schematic(),
+             cap="The 375×676 reference matrix ≈ a 375×24 coefficient matrix (W) times a 24×676 "
+                 "basis matrix (H). The 24 basis rows are the latent Raman motifs; each spectrum "
+                 "is a non-negative sum of them.",
+             interp="NMF is unsupervised: it sees only spectra — <b>no disease, no labels, no "
+                     "biology</b>. The biochemistry is attached afterwards by the ontology + MSS.")
 
-# ── Section B2 — secondary/exploratory reference-spectrum PCA ──
-def _reference_map(b):
-    st.markdown("### B2 · Reference family map  ·  <i>exploratory, secondary</i>",
-                unsafe_allow_html=True)
-    st.markdown('<div class="gaira-caption"><b>Exploratory visualization of reference-spectrum '
-                'variation; not used for inference.</b> PCA of the 167 reference analytes in the '
-                'frozen 24-component space, coloured by family. Weak family separation here is a '
-                'property of PCA on overlapping mixtures — NOT a failure of the NMF engine.</div>',
-                unsafe_allow_html=True)
+    st.markdown("##### Step 2 · a spectrum is a sum of motifs — try it")
     rm = _ref_map()
-    fam_all = sorted(set(rm["families"]))
-    pick = st.multiselect("Show families", fam_all, default=fam_all, key="p2_fam")
-    fig, var = IV.reference_pca(rm, show_families=set(pick))
-    st.plotly_chart(fig, use_container_width=True)
-    st.markdown(f'<div class="gaira-caption">PC1 {var[0]:.0%}, PC2 {var[1]:.0%} of variance. '
-                f'Families overlap because Raman spectra are <i>not</i> unique molecular '
-                f'barcodes — a mixture-first, not fingerprint, view.</div>', unsafe_allow_html=True)
+    default = rm["analytes"].index("adenine") if "adenine" in rm["analytes"] else 0
+    analyte = st.selectbox("Reference analyte", rm["analytes"], index=default, key="p2_nmf_analyte")
+    coeff = b.analyte_coeffs(analyte)
+    share = coeff / (coeff.sum() + 1e-12)
+    order = [int(j) for j in np.argsort(-share)]
+    k = st.slider("Reconstruct using the top-k components", 1, 8, 3, key="p2_recon_k")
+    c1, c2 = st.columns([1.0, 1.15], gap="large")
+    with c1:
+        C.figure(F.decomposition_bars(coeff, analyte),
+                 cap=f"{analyte.capitalize()}'s strongest latent motifs, as a share of its "
+                     f"evidence.")
+    with c2:
+        grid, full = b.reconstruct_from(coeff)
+        _, partial = b.reconstruct_from(coeff, keep=order[:k])
+        cum = share[order[:k]].sum()
+        C.figure(F.reconstruction_overlay(grid, full, partial, k, analyte),
+                 cap=f"Top {k} components already capture {cum*100:.0f}% of "
+                     f"{analyte}'s evidence.",
+                 interp="Adding components adds spectral detail — components are ADDITIVE motifs, "
+                         "not clusters.")
+    st.markdown('<div class="gaira-take">This is the whole idea: every query spectrum GAIRA sees '
+                'is expressed as a non-negative sum of these 24 fixed motifs. Those 24 coefficients '
+                'ARE the coordinate system the rest of the engine reasons in.</div>',
+                unsafe_allow_html=True)
 
 
-# ── Section C ──
+# ── C · component atlas (primary NMF-native explorer) ──
 def _component_explorer(b, s):
-    st.markdown("### C · Component explorer — all 24 latent Raman motifs")
+    st.markdown("### C · Component Atlas — the 24 latent Raman motifs")
     tbl = b.reg.summary_table()
     tbl["tier"] = tbl["confidence"].map(_conf_tier)
-    with st.expander("Component overview grid (all 24, with confidence tier)"):
+    with st.expander("Overview grid (all 24 components + confidence tier)"):
         st.dataframe(tbl[["component", "interpretation", "stability", "purity",
                           "n_dose_responsive", "tier"]], use_container_width=True, hide_index=True)
 
-    j = st.select_slider("Component", options=list(range(s["n_components"])), value=3,
-                         key="p2_comp")
+    j = st.select_slider("Component", options=list(range(s["n_components"])), value=3, key="p2_comp")
     row = b.component_row(j)
     tier = _conf_tier(b.reg.value(j, "interpretation_confidence"))
     tier_css = {"high": "gaira-take", "moderate": "gaira-card", "low": "gaira-caveat"}[tier]
@@ -152,29 +145,52 @@ def _component_explorer(b, s):
     with d2:
         st.markdown("**Linked MSS motifs**")
         lm = b.component_linked_motifs(j)
-        if lm:
-            for m in lm[:6]:
-                st.markdown(f"- {m['name']} ({m['weight']:.2f})")
-        else:
-            st.markdown("*none above threshold*")
+        for m in (lm[:6] or [{"name": "*none above threshold*", "weight": 0}]):
+            st.markdown(f"- {m['name']}" + (f" ({m['weight']:.2f})" if m['weight'] else ""))
     with d3:
         st.markdown("**Component → theme weights**")
         for w in b.component_theme_weights(j):
             st.markdown(f"- {F.THEME_SHORT.get(w['theme'], w['theme'])} ({w['weight']:.2f})")
 
+    lm = b.component_linked_motifs(j)
+    if lm:
+        C.figure(F.component_ego_network(j, lm),
+                 cap=f"c{j} → its MSS motifs → their biochemical themes (edge width ∝ weight). "
+                     "Many-to-many by design.")
     if j == 3:
         st.markdown('<div class="gaira-take"><b>c3 — an educational case.</b> The earlier coarse '
                     'audit label called c3 "sterol", which is misleading. Its strongest reference '
-                    'loading is <b>adenine</b> and it is the component that responds most to the '
-                    'adenine perturbation series — so reference-loading + perturbation evidence '
-                    'support a strong <b>purine-associated</b> interpretation. GAIRA shows the '
-                    'many-to-many evidence rather than forcing one label.</div>',
-                    unsafe_allow_html=True)
+                    'loading is <b>adenine</b> and it responds most to the adenine perturbation '
+                    'series — so the evidence supports a <b>purine-associated</b> reading '
+                    '(nucleic_purine weight 0.47), shown above.</div>', unsafe_allow_html=True)
 
 
-# ── Section D ──
+# ── D · component relationships (hierarchy primary; MDS optional) ──
+def _component_relationships(b):
+    st.markdown("### D · How the 24 components relate")
+    st.markdown('<div class="gaira-caption">Grouping components by the cosine distance between '
+                'their basis spectra shows which motifs are spectrally similar. This is the '
+                'representation itself — not the inference space.</div>', unsafe_allow_html=True)
+    D = b.component_distance()
+    tbc = {j: b.component_dominant_theme(j) for j in range(24)}
+    C.figure(F.component_dendrogram(D, tbc),
+             cap="Average-linkage hierarchical clustering of the 24 basis spectra, annotated by "
+                 "dominant theme. Deterministic.",
+             interp="Spectrally similar motifs cluster (e.g. the saccharide and purine components) "
+                     "— structure that is chemically interpretable, unlike a raw scatter.")
+    with st.expander("Optional · 2-D similarity map (MDS) — what am I looking at?"):
+        st.markdown('<div class="gaira-caption">Classical MDS places the 24 components so that '
+                    'distances approximate basis-spectrum dissimilarity. <b>The axes have no '
+                    'physical meaning</b>; only relative distances matter — nearby components have '
+                    'similar basis spectra, distant ones represent different motifs. Provided for '
+                    'exploration, not as a primary result.</div>', unsafe_allow_html=True)
+        C.figure(F.component_similarity_map(D, tbc),
+                 cap="Classical MDS of the 24 components (exploratory).")
+
+
+# ── E · MSS atlas (focused default, full-network toggle) ──
 def _mss_atlas(b):
-    st.markdown("### D · MSS atlas — the interpretable motifs")
+    st.markdown("### E · MSS atlas — motifs bridge components to themes")
     mid = st.selectbox("Molecular Spectral Signature", [m.id for m in b.mss.motifs],
                        format_func=lambda i: b.motif_by_id(i).name, key="p2_mss")
     m = b.motif_by_id(mid)
@@ -182,14 +198,14 @@ def _mss_atlas(b):
              else "molecular-like" if len(m.reference_analytes) <= 3 else "subclass-like")
     e1, e2 = st.columns([1.0, 1.0], gap="large")
     with e1:
-        st.markdown(f"**{m.name}** · scope: *{scope}* · parent theme "
+        st.markdown(f"**{m.name}** · scope *{scope}* · parent theme "
                     f"*{F.THEME_SHORT.get(m.parent_theme, m.parent_theme)}*"
                     + ("  ·  ⚠ non-biochemical" if m.non_biochemical else ""))
         st.markdown(f'<div class="gaira-caption">{m.description.strip()}</div>', unsafe_allow_html=True)
         st.markdown(f"- Characteristic bands: {', '.join(str(int(x)) for x in m.bands_cm)} cm⁻¹")
         st.markdown(f"- Confidence **{m.confidence:.2f}** (stability {m.stability:.2f} × breadth "
                     f"{m.evidence_breadth:.2f})")
-        st.markdown(f"- Exemplar reference analytes: {', '.join(m.reference_analytes[:8]) or '—'}")
+        st.markdown(f"- Exemplars: {', '.join(m.reference_analytes[:8]) or '—'}")
     with e2:
         st.markdown("**Contributing components (evidence-derived weights)**")
         for c in m.contributors:
@@ -197,52 +213,71 @@ def _mss_atlas(b):
                         f"<span class='gaira-caption'>(band {c['band']:.2f} · exemplar "
                         f"{c['exemplar']:.2f} · theme {c['theme']:.2f})</span>",
                         unsafe_allow_html=True)
-        pert = m.perturbation
-        st.markdown(f"**Perturbation evidence** · {len(pert['dose_responsive_components'])} "
-                    f"dose-responsive, {len(pert['serum_spike_matches'])} serum-spike"
-                    + (f", {len(pert['depletion_matches'])} depletion" if pert["depletion_matches"]
-                       else ""))
-    st.markdown('<div class="gaira-caption"><b>Ambiguity / collisions.</b> A component can feed '
-                'several motifs and a motif several themes — the flow below is deliberately '
-                'many-to-many. No strict one-to-one mapping is implied.</div>', unsafe_allow_html=True)
-    st.markdown("#### Components → MSS → biochemical themes")
-    st.plotly_chart(IV.component_theme_sankey(_sankey()), use_container_width=True)
+    if st.toggle("Show the full component → MSS → theme network", value=False, key="p2_fullnet"):
+        st.markdown('<div class="gaira-caption">The complete many-to-many map (deliberately dense; '
+                    'no one-to-one implied). Use the component explorer above for the focused '
+                    'view.</div>', unsafe_allow_html=True)
+        st.plotly_chart(IV.component_theme_sankey(_sankey()), use_container_width=True)
+
+
+# ── F · appendix: PCA of NMF coefficient vectors ──
+def _pca_appendix(b):
+    st.markdown("### F · Appendix · PCA of reference-analyte coefficient vectors")
+    st.markdown('<div class="gaira-caption"><b>What is plotted:</b> PCA of the 167 reference '
+                'analytes\' <b>24-component NMF coefficient vectors</b> — i.e. the representation '
+                'GAIRA actually reasons with (option B), <i>not</i> raw spectra and <i>not</i> the '
+                'basis vectors. It is an <b>exploratory</b> 2-D view; inference uses the full 24-D '
+                'coordinates, never this projection.</div>', unsafe_allow_html=True)
+    rm = _ref_map()
+    fam_all = sorted(set(rm["families"]))
+    pick = st.multiselect("Show families", fam_all, default=fam_all, key="p2_fam")
+    fig, var = IV.reference_pca(rm, show_families=set(pick))
+    st.plotly_chart(fig, use_container_width=True)
+    st.markdown(f'<div class="gaira-caption">PC1 {var[0]:.0%}, PC2 {var[1]:.0%} of coefficient '
+                f'variance. Families overlap because Raman spectra are mixtures, not unique '
+                f'molecular barcodes — expected, and not a failure of the NMF engine.</div>',
+                unsafe_allow_html=True)
 
 
 def render(bridge):
     s = bridge.platform_stats()
     C.page_header(
-        "Reference · the frozen coordinate system",
-        "What the atlas learned",
-        "The atlas is a frozen NMF k=24 decomposition of the pure-Raman reference corpus — chosen "
-        "by benchmark, not PCA by default, and held fixed forever. It supplies stable numerical "
-        "coordinates; the Component Registry and MSS layer supply evidence-based interpretation; "
-        "the ontology groups motifs into broad biochemical themes.")
+        "Reference · building the coordinate system",
+        "Building the reference space",
+        "GAIRA's biochemical coordinate system is a frozen NMF decomposition of pure Raman "
+        "reference spectra — chosen by benchmark, held fixed forever. This page shows how it is "
+        "built (NMF), what each of the 24 latent motifs means, how they relate, and how motifs "
+        "bridge to biochemical themes. Everything downstream reasons in these coordinates.")
     C.question("What biochemical evidence does GAIRA know, and how is the frozen coordinate system "
                "constructed from it?")
 
     _corpus_summary(bridge, s)
     st.markdown("<hr/>", unsafe_allow_html=True)
-    _component_map(bridge)                    # NMF-native primary view
+    _nmf_education(bridge)
     st.markdown("<hr/>", unsafe_allow_html=True)
     _component_explorer(bridge, s)
     st.markdown("<hr/>", unsafe_allow_html=True)
-    _reference_map(bridge)                    # PCA demoted to exploratory secondary
+    _component_relationships(bridge)
     st.markdown("<hr/>", unsafe_allow_html=True)
     _mss_atlas(bridge)
     st.markdown("<hr/>", unsafe_allow_html=True)
+    _pca_appendix(bridge)
+    st.markdown("<hr/>", unsafe_allow_html=True)
 
     C.takeaways([
-        "The frozen atlas supplies stable numerical coordinates; nothing downstream changes it.",
-        "The Component Registry and MSS layer supply evidence-based, many-to-many interpretation.",
-        "The ontology groups motifs into broad biochemical themes (the radar).",
-        "The atlas is fixed; interpretation remains versioned and improvable.",
+        "NMF discovers 24 recurring Raman motifs from spectroscopy alone — no labels, no biology.",
+        "Every spectrum is a non-negative SUM of those motifs; the 24 coefficients are the "
+        "coordinate system.",
+        "The Component Registry + MSS layer + ontology attach evidence-based, many-to-many "
+        "biochemistry afterwards.",
+        "The atlas is fixed; interpretation stays versioned and improvable.",
     ])
     C.caveats([
         "Components are molecular <i>classes</i>, not species; several are low-purity mixtures "
-        "(shown honestly with stability, purity and confidence tier).",
+        "(shown with stability, purity, confidence).",
         "Sterol and heme chemistries are under-represented in the corpus — a coverage limit.",
-        "The PCA and Sankey are explanatory views; the inference model is the fixed NMF basis.",
+        "The MDS map and the coefficient PCA are exploratory views; inference uses the fixed NMF "
+        "basis and the full 24-D coordinates.",
     ])
     C.related(["3 · How GAIRA Reasons", "4 · Calibration", "8 · Methods & Provenance"])
     C.provenance_footer(s)

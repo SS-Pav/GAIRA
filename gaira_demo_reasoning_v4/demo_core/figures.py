@@ -258,6 +258,64 @@ def basis_spectrum(grid, spectrum, bands=None, title="Basis spectrum"):
     return fig
 
 
+# ── NMF educational sequence (Part 3) ──
+def nmf_schematic():
+    """Teaching diagram: reference-spectra matrix = coefficients × basis (NMF, W·H)."""
+    fig, ax = plt.subplots(figsize=(8.0, 3.0)); ax.axis("off")
+    ax.set_xlim(0, 12); ax.set_ylim(0, 4)
+
+    def block(x, w, h, y, face, edge, label, sub):
+        ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.02,rounding_size=0.05",
+                     facecolor=face, edgecolor=edge, linewidth=1.3))
+        ax.text(x + w / 2, y + h / 2 + 0.15, label, ha="center", va="center", fontsize=10,
+                fontweight="700", color=T.INK)
+        ax.text(x + w / 2, y + h / 2 - 0.35, sub, ha="center", va="center", fontsize=7.8,
+                color=T.MUTED)
+
+    block(0.3, 3.0, 2.6, 0.7, "#eef5fa", T.PRIMARY, "Reference spectra", "375 × 676\n(analyte × cm⁻¹)")
+    ax.text(3.7, 2.0, "≈", ha="center", va="center", fontsize=22, color=T.INK)
+    block(4.2, 2.3, 2.6, 0.7, "#fdeef0", T.UP, "Coefficients", "375 × 24  (W)\nhow much of each motif")
+    ax.text(6.9, 2.0, "×", ha="center", va="center", fontsize=18, color=T.INK)
+    block(7.4, 4.2, 2.6, 0.7, "#eef5f0", T.GOOD, "Basis spectra", "24 × 676  (H)\nthe learned motifs")
+    ax.text(6.0, 0.35, "NMF factorises the reference matrix into non-negative motifs — "
+            "discovered from SPECTROSCOPY alone (no disease, no labels, no biology).",
+            ha="center", fontsize=8.6, color=T.MUTED, style="italic")
+    fig.tight_layout()
+    return fig
+
+
+def decomposition_bars(coeff, analyte, top=6):
+    """One analyte's decomposition into its strongest NMF components (as %)."""
+    coeff = np.asarray(coeff, float)
+    share = coeff / (coeff.sum() + 1e-12)
+    order = np.argsort(-share)[:top]
+    fig, ax = plt.subplots(figsize=(6.4, 3.2))
+    ax.barh([f"c{j}" for j in order][::-1], (share[order] * 100)[::-1], color=T.PRIMARY, height=0.62)
+    for i, j in enumerate(order[::-1]):
+        ax.text(share[j] * 100, i, f"  {share[j]*100:.0f}%", va="center", fontsize=9, color=T.MUTED)
+    ax.set_xlabel("share of the analyte's evidence (%)")
+    ax.set_title(f"{analyte.capitalize()} = a sum of latent Raman motifs", fontsize=11.5, pad=8)
+    ax.grid(axis="y", visible=False); ax.margins(x=0.14)
+    fig.tight_layout()
+    return fig
+
+
+def reconstruction_overlay(grid, full, partial, k, analyte):
+    """Original atlas reconstruction (all 24 components) vs a top-k-component
+    reconstruction — shows components are additive spectral motifs."""
+    fig, ax = plt.subplots(figsize=(7.6, 3.2))
+    ax.plot(grid, full, color=T.INK, linewidth=1.6, label="all 24 components")
+    ax.plot(grid, partial, color=T.UP, linewidth=1.6, alpha=0.85,
+            label=f"top {k} components only")
+    ax.fill_between(grid, 0, partial, color=T.UP, alpha=0.07)
+    ax.set_xlabel("Raman shift (cm$^{-1}$)"); ax.set_yticks([])
+    ax.set_title(f"{analyte.capitalize()} — reconstruction from the top {k} components",
+                 fontsize=11.5, pad=8)
+    ax.legend(fontsize=8.6, loc="upper right"); ax.grid(axis="x", visible=False)
+    fig.tight_layout()
+    return fig
+
+
 # ── NMF-native component views (Part 1) ──
 def _classical_mds(D):
     """Deterministic classical (Torgerson) MDS to 2-D from a distance matrix."""
@@ -313,6 +371,47 @@ def component_dendrogram(D, theme_by_comp, title="NMF component hierarchy (basis
 
 def THEME_TINT_HEX(theme):
     return T.THEME_TINT.get(theme, "#9aa4b2")
+
+
+def component_ego_network(j, motifs, title=None):
+    """Focused Part-2 view: ONE component → its connected MSS motifs → their parent
+    themes. Blue component, red MSS, green themes, subtle grey edges. Answers 'what
+    does this component contribute to?' without the full-network clutter."""
+    from matplotlib.patches import FancyArrowPatch
+    motifs = sorted(motifs, key=lambda m: -m["weight"])[:6]
+    themes = []
+    for m in motifs:
+        if m["parent_theme"] not in themes:
+            themes.append(m["parent_theme"])
+    fig, ax = plt.subplots(figsize=(7.8, max(3.2, 0.7 * max(len(motifs), len(themes)) + 1)))
+    ax.axis("off"); ax.set_xlim(0, 10); ax.set_ylim(0, max(len(motifs), len(themes), 2) + 1)
+    yc = (max(len(motifs), len(themes), 2) + 1) / 2
+
+    def node(x, y, text, face, edge, w=2.2):
+        ax.add_patch(FancyBboxPatch((x - w / 2, y - 0.28), w, 0.56,
+                     boxstyle="round,pad=0.02,rounding_size=0.1", facecolor=face,
+                     edgecolor=edge, linewidth=1.4, zorder=3))
+        ax.text(x, y, text, ha="center", va="center", fontsize=8.6, color=T.INK, zorder=4)
+
+    my = {m["id"]: (max(len(motifs), len(themes), 2) - i) for i, m in enumerate(motifs)}
+    ty = {t: (max(len(motifs), len(themes), 2) - i) for i, t in enumerate(themes)}
+    node(1.4, yc, f"c{j}", "#eef5fa", T.PRIMARY, w=1.6)
+    for m in motifs:                                   # component → motif edges
+        ax.add_patch(FancyArrowPatch((2.2, yc), (4.0, my[m["id"]]), arrowstyle="-|>",
+                     mutation_scale=10, color=T.FAINT, linewidth=0.6 + 3.5 * m["weight"],
+                     alpha=0.55, connectionstyle="arc3,rad=0.05", zorder=1))
+        node(5.2, my[m["id"]], m["name"], "#fdeef0", T.UP)
+        ax.add_patch(FancyArrowPatch((6.3, my[m["id"]]), (8.0, ty[m["parent_theme"]]),
+                     arrowstyle="-|>", mutation_scale=9, color=T.FAINT, linewidth=1.0,
+                     alpha=0.5, connectionstyle="arc3,rad=0.08", zorder=1))
+    for t in themes:
+        node(9.0, ty[t], THEME_SHORT.get(t, t), "#eef5f0", T.GOOD, w=2.0)
+    ax.text(1.4, 0.3, "component", ha="center", fontsize=8, color=T.PRIMARY, fontweight="700")
+    ax.text(5.2, 0.3, "MSS motifs", ha="center", fontsize=8, color=T.UP, fontweight="700")
+    ax.text(9.0, 0.3, "themes", ha="center", fontsize=8, color=T.GOOD, fontweight="700")
+    ax.set_title(title or f"What component c{j} contributes to", fontsize=11.5, pad=6)
+    fig.tight_layout()
+    return fig
 
 
 # ── corpus source / excitation breakdown ──
@@ -903,28 +1002,54 @@ def group_quality(art, title="Data-quality panel"):
     return fig
 
 
-def sample_heatmap(Z, groups, labels, title="Sample-level BSV heatmap (z-scored, display only)"):
-    """Rows = samples (grouped), cols = themes/motifs, z-scored for VISUALIZATION."""
+def sample_heatmap(Z, groups, labels, strata=None, cluster_cols=True,
+                   title="Sample-level BSV heatmap (z-scored, display only)"):
+    """Clustered heatmap: rows = samples (grouped; annotation strips for group + optional
+    strata/timepoint), cols = themes/motifs ordered by hierarchical clustering. Z-scoring
+    and clustering are for VISUALIZATION only, never for inference."""
     groups = np.array(groups)
     order = np.argsort(groups, kind="stable")
     Zo = Z[order]; go = groups[order]
+    st_o = np.array(strata)[order] if strata is not None else None
+    # hierarchical clustering of the theme/motif columns (similar columns adjacent)
+    col_labels = list(labels)
+    if cluster_cols and Zo.shape[1] > 2:
+        from scipy.cluster.hierarchy import linkage, leaves_list
+        from scipy.spatial.distance import pdist
+        col_order = leaves_list(linkage(pdist(Zo.T, "correlation"), method="average"))
+        Zo = Zo[:, col_order]; col_labels = [labels[i] for i in col_order]
     uniq = list(dict.fromkeys(go))
     gcol = {g: GROUP_COLORS[i % len(GROUP_COLORS)] for i, g in enumerate(uniq)}
-    fig, (axg, ax) = plt.subplots(1, 2, figsize=(7.8, max(3.4, 0.045 * len(Zo))),
-                                  gridspec_kw={"width_ratios": [0.03, 1]}, sharey=True)
+    n_strips = 2 if st_o is not None else 1
+    widths = [0.028] * n_strips + [1]
+    fig, axes = plt.subplots(1, n_strips + 1, figsize=(7.8, max(3.4, 0.045 * len(Zo))),
+                             gridspec_kw={"width_ratios": widths}, sharey=True)
+    axes = np.atleast_1d(axes)
+    axg = axes[0]
     axg.imshow(np.array([[uniq.index(g)] for g in go]), aspect="auto",
                cmap=plt.matplotlib.colors.ListedColormap([gcol[g] for g in uniq]))
     axg.set_xticks([]); axg.set_yticks([]); axg.set_ylabel("samples", fontsize=9)
+    axg.set_title("group", fontsize=7.5, color=T.MUTED)
+    if st_o is not None:
+        su = list(dict.fromkeys(st_o))
+        scol = {sname: T.SEQ[1 + i % (len(T.SEQ) - 1)] for i, sname in enumerate(su)}
+        axes[1].imshow(np.array([[su.index(x)] for x in st_o]), aspect="auto",
+                       cmap=plt.matplotlib.colors.ListedColormap([scol[x] for x in su]))
+        axes[1].set_xticks([]); axes[1].set_yticks([]); axes[1].set_title("strata", fontsize=7.5,
+                                                                          color=T.MUTED)
+    ax = axes[-1]
     vmax = np.abs(Zo).max() or 1.0
     im = ax.imshow(Zo, aspect="auto", cmap="RdBu_r", vmin=-vmax, vmax=vmax)
-    ax.set_xticks(range(len(labels)))
-    ax.set_xticklabels([THEME_SHORT.get(l, l) for l in labels], rotation=45, ha="right", fontsize=8)
+    ax.set_xticks(range(len(col_labels)))
+    ax.set_xticklabels([THEME_SHORT.get(l, l) for l in col_labels], rotation=45, ha="right",
+                       fontsize=8)
     ax.set_yticks([])
     cb = fig.colorbar(im, ax=ax, shrink=0.6); cb.set_label("z (display)", fontsize=8)
     handles = [plt.Line2D([0], [0], marker="s", color="w", markerfacecolor=gcol[g], markersize=8,
                           label=g) for g in uniq]
-    ax.legend(handles=handles, fontsize=8, loc="upper right", bbox_to_anchor=(1.35, 1.0))
-    fig.suptitle(title, fontsize=11.0, fontweight="700", y=1.02)
+    ax.legend(handles=handles, fontsize=8, loc="upper right", bbox_to_anchor=(1.38, 1.0))
+    fig.suptitle(title + ("  · columns clustered" if cluster_cols else ""), fontsize=10.8,
+                 fontweight="700", y=1.02)
     fig.tight_layout()
     return fig
 

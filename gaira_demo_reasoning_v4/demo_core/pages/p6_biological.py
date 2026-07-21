@@ -100,7 +100,8 @@ def _study(art, bridge):
                                    title=f"ΔMSS motif drivers ({a} − {b})"),
                  cap="Which spectral motifs drive the theme change.")
     with c4:
-        C.figure(F.sample_heatmap(*B.heatmap_matrix(art, "themes_mat")),
+        Zt, gt, lt, sat = B.heatmap_matrix(art, "themes_mat")
+        C.figure(F.sample_heatmap(Zt, gt, lt, strata=sat),
                  cap="Sample-level BSV (z-scored for display only). Reveals sample heterogeneity "
                      "the group means hide.")
     top = B.top_components_for(art, mdelta)
@@ -133,8 +134,8 @@ def _study(art, bridge):
                      cap="Exploratory balanced view: standardized theme deviations so a dominant "
                          "axis does not obscure the rest. Display only — canonical BSV unchanged.")
         else:
-            Zm, gm, lm = B.heatmap_matrix(art, "motifs_mat")
-            C.figure(F.sample_heatmap(Zm, gm, lm, title="Sample-level MSS heatmap (display only)"),
+            Zm, gm, lm, sam = B.heatmap_matrix(art, "motifs_mat")
+            C.figure(F.sample_heatmap(Zm, gm, lm, strata=sam, title="Sample-level MSS heatmap (display only)"),
                      cap="MSS-level structure, which broad themes can suppress.")
 
     # 8 · summary + interpretation (demoted radar/PCA to expanders)

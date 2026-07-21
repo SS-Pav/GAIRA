@@ -190,7 +190,9 @@ def heatmap_matrix(art, matrix_key="themes_mat", max_rows=80, seed=0):
         idx = np.sort(keep)
     Z = X[np.ix_(idx, bio)].astype(float)
     Z = (Z - Z.mean(0)) / (Z.std(0) + 1e-9)
-    return Z, [g[i] for i in idx], labels
+    strata = [art["records"][i].get("strata") for i in idx]
+    has_strata = any(s is not None for s in strata)
+    return Z, [g[i] for i in idx], labels, (strata if has_strata else None)
 
 
 def distance_summary(art):

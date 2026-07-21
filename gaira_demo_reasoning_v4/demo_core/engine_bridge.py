@@ -106,6 +106,22 @@ class Bridge:
                 rows.append({"theme": t, "weight": w, "evidence": ev.get("evidence", {})})
         return sorted(rows, key=lambda r: -r["weight"])[:top]
 
+    def analyte_coeffs(self, name):
+        """The 24-component NMF coefficient vector for one reference analyte."""
+        rm = self.reference_map()
+        i = rm["analytes"].index(name)
+        return np.asarray(rm["coords"][i], float)
+
+    def reconstruct_from(self, coeff, keep=None):
+        """Reconstruct a spectrum from selected components only (keep = list of indices;
+        None = all). Demonstrates that components are ADDITIVE spectral motifs."""
+        W, grid = self.reg.basis()
+        c = np.asarray(coeff, float).copy()
+        if keep is not None:
+            mask = np.zeros_like(c); mask[list(keep)] = 1.0
+            c = c * mask
+        return grid, c @ W
+
     def component_distance(self):
         """Deterministic 24×24 cosine DISTANCE between the frozen NMF basis spectra —
         the learned representation itself. Symmetric, zero diagonal."""
