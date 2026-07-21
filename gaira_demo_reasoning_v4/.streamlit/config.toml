@@ -1,0 +1,13 @@
+# Force a LIGHT theme so every Streamlit-native widget (dataframes, radio,
+# selectbox, tabs, tables, metrics, code) renders dark text on white — never the
+# user's system dark theme (which caused light-text-on-light-panel invisibility).
+[theme]
+base = "light"
+primaryColor = "#2a6f97"          # navy/blue accent
+backgroundColor = "#ffffff"        # white page
+secondaryBackgroundColor = "#f5f7fa"  # light grey panels
+textColor = "#1b2430"              # dark charcoal text
+font = "sans serif"
+
+[client]
+showErrorDetails = true
