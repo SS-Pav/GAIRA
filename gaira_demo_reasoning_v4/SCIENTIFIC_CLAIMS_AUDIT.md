@@ -94,3 +94,25 @@ traces to the live engine, a committed artifact, or a validated study; every
 interpretation is hedged; every hypothesis is labelled. The two places most at risk of
 overclaiming — large-n biological significance and the SERS working hypothesis — are
 explicitly caveated (effect-size framing; "does not imply universal SERS invariance").
+
+---
+
+## Correction pass — additional / revised claims
+
+| Claim | Source | Level | Supported | Caveat |
+|---|---|---|---|---|
+| calibration radars differ across doses (delta radar) | live engine (traced) | O | yes | absolute radar's flatness is compositional closure, stated |
+| adenine redistributes (R=0.46), ergothioneine scales (R=0.12) | live mechanism metrics | O | yes | — |
+| adenine poor serum recovery is a 0.4 µM concentration case, not proven poor adsorption | phase7 + spike conc | I | yes | "consistent with low conc + matrix masking"; contrasts phenylalanine (78 µM, genuine failure) |
+| direction agreement (not reproducibility) is the meaningful recoverability term | ablation | I | yes | ablation shows reproducibility misranks phenylalanine |
+| confidence ≠ recoverability; metrics shown separately | metrics.py | I | yes | recoverability = None for unknown spectra, never scored positive |
+| SHINE dose×time interaction (paired) | paired slopes | O | yes | cohort-level pairing (cell-culture), stated; near-null pooled |
+| small2023 c100-vs-c00 is a probe-loading effect | characterization | I | yes | flagged characterization-only, not biology |
+| diabetes difference exceeds heterogeneity (ratio 1.79) | distance analysis | O | yes | within one cohort; not universal diabetes biology |
+| NMF component similarity map = representation, PCA = exploratory | MDS/PCA | I | yes | PCA labelled "not used for inference" |
+
+**Corrections applied this pass:** removed any implication that flat absolute radars
+meant no change (now delta-radar default); reframed adenine serum recovery around its
+0.4 µM spike; separated "confidence" into atlas support / theme specificity / matrix
+recoverability / replicate reliability; SHINE/small2023 given honest cohort framing;
+biological pages now lead with effect sizes + heterogeneity, not radar/PCA.

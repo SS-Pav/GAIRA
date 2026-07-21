@@ -84,9 +84,11 @@ audit (with demographics) and are not surfaced by this demo.
 
 | dataset | reason |
 |---|---|
-| EV single-vesicle (small2023) | probe titration, not a disease contrast; embedded wavenumber axis not yet recovered |
-| SHINE EV-SERS | dose×day EV series; ingestion not yet wired for V6 |
 | Liver serum SERS (CCA/HCC/LM/NC) | 4-class per-sample txt; ingestion not yet wired for V6 |
+| Ovarian plasma Raman+SERS | paired Raman/SERS zips; not yet wired for V6 |
+
+*(SHINE EV-SERS and small2023 EV were UNAVAILABLE in the first build; the correction
+pass wired both as REAL — see the "Correction pass — added datasets" section below.)*
 
 ## 6. Frozen-artifact completeness fixes (prerequisites for a working fresh checkout)
 
@@ -99,3 +101,16 @@ with content unchanged (fingerprint verified):
 
 A `git archive HEAD` fresh-checkout simulation (only committed files, no volume) then
 loads the engine, imports all 8 pages, and renders every figure successfully.
+
+---
+
+## Correction pass — added datasets
+
+| dataset | source | units | groups | status | notes |
+|---|---|---|---|---|---|
+| shine_ev_sers | raw/shine_ev_sers (RawDataSet91 `clustered`) | 720 (subsampled) | D0 360 / D2 360 × dose | REAL | cell-culture EV; wavenumber from Fig4D cubic; Day1 omitted |
+| small2023_ev | raw/small2023_ev (NormedProbe1 + SI xlsx axis) | 600 (subsampled) | c00…c100 | REAL | probe titration; characterization-only |
+
+See BIOLOGICAL_DATA_AUDIT.md for full per-dataset detail, discrepancies (SHINE 15,027
+vs measured counts; Day1 empty; cohort-level pairing; small2023 axis in the SI), and
+sanitization. Both added as genuine V6 outputs; liver/ovarian remain UNAVAILABLE.

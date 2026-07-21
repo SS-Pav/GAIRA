@@ -118,3 +118,54 @@ a1000e4  Track the frozen NMF basis dropped by the broad *.npz ignore rule
 - [x] all old and new tests pass (198)
 - [x] frozen scientific assets byte-identical (fingerprint `09ed804a…` verified)
 - [x] nothing pushed
+
+---
+
+## Correction & improvement pass
+
+A scientific-correction pass fixed misleading visualizations (not styling) and expanded
+the real-data coverage. Root-cause finding: the "identical radars" and "adenine poorly
+recoverable" reports were **not code bugs** — they were compositional-closure visual
+compression and a 0.4 µM concentration confound, verified by tracing the computation.
+
+**Fixes (all additive; frozen BSV/atlas/NMF/ontology/weights/MSS untouched):**
+- Calibration: signed **delta radar** default (shared centred scale); redistribution R
+  (adenine 0.46) vs scaling (ergothioneine 0.12) metrics; interpretable-axis MSS
+  trajectory; uricase ΔBSV radar; debug table.
+- Serum: pure-vs-serum audit — **adenine strong in pure, poor in serum at 0.4 µM**
+  (concentration + matrix, not proven poor adsorption); phenylalanine (78 µM) a genuine
+  failure; recoverability split into documented terms + ablation.
+- Confidence **separated** into atlas support / OOD / theme specificity / matrix
+  recoverability / replicate reliability (`metrics.py`); recoverability = None for
+  unknown spectra, never scored positive.
+- Reference Atlas: **NMF-native** component similarity map (classical MDS) + dendrogram
+  now primary; reference-spectrum PCA demoted to a labelled exploratory view.
+- Biological rebuilt **effect-size-first** (forest + Cliff's δ + bootstrap + FDR),
+  sample BSV/MSS heatmaps, **between-vs-within distance ratio**, SHINE **paired**
+  Day0→Day2-per-dose slopes, diabetes exploratory balanced view; radar/PCA demoted to
+  expanders.
+- Cache keys fingerprinted (atlas/ontology/registry/MSS/BSV); sidebar **developer mode**
+  shows inference hashes + BSV/MSS/component vectors.
+
+**New real datasets (genuine V6, committed sanitized):** SHINE EV-SERS (720; D0/D2 ×
+APAP dose) and small2023 EV (600; probe titration, characterization-only). Total
+biological cohorts now 5.
+
+**Tests:** +19 correction tests (radar-differs, delta-baseline-zero, mechanism,
+NMF-distance-deterministic, serum concentration audit, terms/ablation, confidence
+separation, biological genuine-V6/patient-level/no-leak). **Full V5+V6 suite: 206
+passing.**
+
+**New audit docs:** NMF_VISUALIZATION_AUDIT · CALIBRATION_RADAR_AUDIT ·
+SERUM_RECOVERABILITY_AUDIT · BIOLOGICAL_DATA_AUDIT · BIOLOGICAL_ANALYSIS_AUDIT; existing
+audits + README + this report updated.
+
+**Correction-pass commits (nothing pushed):**
+```
+f79a31b  Fix calibration radar (delta-radar default) + redistribution vs scaling
+9bebe26  Wire SHINE + small2023 EV (real V6) and rebuild biological effect-size-first
+6a9b57e  Audit serum recoverability + separate confidence metrics
+70677c5  NMF-native Reference Atlas (component MDS + dendrogram); demote PCA
+c9bde60  Cache fingerprint keys + developer debug mode
+(+ this docs commit)
+```

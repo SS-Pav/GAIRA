@@ -61,3 +61,18 @@ p7_datamodel.
   construct with correct node/link counts (24→12→11, 76 links).
 - The BSV-space dose trajectory (adenine) is ~1-D (PC1 ≈ 99%); the small PC2 wobble is
   noise and is captioned as such rather than smoothed away.
+
+---
+
+## Correction pass — figures added & audited
+
+Rendered headless and inspected: **delta radar** (signed, shared centred scale — the
+new default calibration BSV view; verified zero at baseline, purine spike at top dose),
+**mechanism curves** (redistribution vs evidence), **pairwise MSS trajectory**,
+**NMF component similarity map (MDS)** and **dendrogram** (24 nodes, deterministic),
+**SHINE paired slope** (Day0→Day2 per dose), **sample BSV heatmap**, **distance bars**,
+**balanced-view bars**. Checks: no radar saturation (delta radar centred, not min-max);
+heatmaps symmetric about 0 (RdBu) and labelled z-display; MDS labelled clusters-not-
+coordinates; paired slope legibly labelled per stratum. PCA demoted to expanders on
+biological pages and to a labelled secondary section on the atlas page. No blank panels;
+REAL/UNAVAILABLE states render correctly.
