@@ -182,6 +182,22 @@ class Bridge:
         }
 
 
+def cache_key():
+    """Fingerprint string included in every @st.cache_data key so stale results are
+    invalidated when any frozen version changes (Part 11)."""
+    v = VERSIONS.as_dict()
+    return (f"atlas={v['atlas_fingerprint'][:12]}|onto={v.get('biochemical_ontology', 'v2')}"
+            f"|reg={v.get('component_registry', 'v1')}|mss=mss_v1|bsv=v2")
+
+
+def inference_hash(coord):
+    """Deterministic short hash of a 24-component coordinate vector — a per-spectrum
+    inference identity for the debug panel."""
+    import hashlib
+    a = np.round(np.asarray(coord, float), 6)
+    return hashlib.sha256(np.ascontiguousarray(a).tobytes()).hexdigest()[:12]
+
+
 @lru_cache(maxsize=1)
 def get_bridge():
     """Cached singleton (also memoised by Streamlit's cache in app.py)."""

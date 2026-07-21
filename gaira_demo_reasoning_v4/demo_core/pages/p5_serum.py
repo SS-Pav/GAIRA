@@ -7,7 +7,7 @@ import numpy as np
 import streamlit as st
 
 from .. import components as C, figures as F, serum as S, metrics as MET
-from ..engine_bridge import get_bridge
+from ..engine_bridge import get_bridge, cache_key
 
 TIER_LABELS = {"strong": "Strongly recoverable", "partial": "Partially / inconsistently recoverable",
                "poor": "Poorly recoverable / matrix-dominated"}
@@ -24,12 +24,12 @@ def _reco():
 
 
 @st.cache_data(show_spinner="Scoring serum recoverability…")
-def _conf_df():
+def _conf_df(_ck):
     return S.confidence_recoverability(get_bridge(), S.load_recoverability())
 
 
 @st.cache_data(show_spinner=False)
-def _heatmap(analytes):
+def _heatmap(_ck, analytes):
     mat, themes = S.theme_delta_matrix(get_bridge(), list(analytes))
     return mat, themes
 
@@ -172,14 +172,14 @@ def _success_vs_failure(b):
     st.markdown("### D · Success vs failure — and the confidence limitation")
     ex = ["hypoxanthine", "xanthine", "guanine", "ergothioneine", "ascorbate",
           "acetoacetate", "adenine", "phenylalanine", "lactate", "glucose"]
-    mat, themes = _heatmap(tuple(ex))
+    mat, themes = _heatmap(cache_key(), tuple(ex))
     C.figure(F.recoverability_heatmap(ex, mat, themes,
                                       title="ΔBSV (spiked − baseline) · strong (top) → failing (bottom)"),
              cap="Signed theme change per analyte. Strong adsorbers (top) show coherent, "
                  "analyte-appropriate moves; failing analytes (bottom) show diffuse, "
                  "matrix-driven change.")
     st.markdown("#### The current confidence limitation")
-    C.figure(F.confidence_limitation(_conf_df()),
+    C.figure(F.confidence_limitation(_conf_df(cache_key())),
              cap="Engine confidence vs identity recovery across all 53 analytes.",
              interp="Confidence is essentially FLAT across the recoverability range (strong-tier "
                      "mean ≈ poor-tier mean). Confidence tracks domain support and spectrum "

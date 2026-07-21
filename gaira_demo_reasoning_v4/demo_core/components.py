@@ -75,6 +75,26 @@ def provenance_footer(stats):
         f'it does not modify it.</div>', unsafe_allow_html=True)
 
 
+def debug_panel(bridge, coord, dataset_id, extra=None):
+    """Developer/debug view (hidden unless enabled in the sidebar): the selected data
+    identifier, inference hash, BSV/MSS/component vectors and cache key (Part 11)."""
+    if not st.session_state.get("_debug"):
+        return
+    from .engine_bridge import cache_key, inference_hash
+    import numpy as np
+    out, acts = bridge.bsv_and_mss(coord)
+    with st.expander("🔧 debug — inference identity & vectors", expanded=False):
+        st.markdown(f"- dataset: `{dataset_id}`\n- inference hash: `{inference_hash(coord)}`\n"
+                    f"- cache key: `{cache_key()}`")
+        if extra:
+            st.markdown("\n".join(f"- {k}: `{v}`" for k, v in extra.items()))
+        st.markdown(f"- OOD `{out.bsv.ood_score:.3f}` · overall_conf "
+                    f"`{out.bsv.overall_confidence:.3f}`")
+        st.write("component_coord (24):", np.round(out.bsv.component_coord, 4).tolist())
+        st.write("BSV composition:", {k: round(v, 4) for k, v in out.bsv.composition.items()})
+        st.write("MSS composition:", {a.id: round(a.composition, 4) for a in acts})
+
+
 def goto(label):
     """Request a jump to another page (consumed by app.py before the nav radio)."""
     st.session_state["_pending_nav"] = label

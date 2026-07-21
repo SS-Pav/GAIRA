@@ -57,6 +57,8 @@ def main():
                           label_visibility="collapsed")
         st.session_state["_page"] = choice
         st.markdown("---")
+        st.checkbox("Developer mode", key="_debug",
+                    help="Show inference hashes, BSV/MSS vectors and cache keys.")
         st.caption(f"atlas `{bridge.eng.atlas.meta['fingerprint'][:10]}…` · frozen · deterministic")
     dict(PAGES)[choice].render(bridge)
 

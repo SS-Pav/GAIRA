@@ -12,14 +12,13 @@ import numpy as np
 import streamlit as st
 
 from .. import components as C, figures as F, data as D, calibration as CAL
-from ..engine_bridge import get_bridge
-
-MOTIF_NAMES = None  # filled lazily
+from ..engine_bridge import get_bridge, cache_key
 
 
-# ── cached heavy prep (numpy-only outputs; safe for st.cache_data) ──
+# ── cached heavy prep (numpy-only outputs; safe for st.cache_data).
+# The leading `_ck` (cache_key()) makes every frozen-version change invalidate the cache. ──
 @st.cache_data(show_spinner="Projecting the dose ladder…")
-def _prep_dose(cal_key, method):
+def _prep_dose(_ck, cal_key, method):
     b = get_bridge()
     cal = D.calibration(cal_key)
     s = CAL.build_dose_series(cal, method=method)
@@ -51,7 +50,7 @@ def _prep_dose(cal_key, method):
 
 
 @st.cache_data(show_spinner=False)
-def _prep_uricase():
+def _prep_uricase(_ck):
     b = get_bridge()
     cond = CAL.uricase_conditions(b)
     before, after = cond["spiked"], cond["spiked+uricase"]
@@ -78,7 +77,7 @@ def _names(b):
 
 # ── the reusable addition-study workflow (adenine / ergothioneine) ──
 def _addition_study(b, cal, method, mechanism_note):
-    P = _prep_dose(cal.key, method)
+    P = _prep_dose(cache_key(), cal.key, method)
     levels = P["levels"]; names = _names(b)
 
     st.markdown("##### 1 · Experimental setup")
@@ -100,6 +99,8 @@ def _addition_study(b, cal, method, mechanism_note):
                  "components → MSS motifs → BSV → radar, computed live by the frozen engine.",
              interp="As you raise the dose, watch the target motif strengthen and the radar move "
                      "toward the expected biochemical system.")
+    C.debug_panel(b, P["mean_coord"][idx], f"calibration:{cal.key}",
+                  extra={"dose_uM": f"{levels[idx]:.2f}", "n_doses": len(levels)})
 
     c1, c2 = st.columns(2, gap="large")
     with c1:
@@ -251,7 +252,7 @@ def _ergothioneine(b):
 
 
 def _uricase(b):
-    U = _prep_uricase(); names = _names(b)
+    U = _prep_uricase(cache_key()); names = _names(b)
     st.markdown('<div class="gaira-card"><b>Uricase depletion — biochemical subtraction.</b> '
                 'Uricase enzymatically removes urate from spiked serum. This is a knock-OUT, not an '
                 'addition: the read-out is what <i>decreases</i>. The difference isolates '

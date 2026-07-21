@@ -73,6 +73,9 @@ def _study(art, bridge):
         st.markdown(f'<div class="gaira-caveat">{cav}</div>', unsafe_allow_html=True)
     st.write("")
 
+    C.debug_panel(bridge, np.array(art["records"][0]["coord"]), art["dataset_id"],
+                  extra={"n_units": art["n_units"], "aggregation": art["aggregation"]})
+
     # 2 · data-quality / OOD
     C.figure(F.group_quality(art),
              cap="OOD, confidence and matrix-share per group — the data-quality context for every "
