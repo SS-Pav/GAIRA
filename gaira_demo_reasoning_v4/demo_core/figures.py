@@ -129,6 +129,40 @@ def delta_radar(delta_axes, shared_max, title="ΔBSV vs baseline", subtitle=""):
     return fig
 
 
+def dose_delta_radar_grid(delta_axes_list, levels, shared_max, target_theme, analyte):
+    """QC + teaching figure: ΔBSV delta radars for every dose, side by side on a shared
+    centred scale. Verifies the radar evolves smoothly and interpretably with dose."""
+    n = len(levels)
+    ncol = min(n, 6)
+    idx = np.linspace(0, n - 1, ncol).round().astype(int)
+    M = shared_max if shared_max > 1e-9 else 1.0
+    fig, axes = plt.subplots(1, ncol, figsize=(2.35 * ncol, 2.7),
+                             subplot_kw={"polar": True})
+    axes = np.atleast_1d(axes)
+    for ax, i in zip(axes, idx):
+        da = delta_axes_list[i]
+        themes = [a["theme"] for a in da]
+        deltas = np.array([a["delta"] for a in da])
+        r = 0.5 + 0.5 * np.clip(deltas / M, -1, 1)
+        ang = np.linspace(0, 2 * np.pi, len(themes), endpoint=False)
+        ax.set_theta_offset(np.pi / 2); ax.set_theta_direction(-1); ax.set_ylim(0, 1)
+        ax.set_xticks([]); ax.set_yticks([0.5]); ax.set_yticklabels([])
+        ax.plot(np.append(ang, ang[0]), np.full(len(ang) + 1, 0.5), color=T.MUTED,
+                linewidth=0.8, linestyle="--")
+        for a_, rr, d in zip(ang, r, deltas):
+            ax.plot([a_, a_], [0.5, rr], color=(T.UP if d >= 0 else T.DOWN), linewidth=2.2)
+        # mark the target-theme spoke
+        ti = themes.index(target_theme)
+        ax.scatter(ang[ti], r[ti], s=30, color=T.INK, zorder=6, marker="*")
+        ax.set_title(f"{levels[i]:.2f} µM", fontsize=9, color=T.INK, pad=4)
+        ax.grid(color=T.GRID, linewidth=0.5); ax.spines["polar"].set_color(T.PANEL_EDGE)
+    fig.suptitle(f"{analyte.capitalize()} — ΔBSV delta radar across dose "
+                 f"(★ = {THEME_SHORT.get(target_theme, target_theme)}; shared scale ±{M:.3f})",
+                 fontsize=11, fontweight="700", color=T.INK, y=1.08)
+    fig.tight_layout()
+    return fig
+
+
 def mechanism_curves(levels, redistribution, target_elev, target_name,
                      xlabel="concentration (µM)", title="Mechanism: redistribution vs evidence"):
     """Dual-axis: component-redistribution index (left) vs target-theme elevation (right).

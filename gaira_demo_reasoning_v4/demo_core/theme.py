@@ -9,8 +9,8 @@ from __future__ import annotations
 
 # ── ink & surfaces (light "paper" theme) ──
 INK = "#1b2430"          # primary text
-MUTED = "#586173"        # secondary text
-FAINT = "#93a0b2"        # captions / de-emphasis
+MUTED = "#4d5766"        # secondary text (AA on white)
+FAINT = "#667281"        # captions / de-emphasis (AA on white, was too light)
 SURFACE = "#ffffff"
 PANEL = "#f5f7fa"
 PANEL_EDGE = "#e4e9f0"
@@ -86,6 +86,19 @@ hr {{ border: none; border-top: 1px solid {PANEL_EDGE}; margin: 1.4rem 0; }}
     letter-spacing: 0.05em; }}
 .gaira-prov {{ color: {FAINT}; font-size: 0.78rem; font-family: ui-monospace, monospace;
     border-top: 1px solid {PANEL_EDGE}; padding-top: 0.7rem; margin-top: 2rem; }}
-div[data-testid="stMetricValue"] {{ color: {INK}; }}
+
+/* contrast-safety: pin dark text on white for native widgets regardless of the
+   viewer's Streamlit base theme (prevents light-text-on-light-panel invisibility) */
+div[data-testid="stMetricValue"], div[data-testid="stMetricLabel"] {{ color: {INK} !important; }}
+.stApp, .stMarkdown, [data-testid="stMarkdownContainer"] {{ color: {INK}; }}
+[data-testid="stTable"] td, [data-testid="stTable"] th,
+[data-testid="stDataFrame"] {{ color: {INK} !important; }}
+.stRadio label, .stSelectbox label, .stMultiSelect label, .stCheckbox label,
+.stSlider label, .stSelectSlider label {{ color: {INK} !important; }}
+.stTabs [data-baseweb="tab"] {{ color: {MUTED}; }}
+.stTabs [aria-selected="true"] {{ color: {PRIMARY}; }}
+[data-testid="stSidebar"] {{ background: {PANEL}; }}
+[data-testid="stSidebar"] * {{ color: {INK}; }}
+code {{ color: {SECONDARY}; }}
 </style>
 """

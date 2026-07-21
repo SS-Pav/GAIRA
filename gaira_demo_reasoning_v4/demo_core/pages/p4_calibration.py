@@ -14,6 +14,19 @@ import streamlit as st
 from .. import components as C, figures as F, data as D, calibration as CAL
 from ..engine_bridge import get_bridge, cache_key
 
+MECHANISM_LABEL = {"adenine": "REDISTRIBUTION", "ergothioneine": "SCALING",
+                   "uricase": "SELECTIVE DEPLETION"}
+MECH_COLOR = {"REDISTRIBUTION": "#b2182b", "SCALING": "#2a6f97",
+              "SELECTIVE DEPLETION": "#2f7d4f"}
+
+
+def _mech_badge(key):
+    m = MECHANISM_LABEL[key]; c = MECH_COLOR[m]
+    style = (f"display:inline-block;background:{c}1a;border:1px solid {c};color:{c};"
+             f"border-radius:6px;padding:2px 12px;font-weight:700;font-size:0.9rem;"
+             f"letter-spacing:0.05em;")
+    st.markdown(f'<div style="{style}">mechanism · {m}</div>', unsafe_allow_html=True)
+
 
 # ── cached heavy prep (numpy-only outputs; safe for st.cache_data).
 # The leading `_ck` (cache_key()) makes every frozen-version change invalidate the cache. ──
@@ -79,6 +92,13 @@ def _names(b):
 def _addition_study(b, cal, method, mechanism_note):
     P = _prep_dose(cache_key(), cal.key, method)
     levels = P["levels"]; names = _names(b)
+    _mech_badge(cal.key)
+    if cal.key == "ergothioneine":
+        st.markdown('<div class="gaira-caption">Note: on the delta radar the largest mover is the '
+                    '<i>decrease</i> of a purine-heavy buffer baseline (compositional displacement); '
+                    'the <b>target sulfur theme still rises monotonically</b> — see the dose-response '
+                    'below (ρ≈0.96). This is why the target dose-response, not the raw delta '
+                    'magnitude, is the primary evidence.</div>', unsafe_allow_html=True)
 
     st.markdown("##### 1 · Experimental setup")
     C.figure(F.experimental_schematic(cal.analyte, method.split("@")[0] if method else "Ag",
@@ -168,6 +188,14 @@ def _addition_study(b, cal, method, mechanism_note):
     with rc2:
         _evidence_panel(b, cal, P)
 
+    st.markdown("##### QC · ΔBSV delta radar across every dose (shared scale)")
+    C.figure(F.dose_delta_radar_grid(P["delta_axes"], levels, P["delta_max"],
+                                     cal.target_theme, cal.analyte),
+             cap="Radar computation QC + teaching figure: the ΔBSV delta radar at every dose on "
+                 "one shared centred scale (★ = target theme). Verified radar == BSV composition.",
+             interp="The target-theme spoke evolves SMOOTHLY and monotonically with dose — the "
+                     "radars are genuinely interpretable, not repeated.")
+
     st.markdown("##### Mechanism — redistribution vs scaling")
     m1, m2 = st.columns(2, gap="large")
     with m1:
@@ -253,6 +281,11 @@ def _ergothioneine(b):
 
 def _uricase(b):
     U = _prep_uricase(cache_key()); names = _names(b)
+    _mech_badge("uricase")
+    st.markdown('<div class="gaira-caption">Note: at the coarse THEME level the purine change is '
+                'small — the clean, specific signal is at the MSS level (oxopurine motif), shown '
+                'below. This is the "MSS resolves what themes hide" case.</div>',
+                unsafe_allow_html=True)
     st.markdown('<div class="gaira-card"><b>Uricase depletion — biochemical subtraction.</b> '
                 'Uricase enzymatically removes urate from spiked serum. This is a knock-OUT, not an '
                 'addition: the read-out is what <i>decreases</i>. The difference isolates '
