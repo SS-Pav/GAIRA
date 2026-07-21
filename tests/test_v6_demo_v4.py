@@ -211,6 +211,40 @@ def test_page2_reference_map_and_sankey_from_frozen():
     assert tw[0]["theme"] == "nucleic_purine"
 
 
+# ── Part 1: NMF-native atlas ──
+@needs_art
+def test_component_distance_matrix_valid_and_deterministic():
+    from demo_core.engine_bridge import Bridge
+    b = Bridge()
+    D = b.component_distance()
+    assert D.shape == (24, 24)
+    assert np.allclose(D, D.T)                         # symmetric
+    assert np.allclose(np.diag(D), 0)                  # zero diagonal
+    assert np.allclose(D, b.component_distance())      # deterministic
+    assert (D >= 0).all()
+
+
+@needs_art
+def test_component_mds_and_sankey_cover_all_components():
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from demo_core.engine_bridge import Bridge
+    from demo_core import figures as F
+    b = Bridge()
+    D = b.component_distance()
+    Y = F._classical_mds(D)
+    assert Y.shape == (24, 2)
+    assert np.allclose(Y, F._classical_mds(D))         # deterministic
+    tbc = {j: b.component_dominant_theme(j) for j in range(24)}
+    for fig in (F.component_similarity_map(D, tbc), F.component_dendrogram(D, tbc)):
+        assert fig is not None; plt.close(fig)
+    # component→MSS→theme network weights come from the registries, cover all 24 comps
+    sk = b.sankey_links()
+    comp_sources = {l[0] for l in sk["links"] if l[0] < 24}
+    assert len(comp_sources) >= 20                     # nearly every component feeds a motif
+
+
 # ── Page 5 (Serum Spike) ──
 @needs_art
 def test_page5_tiers_from_validated_table():

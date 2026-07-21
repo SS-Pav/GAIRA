@@ -224,6 +224,63 @@ def basis_spectrum(grid, spectrum, bands=None, title="Basis spectrum"):
     return fig
 
 
+# ── NMF-native component views (Part 1) ──
+def _classical_mds(D):
+    """Deterministic classical (Torgerson) MDS to 2-D from a distance matrix."""
+    n = D.shape[0]
+    J = np.eye(n) - np.ones((n, n)) / n
+    B = -0.5 * J @ (D ** 2) @ J
+    w, V = np.linalg.eigh(B)
+    order = np.argsort(-w)[:2]
+    L = np.sqrt(np.clip(w[order], 0, None))
+    Y = V[:, order] * L
+    for i in range(2):                                   # deterministic sign
+        if Y[np.argmax(np.abs(Y[:, i])), i] < 0:
+            Y[:, i] = -Y[:, i]
+    return Y
+
+
+def component_similarity_map(D, theme_by_comp, title="NMF component similarity map (MDS)"):
+    """2-D map of the 24 components (classical MDS on basis-spectrum cosine distance),
+    coloured by dominant theme. Visualises the learned representation — NOT inference."""
+    Y = _classical_mds(D)
+    fig, ax = plt.subplots(figsize=(7.2, 6.0))
+    themes = sorted(set(theme_by_comp.values()))
+    for t in themes:
+        idx = [j for j in range(len(D)) if theme_by_comp[j] == t]
+        ax.scatter(Y[idx, 0], Y[idx, 1], s=90, color=THEME_TINT_HEX(t), alpha=0.9,
+                   edgecolor="white", linewidth=0.8, label=THEME_SHORT.get(t, t), zorder=3)
+    for j in range(len(D)):
+        ax.annotate(f"c{j}", (Y[j, 0], Y[j, 1]), fontsize=7.6, color=T.INK, ha="center",
+                    va="center", zorder=4)
+    ax.set_xticks([]); ax.set_yticks([])
+    ax.set_xlabel("MDS-1"); ax.set_ylabel("MDS-2")
+    ax.set_title(title, fontsize=12.0, pad=8)
+    ax.legend(fontsize=7.6, loc="upper left", bbox_to_anchor=(1.0, 1.0), title="dominant theme")
+    fig.tight_layout()
+    return fig
+
+
+def component_dendrogram(D, theme_by_comp, title="NMF component hierarchy (basis-spectrum similarity)"):
+    from scipy.cluster.hierarchy import linkage, dendrogram
+    from scipy.spatial.distance import squareform
+    Z = linkage(squareform(D, checks=False), method="average")
+    fig, ax = plt.subplots(figsize=(7.8, 4.2))
+    labels = [f"c{j}·{THEME_SHORT.get(theme_by_comp[j], '')[:6]}" for j in range(len(D))]
+    dendrogram(Z, labels=labels, ax=ax, color_threshold=0.6 * D.max(),
+               above_threshold_color=T.FAINT, leaf_font_size=7.5)
+    ax.set_title(title, fontsize=11.5, pad=8); ax.set_ylabel("cosine distance")
+    ax.grid(axis="x", visible=False)
+    for lbl in ax.get_xticklabels():
+        lbl.set_rotation(90)
+    fig.tight_layout()
+    return fig
+
+
+def THEME_TINT_HEX(theme):
+    return T.THEME_TINT.get(theme, "#9aa4b2")
+
+
 # ── corpus source / excitation breakdown ──
 def corpus_breakdown(sources, excitations, title="Reference corpus composition"):
     fig, (a1, a2) = plt.subplots(1, 2, figsize=(7.8, 3.0))

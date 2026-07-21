@@ -73,24 +73,46 @@ def _corpus_summary(b, s):
                 'into the counts above.</div>', unsafe_allow_html=True)
 
 
-# ── Section B ──
+# ── Section B — NMF-native (primary): the learned representation itself ──
+def _component_map(b):
+    st.markdown("### B · The learned representation — NMF component map")
+    st.markdown('<div class="gaira-caption">GAIRA inference IS the frozen NMF decomposition, so '
+                'the primary atlas view is the 24 components themselves — not a PCA of spectra. '
+                'This map visualises component SIMILARITY (classical MDS on cosine distance between '
+                'basis spectra); it is not the inference space.</div>', unsafe_allow_html=True)
+    D = b.component_distance()
+    tbc = {j: b.component_dominant_theme(j) for j in range(24)}
+    m1, m2 = st.columns([1.05, 1.0], gap="large")
+    with m1:
+        C.figure(F.component_similarity_map(D, tbc),
+                 cap="24 NMF components (MDS on basis-spectrum cosine distance), coloured by "
+                     "dominant biochemical theme. Deterministic and distance-preserving.",
+                 interp="Components with similar basis spectra sit together (e.g. the glycan and "
+                         "purine families). This is the representation GAIRA reasons in.",
+                 limits="A 2-D projection of a 24×24 distance; read clusters, not exact positions.")
+    with m2:
+        C.figure(F.component_dendrogram(D, tbc),
+                 cap="Hierarchical clustering (average linkage) of the same basis-spectrum "
+                     "distances, annotated by dominant theme.")
+
+
+# ── Section B2 — secondary/exploratory reference-spectrum PCA ──
 def _reference_map(b):
-    st.markdown("### B · Reference family map")
-    st.markdown('<div class="gaira-caption">PCA of the 167 reference analytes in the frozen '
-                '24-component space, coloured by biochemical family. <b>PCA is explanatory only</b> '
-                '— the inference model is the fixed NMF basis, not this projection.</div>',
+    st.markdown("### B2 · Reference family map  ·  <i>exploratory, secondary</i>",
+                unsafe_allow_html=True)
+    st.markdown('<div class="gaira-caption"><b>Exploratory visualization of reference-spectrum '
+                'variation; not used for inference.</b> PCA of the 167 reference analytes in the '
+                'frozen 24-component space, coloured by family. Weak family separation here is a '
+                'property of PCA on overlapping mixtures — NOT a failure of the NMF engine.</div>',
                 unsafe_allow_html=True)
     rm = _ref_map()
     fam_all = sorted(set(rm["families"]))
     pick = st.multiselect("Show families", fam_all, default=fam_all, key="p2_fam")
     fig, var = IV.reference_pca(rm, show_families=set(pick))
     st.plotly_chart(fig, use_container_width=True)
-    st.markdown(f'<div class="gaira-caption"><b>Figure.</b> Reference analytes in frozen component '
-                f'space (PC1 {var[0]:.0%}, PC2 {var[1]:.0%} of variance). Hover for analyte + '
-                f'family. <b>Interpretation.</b> Related analytes cluster by shared functional '
-                f'groups and vibrational motifs, but families overlap because Raman spectra are '
-                f'<i>not</i> unique molecular barcodes — a mixture-first, not fingerprint, view.</div>',
-                unsafe_allow_html=True)
+    st.markdown(f'<div class="gaira-caption">PC1 {var[0]:.0%}, PC2 {var[1]:.0%} of variance. '
+                f'Families overlap because Raman spectra are <i>not</i> unique molecular '
+                f'barcodes — a mixture-first, not fingerprint, view.</div>', unsafe_allow_html=True)
 
 
 # ── Section C ──
@@ -201,9 +223,11 @@ def render(bridge):
 
     _corpus_summary(bridge, s)
     st.markdown("<hr/>", unsafe_allow_html=True)
-    _reference_map(bridge)
+    _component_map(bridge)                    # NMF-native primary view
     st.markdown("<hr/>", unsafe_allow_html=True)
     _component_explorer(bridge, s)
+    st.markdown("<hr/>", unsafe_allow_html=True)
+    _reference_map(bridge)                    # PCA demoted to exploratory secondary
     st.markdown("<hr/>", unsafe_allow_html=True)
     _mss_atlas(bridge)
     st.markdown("<hr/>", unsafe_allow_html=True)

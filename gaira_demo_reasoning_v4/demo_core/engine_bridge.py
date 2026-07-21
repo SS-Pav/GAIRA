@@ -106,6 +106,25 @@ class Bridge:
                 rows.append({"theme": t, "weight": w, "evidence": ev.get("evidence", {})})
         return sorted(rows, key=lambda r: -r["weight"])[:top]
 
+    def component_distance(self):
+        """Deterministic 24×24 cosine DISTANCE between the frozen NMF basis spectra —
+        the learned representation itself. Symmetric, zero diagonal."""
+        W, _ = self.reg.basis()
+        Wn = W / (np.linalg.norm(W, axis=1, keepdims=True) + 1e-12)
+        D = 1.0 - Wn @ Wn.T
+        D = 0.5 * (D + D.T)
+        np.fill_diagonal(D, 0.0)
+        return np.clip(D, 0, None)
+
+    def component_dominant_theme(self, j):
+        """The biochemical theme with the largest component→theme weight for c_j."""
+        ws = [(t, float(self.onto.W[j, self.onto.theme_index(t)])) for t in self.bio_themes]
+        return max(ws, key=lambda x: x[1])[0]
+
+    def component_top_motif(self, j):
+        lm = self.component_linked_motifs(j)
+        return lm[0]["name"] if lm else "—"
+
     def reference_map(self):
         """167 reference analytes as frozen L1 coordinates + biochemical family.
         Used by the Page-2 reference PCA (explanatory only, not the inference model)."""
