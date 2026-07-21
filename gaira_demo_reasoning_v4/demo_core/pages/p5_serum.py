@@ -6,7 +6,7 @@ from __future__ import annotations
 import numpy as np
 import streamlit as st
 
-from .. import components as C, figures as F, serum as S
+from .. import components as C, figures as F, serum as S, metrics as MET
 from ..engine_bridge import get_bridge
 
 TIER_LABELS = {"strong": "Strongly recoverable", "partial": "Partially / inconsistently recoverable",
@@ -108,13 +108,28 @@ def _analyte_detail(b, analyte, df):
     if ba is None:
         C.caveats([f"No spiked-serum spectra for {analyte} in the committed projection."]); return
     row = df[df.analyte == analyte].iloc[0]
+    b = get_bridge()
+    bsv = b.infer(ba["after_coord"], domain="serum").bsv
+    st.markdown("**Recoverability terms** (separate, not one opaque number)")
     C.stat_row([
-        (f"{row.cos_spike_vs_pureSERS:+.2f}", "identity recovery (cos)"),
-        (f"{row.replicate_direction_cos:.2f}", "replicate consistency"),
-        (f"{ba['ood']:.2f}", "OOD score"),
-        (f"{ba['confidence']:.2f}", "confidence"),
-        (f"{ba['background']:.2f}", "matrix share"),
+        (f"{row.cos_spike_vs_pureSERS:+.2f}", "direction agreement*"),
+        (f"{row.spike_displacement_norm:.3f}", "detectability"),
+        (f"{row.replicate_direction_cos:.2f}", "reproducibility"),
+        (f"{ba['background']:.2f}", "matrix dominance"),
+        (f"{row.spike_conc_uM:g} µM", "spike concentration"),
     ])
+    st.markdown("**Interpretation confidence — separated (Part 5)**")
+    C.stat_row([
+        (f"{MET.atlas_support(bsv):.2f}", "atlas support (1−OOD)"),
+        (f"{ba['ood']:.2f}", "OOD"),
+        (f"{MET.overall_theme_specificity(b.eng.builder, bsv):.2f}", "theme specificity"),
+        (f"{MET.replicate_reliability(row.replicate_direction_cos):.2f}", "replicate reliability"),
+        (f"{row.cos_spike_vs_pureSERS:+.2f}", "matrix recoverability*"),
+    ])
+    C.caption("*direction agreement / matrix recoverability = cos(serum-spike, pure-SERS "
+              "fingerprint), the validated primary metric that defines the tier. Atlas support and "
+              "theme specificity measure ATLAS fit, not surface observability — they are shown "
+              "separately, never merged into one 'confidence'.")
     c1, c2 = st.columns(2, gap="large")
     with c1:
         gb, sb = b.reconstruct(ba["before_coord"]); _, sa = b.reconstruct(ba["after_coord"])
@@ -174,6 +189,57 @@ def _success_vs_failure(b):
                      "implemented upgrade (see BSV Validation).")
 
 
+def _pure_vs_serum_audit(b):
+    st.markdown("### C+ · Pure-vs-serum audit — adenine & ergothioneine")
+    st.markdown('<div class="gaira-caption">Pure-analyte dose response and serum-spike are '
+                '<b>different regimes</b>. This audit checks the data mapping and cross-compares '
+                'them for the two calibrants.</div>', unsafe_allow_html=True)
+    cols = st.columns(2, gap="large")
+    for col, analyte in zip(cols, ["adenine", "ergothioneine"]):
+        pv = S.pure_vs_serum(b, analyte)
+        with col:
+            st.markdown(f"**{analyte.capitalize()}** → "
+                        f"{F.THEME_SHORT.get(pv['target_theme'], pv['target_theme'])}")
+            st.markdown(
+                f"- PURE: {pv['pure_target_lo']:.3f} → {pv['pure_target_hi']:.3f} over "
+                f"{pv['pure_conc_range'][0]:g}–{pv['pure_conc_range'][1]:g} µM (slope "
+                f"{pv['pure_slope']:+.4f}) — **strong**\n"
+                f"- SERUM: spiked at **{pv['serum_conc_uM']:g} µM**, direction agreement "
+                f"{pv['serum_direction_agreement']:+.2f} → tier **{pv['serum_tier']}**")
+    st.markdown('<div class="gaira-caveat"><b>Adenine audit result.</b> Adenine is strong in pure '
+                'but poor in serum — and its serum spike was only <b>0.4 µM</b>, 12–25× lower than '
+                'the recoverable analytes (ergothioneine 5 µM, hypoxanthine 10 µM, xanthine 50 µM). '
+                'The mapping is correct (adenine is not confused with hypoxanthine/urate). The poor '
+                'serum result is <b>consistent with the low spike concentration plus surface '
+                'competition / matrix masking</b> — not proof of poor adsorption. Contrast '
+                'phenylalanine (spiked at 78 µM yet still poor): a genuine adsorption/matrix '
+                'failure, a different mode.</div>', unsafe_allow_html=True)
+
+
+def _terms_and_ablation(b):
+    st.markdown("### C++ · Recoverability terms & ablation")
+    df = _reco()
+    terms = S.recoverability_terms(b, df)
+    st.markdown('<div class="gaira-caption">The tier is defined by the <b>validated primary</b> '
+                'metric (direction agreement = cos vs pure-SERS). The other terms are shown '
+                'separately, never merged with invented weights.</div>', unsafe_allow_html=True)
+    show = terms.sort_values("direction_agreement", ascending=False)
+    st.dataframe({"analyte": show.analyte, "tier": show.tier, "conc_µM": show.spike_conc_uM,
+                  "direction_agreement*": show.direction_agreement.round(3),
+                  "detectability": show.detectability.round(3),
+                  "reproducibility": show.reproducibility.round(3),
+                  "matrix_dominance": show.matrix_dominance.round(3)},
+                 use_container_width=True, hide_index=True, height=280)
+    abl = S.ablation_table(terms)
+    st.markdown("**Ablation — top-5 'recoverable' set by each single term:**")
+    for k, v in abl.items():
+        st.markdown(f"- by **{k}**: {', '.join(v)}")
+    st.markdown('<div class="gaira-caption">Ranking by <i>reproducibility</i> alone would rank '
+                'phenylalanine highly — it moves consistently, but in the WRONG direction. This is '
+                'why direction agreement (not detectability or reproducibility) is the meaningful '
+                'recoverability criterion.</div>', unsafe_allow_html=True)
+
+
 def render(bridge):
     s = bridge.platform_stats()
     C.page_header(
@@ -191,6 +257,10 @@ def render(bridge):
     _dataset_summary()
     st.markdown("<hr/>", unsafe_allow_html=True)
     _tiers(bridge)
+    st.markdown("<hr/>", unsafe_allow_html=True)
+    _pure_vs_serum_audit(bridge)
+    st.markdown("<hr/>", unsafe_allow_html=True)
+    _terms_and_ablation(bridge)
     st.markdown("<hr/>", unsafe_allow_html=True)
     _success_vs_failure(bridge)
     st.markdown("<hr/>", unsafe_allow_html=True)

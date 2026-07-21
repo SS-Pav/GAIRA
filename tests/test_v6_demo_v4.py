@@ -239,6 +239,52 @@ def test_page5_failure_is_not_absence_and_confidence_limitation():
     assert gap < 0.05
 
 
+# ── Part 4/5: serum audit + confidence separation ──
+@needs_art
+def test_serum_adenine_concentration_audit():
+    """Adenine's poor serum recovery is a low-concentration case, not a mapping bug:
+    its serum spike is far lower than the recoverable analytes'."""
+    from demo_core.engine_bridge import Bridge
+    from demo_core import serum as S
+    b = Bridge()
+    ad = S.pure_vs_serum(b, "adenine")
+    assert ad["serum_tier"] == "poor"
+    assert ad["pure_target_hi"] > ad["pure_target_lo"]            # strong in pure
+    assert ad["serum_conc_uM"] <= 1.0                            # spiked very low
+    erg = S.pure_vs_serum(b, "ergothioneine")
+    assert erg["serum_conc_uM"] > ad["serum_conc_uM"]           # ergo spiked higher, recovers
+    assert erg["serum_tier"] == "strong"
+
+
+@needs_art
+def test_serum_recoverability_terms_are_separated():
+    from demo_core.engine_bridge import Bridge
+    from demo_core import serum as S
+    b = Bridge()
+    terms = S.recoverability_terms(b, S.load_recoverability())
+    for col in ("direction_agreement", "detectability", "reproducibility", "matrix_dominance"):
+        assert col in terms.columns
+    abl = S.ablation_table(terms)
+    # reproducibility alone misranks: a consistent-but-wrong-direction analyte scores high
+    assert "phenylalanine" in abl["reproducibility"]
+    assert "phenylalanine" not in abl["direction_agreement"]
+
+
+@needs_art
+def test_confidence_metrics_are_separate_and_recoverability_absent_for_unknown():
+    from demo_core.engine_bridge import Bridge
+    from demo_core import metrics as M
+    b = Bridge()
+    bsv = b.infer(np.full(24, 1.0 / 24), domain="ev").bsv
+    a = M.atlas_support(bsv); sp = M.overall_theme_specificity(b.eng.builder, bsv)
+    assert 0 <= a <= 1 and 0 <= sp <= 1
+    # for an unknown spectrum with no matrix-spike evidence, recoverability is None and
+    # the composite does NOT treat it as a positive score
+    comp = M.composite_interpretation(a, sp, None)
+    assert comp["recoverability_known"] is False
+    assert "matrix_recoverability" not in comp["terms"]
+
+
 # ── Page 6 (Biological) ──
 @needs_art
 def test_page6_artifacts_are_genuine_v6_not_legacy():

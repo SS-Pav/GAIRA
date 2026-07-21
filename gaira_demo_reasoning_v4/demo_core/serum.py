@@ -97,6 +97,64 @@ def theme_delta_matrix(bridge, analytes):
     return np.array(rows), themes
 
 
+def recoverability_terms(bridge, df):
+    """Separate the recoverability evidence into DOCUMENTED terms rather than one
+    opaque number (Part 4B):
+      - direction_agreement = cos(serum-spike, pure-SERS fingerprint)   [validated primary]
+      - detectability       = spike displacement magnitude
+      - reproducibility     = replicate direction consistency
+      - matrix_dominance    = background/matrix share of the spiked spectrum (engine)
+    The tier is defined by the VALIDATED primary (direction_agreement); the other terms
+    are shown alongside, never collapsed with invented weights."""
+    rows = []
+    for _, r in df.iterrows():
+        after = analyte_after(r.analyte)
+        matrix = (bridge.infer(after, domain="serum").bsv.non_biochemical.get("background_matrix", 0.0)
+                  if after is not None else np.nan)
+        rows.append({"analyte": r.analyte, "tier": r.tier, "spike_conc_uM": r.spike_conc_uM,
+                     "direction_agreement": float(r.cos_spike_vs_pureSERS),
+                     "detectability": float(r.spike_displacement_norm),
+                     "reproducibility": float(r.replicate_direction_cos),
+                     "matrix_dominance": float(matrix)})
+    return pd.DataFrame(rows)
+
+
+def ablation_table(terms):
+    """Show how the top-5 'recoverable' set changes if a DIFFERENT single term were the
+    ranking criterion — demonstrates the primary term is the meaningful one."""
+    out = {}
+    for term in ["direction_agreement", "detectability", "reproducibility"]:
+        out[term] = list(terms.sort_values(term, ascending=False).analyte.head(5))
+    return out
+
+
+def pure_vs_serum(bridge, analyte):
+    """Cross-compare pure-analyte dose response with the serum-spike result for one
+    analyte (Part 4C). Returns the pure target-theme slope, the serum spike effect, and
+    — crucially — the concentration in each regime."""
+    from . import calibration as CAL, data as D
+    key = "adenine" if analyte == "adenine" else "ergothioneine" if analyte == "ergothioneine" else None
+    if key is None:
+        return None
+    cal = D.calibration(key)
+    method = CAL.ADENINE_METHOD if key == "adenine" else None
+    s = CAL.build_dose_series(cal, method=method)
+    pure_mean, prl, prs = CAL.theme_series(bridge, s, cal.target_theme)
+    # pure slope of target theme vs dose (per-dose means)
+    slope = float(np.polyfit(s.levels, pure_mean, 1)[0]) if len(s.levels) > 1 else np.nan
+    df = load_recoverability()
+    r = df[df.analyte == analyte]
+    serum_conc = float(r.spike_conc_uM.iloc[0]) if len(r) else np.nan
+    return {
+        "analyte": analyte, "target_theme": cal.target_theme,
+        "pure_conc_range": (float(s.levels.min()), float(s.levels.max())),
+        "pure_slope": slope, "pure_target_lo": float(pure_mean[0]), "pure_target_hi": float(pure_mean[-1]),
+        "serum_conc_uM": serum_conc,
+        "serum_direction_agreement": float(r.cos_spike_vs_pureSERS.iloc[0]) if len(r) else np.nan,
+        "serum_tier": r.tier.iloc[0] if len(r) else "n/a",
+    }
+
+
 def confidence_recoverability(bridge, df):
     """Per-analyte (cos_spike_vs_pureSERS, engine confidence, OOD) — the limitation view."""
     out = []
