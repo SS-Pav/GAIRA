@@ -812,6 +812,75 @@ def group_quality(art, title="Data-quality panel"):
     return fig
 
 
+def sample_heatmap(Z, groups, labels, title="Sample-level BSV heatmap (z-scored, display only)"):
+    """Rows = samples (grouped), cols = themes/motifs, z-scored for VISUALIZATION."""
+    groups = np.array(groups)
+    order = np.argsort(groups, kind="stable")
+    Zo = Z[order]; go = groups[order]
+    uniq = list(dict.fromkeys(go))
+    gcol = {g: GROUP_COLORS[i % len(GROUP_COLORS)] for i, g in enumerate(uniq)}
+    fig, (axg, ax) = plt.subplots(1, 2, figsize=(7.8, max(3.4, 0.045 * len(Zo))),
+                                  gridspec_kw={"width_ratios": [0.03, 1]}, sharey=True)
+    axg.imshow(np.array([[uniq.index(g)] for g in go]), aspect="auto",
+               cmap=plt.matplotlib.colors.ListedColormap([gcol[g] for g in uniq]))
+    axg.set_xticks([]); axg.set_yticks([]); axg.set_ylabel("samples", fontsize=9)
+    vmax = np.abs(Zo).max() or 1.0
+    im = ax.imshow(Zo, aspect="auto", cmap="RdBu_r", vmin=-vmax, vmax=vmax)
+    ax.set_xticks(range(len(labels)))
+    ax.set_xticklabels([THEME_SHORT.get(l, l) for l in labels], rotation=45, ha="right", fontsize=8)
+    ax.set_yticks([])
+    cb = fig.colorbar(im, ax=ax, shrink=0.6); cb.set_label("z (display)", fontsize=8)
+    handles = [plt.Line2D([0], [0], marker="s", color="w", markerfacecolor=gcol[g], markersize=8,
+                          label=g) for g in uniq]
+    ax.legend(handles=handles, fontsize=8, loc="upper right", bbox_to_anchor=(1.35, 1.0))
+    fig.suptitle(title, fontsize=11.0, fontweight="700", y=1.02)
+    fig.tight_layout()
+    return fig
+
+
+def paired_slope(a, b, paired, name, title="Paired change per stratum"):
+    """Longitudinal slope plot: baseline→later per stratum (e.g. Day0→Day2 per dose)."""
+    fig, ax = plt.subplots(figsize=(6.2, 4.2))
+    for i, (s, row) in enumerate(sorted(paired.items())):
+        y0, y1 = row[b], row[a]
+        c = GROUP_COLORS[i % len(GROUP_COLORS)]
+        ax.plot([0, 1], [y0, y1], "-o", color=c, markersize=6, linewidth=1.8, label=s)
+        ax.annotate(s, (1, y1), fontsize=8.5, color=c, xytext=(6, 0), textcoords="offset points",
+                    va="center")
+    ax.set_xticks([0, 1]); ax.set_xticklabels([b, a], fontsize=10)
+    ax.set_ylabel(f"{THEME_SHORT.get(name, name)} composition")
+    ax.set_title(title, fontsize=11.5, pad=8); ax.set_xlim(-0.2, 1.35)
+    ax.legend(fontsize=8, title="stratum", loc="best")
+    fig.tight_layout()
+    return fig
+
+
+def distance_bars(dist, title="Group difference vs biological heterogeneity"):
+    fig, ax = plt.subplots(figsize=(5.6, 2.6))
+    ax.barh(["between-group\ndistance", "within-group\nvariability"],
+            [dist["between_group"], dist["within_group"]],
+            color=[T.UP, T.FAINT], height=0.6)
+    ax.set_title(f"{title}   ·   ratio = {dist['ratio']:.2f}", fontsize=10.5, pad=6)
+    ax.grid(axis="y", visible=False)
+    fig.tight_layout()
+    return fig
+
+
+def balanced_bars(themes, za, zb, a, b, title="Exploratory balanced view (standardized, display only)"):
+    """Standardized per-theme deviation per group — reveals structure a dominant axis
+    would otherwise obscure. Visualization only; canonical BSV unchanged."""
+    y = np.arange(len(themes)); w = 0.4
+    fig, ax = plt.subplots(figsize=(7.0, max(3.0, 0.42 * len(themes))))
+    ax.barh(y - w / 2, za, w, color=T.UP, label=a)
+    ax.barh(y + w / 2, zb, w, color=T.PRIMARY, label=b)
+    ax.axvline(0, color=T.MUTED, linewidth=0.9)
+    ax.set_yticks(y); ax.set_yticklabels([THEME_SHORT.get(t, t) for t in themes], fontsize=9)
+    ax.set_xlabel("standardized theme deviation (z)")
+    ax.set_title(title, fontsize=10.8, pad=8); ax.legend(fontsize=8.5); ax.grid(axis="y", visible=False)
+    fig.tight_layout()
+    return fig
+
+
 def study_centroid_map(sc, title="Cross-study biochemical centroids (BSV space)"):
     fig, ax = plt.subplots(figsize=(7.2, 5.2))
     proj, labels, ood = sc["proj"], sc["labels"], sc["ood"]

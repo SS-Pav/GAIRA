@@ -27,7 +27,13 @@ CONTRAST = {
     "covid_serum_raman": ("COVID", "Healthy"),
     "hcc_serum": ("HCC", "control"),
     "diabetes_plasma_ev_sers": ("Impact", "Strong-D"),
+    "shine_ev_sers": ("D2", "D0"),               # later − earlier (timepoint); strata = dose
+    "small2023_ev": ("c100", "c00"),             # probe-loading effect (characterization only)
 }
+# datasets whose contrast is a technical/probe effect, not biology
+CHARACTERIZATION_ONLY = {"small2023_ev"}
+# datasets with a paired secondary factor (strata) for longitudinal analysis
+PAIRED = {"shine_ev_sers"}
 
 
 def available():
@@ -142,6 +148,78 @@ def pca_2d(X):
         if Vt[i][np.argmax(np.abs(Vt[i]))] < 0:
             Vt[i] = -Vt[i]
     return Xc @ Vt[:2].T, (S[:2] ** 2) / (S ** 2).sum()
+
+
+def strata_values(art):
+    return sorted({r.get("strata") for r in art["records"] if r.get("strata")})
+
+
+def paired_timepoint_theme(art, theme_id):
+    """For a longitudinal dataset (group = timepoint, strata = dose): per-stratum mean
+    theme value at each timepoint. Returns {stratum: {group: mean}} — a paired,
+    stratum-level view (NOT per-subject repeated measures; cohort-level)."""
+    a, b = CONTRAST[art["dataset_id"]]
+    ti = art["theme_ids"].index(theme_id)
+    strata = np.array([r.get("strata") for r in art["records"]])
+    out = {}
+    for s in strata_values(art):
+        row = {}
+        for g in (b, a):                                    # baseline first
+            m = (strata == s) & (art["group"] == g)
+            if m.any():
+                row[g] = float(art["themes_mat"][m][:, ti].mean())
+        if len(row) == 2:
+            out[s] = row
+    return a, b, out
+
+
+def heatmap_matrix(art, matrix_key="themes_mat", max_rows=80, seed=0):
+    """Z-scored (per-theme) sample matrix for a VISUALIZATION heatmap only, with group
+    labels. Subsamples rows for legibility. Z-scoring is for display, never inference."""
+    rng = np.random.default_rng(seed)
+    X = art[matrix_key]; g = art["group"]
+    bio = [i for i, t in enumerate(art["theme_ids"] if matrix_key == "themes_mat" else art["motif_ids"])
+           if t not in ("background_matrix", "unknown_mixed", "colloid_matrix_background")]
+    labels = [(art["theme_ids"] if matrix_key == "themes_mat" else art["motif_ids"])[i] for i in bio]
+    idx = np.arange(len(X))
+    if len(X) > max_rows:                                   # stratified subsample
+        keep = []
+        for grp in np.unique(g):
+            gi = idx[g == grp]
+            keep.extend(rng.choice(gi, min(len(gi), max_rows // len(np.unique(g))), replace=False))
+        idx = np.sort(keep)
+    Z = X[np.ix_(idx, bio)].astype(float)
+    Z = (Z - Z.mean(0)) / (Z.std(0) + 1e-9)
+    return Z, [g[i] for i in idx], labels
+
+
+def distance_summary(art):
+    """Within-group vs between-group BSV distance + effect-to-variability ratio.
+    Answers: are group differences large relative to biological heterogeneity?"""
+    a, b = CONTRAST[art["dataset_id"]]
+    bio = [i for i, t in enumerate(art["theme_ids"])
+           if t not in ("background_matrix", "unknown_mixed")]
+    Xa = art["themes_mat"][art["group"] == a][:, bio]
+    Xb = art["themes_mat"][art["group"] == b][:, bio]
+    within = 0.5 * (np.linalg.norm(Xa - Xa.mean(0), axis=1).mean()
+                    + np.linalg.norm(Xb - Xb.mean(0), axis=1).mean())
+    between = float(np.linalg.norm(Xa.mean(0) - Xb.mean(0)))
+    return {"within_group": float(within), "between_group": between,
+            "ratio": float(between / (within + 1e-9))}
+
+
+def balanced_view(art):
+    """Diabetes-style EXPLORATORY balanced view: standardize each theme's deviation
+    across samples so a single dominant axis (e.g. redox) does not visually obscure the
+    rest. VISUALIZATION ONLY — the canonical BSV is unchanged."""
+    a, b = CONTRAST[art["dataset_id"]]
+    bio = [i for i, t in enumerate(art["theme_ids"])
+           if t not in ("background_matrix", "unknown_mixed")]
+    themes = [art["theme_ids"][i] for i in bio]
+    X = art["themes_mat"][:, bio]
+    Z = (X - X.mean(0)) / (X.std(0) + 1e-9)
+    za = Z[art["group"] == a].mean(0); zb = Z[art["group"] == b].mean(0)
+    return themes, za, zb
 
 
 def study_centroids():

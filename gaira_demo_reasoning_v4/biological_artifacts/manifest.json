@@ -34,6 +34,32 @@
         "Impact": 39,
         "Strong-D": 24
       }
+    },
+    "shine_ev_sers": {
+      "display_name": "SHINE EV-SERS (hepatotoxicity)",
+      "status": "REAL",
+      "aggregation": "spectrum",
+      "domain": "ev",
+      "n_units": 720,
+      "n_by_group": {
+        "D0": 360,
+        "D2": 360
+      }
+    },
+    "small2023_ev": {
+      "display_name": "EV single-vesicle Raman (small2023)",
+      "status": "REAL",
+      "aggregation": "spectrum",
+      "domain": "ev",
+      "n_units": 600,
+      "n_by_group": {
+        "c00": 100,
+        "c01": 100,
+        "c10": 100,
+        "c100": 100,
+        "c25": 100,
+        "c50": 100
+      }
     }
   }
 }

@@ -8,14 +8,12 @@ import streamlit as st
 
 from .. import components as C, figures as F, biological as B
 
-# datasets known to the demo but NOT yet projected through V6 — shown honestly, no output
+# datasets present on disk but NOT yet projected through V6 — shown honestly, no output
 DEFERRED = {
-    "small2023_ev": ("EV single-vesicle SERS (small2023)", "probe titration, not a disease "
-                     "contrast; embedded wavenumber axis not yet recovered"),
-    "shine_ev_sers": ("SHINE EV-SERS (hepatotoxicity)", "dose×day EV series; ingestion not yet "
-                      "wired for V6"),
     "cca_hcc_lm_serum_sers": ("Liver serum SERS (CCA/HCC/LM/NC)", "4-class per-sample txt; "
                               "ingestion not yet wired for V6"),
+    "ovarian_plasma_raman_sers": ("Ovarian plasma Raman+SERS", "paired Raman/SERS zips; not yet "
+                                  "wired for V6"),
 }
 DOMAIN_NOTE = {
     "serum": "Serum: abundant protein background; metabolite/adsorption selection on Ag; purine "
@@ -57,89 +55,124 @@ def _study(art, bridge):
     gc = B.group_contrast(art)
     a, b = gc["a"], gc["b"]
     patient_level = art["aggregation"] == "patient"
+    characterization = art["dataset_id"] in B.CHARACTERIZATION_ONLY
+    mnames = {m.id: m.name for m in bridge.mss.motifs}
 
-    # 1 · framing
+    # 1 · framing + sample structure
     st.markdown(f"#### {art['display_name']}")
+    counts = f"{art['n_units']} units"
     st.markdown(
-        f"- **Domain / modality**: {art['domain']} · {art['modality']} · "
-        f"{art['substrate']} · {art['excitation_nm']} nm\n"
-        f"- **Contrast**: {a} (n={gc['na']}) vs {b} (n={gc['nb']})  ·  "
-        f"aggregation: **{art['aggregation']}-level**\n"
-        f"- **Source**: `{art['source']}`")
+        f"- **Domain / modality**: {art['domain']} · {art['modality']} · {art['substrate']} · "
+        f"{art['excitation_nm']} nm\n"
+        f"- **Sample structure**: {counts} · aggregation **{art['aggregation']}-level**"
+        + (f" · groups: {', '.join(f'{g}={n}' for g, n in art['n_by_group'].items())}") + "\n"
+        f"- **Contrast**: {a} (n={gc['na']}) vs {b} (n={gc['nb']})"
+        + ("  ·  ⚠ characterization only (probe-loading, not biology)" if characterization else "")
+        + f"\n- **Source**: `{art['source']}`")
     for cav in art["caveats"]:
         st.markdown(f'<div class="gaira-caveat">{cav}</div>', unsafe_allow_html=True)
     st.write("")
 
-    # 2 · data quality
+    # 2 · data-quality / OOD
     C.figure(F.group_quality(art),
-             cap="OOD, confidence and matrix-share distributions per group — the data-quality "
-                 "context for every downstream claim.")
+             cap="OOD, confidence and matrix-share per group — the data-quality context for every "
+                 "downstream claim.")
 
-    c1, c2 = st.columns(2, gap="large")
-    with c1:
-        # 3 · absolute atlas-position radar
-        series = [{"name": g, "axes": B.group_radar_axes(art, g)} for g in art["groups"]]
-        C.figure(F.multi_radar(series, title=f"{art['display_name']} — absolute BSV"),
-                 cap="Each group's absolute position in the frozen atlas frame (NOT cohort-mean "
-                     "normalised).")
-    with c2:
-        # 4 · comparator ΔBSV (forest with effect sizes)
-        C.figure(F.forest_plot(gc["rows"], a, b, title=f"ΔBSV ({a} − {b})"),
-                 cap="Signed theme difference with 95% bootstrap CI; green = FDR q<0.05; δ = "
-                     "Cliff's delta (effect size, emphasised over p).")
+    # 3 · THEME effect sizes (PRIMARY — not a radar, not a PCA)
+    st.markdown("##### Theme effect sizes  ·  the primary group comparison")
+    C.figure(F.forest_plot(gc["rows"], a, b, title=f"ΔBSV ({a} − {b})"),
+             cap="Signed theme difference with 95% bootstrap CI; green = FDR q<0.05; δ = Cliff's "
+                 "delta (effect size, emphasised over p).",
+             interp="Effect size (δ), not the p-value, is the headline — small effects at large n "
+                     "are flagged as near-null, not 'significant biology'.")
 
-    # 5 · MSS differences
+    # 4 · MSS drivers + 5 · component provenance
     _, _, motif_ids, mdelta = B.motif_contrast(art)
-    mnames = {m.id: m.name for m in bridge.mss.motifs}
-    bio_motif_idx = [i for i, mid in enumerate(motif_ids)
-                     if mid not in ("colloid_matrix_background",)]
+    bmi = [i for i, mid in enumerate(motif_ids) if mid != "colloid_matrix_background"]
     means = B.group_means_by(art, "motifs_mat")
     c3, c4 = st.columns(2, gap="large")
     with c3:
-        C.figure(F.difference_bars([mnames.get(motif_ids[i], motif_ids[i]) for i in bio_motif_idx],
-                                   [means[b][i] for i in bio_motif_idx],
-                                   [means[a][i] for i in bio_motif_idx],
-                                   title=f"ΔMSS motifs ({a} − {b})"),
-                 cap="Which spectral motifs drive the broad BSV change.")
+        C.figure(F.difference_bars([mnames.get(motif_ids[i], motif_ids[i]) for i in bmi],
+                                   [means[b][i] for i in bmi], [means[a][i] for i in bmi],
+                                   title=f"ΔMSS motif drivers ({a} − {b})"),
+                 cap="Which spectral motifs drive the theme change.")
     with c4:
-        # 6 · component provenance + 7 · sample space
-        proj, var = B.pca_2d(art["themes_mat"])
-        C.figure(F.bio_pca(proj, art["group"], var, title="BSV sample space (PCA)"),
-                 cap="Per-sample BSV, PCA to 2-D (X = group centroid). PCA axes are NOT "
-                     "biochemical themes.")
-
-    # 6 · component provenance (numeric)
+        C.figure(F.sample_heatmap(*B.heatmap_matrix(art, "themes_mat")),
+                 cap="Sample-level BSV (z-scored for display only). Reveals sample heterogeneity "
+                     "the group means hide.")
     top = B.top_components_for(art, mdelta)
     st.markdown("**Component provenance** (largest per-group coordinate differences): "
                 + ", ".join(f"c{j} ({d:+.3f})" for j, d in top))
 
-    # 8 · statistical summary + 9 · evidence interpretation
+    # 6 · sample heterogeneity (distance) — is the difference big vs biological spread?
+    dist = B.distance_summary(art)
+    d1, d2 = st.columns([1.0, 1.0], gap="large")
+    with d1:
+        C.figure(F.distance_bars(dist),
+                 cap="Between-group distance vs within-group variability.",
+                 interp=f"ratio = {dist['ratio']:.2f} — "
+                        + ("the group difference exceeds biological heterogeneity."
+                           if dist["ratio"] > 1 else
+                           "the group difference is SMALL relative to within-group spread."))
+    with d2:
+        # 7 · dataset-specific: paired (SHINE) / balanced (diabetes) / MSS heatmap (else)
+        if art["dataset_id"] in B.PAIRED:
+            th = gc["rows"][0]["theme"]
+            _, _, paired = B.paired_timepoint_theme(art, th)
+            C.figure(F.paired_slope(a, b, paired, th,
+                                    title=f"Paired {b}→{a} per dose — {F.THEME_SHORT.get(th, th)}"),
+                     cap="Longitudinal change within each dose cohort (cohort-level pairing).",
+                     interp="Paired-by-dose structure that pooled analysis hides (e.g. a dose×time "
+                             "interaction).")
+        elif art["dataset_id"] == "diabetes_plasma_ev_sers":
+            themes, za, zb = B.balanced_view(art)
+            C.figure(F.balanced_bars(themes, za, zb, a, b),
+                     cap="Exploratory balanced view: standardized theme deviations so a dominant "
+                         "axis does not obscure the rest. Display only — canonical BSV unchanged.")
+        else:
+            Zm, gm, lm = B.heatmap_matrix(art, "motifs_mat")
+            C.figure(F.sample_heatmap(Zm, gm, lm, title="Sample-level MSS heatmap (display only)"),
+                     cap="MSS-level structure, which broad themes can suppress.")
+
+    # 8 · summary + interpretation (demoted radar/PCA to expanders)
+    with st.expander("Absolute BSV radar + sample-space PCA (summary views)"):
+        rc1, rc2 = st.columns(2, gap="large")
+        with rc1:
+            series = [{"name": g, "axes": B.group_radar_axes(art, g)} for g in art["groups"]]
+            C.figure(F.multi_radar(series, title="Absolute BSV (composition)"),
+                     cap="Absolute atlas position; intentionally coarse (see effect sizes above).")
+        with rc2:
+            proj, var = B.pca_2d(art["themes_mat"])
+            C.figure(F.bio_pca(proj, art["group"], var),
+                     cap="Sample BSV PCA (visualization only; axes are NOT themes). Overlap is "
+                         "shown honestly.")
+
     top_row = gc["rows"][0]
     lvl = ("patient-level (1 patient = 1 n)" if patient_level
-           else "spectrum-level, EXPLORATORY (subject mapping undocumented; not patient-level "
-                "inference)")
-    st.markdown(f'<div class="gaira-card"><b>Statistical summary.</b> Mann-Whitney U per theme, '
-                f'Benjamini-Hochberg FDR, Cliff\'s delta effect size, 2000× bootstrap CIs. '
-                f'Inference level: <b>{lvl}</b>.<br><b>Leading difference.</b> '
-                f'<i>{F.THEME_SHORT.get(top_row["theme"], top_row["theme"])}</i> '
-                f'Δ={top_row["delta"]:+.3f} (δ={top_row["cliffs_delta"]:+.2f}, q={top_row["q"]:.3f}). '
-                f'This is <b>consistent with</b> a shift in the {a} group relative to {b}; it does '
-                f'not prove any molecule, pathway or diagnosis.</div>', unsafe_allow_html=True)
-
-    # 10 · interpretation summary (cautious language)
+           else "spectrum-level, EXPLORATORY (no subject mapping; not patient-level inference)")
     n_sig = sum(r["sig"] for r in gc["rows"])
-    if patient_level and abs(top_row["cliffs_delta"]) > 0.5:
-        verdict = (f"A robust patient-level biochemical difference: {n_sig} themes reach FDR "
-                   f"significance with large effect sizes. Consistent with a real biochemical "
-                   f"contrast between {a} and {b} in this cohort.")
+    st.markdown(f'<div class="gaira-card"><b>Statistical summary.</b> Mann-Whitney U · BH-FDR · '
+                f'Cliff\'s delta · 2000× bootstrap CIs. Inference level: <b>{lvl}</b>. '
+                f'Leading theme: <i>{F.THEME_SHORT.get(top_row["theme"], top_row["theme"])}</i> '
+                f'Δ={top_row["delta"]:+.3f} (δ={top_row["cliffs_delta"]:+.2f}, q={top_row["q"]:.3f}); '
+                f'{n_sig} themes FDR-significant; heterogeneity ratio {dist["ratio"]:.2f}.</div>',
+                unsafe_allow_html=True)
+
+    if characterization:
+        verdict = (f"{art['display_name']} is a characterization dataset: the contrast is a "
+                   f"probe-loading effect, not biology. Use it for EV biochemical-state-space "
+                   f"structure, not for a disease claim.")
+    elif patient_level and abs(top_row["cliffs_delta"]) > 0.5:
+        verdict = (f"A robust <b>patient-level</b> biochemical difference: {n_sig} themes reach FDR "
+                   f"significance with large effect sizes — consistent with a real biochemical "
+                   f"contrast between {a} and {b} within this cohort.")
     elif max(abs(r["cliffs_delta"]) for r in gc["rows"]) < 0.33:
-        verdict = (f"Minimal biochemical separation: even where p is small (large n), effect sizes "
-                   f"are tiny (|δ|<0.33). The groups are barely distinguishable in BSV space — an "
-                   f"honest near-null result. Low OOD here reflects that {art['modality']} serum is "
-                   f"relatively in-domain, not that a strong signal was found.")
+        verdict = (f"Minimal biochemical separation: effect sizes are tiny (|δ|<0.33) even where p "
+                   f"is small at large n. The groups barely separate in BSV space — an honest "
+                   f"near-null result, reported as such.")
     else:
-        verdict = (f"A moderate, exploratory difference ({n_sig} themes FDR-significant). Read as "
-                   f"associated-with, pending patient-level replication.")
+        verdict = (f"A moderate, exploratory difference ({n_sig} themes FDR-significant). Consistent "
+                   f"with a relative shift; read as associated-with, pending replication.")
     C.takeaways([verdict])
 
 
