@@ -60,6 +60,7 @@ def main():
         st.checkbox("Developer mode", key="_debug",
                     help="Show inference hashes, BSV/MSS vectors and cache keys.")
         st.caption(f"atlas `{bridge.eng.atlas.meta['fingerprint'][:10]}…` · frozen · deterministic")
+    C.story_ribbon(choice.split(" ")[0])          # persistent pipeline breadcrumb
     dict(PAGES)[choice].render(bridge)
 
 

@@ -13,6 +13,29 @@ def inject_css():
     st.markdown(T.PAGE_CSS, unsafe_allow_html=True)
 
 
+_STORY = [("1", "Overview"), ("2", "Reference space"), ("3", "How it reasons"),
+          ("4", "Calibration"), ("5", "Serum limits"), ("6", "Biology"),
+          ("7", "Future DART"), ("8", "Provenance")]
+
+
+def story_ribbon(page_number):
+    """A persistent breadcrumb of the scientific pipeline, current stage highlighted —
+    so a visitor always knows where they are in the reference→reasoning→calibration→
+    serum→biology→DART narrative."""
+    cur = str(page_number)
+    chips = []
+    for num, name in _STORY:
+        on = num == cur
+        chips.append(
+            f'<span style="color:{"#2a6f97" if on else "#93a0b2"};'
+            f'font-weight:{700 if on else 500};font-size:0.74rem;'
+            f'{"border-bottom:2px solid #2a6f97;" if on else ""}padding-bottom:2px;">'
+            f'{name}</span>')
+    sep = '<span style="color:#c7ced8;font-size:0.7rem;"> → </span>'
+    st.markdown(f'<div style="margin:-0.4rem 0 0.9rem 0;">{sep.join(chips)}</div>',
+                unsafe_allow_html=True)
+
+
 def page_header(kicker, title, lede):
     st.markdown(f'<div class="gaira-kicker">{kicker}</div>', unsafe_allow_html=True)
     st.markdown(f"# {title}")
