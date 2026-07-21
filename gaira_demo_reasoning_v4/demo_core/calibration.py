@@ -139,6 +139,44 @@ def spearman(x, y):
     return float(spearmanr(x, y)[0])
 
 
+def redistribution_index(bridge, series):
+    """R(d) = 1 − cosine(coord_d, coord_baseline) on L1 component vectors. Rises when
+    the perturbation MOVES evidence between components (redistribution)."""
+    base = series.mean_coord[0]
+    return np.array([1.0 - float(np.dot(c, base) / (np.linalg.norm(c) * np.linalg.norm(base) + 1e-12))
+                     for c in series.mean_coord])
+
+
+def scaling_metrics(bridge, series):
+    """Distinguish scaling from redistribution:
+      - cos_to_baseline: cosine(coord_d, coord_baseline). Near 1 across doses ⇒ the
+        shape is preserved and only the magnitude grows ⇒ SCALING.
+      - dominant_share: share of the single largest component at each dose.
+      - total_magnitude: L2 norm of the raw (pre-L1) activation is not available post-
+        normalisation, so we report the dominant-share trend as the scaling signature."""
+    base = series.mean_coord[0]
+    cos_base = np.array([float(np.dot(c, base) / (np.linalg.norm(c) * np.linalg.norm(base) + 1e-12))
+                         for c in series.mean_coord])
+    dom_share = np.array([float(c.max()) for c in series.mean_coord])
+    dom_idx = np.array([int(c.argmax()) for c in series.mean_coord])
+    return {"cos_to_baseline": cos_base, "dominant_share": dom_share,
+            "dominant_component": dom_idx,
+            "argmax_changes": int(len(set(dom_idx.tolist())) > 1)}
+
+
+def theme_delta_series(bridge, series, theme_id):
+    """Signed ΔBSV(dose) = composition(dose) − composition(baseline) for one theme."""
+    base = bridge.infer(series.mean_coord[0]).bsv.composition[theme_id]
+    return np.array([bridge.infer(mc).bsv.composition[theme_id] - base for mc in series.mean_coord])
+
+
+def radar_delta_axes(bridge, coord_now, coord_base, domain="buffer"):
+    """Signed per-theme radar delta (now − baseline) in engine radar-axis schema."""
+    now = {a["theme"]: a["score"] for a in bridge.infer(coord_now, domain).radar["axes"]}
+    base = {a["theme"]: a["score"] for a in bridge.infer(coord_base, domain).radar["axes"]}
+    return [{"theme": t, "delta": now[t] - base[t]} for t in now]
+
+
 def joint_trajectories(bridge):
     """Adenine / ergothioneine / uricase trajectories projected into ONE shared BSV
     PCA space, for the side-by-side trajectory-class comparison."""

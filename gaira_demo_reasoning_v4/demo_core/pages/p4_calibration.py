@@ -31,9 +31,23 @@ def _prep_dose(cal_key, method):
     comp = CAL.component_series(b, s)
     vecs = CAL.bsv_theme_vectors(b, s.mean_coord)
     proj, var = CAL.trajectory_2d(vecs)
+    # dual-radar + mechanism (Parts 2/3): signed delta vs baseline, shared scale
+    delta_axes = [CAL.radar_delta_axes(b, mc, s.mean_coord[0]) for mc in s.mean_coord]
+    delta_max = max(max(abs(a["delta"]) for a in ax) for ax in delta_axes) if delta_axes else 1.0
+    abs_axes = [b.infer(mc).radar["axes"] for mc in s.mean_coord]
+    redistribution = CAL.redistribution_index(b, s)
+    scaling = CAL.scaling_metrics(b, s)
+    # interpretable-axis MSS trajectory (composition): target motif vs the top OTHER mover
+    evo_comp = CAL.motif_evolution(b, s, ids, value="composition")
+    other = max((m for m in ids if m != cal.target_motif),
+                key=lambda m: float(np.ptp(evo_comp[m])))
     return dict(levels=s.levels, mean_coord=s.mean_coord, evo=evo, motif_ids=ids,
                 theme_mean=mean, rep_levels=rl, rep_scores=rs, fit=fit, rho=rho,
-                comp=comp, proj=proj, var=var, condition=s.condition)
+                comp=comp, proj=proj, var=var, condition=s.condition,
+                delta_axes=delta_axes, delta_max=float(delta_max), abs_axes=abs_axes,
+                redistribution=redistribution, scaling=scaling,
+                traj_x=evo_comp[cal.target_motif], traj_y=evo_comp[other],
+                traj_xid=cal.target_motif, traj_yid=other)
 
 
 @st.cache_data(show_spinner=False)
@@ -46,11 +60,14 @@ def _prep_uricase():
     mss_a = {a.id: a.composition for a in b.bsv_and_mss(after)[1]}
     ob, oa = b.infer(before).bsv, b.infer(after).bsv
     themes = b.bio_themes
+    delta_axes = CAL.radar_delta_axes(b, after, before, domain="serum")
+    delta_max = max(abs(a["delta"]) for a in delta_axes) if delta_axes else 1.0
     return dict(before=before, after=after, motif_ids=ids,
                 mss_before=[mss_b[i] for i in ids], mss_after=[mss_a[i] for i in ids],
                 theme_before=[ob.composition[t] for t in themes],
                 theme_after=[oa.composition[t] for t in themes], themes=themes,
                 radar_before=b.infer(before).radar["axes"], radar_after=b.infer(after).radar["axes"],
+                delta_axes=delta_axes, delta_max=float(delta_max),
                 purine_before=ob.composition["nucleic_purine"],
                 purine_after=oa.composition["nucleic_purine"])
 
@@ -128,16 +145,55 @@ def _addition_study(b, cal, method, mechanism_note):
                          "one direction — consistent with the low effective dimensionality found "
                          "in BSV validation.")
 
-    st.markdown("##### 8 · Biochemical State Vector — low vs high dose")
-    rc1, rc2 = st.columns([1.1, 1.0], gap="large")
+    st.markdown("##### 8 · BSV movement  ·  ΔBSV delta radar (default)")
+    st.markdown('<div class="gaira-caption">The absolute composition radar barely changes shape '
+                'across dose (compositional closure: 11 shares sum to ~1). The <b>signed delta '
+                'radar</b> — this dose minus the zero-dose baseline, on a shared centred scale — '
+                'reveals the real movement. Lobes out = increase, in = decrease.</div>',
+                unsafe_allow_html=True)
+    rc1, rc2 = st.columns([1.05, 1.0], gap="large")
     with rc1:
-        radar_lo = b.infer(P["mean_coord"][0]).radar["axes"]
-        radar_hi = b.infer(P["mean_coord"][-1]).radar["axes"]
-        C.figure(F.radar(radar_hi, title=f"{cal.analyte.capitalize()} radar", ref_axes=radar_lo),
-                 cap="Solid = highest dose; dashed = zero dose. The radar summarises the same "
-                     "movement the MSS panel explains.")
+        C.figure(F.delta_radar(P["delta_axes"][idx], P["delta_max"],
+                               f"{cal.analyte.capitalize()} ΔBSV",
+                               f"{levels[idx]:.2f} µM vs 0 (shared scale ±{P['delta_max']:.3f})"),
+                 cap="Signed theme change at the selected dose vs baseline; NOT per-sample "
+                     "rescaled.",
+                 interp=f"The target theme "
+                        f"({F.THEME_SHORT.get(cal.target_theme, cal.target_theme)}) should push "
+                        f"outward as dose rises.")
+        with st.expander("Absolute composition radar (secondary)"):
+            C.figure(F.radar(P["abs_axes"][idx], title=f"{cal.analyte.capitalize()} absolute BSV"),
+                     cap="Composition shares (sum≈1) — intentionally coarse; see the delta radar.")
     with rc2:
         _evidence_panel(b, cal, P)
+
+    st.markdown("##### Mechanism — redistribution vs scaling")
+    m1, m2 = st.columns(2, gap="large")
+    with m1:
+        C.figure(F.mechanism_curves(levels, P["redistribution"], P["theme_mean"],
+                                    F.THEME_SHORT.get(cal.target_theme, cal.target_theme),
+                                    title=f"{cal.analyte.capitalize()} — redistribution vs evidence"),
+                 cap="Redistribution R(d)=1−cos(componentₖ, component₀) (left) and target-theme "
+                     "composition (right).",
+                 interp=f"R(max)={P['redistribution'][-1]:.2f}; cos-to-baseline falls to "
+                        f"{P['scaling']['cos_to_baseline'][-1]:.2f}. "
+                        + ("High R + falling cosine ⇒ component REDISTRIBUTION."
+                           if P['redistribution'][-1] > 0.3 else
+                           "Low R + cosine near 1 ⇒ single-component SCALING."))
+    with m2:
+        # interpretable-axis MSS trajectory (Part 3A) — not unsupervised PCA
+        C.figure(F.pairwise_trajectory(P["traj_x"], P["traj_y"], levels,
+                                       b.motif_by_id(P["traj_xid"]).name,
+                                       b.motif_by_id(P["traj_yid"]).name,
+                                       f"{cal.analyte.capitalize()} — MSS trajectory (interpretable axes)"),
+                 cap="Dose trajectory on two chemically-meaningful MSS axes (not unsupervised PCA "
+                     "of the 11-theme BSV).")
+
+    with st.expander("Debug — numerical radar / ΔBSV values at this dose"):
+        st.dataframe({"theme": [F.THEME_SHORT.get(a["theme"], a["theme"]) for a in P["abs_axes"][idx]],
+                      "absolute": [round(a["score"], 4) for a in P["abs_axes"][idx]],
+                      "delta_vs_baseline": [round(a["delta"], 4) for a in P["delta_axes"][idx]]},
+                     use_container_width=True, hide_index=True)
 
 
 def _evidence_panel(b, cal, P):
@@ -216,10 +272,11 @@ def _uricase(b):
                  cap="Atlas reconstruction, after − before. Dashed: oxopurine bands. Blue = lost "
                      "on depletion.")
     with c2:
-        st.markdown("##### Difference radar")
-        C.figure(F.radar(U["radar_after"], title="Uricase: after vs before",
-                         ref_axes=U["radar_before"]),
-                 cap="Solid = after uricase; dashed = before. The purine-associated axis contracts.")
+        st.markdown("##### Difference radar (ΔBSV = after − before)")
+        C.figure(F.delta_radar(U["delta_axes"], U["delta_max"], "Uricase ΔBSV",
+                               f"after − before (shared scale ±{U['delta_max']:.3f})"),
+                 cap="Signed change on urate removal; lobes in = decrease. The purine-associated "
+                     "axis contracts.")
 
     st.markdown("##### Difference MSS  ·  the key result")
     C.figure(F.difference_bars([names[i] for i in U["motif_ids"]], U["mss_before"], U["mss_after"],

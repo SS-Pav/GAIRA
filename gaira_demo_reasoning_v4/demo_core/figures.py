@@ -99,6 +99,70 @@ def radar(radar_axes, title="Biochemical State Vector", score_key="score", ref_a
     return fig
 
 
+# ── signed delta radar (perturbation vs baseline; shared centred scale) ──
+def delta_radar(delta_axes, shared_max, title="ΔBSV vs baseline", subtitle=""):
+    """Signed radar: theme deltas mapped to radius with 0 at the mid-ring, positive
+    (increase) outward, negative (decrease) inward. Shared symmetric scale across the
+    experiment — NO per-sample rescaling. Lobes out = up, in = down."""
+    themes = [a["theme"] for a in delta_axes]
+    deltas = np.array([a["delta"] for a in delta_axes])
+    labels = [THEME_SHORT.get(t, t) for t in themes]
+    M = shared_max if shared_max > 1e-9 else 1.0
+    r = 0.5 + 0.5 * np.clip(deltas / M, -1, 1)
+    ang = np.linspace(0, 2 * np.pi, len(themes), endpoint=False)
+    ang_c = np.concatenate([ang, ang[:1]]); r_c = np.concatenate([r, r[:1]])
+    fig, ax = plt.subplots(figsize=(5.9, 5.9), subplot_kw={"polar": True})
+    ax.set_theta_offset(np.pi / 2); ax.set_theta_direction(-1); ax.set_ylim(0, 1)
+    ax.set_xticks(ang); ax.set_xticklabels(labels, fontsize=9, color=T.INK)
+    ax.set_yticks([0.5]); ax.set_yticklabels([])                      # zero ring only
+    ax.plot(ang_c, np.full_like(ang_c, 0.5), color=T.MUTED, linewidth=1.2, linestyle="--")
+    ax.plot(ang_c, r_c, color=T.INK, linewidth=1.4)
+    for a_, rr, d in zip(ang, r, deltas):
+        ax.plot([a_, a_], [0.5, rr], color=(T.UP if d >= 0 else T.DOWN), linewidth=3.0,
+                solid_capstyle="round")
+        ax.scatter(a_, rr, color=(T.UP if d >= 0 else T.DOWN), s=28, zorder=5)
+    ax.grid(color=T.GRID, linewidth=0.6)
+    ax.spines["polar"].set_color(T.PANEL_EDGE)
+    ax.set_title(f"{title}\n{subtitle}", fontsize=11.8, color=T.INK, pad=22)
+    ax.text(np.pi / 2, 1.02, f"±{M:.3f}", fontsize=7.5, color=T.FAINT, ha="center")
+    fig.tight_layout()
+    return fig
+
+
+def mechanism_curves(levels, redistribution, target_elev, target_name,
+                     xlabel="concentration (µM)", title="Mechanism: redistribution vs evidence"):
+    """Dual-axis: component-redistribution index (left) vs target-theme elevation (right).
+    Explains why biochemical evidence can rise while the trajectory curves."""
+    fig, ax1 = plt.subplots(figsize=(7.2, 3.8))
+    ax1.plot(levels, redistribution, "-o", color=T.UP, markersize=4, linewidth=2.0,
+             label="redistribution R(d)=1−cos")
+    ax1.set_xlabel(xlabel); ax1.set_ylabel("redistribution index", color=T.UP)
+    ax1.tick_params(axis="y", labelcolor=T.UP)
+    ax2 = ax1.twinx()
+    ax2.plot(levels, target_elev, "-s", color=T.PRIMARY, markersize=4, linewidth=2.0,
+             label=target_name)
+    ax2.set_ylabel(f"{target_name} composition", color=T.PRIMARY)
+    ax2.tick_params(axis="y", labelcolor=T.PRIMARY); ax2.grid(False)
+    ax1.set_title(title, fontsize=11.5, pad=8)
+    fig.tight_layout()
+    return fig
+
+
+def pairwise_trajectory(x, y, levels, xlabel, ylabel, title="Trajectory on interpretable axes"):
+    """Dose trajectory on two biologically meaningful axes (not unsupervised PCA)."""
+    x = np.asarray(x, float); y = np.asarray(y, float); levels = np.asarray(levels, float)
+    fig, ax = plt.subplots(figsize=(6.0, 4.8))
+    ax.plot(x, y, "-", color=T.FAINT, linewidth=1.2, zorder=1)
+    sc = ax.scatter(x, y, c=levels, cmap="viridis", s=70, zorder=3, edgecolor="white", linewidth=0.6)
+    ax.scatter(x[0], y[0], s=150, facecolor="none", edgecolor=T.INK, linewidth=1.4, zorder=4)
+    ax.annotate("", xy=(x[-1], y[-1]), xytext=(x[-2], y[-2]),
+                arrowprops=dict(arrowstyle="-|>", color=T.INK, lw=1.5))
+    cb = fig.colorbar(sc, ax=ax, shrink=0.8); cb.set_label("dose (µM)", fontsize=9)
+    ax.set_xlabel(xlabel); ax.set_ylabel(ylabel); ax.set_title(title, fontsize=11.5, pad=8)
+    fig.tight_layout()
+    return fig
+
+
 # ── MSS hierarchy — the centerpiece ──
 def mss_hierarchy(activations, title="Molecular Spectral Signatures"):
     """Horizontal motif bars by elevation; diverging colour = increase/decrease."""

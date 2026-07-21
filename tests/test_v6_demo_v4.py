@@ -145,6 +145,54 @@ def test_joint_trajectories_three_classes_render():
     plt.close(fig)
 
 
+# ── Part 2/3: calibration radar + mechanism corrections ──
+@needs_art
+def test_calibration_radars_differ_across_doses():
+    """Regression for the 'identical radars' report: different doses MUST produce
+    different radar arrays and a non-zero, baseline-zero delta radar."""
+    from demo_core.engine_bridge import Bridge
+    from demo_core import calibration as CAL, data as D
+    b = Bridge()
+    s = CAL.build_dose_series(D.calibration("adenine"), method=CAL.ADENINE_METHOD)
+    lo = np.array([a["score"] for a in b.infer(s.mean_coord[0]).radar["axes"]])
+    hi = np.array([a["score"] for a in b.infer(s.mean_coord[-1]).radar["axes"]])
+    assert not np.allclose(lo, hi)                       # not stale / cached
+    assert np.abs(hi - lo).max() > 0.02
+    # delta radar: exactly zero at baseline, non-zero at top dose
+    d0 = CAL.radar_delta_axes(b, s.mean_coord[0], s.mean_coord[0])
+    dN = CAL.radar_delta_axes(b, s.mean_coord[-1], s.mean_coord[0])
+    assert all(abs(a["delta"]) < 1e-9 for a in d0)
+    assert max(abs(a["delta"]) for a in dN) > 0.02
+
+
+@needs_art
+def test_calibration_delta_direction_and_mechanism():
+    from demo_core.engine_bridge import Bridge
+    from demo_core import calibration as CAL, data as D
+    b = Bridge()
+    ad = CAL.build_dose_series(D.calibration("adenine"), method=CAL.ADENINE_METHOD)
+    er = CAL.build_dose_series(D.calibration("ergothioneine"))
+    # target theme moves in the correct (positive) direction at top dose
+    dpur = {a["theme"]: a["delta"] for a in CAL.radar_delta_axes(b, ad.mean_coord[-1], ad.mean_coord[0])}
+    assert dpur["nucleic_purine"] > 0
+    dsulf = {a["theme"]: a["delta"] for a in CAL.radar_delta_axes(b, er.mean_coord[-1], er.mean_coord[0])}
+    assert dsulf["sulfur_antioxidant"] > 0
+    # adenine REDISTRIBUTES more than ergothioneine SCALES (mechanism metric)
+    Rad = CAL.redistribution_index(b, ad); Rer = CAL.redistribution_index(b, er)
+    assert Rad[-1] > Rer[-1]
+    assert CAL.scaling_metrics(b, er)["cos_to_baseline"][-1] > CAL.scaling_metrics(b, ad)["cos_to_baseline"][-1]
+
+
+@needs_art
+def test_uricase_delta_radar_purine_decreases():
+    from demo_core.engine_bridge import Bridge
+    from demo_core import calibration as CAL
+    b = Bridge()
+    c = CAL.uricase_conditions(b)
+    d = {a["theme"]: a["delta"] for a in CAL.radar_delta_axes(b, c["spiked+uricase"], c["spiked"], "serum")}
+    assert d["nucleic_purine"] <= 0                      # urate removal lowers purine
+
+
 # ── Page 2 (Reference Atlas) ──
 @needs_art
 def test_page2_reference_map_and_sankey_from_frozen():
