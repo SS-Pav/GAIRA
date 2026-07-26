@@ -226,6 +226,47 @@ def test_calibration_delta_direction_and_mechanism():
 
 
 @needs_art
+def test_ergothioneine_delta_cascade_shows_analyte_not_background():
+    """The weak-adsorber fix: for ergothioneine the ABSOLUTE top theme is the purine
+    SERS background, but the Δ-vs-baseline (what the cascade now shows) must put SULFUR
+    up and the purine background DOWN — the analyte, not the matrix."""
+    from demo_core.engine_bridge import Bridge
+    from demo_core import calibration as CAL, data as D, figures as F
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    b = Bridge()
+    s = CAL.build_dose_series(D.calibration("ergothioneine"))
+    base, hi = s.mean_coord[0], s.mean_coord[-1]
+    # absolute top theme is the purine background (the misleading view)
+    abs_top = max(b.bio_themes, key=lambda t: b.infer(hi).bsv.composition[t])
+    assert abs_top == "nucleic_purine"
+    # delta correctly surfaces the analyte
+    d = {a["theme"]: a["delta"] for a in CAL.radar_delta_axes(b, hi, base)}
+    assert d["sulfur_antioxidant"] > 0 and d["nucleic_purine"] < 0
+    # the delta-mode cascade renders (panels 3/4/5 = Δ)
+    fig = F.reasoning_cascade(b, hi, "2 µM", delta_axes=CAL.radar_delta_axes(b, hi, base),
+                              delta_scale=0.05, baseline_coord=base)
+    assert fig is not None; plt.close(fig)
+
+
+@needs_art
+def test_balanced_view_available_for_all_cohorts():
+    """The COVID-overlap fix: the within-cohort balanced view must produce a legible,
+    non-degenerate group difference for a near-null cohort, not overlapping polygons."""
+    from demo_core import biological as B
+    if not B.available():
+        pytest.skip("biological artifacts not built")
+    for key in B.CONTRAST:
+        art = B.load(key)
+        if art is None:
+            continue
+        themes, za, zb = B.balanced_view(art)
+        assert len(themes) == 11
+        assert np.abs(np.asarray(za) - np.asarray(zb)).max() > 0.1   # a visible standardized diff
+
+
+@needs_art
 def test_uricase_delta_radar_purine_decreases():
     from demo_core.engine_bridge import Bridge
     from demo_core import calibration as CAL

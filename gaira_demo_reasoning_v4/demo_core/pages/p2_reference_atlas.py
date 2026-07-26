@@ -81,6 +81,32 @@ def _nmf_education(b):
              interp="NMF is unsupervised: it sees only spectra — <b>no disease, no labels, no "
                      "biology</b>. The biochemistry is attached afterwards by the ontology + MSS.")
 
+    with st.expander("Why NMF — and not PCA / UMAP / an autoencoder?"):
+        st.markdown(
+            "GAIRA reasons in the NMF basis because it is the only decomposition that matches the "
+            "physics of Raman *and* can be frozen as a shared coordinate system:\n\n"
+            "| method | non-negative? | additive (parts)? | a real spectrum you can read? | "
+            "deterministic / freezable? |\n"
+            "|---|---|---|---|---|\n"
+            "| **NMF** (used) | ✅ | ✅ mixture = Σ amount×motif | ✅ each basis IS a spectrum | ✅ |\n"
+            "| PCA | ❌ (± lobes) | ❌ (subtraction) | ❌ anti-peaks | ✅ |\n"
+            "| UMAP / t-SNE | n/a | ❌ | ❌ axes meaningless | ❌ random init |\n"
+            "| autoencoder / CNN | usually ❌ | ❌ | ❌ entangled black box | ❌ |\n\n"
+            "- A **Raman mixture is literally a non-negative sum** of its pure components' spectra — "
+            "NMF's math *is* the physics; PCA subtracts, UMAP has no generative model, an "
+            "autoencoder is non-physical and entangled.\n"
+            "- A **component is itself a spectrum** you can plot and match to chemistry (below). A "
+            "PC or a UMAP axis is not.\n"
+            "- **Freezable + deterministic**: UMAP and autoencoders give a different answer every "
+            "run, so they cannot be a canonical, fingerprinted coordinate system; NMF (fixed seed) "
+            "is byte-identical.\n"
+            "- NMF was chosen **by benchmark**, not by default — it beat PCA, ICA, sparse-dict and "
+            "an autoencoder (which scored *worst* on component stability) on the Foundation study.\n\n"
+            "This is also the difference from the old V2 / per-dataset approach: instead of running "
+            "PCA/clustering *on each dataset* and naming its axes (which can't be compared across "
+            "datasets), NMF builds **one fixed axis set from pure reference chemicals**, and every "
+            "dataset is projected into it — so cohorts become comparable in the same coordinates.")
+
     st.markdown("##### Step 2 · a spectrum is a sum of motifs — try it")
     rm = _ref_map()
     default = rm["analytes"].index("adenine") if "adenine" in rm["analytes"] else 0

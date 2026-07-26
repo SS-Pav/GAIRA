@@ -126,10 +126,9 @@ def radar(radar_axes, title="Biochemical State Vector", score_key="score", ref_a
 
 
 # ── signed delta radar (perturbation vs baseline; shared centred scale) ──
-def delta_radar(delta_axes, shared_max, title="ΔBSV vs baseline", subtitle=""):
-    """Signed radar: theme deltas mapped to radius with 0 at the mid-ring, positive
-    (increase) outward, negative (decrease) inward. Shared symmetric scale across the
-    experiment — NO per-sample rescaling. Lobes out = up, in = down."""
+def _draw_delta_radar(ax, delta_axes, shared_max, labelsize=9):
+    """Draw a signed delta radar onto a polar axis (0 at the mid-ring, out=up, in=down,
+    shared symmetric scale). Shared by delta_radar() and the reasoning cascade."""
     delta_axes = _order_axes(delta_axes)
     themes = [a["theme"] for a in delta_axes]
     deltas = np.array([a["delta"] for a in delta_axes])
@@ -138,20 +137,26 @@ def delta_radar(delta_axes, shared_max, title="ΔBSV vs baseline", subtitle=""):
     r = 0.5 + 0.5 * np.clip(deltas / M, -1, 1)
     ang = np.linspace(0, 2 * np.pi, len(themes), endpoint=False)
     ang_c = np.concatenate([ang, ang[:1]]); r_c = np.concatenate([r, r[:1]])
-    fig, ax = plt.subplots(figsize=(5.9, 5.9), subplot_kw={"polar": True})
     ax.set_theta_offset(np.pi / 2); ax.set_theta_direction(-1); ax.set_ylim(0, 1)
-    ax.set_xticks(ang); ax.set_xticklabels(labels, fontsize=9, color=T.INK)
-    ax.set_yticks([0.5]); ax.set_yticklabels([])                      # zero ring only
+    ax.set_xticks(ang); ax.set_xticklabels(labels, fontsize=labelsize, color=T.INK)
+    ax.set_yticks([0.5]); ax.set_yticklabels([])
     ax.plot(ang_c, np.full_like(ang_c, 0.5), color=T.MUTED, linewidth=1.2, linestyle="--")
-    ax.plot(ang_c, r_c, color=T.INK, linewidth=1.4)
+    ax.plot(ang_c, r_c, color=T.INK, linewidth=1.3)
     for a_, rr, d in zip(ang, r, deltas):
         ax.plot([a_, a_], [0.5, rr], color=(T.UP if d >= 0 else T.DOWN), linewidth=3.0,
                 solid_capstyle="round")
-        ax.scatter(a_, rr, color=(T.UP if d >= 0 else T.DOWN), s=28, zorder=5)
-    ax.grid(color=T.GRID, linewidth=0.6)
-    ax.spines["polar"].set_color(T.PANEL_EDGE)
+        ax.scatter(a_, rr, color=(T.UP if d >= 0 else T.DOWN), s=24, zorder=5)
+    ax.grid(color=T.GRID, linewidth=0.6); ax.spines["polar"].set_color(T.PANEL_EDGE)
+    ax.text(np.pi / 2, 1.03, f"±{M:.3f}", fontsize=7.5, color=T.FAINT, ha="center")
+
+
+def delta_radar(delta_axes, shared_max, title="ΔBSV vs baseline", subtitle=""):
+    """Signed radar: theme deltas mapped to radius with 0 at the mid-ring, positive
+    (increase) outward, negative (decrease) inward. Shared symmetric scale across the
+    experiment — NO per-sample rescaling. Lobes out = up, in = down."""
+    fig, ax = plt.subplots(figsize=(5.9, 5.9), subplot_kw={"polar": True})
+    _draw_delta_radar(ax, delta_axes, shared_max)
     ax.set_title(f"{title}\n{subtitle}", fontsize=11.8, color=T.INK, pad=22)
-    ax.text(np.pi / 2, 1.02, f"±{M:.3f}", fontsize=7.5, color=T.FAINT, ha="center")
     fig.tight_layout()
     return fig
 
@@ -660,18 +665,36 @@ def trajectory_2d(proj, levels, var, ref_cloud=None, cmap_label="dose (µM)",
 
 
 # ── THE signature figure: the full reasoning cascade at one concentration ──
-def reasoning_cascade(bridge, coord, dose_label="", domain="buffer", radar_radial_max=None):
+def reasoning_cascade(bridge, coord, dose_label="", domain="buffer", radar_radial_max=None,
+                      delta_axes=None, delta_scale=None, baseline_coord=None):
     """Spectrum → Components → MSS → BSV → Radar, all for one query. The iconic
     GAIRA figure: move the concentration slider and every panel updates together.
 
-    radar_radial_max: fixed radar scale shared across the dose series so the radar
-    genuinely GROWS with dose instead of auto-rescaling to look static."""
+    radar_radial_max: fixed radar scale shared across the dose series so an ABSOLUTE
+      radar genuinely GROWS with dose instead of auto-rescaling to look static.
+    delta_axes / delta_scale / baseline_coord: when given (calibration), the biochemical
+      half of the cascade (panels 3 MSS, 4 BSV, 5 radar + the 'top' stat) shows the CHANGE
+      vs baseline — the HONEST headline for weak adsorbers whose ABSOLUTE state is
+      dominated by the SERS background (e.g. ergothioneine's purine background: only the Δ
+      reveals its sulfur motif)."""
     out, acts = bridge.bsv_and_mss(coord, domain=domain)
     grid, spec = bridge.reconstruct(coord)
     comp = np.asarray(out.bsv.component_coord)
-    bio_acts = sorted([a for a in acts if not a.non_biochemical],
-                      key=lambda a: a.elevation)[-8:]
-    bio_theme = sorted(out.bsv.biochemical_themes().items(), key=lambda kv: kv[1])[-8:]
+    delta_mode = baseline_coord is not None
+    if delta_mode:
+        out0, acts0 = bridge.bsv_and_mss(baseline_coord, domain=domain)
+        base_mss = {a.id: a.composition for a in acts0}
+        bio_acts = sorted([a for a in acts if not a.non_biochemical],
+                          key=lambda a: a.composition - base_mss.get(a.id, 0.0))
+        bio_acts = bio_acts[:4][::-1] + bio_acts[-4:]                 # biggest down + up
+        base_theme = out0.bsv.biochemical_themes()
+        bio_theme = sorted(out.bsv.biochemical_themes().items(),
+                           key=lambda kv: kv[1] - base_theme.get(kv[0], 0.0))
+        bio_theme = bio_theme[:4] + bio_theme[-4:]
+    else:
+        bio_acts = sorted([a for a in acts if not a.non_biochemical],
+                          key=lambda a: a.elevation)[-8:]
+        bio_theme = sorted(out.bsv.biochemical_themes().items(), key=lambda kv: kv[1])[-8:]
 
     fig = plt.figure(figsize=(15.5, 7.4))
     gs = fig.add_gridspec(2, 4, height_ratios=[1.0, 1.05], hspace=0.55, wspace=0.42,
@@ -697,27 +720,44 @@ def reasoning_cascade(bridge, coord, dose_label="", domain="buffer", radar_radia
     ax_comp.set_xlabel("component", fontsize=8.5); ax_comp.tick_params(labelsize=7.5)
     ax_comp.set_xticks([0, 8, 16, 23]); ax_comp.grid(axis="x", visible=False)
 
-    # 3 · MSS motifs (the emphasised layer)
-    y = range(len(bio_acts)); el = [a.elevation for a in bio_acts]
-    ax_mss.barh(list(y), el, color=[T.UP if e >= 0 else T.DOWN for e in el],
+    # 3 · MSS motifs (the emphasised layer) — Δ vs baseline in delta mode
+    y = range(len(bio_acts))
+    if delta_mode:
+        vals = [a.composition - base_mss.get(a.id, 0.0) for a in bio_acts]
+        ax_mss.set_title("3 · ΔMSS motifs", fontsize=11, color=T.UP, fontweight="700")
+    else:
+        vals = [a.elevation for a in bio_acts]
+        ax_mss.set_title("3 · MSS motifs", fontsize=11, color=T.UP, fontweight="700")
+    ax_mss.barh(list(y), vals, color=[T.UP if v >= 0 else T.DOWN for v in vals],
                 height=0.66, edgecolor=T.SURFACE, linewidth=0.8)
     ax_mss.axvline(0, color=T.MUTED, linewidth=0.8)
     ax_mss.set_yticks(list(y)); ax_mss.set_yticklabels([a.name for a in bio_acts], fontsize=7.6)
-    ax_mss.set_title("3 · MSS motifs", fontsize=11, color=T.UP, fontweight="700")
     ax_mss.tick_params(labelsize=7.5); ax_mss.grid(axis="y", visible=False)
 
-    # 4 · BSV themes
+    # 4 · BSV themes — Δ vs baseline in delta mode
     yt = range(len(bio_theme))
-    ax_bsv.barh(list(yt), [v for _, v in bio_theme], color=T.SECONDARY, height=0.66)
+    if delta_mode:
+        tvals = [v - base_theme.get(t, 0.0) for t, v in bio_theme]
+        ax_bsv.barh(list(yt), tvals, color=[T.UP if v >= 0 else T.DOWN for v in tvals], height=0.66)
+        ax_bsv.axvline(0, color=T.MUTED, linewidth=0.8)
+        ax_bsv.set_title("4 · ΔBiochemical State Vector", fontsize=11, color=T.INK)
+        ax_bsv.set_xlabel("Δ evidence share", fontsize=8.5)
+    else:
+        ax_bsv.barh(list(yt), [v for _, v in bio_theme], color=T.SECONDARY, height=0.66)
+        ax_bsv.set_title("4 · Biochemical State Vector", fontsize=11, color=T.INK)
+        ax_bsv.set_xlabel("evidence share", fontsize=8.5)
     ax_bsv.set_yticks(list(yt))
     ax_bsv.set_yticklabels([THEME_SHORT.get(t, t) for t, _ in bio_theme], fontsize=7.6)
-    ax_bsv.set_title("4 · Biochemical State Vector", fontsize=11, color=T.INK)
-    ax_bsv.set_xlabel("evidence share", fontsize=8.5); ax_bsv.tick_params(labelsize=7.5)
-    ax_bsv.grid(axis="y", visible=False)
+    ax_bsv.tick_params(labelsize=7.5); ax_bsv.grid(axis="y", visible=False)
 
-    # 5 · radar
-    _draw_radar(ax_rad, out.radar["axes"], labelsize=8.2, radial_max=radar_radial_max)
-    ax_rad.set_title("5 · Radar — one visualization of the BSV", fontsize=11, color=T.INK, pad=16)
+    # 5 · radar — Δ vs baseline (honest for weak adsorbers) if provided, else absolute
+    if delta_axes is not None:
+        _draw_delta_radar(ax_rad, delta_axes, delta_scale or 1.0, labelsize=8.2)
+        ax_rad.set_title("5 · Radar — ΔBSV vs baseline (out=up, in=down)", fontsize=11,
+                         color=T.INK, pad=16)
+    else:
+        _draw_radar(ax_rad, out.radar["axes"], labelsize=8.2, radial_max=radar_radial_max)
+        ax_rad.set_title("5 · Radar — BSV composition (absolute)", fontsize=11, color=T.INK, pad=16)
 
     # dose label + stats
     for a in (ax_lbl, ax_stat):
@@ -726,10 +766,16 @@ def reasoning_cascade(bridge, coord, dose_label="", domain="buffer", radar_radia
                 fontweight="700", color=T.INK)
     ax_lbl.text(0.5, 0.32, "concentration", ha="center", va="center", fontsize=9, color=T.FAINT)
     b = out.bsv
+    if delta_mode:
+        gained = max(acts, key=lambda a: a.composition - base_mss.get(a.id, 0.0)
+                     if not a.non_biochemical else -9)
+        top_line = f"top Δ motif  {gained.name}"
+    else:
+        top_line = f"top motif    {bio_acts[-1].name}"
     stat = (f"confidence   {b.overall_confidence:.2f}\n"
             f"OOD score    {b.ood_score:.2f}\n"
             f"background   {b.non_biochemical.get('background_matrix', 0):.2f}\n"
-            f"top motif    {bio_acts[-1].name}")
+            f"{top_line}")
     ax_stat.text(0.0, 0.6, stat, ha="left", va="center", fontsize=9.2, color=T.MUTED,
                  family="monospace")
 

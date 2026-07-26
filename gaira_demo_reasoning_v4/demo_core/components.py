@@ -135,6 +135,24 @@ def related(pairs):
                 goto(label)
 
 
+def radar_guide():
+    """Shared 'how to read the radars' explainer — prevents the absolute-vs-delta confusion."""
+    with st.expander("ⓘ How to read the radars (absolute vs Δ)"):
+        st.markdown(
+            "- **Absolute radar** = the full biochemical *composition* (11 theme shares that sum "
+            "to ~1). Because every spectrum sits on the same dominant background, the absolute "
+            "radar barely changes between conditions — and for a **weak Ag adsorber it reflects "
+            "the SERS background** (purine/citrate from uric acid + hypoxanthine), *not* the "
+            "analyte. Treat it as 'what is this spectrum, mostly background'.\n"
+            "- **Δ (delta) radar** = the signed *change* vs a baseline (zero dose, or the control "
+            "group) on a shared centred scale. **Lobes out = increased, in = decreased.** This is "
+            "the honest headline — it isolates what the perturbation or the disease actually did.\n"
+            "- **Axes are coupled evidence shares, not independent concentrations.** A rise in one "
+            "theme mechanically lowers the others (compositional closure), which is why the "
+            "*direction* and the target-theme dose-response matter more than any single axis' "
+            "absolute height.")
+
+
 def scaffold_note(planned):
     """Honest placeholder for a page still being built out (page-by-page cadence)."""
     body = "".join(f"<li>{x}</li>" for x in planned)

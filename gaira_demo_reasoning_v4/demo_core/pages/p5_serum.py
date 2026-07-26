@@ -82,6 +82,34 @@ def _dataset_summary():
                 'table, not a remembered number.</div>', unsafe_allow_html=True)
 
 
+def _paper_validation():
+    st.markdown("### B+ · Validated against the source paper")
+    st.markdown(
+        '<div class="gaira-take"><b>GAIRA independently recovered the published finding.</b> '
+        'The source Ag-SERS serum study '
+        '(<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12680727/">PMC12680727</a>) spiked '
+        'serum with tyrosine (55 µM), lactose (100 µM), uric acid (280 µM), hypoxanthine (10 µM), '
+        '<b>adenine (0.3–0.4 µM)</b>, CoA (100 µM) and more, and reported that — despite serum '
+        'holding &gt;4000 metabolites — <b>only uric acid and hypoxanthine produce a meaningful '
+        '(~2×) SERS signal</b>; tyrosine, lactose, adenine and even millimolar glucose gave none, '
+        'because "concentration alone doesn\'t predict SERS visibility" (it is Ag adsorption '
+        'affinity + competition + protein steric hindrance). GAIRA\'s tiers, computed only from '
+        'the frozen Raman atlas, land in the same place: the strong tier is the oxopurines + '
+        'thiones; adenine at 0.4 µM and the high-concentration weak adsorbers are poor. This is '
+        'the physics of the measurement, reproduced from an independent representation.</div>',
+        unsafe_allow_html=True)
+    st.markdown(
+        '<div class="gaira-caveat"><b>One honest discrepancy — urate.</b> The paper calls uric '
+        'acid the <i>strongest</i> serum signal, yet GAIRA rates <b>urate "poor"</b> (direction '
+        'agreement 0.07). Both are correct because they measure different things: urate was spiked '
+        'at 280 µM into serum that is <i>already uric-acid-saturated</i> — urate IS the dominant '
+        'serum background — so adding more barely changes the <i>direction</i> of the state, even '
+        'though the <i>absolute</i> urate band is huge. GAIRA\'s metric is INCREMENTAL directional '
+        'recoverability of a spike, not absolute detectability. Read urate\'s "poor" as "a urate '
+        'spike is not separable from the urate background", not "urate is invisible".</div>',
+        unsafe_allow_html=True)
+
+
 # ── Section C ──
 def _tiers(b):
     st.markdown("### C · Recoverability tiers")
@@ -255,6 +283,8 @@ def render(bridge):
     _explainer()
     st.markdown("<hr/>", unsafe_allow_html=True)
     _dataset_summary()
+    st.markdown("<hr/>", unsafe_allow_html=True)
+    _paper_validation()
     st.markdown("<hr/>", unsafe_allow_html=True)
     _tiers(bridge)
     st.markdown("<hr/>", unsafe_allow_html=True)

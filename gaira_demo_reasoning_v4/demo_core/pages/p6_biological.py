@@ -127,7 +127,9 @@ def _study(art, bridge):
                            if dist["ratio"] > 1 else
                            "the group difference is SMALL relative to within-group spread."))
     with d2:
-        # 7 · dataset-specific: paired (SHINE) / balanced (diabetes) / MSS heatmap (else)
+        # 7 · dataset-specific: paired (SHINE) else the within-cohort BALANCED view (all cohorts).
+        # The balanced view standardizes each theme's deviation so a dominant baseline (the same
+        # problem COVID's absolute radar has) no longer hides the real group difference.
         if art["dataset_id"] in B.PAIRED:
             th = gc["rows"][0]["theme"]
             _, _, paired = B.paired_timepoint_theme(art, th)
@@ -136,15 +138,14 @@ def _study(art, bridge):
                      cap="Longitudinal change within each dose cohort (cohort-level pairing).",
                      interp="Paired-by-dose structure that pooled analysis hides (e.g. a dose×time "
                              "interaction).")
-        elif art["dataset_id"] == "diabetes_plasma_ev_sers":
+        else:
             themes, za, zb = B.balanced_view(art)
             C.figure(F.balanced_bars(themes, za, zb, a, b),
-                     cap="Exploratory balanced view: standardized theme deviations so a dominant "
-                         "axis does not obscure the rest. Display only — canonical BSV unchanged.")
-        else:
-            Zm, gm, lm, sam = B.heatmap_matrix(art, "motifs_mat")
-            C.figure(F.sample_heatmap(Zm, gm, lm, strata=sam, title="Sample-level MSS heatmap (display only)"),
-                     cap="MSS-level structure, which broad themes can suppress.")
+                     cap="Within-cohort BALANCED view: each theme's deviation standardized so no "
+                         "dominant baseline hides the rest (the fix for overlapping absolute "
+                         "radars). Display only — the canonical BSV is unchanged.",
+                     interp="This is how to see a real-but-small group difference for near-null "
+                             "cohorts, instead of two overlapping absolute polygons.")
 
     # 8 · summary + interpretation (demoted radar/PCA to expanders)
     with st.expander("Absolute BSV radar + sample-space PCA (summary views)"):
@@ -168,6 +169,19 @@ def _study(art, bridge):
                 f'Leading theme: <i>{F.THEME_SHORT.get(top_row["theme"], top_row["theme"])}</i> '
                 f'Δ={top_row["delta"]:+.3f} (δ={top_row["cliffs_delta"]:+.2f}, q={top_row["q"]:.3f}); '
                 f'{n_sig} themes FDR-significant; heterogeneity ratio {dist["ratio"]:.2f}.</div>',
+                unsafe_allow_html=True)
+
+    # per-cohort biochemical interpretation (top MSS motif drivers, cautious language) — for ALL
+    _, _, mids2, mdelta2 = B.motif_contrast(art)
+    mnames2 = {m.id: m.name for m in bridge.mss.motifs}
+    mdrivers = sorted([(mnames2[mids2[i]], mdelta2[i]) for i in range(len(mids2))
+                       if mids2[i] != "colloid_matrix_background"], key=lambda x: -abs(x[1]))[:3]
+    driver_txt = ", ".join(f"{n} ({d:+.3f})" for n, d in mdrivers)
+    st.markdown(f'<div class="gaira-card"><b>Biochemical interpretation ({a} vs {b}).</b> '
+                f'The leading MSS motif drivers are {driver_txt}. Consistent with a relative shift '
+                f'in {F.THEME_SHORT.get(top_row["theme"], top_row["theme"])}-associated chemistry '
+                f'within this cohort; this is an association at the motif level, not a molecule, '
+                f'pathway or diagnosis. {DOMAIN_NOTE.get(art["domain"], "")}</div>',
                 unsafe_allow_html=True)
 
     if characterization:
@@ -213,6 +227,7 @@ def render(bridge):
         "association-level language throughout.")
     C.question("What biochemical-state differences does the V6 architecture identify in real "
                "biological datasets — and how much should each be trusted?")
+    C.radar_guide()
 
     _registry()
     st.markdown("<hr/>", unsafe_allow_html=True)

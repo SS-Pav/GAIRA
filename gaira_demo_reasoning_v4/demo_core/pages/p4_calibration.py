@@ -118,11 +118,14 @@ def _addition_study(b, cal, method, mechanism_note):
                             value=float(levels[-1]), key=f"slider_{cal.key}")
     idx = int(np.argmin(np.abs(levels - dose)))
     C.figure(F.reasoning_cascade(b, P["mean_coord"][idx], dose_label=f"{levels[idx]:.2f} µM",
-                                 radar_radial_max=P["radar_abs_max"]),
+                                 delta_axes=P["delta_axes"][idx], delta_scale=P["delta_max"],
+                                 baseline_coord=P["mean_coord"][0]),
              cap="The GAIRA reasoning cascade at the selected concentration. Spectrum → latent "
-                 "components → MSS motifs → BSV → radar, computed live by the frozen engine.",
-             interp="As you raise the dose, watch the target motif strengthen and the radar move "
-                     "toward the expected biochemical system.")
+                 "components → MSS motifs → BSV → radar (panel 5 is ΔBSV vs the zero-dose "
+                 "baseline), computed live by the frozen engine.",
+             interp="Panel 5 shows the signed CHANGE vs baseline — the honest headline. For a weak "
+                     "Ag adsorber the ABSOLUTE radar is dominated by the SERS background "
+                     "(purine/citrate), so only the Δ reveals the analyte's own motif.")
     C.debug_panel(b, P["mean_coord"][idx], f"calibration:{cal.key}",
                   extra={"dose_uM": f"{levels[idx]:.2f}", "n_doses": len(levels)})
 
@@ -391,6 +394,7 @@ def render(bridge):
         "that GAIRA reasons, rather than classifies.")
     C.question("When we deliberately add or remove a known analyte, does the corresponding MSS "
                "motif and biochemical theme respond monotonically, specifically, and reproducibly?")
+    C.radar_guide()
 
     t_ade, t_erg, t_uri, t_cmp = st.tabs(
         ["Adenine", "Ergothioneine", "Uricase depletion", "Compare the three"])
