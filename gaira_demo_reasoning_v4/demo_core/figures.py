@@ -64,16 +64,41 @@ def architecture_diagram():
     return fig
 
 
+# fixed angular order so a theme is ALWAYS at the same radar position (the engine
+# returns axes sorted by score, which would move themes around between conditions).
+CANONICAL_THEME_ORDER = [
+    "nucleic_purine", "nucleic_pyrimidine", "protein_peptide", "aromatic_amino_acid",
+    "lipid_acyl", "sterol_membrane", "saccharide_glycan", "organic_acid_metabolism",
+    "sulfur_antioxidant", "heme_porphyrin", "redox_broad"]
+
+
+def _order_axes(axes):
+    """Sort radar-axis dicts into the fixed canonical theme order (stable positions)."""
+    rank = {t: i for i, t in enumerate(CANONICAL_THEME_ORDER)}
+    return sorted(axes, key=lambda a: rank.get(a["theme"], 99))
+
+
 # ── biochemical theme radar (the engine's canonical radar backend) ──
 def _draw_radar(ax, radar_axes, score_key="score", color=T.PRIMARY, labelsize=9,
-                ref_axes=None):
-    """Draw the engine radar onto a polar axis. Optional faint reference overlay."""
+                ref_axes=None, radial_max=None):
+    radar_axes = _order_axes(radar_axes)
+    if ref_axes is not None:
+        ref_axes = _order_axes(ref_axes)
+    """Draw the engine radar onto a polar axis. Optional faint reference overlay.
+
+    radial_max: FIXED radial scale shared across a comparison (doses / groups). When
+    None the axis auto-scales to this figure's own peak — which HIDES change across a
+    series (the dominant axis is always pinned to the edge), so callers comparing
+    conditions MUST pass a shared radial_max."""
     vals = [a[score_key] for a in radar_axes]
     labels = [THEME_SHORT.get(a["theme"], a["theme"]) for a in radar_axes]
     ang = np.linspace(0, 2 * np.pi, len(vals), endpoint=False)
     ang_c = np.concatenate([ang, ang[:1]]); v_c = np.array(vals + vals[:1])
-    peak = max(vals + ([max(a[score_key] for a in ref_axes)] if ref_axes else []))
-    vmax = peak * 1.18 if peak > 0 else 1.0
+    if radial_max is not None:
+        vmax = radial_max
+    else:
+        peak = max(vals + ([max(a[score_key] for a in ref_axes)] if ref_axes else []))
+        vmax = peak * 1.18 if peak > 0 else 1.0
     ax.set_theta_offset(np.pi / 2); ax.set_theta_direction(-1)
     ax.set_ylim(0, vmax)
     ax.set_yticks([vmax / 2]); ax.set_yticklabels([f"{vmax/2:.2f}"], color=T.FAINT, fontsize=7.5)
@@ -88,12 +113,13 @@ def _draw_radar(ax, radar_axes, score_key="score", color=T.PRIMARY, labelsize=9,
     ax.spines["polar"].set_color(T.PANEL_EDGE)
 
 
-def radar(radar_axes, title="Biochemical State Vector", score_key="score", ref_axes=None):
+def radar(radar_axes, title="Biochemical State Vector", score_key="score", ref_axes=None,
+          radial_max=None):
     """Plot the engine's radar (out.radar['axes']). Uses composition share by
     default — it stays informative in- AND out-of-domain, unlike the tanh display
     value which saturates for far-OOD SERS inputs."""
     fig, ax = plt.subplots(figsize=(5.6, 5.6), subplot_kw={"polar": True})
-    _draw_radar(ax, radar_axes, score_key=score_key, ref_axes=ref_axes)
+    _draw_radar(ax, radar_axes, score_key=score_key, ref_axes=ref_axes, radial_max=radial_max)
     ax.set_title(title + "  ·  evidence share", fontsize=12.0, color=T.INK, pad=18)
     fig.tight_layout()
     return fig
@@ -104,6 +130,7 @@ def delta_radar(delta_axes, shared_max, title="ΔBSV vs baseline", subtitle=""):
     """Signed radar: theme deltas mapped to radius with 0 at the mid-ring, positive
     (increase) outward, negative (decrease) inward. Shared symmetric scale across the
     experiment — NO per-sample rescaling. Lobes out = up, in = down."""
+    delta_axes = _order_axes(delta_axes)
     themes = [a["theme"] for a in delta_axes]
     deltas = np.array([a["delta"] for a in delta_axes])
     labels = [THEME_SHORT.get(t, t) for t in themes]
@@ -140,7 +167,7 @@ def dose_delta_radar_grid(delta_axes_list, levels, shared_max, target_theme, ana
                              subplot_kw={"polar": True})
     axes = np.atleast_1d(axes)
     for ax, i in zip(axes, idx):
-        da = delta_axes_list[i]
+        da = _order_axes(delta_axes_list[i])
         themes = [a["theme"] for a in da]
         deltas = np.array([a["delta"] for a in da])
         r = 0.5 + 0.5 * np.clip(deltas / M, -1, 1)
@@ -633,9 +660,12 @@ def trajectory_2d(proj, levels, var, ref_cloud=None, cmap_label="dose (µM)",
 
 
 # ── THE signature figure: the full reasoning cascade at one concentration ──
-def reasoning_cascade(bridge, coord, dose_label="", domain="buffer"):
+def reasoning_cascade(bridge, coord, dose_label="", domain="buffer", radar_radial_max=None):
     """Spectrum → Components → MSS → BSV → Radar, all for one query. The iconic
-    GAIRA figure: move the concentration slider and every panel updates together."""
+    GAIRA figure: move the concentration slider and every panel updates together.
+
+    radar_radial_max: fixed radar scale shared across the dose series so the radar
+    genuinely GROWS with dose instead of auto-rescaling to look static."""
     out, acts = bridge.bsv_and_mss(coord, domain=domain)
     grid, spec = bridge.reconstruct(coord)
     comp = np.asarray(out.bsv.component_coord)
@@ -686,7 +716,7 @@ def reasoning_cascade(bridge, coord, dose_label="", domain="buffer"):
     ax_bsv.grid(axis="y", visible=False)
 
     # 5 · radar
-    _draw_radar(ax_rad, out.radar["axes"], labelsize=8.2)
+    _draw_radar(ax_rad, out.radar["axes"], labelsize=8.2, radial_max=radar_radial_max)
     ax_rad.set_title("5 · Radar — one visualization of the BSV", fontsize=11, color=T.INK, pad=16)
 
     # dose label + stats
@@ -923,6 +953,7 @@ GROUP_COLORS = [T.PRIMARY, T.UP, T.GOOD, T.WARN]
 
 def multi_radar(series, title="Group biochemical state (absolute atlas position)"):
     """Overlay several groups' absolute-BSV radars (composition share)."""
+    series = [{**s, "axes": _order_axes(s["axes"])} for s in series]
     peak = max(max(a["score"] for a in s["axes"]) for s in series)
     vmax = peak * 1.18 if peak > 0 else 1.0
     fig, ax = plt.subplots(figsize=(5.8, 5.8), subplot_kw={"polar": True})

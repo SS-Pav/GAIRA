@@ -68,3 +68,34 @@ Added deterministic mechanism metrics instead of relying on unsupervised PCA of 
 delta radar is exactly zero at baseline and non-zero at top dose; the target theme
 moves in the correct direction (adenine purine ↑, ergothioneine sulfur ↑, uricase
 purine ↓); and adenine redistributes more than ergothioneine scales.
+
+---
+
+## Correction to this audit — two REAL rendering bugs were found later
+
+The earlier conclusion ("computation correct; apparent flatness is only compositional
+closure") was **incomplete**. The BSV/engine are indeed correct (radar == BSV), but the
+radar *rendering* had two real bugs that made the cascade and group radars look static:
+
+1. **Per-figure auto-scaling.** `_draw_radar` set the radial max to *this figure's own*
+   peak (`peak × 1.18`). Since the dominant theme (purine for adenine) is the peak at
+   EVERY dose, it was pinned to the outer edge in every frame → the polygon looked
+   identical while the numbers changed (0.18 → 0.32). **Fix:** a `radial_max` parameter;
+   the calibration cascade now passes a scale shared across the whole dose series, so
+   the purine spoke visibly grows with the slider. Group radars already shared scale
+   across groups.
+
+2. **Score-sorted axis order.** The engine returns radar axes sorted by score, so a
+   theme sat at a *different angle* in each frame — impossible to compare. **Fix:** a
+   fixed `CANONICAL_THEME_ORDER` applied to every radar (cascade, delta, multi-group,
+   dose grid) so each theme is always at the same position.
+
+3. **Biological group radars** overlapped because absolute composition differs by only a
+   few percent between cohorts. **Fix:** the group comparison now shows a signed
+   **delta radar** (group A − group B, centred shared scale) beside the effect-size
+   forest — diabetes purine points clearly inward (−0.052); the absolute overlay is
+   demoted. COVID's delta radar honestly hugs the zero ring (near-null).
+
+Regression tests lock all three in: canonical order is stable across inputs, the fixed
+shared scale makes the purine radius grow >0.2 across the dose series, and the biological
+delta radar exposes the purine difference.

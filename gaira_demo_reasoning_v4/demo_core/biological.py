@@ -112,6 +112,18 @@ def group_theme_means(art):
     return themes, means
 
 
+def group_delta_axes(art):
+    """Signed per-biochemical-theme composition delta (group_a − group_b) in radar-axis
+    schema — the difference the absolute overlapping polygons cannot show."""
+    a, b = CONTRAST[art["dataset_id"]]
+    themes, means = group_theme_means(art)
+    bio = [t for t in themes if t not in ("background_matrix", "unknown_mixed")]
+    idx = {t: i for i, t in enumerate(themes)}
+    axes = [{"theme": t, "delta": float(means[a][idx[t]] - means[b][idx[t]])} for t in bio]
+    shared = max(abs(x["delta"]) for x in axes) if axes else 1.0
+    return a, b, axes, shared
+
+
 def group_radar_axes(art, group):
     """Radar-axis dicts (engine schema) for one group's absolute theme means."""
     themes, means = group_theme_means(art)

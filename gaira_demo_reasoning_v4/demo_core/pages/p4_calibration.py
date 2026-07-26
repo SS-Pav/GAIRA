@@ -47,6 +47,9 @@ def _prep_dose(_ck, cal_key, method):
     delta_axes = [CAL.radar_delta_axes(b, mc, s.mean_coord[0]) for mc in s.mean_coord]
     delta_max = max(max(abs(a["delta"]) for a in ax) for ax in delta_axes) if delta_axes else 1.0
     abs_axes = [b.infer(mc).radar["axes"] for mc in s.mean_coord]
+    # shared FIXED radar scale across the whole dose series so the cascade radar grows
+    # with dose instead of auto-rescaling to look static
+    radar_abs_max = max(max(a["score"] for a in ax) for ax in abs_axes) * 1.1
     redistribution = CAL.redistribution_index(b, s)
     scaling = CAL.scaling_metrics(b, s)
     # interpretable-axis MSS trajectory (composition): target motif vs the top OTHER mover
@@ -59,7 +62,7 @@ def _prep_dose(_ck, cal_key, method):
                 delta_axes=delta_axes, delta_max=float(delta_max), abs_axes=abs_axes,
                 redistribution=redistribution, scaling=scaling,
                 traj_x=evo_comp[cal.target_motif], traj_y=evo_comp[other],
-                traj_xid=cal.target_motif, traj_yid=other)
+                traj_xid=cal.target_motif, traj_yid=other, radar_abs_max=float(radar_abs_max))
 
 
 @st.cache_data(show_spinner=False)
@@ -114,7 +117,8 @@ def _addition_study(b, cal, method, mechanism_note):
     dose = st.select_slider("Concentration (µM)", options=[float(x) for x in levels],
                             value=float(levels[-1]), key=f"slider_{cal.key}")
     idx = int(np.argmin(np.abs(levels - dose)))
-    C.figure(F.reasoning_cascade(b, P["mean_coord"][idx], dose_label=f"{levels[idx]:.2f} µM"),
+    C.figure(F.reasoning_cascade(b, P["mean_coord"][idx], dose_label=f"{levels[idx]:.2f} µM",
+                                 radar_radial_max=P["radar_abs_max"]),
              cap="The GAIRA reasoning cascade at the selected concentration. Spectrum → latent "
                  "components → MSS motifs → BSV → radar, computed live by the frozen engine.",
              interp="As you raise the dose, watch the target motif strengthen and the radar move "

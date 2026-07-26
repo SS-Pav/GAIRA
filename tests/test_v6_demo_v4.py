@@ -145,6 +145,48 @@ def test_joint_trajectories_three_classes_render():
     plt.close(fig)
 
 
+# ── radar rendering fixes: fixed shared scale + canonical axis order ──
+@needs_art
+def test_radar_canonical_axis_order_is_stable():
+    """A theme must sit at the SAME radar angle regardless of its score (the engine
+    returns axes sorted by score, which would move themes between conditions)."""
+    from demo_core import figures as F
+    from demo_core.engine_bridge import Bridge
+    b = Bridge()
+    lo = b.infer(np.full(24, 1.0 / 24)).radar["axes"]
+    a = np.zeros(24); a[3] = 1.0
+    hi = b.infer(a).radar["axes"]
+    order_lo = [x["theme"] for x in F._order_axes(lo)]
+    order_hi = [x["theme"] for x in F._order_axes(hi)]
+    assert order_lo == order_hi == F.CANONICAL_THEME_ORDER
+
+
+@needs_art
+def test_radar_fixed_scale_is_shared_not_per_figure():
+    """With a shared radial_max, a theme's plotted radius reflects its ABSOLUTE value —
+    so growth across a dose series is visible instead of auto-rescaled away."""
+    from demo_core import figures as F, calibration as CAL, data as D
+    from demo_core.engine_bridge import Bridge
+    b = Bridge()
+    s = CAL.build_dose_series(D.calibration("adenine"), method=CAL.ADENINE_METHOD)
+    ax_lo = b.infer(s.mean_coord[0]).radar["axes"]
+    ax_hi = b.infer(s.mean_coord[-1]).radar["axes"]
+    pur_lo = next(x["score"] for x in ax_lo if x["theme"] == "nucleic_purine")
+    pur_hi = next(x["score"] for x in ax_hi if x["theme"] == "nucleic_purine")
+    shared = max(max(x["score"] for x in ax_lo), max(x["score"] for x in ax_hi)) * 1.1
+    # on the shared scale the purine radius genuinely grows (was pinned to the edge before)
+    assert pur_hi / shared - pur_lo / shared > 0.2
+
+
+@needs_art
+def test_biological_group_delta_radar_reveals_difference():
+    from demo_core import biological as B
+    art = B.load("diabetes_plasma_ev_sers")
+    a, bb, axes, shared = B.group_delta_axes(art)
+    dpur = next(x["delta"] for x in axes if x["theme"] == "nucleic_purine")
+    assert dpur < -0.02 and shared > 0.02       # the purine difference is visible on the delta radar
+
+
 # ── Part 2/3: calibration radar + mechanism corrections ──
 @needs_art
 def test_calibration_radars_differ_across_doses():

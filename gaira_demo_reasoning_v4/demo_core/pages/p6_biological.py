@@ -81,13 +81,21 @@ def _study(art, bridge):
              cap="OOD, confidence and matrix-share per group — the data-quality context for every "
                  "downstream claim.")
 
-    # 3 · THEME effect sizes (PRIMARY — not a radar, not a PCA)
+    # 3 · THEME effect sizes (PRIMARY — the group DIFFERENCE, two ways; never overlapping absolutes)
     st.markdown("##### Theme effect sizes  ·  the primary group comparison")
-    C.figure(F.forest_plot(gc["rows"], a, b, title=f"ΔBSV ({a} − {b})"),
-             cap="Signed theme difference with 95% bootstrap CI; green = FDR q<0.05; δ = Cliff's "
-                 "delta (effect size, emphasised over p).",
-             interp="Effect size (δ), not the p-value, is the headline — small effects at large n "
-                     "are flagged as near-null, not 'significant biology'.")
+    _, _, dax, dmax = B.group_delta_axes(art)
+    fc1, fc2 = st.columns([1.15, 1.0], gap="large")
+    with fc1:
+        C.figure(F.forest_plot(gc["rows"], a, b, title=f"ΔBSV ({a} − {b})"),
+                 cap="Signed theme difference with 95% bootstrap CI; green = FDR q<0.05; δ = "
+                     "Cliff's delta (effect size, emphasised over p).",
+                 interp="Effect size (δ), not the p-value, is the headline.")
+    with fc2:
+        C.figure(F.delta_radar(dax, dmax, f"{art['display_name'].split()[0]} ΔBSV",
+                               f"{a} − {b} (shared scale ±{dmax:.3f})"),
+                 cap="The SAME group difference as a signed radar (lobes out = higher in "
+                     f"{a}, in = higher in {b}). Absolute-composition group radars overlap and "
+                     "hide this — so the delta is shown instead.")
 
     # 4 · MSS drivers + 5 · component provenance
     _, _, motif_ids, mdelta = B.motif_contrast(art)
