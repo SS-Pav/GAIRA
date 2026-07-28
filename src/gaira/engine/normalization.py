@@ -9,19 +9,21 @@ import json
 from pathlib import Path
 import numpy as np
 
-REPO = Path(__file__).resolve().parents[3]
-ARTIFACTS = REPO / "results/v5_rebuild/engine_v1/artifacts"
+from . import paths
+
+REPO = paths.REPO
+ARTIFACTS = paths.LEGACY_ENGINE
 
 
 class ReferenceFrame:
     def __init__(self, path=None):
-        path = Path(path) if path else ARTIFACTS / "reference_normalization_v1.json"
+        path = Path(path) if path else paths.frozen_file("reference_normalization_v1.json")
         d = json.loads(path.read_text())
         self.center = np.asarray(d["component_center"], float)
         self.spread = np.asarray(d["component_spread"], float)
         self.fingerprint = d["atlas_fingerprint"]
         self.n_reference = d["n_reference_spectra"]
-        sup = np.load(ARTIFACTS / "reference_support.npz", allow_pickle=True)
+        sup = np.load(paths.frozen_file("reference_support.npz"), allow_pickle=True)
         self._support = sup["support_unit"]
 
     def zscore(self, coord):

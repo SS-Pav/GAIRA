@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gaira"
+version = "0.5.0"
+description = "GAIRA — a frozen, reproducible biochemical coordinate system for Raman spectroscopy"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Proprietary" }
+authors = [{ name = "GAIRA" }]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "pandas>=2.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+apps = ["streamlit>=1.40", "plotly>=5.20", "matplotlib>=3.7"]
+benchmark = ["torch>=2.0"]      # only to re-run the representation benchmark
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["gaira*"]
+
+# The frozen model bundle (assets/foundation/) is data, loaded from the repo tree at
+# runtime by gaira.engine.paths; it is not packaged as importable Python.

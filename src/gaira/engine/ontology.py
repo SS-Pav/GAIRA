@@ -10,9 +10,11 @@ from pathlib import Path
 import numpy as np
 import yaml
 
-REPO = Path(__file__).resolve().parents[3]
-DATA = Path(__file__).resolve().parent / "data"
-ARTIFACTS = REPO / "results/v5_rebuild/engine_v1/artifacts"
+from . import paths
+
+REPO = paths.REPO
+DATA = paths.PKG_DATA
+ARTIFACTS = paths.LEGACY_ENGINE
 
 # themes that are NOT biochemistry — surfaced for honesty, excluded from radar axes
 NON_BIOCHEMICAL_THEMES = {"background_matrix", "unknown_mixed"}
@@ -20,8 +22,9 @@ NON_BIOCHEMICAL_THEMES = {"background_matrix", "unknown_mixed"}
 
 class Ontology:
     def __init__(self, onto_path=None, weights_path=None):
-        onto_path = Path(onto_path) if onto_path else DATA / "biochemical_ontology_v2.yaml"
-        weights_path = Path(weights_path) if weights_path else ARTIFACTS / "component_theme_weights_v1.json"
+        onto_path = Path(onto_path) if onto_path else paths.frozen_file("biochemical_ontology_v2.yaml")
+        weights_path = (Path(weights_path) if weights_path
+                        else paths.frozen_file("component_theme_weights_v1.json"))
         self.raw = yaml.safe_load(onto_path.read_text())
         self.version = self.raw["version"]
         self.themes = {t["id"]: t for t in self.raw["themes"]}

@@ -60,8 +60,8 @@ class GAIRAEngine:
 
     def __init__(self):
         global FROZEN
-        from pathlib import Path
-        FROZEN = Path(__file__).resolve().parents[3] / "results/v5_rebuild/foundation/artifacts"
+        from . import paths
+        FROZEN = paths.foundation_dir()          # assets/foundation first, legacy fallback
         self.atlas = SER.load_frozen_manifold(FROZEN)
         self.builder = BSVBuilder()
         self.evidence = EvidenceEngine(ontology=self.builder.onto, registry=self.builder.reg)

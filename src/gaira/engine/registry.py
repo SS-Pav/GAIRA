@@ -9,14 +9,16 @@ import json
 from pathlib import Path
 import numpy as np
 
-REPO = Path(__file__).resolve().parents[3]
-ARTIFACTS = REPO / "results/v5_rebuild/engine_v1/artifacts"
-FROZEN = REPO / "results/v5_rebuild/foundation/artifacts"
+from . import paths
+
+REPO = paths.REPO
+ARTIFACTS = paths.LEGACY_ENGINE
+FROZEN = paths.LEGACY_FOUNDATION
 
 
 class ComponentRegistry:
     def __init__(self, path=None):
-        path = Path(path) if path else ARTIFACTS / "component_registry_v1.json"
+        path = Path(path) if path else paths.frozen_file("component_registry_v1.json")
         self.raw = json.loads(path.read_text())
         self.fingerprint = self.raw["atlas_fingerprint"]
         self.k = self.raw["n_components"]
@@ -40,7 +42,7 @@ class ComponentRegistry:
     def basis(self):
         """Frozen basis spectra (lazily loaded, never modified)."""
         if self._basis is None:
-            npz = np.load(FROZEN / "manifold_components.npz")
+            npz = np.load(paths.foundation_dir() / "manifold_components.npz")
             self._basis = (npz["components"], npz["grid"])
         return self._basis
 

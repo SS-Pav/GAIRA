@@ -1,198 +1,88 @@
-############################################
-# 🧠 GAIRA CORE IGNORE POLICY
-############################################
+# ============================================================================
+# GAIRA_Core — .gitignore
+#
+# GAIRA_Core is the frozen, portable scientific product: source, the frozen
+# foundation model (assets/foundation/), demos, reports, figures, tables and the
+# reproducible audit. It must clone-and-run with NO SSD_Rad / lab dependency.
+#
+# Policy: IGNORE only raw/lab data, machine-specific files, and regenerable
+# intermediate artifacts. NEVER ignore scientific assets (reports, figures,
+# tables, models, npz, csv, json, md) — they are the product.
+# ============================================================================
 
-# Never track raw/processed scientific data
+# ── Raw / laboratory data (lives in GAIRA_Lab / SSD_Rad, never in Core) ──
 data/
 GAIRA_DATA/
-Volumes/
-# macOS junk
-.DS_Store
-############################################
-# 🐍 PYTHON
-############################################
+/Volumes/
+*.mat
+*.rar
 
+# ── Python ──
 __pycache__/
 *.py[cod]
 *.pyo
-*.pyd
-*.pyc
+*.egg-info/
+build/
+dist/
+.eggs/
 
-############################################
-# 🧪 VIRTUAL ENVIRONMENTS
-############################################
-
+# ── Virtual environments ──
 .venv/
+.venv_old_migrated/
 venv/
 env/
 ENV/
 
-############################################
-# 💻 OS / SYSTEM FILES
-############################################
-
-.DS_Store
-Thumbs.db
-
-############################################
-# 🗃 DATABASES
-############################################
-
-*.duckdb
-*.sqlite
-*.db
-
-############################################
-# 📊 LARGE / BINARY SCIENTIFIC FILES
-############################################
-
-*.mat
-*.npz
-*.npy
-*.parquet
-*.feather
-
-############################################
-# 📄 DOCUMENTS (RAW PAPERS / EXPORTS)
-############################################
-
-*.pdf
-*.docx
-*.pptx
-
-############################################
-# 📦 ARCHIVES
-############################################
-
-*.zip
-*.tar
-*.gz
-
-############################################
-# 📈 LOGS & TEMP
-############################################
-
-logs/
-*.log
-tmp/
-temp/
-*.tmp
-
-############################################
-# 📓 JUPYTER
-############################################
-
+# ── Notebooks ──
 .ipynb_checkpoints/
 
-############################################
-# 🎨 PLOTS / REPORTS / GENERATED OUTPUT
-############################################
+# ── OS / editor ──
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
 
-reports/
-figures/
-plots/
-
-############################################
-# ⚙️ STREAMLIT / CACHE
-############################################
-
-.streamlit/
-.matplotlib-cache/
-
-############################################
-# 🔍 DISCOVERY / PIPELINE ARTIFACTS
-############################################
-
-data/discovery/
-data/targeted/
-data/interim/
-data/processed/
-data/exports/
-data/logs/
-
-############################################
-# 🧠 CLAUDE / MCP (IMPORTANT)
-############################################
-
+# ── Agent / machine-specific ──
+.claude/
 .claude_cache/
 .claude_logs/
 mcp_logs/
 
-############################################
-# 🔑 SECRETS / CREDENTIALS
-############################################
-.zshrc
+# ── Secrets ──
 .env
 .env.*
 *.secrets
 credentials/
+.streamlit/secrets.toml
 
-############################################
-# 🧪 EXPERIMENTAL OUTPUTS
-############################################
+# ── Logs & scratch (regenerable) ──
+logs/
+*.log
+/tmp/
+tmp/
+*.tmp
 
+# ── Databases / caches (regenerable) ──
+*.duckdb
+*.sqlite
+*.db
+*_audit_store.pkl
+.matplotlib-cache/
+
+# ── Intermediate / lab training artifacts (belong in GAIRA_Lab) ──
+results/v5_rebuild/phase2_stage_b/models/
 runs/
-outputs/
 checkpoints/
 
-############################################
-# 🚨 ACCIDENTAL FILES (like your DuckDB objects)
-############################################
+# ── Binary document exports (the .md source is tracked instead) ──
+*.pdf
+*.docx
+*.pptx
 
-<_duckdb*
-*.out
-*.err
-
-############################################
-# 🔐 OPTIONAL: PROTECT AGAINST LARGE FILE ACCIDENTS
-############################################
-
-# Uncomment if needed later
-# *.csv
-# *.json
-.venv/
-.venv_old_migrated/
-
-############################################
-# GAIRA reasoning demo v2 — keep its small bundled + generated data
-# (self-containment: legacy reference CSVs + derived grounding-evidence table).
-# Narrow negations of the broad `data/` rule above; nothing else re-included.
-############################################
-!gaira_demo_reasoning_v2/data/
-!gaira_demo_reasoning_v2/data/legacy/
-!gaira_demo_reasoning_v2/data/legacy/*.csv
-!gaira_demo_reasoning_v2/data/generated/
-!gaira_demo_reasoning_v2/data/generated/*.csv
-!gaira_demo_reasoning_v2/data/generated/*.json
-
-# NOTE: the five Stage-1 reports under reports/ are force-added (git add -f)
-# rather than un-ignored here, because negating individual files under the
-# ignored reports/ directory is not possible without re-including the whole
-# 356-file working area. Once tracked they remain tracked.
-
-############################################
-# GAIRA reasoning demo v3 — keep its small bundled + generated data
-# (legacy reference CSVs + frozen global-coordinate calibration artifacts).
-############################################
-!gaira_demo_reasoning_v3/data/
-!gaira_demo_reasoning_v3/data/legacy/
-!gaira_demo_reasoning_v3/data/legacy/*.csv
-!gaira_demo_reasoning_v3/data/generated/
-!gaira_demo_reasoning_v3/data/generated/*.csv
-!gaira_demo_reasoning_v3/data/generated/*.json
-
-############################################
-# GAIRA reasoning demo v3.1 — bundled + generated data (incl. diabetes
-# equivalence artifacts and frozen calibration copy).
-############################################
-!gaira_demo_reasoning_v3_1/data/
-!gaira_demo_reasoning_v3_1/data/legacy/
-!gaira_demo_reasoning_v3_1/data/legacy/*.csv
-!gaira_demo_reasoning_v3_1/data/generated/
-!gaira_demo_reasoning_v3_1/data/generated/**
-
-############################################
-# GAIRA V5 canonical source package src/gaira/data (source code, not a data dir)
-############################################
-!src/gaira/data/
-!src/gaira/data/*.py
+# NOTE ON SCIENTIFIC ASSETS
+# The following are DELIBERATELY tracked (do NOT add ignore rules for them):
+#   *.npz *.npy  (frozen NMF basis, reference support)
+#   *.csv *.json (tables, registries, weights, metadata)
+#   *.png        (figures)
+#   *.md         (reports, documentation)
+#   reports/ figures/ tables/ components/ assets/foundation/

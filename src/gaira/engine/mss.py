@@ -124,7 +124,9 @@ class MSSLayer:
         assert self.reg.fingerprint == self.onto.atlas_fingerprint == VERSIONS.atlas_fingerprint, \
             "MSS layer: frozen atlas fingerprints disagree"
         self.k = self.onto.k
-        spec = yaml.safe_load((Path(motif_path) if motif_path else DATA / "mss_motifs_v1.yaml").read_text())
+        from . import paths
+        spec = yaml.safe_load((Path(motif_path) if motif_path
+                               else paths.frozen_file("mss_motifs_v1.yaml")).read_text())
         self.version = spec["version"]
         self.tol = float(spec["band_match_tolerance_cm"])
         d = spec["derivation"]
