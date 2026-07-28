@@ -1045,6 +1045,27 @@ def forest_plot(rows, a, b, title="ΔBSV effect sizes with 95% bootstrap CI"):
     return fig
 
 
+def matched_pairs_bar(pairs, median, title="Pure-Raman → pure-Ag-SERS transfer (51 analytes)"):
+    """Per-analyte cosine between the pure-Raman and pure-Ag-SERS component coordinates
+    (frozen space). Green = the dominant BSV theme survives the Raman→SERS transfer;
+    faint = the SERS representation lands on a different theme. Sorted best→worst."""
+    pairs = sorted(pairs, key=lambda p: p["coord_cosine"])
+    y = np.arange(len(pairs))
+    cos = [p["coord_cosine"] for p in pairs]
+    colors = [T.GOOD if p["theme_preserved"] else T.FAINT for p in pairs]
+    fig, ax = plt.subplots(figsize=(7.6, max(4.0, 0.24 * len(pairs))))
+    ax.barh(y, cos, color=colors, height=0.7, edgecolor="white", linewidth=0.4, zorder=3)
+    ax.axvline(median, color=T.UP, linewidth=1.4, linestyle="--", zorder=4,
+               label=f"median {median:.2f}")
+    ax.set_yticks(y); ax.set_yticklabels([p["analyte"] for p in pairs], fontsize=6.8)
+    ax.set_xlim(0, 1); ax.set_xlabel("cos(Raman coord, Ag-SERS coord) — 1 = signature preserved")
+    ax.set_title(title, fontsize=10.8, pad=8)
+    ax.legend(fontsize=8.4, loc="lower right", frameon=False)
+    ax.grid(axis="y", visible=False); ax.margins(y=0.005)
+    fig.tight_layout()
+    return fig
+
+
 def bio_pca(proj, groups, var, title="Sample space (PCA of BSV)"):
     fig, ax = plt.subplots(figsize=(6.4, 5.0))
     for k, g in enumerate(sorted(set(groups))):

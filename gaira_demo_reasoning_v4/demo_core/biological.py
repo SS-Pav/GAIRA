@@ -236,6 +236,33 @@ def balanced_view(art):
     return themes, za, zb
 
 
+def characterization_summary(dataset_id="gobbato_donor_sera"):
+    """Single-group cohort summary (no contrast): mean BSV composition + spread, top
+    themes, MSS motifs and data-quality (OOD/confidence/background). Used for the real
+    donor-sera panel on the Serum page — a distribution, not a difference."""
+    art = load(dataset_id)
+    if art is None:
+        return None
+    themes = art["theme_ids"]
+    bio = [i for i, t in enumerate(themes) if t not in ("background_matrix", "unknown_mixed")]
+    T = art["themes_mat"]
+    mean = T.mean(0)
+    axes = [{"theme": themes[i], "score": float(mean[i])} for i in bio]
+    order = sorted(bio, key=lambda i: -mean[i])
+    top = [(themes[i], float(mean[i]), float(T[:, i].std())) for i in order[:6]]
+    mmean = art["motifs_mat"].mean(0)
+    mtop = sorted(
+        [(mid, float(mmean[j])) for j, mid in enumerate(art["motif_ids"])
+         if mid != "colloid_matrix_background"], key=lambda x: -x[1])[:5]
+    return {
+        "art": art, "n": art["n_units"], "axes": axes, "top_themes": top, "top_motifs": mtop,
+        "ood": float(art["ood"].mean()), "conf": float(art["conf"].mean()),
+        "bg": float(art["bg"].mean()),
+        "purine_share": float(mean[themes.index("nucleic_purine")]) if "nucleic_purine" in themes else 0.0,
+        "source": art["source"],
+    }
+
+
 def study_centroids():
     """Cross-study biochemical centroids in a shared BSV space (generalization panel)."""
     rows, labels, oods = [], [], []

@@ -115,6 +115,56 @@ def load_shine():
     return _subsample(units, per_group=90, key=lambda u: (u["group"], u["strata"]))
 
 
+def _read_bwtek_zip(prefix):
+    """Yield (filename, wavenumber, intensity) for every BWSpec .txt under `prefix`
+    inside the Gobbato archive. Same parser contract as the spike-validation library
+    (Raman Shift + Dark Subtracted columns; cp1252; comma decimals)."""
+    import zipfile
+    zp = VOL / "serum_ag_colloids" / "dataset_spectral_data.zip"
+    if not zp.exists():
+        return
+    with zipfile.ZipFile(zp) as z:
+        for n in z.namelist():
+            if not (n.startswith(prefix) and n.endswith(".txt")):
+                continue
+            lines = z.read(n).decode("cp1252", errors="replace").splitlines()
+            hdr = next((i for i, l in enumerate(lines)
+                        if "Raman Shift" in l and "Dark Subtracted" in l), None)
+            if hdr is None:
+                continue
+            cols = [c.strip() for c in lines[hdr].split(";")]
+            try:
+                iw = cols.index("Raman Shift")
+                iy = next(i for i, c in enumerate(cols) if c.startswith("Dark Subtracted"))
+            except (ValueError, StopIteration):
+                continue
+            wn, y = [], []
+            for l in lines[hdr + 1:]:
+                p = l.split(";")
+                if len(p) <= max(iw, iy):
+                    continue
+                try:
+                    wn.append(float(p[iw].replace(",", ".")))
+                    y.append(float(p[iy].replace(",", ".")))
+                except ValueError:
+                    continue
+            if len(wn) < 100:
+                continue
+            o = np.argsort(wn)
+            yield n.split("/")[-1], np.array(wn)[o], np.array(y)[o]
+
+
+def load_gobbato_donor_sera():
+    """Gobbato 81 healthy-donor serum Ag-SERS spectra (785 nm, one per donor). The
+    paper's real inter-individual serum dataset — a SINGLE healthy-donor group (no
+    disease contrast). Characterization only: shows what real serum SERS looks like in
+    BSV space (the paper reports it is dominated by uric acid + hypoxanthine)."""
+    idx = 1
+    for fn, wn, y in _read_bwtek_zip("donors serum SERS/"):
+        yield {"group": "donor", "strata": None, "id": f"DONOR-{idx:03d}", "wn": wn, "y": y}
+        idx += 1
+
+
 def load_small2023():
     """small2023 EV (Parlatan et al.) — Probe-1 exosome Raman, 1131 ch. Axis from the
     SI Fig_S7 spreadsheet (recon-verified). A probe-CONCENTRATION titration of cell-line
@@ -173,6 +223,18 @@ DATASETS = {
                  "CSV; all demographics are excluded and identifiers are anonymised.",
                  "Impact vs Strong-D are study-specific cohort labels, not a clean disease/control "
                  "contrast."]),
+    "gobbato_donor_sera": dict(
+        loader=load_gobbato_donor_sera, display="Gobbato donor sera (real serum SERS)",
+        domain="serum", modality="SERS", substrate="Ag", excitation="785", aggregation="spectrum",
+        source="raw/serum_ag_colloids/dataset_spectral_data.zip -> donors serum SERS/ "
+               "(Gobbato 2025, DOI 10.1007/s00216-025-06192-5; 81 healthy-donor sera)",
+        caveats=["SINGLE healthy-donor group (81 donors, one spectrum each) — NO disease contrast; "
+                 "used for serum-SERS state-space characterization only, never a diagnosis.",
+                 "Real human serum on Ag colloid is strongly OUT-OF-DOMAIN for the Raman atlas; the "
+                 "absolute BSV reflects the Ag-adsorbed serum subset (purines dominate), not whole "
+                 "serum composition.",
+                 "The paper's own analysis: serum SERS variance is dominated by uric acid + "
+                 "hypoxanthine (PC1 ~70%). GAIRA is expected to echo purine/nucleobase dominance."]),
     "shine_ev_sers": dict(
         loader=load_shine, display="SHINE EV-SERS (hepatotoxicity)", domain="ev", modality="SERS",
         substrate="Ag", excitation="785", aggregation="spectrum",

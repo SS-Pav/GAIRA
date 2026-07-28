@@ -48,6 +48,14 @@ def _registry():
                 'not yet wired for V6 — no output is fabricated. The prior demo\'s per-cohort '
                 'radars used a <b>pre-V6</b> 8-axis engine and are NOT reused here.</div>',
                 unsafe_allow_html=True)
+    single = [k for k in avail if k not in B.CONTRAST]
+    if single:
+        names = ", ".join(avail[k]["display_name"] for k in single)
+        st.markdown(f'<div class="gaira-caveat">Single-group characterization cohorts ({names}) '
+                    'have no disease contrast, so they are not shown in the two-group template '
+                    'below. The 81 real donor sera are analysed on '
+                    '<b>Page 5 · Serum Spike Stress Test (Section B++)</b>.</div>',
+                    unsafe_allow_html=True)
 
 
 # ── Section B: standardized per-study template ──
@@ -233,7 +241,8 @@ def render(bridge):
     st.markdown("<hr/>", unsafe_allow_html=True)
 
     st.markdown("### B · Standardized study template")
-    avail = {k: v for k, v in B.available().items() if v["status"] == "REAL"}
+    avail = {k: v for k, v in B.available().items()
+             if v["status"] == "REAL" and k in B.CONTRAST}     # two-group template only
     if not avail:
         st.warning("No REAL V6 biological artifacts found. Run "
                    "`python tools/build_biological_v6.py` with the data volume mounted.")

@@ -257,6 +257,9 @@ def _adenine(b):
                 '<b>redistribute</b>: different latent motifs dominate at different concentrations '
                 '(c3/c13 rise while others fall). This is not simple scaling.</div>',
                 unsafe_allow_html=True)
+    C.caption("Source: European inter-laboratory (ILS) adenine reference-standard study — 15 labs, "
+              "cAg/sAg/cAu/sAu substrates, 532/785 nm (raw/european_multi_instrument_adenine). "
+              "This is a metrology round-robin, NOT the Gobbato serum paper.")
     st.write("")
     _addition_study(b, D.calibration("adenine"), CAL.ADENINE_METHOD,
                     "Colour = direction. c3/c13 (adenine/purine components) RISE while others FALL "
@@ -275,6 +278,9 @@ def _ergothioneine(b):
                 'calibrant: a thione that chemisorbs to silver. In contrast to adenine, the sulfur '
                 'motif largely <b>scales one dominant latent pattern</b> monotonically, giving a '
                 'near-textbook Langmuir dose-response.</div>', unsafe_allow_html=True)
+    C.caption("Source: Fornasaro et al. 2024, \"Detection and quantification of ergothioneine in "
+              "human serum using SERS\", Zenodo 10.5281/zenodo.13785349 "
+              "(raw/ergothioneine_serum/ERG_calibration.csv; cAg @ 785 nm).")
     st.write("")
     _addition_study(b, D.calibration("ergothioneine"), None,
                     "Contrast with adenine: the component evolution is dominated by scaling rather "
@@ -297,6 +303,8 @@ def _uricase(b):
                 'Uricase enzymatically removes urate from spiked serum. This is a knock-OUT, not an '
                 'addition: the read-out is what <i>decreases</i>. The difference isolates '
                 'purine-specific evidence.</div>', unsafe_allow_html=True)
+    C.caption("Source: Gobbato et al. 2025, Anal. Bioanal. Chem. (DOI 10.1007/s00216-025-06192-5; "
+              "PMC12680727) → dataset uricase/ (serum ± uricase, Ag @ 785 nm).")
     st.write("")
 
     st.markdown("##### Experimental setup")

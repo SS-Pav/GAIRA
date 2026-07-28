@@ -6,7 +6,7 @@ from __future__ import annotations
 import numpy as np
 import streamlit as st
 
-from .. import components as C, figures as F, serum as S, metrics as MET
+from .. import components as C, figures as F, serum as S, metrics as MET, biological as B
 from ..engine_bridge import get_bridge, cache_key
 
 TIER_LABELS = {"strong": "Strongly recoverable", "partial": "Partially / inconsistently recoverable",
@@ -108,6 +108,54 @@ def _paper_validation():
         'recoverability of a spike, not absolute detectability. Read urate\'s "poor" as "a urate '
         'spike is not separable from the urate background", not "urate is invisible".</div>',
         unsafe_allow_html=True)
+
+
+def _donor_sera(b):
+    """B++ — the paper's 81 real healthy-donor sera projected live through the frozen
+    V6 engine. A single-group characterization (no disease contrast); the point is that
+    GAIRA's BSV of real serum SERS is purine-dominated, exactly as the paper reports."""
+    d = B.characterization_summary("gobbato_donor_sera")
+    if d is None:
+        return
+    st.markdown("### B++ · Real donor sera confirm it — 81 spectra through the V6 engine")
+    st.markdown(
+        f'<div class="gaira-caption">The spike-in tiers above are pure-vs-serum <i>directions</i>. '
+        f'Here are the paper\'s <b>{d["n"]} real healthy-donor sera</b> themselves — every one '
+        f'projected live through the frozen atlas → BSV (committed sanitized artifact, atlas '
+        f'<code>09ed804a…</code>). No spike, no disease label; just what real serum SERS looks like '
+        f'in biochemical-state space.</div>', unsafe_allow_html=True)
+    c1, c2 = st.columns([1.0, 1.05], gap="large")
+    with c1:
+        C.figure(F.multi_radar([{"name": "donor sera (mean)", "axes": d["axes"]}],
+                               title="Mean BSV of 81 real donor sera"),
+                 cap="Absolute biochemical-state composition, averaged over 81 donors. One "
+                     "theme dominates.")
+    with c2:
+        st.markdown("**Mean composition across 81 donors** (± SD)")
+        for t, m, sd in d["top_themes"]:
+            st.markdown(f"- {F.THEME_SHORT.get(t, t)} — **{m:.3f}** (±{sd:.3f})")
+        C.stat_row([
+            (f"{d['purine_share']:.2f}", "purine/nucleobase share"),
+            (f"{d['ood']:.2f}", "mean OOD (out-of-domain)"),
+            (f"{d['conf']:.2f}", "mean confidence"),
+            (f"{d['bg']:.2f}", "matrix background"),
+        ])
+    st.markdown(
+        '<div class="gaira-take"><b>GAIRA reproduces the paper\'s central result on the real '
+        'sera, not just the spikes.</b> Gobbato et al. show that human serum SERS variance is '
+        'dominated by <b>uric acid + hypoxanthine</b> (their PC1 ≈ 70%). Run blind through the '
+        'frozen Raman atlas, the mean BSV of all 81 donor sera is led by the '
+        '<b>purine/nucleobase</b> theme — the same two oxopurines, from an entirely independent '
+        'representation that never saw a SERS spectrum during fitting. The tight spread (SD ≈ '
+        '0.01 on the leading theme) says this purine dominance is a property of serum-on-silver, '
+        'shared across donors.</div>', unsafe_allow_html=True)
+    st.markdown(
+        '<div class="gaira-caveat">This is <b>characterization, not diagnosis</b>: a single '
+        'healthy-donor group, strongly out-of-domain (mean OOD '
+        f'{d["ood"]:.2f}). The absolute BSV reflects the Ag-adsorbed serum subset (purines '
+        'adsorb; most metabolites do not — see the tiers above), not whole-serum composition. '
+        'Inter-individual differences here are dominated by the urate/hypoxanthine ratio, exactly '
+        'as the paper describes.</div>', unsafe_allow_html=True)
 
 
 # ── Section C ──
@@ -285,6 +333,8 @@ def render(bridge):
     _dataset_summary()
     st.markdown("<hr/>", unsafe_allow_html=True)
     _paper_validation()
+    st.markdown("<hr/>", unsafe_allow_html=True)
+    _donor_sera(bridge)
     st.markdown("<hr/>", unsafe_allow_html=True)
     _tiers(bridge)
     st.markdown("<hr/>", unsafe_allow_html=True)

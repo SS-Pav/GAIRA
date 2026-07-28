@@ -513,3 +513,63 @@ def test_related_links_are_valid_page_labels():
         for call in re.findall(r"C\.related\(\[([^\]]+)\]\)", p.read_text()):
             for lab in re.findall(r'"([^"]+)"', call):
                 assert lab in labels, f"{p.name}: invalid related link {lab}"
+
+
+# ── Gobbato ingestion (donor sera + matched Raman↔SERS pairs) — additive, atlas frozen ──
+@needs_art
+def test_donor_sera_cohort_is_single_group_and_purine_dominated():
+    """The 81 real Gobbato donor sera project (blind, Raman-only atlas) to a
+    purine-dominated BSV — the paper's PC1≈70% urate+hypoxanthine, reproduced."""
+    from demo_core import biological as B
+    if not B.available():
+        pytest.skip("biological artifacts not built")
+    d = B.characterization_summary("gobbato_donor_sera")
+    if d is None:
+        pytest.skip("donor-sera artifact not built")
+    assert d["n"] == 81
+    art = d["art"]
+    assert list(art["n_by_group"]) == ["donor"]                     # single group, no contrast
+    assert d["top_themes"][0][0] == "nucleic_purine"                # purine dominates
+    assert d["top_motifs"][0][0] == "oxopurine_carbonyl"            # uric-acid motif on top
+    assert d["ood"] > 0.15                                          # serum SERS is out-of-domain
+
+
+@needs_art
+def test_donor_sera_excluded_from_page6_contrast_template():
+    """Single-group cohorts must NOT enter the two-group contrast machinery."""
+    from demo_core import biological as B
+    assert "gobbato_donor_sera" not in B.CONTRAST                   # no fabricated contrast
+    if B.available():
+        # it is still a REAL cohort in the registry (shown, not hidden)
+        assert B.available().get("gobbato_donor_sera", {}).get("status") == "REAL"
+
+
+@needs_art
+def test_matched_pairs_artifact_frozen_and_physically_ordered():
+    """The 51 matched Raman↔SERS pairs: oxopurines preserve their signature on silver,
+    weak adsorbers are scrambled — the same physics as serum recoverability."""
+    from demo_core import data as D
+    mp = D.matched_raman_sers_pairs()
+    if mp is None:
+        pytest.skip("matched-pairs artifact not built")
+    from gaira.engine.versioning import VERSIONS
+    assert mp["atlas_fingerprint"] == VERSIONS.atlas_fingerprint    # built on the frozen atlas
+    assert mp["n_pairs"] == 51
+    by = {p["analyte"]: p["coord_cosine"] for p in mp["pairs"]}
+    # strong Ag adsorbers (oxopurines) keep their Raman signature; weak ones don't
+    assert by["hypoxanthine"] > 0.7 and by["xanthine"] > 0.7
+    assert by["glucose"] < by["hypoxanthine"]
+    assert all(len(p["raman_coord"]) == 24 and len(p["sers_coord"]) == 24 for p in mp["pairs"])
+
+
+@needs_art
+def test_grounding_corpus_sources_match_atlas_card():
+    """The grounding-corpus doc's Tier-1 numbers must match the frozen atlas card."""
+    import json
+    card = json.loads((REPO / "results/v5_rebuild/foundation/artifacts/manifold.json").read_text())["corpus_card"]
+    assert card["n_spectra"] == 375 and card["n_analytes"] == 167
+    assert card["sources"] == {"RamanBioLib": 202, "gobbato_raman_metabolites": 153,
+                               "amino_acid_raman_grounding": 20}
+    doc = (DEMO / "GROUNDING_CORPUS.md").read_text()
+    for tok in ("375", "167", "09ed804a", "Fornasaro", "13785349", "European inter-laboratory"):
+        assert tok in doc

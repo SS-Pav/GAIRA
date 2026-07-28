@@ -35,6 +35,16 @@
         "Strong-D": 24
       }
     },
+    "gobbato_donor_sera": {
+      "display_name": "Gobbato donor sera (real serum SERS)",
+      "status": "REAL",
+      "aggregation": "spectrum",
+      "domain": "serum",
+      "n_units": 81,
+      "n_by_group": {
+        "donor": 81
+      }
+    },
     "shine_ev_sers": {
       "display_name": "SHINE EV-SERS (hepatotoxicity)",
       "status": "REAL",

@@ -94,6 +94,20 @@ def main():
         "p5_confidence_limitation": F.confidence_limitation(cdf),
     })
 
+    # ── donor-sera characterization (Page 5 B++) + matched Raman↔SERS pairs (Page 7 E) ──
+    from demo_core import biological as BIO, data as DAT
+    dsum = BIO.characterization_summary("gobbato_donor_sera")
+    if dsum is not None:
+        print(f"donor sera: n={dsum['n']} · purine share {dsum['purine_share']:.2f} · "
+              f"OOD {dsum['ood']:.2f} · top motif {dsum['top_motifs'][0][0]}")
+        figs["p5_donor_sera_radar"] = F.multi_radar([{"name": "donor sera (mean)", "axes": dsum["axes"]}],
+                                                    title="Mean BSV of 81 real donor sera")
+    mp = DAT.matched_raman_sers_pairs()
+    if mp is not None:
+        print(f"matched pairs: n={mp['n_pairs']} · median coord-cosine "
+              f"{mp['median_coord_cosine']:.2f} · theme preserved {mp['n_theme_preserved']}/{mp['n_pairs']}")
+        figs["p7_matched_pairs"] = F.matched_pairs_bar(mp["pairs"], mp["median_coord_cosine"])
+
     # ── Page 6 (Biological) figures ──
     from demo_core import biological as BIO
     if BIO.available():

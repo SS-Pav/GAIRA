@@ -7,12 +7,24 @@ runs them through the live engine + MSS layer; it never re-projects or re-fits.
 from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
+import json
 import numpy as np
 import pandas as pd
 
 from .engine_bridge import REPO, K
 
 SPIKE = REPO / "results/v5_rebuild/spike_validation/tables"
+REF_ART = Path(__file__).resolve().parents[1] / "reference_artifacts"
+
+
+def matched_raman_sers_pairs():
+    """The committed pure-Raman ↔ pure-Ag-SERS matched-pair artifact (Gobbato 2025,
+    51 analytes) built by tools/build_matched_pairs.py. Returns the parsed dict, or
+    None on a checkout where it was not generated."""
+    p = REF_ART / "matched_raman_sers_pairs.json"
+    if not p.exists():
+        return None
+    return json.loads(p.read_text())
 
 
 @dataclass

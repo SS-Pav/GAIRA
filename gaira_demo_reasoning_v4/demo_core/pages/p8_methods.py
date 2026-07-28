@@ -6,7 +6,7 @@ from __future__ import annotations
 import json
 import streamlit as st
 
-from .. import components as C, biological as B, serum as S
+from .. import components as C, biological as B, serum as S, data as D
 
 # validation library — each committed study's key conclusion + limitation
 VALIDATION = [
@@ -63,14 +63,33 @@ def _data_provenance(bridge, s):
         rows["dataset / stage"].append(name); rows["source (sanitized)"].append(src)
         rows["units"].append(units); rows["status"].append(status); rows["pipeline / notes"].append(note)
 
-    add("Frozen Raman atlas", "RamanBioLib + gobbato + amino-acid grounding",
+    add("Frozen Raman atlas", "RamanBioLib (202 sp / 141 cmpd) + Gobbato Raman metabolites "
+        "(153 sp / 51) + amino-acid grounding (20 sp / 20)",
         f"{s['n_reference_spectra']} spectra / {s['n_reference_analytes']} analytes", "REAL",
-        "asls+savgol+L2 → NMF k=24 (frozen)")
-    add("Serum spike validation", "results/v5_rebuild/spike_validation/tables (committed)",
-        f"{S.recoverability_summary()['n_analytes']} analytes", "REAL",
-        "frozen-atlas projections; phase7 recoverability")
+        "pure Raman only; asls+savgol+L2 → NMF k=24 (frozen). Gobbato adds 21 serum "
+        "metabolites RamanBioLib lacks (glucose, urate, hypoxanthine, xanthine, creatinine, …)")
+    add("Adenine dose series (calibration)", "raw/european_multi_instrument_adenine — European "
+        "inter-laboratory (ILS) round-robin, 15 labs", "0–9 µM · cAg/sAg/cAu/sAu · 532/785 nm",
+        "REAL", "frozen-atlas projection (redistribution). NOT from the Gobbato serum paper")
+    add("Ergothioneine dose series (calibration)", "raw/ergothioneine_serum/ERG_calibration.csv — "
+        "Fornasaro 2024, Zenodo 10.5281/zenodo.13785349", "0–2 µM · cAg @ 785 nm", "REAL",
+        "frozen-atlas projection (single-motif scaling)")
+    add("Uricase depletion (calibration)", "Gobbato 2025 archive → dataset uricase/ "
+        "(DOI 10.1007/s00216-025-06192-5)", "serum ± uricase · Ag @ 785 nm", "REAL",
+        "enzymatic urate knock-out; before/after difference")
+    add("Serum spike / baseline / pure-SERS", "Gobbato 2025 archive (SERS spiked serum, SERS "
+        "serum, SERS metabolites); PMC12680727", f"{S.recoverability_summary()['n_analytes']} "
+        "analytes · Ag @ 785 nm", "REAL", "frozen-atlas projections; phase7 recoverability")
+    mp = D.matched_raman_sers_pairs()
+    if mp is not None:
+        add("Matched pure Raman↔Ag-SERS pairs", "Gobbato 2025 archive (Raman + SERS metabolites)",
+            f"{mp['n_pairs']} analytes", "REAL",
+            "both sides projected through the frozen engine; observation-gap reference (Page 7)")
     for key, meta in B.available().items():
-        add(meta["display_name"], f"biological_artifacts/{key}.json (from raw volume; sanitized)",
+        src = ("Gobbato 2025 donor sera (PMC12680727); sanitized"
+               if key == "gobbato_donor_sera"
+               else f"biological_artifacts/{key}.json (from raw volume; sanitized)")
+        add(meta["display_name"], src,
             f"{meta['n_units']} {meta['aggregation']}s", meta["status"],
             "GAIRAEngine.infer; NO demographics; anonymised IDs")
     st.dataframe(rows, use_container_width=True, hide_index=True)
