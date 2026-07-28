@@ -1,0 +1,25 @@
+component,audit_label,top_theme,top_theme_w,n_themes>0.1,purity,stability,variance_share,eff_contributors,top_analyte,top_family,n_families_top8,nearest_comp,nearest_cos,n_linked_motifs,confidence,n_dose_responsive
+0,protein,nucleic_purine,0.306,3,0.333,0.81,0.0351,6.3,riboflavin,amino_acid,4,12,0.331,6,moderate,7
+1,triglyceride,lipid_acyl,0.6,2,0.322,0.955,0.1186,8.0,elaidic acid,triglyceride,3,2,0.521,1,moderate,4
+2,protein,protein_peptide,0.476,3,0.803,0.965,0.1028,8.0,superoxide dismutases,protein,1,1,0.521,4,high,5
+3,sterol,nucleic_purine,0.473,3,0.217,0.823,0.0315,7.5,adenine,sterol,5,0,0.245,5,moderate,7
+4,saccharide,saccharide_glycan,0.55,2,0.429,0.769,0.0309,7.5,(+)-galactosamine,saccharide,1,10,0.32,1,low,5
+5,amino_acid,sulfur_antioxidant,0.192,6,0.281,0.737,0.0237,6.4,tyrosine,amino_acid,6,10,0.245,3,low,7
+6,protein,sulfur_antioxidant,0.252,5,0.335,0.872,0.0439,6.7,urea,amino_acid,5,2,0.138,2,moderate,5
+7,protein,lipid_acyl,0.491,2,0.293,0.951,0.0679,7.5,arachidonic acid,fatty_acid,3,2,0.265,2,moderate,3
+8,protein,nucleic_purine,0.275,3,0.36,0.927,0.0314,7.2,melanin,protein,3,0,0.195,4,moderate,6
+9,amino_acid,sulfur_antioxidant,0.321,4,0.242,0.709,0.0257,6.7,glycine,saccharide,5,10,0.211,1,low,6
+10,saccharide,saccharide_glycan,0.553,2,0.521,0.653,0.0229,7.9,(-)-arabinose,saccharide,2,4,0.32,3,low,4
+11,amino_acid,saccharide_glycan,0.288,4,0.371,0.886,0.0403,7.2,hydroxyproline,saccharide,3,10,0.286,2,moderate,5
+12,saccharide,saccharide_glycan,0.473,2,0.544,0.788,0.0313,7.8,(+)-dextrose,saccharide,2,18,0.349,2,low,5
+13,pyrimidine,nucleic_purine,0.314,3,0.187,0.664,0.0197,5.5,thymine,protein,6,2,0.296,3,low,7
+14,organic_acid,organic_acid_metabolism,0.419,2,0.28,0.769,0.0295,7.5,phosphate,organic_acid,4,22,0.151,2,low,6
+15,purine,nucleic_purine,0.672,3,0.303,0.787,0.0217,5.7,guanine,amino_acid,4,22,0.19,5,low,4
+16,triglyceride,lipid_acyl,0.575,2,0.35,0.847,0.0397,8.0,myristic acid,fatty_acid,2,18,0.323,1,moderate,5
+17,pyrimidine,nucleic_pyrimidine,0.468,2,0.253,0.819,0.0211,6.2,uracil,nucleic_acid,5,23,0.383,4,moderate,5
+18,saccharide,saccharide_glycan,0.447,3,0.367,0.882,0.037,7.9,cellulose,polysaccharide,4,12,0.349,2,moderate,6
+19,protein,nucleic_purine,0.31,4,0.192,0.825,0.0184,6.4,creatinine,saccharide,7,9,0.196,2,moderate,5
+20,saccharide,saccharide_glycan,0.356,4,0.4,0.768,0.0212,7.1,fructose,saccharide,6,5,0.182,3,low,4
+21,saccharide,saccharide_glycan,0.295,3,0.293,0.769,0.0235,7.4,fructose-6-phosphate,saccharide,5,4,0.239,4,low,6
+22,protein,organic_acid_metabolism,0.286,4,0.222,0.735,0.0289,7.8,fumarate,amino_acid,3,1,0.308,4,low,6
+23,organic_acid,organic_acid_metabolism,0.342,3,0.428,0.781,0.0196,7.5,phosphoenolpyruvate,organic_acid,3,17,0.383,4,low,5

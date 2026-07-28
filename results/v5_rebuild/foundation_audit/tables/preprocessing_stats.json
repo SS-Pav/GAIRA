@@ -1,0 +1,26 @@
+{
+  "example_analyte": "adenine",
+  "n_bins": 676,
+  "window_cm": [
+    450.0,
+    1800.0
+  ],
+  "grid_step_cm": 2.0,
+  "pipeline": {
+    "baseline": "asls",
+    "smooth": "savgol",
+    "norm": "l2"
+  },
+  "asls_params": {
+    "lam": 100000.0,
+    "p": 0.01,
+    "n_iter": 8
+  },
+  "savgol_params": {
+    "window": 9,
+    "poly": 3
+  },
+  "frac_points_negative_before_clip": 0.1125,
+  "frac_absolute_mass_clipped_to_zero": 0.0075,
+  "frac_grid_finite_mean": 0.9988
+}

@@ -1,0 +1,101 @@
+{
+  "n_spectra": 375,
+  "n_analytes": 167,
+  "n_bins": 676,
+  "window_cm": [
+    450.0,
+    1800.0
+  ],
+  "grid_step_cm": 2.0,
+  "sources_spectra": {
+    "RamanBioLib": 202,
+    "gobbato_raman_metabolites": 153,
+    "amino_acid_raman_grounding": 20
+  },
+  "sources_analytes": {
+    "RamanBioLib": 141,
+    "amino_acid_raman_grounding": 19,
+    "gobbato_raman_metabolites": 51
+  },
+  "excitations_spectra": {
+    "785.0": 234,
+    "1064.0": 55,
+    "532.0": 50,
+    "488.0": 29,
+    "514.5": 3,
+    "632.8": 1,
+    "457.9": 1,
+    "850.0": 1,
+    "633.0": 1
+  },
+  "class_counts_analytes": {
+    "Protein": 32,
+    "Saccharide": 27,
+    "Amino acid": 17,
+    "Lipid (triglyceride)": 15,
+    "Organic acid": 15,
+    "Lipid (fatty acid)": 12,
+    "Sterol / steroid": 9,
+    "Cofactor / vitamin": 6,
+    "Other / unclassified": 6,
+    "Purine": 5,
+    "Polysaccharide": 5,
+    "Lipid (other)": 5,
+    "Nucleic acid": 3,
+    "Pyrimidine": 3,
+    "Lipid (phospholipid)": 2,
+    "small_nitrogenous": 2,
+    "Carotenoid": 2,
+    "polyol": 1
+  },
+  "class_counts_spectra": {
+    "Protein": 81,
+    "Amino acid": 73,
+    "Saccharide": 43,
+    "Organic acid": 35,
+    "Lipid (other)": 22,
+    "Cofactor / vitamin": 18,
+    "Purine": 17,
+    "Lipid (triglyceride)": 17,
+    "Lipid (fatty acid)": 14,
+    "Polysaccharide": 10,
+    "Pyrimidine": 9,
+    "Sterol / steroid": 9,
+    "Other / unclassified": 9,
+    "small_nitrogenous": 6,
+    "polyol": 4,
+    "Lipid (phospholipid)": 3,
+    "Nucleic acid": 3,
+    "Carotenoid": 2
+  },
+  "raw_family_counts_analytes": {
+    "protein": 32,
+    "saccharide": 27,
+    "amino_acid": 17,
+    "triglyceride": 15,
+    "organic_acid": 15,
+    "fatty_acid": 12,
+    "sterol": 9,
+    "cofactor": 6,
+    "unknown": 6,
+    "purine": 5,
+    "polysaccharide": 5,
+    "lipid": 5,
+    "nucleic_acid": 3,
+    "pyrimidine": 3,
+    "phospholipid": 2,
+    "small_nitrogenous": 2,
+    "carotenoid": 2,
+    "polyol": 1
+  },
+  "spectra_per_analyte": {
+    "min": 1,
+    "median": 2.0,
+    "mean": 2.245508982035928,
+    "max": 6,
+    "n_singletons": 80,
+    "n_with_replicates": 87
+  },
+  "n_cross_source_duplicates": 34,
+  "n_analytes_multi_excitation": 41
+}

@@ -1,0 +1,234 @@
+{
+  "1_gobbato_raman": {
+    "n_spectra": 153,
+    "n_analytes": 51,
+    "mean_ood": 0.0467,
+    "median_ood": 0.0413,
+    "note": "in-domain (training) \u2014 expected LOW OOD",
+    "example_dominant_themes": {
+      "acetyl-coa": "nucleic_purine",
+      "acetoacetate": "organic_acid_metabolism",
+      "adenine": "nucleic_purine",
+      "alanine": "saccharide_glycan",
+      "albumin": "nucleic_purine",
+      "arginine": "saccharide_glycan",
+      "ascorbate": "saccharide_glycan",
+      "cholesterol": "lipid_acyl",
+      "citrate": "organic_acid_metabolism",
+      "coenzyme a": "nucleic_purine",
+      "creatinine": "nucleic_purine",
+      "cysteine": "nucleic_purine"
+    }
+  },
+  "2_gobbato_sers_transfer": {
+    "n_sers_spectra": 265,
+    "n_matched_analytes": 51,
+    "sers_mean_ood": 0.1634,
+    "raman_mean_ood": 0.0467,
+    "median_coord_cosine": 0.4236,
+    "n_theme_preserved": 19,
+    "most_preserved": [
+      [
+        "hypoxanthine",
+        0.8443
+      ],
+      [
+        "phosphatidylinositol",
+        0.8339
+      ],
+      [
+        "albumin",
+        0.8276
+      ],
+      [
+        "xanthine",
+        0.8145
+      ],
+      [
+        "glycogen",
+        0.789
+      ]
+    ],
+    "least_preserved": [
+      [
+        "alanine",
+        0.2479
+      ],
+      [
+        "hydroxyproline",
+        0.241
+      ],
+      [
+        "glycine",
+        0.2298
+      ],
+      [
+        "glucose",
+        0.1977
+      ],
+      [
+        "uracil",
+        0.0554
+      ]
+    ]
+  },
+  "3_adenine_dose": {
+    "levels_uM": [
+      0.0,
+      0.2,
+      0.23,
+      0.4,
+      0.6,
+      0.61,
+      0.8,
+      1.0,
+      1.03,
+      1.2,
+      1.4,
+      1.6,
+      1.8,
+      1.82
+    ],
+    "n_per_level": [
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      48,
+      24,
+      24,
+      24
+    ],
+    "theme_series": [
+      0.1829,
+      0.2116,
+      0.2282,
+      0.2368,
+      0.2617,
+      0.2637,
+      0.2733,
+      0.2839,
+      0.2942,
+      0.2959,
+      0.3004,
+      0.3058,
+      0.3073,
+      0.3197
+    ],
+    "theme": "nucleic_purine",
+    "straightness": 0.837,
+    "monotonicity_rho": 0.996,
+    "monotonicity_p": 0.002,
+    "best_dose_model": "saturating",
+    "saturating_r2": 0.993,
+    "saturating_K_uM": 0.893,
+    "n_components_redistributing": 24
+  },
+  "4_ergothioneine_dose": {
+    "levels_uM": [
+      0.0,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.4,
+      1.6,
+      1.8,
+      2.0
+    ],
+    "n_per_level": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "theme_series": [
+      0.0808,
+      0.0878,
+      0.0873,
+      0.0915,
+      0.0958,
+      0.098,
+      0.0993,
+      0.1013,
+      0.1024,
+      0.1033,
+      0.1035
+    ],
+    "theme": "sulfur_antioxidant",
+    "straightness": 0.575,
+    "monotonicity_rho": 0.927,
+    "monotonicity_p": 0.002,
+    "best_dose_model": "saturating",
+    "saturating_r2": 0.957,
+    "saturating_K_uM": 1.521,
+    "n_components_redistributing": 21
+  },
+  "5_serum_spike": {
+    "n_analytes": 53,
+    "strong_recovery": 6,
+    "moderate_recovery": 8,
+    "weak_recovery": 39,
+    "median_direction_agreement": -0.012,
+    "strong_examples": [
+      "ascorbate",
+      "creatinine",
+      "ergothioneine",
+      "guanine",
+      "hypoxanthine",
+      "xanthine"
+    ],
+    "note": "direction agreement = cos(serum-spike \u0394, pure-SERS fingerprint); committed phase7_serum_vs_pure"
+  },
+  "6_uricase_depletion": {
+    "n_spectra": 20,
+    "n_uricase": 10,
+    "n_base": 5,
+    "delta_theme": {
+      "nucleic_purine": -0.0114,
+      "nucleic_pyrimidine": 0.0046,
+      "protein_peptide": 0.0096,
+      "aromatic_amino_acid": -0.0093,
+      "lipid_acyl": -0.002,
+      "sterol_membrane": 0.0047,
+      "saccharide_glycan": -0.0325,
+      "organic_acid_metabolism": 0.0397,
+      "sulfur_antioxidant": 0.0042,
+      "heme_porphyrin": 0.0025,
+      "redox_broad": 0.0043
+    },
+    "purine_delta": -0.0114,
+    "most_decreased_themes": [
+      [
+        "saccharide_glycan",
+        -0.0325
+      ],
+      [
+        "nucleic_purine",
+        -0.0114
+      ],
+      [
+        "aromatic_amino_acid",
+        -0.0093
+      ]
+    ],
+    "localises_to_purine": false,
+    "delta_oxopurine_motif": -0.0602,
+    "delta_purine_ring_motif": -0.0005
+  }
+}

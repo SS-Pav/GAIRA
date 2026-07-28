@@ -1,0 +1,62 @@
+{
+  "NMF_k24": {
+    "total_score": 0.7864,
+    "recon_rel_error": 0.5504,
+    "neighbourhood_preservation": 0.6706,
+    "replicate_robustness": 0.6243,
+    "component_stability": 0.812,
+    "loading_sparsity": 0.8193,
+    "band_localisation": 0.054,
+    "excitation_leakage": 0.0185,
+    "source_leakage": 0.0627,
+    "nonneg": 1.0
+  },
+  "ICA_k32": {
+    "total_score": 0.7866,
+    "recon_rel_error": 0.4859,
+    "neighbourhood_preservation": 0.6389,
+    "replicate_robustness": 0.8342,
+    "component_stability": 0.7732,
+    "loading_sparsity": 0.5029,
+    "band_localisation": 0.1731,
+    "excitation_leakage": 0.0271,
+    "source_leakage": 0.0499,
+    "nonneg": 0.0
+  },
+  "PCA_k24": {
+    "total_score": 0.7389,
+    "recon_rel_error": 0.5296,
+    "neighbourhood_preservation": 0.6712,
+    "replicate_robustness": 0.8796,
+    "component_stability": 0.5318,
+    "loading_sparsity": 0.4751,
+    "band_localisation": 0.2019,
+    "excitation_leakage": 0.105,
+    "source_leakage": 0.1095,
+    "nonneg": 0.0
+  },
+  "Autoencoder_k24": {
+    "total_score": 0.4725,
+    "recon_rel_error": 0.5208,
+    "neighbourhood_preservation": 0.6262,
+    "replicate_robustness": 0.6588,
+    "component_stability": 0.1561,
+    "loading_sparsity": 0.3767,
+    "band_localisation": 0.2685,
+    "excitation_leakage": 0.0087,
+    "source_leakage": 0.0598,
+    "nonneg": 0.0
+  },
+  "SparseDict_k24": {
+    "total_score": 0.4293,
+    "recon_rel_error": 0.8317,
+    "neighbourhood_preservation": 0.4959,
+    "replicate_robustness": 0.5289,
+    "component_stability": 0.7962,
+    "loading_sparsity": 0.6202,
+    "band_localisation": 0.1065,
+    "excitation_leakage": 0.0461,
+    "source_leakage": 0.0571,
+    "nonneg": 0.0
+  }
+}

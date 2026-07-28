@@ -1,0 +1,11 @@
+{
+  "max_abs_diff_vs_committed": {
+    "total_score": 5.551115123125783e-17,
+    "recon_rel_error": 5.551115123125783e-17,
+    "neighbourhood_preservation": 5.551115123125783e-17,
+    "replicate_robustness": 5.551115123125783e-17,
+    "component_stability": 1.1102230246251565e-16,
+    "loading_sparsity": 5.551115123125783e-17
+  },
+  "full_ranking_identical": true
+}

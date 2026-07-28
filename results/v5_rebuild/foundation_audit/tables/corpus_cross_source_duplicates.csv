@@ -1,0 +1,35 @@
+analyte,report_class,sources,n_spectra
+acetoacetate,Organic acid,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+adenine,Purine,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+alanine,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",5
+albumin,Protein,"['RamanBioLib', 'gobbato_raman_metabolites']",6
+arginine,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",5
+ascorbate,Organic acid,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+cholesterol,Lipid (other),"['RamanBioLib', 'gobbato_raman_metabolites']",4
+citrate,Organic acid,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+coenzyme a,Cofactor / vitamin,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+fructose-6-phosphate,Saccharide,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+glucose,Saccharide,"['amino_acid_raman_grounding', 'gobbato_raman_metabolites']",4
+glutamate,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",6
+glutathione,Cofactor / vitamin,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+glycerol,polyol,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+glycine,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",5
+glycogen,Polysaccharide,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+guanine,Purine,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+histidine,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",5
+leucine,Amino acid,"['amino_acid_raman_grounding', 'gobbato_raman_metabolites']",4
+malic acid,Organic acid,"['RamanBioLib', 'amino_acid_raman_grounding']",2
+methionine,Amino acid,"['amino_acid_raman_grounding', 'gobbato_raman_metabolites']",4
+oleate,Lipid (other),"['RamanBioLib', 'gobbato_raman_metabolites']",5
+phenylalanine,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",5
+phosphoenolpyruvate,Organic acid,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+proline,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",5
+pyruvate,Organic acid,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+serine,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",5
+stearate,Lipid (other),"['RamanBioLib', 'gobbato_raman_metabolites']",5
+thymine,Pyrimidine,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+triolein,Lipid (other),"['RamanBioLib', 'gobbato_raman_metabolites']",5
+tryptophan,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",5
+tyrosine,Amino acid,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+uracil,Pyrimidine,"['RamanBioLib', 'gobbato_raman_metabolites']",4
+valine,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",5

@@ -1,0 +1,12 @@
+{
+  "representation": "NMF",
+  "k": 24,
+  "total_score": 0.7863732611512955,
+  "tie_break": "5 candidates within 0.020 of the top score (ICA@k=32:0.787, NMF@k=24:0.786, ICA@k=24:0.775, ICA@k=16:0.774, NMF@k=32:0.767) \u2014 statistically indistinguishable. Tie broken by constraint: restricted to non-negative (parts-based) decompositions, because Raman spectra of mixtures are non-negative sums of molecular contributions and BSV coordinates must mean 'how much of this theme is present'; then by benchmark score, then by smaller k. Selected NMF k=24 (score 0.786, sparsity 0.819, stability 0.812).",
+  "n_tied_within_tol": 5,
+  "raw_top": {
+    "representation": "ICA",
+    "k": 32,
+    "total_score": 0.7866435868993379
+  }
+}

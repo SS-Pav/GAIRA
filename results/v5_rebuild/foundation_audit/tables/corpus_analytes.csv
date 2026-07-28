@@ -1,0 +1,168 @@
+analyte,n_spectra,family,report_class,sources,n_sources,excitations
+(+)-arabinose,1,saccharide,Saccharide,['RamanBioLib'],1,[1064.0]
+(+)-dextrose,1,saccharide,Saccharide,['RamanBioLib'],1,[785.0]
+(+)-fucose,1,saccharide,Saccharide,['RamanBioLib'],1,[785.0]
+(+)-galactosamine,1,saccharide,Saccharide,['RamanBioLib'],1,[785.0]
+(+)-galactose,1,saccharide,Saccharide,['RamanBioLib'],1,[1064.0]
+(+)-glucose,1,saccharide,Saccharide,['RamanBioLib'],1,[1064.0]
+(+)-lactose,1,saccharide,Saccharide,['RamanBioLib'],1,[1064.0]
+(+)-maltose,1,saccharide,Saccharide,['RamanBioLib'],1,[1064.0]
+(+)-mannose,1,saccharide,Saccharide,['RamanBioLib'],1,[785.0]
+(+)-raffinose pentahydrate,1,saccharide,Saccharide,['RamanBioLib'],1,[1064.0]
+(+)-sucrose,1,saccharide,Saccharide,['RamanBioLib'],1,[1064.0]
+(+)-trehalose,1,saccharide,Saccharide,['RamanBioLib'],1,[785.0]
+(+)-xylose,2,saccharide,Saccharide,['RamanBioLib'],1,"[785.0, 1064.0]"
+(-)-arabinose,1,saccharide,Saccharide,['RamanBioLib'],1,[785.0]
+(-)-fructose,2,saccharide,Saccharide,['RamanBioLib'],1,"[785.0, 1064.0]"
+(-)-ribose,1,saccharide,Saccharide,['RamanBioLib'],1,[1064.0]
+12-methyltetradecanoic acid,1,fatty_acid,Lipid (fatty acid),['RamanBioLib'],1,[785.0]
+13-methylmyristicacid,1,fatty_acid,Lipid (fatty acid),['RamanBioLib'],1,[785.0]
+14-methylhexadecanoic acid,1,fatty_acid,Lipid (fatty acid),['RamanBioLib'],1,[785.0]
+14-methylpentadecanoic acid,1,fatty_acid,Lipid (fatty acid),['RamanBioLib'],1,[785.0]
+15-methylpalmiticacid,1,fatty_acid,Lipid (fatty acid),['RamanBioLib'],1,[785.0]
+2-deoxy-d-ribose,1,saccharide,Saccharide,['RamanBioLib'],1,[1064.0]
+a-dna,1,nucleic_acid,Nucleic acid,['RamanBioLib'],1,[514.5]
+acetoacetate,4,organic_acid,Organic acid,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+acetyl coenzyme a,1,protein,Protein,['RamanBioLib'],1,[785.0]
+acetyl-coa,3,cofactor,Cofactor / vitamin,['gobbato_raman_metabolites'],1,[785.0]
+adenine,4,purine,Purine,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+alanine,5,amino_acid,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",3,[785.0]
+alb,1,protein,Protein,['amino_acid_raman_grounding'],1,[785.0]
+albumin,6,protein,Protein,"['RamanBioLib', 'gobbato_raman_metabolites']",2,"[488.0, 532.0, 785.0, 1064.0]"
+amylopectin,2,polysaccharide,Polysaccharide,['RamanBioLib'],1,"[785.0, 1064.0]"
+amylose,2,polysaccharide,Polysaccharide,['RamanBioLib'],1,"[785.0, 1064.0]"
+arachidic acid,1,fatty_acid,Lipid (fatty acid),['RamanBioLib'],1,[532.0]
+arachidonic acid,1,fatty_acid,Lipid (fatty acid),['RamanBioLib'],1,[532.0]
+arginine,5,amino_acid,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",3,[785.0]
+ascorbate,4,organic_acid,Organic acid,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+asparagine,1,amino_acid,Amino acid,['RamanBioLib'],1,[488.0]
+aspartate,1,organic_acid,Organic acid,['amino_acid_raman_grounding'],1,[785.0]
+aspartic acid,1,organic_acid,Organic acid,['RamanBioLib'],1,[488.0]
+b-dna,1,nucleic_acid,Nucleic acid,['RamanBioLib'],1,[514.5]
+carbonic anhydrase,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+carotene,1,carotenoid,Carotenoid,['amino_acid_raman_grounding'],1,[785.0]
+cellulose,1,polysaccharide,Polysaccharide,['RamanBioLib'],1,[785.0]
+ceramide,2,phospholipid,Lipid (phospholipid),['RamanBioLib'],1,"[850.0, 1064.0]"
+chitin,1,polysaccharide,Polysaccharide,['RamanBioLib'],1,[785.0]
+cholesterol,4,lipid,Lipid (other),"['RamanBioLib', 'gobbato_raman_metabolites']",2,"[532.0, 785.0]"
+cholesteryl linoleate,1,sterol,Sterol / steroid,['RamanBioLib'],1,[532.0]
+cholesteryl oleate,1,sterol,Sterol / steroid,['RamanBioLib'],1,[532.0]
+cholesteryl palmitate,1,sterol,Sterol / steroid,['RamanBioLib'],1,[532.0]
+cholesteryl stearate,1,sterol,Sterol / steroid,['RamanBioLib'],1,[532.0]
+citrate,4,organic_acid,Organic acid,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+coenzyme a,4,cofactor,Cofactor / vitamin,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+collagen,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+creatinine,3,small_nitrogenous,small_nitrogenous,['gobbato_raman_metabolites'],1,[785.0]
+cysteine,3,amino_acid,Amino acid,['gobbato_raman_metabolites'],1,[785.0]
+cytochrome c,2,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0]"
+cytosine,1,pyrimidine,Pyrimidine,['RamanBioLib'],1,[785.0]
+diethylstilbestrol,1,sterol,Sterol / steroid,['RamanBioLib'],1,[532.0]
+elaidic acid,1,organic_acid,Organic acid,['RamanBioLib'],1,[532.0]
+elastase,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+elastin,1,protein,Protein,['RamanBioLib'],1,[1064.0]
+ergothioneine,3,cofactor,Cofactor / vitamin,['gobbato_raman_metabolites'],1,[785.0]
+estradiol,1,sterol,Sterol / steroid,['RamanBioLib'],1,[532.0]
+estriol,1,sterol,Sterol / steroid,['RamanBioLib'],1,[532.0]
+estrone,1,sterol,Sterol / steroid,['RamanBioLib'],1,[532.0]
+ethinylestradiol,1,sterol,Sterol / steroid,['RamanBioLib'],1,[532.0]
+ferritin,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+fructose,3,saccharide,Saccharide,['gobbato_raman_metabolites'],1,[785.0]
+fructose-6-phosphate,4,saccharide,Saccharide,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+fumarate,1,organic_acid,Organic acid,['RamanBioLib'],1,[785.0]
+galactose,3,saccharide,Saccharide,['gobbato_raman_metabolites'],1,[785.0]
+glucosamine,1,saccharide,Saccharide,['RamanBioLib'],1,[488.0]
+glucose,4,saccharide,Saccharide,"['amino_acid_raman_grounding', 'gobbato_raman_metabolites']",2,[785.0]
+glucose oxidase,2,protein,Protein,['RamanBioLib'],1,"[532.0, 1064.0]"
+glutamate,6,amino_acid,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",3,[785.0]
+glutathione,4,cofactor,Cofactor / vitamin,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+glutathione transferase,2,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0]"
+gluth,1,unknown,Other / unclassified,['amino_acid_raman_grounding'],1,[785.0]
+glycerol,4,polyol,polyol,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+glycine,5,amino_acid,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",3,[785.0]
+glycogen,4,polysaccharide,Polysaccharide,"['RamanBioLib', 'gobbato_raman_metabolites']",2,"[785.0, 1064.0]"
+guanine,4,purine,Purine,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+hemoglobin,2,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0]"
+histidine,5,amino_acid,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",3,[785.0]
+horseradish peroxidase,2,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0]"
+hydroxyproline,3,amino_acid,Amino acid,['gobbato_raman_metabolites'],1,[785.0]
+hypoxanthine,3,purine,Purine,['gobbato_raman_metabolites'],1,[785.0]
+insulin,1,protein,Protein,['RamanBioLib'],1,[633.0]
+isoleucine,3,amino_acid,Amino acid,['gobbato_raman_metabolites'],1,[785.0]
+keratin,1,protein,Protein,['RamanBioLib'],1,[1064.0]
+lactalbumin,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+lactate,3,organic_acid,Organic acid,['gobbato_raman_metabolites'],1,[785.0]
+lactose,1,saccharide,Saccharide,['RamanBioLib'],1,[785.0]
+lauric acid,1,fatty_acid,Lipid (fatty acid),['RamanBioLib'],1,[785.0]
+lectin,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+leucine,4,amino_acid,Amino acid,"['amino_acid_raman_grounding', 'gobbato_raman_metabolites']",2,[785.0]
+linoleic acid,1,fatty_acid,Lipid (fatty acid),['RamanBioLib'],1,[532.0]
+major proteinase,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+malic acid,2,organic_acid,Organic acid,"['RamanBioLib', 'amino_acid_raman_grounding']",2,[785.0]
+mannose,3,saccharide,Saccharide,['gobbato_raman_metabolites'],1,[785.0]
+melanin,4,unknown,Other / unclassified,['RamanBioLib'],1,"[457.9, 514.5, 632.8, 785.0]"
+methionine,4,amino_acid,Amino acid,"['amino_acid_raman_grounding', 'gobbato_raman_metabolites']",2,[785.0]
+myoglobin,2,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0]"
+myristic acid,2,fatty_acid,Lipid (fatty acid),['RamanBioLib'],1,"[532.0, 785.0]"
+n-acetyl- d-glucosamine,1,saccharide,Saccharide,['RamanBioLib'],1,[785.0]
+n-acetylglucosamine,3,saccharide,Saccharide,['gobbato_raman_metabolites'],1,[785.0]
+oleate,5,lipid,Lipid (other),"['RamanBioLib', 'gobbato_raman_metabolites']",2,"[532.0, 785.0]"
+palmitic acid,2,fatty_acid,Lipid (fatty acid),['RamanBioLib'],1,"[532.0, 785.0]"
+palmitoleic acid,1,organic_acid,Organic acid,['RamanBioLib'],1,[532.0]
+papain,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+pepsin,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+pepsinogen,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+phenylalanine,5,amino_acid,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",3,[785.0]
+phosphate,3,organic_acid,Organic acid,['gobbato_raman_metabolites'],1,[785.0]
+phosphatidylinositol,3,lipid,Lipid (other),['gobbato_raman_metabolites'],1,[785.0]
+phosphoenolpyruvate,4,organic_acid,Organic acid,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+proline,5,amino_acid,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",3,[785.0]
+pyruvate,4,organic_acid,Organic acid,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+riboflavin,3,cofactor,Cofactor / vitamin,['gobbato_raman_metabolites'],1,[785.0]
+riboﬂavin,1,cofactor,Cofactor / vitamin,['RamanBioLib'],1,[785.0]
+serine,5,amino_acid,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",3,[785.0]
+sphingomyelin,1,phospholipid,Lipid (phospholipid),['RamanBioLib'],1,[532.0]
+stearate,5,lipid,Lipid (other),"['RamanBioLib', 'gobbato_raman_metabolites']",2,"[532.0, 785.0]"
+succinic acid,1,organic_acid,Organic acid,['RamanBioLib'],1,[785.0]
+superoxide dismutases,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+t-rna,1,nucleic_acid,Nucleic acid,['RamanBioLib'],1,[488.0]
+thaumatin,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+thymine,4,pyrimidine,Pyrimidine,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+tri-11-eicosenoin,1,unknown,Other / unclassified,['RamanBioLib'],1,[1064.0]
+triarachidin,1,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,[1064.0]
+tribehenin,1,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,[1064.0]
+tricaprin,1,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,[1064.0]
+tricaproin,1,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,[1064.0]
+tricaprylin,1,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,[1064.0]
+trielaidin,1,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,[1064.0]
+trierucin,1,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,[1064.0]
+trilaurin,1,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,[1064.0]
+trilinolein,2,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,"[785.0, 1064.0]"
+trilinolenin,2,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,"[785.0, 1064.0]"
+trimyristin,1,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,[1064.0]
+triolein,5,lipid,Lipid (other),"['RamanBioLib', 'gobbato_raman_metabolites']",2,"[785.0, 1064.0]"
+triosephosphate isomerase,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+tripalmitin,1,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,[1064.0]
+tripalmitolein,1,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,[1064.0]
+tripetroselinin,1,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,[1064.0]
+tristearin,1,triglyceride,Lipid (triglyceride),['RamanBioLib'],1,[1064.0]
+trypsin,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+trypsin inhibitor,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+trypsinogen,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+tryptophan,5,amino_acid,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",3,[785.0]
+tubulin,1,protein,Protein,['RamanBioLib'],1,[532.0]
+tyrosine,4,amino_acid,Amino acid,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+ubiquitin,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+uracil,4,pyrimidine,Pyrimidine,"['RamanBioLib', 'gobbato_raman_metabolites']",2,[785.0]
+urate,3,purine,Purine,['gobbato_raman_metabolites'],1,[785.0]
+ure,1,unknown,Other / unclassified,['amino_acid_raman_grounding'],1,[785.0]
+urea,3,small_nitrogenous,small_nitrogenous,['gobbato_raman_metabolites'],1,[785.0]
+vaccenic acid,1,organic_acid,Organic acid,['RamanBioLib'],1,[785.0]
+valine,5,amino_acid,Amino acid,"['RamanBioLib', 'amino_acid_raman_grounding', 'gobbato_raman_metabolites']",3,[785.0]
+xanthine,3,purine,Purine,['gobbato_raman_metabolites'],1,[785.0]
+xylanase,3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+α-chymotrypsinogen a (type ii),3,protein,Protein,['RamanBioLib'],1,"[488.0, 532.0, 1064.0]"
+α-linolenic acid,1,fatty_acid,Lipid (fatty acid),['RamanBioLib'],1,[532.0]
+α-phosphatidylcholine,1,unknown,Other / unclassified,['RamanBioLib'],1,[532.0]
+α-phosphatidylethanolamine,1,unknown,Other / unclassified,['RamanBioLib'],1,[532.0]
+β-carotene,1,carotenoid,Carotenoid,['RamanBioLib'],1,[785.0]
+β-d-glucose,1,saccharide,Saccharide,['RamanBioLib'],1,[785.0]
