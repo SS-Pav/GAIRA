@@ -102,6 +102,15 @@ Raman → Ag-SERS jump. Additive; the original Explorer is unchanged.
 streamlit run gaira_foundation_explorer_v2/app.py
 ```
 
+**Foundation Explorer V3** — the **Representation Hierarchy**: the transfer story reorganised
+into five levels (latent → MSS motif → biochemical theme → perturbation → matrix), with new
+rank-preservation and top-k metrics, the purine attractor quantified (ΔPurine), and honest
+null controls throughout. Additive; V1 and V2 are unchanged.
+
+```bash
+streamlit run gaira_foundation_explorer_v3/app.py
+```
+
 All apps read only committed assets + precomputed outputs. None requires SSD_Rad,
 raw spectra, or any recomputation.
 
