@@ -1,0 +1,12 @@
+family,n,component_cosine_mean,theme_cosine_mean,dominant_theme_preserved,mss_cosine_mean,expected_top3
+cofactor,5,0.53,0.976,1.0,0.824,0.0
+polysaccharide,1,0.684,0.957,0.0,0.902,1.0
+purine,5,0.659,0.94,0.8,0.852,1.0
+protein,1,0.602,0.929,0.0,0.879,0.0
+small_nitrogenous,2,0.678,0.924,0.5,0.587,1.0
+amino_acid,16,0.387,0.9,0.25,0.746,0.0
+organic_acid,7,0.489,0.884,0.286,0.711,1.0
+saccharide,6,0.432,0.856,0.0,0.7,1.0
+polyol,1,0.47,0.804,0.0,0.596,1.0
+lipid,5,0.414,0.7,0.2,0.575,0.0
+pyrimidine,2,0.163,0.595,0.5,0.514,0.0

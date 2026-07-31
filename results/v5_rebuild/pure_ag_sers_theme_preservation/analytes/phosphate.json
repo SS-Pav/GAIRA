@@ -1,0 +1,54 @@
+{
+  "analyte": "phosphate",
+  "family": "organic_acid",
+  "expected_theme": "organic_acid_metabolism",
+  "n_raman": 3,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.361,
+    "tier": "Weak",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": false,
+    "raman_dominant": "organic_acid_metabolism",
+    "sers_dominant": "nucleic_purine",
+    "theme_cosine_raw": 0.9183,
+    "theme_cosine_distinct": 0.603,
+    "theme_null_mean": 0.54,
+    "theme_separation": 0.063,
+    "self_is_nearest_theme": false,
+    "expected_rank_raman": 1,
+    "expected_rank_sers": 3,
+    "expected_retained_top3": true,
+    "mss_cosine": 0.6495,
+    "dominant_mss_match": true,
+    "redistribution": {
+      "theme_jsd": 0.0404,
+      "l1_theme_shift": 0.2911,
+      "gained_theme": "protein_peptide",
+      "lost_theme": "organic_acid_metabolism",
+      "gained_component": "c23",
+      "lost_component": "c14",
+      "gained_mss": "purine_ring_breathing",
+      "lost_mss": "carboxylate_organic_acid"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "tested": false,
+    "status": "Not tested",
+    "why": "no controlled perturbation series exists for this analyte"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "phosphate",
+    "serum_spike_displacement": 0.0127,
+    "serum_replicate_direction_cos": 0.6831,
+    "serum_vs_pureSERS_cos": 0.0437,
+    "serum_vs_pureRaman_cos": -0.0167,
+    "serum_recovery_tier": "weak",
+    "serum_tested": true
+  },
+  "quadrant": "Q2 latent redistribution, theme survives",
+  "ood_sers": 0.1248,
+  "confidence_sers": 0.2017
+}

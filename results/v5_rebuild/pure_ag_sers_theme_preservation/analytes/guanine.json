@@ -1,0 +1,54 @@
+{
+  "analyte": "guanine",
+  "family": "purine",
+  "expected_theme": "nucleic_purine",
+  "n_raman": 4,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.631,
+    "tier": "Moderate",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": true,
+    "raman_dominant": "nucleic_purine",
+    "sers_dominant": "nucleic_purine",
+    "theme_cosine_raw": 0.8758,
+    "theme_cosine_distinct": 0.9241,
+    "theme_null_mean": 0.7088,
+    "theme_separation": 0.2153,
+    "self_is_nearest_theme": false,
+    "expected_rank_raman": 1,
+    "expected_rank_sers": 1,
+    "expected_retained_top3": true,
+    "mss_cosine": 0.8745,
+    "dominant_mss_match": true,
+    "redistribution": {
+      "theme_jsd": 0.0964,
+      "l1_theme_shift": 0.5694,
+      "gained_theme": "saccharide_glycan",
+      "lost_theme": "nucleic_purine",
+      "gained_component": "c19",
+      "lost_component": "c15",
+      "gained_mss": "aromatic_ring_residue",
+      "lost_mss": "oxopurine_carbonyl"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "tested": false,
+    "status": "Not tested",
+    "why": "no controlled perturbation series exists for this analyte"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "guanine",
+    "serum_spike_displacement": 0.0803,
+    "serum_replicate_direction_cos": 0.9873,
+    "serum_vs_pureSERS_cos": 0.4021,
+    "serum_vs_pureRaman_cos": 0.6454,
+    "serum_recovery_tier": "strong",
+    "serum_tested": true
+  },
+  "quadrant": "Q1 identity preserved (both)",
+  "ood_sers": 0.159,
+  "confidence_sers": 0.2327
+}

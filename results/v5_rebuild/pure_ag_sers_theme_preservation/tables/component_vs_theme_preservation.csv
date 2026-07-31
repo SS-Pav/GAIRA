@@ -1,0 +1,52 @@
+analyte,family,component_cosine,theme_cosine,theme_cosine_distinct,theme_null_mean,theme_separation,self_is_nearest_theme,dominant_theme_match,quadrant
+hypoxanthine,purine,0.8443,0.9914,0.8269,0.475,0.3518,True,True,Q1 identity preserved (both)
+phosphatidylinositol,lipid,0.8339,0.9888,0.4695,0.5101,-0.0407,False,True,"Q3 superficial coord match, theme changes"
+glutathione,cofactor,0.7271,0.9858,0.6482,0.5213,0.1269,False,True,Q1 identity preserved (both)
+coenzyme a,cofactor,0.6495,0.9852,0.7183,0.6938,0.0245,False,True,Q1 identity preserved (both)
+acetyl-coa,cofactor,0.6495,0.9795,0.5083,0.5332,-0.0249,False,True,Q1 identity preserved (both)
+xanthine,purine,0.8145,0.9751,0.9557,0.6076,0.3481,True,True,Q1 identity preserved (both)
+riboflavin,cofactor,0.3394,0.972,0.7086,0.6597,0.0489,False,True,"Q2 latent redistribution, theme survives"
+valine,amino_acid,0.4249,0.9668,0.2074,0.174,0.0333,False,False,Q4 poor transfer (both)
+creatinine,small_nitrogenous,0.6877,0.9659,0.8747,0.7143,0.1604,True,True,Q1 identity preserved (both)
+cysteine,amino_acid,0.58,0.9608,0.6942,0.6889,0.0053,False,True,Q1 identity preserved (both)
+ergothioneine,cofactor,0.2852,0.9582,0.2507,0.3447,-0.0941,False,True,Q4 poor transfer (both)
+glycogen,polysaccharide,0.6837,0.9572,0.0647,0.0727,-0.0081,False,False,"Q3 superficial coord match, theme changes"
+methionine,amino_acid,0.5575,0.9546,0.8119,0.7509,0.061,False,True,Q1 identity preserved (both)
+glutamate,amino_acid,0.3337,0.9535,0.1533,0.1489,0.0045,False,False,Q4 poor transfer (both)
+tyrosine,amino_acid,0.236,0.9473,0.1874,0.1409,0.0465,False,True,Q4 poor transfer (both)
+adenine,purine,0.3592,0.9466,0.733,0.7069,0.0261,False,True,"Q2 latent redistribution, theme survives"
+isoleucine,amino_acid,0.5932,0.9379,-0.9043,-0.8225,-0.0818,False,False,"Q3 superficial coord match, theme changes"
+leucine,amino_acid,0.4373,0.9349,-0.6361,-0.5114,-0.1246,False,False,Q4 poor transfer (both)
+pyruvate,organic_acid,0.6083,0.9333,0.6639,0.6848,-0.0209,False,True,Q1 identity preserved (both)
+phosphoenolpyruvate,organic_acid,0.6177,0.9331,0.8668,0.6833,0.1835,False,True,Q1 identity preserved (both)
+tryptophan,amino_acid,0.3394,0.9305,0.2139,0.3667,-0.1528,False,True,Q4 poor transfer (both)
+albumin,protein,0.6025,0.9286,-0.1934,-0.1117,-0.0817,False,False,"Q3 superficial coord match, theme changes"
+histidine,amino_acid,0.4868,0.9256,-0.7794,-0.622,-0.1574,False,False,Q4 poor transfer (both)
+galactose,saccharide,0.4462,0.9241,-0.2446,-0.3684,0.1237,False,False,Q4 poor transfer (both)
+phosphate,organic_acid,0.361,0.9183,0.603,0.54,0.063,False,False,"Q2 latent redistribution, theme survives"
+cholesterol,lipid,0.3357,0.9181,0.1114,-0.255,0.3664,False,False,Q4 poor transfer (both)
+acetoacetate,organic_acid,0.423,0.9169,0.446,0.4032,0.0428,False,False,Q4 poor transfer (both)
+urate,purine,0.644,0.9127,-0.5662,-0.1396,-0.4266,False,False,"Q3 superficial coord match, theme changes"
+n-acetylglucosamine,saccharide,0.5987,0.9014,-0.6277,-0.5965,-0.0313,False,False,"Q3 superficial coord match, theme changes"
+alanine,amino_acid,0.2553,0.8867,-0.4841,-0.4569,-0.0272,False,False,Q4 poor transfer (both)
+mannose,saccharide,0.6013,0.8841,-0.6059,-0.5032,-0.1027,False,False,"Q3 superficial coord match, theme changes"
+urea,small_nitrogenous,0.6674,0.8827,0.9025,-0.0978,1.0003,True,False,Q1 identity preserved (both)
+guanine,purine,0.631,0.8758,0.9241,0.7088,0.2153,False,True,Q1 identity preserved (both)
+proline,amino_acid,0.31,0.8689,-0.733,-0.6408,-0.0922,False,False,Q4 poor transfer (both)
+ascorbate,organic_acid,0.3917,0.8605,-0.5823,-0.5302,-0.0521,False,False,Q4 poor transfer (both)
+serine,amino_acid,0.3536,0.8496,-0.6139,-0.5968,-0.0171,False,False,Q4 poor transfer (both)
+glucose,saccharide,0.2555,0.8458,-0.4605,-0.4806,0.0201,False,False,Q4 poor transfer (both)
+citrate,organic_acid,0.6183,0.8426,0.8517,0.7608,0.0908,False,False,Q1 identity preserved (both)
+phenylalanine,amino_acid,0.3007,0.8306,-0.0917,-0.0599,-0.0318,False,False,Q4 poor transfer (both)
+fructose-6-phosphate,saccharide,0.3473,0.8287,-0.7297,-0.7217,-0.008,False,False,Q4 poor transfer (both)
+hydroxyproline,amino_acid,0.241,0.8238,-0.5354,-0.5228,-0.0126,False,False,Q4 poor transfer (both)
+arginine,amino_acid,0.4943,0.8175,-0.9317,-0.8089,-0.1228,False,False,Q4 poor transfer (both)
+glycine,amino_acid,0.2465,0.8118,-0.2531,-0.3689,0.1158,False,False,Q4 poor transfer (both)
+glycerol,polyol,0.47,0.8044,-0.7601,-0.7348,-0.0253,False,False,Q4 poor transfer (both)
+lactate,organic_acid,0.402,0.7821,-0.6338,-0.538,-0.0958,False,False,Q4 poor transfer (both)
+fructose,saccharide,0.3411,0.7526,-0.6003,-0.6484,0.0481,False,False,Q4 poor transfer (both)
+thymine,pyrimidine,0.2704,0.7403,0.5558,0.424,0.1317,False,True,"Q2 latent redistribution, theme survives"
+stearate,lipid,0.3209,0.5662,0.0776,-0.2541,0.3318,False,False,Q4 poor transfer (both)
+triolein,lipid,0.3138,0.5219,-0.3572,-0.4846,0.1274,False,False,Q4 poor transfer (both)
+oleate,lipid,0.264,0.5072,-0.4675,-0.4814,0.0139,False,False,Q4 poor transfer (both)
+uracil,pyrimidine,0.0562,0.45,0.1591,0.0649,0.0942,False,False,Q4 poor transfer (both)

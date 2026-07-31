@@ -1,0 +1,59 @@
+{
+  "analyte": "urate",
+  "family": "purine",
+  "expected_theme": "nucleic_purine",
+  "n_raman": 3,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.644,
+    "tier": "Moderate",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": false,
+    "raman_dominant": "saccharide_glycan",
+    "sers_dominant": "nucleic_purine",
+    "theme_cosine_raw": 0.9127,
+    "theme_cosine_distinct": -0.5662,
+    "theme_null_mean": -0.1396,
+    "theme_separation": -0.4266,
+    "self_is_nearest_theme": false,
+    "expected_rank_raman": 2,
+    "expected_rank_sers": 1,
+    "expected_retained_top3": true,
+    "mss_cosine": 0.7488,
+    "dominant_mss_match": false,
+    "redistribution": {
+      "theme_jsd": 0.0355,
+      "l1_theme_shift": 0.3011,
+      "gained_theme": "nucleic_purine",
+      "lost_theme": "nucleic_pyrimidine",
+      "gained_component": "c15",
+      "lost_component": "c20",
+      "gained_mss": "purine_ring_breathing",
+      "lost_mss": "carboxylate_organic_acid"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "analyte": "urate",
+    "perturbation_kind": "directional depletion (uricase)",
+    "target_theme": "nucleic_purine (oxopurine motif)",
+    "delta_oxopurine_motif": -0.0602,
+    "delta_purine_ring_motif": -0.0005,
+    "purine_theme_delta": -0.0114,
+    "localises_to_purine_theme": false,
+    "statement": "enzymatic urate removal drops the oxopurine-carbonyl MOTIF sharply (theme layer is diffuse); validates perturbation DIRECTION, not a dose score"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "urate",
+    "serum_spike_displacement": 0.0524,
+    "serum_replicate_direction_cos": 0.9691,
+    "serum_vs_pureSERS_cos": 0.0691,
+    "serum_vs_pureRaman_cos": 0.303,
+    "serum_recovery_tier": "strong",
+    "serum_tested": true
+  },
+  "quadrant": "Q3 superficial coord match, theme changes",
+  "ood_sers": 0.2944,
+  "confidence_sers": 0.2378
+}

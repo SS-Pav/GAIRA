@@ -1,0 +1,54 @@
+{
+  "analyte": "xanthine",
+  "family": "purine",
+  "expected_theme": "nucleic_purine",
+  "n_raman": 3,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.8145,
+    "tier": "Excellent",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": true,
+    "raman_dominant": "nucleic_purine",
+    "sers_dominant": "nucleic_purine",
+    "theme_cosine_raw": 0.9751,
+    "theme_cosine_distinct": 0.9557,
+    "theme_null_mean": 0.6076,
+    "theme_separation": 0.3481,
+    "self_is_nearest_theme": true,
+    "expected_rank_raman": 1,
+    "expected_rank_sers": 1,
+    "expected_retained_top3": true,
+    "mss_cosine": 0.9303,
+    "dominant_mss_match": true,
+    "redistribution": {
+      "theme_jsd": 0.0389,
+      "l1_theme_shift": 0.3287,
+      "gained_theme": "organic_acid_metabolism",
+      "lost_theme": "nucleic_purine",
+      "gained_component": "c19",
+      "lost_component": "c15",
+      "gained_mss": "pyrimidine_ring",
+      "lost_mss": "oxopurine_carbonyl"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "tested": false,
+    "status": "Not tested",
+    "why": "no controlled perturbation series exists for this analyte"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "xanthine",
+    "serum_spike_displacement": 0.1202,
+    "serum_replicate_direction_cos": 0.9947,
+    "serum_vs_pureSERS_cos": 0.7356,
+    "serum_vs_pureRaman_cos": 0.6186,
+    "serum_recovery_tier": "strong",
+    "serum_tested": true
+  },
+  "quadrant": "Q1 identity preserved (both)",
+  "ood_sers": 0.1743,
+  "confidence_sers": 0.2908
+}

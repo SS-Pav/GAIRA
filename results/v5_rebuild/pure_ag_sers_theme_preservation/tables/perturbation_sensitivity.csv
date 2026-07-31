@@ -1,0 +1,4 @@
+analyte,perturbation_kind,target_theme,monotonicity_rho,dose_model,saturating_K_uM,saturating_r2,n_levels,statement,delta_oxopurine_motif,delta_purine_ring_motif,purine_theme_delta,localises_to_purine_theme
+adenine,concentration dose-response,nucleic_purine,0.996,saturating,0.893,0.993,14.0,purine theme rises monotonically and saturates (Langmuir) — a reproducible dose-response,,,,
+ergothioneine,concentration dose-response,sulfur_antioxidant,0.927,saturating,1.521,0.957,11.0,sulfur theme rises monotonically and saturates — a reproducible dose-response,,,,
+urate,directional depletion (uricase),nucleic_purine (oxopurine motif),,,,,,"enzymatic urate removal drops the oxopurine-carbonyl MOTIF sharply (theme layer is diffuse); validates perturbation DIRECTION, not a dose score",-0.0602,-0.0005,-0.0114,False

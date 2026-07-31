@@ -1,0 +1,54 @@
+{
+  "analyte": "coenzyme a",
+  "family": "cofactor",
+  "expected_theme": "sulfur_antioxidant|redox_broad",
+  "n_raman": 4,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.6495,
+    "tier": "Moderate",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": true,
+    "raman_dominant": "nucleic_purine",
+    "sers_dominant": "nucleic_purine",
+    "theme_cosine_raw": 0.9852,
+    "theme_cosine_distinct": 0.7183,
+    "theme_null_mean": 0.6938,
+    "theme_separation": 0.0245,
+    "self_is_nearest_theme": false,
+    "expected_rank_raman": 5,
+    "expected_rank_sers": 5,
+    "expected_retained_top3": false,
+    "mss_cosine": 0.9011,
+    "dominant_mss_match": false,
+    "redistribution": {
+      "theme_jsd": 0.0097,
+      "l1_theme_shift": 0.1591,
+      "gained_theme": "organic_acid_metabolism",
+      "lost_theme": "lipid_acyl",
+      "gained_component": "c23",
+      "lost_component": "c3",
+      "gained_mss": "carboxylate_organic_acid",
+      "lost_mss": "purine_ring_breathing"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "tested": false,
+    "status": "Not tested",
+    "why": "no controlled perturbation series exists for this analyte"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "coenzyme a",
+    "serum_spike_displacement": 0.033,
+    "serum_replicate_direction_cos": 0.8678,
+    "serum_vs_pureSERS_cos": -0.2285,
+    "serum_vs_pureRaman_cos": 0.2979,
+    "serum_recovery_tier": "moderate",
+    "serum_tested": true
+  },
+  "quadrant": "Q1 identity preserved (both)",
+  "ood_sers": 0.1735,
+  "confidence_sers": 0.1931
+}

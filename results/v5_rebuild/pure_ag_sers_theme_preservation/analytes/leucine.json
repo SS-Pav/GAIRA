@@ -1,0 +1,54 @@
+{
+  "analyte": "leucine",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "n_raman": 4,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.4373,
+    "tier": "Weak",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": false,
+    "raman_dominant": "saccharide_glycan",
+    "sers_dominant": "nucleic_purine",
+    "theme_cosine_raw": 0.9349,
+    "theme_cosine_distinct": -0.6361,
+    "theme_null_mean": -0.5114,
+    "theme_separation": -0.1246,
+    "self_is_nearest_theme": false,
+    "expected_rank_raman": 3,
+    "expected_rank_sers": 4,
+    "expected_retained_top3": false,
+    "mss_cosine": 0.7764,
+    "dominant_mss_match": false,
+    "redistribution": {
+      "theme_jsd": 0.0308,
+      "l1_theme_shift": 0.2913,
+      "gained_theme": "nucleic_purine",
+      "lost_theme": "saccharide_glycan",
+      "gained_component": "c23",
+      "lost_component": "c12",
+      "gained_mss": "pyrimidine_ring",
+      "lost_mss": "aromatic_ring_residue"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "tested": false,
+    "status": "Not tested",
+    "why": "no controlled perturbation series exists for this analyte"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "leucine",
+    "serum_spike_displacement": 0.0149,
+    "serum_replicate_direction_cos": 0.7077,
+    "serum_vs_pureSERS_cos": 0.1321,
+    "serum_vs_pureRaman_cos": -0.0894,
+    "serum_recovery_tier": "weak",
+    "serum_tested": true
+  },
+  "quadrant": "Q4 poor transfer (both)",
+  "ood_sers": 0.1281,
+  "confidence_sers": 0.2031
+}

@@ -1,0 +1,54 @@
+{
+  "analyte": "urea",
+  "family": "small_nitrogenous",
+  "expected_theme": "organic_acid_metabolism",
+  "n_raman": 3,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.6674,
+    "tier": "Good",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": false,
+    "raman_dominant": "sulfur_antioxidant",
+    "sers_dominant": "saccharide_glycan",
+    "theme_cosine_raw": 0.8827,
+    "theme_cosine_distinct": 0.9025,
+    "theme_null_mean": -0.0978,
+    "theme_separation": 1.0003,
+    "self_is_nearest_theme": true,
+    "expected_rank_raman": 3,
+    "expected_rank_sers": 3,
+    "expected_retained_top3": true,
+    "mss_cosine": 0.5222,
+    "dominant_mss_match": false,
+    "redistribution": {
+      "theme_jsd": 0.0674,
+      "l1_theme_shift": 0.4546,
+      "gained_theme": "nucleic_purine",
+      "lost_theme": "sulfur_antioxidant",
+      "gained_component": "c21",
+      "lost_component": "c6",
+      "gained_mss": "sulfur_heterocycle_thione",
+      "lost_mss": "aromatic_ring_residue"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "tested": false,
+    "status": "Not tested",
+    "why": "no controlled perturbation series exists for this analyte"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "urea",
+    "serum_spike_displacement": 0.0111,
+    "serum_replicate_direction_cos": 0.6318,
+    "serum_vs_pureSERS_cos": -0.1499,
+    "serum_vs_pureRaman_cos": -0.1273,
+    "serum_recovery_tier": "weak",
+    "serum_tested": true
+  },
+  "quadrant": "Q1 identity preserved (both)",
+  "ood_sers": 0.2901,
+  "confidence_sers": 0.1807
+}

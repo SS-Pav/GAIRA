@@ -1,0 +1,62 @@
+{
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "n_matched": 51,
+  "component_cosine": {
+    "median": 0.4249,
+    "mean": 0.4638
+  },
+  "theme_cosine_raw": {
+    "median": 0.9181,
+    "mean": 0.8733,
+    "note": "inflated by shared compositional baseline; not a stand-alone preservation measure"
+  },
+  "theme_cosine_distinct": {
+    "median": 0.1114,
+    "mean": 0.047,
+    "note": "baseline-subtracted; the honest preservation signal"
+  },
+  "theme_null_mean": {
+    "median": -0.0599,
+    "note": "distinctive cosine to OTHER analytes' SERS \u2014 the background floor"
+  },
+  "theme_separation": {
+    "median": 0.0139,
+    "mean": 0.0465,
+    "positive_count": 28,
+    "note": "distinct - null; >0 means the SERS theme profile resembles its OWN Raman profile more than a random one"
+  },
+  "self_is_nearest_theme": 4,
+  "self_theme_rank": {
+    "median": 25.0,
+    "mean": 23.82,
+    "top5_count": 8,
+    "chance_median": 26.0,
+    "note": "rank of the correct analyte among all 51 by distinctive theme cosine; chance median ~26"
+  },
+  "dominant_theme_preserved": 18,
+  "dominant_theme_preserved_rate": 0.353,
+  "expected_theme_top3_retained": 22,
+  "mss_cosine": {
+    "median": 0.7405
+  },
+  "quadrants": {
+    "Q4 poor transfer (both)": 27,
+    "Q1 identity preserved (both)": 13,
+    "Q3 superficial coord match, theme changes": 7,
+    "Q2 latent redistribution, theme survives": 4
+  },
+  "n_latent_redistribution_theme_survives": 4,
+  "theme_gt_component": 51,
+  "metric_definitions": {
+    "component_cosine": "cosine(z_Raman, z_AgSERS) over the 24 NMF coordinates \u2014 LATENT FINGERPRINT PRESERVATION",
+    "theme_cosine": "cosine(b_Raman, b_AgSERS) over the 11 biochemical THEME composition shares (RAW; baseline-inflated) \u2014 THEME PRESERVATION",
+    "theme_cosine_distinct": "cosine of baseline-SUBTRACTED theme vectors (each minus mean Raman composition) \u2014 the honest theme-preservation signal",
+    "theme_null_mean": "mean distinctive cosine of A's SERS theme profile to every OTHER analyte's \u2014 the background floor",
+    "theme_separation": "theme_cosine_distinct - theme_null_mean; >0 = SERS resembles its own Raman theme more than a random analyte's",
+    "self_is_nearest_theme": "the distinctive SERS theme profile's nearest Raman profile (over all analytes) is the SAME analyte",
+    "mss_cosine": "cosine over the 12 biochemical MSS motif activations",
+    "dominant_theme_match": "argmax(b_Raman) == argmax(b_AgSERS)",
+    "expected_retained_top3": "family's expected theme is in the Ag-SERS top-3",
+    "tiers": "manually-selected DESCRIPTIVE thresholds (0.80/0.65/0.45/0.25), not learned classes"
+  }
+}

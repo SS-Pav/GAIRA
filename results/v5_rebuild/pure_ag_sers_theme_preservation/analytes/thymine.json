@@ -1,0 +1,54 @@
+{
+  "analyte": "thymine",
+  "family": "pyrimidine",
+  "expected_theme": "nucleic_pyrimidine",
+  "n_raman": 4,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.2704,
+    "tier": "Weak",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": true,
+    "raman_dominant": "nucleic_purine",
+    "sers_dominant": "nucleic_purine",
+    "theme_cosine_raw": 0.7403,
+    "theme_cosine_distinct": 0.5558,
+    "theme_null_mean": 0.424,
+    "theme_separation": 0.1317,
+    "self_is_nearest_theme": false,
+    "expected_rank_raman": 2,
+    "expected_rank_sers": 8,
+    "expected_retained_top3": false,
+    "mss_cosine": 0.5425,
+    "dominant_mss_match": false,
+    "redistribution": {
+      "theme_jsd": 0.1449,
+      "l1_theme_shift": 0.6484,
+      "gained_theme": "saccharide_glycan",
+      "lost_theme": "nucleic_pyrimidine",
+      "gained_component": "c23",
+      "lost_component": "c13",
+      "gained_mss": "carboxylate_organic_acid",
+      "lost_mss": "pyrimidine_ring"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "tested": false,
+    "status": "Not tested",
+    "why": "no controlled perturbation series exists for this analyte"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "thymine",
+    "serum_spike_displacement": 0.0178,
+    "serum_replicate_direction_cos": 0.8181,
+    "serum_vs_pureSERS_cos": -0.0686,
+    "serum_vs_pureRaman_cos": -0.0216,
+    "serum_recovery_tier": "weak",
+    "serum_tested": true
+  },
+  "quadrant": "Q2 latent redistribution, theme survives",
+  "ood_sers": 0.1188,
+  "confidence_sers": 0.2123
+}

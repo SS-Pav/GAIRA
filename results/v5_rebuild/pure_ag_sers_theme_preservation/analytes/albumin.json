@@ -1,0 +1,54 @@
+{
+  "analyte": "albumin",
+  "family": "protein",
+  "expected_theme": "protein_peptide",
+  "n_raman": 6,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.6025,
+    "tier": "Moderate",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": false,
+    "raman_dominant": "lipid_acyl",
+    "sers_dominant": "nucleic_purine",
+    "theme_cosine_raw": 0.9286,
+    "theme_cosine_distinct": -0.1934,
+    "theme_null_mean": -0.1117,
+    "theme_separation": -0.0817,
+    "self_is_nearest_theme": false,
+    "expected_rank_raman": 2,
+    "expected_rank_sers": 4,
+    "expected_retained_top3": false,
+    "mss_cosine": 0.879,
+    "dominant_mss_match": false,
+    "redistribution": {
+      "theme_jsd": 0.0273,
+      "l1_theme_shift": 0.3097,
+      "gained_theme": "nucleic_purine",
+      "lost_theme": "lipid_acyl",
+      "gained_component": "c23",
+      "lost_component": "c2",
+      "gained_mss": "purine_ring_breathing",
+      "lost_mss": "protein_amide_backbone"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "tested": false,
+    "status": "Not tested",
+    "why": "no controlled perturbation series exists for this analyte"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "albumin",
+    "serum_spike_displacement": 0.0792,
+    "serum_replicate_direction_cos": 0.7726,
+    "serum_vs_pureSERS_cos": 0.0484,
+    "serum_vs_pureRaman_cos": -0.1442,
+    "serum_recovery_tier": "strong",
+    "serum_tested": true
+  },
+  "quadrant": "Q3 superficial coord match, theme changes",
+  "ood_sers": 0.1286,
+  "confidence_sers": 0.2398
+}

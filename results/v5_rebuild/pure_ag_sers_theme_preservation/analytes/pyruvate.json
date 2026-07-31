@@ -1,0 +1,54 @@
+{
+  "analyte": "pyruvate",
+  "family": "organic_acid",
+  "expected_theme": "organic_acid_metabolism",
+  "n_raman": 4,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.6083,
+    "tier": "Moderate",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": true,
+    "raman_dominant": "nucleic_purine",
+    "sers_dominant": "nucleic_purine",
+    "theme_cosine_raw": 0.9333,
+    "theme_cosine_distinct": 0.6639,
+    "theme_null_mean": 0.6848,
+    "theme_separation": -0.0209,
+    "self_is_nearest_theme": false,
+    "expected_rank_raman": 2,
+    "expected_rank_sers": 3,
+    "expected_retained_top3": true,
+    "mss_cosine": 0.8026,
+    "dominant_mss_match": false,
+    "redistribution": {
+      "theme_jsd": 0.0326,
+      "l1_theme_shift": 0.3138,
+      "gained_theme": "saccharide_glycan",
+      "lost_theme": "organic_acid_metabolism",
+      "gained_component": "c19",
+      "lost_component": "c23",
+      "gained_mss": "sulfur_heterocycle_thione",
+      "lost_mss": "carboxylate_organic_acid"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "tested": false,
+    "status": "Not tested",
+    "why": "no controlled perturbation series exists for this analyte"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "pyruvate",
+    "serum_spike_displacement": 0.0162,
+    "serum_replicate_direction_cos": 0.7965,
+    "serum_vs_pureSERS_cos": 0.0452,
+    "serum_vs_pureRaman_cos": 0.0094,
+    "serum_recovery_tier": "weak",
+    "serum_tested": true
+  },
+  "quadrant": "Q1 identity preserved (both)",
+  "ood_sers": 0.1116,
+  "confidence_sers": 0.2097
+}

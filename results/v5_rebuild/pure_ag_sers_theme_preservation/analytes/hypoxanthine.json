@@ -1,0 +1,54 @@
+{
+  "analyte": "hypoxanthine",
+  "family": "purine",
+  "expected_theme": "nucleic_purine",
+  "n_raman": 3,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.8443,
+    "tier": "Excellent",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": true,
+    "raman_dominant": "nucleic_purine",
+    "sers_dominant": "nucleic_purine",
+    "theme_cosine_raw": 0.9914,
+    "theme_cosine_distinct": 0.8269,
+    "theme_null_mean": 0.475,
+    "theme_separation": 0.3518,
+    "self_is_nearest_theme": true,
+    "expected_rank_raman": 1,
+    "expected_rank_sers": 1,
+    "expected_retained_top3": true,
+    "mss_cosine": 0.9642,
+    "dominant_mss_match": false,
+    "redistribution": {
+      "theme_jsd": 0.0068,
+      "l1_theme_shift": 0.1248,
+      "gained_theme": "nucleic_pyrimidine",
+      "lost_theme": "lipid_acyl",
+      "gained_component": "c23",
+      "lost_component": "c19",
+      "gained_mss": "sterol_ring_system",
+      "lost_mss": "lipid_acyl_chain"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "tested": false,
+    "status": "Not tested",
+    "why": "no controlled perturbation series exists for this analyte"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "hypoxanthine",
+    "serum_spike_displacement": 0.1137,
+    "serum_replicate_direction_cos": 0.9834,
+    "serum_vs_pureSERS_cos": 0.8888,
+    "serum_vs_pureRaman_cos": 0.3689,
+    "serum_recovery_tier": "strong",
+    "serum_tested": true
+  },
+  "quadrant": "Q1 identity preserved (both)",
+  "ood_sers": 0.1313,
+  "confidence_sers": 0.2463
+}

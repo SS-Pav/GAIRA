@@ -1,0 +1,54 @@
+{
+  "analyte": "glycogen",
+  "family": "polysaccharide",
+  "expected_theme": "saccharide_glycan",
+  "n_raman": 4,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.6837,
+    "tier": "Good",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": false,
+    "raman_dominant": "saccharide_glycan",
+    "sers_dominant": "nucleic_purine",
+    "theme_cosine_raw": 0.9572,
+    "theme_cosine_distinct": 0.0647,
+    "theme_null_mean": 0.0727,
+    "theme_separation": -0.0081,
+    "self_is_nearest_theme": false,
+    "expected_rank_raman": 1,
+    "expected_rank_sers": 2,
+    "expected_retained_top3": true,
+    "mss_cosine": 0.9023,
+    "dominant_mss_match": true,
+    "redistribution": {
+      "theme_jsd": 0.0201,
+      "l1_theme_shift": 0.2392,
+      "gained_theme": "nucleic_purine",
+      "lost_theme": "saccharide_glycan",
+      "gained_component": "c23",
+      "lost_component": "c18",
+      "gained_mss": "sulfur_heterocycle_thione",
+      "lost_mss": "glycan_co_network"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "tested": false,
+    "status": "Not tested",
+    "why": "no controlled perturbation series exists for this analyte"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "glycogen",
+    "serum_spike_displacement": 0.0294,
+    "serum_replicate_direction_cos": 0.8857,
+    "serum_vs_pureSERS_cos": 0.0581,
+    "serum_vs_pureRaman_cos": 0.1962,
+    "serum_recovery_tier": "moderate",
+    "serum_tested": true
+  },
+  "quadrant": "Q3 superficial coord match, theme changes",
+  "ood_sers": 0.137,
+  "confidence_sers": 0.211
+}

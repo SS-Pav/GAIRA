@@ -1,0 +1,54 @@
+{
+  "analyte": "fructose",
+  "family": "saccharide",
+  "expected_theme": "saccharide_glycan",
+  "n_raman": 3,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.3411,
+    "tier": "Weak",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": false,
+    "raman_dominant": "saccharide_glycan",
+    "sers_dominant": "nucleic_purine",
+    "theme_cosine_raw": 0.7526,
+    "theme_cosine_distinct": -0.6003,
+    "theme_null_mean": -0.6484,
+    "theme_separation": 0.0481,
+    "self_is_nearest_theme": false,
+    "expected_rank_raman": 1,
+    "expected_rank_sers": 2,
+    "expected_retained_top3": true,
+    "mss_cosine": 0.5823,
+    "dominant_mss_match": false,
+    "redistribution": {
+      "theme_jsd": 0.1153,
+      "l1_theme_shift": 0.6139,
+      "gained_theme": "nucleic_purine",
+      "lost_theme": "saccharide_glycan",
+      "gained_component": "c19",
+      "lost_component": "c20",
+      "gained_mss": "carboxylate_organic_acid",
+      "lost_mss": "glycan_co_network"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "tested": false,
+    "status": "Not tested",
+    "why": "no controlled perturbation series exists for this analyte"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "fructose",
+    "serum_spike_displacement": 0.0278,
+    "serum_replicate_direction_cos": 0.9066,
+    "serum_vs_pureSERS_cos": 0.1197,
+    "serum_vs_pureRaman_cos": 0.44,
+    "serum_recovery_tier": "moderate",
+    "serum_tested": true
+  },
+  "quadrant": "Q4 poor transfer (both)",
+  "ood_sers": 0.1429,
+  "confidence_sers": 0.1941
+}

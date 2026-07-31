@@ -1,0 +1,54 @@
+{
+  "analyte": "hydroxyproline",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "n_raman": 3,
+  "n_sers": 5,
+  "level1_latent_fingerprint": {
+    "component_cosine": 0.241,
+    "tier": "Poor",
+    "meaning": "similarity of the 24 NMF coordinates (adsorption-limited)"
+  },
+  "level2_biochemical_theme": {
+    "dominant_theme_match": false,
+    "raman_dominant": "saccharide_glycan",
+    "sers_dominant": "nucleic_purine",
+    "theme_cosine_raw": 0.8238,
+    "theme_cosine_distinct": -0.5354,
+    "theme_null_mean": -0.5228,
+    "theme_separation": -0.0126,
+    "self_is_nearest_theme": false,
+    "expected_rank_raman": 2,
+    "expected_rank_sers": 4,
+    "expected_retained_top3": false,
+    "mss_cosine": 0.6319,
+    "dominant_mss_match": false,
+    "redistribution": {
+      "theme_jsd": 0.084,
+      "l1_theme_shift": 0.5342,
+      "gained_theme": "nucleic_purine",
+      "lost_theme": "saccharide_glycan",
+      "gained_component": "c19",
+      "lost_component": "c11",
+      "gained_mss": "carboxylate_organic_acid",
+      "lost_mss": "aromatic_ring_residue"
+    }
+  },
+  "level3_perturbation_sensitivity": {
+    "tested": false,
+    "status": "Not tested",
+    "why": "no controlled perturbation series exists for this analyte"
+  },
+  "level4_matrix_recoverability": {
+    "analyte": "hydroxyproline",
+    "serum_spike_displacement": 0.0531,
+    "serum_replicate_direction_cos": 0.9517,
+    "serum_vs_pureSERS_cos": -0.1484,
+    "serum_vs_pureRaman_cos": -0.0156,
+    "serum_recovery_tier": "strong",
+    "serum_tested": true
+  },
+  "quadrant": "Q4 poor transfer (both)",
+  "ood_sers": 0.1242,
+  "confidence_sers": 0.2034
+}
