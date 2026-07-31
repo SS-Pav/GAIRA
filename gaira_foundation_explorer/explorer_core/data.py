@@ -133,6 +133,13 @@ def transfer_pairs() -> pd.DataFrame:
 
 
 @st.cache_data(show_spinner=False)
+def pure_ag_sers() -> dict:
+    """Enriched pure Ag-SERS validation (summary + per-analyte). Built by
+    foundation_audit/code/pure_ag_sers_validation.py."""
+    return load_json("pure_ag_sers_validation.json")
+
+
+@st.cache_data(show_spinner=False)
 def corpus_summary() -> dict:
     return load_json("corpus_summary.json")
 

@@ -25,11 +25,11 @@ sys.path.insert(0, str(REPO / "src"))
 
 from explorer_core import data as D, ui, theme as T
 from explorer_core.pages import (p01_intro, p02_grounding, p03_preprocessing, p04_learning,
-                                 p05_components, p06_biochemistry, p09_limitations,
-                                 p10_future, p11_takeaways)
+                                 p05_components, p06_biochemistry, p_calibration,
+                                 p09_limitations, p10_future, p11_takeaways)
 from demo_core import components as VC                       # v4 CSS + helpers
 from demo_core.engine_bridge import get_bridge
-from demo_core.pages import (p3_reasoning, p4_calibration, p5_serum, p6_biological)
+from demo_core.pages import p3_reasoning, p6_biological
 
 # The v4 pages emit their own internal "related pages" nav buttons (keyed by v4 page
 # labels). In this composed app those cross-links are irrelevant AND collide when two v4
@@ -63,7 +63,7 @@ def s4_inference():
 
 
 def s5_calibration():
-    p4_calibration.render(get_bridge()); _rule(); p5_serum.render(get_bridge())
+    p_calibration.render()          # Reference Raman → Pure Ag-SERS → Adenine → Ergo → Uricase → Serum
 
 
 def s6_biological():
