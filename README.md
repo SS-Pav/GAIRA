@@ -94,7 +94,15 @@ streamlit run gaira_foundation_explorer/app.py
 streamlit run gaira_demo_reasoning_v4/app.py
 ```
 
-Both apps read only committed assets + precomputed outputs. Neither requires SSD_Rad,
+**Foundation Explorer V2** — the cross-modal transfer study: a four-level validation
+framework (latent fingerprint → biochemical theme → perturbation → matrix) for the
+Raman → Ag-SERS jump. Additive; the original Explorer is unchanged.
+
+```bash
+streamlit run gaira_foundation_explorer_v2/app.py
+```
+
+All apps read only committed assets + precomputed outputs. None requires SSD_Rad,
 raw spectra, or any recomputation.
 
 ## Use the engine directly
@@ -132,3 +140,12 @@ Validation follows a **ladder** that separates each failure mode:
 serum matrix (competition) → biological cohorts.** The pure-Ag-SERS rung is the bridge —
 it shows transfer is already adsorption-selective *before* serum, so the serum results are
 the expected continuation. See `results/v5_rebuild/foundation_audit/reports/PURE_AG_SERS_VALIDATION.md`.
+
+That rung is analysed in depth by the **multi-level transfer framework** — latent fingerprint
+preservation, biochemical theme preservation (with a null control), perturbation sensitivity,
+and matrix recoverability — in `GAIRA_MULTI_LEVEL_VALIDATION_FRAMEWORK.md` and
+`results/v5_rebuild/pure_ag_sers_theme_preservation/`, with an interactive front-end in
+`gaira_foundation_explorer_v2/`. Its central lesson: theme-level and fingerprint-level
+preservation are distinct, and a high *raw* theme cosine is a compositional-baseline artifact —
+identity-specific theme preservation is selective, tracking adsorption, because Ag-SERS
+homogenises most analytes toward a purine attractor.

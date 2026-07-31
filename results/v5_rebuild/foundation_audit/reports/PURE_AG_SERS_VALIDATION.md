@@ -127,3 +127,24 @@ strong adsorbers recoverable) are the *expected* continuation, not a surprise. S
 adsorbers that pass this stage (oxopurines, thiols) are the ones that go on to survive
 serum; the weak adsorbers that fail here fail there too. **Representation limit vs
 measurement limit are cleanly separated by inserting this step.**
+
+---
+
+## Extension — the multi-level transfer analysis (additive)
+
+The coordinate-cosine results above are the **latent fingerprint preservation** layer
+(Level 1) and are kept verbatim. A companion module extends this stage with three further,
+distinct transfer questions — **biochemical theme preservation** (with a null control that
+corrects the compositional-baseline inflation of raw theme cosine), **perturbation
+sensitivity**, and **matrix recoverability** — under one four-level framework:
+
+- `results/v5_rebuild/pure_ag_sers_theme_preservation/` — spec, report, honest assessment,
+  nine audited figures, and per-analyte cards.
+- `GAIRA_MULTI_LEVEL_VALIDATION_FRAMEWORK.md` — the framework.
+- **Foundation Explorer V2** (`gaira_foundation_explorer_v2/`) — interactive walkthrough.
+
+Headline of the extension: theme-level and fingerprint-level preservation are genuinely
+*distinct* (theme cosine > component cosine for all 51 analytes), but identity-specific theme
+preservation, measured against a null, is **selective** — Ag-SERS homogenises 50/51 analytes
+toward a purine attractor, and only strong chemisorbers (oxopurines et al.) keep a distinctive,
+dose-responsive theme. Nothing in the extension retrains or modifies the frozen atlas.
