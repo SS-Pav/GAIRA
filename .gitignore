@@ -69,6 +69,12 @@ tmp/
 *_audit_store.pkl
 .matplotlib-cache/
 
+# ── V5 reproduction — temporary run outputs (regenerable; canonical examples are kept
+#    under results/v5_rebuild/reproduction/example_outputs/ and manifests/) ──
+/results/reproduction/
+results/v5_rebuild/reproduction/tmp_full_rebuild/
+results/v5_rebuild/reproduction/verification/*_run/
+
 # ── Intermediate / lab training artifacts (belong in GAIRA_Lab) ──
 results/v5_rebuild/phase2_stage_b/models/
 runs/
