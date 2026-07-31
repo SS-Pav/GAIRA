@@ -16,12 +16,25 @@ def render():
 
     ui.rule()
     ui.section("6.1", "The interpretive stack")
-    ui.flow([("Spectrum", "676 bins"), ("Components", "24 coords"), ("MSS motifs", "13 patterns"),
-             ("Themes", "11 biochemical"), ("BSV + radar", "state + confidence")],
-            highlight={2, 3})
+    st.markdown("The **component coordinates** feed two *parallel* deterministic projections. "
+                "The **Biochemical State Vector is computed directly from the component→theme "
+                "weight matrix** — it does **not** pass through MSS:")
+    ui.flow([("Spectrum", "676 bins"), ("Components", "24 coords"),
+             ("Themes via W", "component→theme"), ("BSV + radar", "state + confidence")],
+            highlight={1, 2})
+    st.markdown('<div class="small">Main path (the BSV). In parallel, the same component '
+                'coordinates project onto the MSS motif layer — a finer-grained *explanatory* '
+                'read-out that does not feed the BSV:</div>', unsafe_allow_html=True)
+    ui.flow([("Components", "24 coords"), ("MSS motifs", "13 patterns")], highlight={1})
+    ui.note("info",
+            "<b>Dependency direction (documented correctly).</b> Themes are computed from the "
+            "component→theme weights <b>W</b> alone (<code>b = Wᵀz</code>); MSS is a parallel "
+            "interpretive overlay and its motif scoring even <i>consumes</i> the theme weights, so "
+            "MSS is downstream of / parallel to themes — never their source. This page presents MSS "
+            "first because it is easier to read, but the maths runs component→theme directly.")
     st.markdown(
-        "Two layers sit between the latent coordinates and the reading. Each is **deterministic and "
-        "documented** — nothing here is learned or fit:")
+        "Two layers sit beside the latent coordinates. Each is **deterministic and documented** — "
+        "nothing here is learned or fit:")
     c1, c2 = st.columns(2)
     with c1:
         ui.card("MSS — Molecular Spectral Signatures",
@@ -97,7 +110,8 @@ def render():
                 "down through motifs → components → the exact reference chemistries that define it. "
                 "It is a *semantic* state you can read, question, and falsify — not a black box.")
     ui.note("take",
-            "Component → MSS → theme → BSV is a fully deterministic, fully traceable path from a "
-            "latent number to a biochemical claim with its own uncertainty attached.")
+            "Component →(W)→ theme → BSV is the deterministic path that produces the biochemical "
+            "claim; MSS runs in parallel as a finer-grained, fully-traceable explanation. Both carry "
+            "their own uncertainty; neither is learned or fit.")
     ui.report_expander("MSS_AUDIT.md", "Read the MSS audit (Part 7)")
     ui.report_expander("BSV_AUDIT.md", "Read the BSV audit (Part 8)")
