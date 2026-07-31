@@ -8,6 +8,24 @@ Figures: `figures/validation_dose.png`, `tables/validation_transfer_pairs.csv`. 
 committed foundation validation (held-out analyte, excitation/source transfer, serum
 projection) is cited where relevant.*
 
+## The validation ladder (why this order)
+
+```
+Reference Raman          → what the atlas LEARNS
+Pure Ag-SERS validation  → the MODALITY gap (Raman→silver), no matrix   ← see PURE_AG_SERS_VALIDATION.md
+Controlled perturbation  → concentration (adenine, ergothioneine)
+Matrix perturbation      → serum competition (spike-ins)
+Biological validation    → real cohorts
+```
+
+Each rung isolates one failure mode, so a serum result is the *expected* continuation of
+the pure-Ag-SERS result, not a surprise. **Pure Ag-SERS is the bridge** that separates the
+modality gap (surface physics) from the matrix gap (serum competition): transfer is already
+adsorption-selective before any serum is added — strong Ag chemisorbers (oxopurines, thiols)
+survive, weak physisorbers (pyrimidines, sugars, small amino acids) do not. Full analysis +
+recoverability tiers: **`PURE_AG_SERS_VALIDATION.md`** (51 matched analytes; median transfer
+cosine 0.42; Excellent 3 / Good 4 / Moderate 16 / Weak 24 / Poor 4).
+
 ---
 
 ## Scorecard

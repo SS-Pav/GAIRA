@@ -126,3 +126,9 @@ themes/motifs over exact molecule claims, tracks uncertainty (confidence + OOD),
 a clean separation between the **representation** (pure-Raman biochemistry) and the
 **observation** (how a given surface/instrument sees it). SERS is used to *validate* the
 model, never to fit it.
+
+Validation follows a **ladder** that separates each failure mode:
+**reference Raman → pure Ag-SERS (modality gap) → controlled perturbation (concentration) →
+serum matrix (competition) → biological cohorts.** The pure-Ag-SERS rung is the bridge —
+it shows transfer is already adsorption-selective *before* serum, so the serum results are
+the expected continuation. See `results/v5_rebuild/foundation_audit/reports/PURE_AG_SERS_VALIDATION.md`.
