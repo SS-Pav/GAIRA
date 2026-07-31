@@ -146,6 +146,33 @@ it (reference evidence) and drives it (perturbation evidence).
 
 ---
 
+## 5b. MSS — a PARALLEL interpretive layer (dependency direction)
+
+The Molecular Spectral Signatures (`src/gaira/engine/mss.py`,
+`data/mss_motifs_v1.yaml`) are a **second, parallel** projection of the same 24
+component coordinates — **they do not feed the BSV**.
+
+```mermaid
+flowchart LR
+    Z[Component coordinates z] --> BSV[BSV = Wᵀ z  ·  themes]
+    Z --> MSS[MSS motif activations]
+    W[component→theme weights W] --> BSV
+    W -. motif scoring consumes theme weight .-> MSS
+```
+
+- The **BSV is computed directly from `W`** (`composition = Wᵀ z`); `bsv.py` never
+  imports MSS.
+- Each MSS motif is a *curated* definition (bands + exemplars + `parent_theme`) whose
+  contributing components are *derived* by scoring
+  `0.40·band + 0.35·exemplar + 0.25·theme` (keep ≥ 0.15, top 6, normalise). Because that
+  score **consumes the theme weight**, MSS is **downstream of / parallel to** themes —
+  never their source.
+- **Correct statement:** *themes are computed directly from the component→theme weights;
+  MSS is a parallel explanatory overlay.* A UI may present MSS first (it is easier to
+  read), but the mathematical dependency is component→theme→BSV, with MSS beside it.
+
+---
+
 ## 6. Output structure (Part 12 — nothing hidden)
 
 Every `GAIRAEngine.infer(...).as_dict()` returns:

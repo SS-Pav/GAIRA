@@ -240,3 +240,62 @@ cat results/reproduction/my_run/reproduction_run/basis_comparison.json    # insp
 The authoritative verification of this package is `VERIFICATION_REPORT.md` (full + interp
 runs, frozen-asset integrity, tests). The operational checklist is
 `REPRODUCTION_CHECKLIST.md`.
+
+## 18. Pipeline diagrams (Mermaid)
+
+**End-to-end scientific pipeline** — learned once, then deterministic downstream:
+
+```mermaid
+flowchart TD
+    subgraph RAW["Raw Raman references (GAIRA_Lab)"]
+      R1[RamanBioLib 202/141]
+      R2[Gobbato Raman 153/51]
+      R3[amino-acid grounding 20/19]
+    end
+    R1 & R2 & R3 --> PRE[Canonical preprocessing<br/>crop 450-1800 · ASLS · SG · 2 cm⁻¹ · L2 · clip≥0]
+    PRE --> X[Reference matrix X_ref<br/>375 × 676]
+    X --> NMF[NMF k=24<br/>init nndsvda · seed 0 · max_iter 1500]
+    NMF --> H["H_basis 24×676  ·  LEARNED"]:::learned
+    NMF --> A[A_ref 375×24 activations]
+    H --> REG[Component registry<br/>DERIVED: frozen basis + evidence tables]:::derived
+    REG --> MSS[MSS motif registry<br/>DERIVED: registry + curated motif YAML]:::derived
+    REG --> TW[Component→theme weights T<br/>DERIVED: 0.50 loading + 0.25 band + 0.25 perturbation]:::derived
+    H --> NORM[Reference normalization<br/>DERIVED: median/MAD of projected coords Z]:::derived
+    TW --> BSV["BSV  b = Tᵀ z  ·  runtime transform"]
+    MSS -. parallel explanatory overlay .-> BSV
+    classDef learned fill:#dbeafe,stroke:#2a6f97,stroke-width:2px;
+    classDef derived fill:#eafaf0,stroke:#2f7d4f;
+```
+
+**Deterministic build order** (per `results/v5_rebuild/engine_v1/MIGRATION_NOTES.md`):
+
+```mermaid
+flowchart LR
+    C1[run_c1_benchmark.py<br/>select NMF k=24] --> C2[run_c2_c7.py<br/>fit + freeze basis]
+    C2 --> BR[build_registry.py]
+    BR --> BT[build_theme_weights.py]
+    BT --> BN[build_reference_norm.py]
+    BR --> BM[build_mss_registry.py]
+    BN --> V[run_validation.py<br/>BSV fixtures]
+    BM --> V
+```
+
+**Reproduction dependency graph** — what each mode needs:
+
+```mermaid
+flowchart TD
+    subgraph FULL["mode: full (needs raw)"]
+      RAWD[raw Raman @ GAIRA_DATA_ROOT] --> XR[X_ref] --> Hn[rebuilt H] --> CMP[compare vs canonical<br/>fingerprint + Hungarian]
+    end
+    subgraph INTERP["mode: interpretation-only (no raw)"]
+      FA[assets/foundation/ frozen basis] --> REGi[registry]
+      TAB[committed evidence tables] --> REGi --> TWi[theme weights] --> MSSi[MSS]
+      COORD[manifests/nmf_reference_coordinates.npz] --> NORMi[reference normalization]
+    end
+    CMP -. same numeric outputs .-> REGi
+```
+
+Every derived layer is a pure function of the frozen basis + committed tables (+ curated
+YAML). Only reference normalization needs the projected coordinates `Z`, which are
+committed as the 44 KB `manifests/nmf_reference_coordinates.npz` so interpretation-only mode
+needs no raw data.
