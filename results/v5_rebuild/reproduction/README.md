@@ -3,7 +3,7 @@
 ## 1. Purpose
 
 This package reproduces the **GAIRA Raman-only foundation** and all of its deterministic
-interpretation layers on another computer. It is self-contained: an intern with the repo,
+interpretation layers on another computer. It is self-contained: anyone with the repo,
 the same raw datasets, and the documented environment can regenerate the foundation without
 reading the entire audit history.
 
