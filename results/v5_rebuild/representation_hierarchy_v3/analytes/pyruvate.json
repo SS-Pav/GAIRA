@@ -1,0 +1,49 @@
+{
+  "analyte": "pyruvate",
+  "layer1_latent_fingerprint": {
+    "component_cosine": 0.6083,
+    "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+    "mss_cosine": 0.8026,
+    "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+    "raw": 0.9333,
+    "identity_specific": 0.6639,
+    "identity_null": 0.6848,
+    "identity_separation": -0.0209,
+    "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+    "spearman_rho": 0.7545,
+    "rank_null": 0.7549,
+    "rank_separation": -0.0004,
+    "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+    "top2": 0.5,
+    "top3": 0.667,
+    "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+    "agree": true,
+    "raman_dominant": "nucleic_purine",
+    "sers_dominant": "nucleic_purine",
+    "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+    "family": "organic_acid",
+    "expected_theme": "organic_acid_metabolism",
+    "delta_purine": -0.007,
+    "purine_share_raman": 0.2195,
+    "purine_share_sers": 0.2125,
+    "serum_spike_displacement": 0.0161589218746948
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+    "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.66 / rank separation -0.000.",
+    "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+    "Weak serum-matrix recoverability (displacement 0.016): competition on colloid suppresses recovery."
+  ]
+}

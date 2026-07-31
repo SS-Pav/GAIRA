@@ -1,0 +1,2465 @@
+{
+ "phosphatidylinositol": {
+  "analyte": "phosphatidylinositol",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.8339,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.9558,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9888,
+   "identity_specific": 0.4695,
+   "identity_null": 0.5101,
+   "identity_separation": -0.0407,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9909,
+   "rank_null": 0.9805,
+   "rank_separation": 0.0104,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 1.0,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "lipid",
+   "expected_theme": "lipid_acyl|sterol_membrane",
+   "delta_purine": -0.0208,
+   "purine_share_raman": 0.2151,
+   "purine_share_sers": 0.1943,
+   "serum_spike_displacement": 0.0169092719159596
+  },
+  "layer8_interpretation": "Partial mid-level transfer: motif structure carries over but the identity-specific theme abstraction is weak \u2014 a surface-physics limit, not a representation error.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.47 / rank separation +0.010.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.017): competition on colloid suppresses recovery."
+  ]
+ },
+ "coenzyme a": {
+  "analyte": "coenzyme a",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.6495,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.9011,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9852,
+   "identity_specific": 0.7183,
+   "identity_null": 0.6938,
+   "identity_separation": 0.0245,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9818,
+   "rank_null": 0.9778,
+   "rank_separation": 0.004,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 1.0,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "cofactor",
+   "expected_theme": "sulfur_antioxidant|redox_broad",
+   "delta_purine": -0.0229,
+   "purine_share_raman": 0.2291,
+   "purine_share_sers": 0.2061,
+   "serum_spike_displacement": 0.0329535468224184
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.72 / rank separation +0.004.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "glutathione": {
+  "analyte": "glutathione",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.7271,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.9554,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9858,
+   "identity_specific": 0.6482,
+   "identity_null": 0.5213,
+   "identity_separation": 0.1269,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9818,
+   "rank_null": 0.9642,
+   "rank_separation": 0.0176,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 1.0,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "cofactor",
+   "expected_theme": "sulfur_antioxidant",
+   "delta_purine": 0.0419,
+   "purine_share_raman": 0.1809,
+   "purine_share_sers": 0.2228,
+   "serum_spike_displacement": 0.0287263633957062
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.65 / rank separation +0.018.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "hypoxanthine": {
+  "analyte": "hypoxanthine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.8443,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.9642,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9914,
+   "identity_specific": 0.8269,
+   "identity_null": 0.475,
+   "identity_separation": 0.3518,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9545,
+   "rank_null": 0.8818,
+   "rank_separation": 0.0727,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "purine",
+   "expected_theme": "nucleic_purine",
+   "delta_purine": 0.0039,
+   "purine_share_raman": 0.2229,
+   "purine_share_sers": 0.2268,
+   "serum_spike_displacement": 0.1137120651570644
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.83 / rank separation +0.073.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "phosphate": {
+  "analyte": "phosphate",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.361,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.6495,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9183,
+   "identity_specific": 0.603,
+   "identity_null": 0.54,
+   "identity_separation": 0.063,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9545,
+   "rank_null": 0.9444,
+   "rank_separation": 0.0102,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 1.0,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "organic_acid_metabolism",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "organic_acid",
+   "expected_theme": "organic_acid_metabolism",
+   "delta_purine": 0.0021,
+   "purine_share_raman": 0.1989,
+   "purine_share_sers": 0.201,
+   "serum_spike_displacement": 0.0127269291824767
+  },
+  "layer8_interpretation": "Latent redistribution with retained biochemical abstraction: the 24-coordinate fingerprint is reshaped by adsorption, yet the higher-level theme identity survives.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.60 / rank separation +0.010.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.013): competition on colloid suppresses recovery."
+  ]
+ },
+ "glycogen": {
+  "analyte": "glycogen",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.6837,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.9023,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9572,
+   "identity_specific": 0.0647,
+   "identity_null": 0.0727,
+   "identity_separation": -0.0081,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9545,
+   "rank_null": 0.9556,
+   "rank_separation": -0.0011,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 1.0,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "polysaccharide",
+   "expected_theme": "saccharide_glycan",
+   "delta_purine": 0.0454,
+   "purine_share_raman": 0.1648,
+   "purine_share_sers": 0.2102,
+   "serum_spike_displacement": 0.0293849568318062
+  },
+  "layer8_interpretation": "Partial mid-level transfer: motif structure carries over but the identity-specific theme abstraction is weak \u2014 a surface-physics limit, not a representation error.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.06 / rank separation -0.001.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "creatinine": {
+  "analyte": "creatinine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.6877,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.6521,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9659,
+   "identity_specific": 0.8747,
+   "identity_null": 0.7143,
+   "identity_separation": 0.1604,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9545,
+   "rank_null": 0.9449,
+   "rank_separation": 0.0096,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "small_nitrogenous",
+   "expected_theme": "organic_acid_metabolism",
+   "delta_purine": -0.0662,
+   "purine_share_raman": 0.2676,
+   "purine_share_sers": 0.2014,
+   "serum_spike_displacement": 0.0181957267445735
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.87 / rank separation +0.010.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.018): competition on colloid suppresses recovery."
+  ]
+ },
+ "valine": {
+  "analyte": "valine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.4249,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.8199,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9668,
+   "identity_specific": 0.2074,
+   "identity_null": 0.174,
+   "identity_separation": 0.0333,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9455,
+   "rank_null": 0.9362,
+   "rank_separation": 0.0093,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 1.0,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.0076,
+   "purine_share_raman": 0.2057,
+   "purine_share_sers": 0.2132,
+   "serum_spike_displacement": 0.0336494288770981
+  },
+  "layer8_interpretation": "Partial mid-level transfer: motif structure carries over but the identity-specific theme abstraction is weak \u2014 a surface-physics limit, not a representation error.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.21 / rank separation +0.009.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "mannose": {
+  "analyte": "mannose",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.6013,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.7375,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8841,
+   "identity_specific": -0.6059,
+   "identity_null": -0.5032,
+   "identity_separation": -0.1027,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9455,
+   "rank_null": 0.9293,
+   "rank_separation": 0.0162,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "saccharide",
+   "expected_theme": "saccharide_glycan",
+   "delta_purine": 0.0806,
+   "purine_share_raman": 0.1329,
+   "purine_share_sers": 0.2135,
+   "serum_spike_displacement": 0.0446528002473677
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.61 / rank separation +0.016.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "cysteine": {
+  "analyte": "cysteine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.58,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.8088,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9608,
+   "identity_specific": 0.6942,
+   "identity_null": 0.6889,
+   "identity_separation": 0.0053,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9455,
+   "rank_null": 0.9287,
+   "rank_separation": 0.0167,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 1.0,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "sulfur_antioxidant",
+   "delta_purine": -0.1001,
+   "purine_share_raman": 0.3034,
+   "purine_share_sers": 0.2033,
+   "serum_spike_displacement": 0.0252032712649631
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.69 / rank separation +0.017.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "galactose": {
+  "analyte": "galactose",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.4462,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.7966,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9241,
+   "identity_specific": -0.2446,
+   "identity_null": -0.3684,
+   "identity_separation": 0.1237,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9364,
+   "rank_null": 0.9344,
+   "rank_separation": 0.002,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 1.0,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "saccharide",
+   "expected_theme": "saccharide_glycan",
+   "delta_purine": 0.0381,
+   "purine_share_raman": 0.169,
+   "purine_share_sers": 0.2071,
+   "serum_spike_displacement": 0.040787432552907
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.24 / rank separation +0.002.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "methionine": {
+  "analyte": "methionine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.5575,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.8735,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9546,
+   "identity_specific": 0.8119,
+   "identity_null": 0.7509,
+   "identity_separation": 0.061,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9364,
+   "rank_null": 0.9302,
+   "rank_separation": 0.0062,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 1.0,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "sulfur_antioxidant",
+   "delta_purine": -0.1033,
+   "purine_share_raman": 0.3068,
+   "purine_share_sers": 0.2035,
+   "serum_spike_displacement": 0.0186359116572962
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.81 / rank separation +0.006.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.019): competition on colloid suppresses recovery."
+  ]
+ },
+ "histidine": {
+  "analyte": "histidine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.4868,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.8677,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9256,
+   "identity_specific": -0.7794,
+   "identity_null": -0.622,
+   "identity_separation": -0.1574,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9364,
+   "rank_null": 0.9264,
+   "rank_separation": 0.01,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.0664,
+   "purine_share_raman": 0.1451,
+   "purine_share_sers": 0.2115,
+   "serum_spike_displacement": 0.0488830557058895
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.78 / rank separation +0.010.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "glutamate": {
+  "analyte": "glutamate",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.3337,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.6553,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9535,
+   "identity_specific": 0.1533,
+   "identity_null": 0.1489,
+   "identity_separation": 0.0045,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9273,
+   "rank_null": 0.9075,
+   "rank_separation": 0.0198,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 1.0,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.0577,
+   "purine_share_raman": 0.1498,
+   "purine_share_sers": 0.2075,
+   "serum_spike_displacement": 0.0156379234776762
+  },
+  "layer8_interpretation": "Partial mid-level transfer: motif structure carries over but the identity-specific theme abstraction is weak \u2014 a surface-physics limit, not a representation error.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.15 / rank separation +0.020.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.016): competition on colloid suppresses recovery."
+  ]
+ },
+ "xanthine": {
+  "analyte": "xanthine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.8145,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.9303,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9751,
+   "identity_specific": 0.9557,
+   "identity_null": 0.6076,
+   "identity_separation": 0.3481,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9273,
+   "rank_null": 0.8802,
+   "rank_separation": 0.0471,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 1.0,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "purine",
+   "expected_theme": "nucleic_purine",
+   "delta_purine": -0.1085,
+   "purine_share_raman": 0.4711,
+   "purine_share_sers": 0.3626,
+   "serum_spike_displacement": 0.1201729135554756
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.96 / rank separation +0.047.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "riboflavin": {
+  "analyte": "riboflavin",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.3394,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.6387,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.972,
+   "identity_specific": 0.7086,
+   "identity_null": 0.6597,
+   "identity_separation": 0.0489,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9182,
+   "rank_null": 0.9067,
+   "rank_separation": 0.0115,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "cofactor",
+   "expected_theme": "redox_broad",
+   "delta_purine": -0.0254,
+   "purine_share_raman": 0.2342,
+   "purine_share_sers": 0.2087,
+   "serum_spike_displacement": 0.0297721372730469
+  },
+  "layer8_interpretation": "Latent redistribution with retained biochemical abstraction: the 24-coordinate fingerprint is reshaped by adsorption, yet the higher-level theme identity survives.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.71 / rank separation +0.011.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "leucine": {
+  "analyte": "leucine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.4373,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.7764,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9349,
+   "identity_specific": -0.6361,
+   "identity_null": -0.5114,
+   "identity_separation": -0.1246,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9182,
+   "rank_null": 0.9209,
+   "rank_separation": -0.0027,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.0481,
+   "purine_share_raman": 0.1475,
+   "purine_share_sers": 0.1956,
+   "serum_spike_displacement": 0.0149483909554325
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.64 / rank separation -0.003.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.015): competition on colloid suppresses recovery."
+  ]
+ },
+ "proline": {
+  "analyte": "proline",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.31,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.8426,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8689,
+   "identity_specific": -0.733,
+   "identity_null": -0.6408,
+   "identity_separation": -0.0922,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9091,
+   "rank_null": 0.8938,
+   "rank_separation": 0.0153,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.0996,
+   "purine_share_raman": 0.1109,
+   "purine_share_sers": 0.2104,
+   "serum_spike_displacement": 0.0398572345190441
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.73 / rank separation +0.015.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "n-acetylglucosamine": {
+  "analyte": "n-acetylglucosamine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.5987,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.8527,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9014,
+   "identity_specific": -0.6277,
+   "identity_null": -0.5965,
+   "identity_separation": -0.0313,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.9,
+   "rank_null": 0.8836,
+   "rank_separation": 0.0164,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "saccharide",
+   "expected_theme": "saccharide_glycan",
+   "delta_purine": 0.1051,
+   "purine_share_raman": 0.0981,
+   "purine_share_sers": 0.2033,
+   "serum_spike_displacement": 0.0135150758065274
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.63 / rank separation +0.016.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.014): competition on colloid suppresses recovery."
+  ]
+ },
+ "tryptophan": {
+  "analyte": "tryptophan",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.3394,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.6793,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9305,
+   "identity_specific": 0.2139,
+   "identity_null": 0.3667,
+   "identity_separation": -0.1528,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8818,
+   "rank_null": 0.8825,
+   "rank_separation": -0.0007,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.0638,
+   "purine_share_raman": 0.1517,
+   "purine_share_sers": 0.2155,
+   "serum_spike_displacement": 0.0380269921814875
+  },
+  "layer8_interpretation": "Partial mid-level transfer: motif structure carries over but the identity-specific theme abstraction is weak \u2014 a surface-physics limit, not a representation error.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.21 / rank separation -0.001.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "cholesterol": {
+  "analyte": "cholesterol",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.3357,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.814,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9181,
+   "identity_specific": 0.1114,
+   "identity_null": -0.255,
+   "identity_separation": 0.3664,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8818,
+   "rank_null": 0.7915,
+   "rank_separation": 0.0904,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "lipid_acyl",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "lipid",
+   "expected_theme": "lipid_acyl|sterol_membrane",
+   "delta_purine": 0.0622,
+   "purine_share_raman": 0.1533,
+   "purine_share_sers": 0.2155,
+   "serum_spike_displacement": 0.0158621315799783
+  },
+  "layer8_interpretation": "Partial mid-level transfer: motif structure carries over but the identity-specific theme abstraction is weak \u2014 a surface-physics limit, not a representation error.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.11 / rank separation +0.090.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.016): competition on colloid suppresses recovery."
+  ]
+ },
+ "guanine": {
+  "analyte": "guanine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.631,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.8745,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8758,
+   "identity_specific": 0.9241,
+   "identity_null": 0.7088,
+   "identity_separation": 0.2153,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8727,
+   "rank_null": 0.8144,
+   "rank_separation": 0.0584,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.333,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "purine",
+   "expected_theme": "nucleic_purine",
+   "delta_purine": -0.2522,
+   "purine_share_raman": 0.5102,
+   "purine_share_sers": 0.258,
+   "serum_spike_displacement": 0.0803486464469212
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.92 / rank separation +0.058.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "acetyl-coa": {
+  "analyte": "acetyl-coa",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.6495,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.9006,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9795,
+   "identity_specific": 0.5083,
+   "identity_null": 0.5332,
+   "identity_separation": -0.0249,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8727,
+   "rank_null": 0.8851,
+   "rank_separation": -0.0124,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "cofactor",
+   "expected_theme": "sulfur_antioxidant|redox_broad",
+   "delta_purine": -0.0364,
+   "purine_share_raman": 0.2308,
+   "purine_share_sers": 0.1944,
+   "serum_spike_displacement": 0.0157529797629563
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.51 / rank separation -0.012.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.016): competition on colloid suppresses recovery."
+  ]
+ },
+ "isoleucine": {
+  "analyte": "isoleucine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.5932,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.8301,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9379,
+   "identity_specific": -0.9043,
+   "identity_null": -0.8225,
+   "identity_separation": -0.0818,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8727,
+   "rank_null": 0.8798,
+   "rank_separation": -0.0071,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.0804,
+   "purine_share_raman": 0.1347,
+   "purine_share_sers": 0.2152,
+   "serum_spike_displacement": 0.0452167969201128
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.90 / rank separation -0.007.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "phosphoenolpyruvate": {
+  "analyte": "phosphoenolpyruvate",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.6177,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.8211,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9331,
+   "identity_specific": 0.8668,
+   "identity_null": 0.6833,
+   "identity_separation": 0.1835,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8727,
+   "rank_null": 0.7995,
+   "rank_separation": 0.0733,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "organic_acid",
+   "expected_theme": "organic_acid_metabolism",
+   "delta_purine": -0.0154,
+   "purine_share_raman": 0.2202,
+   "purine_share_sers": 0.2047,
+   "serum_spike_displacement": 0.0239179792660978
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.87 / rank separation +0.073.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "tyrosine": {
+  "analyte": "tyrosine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.236,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.6292,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9473,
+   "identity_specific": 0.1874,
+   "identity_null": 0.1409,
+   "identity_separation": 0.0465,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8727,
+   "rank_null": 0.8529,
+   "rank_separation": 0.0198,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.0205,
+   "purine_share_raman": 0.1802,
+   "purine_share_sers": 0.2008,
+   "serum_spike_displacement": 0.0326598787194272
+  },
+  "layer8_interpretation": "Latent redistribution with retained biochemical abstraction: the 24-coordinate fingerprint is reshaped by adsorption, yet the higher-level theme identity survives.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.19 / rank separation +0.020.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "adenine": {
+  "analyte": "adenine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.3592,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.7405,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9466,
+   "identity_specific": 0.733,
+   "identity_null": 0.7069,
+   "identity_separation": 0.0261,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8636,
+   "rank_null": 0.8305,
+   "rank_separation": 0.0331,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "purine",
+   "expected_theme": "nucleic_purine",
+   "delta_purine": -0.1157,
+   "purine_share_raman": 0.3206,
+   "purine_share_sers": 0.205,
+   "serum_spike_displacement": 0.0744701381287168
+  },
+  "layer8_interpretation": "Latent redistribution with retained biochemical abstraction: the 24-coordinate fingerprint is reshaped by adsorption, yet the higher-level theme identity survives. functional perturbation validation \u2014 a 14-point concentration series drives the nucleic_purine theme monotonically (\u03c1=0.996) along a saturating Langmuir law (K=0.89 \u00b5M); the biochemical abstraction is dynamically confirmed, not merely static.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.73 / rank separation +0.033."
+  ]
+ },
+ "stearate": {
+  "analyte": "stearate",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.3209,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.3722,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.5662,
+   "identity_specific": 0.0776,
+   "identity_null": -0.2541,
+   "identity_separation": 0.3318,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8545,
+   "rank_null": 0.7718,
+   "rank_separation": 0.0827,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "lipid_acyl",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "lipid",
+   "expected_theme": "lipid_acyl|sterol_membrane",
+   "delta_purine": 0.0692,
+   "purine_share_raman": 0.1328,
+   "purine_share_sers": 0.202,
+   "serum_spike_displacement": 0.0422662032214991
+  },
+  "layer8_interpretation": "Partial mid-level transfer: motif structure carries over but the identity-specific theme abstraction is weak \u2014 a surface-physics limit, not a representation error.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.08 / rank separation +0.083.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "glucose": {
+  "analyte": "glucose",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.2555,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.5358,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8458,
+   "identity_specific": -0.4605,
+   "identity_null": -0.4806,
+   "identity_separation": 0.0201,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8545,
+   "rank_null": 0.8642,
+   "rank_separation": -0.0096,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "saccharide",
+   "expected_theme": "saccharide_glycan",
+   "delta_purine": 0.024,
+   "purine_share_raman": 0.1717,
+   "purine_share_sers": 0.1958,
+   "serum_spike_displacement": 0.0143231368524228
+  },
+  "layer8_interpretation": "Partial mid-level transfer: motif structure carries over but the identity-specific theme abstraction is weak \u2014 a surface-physics limit, not a representation error.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.46 / rank separation -0.010.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.014): competition on colloid suppresses recovery."
+  ]
+ },
+ "ergothioneine": {
+  "analyte": "ergothioneine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.2852,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.7263,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9582,
+   "identity_specific": 0.2507,
+   "identity_null": 0.3447,
+   "identity_separation": -0.0941,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8545,
+   "rank_null": 0.944,
+   "rank_separation": -0.0895,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "cofactor",
+   "expected_theme": "sulfur_antioxidant",
+   "delta_purine": -0.0252,
+   "purine_share_raman": 0.1709,
+   "purine_share_sers": 0.1456,
+   "serum_spike_displacement": 0.0979241577657607
+  },
+  "layer8_interpretation": "Partial mid-level transfer: motif structure carries over but the identity-specific theme abstraction is weak \u2014 a surface-physics limit, not a representation error. functional perturbation validation \u2014 the sulfur_antioxidant theme rises monotonically and saturates with dose (\u03c1=0.927, K=1.52 \u00b5M).",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.25 / rank separation -0.089."
+  ]
+ },
+ "alanine": {
+  "analyte": "alanine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.2553,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.6624,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8867,
+   "identity_specific": -0.4841,
+   "identity_null": -0.4569,
+   "identity_separation": -0.0272,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8364,
+   "rank_null": 0.8275,
+   "rank_separation": 0.0089,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.0645,
+   "purine_share_raman": 0.136,
+   "purine_share_sers": 0.2005,
+   "serum_spike_displacement": 0.0156117192509579
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.48 / rank separation +0.009.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.016): competition on colloid suppresses recovery."
+  ]
+ },
+ "fructose-6-phosphate": {
+  "analyte": "fructose-6-phosphate",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.3473,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.6931,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8287,
+   "identity_specific": -0.7297,
+   "identity_null": -0.7217,
+   "identity_separation": -0.008,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8364,
+   "rank_null": 0.8198,
+   "rank_separation": 0.0165,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "saccharide",
+   "expected_theme": "saccharide_glycan",
+   "delta_purine": 0.1247,
+   "purine_share_raman": 0.0773,
+   "purine_share_sers": 0.202,
+   "serum_spike_displacement": 0.016186314137763
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.73 / rank separation +0.017.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.016): competition on colloid suppresses recovery."
+  ]
+ },
+ "lactate": {
+  "analyte": "lactate",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.402,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.5653,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.7821,
+   "identity_specific": -0.6338,
+   "identity_null": -0.538,
+   "identity_separation": -0.0958,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8364,
+   "rank_null": 0.842,
+   "rank_separation": -0.0056,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.333,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "organic_acid",
+   "expected_theme": "organic_acid_metabolism",
+   "delta_purine": 0.1214,
+   "purine_share_raman": 0.0858,
+   "purine_share_sers": 0.2072,
+   "serum_spike_displacement": 0.0316073181332614
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.63 / rank separation -0.006.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "hydroxyproline": {
+  "analyte": "hydroxyproline",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.241,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.6319,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8238,
+   "identity_specific": -0.5354,
+   "identity_null": -0.5228,
+   "identity_separation": -0.0126,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8273,
+   "rank_null": 0.8029,
+   "rank_separation": 0.0244,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.333,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.1117,
+   "purine_share_raman": 0.0918,
+   "purine_share_sers": 0.2035,
+   "serum_spike_displacement": 0.0530874480344008
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.54 / rank separation +0.024.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "urate": {
+  "analyte": "urate",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.644,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.7488,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9127,
+   "identity_specific": -0.5662,
+   "identity_null": -0.1396,
+   "identity_separation": -0.4266,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8273,
+   "rank_null": 0.8847,
+   "rank_separation": -0.0575,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 1.0,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "purine",
+   "expected_theme": "nucleic_purine",
+   "delta_purine": 0.1368,
+   "purine_share_raman": 0.127,
+   "purine_share_sers": 0.2638,
+   "serum_spike_displacement": 0.0524254026965384
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers. directional perturbation validation \u2014 enzymatic (uricase) removal drops the oxopurine-carbonyl motif sharply (\u0394=\u22120.060); validates response DIRECTION at the motif layer, not a dose magnitude.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.57 / rank separation -0.058."
+  ]
+ },
+ "albumin": {
+  "analyte": "albumin",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.6025,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.879,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9286,
+   "identity_specific": -0.1934,
+   "identity_null": -0.1117,
+   "identity_separation": -0.0817,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8182,
+   "rank_null": 0.7444,
+   "rank_separation": 0.0738,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.0,
+   "top3": 0.333,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "lipid_acyl",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "protein",
+   "expected_theme": "protein_peptide",
+   "delta_purine": 0.0757,
+   "purine_share_raman": 0.1352,
+   "purine_share_sers": 0.2109,
+   "serum_spike_displacement": 0.0792111281500245
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.19 / rank separation +0.074.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "fructose": {
+  "analyte": "fructose",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.3411,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.5823,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.7526,
+   "identity_specific": -0.6003,
+   "identity_null": -0.6484,
+   "identity_separation": 0.0481,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8182,
+   "rank_null": 0.8184,
+   "rank_separation": -0.0002,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "saccharide",
+   "expected_theme": "saccharide_glycan",
+   "delta_purine": 0.1196,
+   "purine_share_raman": 0.0762,
+   "purine_share_sers": 0.1958,
+   "serum_spike_displacement": 0.0277776715119521
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.60 / rank separation -0.000.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "citrate": {
+  "analyte": "citrate",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.6183,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.6956,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8426,
+   "identity_specific": 0.8517,
+   "identity_null": 0.7608,
+   "identity_separation": 0.0908,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8091,
+   "rank_null": 0.8018,
+   "rank_separation": 0.0073,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "organic_acid_metabolism",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "organic_acid",
+   "expected_theme": "organic_acid_metabolism",
+   "delta_purine": -0.0933,
+   "purine_share_raman": 0.2798,
+   "purine_share_sers": 0.1865,
+   "serum_spike_displacement": 0.0203175932516619
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.85 / rank separation +0.007.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "serine": {
+  "analyte": "serine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.3536,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.6897,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8496,
+   "identity_specific": -0.6139,
+   "identity_null": -0.5968,
+   "identity_separation": -0.0171,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.8,
+   "rank_null": 0.7816,
+   "rank_separation": 0.0184,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.333,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.1332,
+   "purine_share_raman": 0.0726,
+   "purine_share_sers": 0.2058,
+   "serum_spike_displacement": 0.0285066076473933
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.61 / rank separation +0.018.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "acetoacetate": {
+  "analyte": "acetoacetate",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.423,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.7716,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9169,
+   "identity_specific": 0.446,
+   "identity_null": 0.4032,
+   "identity_separation": 0.0428,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.7636,
+   "rank_null": 0.8504,
+   "rank_separation": -0.0867,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "organic_acid_metabolism",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "organic_acid",
+   "expected_theme": "organic_acid_metabolism",
+   "delta_purine": 0.0383,
+   "purine_share_raman": 0.1624,
+   "purine_share_sers": 0.2007,
+   "serum_spike_displacement": 0.0465368036858635
+  },
+  "layer8_interpretation": "Latent redistribution with retained biochemical abstraction: the 24-coordinate fingerprint is reshaped by adsorption, yet the higher-level theme identity survives.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.45 / rank separation -0.087.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "ascorbate": {
+  "analyte": "ascorbate",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.3917,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.674,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8605,
+   "identity_specific": -0.5823,
+   "identity_null": -0.5302,
+   "identity_separation": -0.0521,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.7636,
+   "rank_null": 0.7847,
+   "rank_separation": -0.0211,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "lipid_acyl",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "organic_acid",
+   "expected_theme": "organic_acid_metabolism",
+   "delta_purine": 0.0798,
+   "purine_share_raman": 0.1359,
+   "purine_share_sers": 0.2157,
+   "serum_spike_displacement": 0.0145750543071827
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.58 / rank separation -0.021.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.015): competition on colloid suppresses recovery."
+  ]
+ },
+ "glycine": {
+  "analyte": "glycine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.2465,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.8973,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8118,
+   "identity_specific": -0.2531,
+   "identity_null": -0.3689,
+   "identity_separation": 0.1158,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.7636,
+   "rank_null": 0.7462,
+   "rank_separation": 0.0175,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.333,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "sulfur_antioxidant",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.1117,
+   "purine_share_raman": 0.0814,
+   "purine_share_sers": 0.1931,
+   "serum_spike_displacement": 0.0153890408766649
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.25 / rank separation +0.018.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.015): competition on colloid suppresses recovery."
+  ]
+ },
+ "pyruvate": {
+  "analyte": "pyruvate",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.6083,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.8026,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.9333,
+   "identity_specific": 0.6639,
+   "identity_null": 0.6848,
+   "identity_separation": -0.0209,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.7545,
+   "rank_null": 0.7549,
+   "rank_separation": -0.0004,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "organic_acid",
+   "expected_theme": "organic_acid_metabolism",
+   "delta_purine": -0.007,
+   "purine_share_raman": 0.2195,
+   "purine_share_sers": 0.2125,
+   "serum_spike_displacement": 0.0161589218746948
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.66 / rank separation -0.000.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.016): competition on colloid suppresses recovery."
+  ]
+ },
+ "arginine": {
+  "analyte": "arginine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.4943,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.7433,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8175,
+   "identity_specific": -0.9317,
+   "identity_null": -0.8089,
+   "identity_separation": -0.1228,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.7545,
+   "rank_null": 0.7631,
+   "rank_separation": -0.0085,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.667,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.1386,
+   "purine_share_raman": 0.0708,
+   "purine_share_sers": 0.2094,
+   "serum_spike_displacement": 0.0432413409294302
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.93 / rank separation -0.009.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "glycerol": {
+  "analyte": "glycerol",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.47,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.5963,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8044,
+   "identity_specific": -0.7601,
+   "identity_null": -0.7348,
+   "identity_separation": -0.0253,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.7273,
+   "rank_null": 0.7375,
+   "rank_separation": -0.0102,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.333,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "saccharide_glycan",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "polyol",
+   "expected_theme": "saccharide_glycan",
+   "delta_purine": 0.1365,
+   "purine_share_raman": 0.0727,
+   "purine_share_sers": 0.2093,
+   "serum_spike_displacement": 0.0205620483343403
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.76 / rank separation -0.010.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "oleate": {
+  "analyte": "oleate",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.264,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.3648,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.5072,
+   "identity_specific": -0.4675,
+   "identity_null": -0.4814,
+   "identity_separation": 0.0139,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.7,
+   "rank_null": 0.6618,
+   "rank_separation": 0.0382,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.333,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "lipid_acyl",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "lipid",
+   "expected_theme": "lipid_acyl|sterol_membrane",
+   "delta_purine": 0.1757,
+   "purine_share_raman": 0.0369,
+   "purine_share_sers": 0.2126,
+   "serum_spike_displacement": 0.1075197260796003
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.47 / rank separation +0.038.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "uracil": {
+  "analyte": "uracil",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.0562,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.4858,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.45,
+   "identity_specific": 0.1591,
+   "identity_null": 0.0649,
+   "identity_separation": 0.0942,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.6455,
+   "rank_null": 0.668,
+   "rank_separation": -0.0225,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.333,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "nucleic_pyrimidine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "pyrimidine",
+   "expected_theme": "nucleic_pyrimidine",
+   "delta_purine": 0.1088,
+   "purine_share_raman": 0.0961,
+   "purine_share_sers": 0.2049,
+   "serum_spike_displacement": 0.0353157357959634
+  },
+  "layer8_interpretation": "Partial mid-level transfer: motif structure carries over but the identity-specific theme abstraction is weak \u2014 a surface-physics limit, not a representation error.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.16 / rank separation -0.022.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "urea": {
+  "analyte": "urea",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.6674,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.5222,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8827,
+   "identity_specific": 0.9025,
+   "identity_null": -0.0978,
+   "identity_separation": 1.0003,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.6455,
+   "rank_null": 0.6091,
+   "rank_separation": 0.0364,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.0,
+   "top3": 0.333,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "sulfur_antioxidant",
+   "sers_dominant": "saccharide_glycan",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "small_nitrogenous",
+   "expected_theme": "organic_acid_metabolism",
+   "delta_purine": 0.0955,
+   "purine_share_raman": 0.0503,
+   "purine_share_sers": 0.1459,
+   "serum_spike_displacement": 0.0111109881937206
+  },
+  "layer8_interpretation": "Identity-specific preservation across the hierarchy: both the latent fingerprint and the distinctive biochemical abstraction transfer to silver.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.90 / rank separation +0.036.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.011): competition on colloid suppresses recovery."
+  ]
+ },
+ "phenylalanine": {
+  "analyte": "phenylalanine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.3007,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.5299,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.8306,
+   "identity_specific": -0.0917,
+   "identity_null": -0.0599,
+   "identity_separation": -0.0318,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.6455,
+   "rank_null": 0.6236,
+   "rank_separation": 0.0218,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.0,
+   "top3": 0.333,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "sulfur_antioxidant",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "amino_acid",
+   "expected_theme": "aromatic_amino_acid|protein_peptide",
+   "delta_purine": 0.1295,
+   "purine_share_raman": 0.075,
+   "purine_share_sers": 0.2044,
+   "serum_spike_displacement": 0.0388772689749904
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.09 / rank separation +0.022.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+ },
+ "triolein": {
+  "analyte": "triolein",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.3138,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.3694,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.5219,
+   "identity_specific": -0.3572,
+   "identity_null": -0.4846,
+   "identity_separation": 0.1274,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.6364,
+   "rank_null": 0.6102,
+   "rank_separation": 0.0262,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.333,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": false,
+   "raman_dominant": "lipid_acyl",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "lipid",
+   "expected_theme": "lipid_acyl|sterol_membrane",
+   "delta_purine": 0.163,
+   "purine_share_raman": 0.0386,
+   "purine_share_sers": 0.2016,
+   "serum_spike_displacement": 0.0153614395377829
+  },
+  "layer8_interpretation": "Adsorption-driven observation bias: on silver this analyte is pulled toward the nucleic_purine attractor, so its distinctive Raman abstraction is not recovered even where surface-level structure partially transfers.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine -0.36 / rank separation +0.026.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.015): competition on colloid suppresses recovery."
+  ]
+ },
+ "thymine": {
+  "analyte": "thymine",
+  "layer1_latent_fingerprint": {
+   "component_cosine": 0.2704,
+   "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+   "mss_cosine": 0.5425,
+   "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+   "raw": 0.7403,
+   "identity_specific": 0.5558,
+   "identity_null": 0.424,
+   "identity_separation": 0.1317,
+   "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+   "spearman_rho": 0.2182,
+   "rank_null": 0.2244,
+   "rank_separation": -0.0062,
+   "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+   "top2": 0.5,
+   "top3": 0.333,
+   "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+   "agree": true,
+   "raman_dominant": "nucleic_purine",
+   "sers_dominant": "nucleic_purine",
+   "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+   "family": "pyrimidine",
+   "expected_theme": "nucleic_pyrimidine",
+   "delta_purine": -0.0852,
+   "purine_share_raman": 0.281,
+   "purine_share_sers": 0.1959,
+   "serum_spike_displacement": 0.0177635135752517
+  },
+  "layer8_interpretation": "Latent redistribution with retained biochemical abstraction: the 24-coordinate fingerprint is reshaped by adsorption, yet the higher-level theme identity survives.",
+  "layer9_limitations": [
+   "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.56 / rank separation -0.006.",
+   "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+   "Weak serum-matrix recoverability (displacement 0.018): competition on colloid suppresses recovery."
+  ]
+ }
+}

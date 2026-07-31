@@ -1,0 +1,49 @@
+{
+  "analyte": "thymine",
+  "layer1_latent_fingerprint": {
+    "component_cosine": 0.2704,
+    "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+    "mss_cosine": 0.5425,
+    "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+    "raw": 0.7403,
+    "identity_specific": 0.5558,
+    "identity_null": 0.424,
+    "identity_separation": 0.1317,
+    "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+    "spearman_rho": 0.2182,
+    "rank_null": 0.2244,
+    "rank_separation": -0.0062,
+    "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+    "top2": 0.5,
+    "top3": 0.333,
+    "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+    "agree": true,
+    "raman_dominant": "nucleic_purine",
+    "sers_dominant": "nucleic_purine",
+    "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+    "family": "pyrimidine",
+    "expected_theme": "nucleic_pyrimidine",
+    "delta_purine": -0.0852,
+    "purine_share_raman": 0.281,
+    "purine_share_sers": 0.1959,
+    "serum_spike_displacement": 0.0177635135752517
+  },
+  "layer8_interpretation": "Latent redistribution with retained biochemical abstraction: the 24-coordinate fingerprint is reshaped by adsorption, yet the higher-level theme identity survives.",
+  "layer9_limitations": [
+    "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.56 / rank separation -0.006.",
+    "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+    "Weak serum-matrix recoverability (displacement 0.018): competition on colloid suppresses recovery."
+  ]
+}

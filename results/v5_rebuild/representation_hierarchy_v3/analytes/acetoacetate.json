@@ -1,0 +1,48 @@
+{
+  "analyte": "acetoacetate",
+  "layer1_latent_fingerprint": {
+    "component_cosine": 0.423,
+    "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+    "mss_cosine": 0.7716,
+    "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+    "raw": 0.9169,
+    "identity_specific": 0.446,
+    "identity_null": 0.4032,
+    "identity_separation": 0.0428,
+    "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+    "spearman_rho": 0.7636,
+    "rank_null": 0.8504,
+    "rank_separation": -0.0867,
+    "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+    "top2": 0.5,
+    "top3": 0.667,
+    "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+    "agree": false,
+    "raman_dominant": "organic_acid_metabolism",
+    "sers_dominant": "nucleic_purine",
+    "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+    "family": "organic_acid",
+    "expected_theme": "organic_acid_metabolism",
+    "delta_purine": 0.0383,
+    "purine_share_raman": 0.1624,
+    "purine_share_sers": 0.2007,
+    "serum_spike_displacement": 0.0465368036858635
+  },
+  "layer8_interpretation": "Latent redistribution with retained biochemical abstraction: the 24-coordinate fingerprint is reshaped by adsorption, yet the higher-level theme identity survives.",
+  "layer9_limitations": [
+    "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.45 / rank separation -0.087.",
+    "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+}

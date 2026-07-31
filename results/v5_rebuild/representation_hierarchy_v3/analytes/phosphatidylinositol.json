@@ -1,0 +1,49 @@
+{
+  "analyte": "phosphatidylinositol",
+  "layer1_latent_fingerprint": {
+    "component_cosine": 0.8339,
+    "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+    "mss_cosine": 0.9558,
+    "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+    "raw": 0.9888,
+    "identity_specific": 0.4695,
+    "identity_null": 0.5101,
+    "identity_separation": -0.0407,
+    "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+    "spearman_rho": 0.9909,
+    "rank_null": 0.9805,
+    "rank_separation": 0.0104,
+    "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+    "top2": 1.0,
+    "top3": 1.0,
+    "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+    "agree": true,
+    "raman_dominant": "nucleic_purine",
+    "sers_dominant": "nucleic_purine",
+    "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+    "family": "lipid",
+    "expected_theme": "lipid_acyl|sterol_membrane",
+    "delta_purine": -0.0208,
+    "purine_share_raman": 0.2151,
+    "purine_share_sers": 0.1943,
+    "serum_spike_displacement": 0.0169092719159596
+  },
+  "layer8_interpretation": "Partial mid-level transfer: motif structure carries over but the identity-specific theme abstraction is weak \u2014 a surface-physics limit, not a representation error.",
+  "layer9_limitations": [
+    "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.47 / rank separation +0.010.",
+    "No dynamic perturbation validation exists for this analyte (Level 4 not measured).",
+    "Weak serum-matrix recoverability (displacement 0.017): competition on colloid suppresses recovery."
+  ]
+}

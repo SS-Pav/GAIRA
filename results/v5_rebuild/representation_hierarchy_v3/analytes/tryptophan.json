@@ -1,0 +1,48 @@
+{
+  "analyte": "tryptophan",
+  "layer1_latent_fingerprint": {
+    "component_cosine": 0.3394,
+    "meaning": "cosine over 24 NMF coordinates \u2014 surface-physics-dominated"
+  },
+  "layer2_mss_motif": {
+    "mss_cosine": 0.6793,
+    "meaning": "cosine over 12 biochemical MSS motifs \u2014 mid-level structure"
+  },
+  "layer3_theme_cosine": {
+    "raw": 0.9305,
+    "identity_specific": 0.2139,
+    "identity_null": 0.3667,
+    "identity_separation": -0.1528,
+    "meaning": "raw is baseline-inflated; identity-specific is baseline-subtracted vs a null"
+  },
+  "layer4_theme_rank_correlation": {
+    "spearman_rho": 0.8818,
+    "rank_null": 0.8825,
+    "rank_separation": -0.0007,
+    "meaning": "Spearman \u03c1 of the 11-theme ordering; separation = identity-specific part"
+  },
+  "layer5_top3_overlap": {
+    "top2": 0.5,
+    "top3": 0.667,
+    "meaning": "fraction of top themes shared \u2014 avoids argmax instability"
+  },
+  "layer6_argmax_agreement": {
+    "agree": true,
+    "raman_dominant": "nucleic_purine",
+    "sers_dominant": "nucleic_purine",
+    "meaning": "strict single-dominant-theme agreement \u2014 intentionally strict and unstable"
+  },
+  "layer7_family": {
+    "family": "amino_acid",
+    "expected_theme": "aromatic_amino_acid|protein_peptide",
+    "delta_purine": 0.0638,
+    "purine_share_raman": 0.1517,
+    "purine_share_sers": 0.2155,
+    "serum_spike_displacement": 0.0380269921814875
+  },
+  "layer8_interpretation": "Partial mid-level transfer: motif structure carries over but the identity-specific theme abstraction is weak \u2014 a surface-physics limit, not a representation error.",
+  "layer9_limitations": [
+    "Raw theme cosine and raw rank \u03c1 are baseline-inflated and are NOT stand-alone evidence; this analyte's identity-specific signal is cosine +0.21 / rank separation -0.001.",
+    "No dynamic perturbation validation exists for this analyte (Level 4 not measured)."
+  ]
+}
