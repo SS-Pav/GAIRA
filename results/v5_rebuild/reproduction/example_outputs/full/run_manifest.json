@@ -1,0 +1,52 @@
+{
+  "mode": "full",
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.8.0",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "blas": "{'Compilers': {'c': {'name': 'clang', 'linker': 'ld64', 'version': '15.0.0', 'commands': 'cc'}, 'cython': {'name': 'cython', 'linker': 'cython', 'version': '3.2.4', 'commands': 'cython'}, 'c++': {'name': 'clang', 'linker': 'ld64', 'version': '15.0.0', 'commands': 'c++'}}, 'Machine Information': {'host': {'cpu': 'aarch64', 'family': 'aarch64', 'endian': 'little', 'system': 'darwin'}, 'build': {'cpu"
+  },
+  "steps": {
+    "corpus": {
+      "n_spectra": 375,
+      "n_analytes": 167,
+      "n_bins": 676,
+      "sources": {
+        "RamanBioLib": 202,
+        "gobbato_raman_metabolites": 153,
+        "amino_acid_raman_grounding": 20
+      }
+    },
+    "basis_comparison": {
+      "fingerprint_match": true,
+      "exact_equality": true,
+      "max_abs_diff": 0.0
+    },
+    "interpretation": {
+      "component_registry_v1.json": true,
+      "component_theme_weights_v1.json": true,
+      "mss_registry_v1.json": true,
+      "reference_normalization_v1.json": "rebuilt from saved coordinates"
+    },
+    "bsv_fixtures": "bsv_regression_results.json"
+  },
+  "loader_config": {
+    "dataset.RAW": "$GAIRA_DATA_ROOT",
+    "gobbato.ZIP": "$GAIRA_DATA_ROOT/serum_ag_colloids/dataset_spectral_data.zip",
+    "ramanbiolib_parquet": "<repo>/streamlit_apps/gaira_demo/data/grounding_molecule_spectra.parquet",
+    "ramanbiolib_parquet_exists": true
+  },
+  "downstream_comparison": {
+    "component_registry_v1.json": "identical except cosmetic interpretation-text ordering (PYTHONHASHSEED-dependent set join in build_registry.py; numeric content identical)",
+    "component_theme_weights_v1.json": "identical",
+    "mss_registry_v1.json": "identical",
+    "reference_normalization_v1.json": "identical (numeric center/spread); only the 'note' metadata string differs"
+  },
+  "canonical_asset_unmodified": true,
+  "runtime_sec": 11.4,
+  "_note": "Machine-specific paths in this EXAMPLE were replaced with <repo> and $GAIRA_DATA_ROOT placeholders."
+}

@@ -1,0 +1,376 @@
+source_dataset,source_identifier,analyte_label,canonical_name,modality,excitation_nm,inclusion_status,identifier_sha1
+RamanBioLib,ramanbiolib::1,12-methyltetradecanoic acid,12-methyltetradecanoic acid,raman,785.0,included_in_X_ref,841468798dee
+RamanBioLib,ramanbiolib::2,13-methylmyristicacid,13-methylmyristicacid,raman,785.0,included_in_X_ref,1b45560aeff4
+RamanBioLib,ramanbiolib::3,14-methylhexadecanoic acid,14-methylhexadecanoic acid,raman,785.0,included_in_X_ref,b84394d9b7cc
+RamanBioLib,ramanbiolib::4,14-methylpentadecanoic acid,14-methylpentadecanoic acid,raman,785.0,included_in_X_ref,ea57f4c1a635
+RamanBioLib,ramanbiolib::5,15-methylpalmiticacid,15-methylpalmiticacid,raman,785.0,included_in_X_ref,3876df9cab55
+RamanBioLib,ramanbiolib::6,acetoacetate,acetoacetate,raman,785.0,included_in_X_ref,a07d9c7376c3
+RamanBioLib,ramanbiolib::7,acetyl coenzyme a,acetyl coenzyme a,raman,785.0,included_in_X_ref,9dd91214c4ce
+RamanBioLib,ramanbiolib::8,adenine,adenine,raman,785.0,included_in_X_ref,64093a11fef0
+RamanBioLib,ramanbiolib::9,amylopectin,amylopectin,raman,785.0,included_in_X_ref,e0e2048679c5
+RamanBioLib,ramanbiolib::10,amylose,amylose,raman,785.0,included_in_X_ref,cf42839d4868
+RamanBioLib,ramanbiolib::11,ascorbate,ascorbate,raman,785.0,included_in_X_ref,697194ce0918
+RamanBioLib,ramanbiolib::12,cellulose,cellulose,raman,785.0,included_in_X_ref,42a179e9b6f1
+RamanBioLib,ramanbiolib::13,chitin,chitin,raman,785.0,included_in_X_ref,1da9c45b04cf
+RamanBioLib,ramanbiolib::14,citrate,citrate,raman,785.0,included_in_X_ref,faa9c74b9926
+RamanBioLib,ramanbiolib::15,coenzyme a,coenzyme a,raman,785.0,included_in_X_ref,b2268c3b8724
+RamanBioLib,ramanbiolib::16,cytosine,cytosine,raman,785.0,included_in_X_ref,17fdb0352406
+RamanBioLib,ramanbiolib::17,(+)-dextrose,(+)-dextrose,raman,785.0,included_in_X_ref,0e8671e45b73
+RamanBioLib,ramanbiolib::18,(+)-fucose,(+)-fucose,raman,785.0,included_in_X_ref,089874e72c6f
+RamanBioLib,ramanbiolib::19,(+)-galactosamine,(+)-galactosamine,raman,785.0,included_in_X_ref,e5e9ba060717
+RamanBioLib,ramanbiolib::20,(+)-mannose,(+)-mannose,raman,785.0,included_in_X_ref,064208699181
+RamanBioLib,ramanbiolib::21,(+)-trehalose,(+)-trehalose,raman,785.0,included_in_X_ref,e13ee5ff6171
+RamanBioLib,ramanbiolib::22,(+)-xylose,(+)-xylose,raman,785.0,included_in_X_ref,d06e1ea9e86e
+RamanBioLib,ramanbiolib::23,(-)-arabinose,(-)-arabinose,raman,785.0,included_in_X_ref,c250681141ee
+RamanBioLib,ramanbiolib::24,(-)-fructose,(-)-fructose,raman,785.0,included_in_X_ref,e675454b4334
+RamanBioLib,ramanbiolib::25,fructose-6-phosphate,fructose-6-phosphate,raman,785.0,included_in_X_ref,91bd65ef9833
+RamanBioLib,ramanbiolib::26,fumarate,fumarate,raman,785.0,included_in_X_ref,ceda6b18329e
+RamanBioLib,ramanbiolib::27,glutathione,glutathione,raman,785.0,included_in_X_ref,1ca92d667046
+RamanBioLib,ramanbiolib::28,glycerol,glycerol,raman,785.0,included_in_X_ref,42f42d5f257b
+RamanBioLib,ramanbiolib::29,glycine,glycine,raman,785.0,included_in_X_ref,d7d6d85abd4a
+RamanBioLib,ramanbiolib::30,guanine,guanine,raman,785.0,included_in_X_ref,8cb48f19ae40
+RamanBioLib,ramanbiolib::31,alanine,alanine,raman,785.0,included_in_X_ref,d3d807074709
+RamanBioLib,ramanbiolib::32,arginine,arginine,raman,785.0,included_in_X_ref,e6c72b46d890
+RamanBioLib,ramanbiolib::33,glutamate,glutamate,raman,785.0,included_in_X_ref,d98f5f82cf5a
+RamanBioLib,ramanbiolib::34,histidine,histidine,raman,785.0,included_in_X_ref,257727de340a
+RamanBioLib,ramanbiolib::35,phenylalanine,phenylalanine,raman,785.0,included_in_X_ref,197a4f2f967e
+RamanBioLib,ramanbiolib::36,proline,proline,raman,785.0,included_in_X_ref,b4108c7a5139
+RamanBioLib,ramanbiolib::37,serine,serine,raman,785.0,included_in_X_ref,fbd8cb24febf
+RamanBioLib,ramanbiolib::38,tryptophan,tryptophan,raman,785.0,included_in_X_ref,23385f765feb
+RamanBioLib,ramanbiolib::39,tyrosine,tyrosine,raman,785.0,included_in_X_ref,3667c6f7f06e
+RamanBioLib,ramanbiolib::40,valine,valine,raman,785.0,included_in_X_ref,27cc261287cf
+RamanBioLib,ramanbiolib::41,lactose,lactose,raman,785.0,included_in_X_ref,5595a04fedfd
+RamanBioLib,ramanbiolib::42,lauric acid,lauric acid,raman,785.0,included_in_X_ref,1920b97a5bdd
+RamanBioLib,ramanbiolib::43,malic acid,malic acid,raman,785.0,included_in_X_ref,dbea335f1124
+RamanBioLib,ramanbiolib::44,myristic acid,myristic acid,raman,785.0,included_in_X_ref,cdd6983f7a75
+RamanBioLib,ramanbiolib::45,n-acetyl- d-glucosamine,n-acetyl- d-glucosamine,raman,785.0,included_in_X_ref,d867e2f6d83b
+RamanBioLib,ramanbiolib::46,oleate,oleate,raman,785.0,included_in_X_ref,39ad3a944a36
+RamanBioLib,ramanbiolib::47,palmitic acid,palmitic acid,raman,785.0,included_in_X_ref,cd698b04f832
+RamanBioLib,ramanbiolib::48,phosphoenolpyruvate,phosphoenolpyruvate,raman,785.0,included_in_X_ref,e74c79da0ab4
+RamanBioLib,ramanbiolib::49,pyruvate,pyruvate,raman,785.0,included_in_X_ref,eaf625de027f
+RamanBioLib,ramanbiolib::50,riboﬂavin,riboﬂavin,raman,785.0,included_in_X_ref,49f0651a6306
+RamanBioLib,ramanbiolib::51,stearate,stearate,raman,785.0,included_in_X_ref,bb7c7a060226
+RamanBioLib,ramanbiolib::52,succinic acid,succinic acid,raman,785.0,included_in_X_ref,17c21723d569
+RamanBioLib,ramanbiolib::53,thymine,thymine,raman,785.0,included_in_X_ref,7c59a5cd329f
+RamanBioLib,ramanbiolib::54,trilinolein,trilinolein,raman,785.0,included_in_X_ref,fb95fb6d8dd7
+RamanBioLib,ramanbiolib::55,trilinolenin,trilinolenin,raman,785.0,included_in_X_ref,c7b004094227
+RamanBioLib,ramanbiolib::56,triolein,triolein,raman,785.0,included_in_X_ref,873407a0d871
+RamanBioLib,ramanbiolib::57,uracil,uracil,raman,785.0,included_in_X_ref,9b6c5e8a48e8
+RamanBioLib,ramanbiolib::58,vaccenic acid,vaccenic acid,raman,785.0,included_in_X_ref,494d12d632ce
+RamanBioLib,ramanbiolib::59,β-carotene,β-carotene,raman,785.0,included_in_X_ref,5085b0554f20
+RamanBioLib,ramanbiolib::60,β-d-glucose,β-d-glucose,raman,785.0,included_in_X_ref,ac6e9aefb953
+RamanBioLib,ramanbiolib::61,arachidonic acid,arachidonic acid,raman,532.0,included_in_X_ref,4f4d86778b16
+RamanBioLib,ramanbiolib::62,α-linolenic acid,α-linolenic acid,raman,532.0,included_in_X_ref,2038b1d79c70
+RamanBioLib,ramanbiolib::63,arachidic acid,arachidic acid,raman,532.0,included_in_X_ref,e640ee6d9249
+RamanBioLib,ramanbiolib::64,cholesterol,cholesterol,raman,532.0,included_in_X_ref,fd39972998b1
+RamanBioLib,ramanbiolib::65,cholesteryl linoleate,cholesteryl linoleate,raman,532.0,included_in_X_ref,c9c9667d0f6d
+RamanBioLib,ramanbiolib::66,cholesteryl oleate,cholesteryl oleate,raman,532.0,included_in_X_ref,88688c0cbf18
+RamanBioLib,ramanbiolib::67,cholesteryl palmitate,cholesteryl palmitate,raman,532.0,included_in_X_ref,1e14446b2adb
+RamanBioLib,ramanbiolib::68,cholesteryl stearate,cholesteryl stearate,raman,532.0,included_in_X_ref,ff93e4f438e2
+RamanBioLib,ramanbiolib::69,elaidic acid,elaidic acid,raman,532.0,included_in_X_ref,599bd99be74a
+RamanBioLib,ramanbiolib::70,linoleic acid,linoleic acid,raman,532.0,included_in_X_ref,caf482c1b360
+RamanBioLib,ramanbiolib::71,myristic acid,myristic acid,raman,532.0,included_in_X_ref,5a61146fddea
+RamanBioLib,ramanbiolib::72,oleate,oleate,raman,532.0,included_in_X_ref,d3b16f2b64f3
+RamanBioLib,ramanbiolib::73,palmitic acid,palmitic acid,raman,532.0,included_in_X_ref,b513e66692ab
+RamanBioLib,ramanbiolib::74,α-phosphatidylcholine,α-phosphatidylcholine,raman,532.0,included_in_X_ref,a97acdf84c28
+RamanBioLib,ramanbiolib::75,α-phosphatidylethanolamine,α-phosphatidylethanolamine,raman,532.0,included_in_X_ref,19fe969b7f23
+RamanBioLib,ramanbiolib::76,palmitoleic acid,palmitoleic acid,raman,532.0,included_in_X_ref,eb6adce09506
+RamanBioLib,ramanbiolib::77,stearate,stearate,raman,532.0,included_in_X_ref,a1bd2a7e28c6
+RamanBioLib,ramanbiolib::78,sphingomyelin,sphingomyelin,raman,532.0,included_in_X_ref,8bf5fa769a2b
+RamanBioLib,ramanbiolib::79,triarachidin,triarachidin,raman,1064.0,included_in_X_ref,e0d91936b03a
+RamanBioLib,ramanbiolib::80,tribehenin,tribehenin,raman,1064.0,included_in_X_ref,3b0dd6ee70fa
+RamanBioLib,ramanbiolib::81,tricaproin,tricaproin,raman,1064.0,included_in_X_ref,1677de0b7fb2
+RamanBioLib,ramanbiolib::82,tricaprin,tricaprin,raman,1064.0,included_in_X_ref,9619f269283a
+RamanBioLib,ramanbiolib::83,tricaprylin,tricaprylin,raman,1064.0,included_in_X_ref,7db9b410ac5e
+RamanBioLib,ramanbiolib::84,trielaidin,trielaidin,raman,1064.0,included_in_X_ref,a97746cc7919
+RamanBioLib,ramanbiolib::85,tri-11-eicosenoin,tri-11-eicosenoin,raman,1064.0,included_in_X_ref,018de314a3a5
+RamanBioLib,ramanbiolib::86,trierucin,trierucin,raman,1064.0,included_in_X_ref,eb465841c6de
+RamanBioLib,ramanbiolib::87,trilinolein,trilinolein,raman,1064.0,included_in_X_ref,976ec9b57ab2
+RamanBioLib,ramanbiolib::88,trilinolenin,trilinolenin,raman,1064.0,included_in_X_ref,796b644b6ef7
+RamanBioLib,ramanbiolib::89,trilaurin,trilaurin,raman,1064.0,included_in_X_ref,aed4d3eccdf8
+RamanBioLib,ramanbiolib::90,trimyristin,trimyristin,raman,1064.0,included_in_X_ref,bfa90ad54d01
+RamanBioLib,ramanbiolib::91,triolein,triolein,raman,1064.0,included_in_X_ref,5879751f628f
+RamanBioLib,ramanbiolib::92,tripalmitin,tripalmitin,raman,1064.0,included_in_X_ref,2229e7d78147
+RamanBioLib,ramanbiolib::93,tripetroselinin,tripetroselinin,raman,1064.0,included_in_X_ref,8f7ce30a8231
+RamanBioLib,ramanbiolib::94,tripalmitolein,tripalmitolein,raman,1064.0,included_in_X_ref,1fcccb921be1
+RamanBioLib,ramanbiolib::95,tristearin,tristearin,raman,1064.0,included_in_X_ref,0a8c7f10c72f
+RamanBioLib,ramanbiolib::96,lactalbumin,lactalbumin,raman,488.0,included_in_X_ref,a6f3172997e6
+RamanBioLib,ramanbiolib::97,lactalbumin,lactalbumin,raman,532.0,included_in_X_ref,4473d8aa691f
+RamanBioLib,ramanbiolib::98,lactalbumin,lactalbumin,raman,1064.0,included_in_X_ref,397cb13fcd79
+RamanBioLib,ramanbiolib::99,albumin,albumin,raman,488.0,included_in_X_ref,ad3313bdf2c7
+RamanBioLib,ramanbiolib::100,albumin,albumin,raman,532.0,included_in_X_ref,e3ec8fef3f1f
+RamanBioLib,ramanbiolib::101,albumin,albumin,raman,1064.0,included_in_X_ref,9130fbc395a7
+RamanBioLib,ramanbiolib::102,carbonic anhydrase,carbonic anhydrase,raman,488.0,included_in_X_ref,727803d32c50
+RamanBioLib,ramanbiolib::103,carbonic anhydrase,carbonic anhydrase,raman,532.0,included_in_X_ref,91dae1de2b7b
+RamanBioLib,ramanbiolib::104,carbonic anhydrase,carbonic anhydrase,raman,1064.0,included_in_X_ref,96ce603b229e
+RamanBioLib,ramanbiolib::105,collagen,collagen,raman,488.0,included_in_X_ref,fc8fc17a1594
+RamanBioLib,ramanbiolib::106,collagen,collagen,raman,532.0,included_in_X_ref,368095e190a4
+RamanBioLib,ramanbiolib::107,collagen,collagen,raman,1064.0,included_in_X_ref,914a86bcf1b7
+RamanBioLib,ramanbiolib::108,α-chymotrypsinogen a (type ii),α-chymotrypsinogen a (type ii),raman,488.0,included_in_X_ref,682e288cbdcc
+RamanBioLib,ramanbiolib::109,α-chymotrypsinogen a (type ii),α-chymotrypsinogen a (type ii),raman,532.0,included_in_X_ref,083f3421528e
+RamanBioLib,ramanbiolib::110,α-chymotrypsinogen a (type ii),α-chymotrypsinogen a (type ii),raman,1064.0,included_in_X_ref,a32bbc1efc3f
+RamanBioLib,ramanbiolib::111,elastase,elastase,raman,488.0,included_in_X_ref,b6a51191ba8b
+RamanBioLib,ramanbiolib::112,elastase,elastase,raman,532.0,included_in_X_ref,671ccadf0329
+RamanBioLib,ramanbiolib::113,elastase,elastase,raman,1064.0,included_in_X_ref,b5250e80de5d
+RamanBioLib,ramanbiolib::114,ferritin,ferritin,raman,488.0,included_in_X_ref,1770ef7da4fe
+RamanBioLib,ramanbiolib::115,ferritin,ferritin,raman,532.0,included_in_X_ref,240ca2ad13dd
+RamanBioLib,ramanbiolib::116,ferritin,ferritin,raman,1064.0,included_in_X_ref,cca440c79846
+RamanBioLib,ramanbiolib::117,glutathione transferase,glutathione transferase,raman,488.0,included_in_X_ref,e322974b6586
+RamanBioLib,ramanbiolib::118,glutathione transferase,glutathione transferase,raman,532.0,included_in_X_ref,d8cc6b96c7f6
+RamanBioLib,ramanbiolib::119,horseradish peroxidase,horseradish peroxidase,raman,488.0,included_in_X_ref,880531faf31a
+RamanBioLib,ramanbiolib::120,horseradish peroxidase,horseradish peroxidase,raman,532.0,included_in_X_ref,7deec9f14680
+RamanBioLib,ramanbiolib::121,hemoglobin,hemoglobin,raman,488.0,included_in_X_ref,a9e582490c2c
+RamanBioLib,ramanbiolib::122,hemoglobin,hemoglobin,raman,532.0,included_in_X_ref,115812a72846
+RamanBioLib,ramanbiolib::123,lectin,lectin,raman,488.0,included_in_X_ref,01b4a36d51ce
+RamanBioLib,ramanbiolib::124,lectin,lectin,raman,532.0,included_in_X_ref,172f9acf5742
+RamanBioLib,ramanbiolib::125,lectin,lectin,raman,1064.0,included_in_X_ref,ce1dda1d3e47
+RamanBioLib,ramanbiolib::126,myoglobin,myoglobin,raman,488.0,included_in_X_ref,356b95385b41
+RamanBioLib,ramanbiolib::127,myoglobin,myoglobin,raman,532.0,included_in_X_ref,c4e356a14d38
+RamanBioLib,ramanbiolib::128,papain,papain,raman,488.0,included_in_X_ref,e1a22231dd52
+RamanBioLib,ramanbiolib::129,papain,papain,raman,532.0,included_in_X_ref,3442966462ee
+RamanBioLib,ramanbiolib::130,papain,papain,raman,1064.0,included_in_X_ref,f831a5e5f23f
+RamanBioLib,ramanbiolib::131,pepsin,pepsin,raman,488.0,included_in_X_ref,44a9a8c3e297
+RamanBioLib,ramanbiolib::132,pepsin,pepsin,raman,532.0,included_in_X_ref,5bc4671b8c00
+RamanBioLib,ramanbiolib::133,pepsin,pepsin,raman,1064.0,included_in_X_ref,8606945a10f7
+RamanBioLib,ramanbiolib::134,pepsinogen,pepsinogen,raman,488.0,included_in_X_ref,121909179ff6
+RamanBioLib,ramanbiolib::135,pepsinogen,pepsinogen,raman,532.0,included_in_X_ref,71289405ccdb
+RamanBioLib,ramanbiolib::136,pepsinogen,pepsinogen,raman,1064.0,included_in_X_ref,2d55da5076f4
+RamanBioLib,ramanbiolib::137,major proteinase,major proteinase,raman,488.0,included_in_X_ref,3af47b8c2eaf
+RamanBioLib,ramanbiolib::138,major proteinase,major proteinase,raman,532.0,included_in_X_ref,a61fed597b12
+RamanBioLib,ramanbiolib::139,major proteinase,major proteinase,raman,1064.0,included_in_X_ref,09dbfca2e6cc
+RamanBioLib,ramanbiolib::140,superoxide dismutases,superoxide dismutases,raman,488.0,included_in_X_ref,b85f91983a39
+RamanBioLib,ramanbiolib::141,superoxide dismutases,superoxide dismutases,raman,532.0,included_in_X_ref,337e2e4651df
+RamanBioLib,ramanbiolib::142,superoxide dismutases,superoxide dismutases,raman,1064.0,included_in_X_ref,1b38a89e4a72
+RamanBioLib,ramanbiolib::143,trypsinogen,trypsinogen,raman,488.0,included_in_X_ref,33ab5eb0c18a
+RamanBioLib,ramanbiolib::144,trypsinogen,trypsinogen,raman,532.0,included_in_X_ref,d908e1b54069
+RamanBioLib,ramanbiolib::145,trypsinogen,trypsinogen,raman,1064.0,included_in_X_ref,28eb64adfab7
+RamanBioLib,ramanbiolib::146,trypsin inhibitor,trypsin inhibitor,raman,488.0,included_in_X_ref,24cc933b689c
+RamanBioLib,ramanbiolib::147,trypsin inhibitor,trypsin inhibitor,raman,532.0,included_in_X_ref,299502458ae7
+RamanBioLib,ramanbiolib::148,trypsin inhibitor,trypsin inhibitor,raman,1064.0,included_in_X_ref,57c424c55fc1
+RamanBioLib,ramanbiolib::149,thaumatin,thaumatin,raman,488.0,included_in_X_ref,65efb56bcaa6
+RamanBioLib,ramanbiolib::150,thaumatin,thaumatin,raman,532.0,included_in_X_ref,253509ac2f2d
+RamanBioLib,ramanbiolib::151,thaumatin,thaumatin,raman,1064.0,included_in_X_ref,aff1d95fa112
+RamanBioLib,ramanbiolib::152,triosephosphate isomerase,triosephosphate isomerase,raman,488.0,included_in_X_ref,64fc67c19840
+RamanBioLib,ramanbiolib::153,triosephosphate isomerase,triosephosphate isomerase,raman,532.0,included_in_X_ref,0343dd4c3975
+RamanBioLib,ramanbiolib::154,triosephosphate isomerase,triosephosphate isomerase,raman,1064.0,included_in_X_ref,91f00d2eafda
+RamanBioLib,ramanbiolib::155,trypsin,trypsin,raman,488.0,included_in_X_ref,69a03715a435
+RamanBioLib,ramanbiolib::156,trypsin,trypsin,raman,532.0,included_in_X_ref,8297dd76b8ae
+RamanBioLib,ramanbiolib::157,trypsin,trypsin,raman,1064.0,included_in_X_ref,1cc639b82ea1
+RamanBioLib,ramanbiolib::158,ubiquitin,ubiquitin,raman,488.0,included_in_X_ref,686d1e41b683
+RamanBioLib,ramanbiolib::159,ubiquitin,ubiquitin,raman,532.0,included_in_X_ref,9baad3adb181
+RamanBioLib,ramanbiolib::160,ubiquitin,ubiquitin,raman,1064.0,included_in_X_ref,c986770ae02e
+RamanBioLib,ramanbiolib::161,glucose oxidase,glucose oxidase,raman,532.0,included_in_X_ref,2dfe8b04a44c
+RamanBioLib,ramanbiolib::162,glucose oxidase,glucose oxidase,raman,1064.0,included_in_X_ref,9ef8ab4f6171
+RamanBioLib,ramanbiolib::163,xylanase,xylanase,raman,488.0,included_in_X_ref,fcfcf4fc0808
+RamanBioLib,ramanbiolib::164,xylanase,xylanase,raman,532.0,included_in_X_ref,526e61cd67bf
+RamanBioLib,ramanbiolib::165,xylanase,xylanase,raman,1064.0,included_in_X_ref,3fc88423fdb6
+RamanBioLib,ramanbiolib::166,cytochrome c,cytochrome c,raman,488.0,included_in_X_ref,ceb787d46078
+RamanBioLib,ramanbiolib::167,cytochrome c,cytochrome c,raman,532.0,included_in_X_ref,15f3af0ce229
+RamanBioLib,ramanbiolib::168,a-dna,a-dna,raman,514.5,included_in_X_ref,3f4bea538e39
+RamanBioLib,ramanbiolib::169,b-dna,b-dna,raman,514.5,included_in_X_ref,f0206f4a0cbd
+RamanBioLib,ramanbiolib::170,t-rna,t-rna,raman,488.0,included_in_X_ref,f48a158530fc
+RamanBioLib,ramanbiolib::171,ceramide,ceramide,raman,1064.0,included_in_X_ref,689063239720
+RamanBioLib,ramanbiolib::172,melanin,melanin,raman,785.0,included_in_X_ref,ddf24aa24e0c
+RamanBioLib,ramanbiolib::173,melanin,melanin,raman,632.8,included_in_X_ref,365e3f436004
+RamanBioLib,ramanbiolib::174,melanin,melanin,raman,514.5,included_in_X_ref,4fa987c7f157
+RamanBioLib,ramanbiolib::175,melanin,melanin,raman,457.9,included_in_X_ref,96071215f304
+RamanBioLib,ramanbiolib::176,2-deoxy-d-ribose,2-deoxy-d-ribose,raman,1064.0,included_in_X_ref,9ec19d5c9374
+RamanBioLib,ramanbiolib::177,amylopectin,amylopectin,raman,1064.0,included_in_X_ref,cfd95c9b4eac
+RamanBioLib,ramanbiolib::178,amylose,amylose,raman,1064.0,included_in_X_ref,e73f7b1b153b
+RamanBioLib,ramanbiolib::179,(+)-galactose,(+)-galactose,raman,1064.0,included_in_X_ref,bfaa31c03bc3
+RamanBioLib,ramanbiolib::180,(+)-glucose,(+)-glucose,raman,1064.0,included_in_X_ref,3ee87a63fea9
+RamanBioLib,ramanbiolib::181,(+)-lactose,(+)-lactose,raman,1064.0,included_in_X_ref,520837a3dc00
+RamanBioLib,ramanbiolib::182,(+)-maltose,(+)-maltose,raman,1064.0,included_in_X_ref,18601c06e7fe
+RamanBioLib,ramanbiolib::183,(+)-raffinose pentahydrate,(+)-raffinose pentahydrate,raman,1064.0,included_in_X_ref,28f6c0227f50
+RamanBioLib,ramanbiolib::184,(+)-sucrose,(+)-sucrose,raman,1064.0,included_in_X_ref,9d5f3488523f
+RamanBioLib,ramanbiolib::185,(+)-xylose,(+)-xylose,raman,1064.0,included_in_X_ref,236d4529d527
+RamanBioLib,ramanbiolib::186,(-)-fructose,(-)-fructose,raman,1064.0,included_in_X_ref,cd76b8635c68
+RamanBioLib,ramanbiolib::187,(-)-ribose,(-)-ribose,raman,1064.0,included_in_X_ref,a0891eef58d5
+RamanBioLib,ramanbiolib::188,glycogen,glycogen,raman,1064.0,included_in_X_ref,5602f8e04b8b
+RamanBioLib,ramanbiolib::189,(+)-arabinose,(+)-arabinose,raman,1064.0,included_in_X_ref,a21ad8003e84
+RamanBioLib,ramanbiolib::190,ceramide,ceramide,raman,850.0,included_in_X_ref,ebeecd0048a8
+RamanBioLib,ramanbiolib::191,elastin,elastin,raman,1064.0,included_in_X_ref,ed9e58af6017
+RamanBioLib,ramanbiolib::192,keratin,keratin,raman,1064.0,included_in_X_ref,15b8d11f37be
+RamanBioLib,ramanbiolib::193,asparagine,asparagine,raman,488.0,included_in_X_ref,17652c79e04b
+RamanBioLib,ramanbiolib::194,aspartic acid,aspartic acid,raman,488.0,included_in_X_ref,025276a45e72
+RamanBioLib,ramanbiolib::195,glucosamine,glucosamine,raman,488.0,included_in_X_ref,af2d01f5fe3f
+RamanBioLib,ramanbiolib::196,tubulin,tubulin,raman,532.0,included_in_X_ref,eceb801960f8
+RamanBioLib,ramanbiolib::197,insulin,insulin,raman,633.0,included_in_X_ref,9fc0bfb38713
+RamanBioLib,ramanbiolib::198,diethylstilbestrol,diethylstilbestrol,raman,532.0,included_in_X_ref,af9875a1a6c8
+RamanBioLib,ramanbiolib::199,estradiol,estradiol,raman,532.0,included_in_X_ref,989df2bc687d
+RamanBioLib,ramanbiolib::200,estriol,estriol,raman,532.0,included_in_X_ref,6b3e32d1b74e
+RamanBioLib,ramanbiolib::201,estrone,estrone,raman,532.0,included_in_X_ref,f59dfff89bc9
+RamanBioLib,ramanbiolib::202,ethinylestradiol,ethinylestradiol,raman,532.0,included_in_X_ref,d068a3ad98a4
+gobbato_raman_metabolites,gobbato_raman_metabolites::AcCoA::01,acetyl-coa,acetyl-coa,raman,785.0,included_in_X_ref,87b560c59396
+gobbato_raman_metabolites,gobbato_raman_metabolites::AcCoA::02,acetyl-coa,acetyl-coa,raman,785.0,included_in_X_ref,31953fbb4fff
+gobbato_raman_metabolites,gobbato_raman_metabolites::AcCoA::03,acetyl-coa,acetyl-coa,raman,785.0,included_in_X_ref,dbba7d35d2a7
+gobbato_raman_metabolites,gobbato_raman_metabolites::Acetoacet::01,acetoacetate,acetoacetate,raman,785.0,included_in_X_ref,b31d55c13c76
+gobbato_raman_metabolites,gobbato_raman_metabolites::Acetoacet::02,acetoacetate,acetoacetate,raman,785.0,included_in_X_ref,af3cfe3a241f
+gobbato_raman_metabolites,gobbato_raman_metabolites::Acetoacet::03,acetoacetate,acetoacetate,raman,785.0,included_in_X_ref,c493922c00b0
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ade::01,adenine,adenine,raman,785.0,included_in_X_ref,5f412c0c704d
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ade::02,adenine,adenine,raman,785.0,included_in_X_ref,ff848bae4b5e
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ade::03,adenine,adenine,raman,785.0,included_in_X_ref,bfeb5b5e35cb
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ala::01,alanine,alanine,raman,785.0,included_in_X_ref,4873f690ed82
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ala::02,alanine,alanine,raman,785.0,included_in_X_ref,c732dbfe2d8b
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ala::03,alanine,alanine,raman,785.0,included_in_X_ref,095b7fc8192b
+gobbato_raman_metabolites,gobbato_raman_metabolites::Alb::01,albumin,albumin,raman,785.0,included_in_X_ref,77f39e2ab19a
+gobbato_raman_metabolites,gobbato_raman_metabolites::Alb::02,albumin,albumin,raman,785.0,included_in_X_ref,48b0b00e4948
+gobbato_raman_metabolites,gobbato_raman_metabolites::Alb::03,albumin,albumin,raman,785.0,included_in_X_ref,bfd476efaf0b
+gobbato_raman_metabolites,gobbato_raman_metabolites::Arg::01,arginine,arginine,raman,785.0,included_in_X_ref,766f5bb9ebd2
+gobbato_raman_metabolites,gobbato_raman_metabolites::Arg::02,arginine,arginine,raman,785.0,included_in_X_ref,c5bfd91a39fb
+gobbato_raman_metabolites,gobbato_raman_metabolites::Arg::03,arginine,arginine,raman,785.0,included_in_X_ref,1a2776d49fb1
+gobbato_raman_metabolites,gobbato_raman_metabolites::Asc::01,ascorbate,ascorbate,raman,785.0,included_in_X_ref,764f1c67eda7
+gobbato_raman_metabolites,gobbato_raman_metabolites::Asc::02,ascorbate,ascorbate,raman,785.0,included_in_X_ref,a3c911d06ce9
+gobbato_raman_metabolites,gobbato_raman_metabolites::Asc::03,ascorbate,ascorbate,raman,785.0,included_in_X_ref,75ceacd1b37e
+gobbato_raman_metabolites,gobbato_raman_metabolites::Chol::01,cholesterol,cholesterol,raman,785.0,included_in_X_ref,bce4b5888dfe
+gobbato_raman_metabolites,gobbato_raman_metabolites::Chol::02,cholesterol,cholesterol,raman,785.0,included_in_X_ref,a787ea7b4222
+gobbato_raman_metabolites,gobbato_raman_metabolites::Chol::03,cholesterol,cholesterol,raman,785.0,included_in_X_ref,f5425d80063c
+gobbato_raman_metabolites,gobbato_raman_metabolites::Citric::01,citrate,citrate,raman,785.0,included_in_X_ref,9e9aca4825fb
+gobbato_raman_metabolites,gobbato_raman_metabolites::Citric::02,citrate,citrate,raman,785.0,included_in_X_ref,17bb410124cf
+gobbato_raman_metabolites,gobbato_raman_metabolites::Citric::03,citrate,citrate,raman,785.0,included_in_X_ref,3f6a09dbf700
+gobbato_raman_metabolites,gobbato_raman_metabolites::CoA::01,coenzyme a,coenzyme a,raman,785.0,included_in_X_ref,d6494a8aa405
+gobbato_raman_metabolites,gobbato_raman_metabolites::CoA::02,coenzyme a,coenzyme a,raman,785.0,included_in_X_ref,bf80ff56bc88
+gobbato_raman_metabolites,gobbato_raman_metabolites::CoA::03,coenzyme a,coenzyme a,raman,785.0,included_in_X_ref,00886032e2b3
+gobbato_raman_metabolites,gobbato_raman_metabolites::Creat::01,creatinine,creatinine,raman,785.0,included_in_X_ref,cb45fad9bafb
+gobbato_raman_metabolites,gobbato_raman_metabolites::Creat::02,creatinine,creatinine,raman,785.0,included_in_X_ref,c08ab47ae016
+gobbato_raman_metabolites,gobbato_raman_metabolites::Creat::03,creatinine,creatinine,raman,785.0,included_in_X_ref,bd8cce87bbf0
+gobbato_raman_metabolites,gobbato_raman_metabolites::Cys::01,cysteine,cysteine,raman,785.0,included_in_X_ref,a9e66829c00b
+gobbato_raman_metabolites,gobbato_raman_metabolites::Cys::02,cysteine,cysteine,raman,785.0,included_in_X_ref,b2725c5a578b
+gobbato_raman_metabolites,gobbato_raman_metabolites::Cys::03,cysteine,cysteine,raman,785.0,included_in_X_ref,f2548badd2ce
+gobbato_raman_metabolites,gobbato_raman_metabolites::Dfruct6P::01,fructose-6-phosphate,fructose-6-phosphate,raman,785.0,included_in_X_ref,0138d49d62c2
+gobbato_raman_metabolites,gobbato_raman_metabolites::Dfruct6P::02,fructose-6-phosphate,fructose-6-phosphate,raman,785.0,included_in_X_ref,f756320f42c5
+gobbato_raman_metabolites,gobbato_raman_metabolites::Dfruct6P::03,fructose-6-phosphate,fructose-6-phosphate,raman,785.0,included_in_X_ref,0cb4bfb10c08
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ergo::01,ergothioneine,ergothioneine,raman,785.0,included_in_X_ref,53df9bdb9b59
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ergo::02,ergothioneine,ergothioneine,raman,785.0,included_in_X_ref,46da2337bc2e
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ergo::03,ergothioneine,ergothioneine,raman,785.0,included_in_X_ref,23cce0a5c13d
+gobbato_raman_metabolites,gobbato_raman_metabolites::Fruct::01,fructose,fructose,raman,785.0,included_in_X_ref,b270a4a73dfa
+gobbato_raman_metabolites,gobbato_raman_metabolites::Fruct::02,fructose,fructose,raman,785.0,included_in_X_ref,219291f7c02f
+gobbato_raman_metabolites,gobbato_raman_metabolites::Fruct::03,fructose,fructose,raman,785.0,included_in_X_ref,8f97013dfa4a
+gobbato_raman_metabolites,gobbato_raman_metabolites::Galact::01,galactose,galactose,raman,785.0,included_in_X_ref,7d7bdd1f1af7
+gobbato_raman_metabolites,gobbato_raman_metabolites::Galact::02,galactose,galactose,raman,785.0,included_in_X_ref,d3fdc0083713
+gobbato_raman_metabolites,gobbato_raman_metabolites::Galact::03,galactose,galactose,raman,785.0,included_in_X_ref,f00567c835e7
+gobbato_raman_metabolites,gobbato_raman_metabolites::Gluc::01,glucose,glucose,raman,785.0,included_in_X_ref,1baf28ba6ca7
+gobbato_raman_metabolites,gobbato_raman_metabolites::Gluc::02,glucose,glucose,raman,785.0,included_in_X_ref,d5707c17b0c4
+gobbato_raman_metabolites,gobbato_raman_metabolites::Gluc::03,glucose,glucose,raman,785.0,included_in_X_ref,f4131dc300ec
+gobbato_raman_metabolites,gobbato_raman_metabolites::Glut::01,glutathione,glutathione,raman,785.0,included_in_X_ref,70edaa297c29
+gobbato_raman_metabolites,gobbato_raman_metabolites::Glut::02,glutathione,glutathione,raman,785.0,included_in_X_ref,8dc25acee76f
+gobbato_raman_metabolites,gobbato_raman_metabolites::Glut::03,glutathione,glutathione,raman,785.0,included_in_X_ref,198463ec7460
+gobbato_raman_metabolites,gobbato_raman_metabolites::Glutamic::01,glutamate,glutamate,raman,785.0,included_in_X_ref,48ed365496ad
+gobbato_raman_metabolites,gobbato_raman_metabolites::Glutamic::02,glutamate,glutamate,raman,785.0,included_in_X_ref,63f173206972
+gobbato_raman_metabolites,gobbato_raman_metabolites::Glutamic::03,glutamate,glutamate,raman,785.0,included_in_X_ref,84bc31cddb05
+gobbato_raman_metabolites,gobbato_raman_metabolites::Gly::01,glycine,glycine,raman,785.0,included_in_X_ref,660d9f9054df
+gobbato_raman_metabolites,gobbato_raman_metabolites::Gly::02,glycine,glycine,raman,785.0,included_in_X_ref,40f258c55301
+gobbato_raman_metabolites,gobbato_raman_metabolites::Gly::03,glycine,glycine,raman,785.0,included_in_X_ref,6061ca492c4e
+gobbato_raman_metabolites,gobbato_raman_metabolites::Glycerol::01,glycerol,glycerol,raman,785.0,included_in_X_ref,2b0ea2dd5ee4
+gobbato_raman_metabolites,gobbato_raman_metabolites::Glycerol::02,glycerol,glycerol,raman,785.0,included_in_X_ref,2513702fa485
+gobbato_raman_metabolites,gobbato_raman_metabolites::Glycerol::03,glycerol,glycerol,raman,785.0,included_in_X_ref,0af3ed357eb4
+gobbato_raman_metabolites,gobbato_raman_metabolites::Glycogen::01,glycogen,glycogen,raman,785.0,included_in_X_ref,d2bbe235a270
+gobbato_raman_metabolites,gobbato_raman_metabolites::Glycogen::02,glycogen,glycogen,raman,785.0,included_in_X_ref,9f300fd2d8ad
+gobbato_raman_metabolites,gobbato_raman_metabolites::Glycogen::03,glycogen,glycogen,raman,785.0,included_in_X_ref,f47d82ac06b9
+gobbato_raman_metabolites,gobbato_raman_metabolites::Gua::01,guanine,guanine,raman,785.0,included_in_X_ref,09f0fe32d5ce
+gobbato_raman_metabolites,gobbato_raman_metabolites::Gua::02,guanine,guanine,raman,785.0,included_in_X_ref,599efcc43b4e
+gobbato_raman_metabolites,gobbato_raman_metabolites::Gua::03,guanine,guanine,raman,785.0,included_in_X_ref,80330719f875
+gobbato_raman_metabolites,gobbato_raman_metabolites::His::01,histidine,histidine,raman,785.0,included_in_X_ref,ee4022221cce
+gobbato_raman_metabolites,gobbato_raman_metabolites::His::02,histidine,histidine,raman,785.0,included_in_X_ref,9c536c44f4b0
+gobbato_raman_metabolites,gobbato_raman_metabolites::His::03,histidine,histidine,raman,785.0,included_in_X_ref,b9738d7f20d5
+gobbato_raman_metabolites,gobbato_raman_metabolites::Hydroxypro::01,hydroxyproline,hydroxyproline,raman,785.0,included_in_X_ref,4e37436206c0
+gobbato_raman_metabolites,gobbato_raman_metabolites::Hydroxypro::02,hydroxyproline,hydroxyproline,raman,785.0,included_in_X_ref,555fab077b2f
+gobbato_raman_metabolites,gobbato_raman_metabolites::Hydroxypro::03,hydroxyproline,hydroxyproline,raman,785.0,included_in_X_ref,edb0c5c90838
+gobbato_raman_metabolites,gobbato_raman_metabolites::Hypox::01,hypoxanthine,hypoxanthine,raman,785.0,included_in_X_ref,a10c69384513
+gobbato_raman_metabolites,gobbato_raman_metabolites::Hypox::02,hypoxanthine,hypoxanthine,raman,785.0,included_in_X_ref,baf7a85f1cfc
+gobbato_raman_metabolites,gobbato_raman_metabolites::Hypox::03,hypoxanthine,hypoxanthine,raman,785.0,included_in_X_ref,b883433b8e81
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ile::01,isoleucine,isoleucine,raman,785.0,included_in_X_ref,6bbd5454759f
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ile::02,isoleucine,isoleucine,raman,785.0,included_in_X_ref,125c544707ca
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ile::03,isoleucine,isoleucine,raman,785.0,included_in_X_ref,7be662374cd4
+gobbato_raman_metabolites,gobbato_raman_metabolites::Lact::01,lactate,lactate,raman,785.0,included_in_X_ref,0939fe73d6f6
+gobbato_raman_metabolites,gobbato_raman_metabolites::Lact::02,lactate,lactate,raman,785.0,included_in_X_ref,d7a5fcf6dc38
+gobbato_raman_metabolites,gobbato_raman_metabolites::Lact::03,lactate,lactate,raman,785.0,included_in_X_ref,6ee940fd4050
+gobbato_raman_metabolites,gobbato_raman_metabolites::Leu::01,leucine,leucine,raman,785.0,included_in_X_ref,022f8eb545ac
+gobbato_raman_metabolites,gobbato_raman_metabolites::Leu::02,leucine,leucine,raman,785.0,included_in_X_ref,6c78f7b7dc5b
+gobbato_raman_metabolites,gobbato_raman_metabolites::Leu::03,leucine,leucine,raman,785.0,included_in_X_ref,501f62003efe
+gobbato_raman_metabolites,gobbato_raman_metabolites::Mann::01,mannose,mannose,raman,785.0,included_in_X_ref,e69b8d7379c9
+gobbato_raman_metabolites,gobbato_raman_metabolites::Mann::02,mannose,mannose,raman,785.0,included_in_X_ref,51fd8921a02d
+gobbato_raman_metabolites,gobbato_raman_metabolites::Mann::03,mannose,mannose,raman,785.0,included_in_X_ref,3b0802c3ef41
+gobbato_raman_metabolites,gobbato_raman_metabolites::Methio::01,methionine,methionine,raman,785.0,included_in_X_ref,7fd56367c41b
+gobbato_raman_metabolites,gobbato_raman_metabolites::Methio::02,methionine,methionine,raman,785.0,included_in_X_ref,68ae52a6ef90
+gobbato_raman_metabolites,gobbato_raman_metabolites::Methio::03,methionine,methionine,raman,785.0,included_in_X_ref,6bfe0a30adcc
+gobbato_raman_metabolites,gobbato_raman_metabolites::NacDgluc::01,n-acetylglucosamine,n-acetylglucosamine,raman,785.0,included_in_X_ref,81e80296fcc4
+gobbato_raman_metabolites,gobbato_raman_metabolites::NacDgluc::02,n-acetylglucosamine,n-acetylglucosamine,raman,785.0,included_in_X_ref,c779ea1b19c7
+gobbato_raman_metabolites,gobbato_raman_metabolites::NacDgluc::03,n-acetylglucosamine,n-acetylglucosamine,raman,785.0,included_in_X_ref,8dec04ae2607
+gobbato_raman_metabolites,gobbato_raman_metabolites::Oleic::01,oleate,oleate,raman,785.0,included_in_X_ref,0e813afbfbb7
+gobbato_raman_metabolites,gobbato_raman_metabolites::Oleic::02,oleate,oleate,raman,785.0,included_in_X_ref,797cff50aee8
+gobbato_raman_metabolites,gobbato_raman_metabolites::Oleic::03,oleate,oleate,raman,785.0,included_in_X_ref,db2016bb8b1c
+gobbato_raman_metabolites,gobbato_raman_metabolites::PEP::01,phosphoenolpyruvate,phosphoenolpyruvate,raman,785.0,included_in_X_ref,5aa279bc943c
+gobbato_raman_metabolites,gobbato_raman_metabolites::PEP::02,phosphoenolpyruvate,phosphoenolpyruvate,raman,785.0,included_in_X_ref,b434e78c8034
+gobbato_raman_metabolites,gobbato_raman_metabolites::PEP::03,phosphoenolpyruvate,phosphoenolpyruvate,raman,785.0,included_in_X_ref,e75e1a54a619
+gobbato_raman_metabolites,gobbato_raman_metabolites::PhInositol::01,phosphatidylinositol,phosphatidylinositol,raman,785.0,included_in_X_ref,108c03d0c1a7
+gobbato_raman_metabolites,gobbato_raman_metabolites::PhInositol::02,phosphatidylinositol,phosphatidylinositol,raman,785.0,included_in_X_ref,fdd6e8c69d7a
+gobbato_raman_metabolites,gobbato_raman_metabolites::PhInositol::03,phosphatidylinositol,phosphatidylinositol,raman,785.0,included_in_X_ref,564dc1b2dc38
+gobbato_raman_metabolites,gobbato_raman_metabolites::Phe::01,phenylalanine,phenylalanine,raman,785.0,included_in_X_ref,51bdff6a9e45
+gobbato_raman_metabolites,gobbato_raman_metabolites::Phe::02,phenylalanine,phenylalanine,raman,785.0,included_in_X_ref,9bb58793a26e
+gobbato_raman_metabolites,gobbato_raman_metabolites::Phe::03,phenylalanine,phenylalanine,raman,785.0,included_in_X_ref,50716a5dd0b3
+gobbato_raman_metabolites,gobbato_raman_metabolites::Phosph::01,phosphate,phosphate,raman,785.0,included_in_X_ref,0364cd90d39a
+gobbato_raman_metabolites,gobbato_raman_metabolites::Phosph::02,phosphate,phosphate,raman,785.0,included_in_X_ref,172c17c463e3
+gobbato_raman_metabolites,gobbato_raman_metabolites::Phosph::03,phosphate,phosphate,raman,785.0,included_in_X_ref,e29deab84280
+gobbato_raman_metabolites,gobbato_raman_metabolites::Pro::01,proline,proline,raman,785.0,included_in_X_ref,c74cf3669648
+gobbato_raman_metabolites,gobbato_raman_metabolites::Pro::02,proline,proline,raman,785.0,included_in_X_ref,a81260d34cab
+gobbato_raman_metabolites,gobbato_raman_metabolites::Pro::03,proline,proline,raman,785.0,included_in_X_ref,73d960444358
+gobbato_raman_metabolites,gobbato_raman_metabolites::Pyr::01,pyruvate,pyruvate,raman,785.0,included_in_X_ref,ef423b0d1050
+gobbato_raman_metabolites,gobbato_raman_metabolites::Pyr::02,pyruvate,pyruvate,raman,785.0,included_in_X_ref,6f0c2f437654
+gobbato_raman_metabolites,gobbato_raman_metabolites::Pyr::03,pyruvate,pyruvate,raman,785.0,included_in_X_ref,992b6960d08a
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ribo::01,riboflavin,riboflavin,raman,785.0,included_in_X_ref,06034d4c1b32
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ribo::02,riboflavin,riboflavin,raman,785.0,included_in_X_ref,b091f0b62ba2
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ribo::03,riboflavin,riboflavin,raman,785.0,included_in_X_ref,8adfe87e6eb4
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ser::01,serine,serine,raman,785.0,included_in_X_ref,d06da4f58721
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ser::02,serine,serine,raman,785.0,included_in_X_ref,17c801be0ec9
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ser::03,serine,serine,raman,785.0,included_in_X_ref,11a0b0adaf46
+gobbato_raman_metabolites,gobbato_raman_metabolites::Stearic::01,stearate,stearate,raman,785.0,included_in_X_ref,9955be4661e2
+gobbato_raman_metabolites,gobbato_raman_metabolites::Stearic::02,stearate,stearate,raman,785.0,included_in_X_ref,8b03406e53f9
+gobbato_raman_metabolites,gobbato_raman_metabolites::Stearic::03,stearate,stearate,raman,785.0,included_in_X_ref,46e192dda9c8
+gobbato_raman_metabolites,gobbato_raman_metabolites::Thy::01,thymine,thymine,raman,785.0,included_in_X_ref,5abe28b89457
+gobbato_raman_metabolites,gobbato_raman_metabolites::Thy::02,thymine,thymine,raman,785.0,included_in_X_ref,8d26946c245c
+gobbato_raman_metabolites,gobbato_raman_metabolites::Thy::03,thymine,thymine,raman,785.0,included_in_X_ref,6ab20d7b28b2
+gobbato_raman_metabolites,gobbato_raman_metabolites::Triolein::01,triolein,triolein,raman,785.0,included_in_X_ref,28528d1eb79c
+gobbato_raman_metabolites,gobbato_raman_metabolites::Triolein::02,triolein,triolein,raman,785.0,included_in_X_ref,6b0d4f9f7692
+gobbato_raman_metabolites,gobbato_raman_metabolites::Triolein::03,triolein,triolein,raman,785.0,included_in_X_ref,4e8c7de01963
+gobbato_raman_metabolites,gobbato_raman_metabolites::Trp::01,tryptophan,tryptophan,raman,785.0,included_in_X_ref,b3ae1fd37035
+gobbato_raman_metabolites,gobbato_raman_metabolites::Trp::02,tryptophan,tryptophan,raman,785.0,included_in_X_ref,7ec19db39a4d
+gobbato_raman_metabolites,gobbato_raman_metabolites::Trp::03,tryptophan,tryptophan,raman,785.0,included_in_X_ref,eb9759afb632
+gobbato_raman_metabolites,gobbato_raman_metabolites::Tyr::01,tyrosine,tyrosine,raman,785.0,included_in_X_ref,c9fbdd9ee8c9
+gobbato_raman_metabolites,gobbato_raman_metabolites::Tyr::02,tyrosine,tyrosine,raman,785.0,included_in_X_ref,e7bc7f605a91
+gobbato_raman_metabolites,gobbato_raman_metabolites::Tyr::03,tyrosine,tyrosine,raman,785.0,included_in_X_ref,ab446584e3a6
+gobbato_raman_metabolites,gobbato_raman_metabolites::UA::01,urate,urate,raman,785.0,included_in_X_ref,cfe746fea89e
+gobbato_raman_metabolites,gobbato_raman_metabolites::UA::02,urate,urate,raman,785.0,included_in_X_ref,dbc53a3323fa
+gobbato_raman_metabolites,gobbato_raman_metabolites::UA::03,urate,urate,raman,785.0,included_in_X_ref,ca1c35188d54
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ura::01,uracil,uracil,raman,785.0,included_in_X_ref,179874ccfad8
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ura::02,uracil,uracil,raman,785.0,included_in_X_ref,612a6475058a
+gobbato_raman_metabolites,gobbato_raman_metabolites::Ura::03,uracil,uracil,raman,785.0,included_in_X_ref,fc5df26b502d
+gobbato_raman_metabolites,gobbato_raman_metabolites::Urea::01,urea,urea,raman,785.0,included_in_X_ref,4fa51b99c645
+gobbato_raman_metabolites,gobbato_raman_metabolites::Urea::02,urea,urea,raman,785.0,included_in_X_ref,ebcb19342d08
+gobbato_raman_metabolites,gobbato_raman_metabolites::Urea::03,urea,urea,raman,785.0,included_in_X_ref,af44c18ae44d
+gobbato_raman_metabolites,gobbato_raman_metabolites::Val::01,valine,valine,raman,785.0,included_in_X_ref,c185ab8409d1
+gobbato_raman_metabolites,gobbato_raman_metabolites::Val::02,valine,valine,raman,785.0,included_in_X_ref,5c64550e2c81
+gobbato_raman_metabolites,gobbato_raman_metabolites::Val::03,valine,valine,raman,785.0,included_in_X_ref,cc686f27a985
+gobbato_raman_metabolites,gobbato_raman_metabolites::Xanth::01,xanthine,xanthine,raman,785.0,included_in_X_ref,026fba248a04
+gobbato_raman_metabolites,gobbato_raman_metabolites::Xanth::02,xanthine,xanthine,raman,785.0,included_in_X_ref,325fadcd4875
+gobbato_raman_metabolites,gobbato_raman_metabolites::Xanth::03,xanthine,xanthine,raman,785.0,included_in_X_ref,186d9482cdb1
+amino_acid_raman_grounding,amino_acid_raman::valine,valine,valine,raman,785.0,included_in_X_ref,6cbed4623503
+amino_acid_raman_grounding,amino_acid_raman::glutamate,glutamate,glutamate,raman,785.0,included_in_X_ref,c57914080063
+amino_acid_raman_grounding,amino_acid_raman::glutamate,glutamate,glutamate,raman,785.0,included_in_X_ref,c57914080063
+amino_acid_raman_grounding,amino_acid_raman::leucine,leucine,leucine,raman,785.0,included_in_X_ref,9a1f87c0d71e
+amino_acid_raman_grounding,amino_acid_raman::phenylalanine,phenylalanine,phenylalanine,raman,785.0,included_in_X_ref,7c3f0f98b245
+amino_acid_raman_grounding,amino_acid_raman::proline,proline,proline,raman,785.0,included_in_X_ref,0022b835fc64
+amino_acid_raman_grounding,amino_acid_raman::alanine,alanine,alanine,raman,785.0,included_in_X_ref,5482eec7b966
+amino_acid_raman_grounding,amino_acid_raman::arginine,arginine,arginine,raman,785.0,included_in_X_ref,d51939e3aa0c
+amino_acid_raman_grounding,amino_acid_raman::aspartate,aspartate,aspartate,raman,785.0,included_in_X_ref,18979b822143
+amino_acid_raman_grounding,amino_acid_raman::glycine,glycine,glycine,raman,785.0,included_in_X_ref,f69c237f5127
+amino_acid_raman_grounding,amino_acid_raman::histidine,histidine,histidine,raman,785.0,included_in_X_ref,62ba40bd5b47
+amino_acid_raman_grounding,amino_acid_raman::methionine,methionine,methionine,raman,785.0,included_in_X_ref,37382b3fb953
+amino_acid_raman_grounding,amino_acid_raman::serine,serine,serine,raman,785.0,included_in_X_ref,43ae8796cb52
+amino_acid_raman_grounding,amino_acid_raman::gluth,gluth,gluth,raman,785.0,included_in_X_ref,3983082e8cff
+amino_acid_raman_grounding,amino_acid_raman::glucose,glucose,glucose,raman,785.0,included_in_X_ref,f4b5a7a3ca7b
+amino_acid_raman_grounding,amino_acid_raman::ure,ure,ure,raman,785.0,included_in_X_ref,e98527ba65fc
+amino_acid_raman_grounding,amino_acid_raman::malic acid,malic acid,malic acid,raman,785.0,included_in_X_ref,2bf0ff958922
+amino_acid_raman_grounding,amino_acid_raman::carotene,carotene,carotene,raman,785.0,included_in_X_ref,52e97ecf1878
+amino_acid_raman_grounding,amino_acid_raman::alb,alb,alb,raman,785.0,included_in_X_ref,8530227551c0
+amino_acid_raman_grounding,amino_acid_raman::tryptophan,tryptophan,tryptophan,raman,785.0,included_in_X_ref,690635bfcfb9

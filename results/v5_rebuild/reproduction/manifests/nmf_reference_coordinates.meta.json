@@ -1,0 +1,19 @@
+{
+  "artifact": "nmf_reference_coordinates.npz",
+  "purpose": "L1 component coordinates of the 375 Raman reference spectra projected onto the frozen basis. Enables interpretation-only rebuild of reference_normalization_v1 with NO raw data.",
+  "shape": [
+    375,
+    24
+  ],
+  "dtype": "float64",
+  "canonical_atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "sha256": "c961a0de6402467202bd8473d3db0410861131e061972c7b83e3b55a989f1efb",
+  "bytes": 44051,
+  "creation_command": "python tools/reproduce_gaira_foundation.py --mode full --data-root $GAIRA_DATA_ROOT --output-dir <dir>  (emits reproduction_run/nmf_reference_coordinates.npz)",
+  "keys": [
+    "Z",
+    "analytes"
+  ],
+  "contains_raw_spectra": false,
+  "contains_patient_data": false
+}

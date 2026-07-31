@@ -1,0 +1,45 @@
+{
+  "canonical_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "rebuilt_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "fingerprint_match": true,
+  "shape_rebuilt": [
+    24,
+    676
+  ],
+  "shape_canonical": [
+    24,
+    676
+  ],
+  "grid_match": true,
+  "exact_array_equality": true,
+  "max_abs_diff": 0.0,
+  "mean_abs_diff": 0.0,
+  "per_component_cosine_by_index": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "hungarian_alignment": null,
+  "note": "Basis is byte-identical \u2014 direct index comparison valid."
+}

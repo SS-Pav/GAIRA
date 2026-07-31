@@ -1,0 +1,46 @@
+{
+  "description": "SHA-256 of every canonical frozen foundation asset. Verify UNCHANGED before/after any reproduction run.",
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "files": {
+    "MANIFEST.json": {
+      "bytes": 1862,
+      "sha256": "dda465c15057542ad687bcde3d82f1a6f36a628ce0b8552a9c9ec92cb3f9eba7"
+    },
+    "README.md": {
+      "bytes": 2364,
+      "sha256": "35bd179fee90ba18e11f6d3110ac8ab704d9a8ec9721e4ad7d374aaf8eebc4a0"
+    },
+    "biochemical_ontology_v2.yaml": {
+      "bytes": 12343,
+      "sha256": "b37cdc8ee3b2ab9ca341defc661328b08fecc0f5a7ce25908be604be91513aea"
+    },
+    "component_registry_v1.json": {
+      "bytes": 144958,
+      "sha256": "d9f205f80b787b675bdc5f72cf14d64fa065b90735ffcad683318c40cb29626d"
+    },
+    "component_theme_weights_v1.json": {
+      "bytes": 45381,
+      "sha256": "ab75d76cca02cade290aa7e56a5614da36708fa84fa988b17b5d9c61fc1006bf"
+    },
+    "manifold.json": {
+      "bytes": 24576,
+      "sha256": "fc0fae1e130af6725eb7f834cbd0b688da2c2636c5ad97cf8f02a1e079d2ab87"
+    },
+    "manifold_components.npz": {
+      "bytes": 141362,
+      "sha256": "ca385847146c7a9b72bd5c7ecfae85105ecf8740e43abe4a83ce894587444b9f"
+    },
+    "mss_motifs_v1.yaml": {
+      "bytes": 6923,
+      "sha256": "3983c2346e410a543a681143775546b2c75cb5ea738668ffebada8ec4ab3c702"
+    },
+    "reference_normalization_v1.json": {
+      "bytes": 1072,
+      "sha256": "f2a015ac795dea41e8716b17e9304fed87b67c7529f8d15dd98e24f92ff43614"
+    },
+    "reference_support.npz": {
+      "bytes": 23870,
+      "sha256": "65b45ff59b4d3f05dbec1acb728c4ddc15722e2501a2705146297cf97a72819e"
+    }
+  }
+}

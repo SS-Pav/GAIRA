@@ -1,0 +1,10 @@
+{
+  "python": "3.12.7",
+  "numpy": "2.4.3",
+  "scipy": "1.17.1",
+  "scikit_learn": "1.8.0",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "blas": "{'Compilers': {'c': {'name': 'clang', 'linker': 'ld64', 'version': '15.0.0', 'commands': 'cc'}, 'cython': {'name': 'cython', 'linker': 'cython', 'version': '3.2.4', 'commands': 'cython'}, 'c++': {'name': 'clang', 'linker': 'ld64', 'version': '15.0.0', 'commands': 'c++'}}, 'Machine Information': {'host': {'cpu': 'aarch64', 'family': 'aarch64', 'endian': 'little', 'system': 'darwin'}, 'build': {'cpu"
+}

@@ -1,0 +1,52 @@
+{
+  "description": "Where every part of the GAIRA V5 foundation reproduction lives. Paths are repo-relative; no machine-specific absolute paths.",
+  "orchestration_script": "tools/reproduce_gaira_foundation.py",
+  "tests": "tests/test_reproduce_foundation.py",
+  "guide": "docs/REPRODUCE_GAIRA_FOUNDATION.md",
+  "package_root": "results/v5_rebuild/reproduction/",
+  "documentation": {
+    "readme": "results/v5_rebuild/reproduction/README.md",
+    "checklist": "results/v5_rebuild/reproduction/REPRODUCTION_CHECKLIST.md",
+    "verification_report": "results/v5_rebuild/reproduction/VERIFICATION_REPORT.md",
+    "interpretation_verification": "results/v5_rebuild/reproduction/verification/interpretation_verification.md"
+  },
+  "audits": {
+    "dataset_role_map_csv": "results/v5_rebuild/reproduction/audits/dataset_role_map.csv",
+    "dataset_role_map_md": "results/v5_rebuild/reproduction/audits/dataset_role_map.md",
+    "nmf_build_trace": "results/v5_rebuild/reproduction/audits/nmf_build_trace.md",
+    "nmf_parameters": "results/v5_rebuild/reproduction/audits/nmf_parameters.json",
+    "preprocessing_parameters": "results/v5_rebuild/reproduction/audits/preprocessing_parameters.json",
+    "architecture_audit": "results/v5_rebuild/foundation_audit/reports/ARCHITECTURE_AND_REPRODUCIBILITY_AUDIT.md"
+  },
+  "manifests": {
+    "canonical_foundation_files": "results/v5_rebuild/reproduction/manifests/canonical_foundation_files.json",
+    "reproduction_file_map": "results/v5_rebuild/reproduction/manifests/reproduction_file_map.json",
+    "corpus_manifest": "results/v5_rebuild/reproduction/manifests/corpus_manifest.csv",
+    "reference_coordinates": "results/v5_rebuild/reproduction/manifests/nmf_reference_coordinates.npz",
+    "reference_coordinates_meta": "results/v5_rebuild/reproduction/manifests/nmf_reference_coordinates.meta.json"
+  },
+  "canonical_frozen_assets": {
+    "location": "assets/foundation/",
+    "note": "NEVER modified by reproduction. NMF basis manifold_components.npz, ontology + MSS yaml, registry, theme weights, reference normalization + support, MANIFEST.json.",
+    "fingerprint": "09ed804a40836f4a05a91ba10900cded"
+  },
+  "canonical_build_sources": {
+    "note": "The reproduction ORCHESTRATES these existing canonical builders (it does not re-implement scientific logic).",
+    "foundation_build": ["results/v5_rebuild/foundation/code/run_c1_benchmark.py", "results/v5_rebuild/foundation/code/run_c2_c7.py"],
+    "interpretation_builders": [
+      "results/v5_rebuild/engine_v1/code/build_registry.py",
+      "results/v5_rebuild/engine_v1/code/build_theme_weights.py",
+      "results/v5_rebuild/engine_v1/code/build_reference_norm.py",
+      "results/v5_rebuild/engine_v1/tools/build_mss_registry.py"
+    ],
+    "corpus_loaders": ["src/gaira/foundation/dataset.py", "src/gaira/data/loader.py", "src/gaira/data/gobbato.py"],
+    "preprocessing": "src/gaira/preprocessing/pipeline.py",
+    "nmf": "src/gaira/foundation/representation.py"
+  },
+  "example_outputs": {
+    "full": "results/v5_rebuild/reproduction/example_outputs/full/  (small evidence files; large regenerable *.npz excluded — see note)",
+    "interpretation_only": "results/v5_rebuild/reproduction/example_outputs/interpretation_only/",
+    "note": "Large regenerable artifacts (preprocessed_reference_matrix.npz ~920 KB, nmf_basis.npz ~68 KB, nmf_training_activations.npz, reference_support.npz) are NOT duplicated here; regenerate them with the full/interp commands. The single 44 KB nmf_reference_coordinates.npz is committed under manifests/ because it enables raw-free reference-normalization rebuilds."
+  },
+  "temporary_run_outputs_gitignored": ["results/reproduction/", "results/v5_rebuild/reproduction/tmp_full_rebuild/"]
+}

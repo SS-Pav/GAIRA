@@ -1,0 +1,24 @@
+{
+  "PREPROC": {
+    "baseline": "asls",
+    "smooth": "savgol",
+    "norm": "l2"
+  },
+  "window_cm": [
+    450.0,
+    1800.0
+  ],
+  "grid_step_cm": 2.0,
+  "grid_len": 676,
+  "asls": {
+    "lam": 100000.0,
+    "p": 0.01,
+    "n_iter": 8
+  },
+  "savgol": {
+    "window": 9,
+    "poly": 3
+  },
+  "normalization": "l2",
+  "nonneg_clip_for_nmf": true
+}

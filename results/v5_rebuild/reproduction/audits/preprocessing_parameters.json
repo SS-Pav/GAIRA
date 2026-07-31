@@ -1,0 +1,28 @@
+{
+  "config_name": "P2 (asls + savgol + l2)  [dataset.PREPROC]",
+  "PREPROC": {
+    "baseline": "asls",
+    "smooth": "savgol",
+    "norm": "l2"
+  },
+  "window_cm": [
+    450.0,
+    1800.0
+  ],
+  "grid_step_cm": 2.0,
+  "grid_len": 676,
+  "grid_first_cm": 450.0,
+  "grid_last_cm": 1800.0,
+  "asls": {
+    "lam": 100000.0,
+    "p": 0.01,
+    "n_iter": 8
+  },
+  "savgol": {
+    "window": 9,
+    "poly": 3
+  },
+  "normalization": "l2",
+  "nonneg_clip_for_nmf": true,
+  "order": "crop -> ASLS baseline subtract -> Savitzky-Golay -> resample(2cm-1 grid) -> L2 -> clip>=0(NMF)"
+}

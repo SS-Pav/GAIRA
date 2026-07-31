@@ -1,0 +1,6 @@
+{
+  "component_registry_v1.json": "identical except cosmetic interpretation-text ordering (PYTHONHASHSEED-dependent set join in build_registry.py; numeric content identical)",
+  "component_theme_weights_v1.json": "identical",
+  "mss_registry_v1.json": "identical",
+  "reference_normalization_v1.json": "identical (numeric center/spread); only the 'note' metadata string differs"
+}

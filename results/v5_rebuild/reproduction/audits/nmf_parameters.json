@@ -1,0 +1,32 @@
+{
+  "call_site": "src/gaira/foundation/representation.py::fit_nmf",
+  "explicit_kwargs": {
+    "n_components": 24,
+    "init": "nndsvda",
+    "random_state": 0,
+    "max_iter": 1500
+  },
+  "effective_params": {
+    "alpha_H": "same",
+    "alpha_W": 0.0,
+    "beta_loss": "frobenius",
+    "init": "nndsvda",
+    "l1_ratio": 0.0,
+    "max_iter": 1500,
+    "n_components": 24,
+    "random_state": 0,
+    "shuffle": false,
+    "solver": "cd",
+    "tol": 0.0001,
+    "verbose": 0
+  },
+  "note": "solver/beta_loss/alpha_W/alpha_H/l1_ratio/tol/shuffle are sklearn defaults for this version; recorded as effective values. fit is on np.clip(L2-normalized X, 0, None).",
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.8.0",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64"
+  }
+}

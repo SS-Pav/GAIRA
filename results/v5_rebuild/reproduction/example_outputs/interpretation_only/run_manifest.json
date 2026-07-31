@@ -1,0 +1,31 @@
+{
+  "mode": "interpretation-only",
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.8.0",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "blas": "{'Compilers': {'c': {'name': 'clang', 'linker': 'ld64', 'version': '15.0.0', 'commands': 'cc'}, 'cython': {'name': 'cython', 'linker': 'cython', 'version': '3.2.4', 'commands': 'cython'}, 'c++': {'name': 'clang', 'linker': 'ld64', 'version': '15.0.0', 'commands': 'c++'}}, 'Machine Information': {'host': {'cpu': 'aarch64', 'family': 'aarch64', 'endian': 'little', 'system': 'darwin'}, 'build': {'cpu"
+  },
+  "foundation_root": "assets/foundation",
+  "steps": {
+    "interpretation": {
+      "component_registry_v1.json": true,
+      "component_theme_weights_v1.json": true,
+      "mss_registry_v1.json": true,
+      "reference_normalization_v1.json": "rebuilt from saved coordinates"
+    },
+    "bsv_fixtures": "bsv_regression_results.json"
+  },
+  "downstream_comparison": {
+    "component_registry_v1.json": "identical",
+    "component_theme_weights_v1.json": "identical",
+    "mss_registry_v1.json": "identical",
+    "reference_normalization_v1.json": "identical (numeric center/spread); only the 'note' metadata string differs"
+  },
+  "canonical_asset_unmodified": true,
+  "runtime_sec": 2.6
+}
