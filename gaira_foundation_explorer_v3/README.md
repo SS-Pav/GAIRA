@@ -54,10 +54,17 @@ keep a dose-responsive theme. V3 shows the whole ladder, honestly.
 fingerprint check. No SSD_Rad, no raw data. If the engine can't be imported (minimal CI), the
 fingerprint check falls back to the recorded summary and the app still runs.
 
+## PDF report
+
+A print/share-ready **20-page PDF version** of this Explorer — the full four/five-level story
+with detailed text explainers, every audited figure, and all key tables — lives at
+`results/v5_rebuild/representation_hierarchy_v3/GAIRA_Cross_Modal_Transfer_Report.pdf`.
+
 ## Regenerate the underlying artifacts
 
 ```bash
 python results/v5_rebuild/representation_hierarchy_v3/code/hierarchy_analysis.py
 python results/v5_rebuild/representation_hierarchy_v3/code/make_cards_v3.py
 python results/v5_rebuild/representation_hierarchy_v3/code/make_figures_v3.py
+python results/v5_rebuild/representation_hierarchy_v3/code/make_report_pdf.py   # PDF (needs reportlab)
 ```
