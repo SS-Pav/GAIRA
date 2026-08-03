@@ -1,0 +1,191 @@
+{
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "n_analytes": 51,
+  "n_detection_pass": 22,
+  "n_detection_fail": 29,
+  "detection_pass_analytes": [
+    "acetoacetate",
+    "acetyl-coa",
+    "adenine",
+    "albumin",
+    "ascorbate",
+    "cholesterol",
+    "ergothioneine",
+    "glutamate",
+    "glutathione",
+    "glycerol",
+    "glycine",
+    "guanine",
+    "hypoxanthine",
+    "lactate",
+    "phosphate",
+    "riboflavin",
+    "stearate",
+    "tryptophan",
+    "uracil",
+    "urate",
+    "urea",
+    "xanthine"
+  ],
+  "recovery_ladder_all_vs_detectable": [
+    {
+      "level": "exact analyte",
+      "all_n": 7,
+      "all_denom": 51,
+      "all_frac": 0.137,
+      "detectable_n": 5,
+      "detectable_denom": 22,
+      "detectable_frac": 0.227,
+      "gain": 0.09
+    },
+    {
+      "level": "NMF component",
+      "all_n": 2,
+      "all_denom": 51,
+      "all_frac": 0.039,
+      "detectable_n": 2,
+      "detectable_denom": 22,
+      "detectable_frac": 0.091,
+      "gain": 0.052
+    },
+    {
+      "level": "MSS present (top-3)",
+      "all_n": 19,
+      "all_denom": 48,
+      "all_frac": 0.396,
+      "detectable_n": 11,
+      "detectable_denom": 20,
+      "detectable_frac": 0.55,
+      "gain": 0.154
+    },
+    {
+      "level": "MSS specific",
+      "all_n": 2,
+      "all_denom": 48,
+      "all_frac": 0.042,
+      "detectable_n": 2,
+      "detectable_denom": 20,
+      "detectable_frac": 0.1,
+      "gain": 0.058
+    },
+    {
+      "level": "theme present (top-3)",
+      "all_n": 25,
+      "all_denom": 51,
+      "all_frac": 0.49,
+      "detectable_n": 13,
+      "detectable_denom": 22,
+      "detectable_frac": 0.591,
+      "gain": 0.101
+    },
+    {
+      "level": "theme specific",
+      "all_n": 1,
+      "all_denom": 51,
+      "all_frac": 0.02,
+      "detectable_n": 1,
+      "detectable_denom": 22,
+      "detectable_frac": 0.045,
+      "gain": 0.025
+    },
+    {
+      "level": "perturbation",
+      "all_n": 3,
+      "all_denom": 51,
+      "all_frac": 0.059,
+      "detectable_n": 3,
+      "detectable_denom": 22,
+      "detectable_frac": 0.136,
+      "gain": 0.077
+    }
+  ],
+  "abstraction_improves_after_gate": {
+    "exact_all": 0.137,
+    "exact_detectable": 0.227,
+    "mss_present_all": 0.396,
+    "mss_present_detectable": 0.55,
+    "mss_specific_detectable": 0.1,
+    "theme_specific_detectable": 0.045,
+    "verdict": "Removing measurement failures roughly doubles exact-identity recovery among measured analytes, and raises broad presence \u2014 but analyte-SPECIFIC recovery (MSS/theme) stays low even among detectable analytes: the residual failure is genuinely representational, not merely measurement."
+  },
+  "transfer_cases": {
+    "A \u00b7 measurement-limited": 29,
+    "B \u00b7 representation-limited (promising)": 11,
+    "B \u00b7 representation-limited (hard)": 6,
+    "C \u00b7 already recoverable": 5
+  },
+  "roadmap_groups": {
+    "probably impossible (weak signal)": 16,
+    "potentially recoverable (transfer worth trying)": 11,
+    "impossible (measurement-limited)": 11,
+    "already recoverable": 7,
+    "probably impossible (no chemistry present)": 6
+  },
+  "roadmap_lists": {
+    "probably impossible (weak signal)": [
+      "arginine",
+      "citrate",
+      "cysteine",
+      "fructose",
+      "glucose",
+      "glycogen",
+      "histidine",
+      "isoleucine",
+      "leucine",
+      "mannose",
+      "n-acetylglucosamine",
+      "phenylalanine",
+      "phosphatidylinositol",
+      "phosphoenolpyruvate",
+      "proline",
+      "tyrosine"
+    ],
+    "potentially recoverable (transfer worth trying)": [
+      "acetoacetate",
+      "acetyl-coa",
+      "adenine",
+      "ascorbate",
+      "ergothioneine",
+      "glutamate",
+      "glycerol",
+      "guanine",
+      "lactate",
+      "phosphate",
+      "stearate"
+    ],
+    "impossible (measurement-limited)": [
+      "alanine",
+      "coenzyme a",
+      "fructose-6-phosphate",
+      "galactose",
+      "hydroxyproline",
+      "methionine",
+      "oleate",
+      "pyruvate",
+      "serine",
+      "triolein",
+      "valine"
+    ],
+    "already recoverable": [
+      "creatinine",
+      "glutathione",
+      "hypoxanthine",
+      "thymine",
+      "urate",
+      "urea",
+      "xanthine"
+    ],
+    "probably impossible (no chemistry present)": [
+      "albumin",
+      "cholesterol",
+      "glycine",
+      "riboflavin",
+      "tryptophan",
+      "uracil"
+    ]
+  },
+  "identity_recovered_but_detection_fail": [
+    "creatinine",
+    "thymine"
+  ]
+}
