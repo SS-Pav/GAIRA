@@ -115,3 +115,27 @@ component/motif-specific, 2 perturbation-only, **22 broad-presence-only (non-spe
 ### Unchanged
 V4 exact-identity counts reproduced (7/3/4); frozen atlas, NMF, preprocessing, MSS, ontology,
 registry, theme weights; fingerprint; V1–V4 apps. Subclass overlay never enters the ontology/BSV/MSS.
+
+## V6 — Detection gate (`detection_gate_v6/`, Foundation Explorer V6)
+
+Inserts a **Stage-0 detection gate** before every abstraction-level analysis, separating
+**measurement failure** (analyte invisible on Ag-SERS) from **representation failure** (measured but
+chemistry not recovered). V5 conflated the two by scoring all 51 analytes equally.
+
+### What is new
+- **Deterministic, no-ML Detection Confidence (0–1)** from replicate Pearson (0.45), Spearman (0.10),
+  peak SNR (0.20), variance concentration (0.15), reproducible peaks (0.10). Replicate *cosine*
+  rejected (baseline-inflated 0.93–0.99). Tiers GOOD/MODERATE/POOR/UNDETECTABLE; pass ≥ 0.50.
+- **Validated before freezing** (`code/validate_detection.ipynb`): anchors adenine/ergothioneine/
+  urate/xanthine PASS, glucose/tyrosine/oleate FAIL for adsorption reasons — not an arbitrary cutoff.
+- **22/51 detectable, 29 undetectable.** Restricting the V5 hierarchy to detectable analytes ~doubles
+  exact identity (14%→23%) and lifts presence (MSS 40%→55%, theme 49%→59%), but analyte-specific
+  recovery stays low (MSS 10%, theme 4.5%) — the residual failure is representational.
+- **Transfer-model decision** (A measurement-limited / B representation-limited / C already
+  recoverable) + **roadmap**: ~11 detectable, representation-limited analytes are the target for a
+  future learned Raman→SERS model; the rest need a better substrate.
+- 10 figures (incl. the intuitive pass/fail spectra), Markdown + PDF report, Explorer V6 (13 pages).
+
+### Unchanged
+Reuses V5 recovery flags unchanged; frozen atlas, NMF, preprocessing, MSS, ontology, registry, theme
+weights; fingerprint; V1–V5 apps. The gate is an evaluation layer only — no retraining.

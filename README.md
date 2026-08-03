@@ -122,7 +122,7 @@ any analyte. Additive; V1–V3 unchanged; reproduces V3 bit-for-bit.
 streamlit run gaira_foundation_explorer_v4/app.py
 ```
 
-**Foundation Explorer V5** *(current)* — **abstraction recovery**: when exact identity is lost,
+**Foundation Explorer V5** — **abstraction recovery**: when exact identity is lost,
 does the correct *broader* chemistry survive? The expected motif/theme is often *present* in the
 Ag-SERS top-3 (MSS 40%, theme 49%) but rarely analyte-*specific* (≤2/48); cross-modal
 subclass/family classification is at chance. A Raman→Raman control proves the taxonomy is separable
@@ -132,6 +132,18 @@ V1–V4 unchanged; reproduces V4 identity.
 
 ```bash
 streamlit run gaira_foundation_explorer_v5/app.py
+```
+
+**Foundation Explorer V6** *(current)* — a **detection gate** before recovery. V5 scored all analytes
+equally, conflating *measurement* failure (invisible on silver) with *representation* failure. V6
+adds a Stage-0 detection gate (deterministic, no-ML, validated before freezing): **22/51 analytes are
+detectable, 29 undetectable.** Among detectable analytes, exact identity ~doubles (14%→23%) and
+presence rises, but analyte-specific recovery stays low — the residual is representational. A learned
+Raman→SERS transfer model is justified for **~11 detectable, representation-limited analytes**; the
+rest need a better substrate. Additive; V1–V5 unchanged; reuses V5 recovery flags.
+
+```bash
+streamlit run gaira_foundation_explorer_v6/app.py
 ```
 
 All apps read only committed assets + precomputed outputs. None requires SSD_Rad,
