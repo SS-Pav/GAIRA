@@ -111,7 +111,7 @@ null controls throughout. Additive; V1 and V2 are unchanged.
 streamlit run gaira_foundation_explorer_v3/app.py
 ```
 
-**Foundation Explorer V4** *(current)* — **null-calibrated hierarchical recovery**: every metric
+**Foundation Explorer V4** — **null-calibrated hierarchical recovery**: every metric
 is calibrated against an analyte-mismatched null, so "recovery" means statistically specific
 (retrieval rank-1 + stable), never a raw cosine threshold. Establishes that analyte-specific
 cross-modal recovery is rare at every level (latent 7/51, MSS 3/51, theme 4/51), that **MSS is not
@@ -120,6 +120,18 @@ any analyte. Additive; V1–V3 unchanged; reproduces V3 bit-for-bit.
 
 ```bash
 streamlit run gaira_foundation_explorer_v4/app.py
+```
+
+**Foundation Explorer V5** *(current)* — **abstraction recovery**: when exact identity is lost,
+does the correct *broader* chemistry survive? The expected motif/theme is often *present* in the
+Ag-SERS top-3 (MSS 40%, theme 49%) but rarely analyte-*specific* (≤2/48); cross-modal
+subclass/family classification is at chance. A Raman→Raman control proves the taxonomy is separable
+and that abstraction helps *within* Raman (0.23→0.42) — the Ag-SERS modality gap collapses it.
+**Presence ≠ recovery.** Molecular subclass is an evaluation overlay, not a learned layer. Additive;
+V1–V4 unchanged; reproduces V4 identity.
+
+```bash
+streamlit run gaira_foundation_explorer_v5/app.py
 ```
 
 All apps read only committed assets + precomputed outputs. None requires SSD_Rad,

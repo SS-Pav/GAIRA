@@ -88,3 +88,30 @@ matrix **9** (serum-tested). Raw cosines (MSS 0.74, theme 0.92) are shared backg
 ### Unchanged
 Every V1/V2/V3 metric (V4 reproduces V3 matched values bit-for-bit, max abs diff 0.0). The frozen
 atlas, NMF, preprocessing, MSS, ontology, registry, theme weights; the fingerprint; V1–V3 apps.
+
+## V5 — Abstraction recovery (`abstraction_recovery_v5/`, Foundation Explorer V5)
+
+When exact Ag-SERS identity is lost (V4: 7/51 latent), does the correct **broader** chemistry survive?
+Evaluated at NMF-component, MSS-motif, molecular-subclass, and broad-theme levels, plus a graded
+present/enriched/specific distinction and leave-one-analyte-out classification.
+
+### What is new
+- **Molecular-subclass evaluation overlay** (`analyte_classification_overlay.csv`, provenance doc) —
+  10 subclasses ≥2 members + 15 exploratory singletons; multi-label; NOT a GAIRA axis.
+- **Graded recovery** — present (top-3) / enriched (>null) / specific (>null & >background) for MSS
+  and theme; component top-3 overlap; nearest-neighbour same-class retrieval.
+- **Leave-one-analyte-out nearest-centroid classification** (latent/MSS/theme) with balanced
+  accuracy, macro-F1, permutation nulls, bootstrap CIs — plus a **Raman→Raman control**.
+- 12 figures, 51 evidence cards, a Markdown + PDF report (27 sections), Foundation Explorer V5 (18 pages).
+
+### Headline
+Expected motif/theme often **present** (MSS 19/48 = 40%, theme 25/51 = 49%) but rarely **specific**
+(MSS 2/48, theme 1/51); cross-modal subclass/family classification **at chance** (balanced accuracy
+0.03–0.18, all p n.s.). The **Raman→Raman control** rises with abstraction (0.23 → 0.35 → 0.42),
+proving the taxonomy is separable and abstraction helps *within* Raman — the Ag-SERS modality gap
+collapses it. **Presence ≠ recovery.** Highest defensible level per analyte: 7 exact, 1
+component/motif-specific, 2 perturbation-only, **22 broad-presence-only (non-specific)**, 19 none.
+
+### Unchanged
+V4 exact-identity counts reproduced (7/3/4); frozen atlas, NMF, preprocessing, MSS, ontology,
+registry, theme weights; fingerprint; V1–V4 apps. Subclass overlay never enters the ontology/BSV/MSS.
