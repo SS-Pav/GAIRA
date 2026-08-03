@@ -59,3 +59,32 @@ significantly anti-correlated with adsorption fidelity; pure transfer is a weak 
 serum recovery; and dynamic perturbation — rare but decisive — is the strongest rung. The
 framing changed from "does the theme survive?" to "**how far up the representation hierarchy does
 agreement survive, and where does surface physics take over from biochemistry?**"
+
+## V4 — Null-calibrated hierarchical recovery (`hierarchical_recoverability_v4/`, Foundation Explorer V4)
+
+Recovery is redefined **statistically**: every representation metric is calibrated against an
+analyte-mismatched null, and an analyte is "specifically recovered" at a level only if its own
+Ag-SERS is the uniquely nearest match (retrieval rank-1) and jackknife-stable — never a raw cosine
+above a threshold.
+
+### What is new
+- **Analyte-mismatched nulls** for every level (latent, MSS, raw theme, 4 theme-identity residual
+  variants, Spearman, top-k, argmax), with retrieval-rank permutation p, BH-FDR (reported;
+  degenerate at N=51), and leave-one-replicate-out jackknife stability.
+- **Evidence-based recovery flags** (independent: latent / MSS / theme / perturbation / matrix) +
+  transparent profiles; counts, bootstrap CIs, overlap matrix, 90/95/99 threshold sensitivity.
+- **The MSS-primary hypothesis is tested and rejected:** MSS null-separation (0.0075) is smaller
+  than latent's (0.024); MSS recovers 3/51, a strict subset of latent's 7/51.
+- **Purine attractor blank control:** the unspiked-serum-on-Ag blank is already purine-dominant
+  (0.27) before any analyte; Δpurine anti-correlates with latent (r=−0.38) and MSS (r=−0.40).
+- **Matrix prediction:** no pure metric significantly predicts serum recovery; only confidence
+  (r=0.71) — flagged as likely signal-strength, not identity.
+- 11 figures, 51 nine-field cards, a 14-page PDF + Markdown report, Foundation Explorer V4 (15 pages).
+
+### Headline counts (of 51 matched analytes)
+latent-specific **7** · MSS-specific **3** · theme-specific **4** · perturbation **3** ·
+matrix **9** (serum-tested). Raw cosines (MSS 0.74, theme 0.92) are shared background.
+
+### Unchanged
+Every V1/V2/V3 metric (V4 reproduces V3 matched values bit-for-bit, max abs diff 0.0). The frozen
+atlas, NMF, preprocessing, MSS, ontology, registry, theme weights; the fingerprint; V1–V3 apps.

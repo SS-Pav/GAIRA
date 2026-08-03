@@ -111,6 +111,17 @@ null controls throughout. Additive; V1 and V2 are unchanged.
 streamlit run gaira_foundation_explorer_v3/app.py
 ```
 
+**Foundation Explorer V4** *(current)* — **null-calibrated hierarchical recovery**: every metric
+is calibrated against an analyte-mismatched null, so "recovery" means statistically specific
+(retrieval rank-1 + stable), never a raw cosine threshold. Establishes that analyte-specific
+cross-modal recovery is rare at every level (latent 7/51, MSS 3/51, theme 4/51), that **MSS is not
+the primary metric**, and that the purine attractor is present in the unspiked-serum blank before
+any analyte. Additive; V1–V3 unchanged; reproduces V3 bit-for-bit.
+
+```bash
+streamlit run gaira_foundation_explorer_v4/app.py
+```
+
 All apps read only committed assets + precomputed outputs. None requires SSD_Rad,
 raw spectra, or any recomputation.
 
@@ -158,3 +169,14 @@ and matrix recoverability — in `GAIRA_MULTI_LEVEL_VALIDATION_FRAMEWORK.md` and
 preservation are distinct, and a high *raw* theme cosine is a compositional-baseline artifact —
 identity-specific theme preservation is selective, tracking adsorption, because Ag-SERS
 homogenises most analytes toward a purine attractor.
+
+The **V4 null-calibrated recovery analysis**
+(`results/v5_rebuild/hierarchical_recoverability_v4/`, Explorer V4) sharpens this into
+statistics: each representation level is measured against an analyte-mismatched null, so a metric
+maps to a purpose only if it carries analyte identity above chance. The metric-purpose mapping:
+**latent cosine** = substrate/fingerprint fidelity (and the best cross-modal identity cosine);
+**MSS** = intermediate motif candidate (rejected as primary by the null); **raw theme BSV** =
+broad biochemical interpretation, not identity; **residual/null-adjusted theme metrics** =
+analyte-specific diagnostic; **perturbation** = functional validation (strongest evidence);
+**matrix recovery** = mixture visibility (separate property). "Detectable/recoverable" is never
+assigned from a raw cosine threshold.
