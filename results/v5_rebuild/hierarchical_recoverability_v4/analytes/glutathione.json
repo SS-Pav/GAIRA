@@ -1,0 +1,53 @@
+{
+  "analyte": "glutathione",
+  "family": "cofactor",
+  "expected_theme": "sulfur_antioxidant",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+    "cosine": 0.7271,
+    "null95": 0.6977,
+    "rank": 1,
+    "fdr_q": 0.1429,
+    "recovered": true,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.9554,
+    "null95": 0.9706,
+    "rank": 38,
+    "fdr_q": 0.8261,
+    "recovered": false,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.9858,
+    "raw_null_med": 0.9844,
+    "identity_residual": 0.6482,
+    "identity_null95": 0.7087,
+    "identity_rank": 14,
+    "expected_theme_top3": false,
+    "recovered": false,
+    "rank_rho": 0.9818,
+    "top2": 1.0,
+    "top3": 1.0,
+    "top3_null": 0.98,
+    "argmax_agree": true,
+    "argmax_robust": true,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "purine": {
+    "delta_purine": 0.0419,
+    "purine_R": 0.1809,
+    "purine_S": 0.2228
+  },
+  "ood_sers": 0.1361,
+  "confidence_sers": 0.2291
+}

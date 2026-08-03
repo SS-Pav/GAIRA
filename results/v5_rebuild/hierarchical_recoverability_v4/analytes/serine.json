@@ -1,0 +1,53 @@
+{
+  "analyte": "serine",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+    "cosine": 0.3536,
+    "null95": 0.3921,
+    "rank": 27,
+    "fdr_q": 0.7297,
+    "recovered": false,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.6897,
+    "null95": 0.7191,
+    "rank": 7,
+    "fdr_q": 0.5833,
+    "recovered": false,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.8496,
+    "raw_null_med": 0.8498,
+    "identity_residual": -0.6139,
+    "identity_null95": -0.4147,
+    "identity_rank": 25,
+    "expected_theme_top3": false,
+    "recovered": false,
+    "rank_rho": 0.8,
+    "top2": 0.5,
+    "top3": 0.333,
+    "top3_null": 0.347,
+    "argmax_agree": false,
+    "argmax_robust": false,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "purine": {
+    "delta_purine": 0.1332,
+    "purine_R": 0.0726,
+    "purine_S": 0.2058
+  },
+  "ood_sers": 0.1701,
+  "confidence_sers": 0.1917
+}

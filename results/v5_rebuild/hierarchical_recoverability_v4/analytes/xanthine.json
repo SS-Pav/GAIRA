@@ -1,0 +1,53 @@
+{
+  "analyte": "xanthine",
+  "family": "purine",
+  "expected_theme": "nucleic_purine",
+  "evidence_profile": "spectral+motif preserved; theme-specific; matrix-recovered",
+  "level1_latent": {
+    "cosine": 0.8145,
+    "null95": 0.3624,
+    "rank": 1,
+    "fdr_q": 0.1429,
+    "recovered": true,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.9303,
+    "null95": 0.7379,
+    "rank": 1,
+    "fdr_q": 0.3333,
+    "recovered": true,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.9751,
+    "raw_null_med": 0.8448,
+    "identity_residual": 0.9557,
+    "identity_null95": 0.7912,
+    "identity_rank": 1,
+    "expected_theme_top3": true,
+    "recovered": true,
+    "rank_rho": 0.9273,
+    "top2": 1.0,
+    "top3": 1.0,
+    "top3_null": 0.673,
+    "argmax_agree": true,
+    "argmax_robust": true,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "strong",
+    "recovered": true
+  },
+  "purine": {
+    "delta_purine": -0.1085,
+    "purine_R": 0.4711,
+    "purine_S": 0.3626
+  },
+  "ood_sers": 0.1743,
+  "confidence_sers": 0.2908
+}

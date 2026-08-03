@@ -1,0 +1,53 @@
+{
+  "analyte": "guanine",
+  "family": "purine",
+  "expected_theme": "nucleic_purine",
+  "evidence_profile": "matrix-recovered",
+  "level1_latent": {
+    "cosine": 0.631,
+    "null95": 0.3512,
+    "rank": 2,
+    "fdr_q": 0.2222,
+    "recovered": false,
+    "supporting": true
+  },
+  "level2_mss": {
+    "cosine": 0.8745,
+    "null95": 0.7635,
+    "rank": 3,
+    "fdr_q": 0.4,
+    "recovered": false,
+    "supporting": true
+  },
+  "level3_theme": {
+    "raw_cosine": 0.8758,
+    "raw_null_med": 0.8131,
+    "identity_residual": 0.9241,
+    "identity_null95": 0.8599,
+    "identity_rank": 2,
+    "expected_theme_top3": true,
+    "recovered": false,
+    "rank_rho": 0.8727,
+    "top2": 0.5,
+    "top3": 0.333,
+    "top3_null": 0.347,
+    "argmax_agree": true,
+    "argmax_robust": true,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "strong",
+    "recovered": true
+  },
+  "purine": {
+    "delta_purine": -0.2522,
+    "purine_R": 0.5102,
+    "purine_S": 0.258
+  },
+  "ood_sers": 0.159,
+  "confidence_sers": 0.2327
+}

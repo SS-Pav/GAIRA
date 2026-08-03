@@ -1,0 +1,53 @@
+{
+  "analyte": "tyrosine",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+    "cosine": 0.236,
+    "null95": 0.2822,
+    "rank": 31,
+    "fdr_q": 0.7561,
+    "recovered": false,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.6292,
+    "null95": 0.685,
+    "rank": 33,
+    "fdr_q": 0.7674,
+    "recovered": false,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.9473,
+    "raw_null_med": 0.9446,
+    "identity_residual": 0.1874,
+    "identity_null95": 0.3233,
+    "identity_rank": 16,
+    "expected_theme_top3": false,
+    "recovered": false,
+    "rank_rho": 0.8727,
+    "top2": 1.0,
+    "top3": 0.667,
+    "top3_null": 0.667,
+    "argmax_agree": true,
+    "argmax_robust": true,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "purine": {
+    "delta_purine": 0.0205,
+    "purine_R": 0.1802,
+    "purine_S": 0.2008
+  },
+  "ood_sers": 0.1573,
+  "confidence_sers": 0.1962
+}

@@ -1,0 +1,53 @@
+{
+  "analyte": "urate",
+  "family": "purine",
+  "expected_theme": "nucleic_purine",
+  "evidence_profile": "perturbation-validated; matrix-recovered",
+  "level1_latent": {
+    "cosine": 0.644,
+    "null95": 0.5071,
+    "rank": 1,
+    "fdr_q": 0.1429,
+    "recovered": true,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.7488,
+    "null95": 0.9054,
+    "rank": 49,
+    "fdr_q": 0.9804,
+    "recovered": false,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.9127,
+    "raw_null_med": 0.9597,
+    "identity_residual": -0.5662,
+    "identity_null95": 0.0448,
+    "identity_rank": 50,
+    "expected_theme_top3": true,
+    "recovered": false,
+    "rank_rho": 0.8273,
+    "top2": 1.0,
+    "top3": 0.667,
+    "top3_null": 0.987,
+    "argmax_agree": false,
+    "argmax_robust": false,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "directional depletion",
+    "validated": true
+  },
+  "level5_matrix": {
+    "tier": "strong",
+    "recovered": true
+  },
+  "purine": {
+    "delta_purine": 0.1368,
+    "purine_R": 0.127,
+    "purine_S": 0.2638
+  },
+  "ood_sers": 0.2944,
+  "confidence_sers": 0.2378
+}

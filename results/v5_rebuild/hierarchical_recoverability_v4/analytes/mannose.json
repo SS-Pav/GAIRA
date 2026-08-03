@@ -1,0 +1,53 @@
+{
+  "analyte": "mannose",
+  "family": "saccharide",
+  "expected_theme": "saccharide_glycan",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+    "cosine": 0.6013,
+    "null95": 0.6711,
+    "rank": 29,
+    "fdr_q": 0.7561,
+    "recovered": false,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.7375,
+    "null95": 0.775,
+    "rank": 30,
+    "fdr_q": 0.7317,
+    "recovered": false,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.8841,
+    "raw_null_med": 0.8921,
+    "identity_residual": -0.6059,
+    "identity_null95": -0.2436,
+    "identity_rank": 44,
+    "expected_theme_top3": true,
+    "recovered": false,
+    "rank_rho": 0.9455,
+    "top2": 1.0,
+    "top3": 0.667,
+    "top3_null": 0.667,
+    "argmax_agree": false,
+    "argmax_robust": false,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "purine": {
+    "delta_purine": 0.0806,
+    "purine_R": 0.1329,
+    "purine_S": 0.2135
+  },
+  "ood_sers": 0.1162,
+  "confidence_sers": 0.2056
+}

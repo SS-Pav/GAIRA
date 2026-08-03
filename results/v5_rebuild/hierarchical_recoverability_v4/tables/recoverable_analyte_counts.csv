@@ -1,0 +1,8 @@
+level,n_recovered,denominator,fraction,ci95_low,ci95_high,denominator_note
+latent,7,51,0.137,0.059,0.235,all matched (51)
+MSS,3,51,0.059,0.0,0.137,all matched (51)
+theme,4,51,0.078,0.02,0.157,all matched (51)
+top3_over_null,28,51,0.549,0.412,0.686,all matched (51)
+argmax_robust,13,51,0.255,0.137,0.373,all matched (51)
+perturbation,3,51,0.059,0.0,0.137,all matched (51)
+matrix,9,51,0.176,0.078,0.294,serum-tested

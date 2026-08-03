@@ -1,0 +1,53 @@
+{
+  "analyte": "uracil",
+  "family": "pyrimidine",
+  "expected_theme": "nucleic_pyrimidine",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+    "cosine": 0.0562,
+    "null95": 0.1564,
+    "rank": 39,
+    "fdr_q": 0.8478,
+    "recovered": false,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.4858,
+    "null95": 0.5426,
+    "rank": 23,
+    "fdr_q": 0.7,
+    "recovered": false,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.45,
+    "raw_null_med": 0.4379,
+    "identity_residual": 0.1591,
+    "identity_null95": 0.3022,
+    "identity_rank": 12,
+    "expected_theme_top3": false,
+    "recovered": false,
+    "rank_rho": 0.6455,
+    "top2": 0.5,
+    "top3": 0.333,
+    "top3_null": 0.333,
+    "argmax_agree": false,
+    "argmax_robust": false,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "purine": {
+    "delta_purine": 0.1088,
+    "purine_R": 0.0961,
+    "purine_S": 0.2049
+  },
+  "ood_sers": 0.1659,
+  "confidence_sers": 0.2101
+}

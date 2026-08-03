@@ -1,0 +1,5 @@
+variant,name,separation,self_rank1_frac,stable_frac,fam_robust,composite,selected
+Rcenter,Raman-centered identity residual,0.0088,0.078,0.098,0.994,0.2674,True
+Mcenter,Mcenter,0.0691,0.039,0.078,0.944,0.2319,False
+Blank,Blank,0.0274,0.039,0.098,0.997,0.2485,False
+Whiten,Whiten,0.121,0.039,0.078,0.963,0.2358,False

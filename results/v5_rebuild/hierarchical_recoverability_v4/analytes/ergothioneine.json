@@ -1,0 +1,53 @@
+{
+  "analyte": "ergothioneine",
+  "family": "cofactor",
+  "expected_theme": "sulfur_antioxidant",
+  "evidence_profile": "perturbation-validated; matrix-recovered",
+  "level1_latent": {
+    "cosine": 0.2852,
+    "null95": 0.6473,
+    "rank": 50,
+    "fdr_q": 1.0,
+    "recovered": false,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.7263,
+    "null95": 0.8607,
+    "rank": 50,
+    "fdr_q": 0.9804,
+    "recovered": false,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.9582,
+    "raw_null_med": 0.9802,
+    "identity_residual": 0.2507,
+    "identity_null95": 0.5009,
+    "identity_rank": 45,
+    "expected_theme_top3": false,
+    "recovered": false,
+    "rank_rho": 0.8545,
+    "top2": 1.0,
+    "top3": 0.667,
+    "top3_null": 0.68,
+    "argmax_agree": true,
+    "argmax_robust": false,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "dose-response",
+    "validated": true
+  },
+  "level5_matrix": {
+    "tier": "strong",
+    "recovered": true
+  },
+  "purine": {
+    "delta_purine": -0.0252,
+    "purine_R": 0.1709,
+    "purine_S": 0.1456
+  },
+  "ood_sers": 0.307,
+  "confidence_sers": 0.2571
+}

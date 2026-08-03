@@ -1,0 +1,2705 @@
+{
+ "acetoacetate": {
+  "analyte": "acetoacetate",
+  "family": "organic_acid",
+  "expected_theme": "organic_acid_metabolism",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.423,
+   "null95": 0.5203,
+   "rank": 23,
+   "fdr_q": 0.6389,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.7716,
+   "null95": 0.7972,
+   "rank": 25,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9169,
+   "raw_null_med": 0.915,
+   "identity_residual": 0.446,
+   "identity_null95": 0.5477,
+   "identity_rank": 26,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.7636,
+   "top2": 0.5,
+   "top3": 0.667,
+   "top3_null": 0.647,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0383,
+   "purine_R": 0.1624,
+   "purine_S": 0.2007
+  },
+  "ood_sers": 0.2081,
+  "confidence_sers": 0.2019
+ },
+ "acetyl-coa": {
+  "analyte": "acetyl-coa",
+  "family": "cofactor",
+  "expected_theme": "sulfur_antioxidant|redox_broad",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.6495,
+   "null95": 0.6463,
+   "rank": 4,
+   "fdr_q": 0.3077,
+   "recovered": false,
+   "supporting": true
+  },
+  "level2_mss": {
+   "cosine": 0.9006,
+   "null95": 0.9007,
+   "rank": 4,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9795,
+   "raw_null_med": 0.9798,
+   "identity_residual": 0.5083,
+   "identity_null95": 0.674,
+   "identity_rank": 33,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.8727,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.673,
+   "argmax_agree": true,
+   "argmax_robust": true,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": -0.0364,
+   "purine_R": 0.2308,
+   "purine_S": 0.1944
+  },
+  "ood_sers": 0.1539,
+  "confidence_sers": 0.1938
+ },
+ "adenine": {
+  "analyte": "adenine",
+  "family": "purine",
+  "expected_theme": "nucleic_purine",
+  "evidence_profile": "perturbation-validated; matrix-recovered",
+  "level1_latent": {
+   "cosine": 0.3592,
+   "null95": 0.3949,
+   "rank": 17,
+   "fdr_q": 0.5862,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.7405,
+   "null95": 0.8011,
+   "rank": 19,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9466,
+   "raw_null_med": 0.9445,
+   "identity_residual": 0.733,
+   "identity_null95": 0.8834,
+   "identity_rank": 29,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.8636,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.68,
+   "argmax_agree": true,
+   "argmax_robust": true,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "dose-response",
+   "validated": true
+  },
+  "level5_matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "purine": {
+   "delta_purine": -0.1157,
+   "purine_R": 0.3206,
+   "purine_S": 0.205
+  },
+  "ood_sers": 0.1388,
+  "confidence_sers": 0.2195
+ },
+ "alanine": {
+  "analyte": "alanine",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.2553,
+   "null95": 0.2916,
+   "rank": 23,
+   "fdr_q": 0.6389,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.6624,
+   "null95": 0.6908,
+   "rank": 21,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8867,
+   "raw_null_med": 0.8772,
+   "identity_residual": -0.4841,
+   "identity_null95": -0.2362,
+   "identity_rank": 28,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.8364,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.667,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0645,
+   "purine_R": 0.136,
+   "purine_S": 0.2005
+  },
+  "ood_sers": 0.1256,
+  "confidence_sers": 0.1993
+ },
+ "albumin": {
+  "analyte": "albumin",
+  "family": "protein",
+  "expected_theme": "protein_peptide",
+  "evidence_profile": "matrix-recovered",
+  "level1_latent": {
+   "cosine": 0.6025,
+   "null95": 0.6618,
+   "rank": 38,
+   "fdr_q": 0.8444,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.879,
+   "null95": 0.8555,
+   "rank": 2,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": true
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9286,
+   "raw_null_med": 0.9271,
+   "identity_residual": -0.1934,
+   "identity_null95": 0.1138,
+   "identity_rank": 37,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.8182,
+   "top2": 0.0,
+   "top3": 0.333,
+   "top3_null": 0.353,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "purine": {
+   "delta_purine": 0.0757,
+   "purine_R": 0.1352,
+   "purine_S": 0.2109
+  },
+  "ood_sers": 0.1286,
+  "confidence_sers": 0.2398
+ },
+ "arginine": {
+  "analyte": "arginine",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.4943,
+   "null95": 0.4513,
+   "rank": 2,
+   "fdr_q": 0.2222,
+   "recovered": false,
+   "supporting": true
+  },
+  "level2_mss": {
+   "cosine": 0.7433,
+   "null95": 0.7777,
+   "rank": 28,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8175,
+   "raw_null_med": 0.8365,
+   "identity_residual": -0.9317,
+   "identity_null95": -0.4291,
+   "identity_rank": 46,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.7545,
+   "top2": 0.5,
+   "top3": 0.667,
+   "top3_null": 0.653,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.1386,
+   "purine_R": 0.0708,
+   "purine_S": 0.2094
+  },
+  "ood_sers": 0.2065,
+  "confidence_sers": 0.1856
+ },
+ "ascorbate": {
+  "analyte": "ascorbate",
+  "family": "organic_acid",
+  "expected_theme": "organic_acid_metabolism",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.3917,
+   "null95": 0.4068,
+   "rank": 9,
+   "fdr_q": 0.4286,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.674,
+   "null95": 0.734,
+   "rank": 25,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8605,
+   "raw_null_med": 0.8731,
+   "identity_residual": -0.5823,
+   "identity_null95": -0.1441,
+   "identity_rank": 23,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.7636,
+   "top2": 0.5,
+   "top3": 0.667,
+   "top3_null": 0.673,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0798,
+   "purine_R": 0.1359,
+   "purine_S": 0.2157
+  },
+  "ood_sers": 0.1427,
+  "confidence_sers": 0.2003
+ },
+ "cholesterol": {
+  "analyte": "cholesterol",
+  "family": "lipid",
+  "expected_theme": "lipid_acyl|sterol_membrane",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.3357,
+   "null95": 0.6315,
+   "rank": 51,
+   "fdr_q": 1.0,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.814,
+   "null95": 0.8991,
+   "rank": 50,
+   "fdr_q": 0.9804,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9181,
+   "raw_null_med": 0.901,
+   "identity_residual": 0.1114,
+   "identity_null95": 0.0925,
+   "identity_rank": 4,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.8818,
+   "top2": 0.5,
+   "top3": 0.667,
+   "top3_null": 0.673,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0622,
+   "purine_R": 0.1533,
+   "purine_S": 0.2155
+  },
+  "ood_sers": 0.3183,
+  "confidence_sers": 0.2197
+ },
+ "citrate": {
+  "analyte": "citrate",
+  "family": "organic_acid",
+  "expected_theme": "organic_acid_metabolism",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.6183,
+   "null95": 0.6761,
+   "rank": 31,
+   "fdr_q": 0.7561,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.6956,
+   "null95": 0.7499,
+   "rank": 22,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8426,
+   "raw_null_med": 0.8542,
+   "identity_residual": 0.8517,
+   "identity_null95": 0.9058,
+   "identity_rank": 18,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.8091,
+   "top2": 0.5,
+   "top3": 0.667,
+   "top3_null": 0.647,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": -0.0933,
+   "purine_R": 0.2798,
+   "purine_S": 0.1865
+  },
+  "ood_sers": 0.1465,
+  "confidence_sers": 0.1899
+ },
+ "coenzyme a": {
+  "analyte": "coenzyme a",
+  "family": "cofactor",
+  "expected_theme": "sulfur_antioxidant|redox_broad",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.6495,
+   "null95": 0.6835,
+   "rank": 8,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.9011,
+   "null95": 0.9126,
+   "rank": 12,
+   "fdr_q": 0.6667,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9852,
+   "raw_null_med": 0.9851,
+   "identity_residual": 0.7183,
+   "identity_null95": 0.826,
+   "identity_rank": 28,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.9818,
+   "top2": 1.0,
+   "top3": 1.0,
+   "top3_null": 0.98,
+   "argmax_agree": true,
+   "argmax_robust": true,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": -0.0229,
+   "purine_R": 0.2291,
+   "purine_S": 0.2061
+  },
+  "ood_sers": 0.1735,
+  "confidence_sers": 0.1931
+ },
+ "creatinine": {
+  "analyte": "creatinine",
+  "family": "small_nitrogenous",
+  "expected_theme": "organic_acid_metabolism",
+  "evidence_profile": "spectral+motif preserved; theme-specific",
+  "level1_latent": {
+   "cosine": 0.6877,
+   "null95": 0.5362,
+   "rank": 1,
+   "fdr_q": 0.1429,
+   "recovered": true,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.6521,
+   "null95": 0.5739,
+   "rank": 1,
+   "fdr_q": 0.3333,
+   "recovered": true,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9659,
+   "raw_null_med": 0.9615,
+   "identity_residual": 0.8747,
+   "identity_null95": 0.8434,
+   "identity_rank": 1,
+   "expected_theme_top3": true,
+   "recovered": true,
+   "rank_rho": 0.9545,
+   "top2": 0.5,
+   "top3": 0.667,
+   "top3_null": 0.66,
+   "argmax_agree": true,
+   "argmax_robust": true,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": -0.0662,
+   "purine_R": 0.2676,
+   "purine_S": 0.2014
+  },
+  "ood_sers": 0.1536,
+  "confidence_sers": 0.1999
+ },
+ "cysteine": {
+  "analyte": "cysteine",
+  "family": "amino_acid",
+  "expected_theme": "sulfur_antioxidant",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.58,
+   "null95": 0.6821,
+   "rank": 15,
+   "fdr_q": 0.5556,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.8088,
+   "null95": 0.9067,
+   "rank": 28,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9608,
+   "raw_null_med": 0.962,
+   "identity_residual": 0.6942,
+   "identity_null95": 0.8634,
+   "identity_rank": 34,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.9455,
+   "top2": 1.0,
+   "top3": 1.0,
+   "top3_null": 0.98,
+   "argmax_agree": true,
+   "argmax_robust": true,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": -0.1001,
+   "purine_R": 0.3034,
+   "purine_S": 0.2033
+  },
+  "ood_sers": 0.1228,
+  "confidence_sers": 0.2075
+ },
+ "ergothioneine": {
+  "analyte": "ergothioneine",
+  "family": "cofactor",
+  "expected_theme": "sulfur_antioxidant",
+  "evidence_profile": "perturbation-validated; matrix-recovered",
+  "level1_latent": {
+   "cosine": 0.2852,
+   "null95": 0.6473,
+   "rank": 50,
+   "fdr_q": 1.0,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.7263,
+   "null95": 0.8607,
+   "rank": 50,
+   "fdr_q": 0.9804,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9582,
+   "raw_null_med": 0.9802,
+   "identity_residual": 0.2507,
+   "identity_null95": 0.5009,
+   "identity_rank": 45,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.8545,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.68,
+   "argmax_agree": true,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "dose-response",
+   "validated": true
+  },
+  "level5_matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "purine": {
+   "delta_purine": -0.0252,
+   "purine_R": 0.1709,
+   "purine_S": 0.1456
+  },
+  "ood_sers": 0.307,
+  "confidence_sers": 0.2571
+ },
+ "fructose": {
+  "analyte": "fructose",
+  "family": "saccharide",
+  "expected_theme": "saccharide_glycan",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.3411,
+   "null95": 0.3651,
+   "rank": 7,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.5823,
+   "null95": 0.601,
+   "rank": 9,
+   "fdr_q": 0.6429,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.7526,
+   "raw_null_med": 0.7341,
+   "identity_residual": -0.6003,
+   "identity_null95": -0.3544,
+   "identity_rank": 14,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.8182,
+   "top2": 0.5,
+   "top3": 0.667,
+   "top3_null": 0.667,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.1196,
+   "purine_R": 0.0762,
+   "purine_S": 0.1958
+  },
+  "ood_sers": 0.1429,
+  "confidence_sers": 0.1941
+ },
+ "fructose-6-phosphate": {
+  "analyte": "fructose-6-phosphate",
+  "family": "saccharide",
+  "expected_theme": "saccharide_glycan",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.3473,
+   "null95": 0.4481,
+   "rank": 21,
+   "fdr_q": 0.6389,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.6931,
+   "null95": 0.7196,
+   "rank": 12,
+   "fdr_q": 0.6667,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8287,
+   "raw_null_med": 0.8135,
+   "identity_residual": -0.7297,
+   "identity_null95": -0.4338,
+   "identity_rank": 21,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.8364,
+   "top2": 0.5,
+   "top3": 0.667,
+   "top3_null": 0.667,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.1247,
+   "purine_R": 0.0773,
+   "purine_S": 0.202
+  },
+  "ood_sers": 0.1113,
+  "confidence_sers": 0.2071
+ },
+ "galactose": {
+  "analyte": "galactose",
+  "family": "saccharide",
+  "expected_theme": "saccharide_glycan",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.4462,
+   "null95": 0.4702,
+   "rank": 7,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.7966,
+   "null95": 0.8186,
+   "rank": 23,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9241,
+   "raw_null_med": 0.9161,
+   "identity_residual": -0.2446,
+   "identity_null95": -0.082,
+   "identity_rank": 10,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.9364,
+   "top2": 1.0,
+   "top3": 1.0,
+   "top3_null": 0.98,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0381,
+   "purine_R": 0.169,
+   "purine_S": 0.2071
+  },
+  "ood_sers": 0.1177,
+  "confidence_sers": 0.2074
+ },
+ "glucose": {
+  "analyte": "glucose",
+  "family": "saccharide",
+  "expected_theme": "saccharide_glycan",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.2555,
+   "null95": 0.2988,
+   "rank": 22,
+   "fdr_q": 0.6389,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.5358,
+   "null95": 0.5668,
+   "rank": 11,
+   "fdr_q": 0.6667,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8458,
+   "raw_null_med": 0.8313,
+   "identity_residual": -0.4605,
+   "identity_null95": -0.1523,
+   "identity_rank": 17,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.8545,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.673,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.024,
+   "purine_R": 0.1717,
+   "purine_S": 0.1958
+  },
+  "ood_sers": 0.124,
+  "confidence_sers": 0.2052
+ },
+ "glutamate": {
+  "analyte": "glutamate",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.3337,
+   "null95": 0.4687,
+   "rank": 47,
+   "fdr_q": 0.9592,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.6553,
+   "null95": 0.7582,
+   "rank": 47,
+   "fdr_q": 0.9792,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9535,
+   "raw_null_med": 0.952,
+   "identity_residual": 0.1533,
+   "identity_null95": 0.3271,
+   "identity_rank": 32,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.9273,
+   "top2": 0.5,
+   "top3": 1.0,
+   "top3_null": 0.98,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0577,
+   "purine_R": 0.1498,
+   "purine_S": 0.2075
+  },
+  "ood_sers": 0.1491,
+  "confidence_sers": 0.2059
+ },
+ "glutathione": {
+  "analyte": "glutathione",
+  "family": "cofactor",
+  "expected_theme": "sulfur_antioxidant",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.7271,
+   "null95": 0.6977,
+   "rank": 1,
+   "fdr_q": 0.1429,
+   "recovered": true,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.9554,
+   "null95": 0.9706,
+   "rank": 38,
+   "fdr_q": 0.8261,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9858,
+   "raw_null_med": 0.9844,
+   "identity_residual": 0.6482,
+   "identity_null95": 0.7087,
+   "identity_rank": 14,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.9818,
+   "top2": 1.0,
+   "top3": 1.0,
+   "top3_null": 0.98,
+   "argmax_agree": true,
+   "argmax_robust": true,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0419,
+   "purine_R": 0.1809,
+   "purine_S": 0.2228
+  },
+  "ood_sers": 0.1361,
+  "confidence_sers": 0.2291
+ },
+ "glycerol": {
+  "analyte": "glycerol",
+  "family": "polyol",
+  "expected_theme": "saccharide_glycan",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.47,
+   "null95": 0.4837,
+   "rank": 6,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.5963,
+   "null95": 0.6308,
+   "rank": 20,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8044,
+   "raw_null_med": 0.795,
+   "identity_residual": -0.7601,
+   "identity_null95": -0.3507,
+   "identity_rank": 23,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.7273,
+   "top2": 0.5,
+   "top3": 0.333,
+   "top3_null": 0.353,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.1365,
+   "purine_R": 0.0727,
+   "purine_S": 0.2093
+  },
+  "ood_sers": 0.096,
+  "confidence_sers": 0.2084
+ },
+ "glycine": {
+  "analyte": "glycine",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.2465,
+   "null95": 0.2794,
+   "rank": 15,
+   "fdr_q": 0.5556,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.8973,
+   "null95": 0.9267,
+   "rank": 26,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8118,
+   "raw_null_med": 0.7941,
+   "identity_residual": -0.2531,
+   "identity_null95": -0.1903,
+   "identity_rank": 8,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.7636,
+   "top2": 0.5,
+   "top3": 0.333,
+   "top3_null": 0.347,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.1117,
+   "purine_R": 0.0814,
+   "purine_S": 0.1931
+  },
+  "ood_sers": 0.1254,
+  "confidence_sers": 0.2117
+ },
+ "glycogen": {
+  "analyte": "glycogen",
+  "family": "polysaccharide",
+  "expected_theme": "saccharide_glycan",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.6837,
+   "null95": 0.69,
+   "rank": 7,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.9023,
+   "null95": 0.9093,
+   "rank": 9,
+   "fdr_q": 0.6429,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9572,
+   "raw_null_med": 0.9613,
+   "identity_residual": 0.0647,
+   "identity_null95": 0.3188,
+   "identity_rank": 33,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.9545,
+   "top2": 1.0,
+   "top3": 1.0,
+   "top3_null": 0.98,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0454,
+   "purine_R": 0.1648,
+   "purine_S": 0.2102
+  },
+  "ood_sers": 0.137,
+  "confidence_sers": 0.211
+ },
+ "guanine": {
+  "analyte": "guanine",
+  "family": "purine",
+  "expected_theme": "nucleic_purine",
+  "evidence_profile": "matrix-recovered",
+  "level1_latent": {
+   "cosine": 0.631,
+   "null95": 0.3512,
+   "rank": 2,
+   "fdr_q": 0.2222,
+   "recovered": false,
+   "supporting": true
+  },
+  "level2_mss": {
+   "cosine": 0.8745,
+   "null95": 0.7635,
+   "rank": 3,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": true
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8758,
+   "raw_null_med": 0.8131,
+   "identity_residual": 0.9241,
+   "identity_null95": 0.8599,
+   "identity_rank": 2,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.8727,
+   "top2": 0.5,
+   "top3": 0.333,
+   "top3_null": 0.347,
+   "argmax_agree": true,
+   "argmax_robust": true,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "purine": {
+   "delta_purine": -0.2522,
+   "purine_R": 0.5102,
+   "purine_S": 0.258
+  },
+  "ood_sers": 0.159,
+  "confidence_sers": 0.2327
+ },
+ "histidine": {
+  "analyte": "histidine",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.4868,
+   "null95": 0.5507,
+   "rank": 14,
+   "fdr_q": 0.5556,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.8677,
+   "null95": 0.9106,
+   "rank": 42,
+   "fdr_q": 0.8936,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9256,
+   "raw_null_med": 0.9385,
+   "identity_residual": -0.7794,
+   "identity_null95": -0.3298,
+   "identity_rank": 47,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.9364,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.68,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0664,
+   "purine_R": 0.1451,
+   "purine_S": 0.2115
+  },
+  "ood_sers": 0.1542,
+  "confidence_sers": 0.1969
+ },
+ "hydroxyproline": {
+  "analyte": "hydroxyproline",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "matrix-recovered",
+  "level1_latent": {
+   "cosine": 0.241,
+   "null95": 0.2663,
+   "rank": 15,
+   "fdr_q": 0.5556,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.6319,
+   "null95": 0.6638,
+   "rank": 23,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8238,
+   "raw_null_med": 0.8174,
+   "identity_residual": -0.5354,
+   "identity_null95": -0.2907,
+   "identity_rank": 27,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.8273,
+   "top2": 0.5,
+   "top3": 0.333,
+   "top3_null": 0.347,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "purine": {
+   "delta_purine": 0.1117,
+   "purine_R": 0.0918,
+   "purine_S": 0.2035
+  },
+  "ood_sers": 0.1242,
+  "confidence_sers": 0.2034
+ },
+ "hypoxanthine": {
+  "analyte": "hypoxanthine",
+  "family": "purine",
+  "expected_theme": "nucleic_purine",
+  "evidence_profile": "theme-specific; matrix-recovered",
+  "level1_latent": {
+   "cosine": 0.8443,
+   "null95": 0.8083,
+   "rank": 1,
+   "fdr_q": 0.1429,
+   "recovered": true,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.9642,
+   "null95": 0.9584,
+   "rank": 2,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": true
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9914,
+   "raw_null_med": 0.9802,
+   "identity_residual": 0.8269,
+   "identity_null95": 0.6959,
+   "identity_rank": 1,
+   "expected_theme_top3": true,
+   "recovered": true,
+   "rank_rho": 0.9545,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.673,
+   "argmax_agree": true,
+   "argmax_robust": true,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "purine": {
+   "delta_purine": 0.0039,
+   "purine_R": 0.2229,
+   "purine_S": 0.2268
+  },
+  "ood_sers": 0.1313,
+  "confidence_sers": 0.2463
+ },
+ "isoleucine": {
+  "analyte": "isoleucine",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.5932,
+   "null95": 0.5938,
+   "rank": 4,
+   "fdr_q": 0.3077,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.8301,
+   "null95": 0.8638,
+   "rank": 32,
+   "fdr_q": 0.7619,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9379,
+   "raw_null_med": 0.9461,
+   "identity_residual": -0.9043,
+   "identity_null95": -0.5399,
+   "identity_rank": 37,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.8727,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.673,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0804,
+   "purine_R": 0.1347,
+   "purine_S": 0.2152
+  },
+  "ood_sers": 0.1672,
+  "confidence_sers": 0.1963
+ },
+ "lactate": {
+  "analyte": "lactate",
+  "family": "organic_acid",
+  "expected_theme": "organic_acid_metabolism",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.402,
+   "null95": 0.4179,
+   "rank": 8,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.5653,
+   "null95": 0.5983,
+   "rank": 22,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.7821,
+   "raw_null_med": 0.7894,
+   "identity_residual": -0.6338,
+   "identity_null95": -0.2966,
+   "identity_rank": 40,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.8364,
+   "top2": 0.5,
+   "top3": 0.333,
+   "top3_null": 0.347,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.1214,
+   "purine_R": 0.0858,
+   "purine_S": 0.2072
+  },
+  "ood_sers": 0.1239,
+  "confidence_sers": 0.2115
+ },
+ "leucine": {
+  "analyte": "leucine",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.4373,
+   "null95": 0.4871,
+   "rank": 22,
+   "fdr_q": 0.6389,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.7764,
+   "null95": 0.7994,
+   "rank": 16,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9349,
+   "raw_null_med": 0.929,
+   "identity_residual": -0.6361,
+   "identity_null95": -0.2219,
+   "identity_rank": 42,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.9182,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.68,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0481,
+   "purine_R": 0.1475,
+   "purine_S": 0.1956
+  },
+  "ood_sers": 0.1281,
+  "confidence_sers": 0.2031
+ },
+ "mannose": {
+  "analyte": "mannose",
+  "family": "saccharide",
+  "expected_theme": "saccharide_glycan",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.6013,
+   "null95": 0.6711,
+   "rank": 29,
+   "fdr_q": 0.7561,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.7375,
+   "null95": 0.775,
+   "rank": 30,
+   "fdr_q": 0.7317,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8841,
+   "raw_null_med": 0.8921,
+   "identity_residual": -0.6059,
+   "identity_null95": -0.2436,
+   "identity_rank": 44,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.9455,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.667,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0806,
+   "purine_R": 0.1329,
+   "purine_S": 0.2135
+  },
+  "ood_sers": 0.1162,
+  "confidence_sers": 0.2056
+ },
+ "methionine": {
+  "analyte": "methionine",
+  "family": "amino_acid",
+  "expected_theme": "sulfur_antioxidant",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.5575,
+   "null95": 0.5871,
+   "rank": 10,
+   "fdr_q": 0.4545,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.8735,
+   "null95": 0.9195,
+   "rank": 18,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9546,
+   "raw_null_med": 0.9566,
+   "identity_residual": 0.8119,
+   "identity_null95": 0.8986,
+   "identity_rank": 16,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.9364,
+   "top2": 0.5,
+   "top3": 1.0,
+   "top3_null": 0.98,
+   "argmax_agree": true,
+   "argmax_robust": true,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": -0.1033,
+   "purine_R": 0.3068,
+   "purine_S": 0.2035
+  },
+  "ood_sers": 0.1276,
+  "confidence_sers": 0.1989
+ },
+ "n-acetylglucosamine": {
+  "analyte": "n-acetylglucosamine",
+  "family": "saccharide",
+  "expected_theme": "saccharide_glycan",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.5987,
+   "null95": 0.6547,
+   "rank": 15,
+   "fdr_q": 0.5556,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.8527,
+   "null95": 0.8688,
+   "rank": 22,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9014,
+   "raw_null_med": 0.8956,
+   "identity_residual": -0.6277,
+   "identity_null95": -0.4258,
+   "identity_rank": 31,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.9,
+   "top2": 0.5,
+   "top3": 0.667,
+   "top3_null": 0.667,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.1051,
+   "purine_R": 0.0981,
+   "purine_S": 0.2033
+  },
+  "ood_sers": 0.1453,
+  "confidence_sers": 0.1942
+ },
+ "oleate": {
+  "analyte": "oleate",
+  "family": "lipid",
+  "expected_theme": "lipid_acyl|sterol_membrane",
+  "evidence_profile": "matrix-recovered",
+  "level1_latent": {
+   "cosine": 0.264,
+   "null95": 0.3756,
+   "rank": 20,
+   "fdr_q": 0.6389,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.3648,
+   "null95": 0.4028,
+   "rank": 6,
+   "fdr_q": 0.5455,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.5072,
+   "raw_null_med": 0.5016,
+   "identity_residual": -0.4675,
+   "identity_null95": -0.0943,
+   "identity_rank": 15,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.7,
+   "top2": 0.5,
+   "top3": 0.333,
+   "top3_null": 0.353,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "purine": {
+   "delta_purine": 0.1757,
+   "purine_R": 0.0369,
+   "purine_S": 0.2126
+  },
+  "ood_sers": 0.1173,
+  "confidence_sers": 0.2078
+ },
+ "phenylalanine": {
+  "analyte": "phenylalanine",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.3007,
+   "null95": 0.3437,
+   "rank": 36,
+   "fdr_q": 0.8372,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.5299,
+   "null95": 0.5788,
+   "rank": 17,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8306,
+   "raw_null_med": 0.8287,
+   "identity_residual": -0.0917,
+   "identity_null95": 0.1413,
+   "identity_rank": 30,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.6455,
+   "top2": 0.0,
+   "top3": 0.333,
+   "top3_null": 0.327,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.1295,
+   "purine_R": 0.075,
+   "purine_S": 0.2044
+  },
+  "ood_sers": 0.1166,
+  "confidence_sers": 0.2036
+ },
+ "phosphate": {
+  "analyte": "phosphate",
+  "family": "organic_acid",
+  "expected_theme": "organic_acid_metabolism",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.361,
+   "null95": 0.41,
+   "rank": 31,
+   "fdr_q": 0.7561,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.6495,
+   "null95": 0.7071,
+   "rank": 26,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9183,
+   "raw_null_med": 0.9192,
+   "identity_residual": 0.603,
+   "identity_null95": 0.678,
+   "identity_rank": 22,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.9545,
+   "top2": 0.5,
+   "top3": 1.0,
+   "top3_null": 0.98,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0021,
+   "purine_R": 0.1989,
+   "purine_S": 0.201
+  },
+  "ood_sers": 0.1248,
+  "confidence_sers": 0.2017
+ },
+ "phosphatidylinositol": {
+  "analyte": "phosphatidylinositol",
+  "family": "lipid",
+  "expected_theme": "lipid_acyl|sterol_membrane",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.8339,
+   "null95": 0.9163,
+   "rank": 40,
+   "fdr_q": 0.8511,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.9558,
+   "null95": 0.972,
+   "rank": 24,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9888,
+   "raw_null_med": 0.988,
+   "identity_residual": 0.4695,
+   "identity_null95": 0.7518,
+   "identity_rank": 39,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.9909,
+   "top2": 1.0,
+   "top3": 1.0,
+   "top3_null": 0.98,
+   "argmax_agree": true,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": -0.0208,
+   "purine_R": 0.2151,
+   "purine_S": 0.1943
+  },
+  "ood_sers": 0.1654,
+  "confidence_sers": 0.1853
+ },
+ "phosphoenolpyruvate": {
+  "analyte": "phosphoenolpyruvate",
+  "family": "organic_acid",
+  "expected_theme": "organic_acid_metabolism",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.6177,
+   "null95": 0.6859,
+   "rank": 23,
+   "fdr_q": 0.6389,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.8211,
+   "null95": 0.8492,
+   "rank": 15,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9331,
+   "raw_null_med": 0.9214,
+   "identity_residual": 0.8668,
+   "identity_null95": 0.8585,
+   "identity_rank": 3,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.8727,
+   "top2": 0.5,
+   "top3": 0.667,
+   "top3_null": 0.647,
+   "argmax_agree": true,
+   "argmax_robust": true,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": -0.0154,
+   "purine_R": 0.2202,
+   "purine_S": 0.2047
+  },
+  "ood_sers": 0.1414,
+  "confidence_sers": 0.1983
+ },
+ "proline": {
+  "analyte": "proline",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.31,
+   "null95": 0.4115,
+   "rank": 41,
+   "fdr_q": 0.8542,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.8426,
+   "null95": 0.8623,
+   "rank": 28,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8689,
+   "raw_null_med": 0.8804,
+   "identity_residual": -0.733,
+   "identity_null95": -0.419,
+   "identity_rank": 38,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.9091,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.667,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0996,
+   "purine_R": 0.1109,
+   "purine_S": 0.2104
+  },
+  "ood_sers": 0.1771,
+  "confidence_sers": 0.1914
+ },
+ "pyruvate": {
+  "analyte": "pyruvate",
+  "family": "organic_acid",
+  "expected_theme": "organic_acid_metabolism",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.6083,
+   "null95": 0.7249,
+   "rank": 38,
+   "fdr_q": 0.8444,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.8026,
+   "null95": 0.8717,
+   "rank": 35,
+   "fdr_q": 0.7955,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9333,
+   "raw_null_med": 0.9346,
+   "identity_residual": 0.6639,
+   "identity_null95": 0.8473,
+   "identity_rank": 35,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.7545,
+   "top2": 0.5,
+   "top3": 0.667,
+   "top3_null": 0.647,
+   "argmax_agree": true,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": -0.007,
+   "purine_R": 0.2195,
+   "purine_S": 0.2125
+  },
+  "ood_sers": 0.1116,
+  "confidence_sers": 0.2097
+ },
+ "riboflavin": {
+  "analyte": "riboflavin",
+  "family": "cofactor",
+  "expected_theme": "redox_broad",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.3394,
+   "null95": 0.4057,
+   "rank": 34,
+   "fdr_q": 0.8095,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.6387,
+   "null95": 0.6876,
+   "rank": 36,
+   "fdr_q": 0.8,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.972,
+   "raw_null_med": 0.9708,
+   "identity_residual": 0.7086,
+   "identity_null95": 0.7792,
+   "identity_rank": 25,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.9182,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.68,
+   "argmax_agree": true,
+   "argmax_robust": true,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": -0.0254,
+   "purine_R": 0.2342,
+   "purine_S": 0.2087
+  },
+  "ood_sers": 0.1289,
+  "confidence_sers": 0.2067
+ },
+ "serine": {
+  "analyte": "serine",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.3536,
+   "null95": 0.3921,
+   "rank": 27,
+   "fdr_q": 0.7297,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.6897,
+   "null95": 0.7191,
+   "rank": 7,
+   "fdr_q": 0.5833,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8496,
+   "raw_null_med": 0.8498,
+   "identity_residual": -0.6139,
+   "identity_null95": -0.4147,
+   "identity_rank": 25,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.8,
+   "top2": 0.5,
+   "top3": 0.333,
+   "top3_null": 0.347,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.1332,
+   "purine_R": 0.0726,
+   "purine_S": 0.2058
+  },
+  "ood_sers": 0.1701,
+  "confidence_sers": 0.1917
+ },
+ "stearate": {
+  "analyte": "stearate",
+  "family": "lipid",
+  "expected_theme": "lipid_acyl|sterol_membrane",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.3209,
+   "null95": 0.308,
+   "rank": 3,
+   "fdr_q": 0.2727,
+   "recovered": false,
+   "supporting": true
+  },
+  "level2_mss": {
+   "cosine": 0.3722,
+   "null95": 0.3735,
+   "rank": 4,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.5662,
+   "raw_null_med": 0.5175,
+   "identity_residual": 0.0776,
+   "identity_null95": 0.1612,
+   "identity_rank": 5,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.8545,
+   "top2": 0.5,
+   "top3": 0.667,
+   "top3_null": 0.673,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0692,
+   "purine_R": 0.1328,
+   "purine_S": 0.202
+  },
+  "ood_sers": 0.168,
+  "confidence_sers": 0.2096
+ },
+ "thymine": {
+  "analyte": "thymine",
+  "family": "pyrimidine",
+  "expected_theme": "nucleic_pyrimidine",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.2704,
+   "null95": 0.2477,
+   "rank": 1,
+   "fdr_q": 0.1429,
+   "recovered": true,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.5425,
+   "null95": 0.5447,
+   "rank": 4,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.7403,
+   "raw_null_med": 0.736,
+   "identity_residual": 0.5558,
+   "identity_null95": 0.6196,
+   "identity_rank": 8,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.2182,
+   "top2": 0.5,
+   "top3": 0.333,
+   "top3_null": 0.347,
+   "argmax_agree": true,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": -0.0852,
+   "purine_R": 0.281,
+   "purine_S": 0.1959
+  },
+  "ood_sers": 0.1188,
+  "confidence_sers": 0.2123
+ },
+ "triolein": {
+  "analyte": "triolein",
+  "family": "lipid",
+  "expected_theme": "lipid_acyl|sterol_membrane",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+   "cosine": 0.3138,
+   "null95": 0.3833,
+   "rank": 8,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.3694,
+   "null95": 0.4113,
+   "rank": 14,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.5219,
+   "raw_null_med": 0.5025,
+   "identity_residual": -0.3572,
+   "identity_null95": -0.094,
+   "identity_rank": 8,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.6364,
+   "top2": 0.5,
+   "top3": 0.333,
+   "top3_null": 0.353,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.163,
+   "purine_R": 0.0386,
+   "purine_S": 0.2016
+  },
+  "ood_sers": 0.1456,
+  "confidence_sers": 0.2033
+ },
+ "tryptophan": {
+  "analyte": "tryptophan",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.3394,
+   "null95": 0.3971,
+   "rank": 16,
+   "fdr_q": 0.5714,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.6793,
+   "null95": 0.6857,
+   "rank": 4,
+   "fdr_q": 0.4,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9305,
+   "raw_null_med": 0.9384,
+   "identity_residual": 0.2139,
+   "identity_null95": 0.5356,
+   "identity_rank": 45,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.8818,
+   "top2": 0.5,
+   "top3": 0.667,
+   "top3_null": 0.66,
+   "argmax_agree": true,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0638,
+   "purine_R": 0.1517,
+   "purine_S": 0.2155
+  },
+  "ood_sers": 0.1089,
+  "confidence_sers": 0.2177
+ },
+ "tyrosine": {
+  "analyte": "tyrosine",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.236,
+   "null95": 0.2822,
+   "rank": 31,
+   "fdr_q": 0.7561,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.6292,
+   "null95": 0.685,
+   "rank": 33,
+   "fdr_q": 0.7674,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9473,
+   "raw_null_med": 0.9446,
+   "identity_residual": 0.1874,
+   "identity_null95": 0.3233,
+   "identity_rank": 16,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.8727,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.667,
+   "argmax_agree": true,
+   "argmax_robust": true,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0205,
+   "purine_R": 0.1802,
+   "purine_S": 0.2008
+  },
+  "ood_sers": 0.1573,
+  "confidence_sers": 0.1962
+ },
+ "uracil": {
+  "analyte": "uracil",
+  "family": "pyrimidine",
+  "expected_theme": "nucleic_pyrimidine",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.0562,
+   "null95": 0.1564,
+   "rank": 39,
+   "fdr_q": 0.8478,
+   "recovered": false,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.4858,
+   "null95": 0.5426,
+   "rank": 23,
+   "fdr_q": 0.7,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.45,
+   "raw_null_med": 0.4379,
+   "identity_residual": 0.1591,
+   "identity_null95": 0.3022,
+   "identity_rank": 12,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.6455,
+   "top2": 0.5,
+   "top3": 0.333,
+   "top3_null": 0.333,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.1088,
+   "purine_R": 0.0961,
+   "purine_S": 0.2049
+  },
+  "ood_sers": 0.1659,
+  "confidence_sers": 0.2101
+ },
+ "urate": {
+  "analyte": "urate",
+  "family": "purine",
+  "expected_theme": "nucleic_purine",
+  "evidence_profile": "perturbation-validated; matrix-recovered",
+  "level1_latent": {
+   "cosine": 0.644,
+   "null95": 0.5071,
+   "rank": 1,
+   "fdr_q": 0.1429,
+   "recovered": true,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.7488,
+   "null95": 0.9054,
+   "rank": 49,
+   "fdr_q": 0.9804,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9127,
+   "raw_null_med": 0.9597,
+   "identity_residual": -0.5662,
+   "identity_null95": 0.0448,
+   "identity_rank": 50,
+   "expected_theme_top3": true,
+   "recovered": false,
+   "rank_rho": 0.8273,
+   "top2": 1.0,
+   "top3": 0.667,
+   "top3_null": 0.987,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "directional depletion",
+   "validated": true
+  },
+  "level5_matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "purine": {
+   "delta_purine": 0.1368,
+   "purine_R": 0.127,
+   "purine_S": 0.2638
+  },
+  "ood_sers": 0.2944,
+  "confidence_sers": 0.2378
+ },
+ "urea": {
+  "analyte": "urea",
+  "family": "small_nitrogenous",
+  "expected_theme": "organic_acid_metabolism",
+  "evidence_profile": "spectral+motif preserved; theme-specific",
+  "level1_latent": {
+   "cosine": 0.6674,
+   "null95": 0.1908,
+   "rank": 1,
+   "fdr_q": 0.1429,
+   "recovered": true,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.5222,
+   "null95": 0.3598,
+   "rank": 1,
+   "fdr_q": 0.3333,
+   "recovered": true,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.8827,
+   "raw_null_med": 0.7649,
+   "identity_residual": 0.9025,
+   "identity_null95": 0.1141,
+   "identity_rank": 1,
+   "expected_theme_top3": true,
+   "recovered": true,
+   "rank_rho": 0.6455,
+   "top2": 0.0,
+   "top3": 0.333,
+   "top3_null": 0.327,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0955,
+   "purine_R": 0.0503,
+   "purine_S": 0.1459
+  },
+  "ood_sers": 0.2901,
+  "confidence_sers": 0.1807
+ },
+ "valine": {
+  "analyte": "valine",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+   "cosine": 0.4249,
+   "null95": 0.4233,
+   "rank": 3,
+   "fdr_q": 0.2727,
+   "recovered": false,
+   "supporting": true
+  },
+  "level2_mss": {
+   "cosine": 0.8199,
+   "null95": 0.8322,
+   "rank": 10,
+   "fdr_q": 0.6667,
+   "recovered": false,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9668,
+   "raw_null_med": 0.9713,
+   "identity_residual": 0.2074,
+   "identity_null95": 0.3888,
+   "identity_rank": 26,
+   "expected_theme_top3": false,
+   "recovered": false,
+   "rank_rho": 0.9455,
+   "top2": 1.0,
+   "top3": 1.0,
+   "top3_null": 0.98,
+   "argmax_agree": false,
+   "argmax_robust": false,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "purine": {
+   "delta_purine": 0.0076,
+   "purine_R": 0.2057,
+   "purine_S": 0.2132
+  },
+  "ood_sers": 0.1585,
+  "confidence_sers": 0.199
+ },
+ "xanthine": {
+  "analyte": "xanthine",
+  "family": "purine",
+  "expected_theme": "nucleic_purine",
+  "evidence_profile": "spectral+motif preserved; theme-specific; matrix-recovered",
+  "level1_latent": {
+   "cosine": 0.8145,
+   "null95": 0.3624,
+   "rank": 1,
+   "fdr_q": 0.1429,
+   "recovered": true,
+   "supporting": false
+  },
+  "level2_mss": {
+   "cosine": 0.9303,
+   "null95": 0.7379,
+   "rank": 1,
+   "fdr_q": 0.3333,
+   "recovered": true,
+   "supporting": false
+  },
+  "level3_theme": {
+   "raw_cosine": 0.9751,
+   "raw_null_med": 0.8448,
+   "identity_residual": 0.9557,
+   "identity_null95": 0.7912,
+   "identity_rank": 1,
+   "expected_theme_top3": true,
+   "recovered": true,
+   "rank_rho": 0.9273,
+   "top2": 1.0,
+   "top3": 1.0,
+   "top3_null": 0.673,
+   "argmax_agree": true,
+   "argmax_robust": true,
+   "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "level5_matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "purine": {
+   "delta_purine": -0.1085,
+   "purine_R": 0.4711,
+   "purine_S": 0.3626
+  },
+  "ood_sers": 0.1743,
+  "confidence_sers": 0.2908
+ }
+}

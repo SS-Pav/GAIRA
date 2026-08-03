@@ -1,0 +1,53 @@
+{
+  "analyte": "tryptophan",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+    "cosine": 0.3394,
+    "null95": 0.3971,
+    "rank": 16,
+    "fdr_q": 0.5714,
+    "recovered": false,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.6793,
+    "null95": 0.6857,
+    "rank": 4,
+    "fdr_q": 0.4,
+    "recovered": false,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.9305,
+    "raw_null_med": 0.9384,
+    "identity_residual": 0.2139,
+    "identity_null95": 0.5356,
+    "identity_rank": 45,
+    "expected_theme_top3": false,
+    "recovered": false,
+    "rank_rho": 0.8818,
+    "top2": 0.5,
+    "top3": 0.667,
+    "top3_null": 0.66,
+    "argmax_agree": true,
+    "argmax_robust": false,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "purine": {
+    "delta_purine": 0.0638,
+    "purine_R": 0.1517,
+    "purine_S": 0.2155
+  },
+  "ood_sers": 0.1089,
+  "confidence_sers": 0.2177
+}

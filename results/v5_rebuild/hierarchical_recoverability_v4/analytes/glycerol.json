@@ -1,0 +1,53 @@
+{
+  "analyte": "glycerol",
+  "family": "polyol",
+  "expected_theme": "saccharide_glycan",
+  "evidence_profile": "no analyte-specific evidence",
+  "level1_latent": {
+    "cosine": 0.47,
+    "null95": 0.4837,
+    "rank": 6,
+    "fdr_q": 0.4,
+    "recovered": false,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.5963,
+    "null95": 0.6308,
+    "rank": 20,
+    "fdr_q": 0.7,
+    "recovered": false,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.8044,
+    "raw_null_med": 0.795,
+    "identity_residual": -0.7601,
+    "identity_null95": -0.3507,
+    "identity_rank": 23,
+    "expected_theme_top3": true,
+    "recovered": false,
+    "rank_rho": 0.7273,
+    "top2": 0.5,
+    "top3": 0.333,
+    "top3_null": 0.353,
+    "argmax_agree": false,
+    "argmax_robust": false,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "purine": {
+    "delta_purine": 0.1365,
+    "purine_R": 0.0727,
+    "purine_S": 0.2093
+  },
+  "ood_sers": 0.096,
+  "confidence_sers": 0.2084
+}

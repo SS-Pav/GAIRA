@@ -1,0 +1,53 @@
+{
+  "analyte": "citrate",
+  "family": "organic_acid",
+  "expected_theme": "organic_acid_metabolism",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+    "cosine": 0.6183,
+    "null95": 0.6761,
+    "rank": 31,
+    "fdr_q": 0.7561,
+    "recovered": false,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.6956,
+    "null95": 0.7499,
+    "rank": 22,
+    "fdr_q": 0.7,
+    "recovered": false,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.8426,
+    "raw_null_med": 0.8542,
+    "identity_residual": 0.8517,
+    "identity_null95": 0.9058,
+    "identity_rank": 18,
+    "expected_theme_top3": true,
+    "recovered": false,
+    "rank_rho": 0.8091,
+    "top2": 0.5,
+    "top3": 0.667,
+    "top3_null": 0.647,
+    "argmax_agree": false,
+    "argmax_robust": false,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "purine": {
+    "delta_purine": -0.0933,
+    "purine_R": 0.2798,
+    "purine_S": 0.1865
+  },
+  "ood_sers": 0.1465,
+  "confidence_sers": 0.1899
+}

@@ -1,0 +1,53 @@
+{
+  "analyte": "oleate",
+  "family": "lipid",
+  "expected_theme": "lipid_acyl|sterol_membrane",
+  "evidence_profile": "matrix-recovered",
+  "level1_latent": {
+    "cosine": 0.264,
+    "null95": 0.3756,
+    "rank": 20,
+    "fdr_q": 0.6389,
+    "recovered": false,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.3648,
+    "null95": 0.4028,
+    "rank": 6,
+    "fdr_q": 0.5455,
+    "recovered": false,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.5072,
+    "raw_null_med": 0.5016,
+    "identity_residual": -0.4675,
+    "identity_null95": -0.0943,
+    "identity_rank": 15,
+    "expected_theme_top3": false,
+    "recovered": false,
+    "rank_rho": 0.7,
+    "top2": 0.5,
+    "top3": 0.333,
+    "top3_null": 0.353,
+    "argmax_agree": false,
+    "argmax_robust": false,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "strong",
+    "recovered": true
+  },
+  "purine": {
+    "delta_purine": 0.1757,
+    "purine_R": 0.0369,
+    "purine_S": 0.2126
+  },
+  "ood_sers": 0.1173,
+  "confidence_sers": 0.2078
+}

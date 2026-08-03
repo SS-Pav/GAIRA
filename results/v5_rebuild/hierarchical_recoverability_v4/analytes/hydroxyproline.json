@@ -1,0 +1,53 @@
+{
+  "analyte": "hydroxyproline",
+  "family": "amino_acid",
+  "expected_theme": "aromatic_amino_acid|protein_peptide",
+  "evidence_profile": "matrix-recovered",
+  "level1_latent": {
+    "cosine": 0.241,
+    "null95": 0.2663,
+    "rank": 15,
+    "fdr_q": 0.5556,
+    "recovered": false,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.6319,
+    "null95": 0.6638,
+    "rank": 23,
+    "fdr_q": 0.7,
+    "recovered": false,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.8238,
+    "raw_null_med": 0.8174,
+    "identity_residual": -0.5354,
+    "identity_null95": -0.2907,
+    "identity_rank": 27,
+    "expected_theme_top3": false,
+    "recovered": false,
+    "rank_rho": 0.8273,
+    "top2": 0.5,
+    "top3": 0.333,
+    "top3_null": 0.347,
+    "argmax_agree": false,
+    "argmax_robust": false,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "strong",
+    "recovered": true
+  },
+  "purine": {
+    "delta_purine": 0.1117,
+    "purine_R": 0.0918,
+    "purine_S": 0.2035
+  },
+  "ood_sers": 0.1242,
+  "confidence_sers": 0.2034
+}

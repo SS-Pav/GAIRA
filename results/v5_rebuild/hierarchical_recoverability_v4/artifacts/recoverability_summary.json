@@ -1,0 +1,341 @@
+{
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "n_matched": 51,
+  "reproducibility_vs_v3": {
+    "C_latent_maxdiff": 0.0,
+    "C_MSS_maxdiff": 0.0,
+    "C_theme_raw_maxdiff": 0.0
+  },
+  "selected_theme_variant": {
+    "key": "Rcenter",
+    "name": "Raman-centered identity residual",
+    "scores": {
+      "Rcenter": {
+        "separation": 0.0088,
+        "self_rank1_frac": 0.078,
+        "stable_frac": 0.098,
+        "fam_robust": 0.994,
+        "composite": 0.2674
+      },
+      "Mcenter": {
+        "separation": 0.0691,
+        "self_rank1_frac": 0.039,
+        "stable_frac": 0.078,
+        "fam_robust": 0.944,
+        "composite": 0.2319
+      },
+      "Blank": {
+        "separation": 0.0274,
+        "self_rank1_frac": 0.039,
+        "stable_frac": 0.098,
+        "fam_robust": 0.997,
+        "composite": 0.2485
+      },
+      "Whiten": {
+        "separation": 0.121,
+        "self_rank1_frac": 0.039,
+        "stable_frac": 0.078,
+        "fam_robust": 0.963,
+        "composite": 0.2358
+      }
+    }
+  },
+  "level_null_summary": [
+    {
+      "level": "L1 latent",
+      "matched_median": 0.4249,
+      "null_median": 0.3804,
+      "separation": 0.0244,
+      "median_perm_p": 0.2941,
+      "n_rank1": 7,
+      "n_above_null95": 12,
+      "n_fdr_sig": 0,
+      "n_recovered": 7,
+      "denominator": 51
+    },
+    {
+      "level": "L2 MSS",
+      "matched_median": 0.7405,
+      "null_median": 0.7323,
+      "separation": 0.0075,
+      "median_perm_p": 0.4118,
+      "n_rank1": 3,
+      "n_above_null95": 6,
+      "n_fdr_sig": 0,
+      "n_recovered": 3,
+      "denominator": 51
+    },
+    {
+      "level": "L3a theme raw (diagnostic)",
+      "matched_median": 0.9181,
+      "null_median": 0.915,
+      "separation": 0.0019,
+      "median_perm_p": 0.4314,
+      "n_rank1": 3,
+      "n_above_null95": 4,
+      "n_fdr_sig": 0,
+      "n_recovered": 3,
+      "denominator": 51
+    },
+    {
+      "level": "L3b Raman-centered identity residual",
+      "matched_median": 0.1114,
+      "null_median": -0.0636,
+      "separation": 0.0088,
+      "median_perm_p": 0.4902,
+      "n_rank1": 4,
+      "n_above_null95": 7,
+      "n_fdr_sig": 0,
+      "n_recovered": 4,
+      "denominator": 51
+    }
+  ],
+  "counts": {
+    "latent": {
+      "n": 7,
+      "denom": 51,
+      "frac": 0.137,
+      "ci": [
+        0.059,
+        0.235
+      ]
+    },
+    "MSS": {
+      "n": 3,
+      "denom": 51,
+      "frac": 0.059,
+      "ci": [
+        0.0,
+        0.137
+      ]
+    },
+    "theme": {
+      "n": 4,
+      "denom": 51,
+      "frac": 0.078,
+      "ci": [
+        0.02,
+        0.157
+      ]
+    },
+    "top3_over_null": {
+      "n": 28,
+      "denom": 51,
+      "frac": 0.549,
+      "ci": [
+        0.412,
+        0.686
+      ]
+    },
+    "argmax_robust": {
+      "n": 13,
+      "denom": 51,
+      "frac": 0.255,
+      "ci": [
+        0.137,
+        0.373
+      ]
+    },
+    "perturbation": {
+      "n": 3,
+      "denom": 51,
+      "frac": 0.059,
+      "ci": [
+        0.0,
+        0.137
+      ]
+    },
+    "matrix": {
+      "n": 9,
+      "denom": 51,
+      "frac": 0.176,
+      "ci": [
+        0.078,
+        0.294
+      ]
+    }
+  },
+  "recovered_analytes": {
+    "latent": [
+      "creatinine",
+      "glutathione",
+      "hypoxanthine",
+      "thymine",
+      "urate",
+      "urea",
+      "xanthine"
+    ],
+    "MSS": [
+      "creatinine",
+      "urea",
+      "xanthine"
+    ],
+    "theme": [
+      "creatinine",
+      "hypoxanthine",
+      "urea",
+      "xanthine"
+    ],
+    "perturbation": [
+      "adenine",
+      "ergothioneine",
+      "urate"
+    ],
+    "matrix": [
+      "adenine",
+      "albumin",
+      "ergothioneine",
+      "guanine",
+      "hydroxyproline",
+      "hypoxanthine",
+      "oleate",
+      "urate",
+      "xanthine"
+    ]
+  },
+  "threshold_sensitivity": [
+    {
+      "null_percentile": 90,
+      "latent_supported": 10,
+      "MSS_supported": 6,
+      "theme_supported": 5,
+      "latent_rank1": 7,
+      "MSS_rank1": 3,
+      "theme_rank1": 4
+    },
+    {
+      "null_percentile": 95,
+      "latent_supported": 10,
+      "MSS_supported": 6,
+      "theme_supported": 5,
+      "latent_rank1": 7,
+      "MSS_rank1": 3,
+      "theme_rank1": 4
+    },
+    {
+      "null_percentile": 99,
+      "latent_supported": 7,
+      "MSS_supported": 3,
+      "theme_supported": 4,
+      "latent_rank1": 7,
+      "MSS_rank1": 3,
+      "theme_rank1": 4
+    }
+  ],
+  "purine_controls": {
+    "serum_blank_purine_theme": 0.2659,
+    "serum_blank_dominant_theme": "nucleic_purine",
+    "serum_blank_ood": 0.2822,
+    "median_purine_R": 0.1517,
+    "median_purine_S": 0.205,
+    "n_delta_purine_positive": 36,
+    "note": "No pure Ag-colloid buffer blank exists in the dataset; unspiked-serum-on-Ag used as the available background control."
+  },
+  "delta_purine_correlations": {
+    "latent": {
+      "pearson_r": -0.3828,
+      "p": 0.00557,
+      "spearman": -0.3534
+    },
+    "MSS": {
+      "pearson_r": -0.4044,
+      "p": 0.00325,
+      "spearman": -0.4021
+    },
+    "ood": {
+      "pearson_r": 0.0417,
+      "p": 0.772,
+      "spearman": -0.0745
+    },
+    "matrix_disp": {
+      "pearson_r": -0.1615,
+      "p": 0.258,
+      "spearman": -0.0137
+    }
+  },
+  "matrix_prediction": {
+    "latent_cosine": {
+      "pearson_r": 0.167,
+      "p": 0.241,
+      "spearman": 0.073,
+      "ci95_low": -0.2239,
+      "ci95_high": 0.4903,
+      "n": 51
+    },
+    "MSS_cosine": {
+      "pearson_r": 0.1424,
+      "p": 0.319,
+      "spearman": 0.1766,
+      "ci95_low": -0.2488,
+      "ci95_high": 0.4552,
+      "n": 51
+    },
+    "MSS_specificity": {
+      "pearson_r": 0.2111,
+      "p": 0.137,
+      "spearman": 0.0746,
+      "ci95_low": -0.2932,
+      "ci95_high": 0.6183,
+      "n": 51
+    },
+    "theme_raw": {
+      "pearson_r": -0.0078,
+      "p": 0.957,
+      "spearman": 0.0877,
+      "ci95_low": -0.3819,
+      "ci95_high": 0.306,
+      "n": 51
+    },
+    "theme_identity": {
+      "pearson_r": 0.1083,
+      "p": 0.449,
+      "spearman": 0.016,
+      "ci95_low": -0.2088,
+      "ci95_high": 0.371,
+      "n": 51
+    },
+    "rank_rho": {
+      "pearson_r": 0.0982,
+      "p": 0.493,
+      "spearman": 0.0594,
+      "ci95_low": -0.1788,
+      "ci95_high": 0.2846,
+      "n": 51
+    },
+    "ood": {
+      "pearson_r": 0.1362,
+      "p": 0.341,
+      "spearman": 0.1779,
+      "ci95_low": -0.1643,
+      "ci95_high": 0.4914,
+      "n": 51
+    },
+    "confidence": {
+      "pearson_r": 0.7109,
+      "p": 5.06e-09,
+      "spearman": 0.3832,
+      "ci95_low": 0.3863,
+      "ci95_high": 0.8592,
+      "n": 51
+    }
+  },
+  "matrix_enrichment": {
+    "latent_recovered_and_serum_strong": 3,
+    "serum_strong_total": 9,
+    "latent_recovered_total": 7
+  },
+  "mss_is_primary_candidate": {
+    "mss_separation": 0.0075,
+    "latent_separation": 0.0244,
+    "mss_n_recovered": 3,
+    "latent_n_recovered": 7,
+    "verdict_note": "decided by null-specificity below, not by preference"
+  },
+  "spearman_matched_vs_null": {
+    "matched_median": 0.8727
+  },
+  "argmax": {
+    "agree": 18,
+    "robust_after_margin": 13
+  }
+}

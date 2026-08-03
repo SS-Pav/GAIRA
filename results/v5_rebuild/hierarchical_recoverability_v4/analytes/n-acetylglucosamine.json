@@ -1,0 +1,53 @@
+{
+  "analyte": "n-acetylglucosamine",
+  "family": "saccharide",
+  "expected_theme": "saccharide_glycan",
+  "evidence_profile": "broad-theme only",
+  "level1_latent": {
+    "cosine": 0.5987,
+    "null95": 0.6547,
+    "rank": 15,
+    "fdr_q": 0.5556,
+    "recovered": false,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.8527,
+    "null95": 0.8688,
+    "rank": 22,
+    "fdr_q": 0.7,
+    "recovered": false,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.9014,
+    "raw_null_med": 0.8956,
+    "identity_residual": -0.6277,
+    "identity_null95": -0.4258,
+    "identity_rank": 31,
+    "expected_theme_top3": true,
+    "recovered": false,
+    "rank_rho": 0.9,
+    "top2": 0.5,
+    "top3": 0.667,
+    "top3_null": 0.667,
+    "argmax_agree": false,
+    "argmax_robust": false,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "weak",
+    "recovered": false
+  },
+  "purine": {
+    "delta_purine": 0.1051,
+    "purine_R": 0.0981,
+    "purine_S": 0.2033
+  },
+  "ood_sers": 0.1453,
+  "confidence_sers": 0.1942
+}

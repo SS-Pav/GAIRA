@@ -1,0 +1,9 @@
+purpose,primary_metric,null_result
+Exact spectral / substrate fidelity,Latent cosine,"strongest cosine identity: 7/51 rank-1, sep 0.024"
+Cross-modal chemical-motif preservation,Latent cosine (MSS supporting),"MSS NOT primary: sep 0.0075, 3/51 = strict subset of latent's 7"
+Broad biochemical interpretation,Raw theme BSV / radar,"high (0.92) but matched approx equals null - interpretation, not identity"
+Analyte-specific theme retention,Raman-centered identity residual,null-adjusted; 4/51 rank-1
+Gross theme ordering,Spearman rho,matched approx null - descriptive only
+Strict dominant category,Argmax + top-two margin,brittle; 13/51 robust
+Functional biochemical response,Perturbation sensitivity,strongest evidence; 3 analytes
+Biological-mixture visibility,Matrix recoverability,separate property; 9/51 serum-strong

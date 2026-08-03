@@ -1,0 +1,53 @@
+{
+  "analyte": "urea",
+  "family": "small_nitrogenous",
+  "expected_theme": "organic_acid_metabolism",
+  "evidence_profile": "spectral+motif preserved; theme-specific",
+  "level1_latent": {
+    "cosine": 0.6674,
+    "null95": 0.1908,
+    "rank": 1,
+    "fdr_q": 0.1429,
+    "recovered": true,
+    "supporting": false
+  },
+  "level2_mss": {
+    "cosine": 0.5222,
+    "null95": 0.3598,
+    "rank": 1,
+    "fdr_q": 0.3333,
+    "recovered": true,
+    "supporting": false
+  },
+  "level3_theme": {
+    "raw_cosine": 0.8827,
+    "raw_null_med": 0.7649,
+    "identity_residual": 0.9025,
+    "identity_null95": 0.1141,
+    "identity_rank": 1,
+    "expected_theme_top3": true,
+    "recovered": true,
+    "rank_rho": 0.6455,
+    "top2": 0.0,
+    "top3": 0.333,
+    "top3_null": 0.327,
+    "argmax_agree": false,
+    "argmax_robust": false,
+    "note": "raw theme cosine is broad interpretation, NOT analyte identity"
+  },
+  "level4_perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "level5_matrix": {
+    "tier": "weak",
+    "recovered": false
+  },
+  "purine": {
+    "delta_purine": 0.0955,
+    "purine_R": 0.0503,
+    "purine_S": 0.1459
+  },
+  "ood_sers": 0.2901,
+  "confidence_sers": 0.1807
+}
