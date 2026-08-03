@@ -1,0 +1,57 @@
+{
+  "analyte": "coenzyme a",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": true
+  },
+  "subclass": "purine_cofactor",
+  "subclass_exploratory": false,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.0,
+    "mass_retained": 0.138,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "sulfur_heterocycle_thione",
+    "rank_agsers": 2.0,
+    "enrich_over_null": -0.015,
+    "present_top3": true,
+    "specific": false,
+    "status": "motif present but nonspecific",
+    "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+    "assigned": "purine_cofactor",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "nucleic_purine",
+    "rank_agsers": 1,
+    "enrich_over_null": -0.0441,
+    "present_top3": true,
+    "specific": false,
+    "tier": "present (non-specific)"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "delta_purine": -0.0229,
+  "ood_sers": 0.1735,
+  "confidence_sers": 0.1931,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+}

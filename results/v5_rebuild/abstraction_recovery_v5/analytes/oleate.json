@@ -1,0 +1,57 @@
+{
+  "analyte": "oleate",
+  "broad_family": {
+    "nn_same_family": true,
+    "loao_recovered": false
+  },
+  "subclass": "fatty_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.0,
+    "mass_retained": 0.087,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "carboxylate_organic_acid",
+    "rank_agsers": 2.0,
+    "enrich_over_null": -0.012,
+    "present_top3": true,
+    "specific": false,
+    "status": "motif present but nonspecific",
+    "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+    "assigned": "fatty_acid",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "lipid_acyl",
+    "rank_agsers": 6,
+    "enrich_over_null": -0.0144,
+    "present_top3": false,
+    "specific": false,
+    "tier": "not recovered"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "strong",
+    "recovered": true
+  },
+  "delta_purine": 0.1757,
+  "ood_sers": 0.1173,
+  "confidence_sers": 0.2078,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated; matrix recovered",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+}

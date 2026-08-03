@@ -1,0 +1,57 @@
+{
+  "analyte": "glutamate",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": false
+  },
+  "subclass": "acidic_amino_acid",
+  "subclass_exploratory": true,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.0,
+    "mass_retained": 0.103,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "carboxylate_organic_acid",
+    "rank_agsers": 2.0,
+    "enrich_over_null": -0.0195,
+    "present_top3": true,
+    "specific": false,
+    "status": "motif present but nonspecific",
+    "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+    "assigned": "acidic_amino_acid",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "organic_acid_metabolism",
+    "rank_agsers": 3,
+    "enrich_over_null": -0.0144,
+    "present_top3": true,
+    "specific": false,
+    "tier": "present (non-specific)"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "weak",
+    "recovered": false
+  },
+  "delta_purine": 0.0577,
+  "ood_sers": 0.1491,
+  "confidence_sers": 0.2059,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+}

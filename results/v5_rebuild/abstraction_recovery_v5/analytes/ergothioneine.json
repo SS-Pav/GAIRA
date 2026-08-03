@@ -1,0 +1,57 @@
+{
+  "analyte": "ergothioneine",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": false
+  },
+  "subclass": "thione",
+  "subclass_exploratory": true,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.0,
+    "mass_retained": 0.086,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "sulfur_heterocycle_thione",
+    "rank_agsers": 8.0,
+    "enrich_over_null": -0.0395,
+    "present_top3": false,
+    "specific": false,
+    "status": "motif not recovered",
+    "tier": "not recovered"
+  },
+  "molecular_subclass": {
+    "assigned": "thione",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "sulfur_antioxidant",
+    "rank_agsers": 5,
+    "enrich_over_null": 0.0135,
+    "present_top3": false,
+    "specific": false,
+    "tier": "not recovered"
+  },
+  "perturbation": {
+    "status": "dose-response",
+    "validated": true
+  },
+  "matrix": {
+    "tier": "strong",
+    "recovered": true
+  },
+  "delta_purine": -0.0252,
+  "ood_sers": 0.307,
+  "confidence_sers": 0.2571,
+  "highest_recovered_level": "perturbation-only",
+  "evidence_profile": "perturbation validated; matrix recovered",
+  "conclusion": "Static identity weak, but functional perturbation response validates the expected chemistry."
+}

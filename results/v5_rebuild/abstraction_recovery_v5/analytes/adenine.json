@@ -1,0 +1,57 @@
+{
+  "analyte": "adenine",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": false
+  },
+  "subclass": "aminopurine",
+  "subclass_exploratory": true,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.333,
+    "mass_retained": 0.127,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "purine_ring_breathing",
+    "rank_agsers": 4.0,
+    "enrich_over_null": 0.0009,
+    "present_top3": false,
+    "specific": false,
+    "status": "motif not recovered",
+    "tier": "not recovered"
+  },
+  "molecular_subclass": {
+    "assigned": "aminopurine",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "nucleic_purine",
+    "rank_agsers": 1,
+    "enrich_over_null": -0.0106,
+    "present_top3": true,
+    "specific": false,
+    "tier": "present (non-specific)"
+  },
+  "perturbation": {
+    "status": "dose-response",
+    "validated": true
+  },
+  "matrix": {
+    "tier": "strong",
+    "recovered": true
+  },
+  "delta_purine": -0.1157,
+  "ood_sers": 0.1388,
+  "confidence_sers": 0.2195,
+  "highest_recovered_level": "perturbation-only",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated; perturbation validated; matrix recovered",
+  "conclusion": "Static identity weak, but functional perturbation response validates the expected chemistry."
+}

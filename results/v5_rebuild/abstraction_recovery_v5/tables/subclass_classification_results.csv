@@ -1,0 +1,13 @@
+granularity,space,n,accuracy,balanced_accuracy,macro_f1,perm_null_mean,perm_p,acc_ci95
+subclass,latent,36,0.111,0.092,0.111,0.066,0.3134,"[0.028, 0.222]"
+subclass,MSS,36,0.028,0.025,0.04,0.064,0.806,"[0.0, 0.083]"
+subclass,theme,36,0.083,0.067,0.087,0.071,0.4328,"[0.0, 0.194]"
+family,latent,48,0.125,0.129,0.118,0.18,0.6667,"[0.042, 0.229]"
+family,MSS,48,0.146,0.175,0.115,0.187,0.6219,"[0.062, 0.25]"
+family,theme,48,0.125,0.15,0.092,0.154,0.5672,"[0.042, 0.229]"
+theme,latent,49,0.184,0.133,0.09,0.127,0.2438,"[0.082, 0.306]"
+theme,MSS,49,0.184,0.172,0.126,0.129,0.2239,"[0.082, 0.286]"
+theme,theme,49,0.122,0.139,0.086,0.128,0.5672,"[0.041, 0.224]"
+subclass,latent(Raman→Raman control),36,0.278,0.233,0.239,,,
+family,latent(Raman→Raman control),48,0.417,0.35,0.371,,,
+theme,latent(Raman→Raman control),49,0.51,0.421,0.418,,,

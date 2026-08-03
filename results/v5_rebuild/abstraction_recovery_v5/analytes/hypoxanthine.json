@@ -1,0 +1,57 @@
+{
+  "analyte": "hypoxanthine",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": false
+  },
+  "subclass": "oxopurine",
+  "subclass_exploratory": false,
+  "exact_identity": {
+    "latent": true,
+    "mss": false,
+    "theme": true,
+    "verdict": "specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.667,
+    "mass_retained": 0.346,
+    "recovered": true
+  },
+  "mss_motif": {
+    "expected": "purine_ring_breathing",
+    "rank_agsers": 1.0,
+    "enrich_over_null": 0.0431,
+    "present_top3": true,
+    "specific": true,
+    "status": "expected motif recovered",
+    "tier": "specific"
+  },
+  "molecular_subclass": {
+    "assigned": "oxopurine",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "nucleic_purine",
+    "rank_agsers": 1,
+    "enrich_over_null": 0.0112,
+    "present_top3": true,
+    "specific": false,
+    "tier": "present (non-specific)"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "strong",
+    "recovered": true
+  },
+  "delta_purine": 0.0039,
+  "ood_sers": 0.1313,
+  "confidence_sers": 0.2463,
+  "highest_recovered_level": "exact analyte",
+  "evidence_profile": "exact analyte recovered; matrix recovered",
+  "conclusion": "Exact analyte specifically recovered from Ag-SERS."
+}

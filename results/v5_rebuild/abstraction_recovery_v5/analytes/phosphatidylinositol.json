@@ -1,0 +1,57 @@
+{
+  "analyte": "phosphatidylinositol",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": false
+  },
+  "subclass": "phospholipid",
+  "subclass_exploratory": true,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.333,
+    "mass_retained": 0.186,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "lipid_acyl_chain",
+    "rank_agsers": 12.0,
+    "enrich_over_null": -0.0061,
+    "present_top3": false,
+    "specific": false,
+    "status": "motif not recovered",
+    "tier": "not recovered"
+  },
+  "molecular_subclass": {
+    "assigned": "phospholipid",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "lipid_acyl",
+    "rank_agsers": 7,
+    "enrich_over_null": -0.019,
+    "present_top3": false,
+    "specific": false,
+    "tier": "not recovered"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "weak",
+    "recovered": false
+  },
+  "delta_purine": -0.0208,
+  "ood_sers": 0.1654,
+  "confidence_sers": 0.1853,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+}

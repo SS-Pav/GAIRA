@@ -1,0 +1,57 @@
+{
+  "analyte": "phosphate",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": true
+  },
+  "subclass": "inorganic_phosphate",
+  "subclass_exploratory": true,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.0,
+    "mass_retained": 0.139,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "unassigned",
+    "rank_agsers": NaN,
+    "enrich_over_null": NaN,
+    "present_top3": false,
+    "specific": false,
+    "status": "assignment unavailable",
+    "tier": "not recovered"
+  },
+  "molecular_subclass": {
+    "assigned": "inorganic_phosphate",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "organic_acid_metabolism",
+    "rank_agsers": 3,
+    "enrich_over_null": -0.0103,
+    "present_top3": true,
+    "specific": false,
+    "tier": "present (non-specific)"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "weak",
+    "recovered": false
+  },
+  "delta_purine": 0.0021,
+  "ood_sers": 0.1248,
+  "confidence_sers": 0.2017,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+}

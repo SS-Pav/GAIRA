@@ -1,0 +1,57 @@
+{
+  "analyte": "stearate",
+  "broad_family": {
+    "nn_same_family": true,
+    "loao_recovered": false
+  },
+  "subclass": "fatty_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.0,
+    "mass_retained": 0.128,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "carboxylate_organic_acid",
+    "rank_agsers": 1.0,
+    "enrich_over_null": 0.0076,
+    "present_top3": true,
+    "specific": true,
+    "status": "expected motif recovered",
+    "tier": "specific"
+  },
+  "molecular_subclass": {
+    "assigned": "fatty_acid",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "lipid_acyl",
+    "rank_agsers": 5,
+    "enrich_over_null": -0.0009,
+    "present_top3": false,
+    "specific": false,
+    "tier": "not recovered"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "delta_purine": 0.0692,
+  "ood_sers": 0.168,
+  "confidence_sers": 0.2096,
+  "highest_recovered_level": "component/motif (specific)",
+  "evidence_profile": "latent fingerprint lost, expected MSS retained",
+  "conclusion": "Exact identity lost, but the expected carboxylate_organic_acid motif is specifically recovered."
+}

@@ -1,0 +1,52 @@
+canonical_analyte,broad_family,subclass_primary,subclass_secondary,expected_mss_primary,expected_mss_secondary,expected_theme_primary,expected_theme_secondary,assignment_source,confidence,notes,min_evidence_tier,subclass_exploratory,subclass_n
+glutamate,amino_acid,acidic_amino_acid,aliphatic_amino_acid,protein_amide_backbone,carboxylate_organic_acid,protein_peptide,organic_acid_metabolism,molecular chemistry,medium,dicarboxylic amino acid (multi-label),motif,True,1
+alanine,amino_acid,aliphatic_amino_acid,,protein_amide_backbone,,protein_peptide,,molecular chemistry,medium,amide backbone dominant,motif,False,8
+glycine,amino_acid,aliphatic_amino_acid,,protein_amide_backbone,,protein_peptide,,molecular chemistry,medium,amide backbone dominant,motif,False,8
+hydroxyproline,amino_acid,aliphatic_amino_acid,,protein_amide_backbone,,protein_peptide,,molecular chemistry,medium,amide backbone dominant,motif,False,8
+isoleucine,amino_acid,aliphatic_amino_acid,,protein_amide_backbone,,protein_peptide,,molecular chemistry,medium,amide backbone dominant,motif,False,8
+leucine,amino_acid,aliphatic_amino_acid,,protein_amide_backbone,,protein_peptide,,molecular chemistry,medium,amide backbone dominant,motif,False,8
+proline,amino_acid,aliphatic_amino_acid,,protein_amide_backbone,,protein_peptide,,molecular chemistry,medium,amide backbone dominant,motif,False,8
+serine,amino_acid,aliphatic_amino_acid,,protein_amide_backbone,,protein_peptide,,molecular chemistry,medium,amide backbone dominant,motif,False,8
+valine,amino_acid,aliphatic_amino_acid,,protein_amide_backbone,,protein_peptide,,molecular chemistry,medium,amide backbone dominant,motif,False,8
+histidine,amino_acid,aromatic_amino_acid,,aromatic_ring_residue,protein_amide_backbone,aromatic_amino_acid,protein_peptide,molecular chemistry,medium,imidazole (aromatic N-heterocycle),motif,False,4
+phenylalanine,amino_acid,aromatic_amino_acid,,aromatic_ring_residue,protein_amide_backbone,aromatic_amino_acid,protein_peptide,molecular chemistry,high,benzyl ring,motif,False,4
+tryptophan,amino_acid,aromatic_amino_acid,,aromatic_ring_residue,protein_amide_backbone,aromatic_amino_acid,protein_peptide,molecular chemistry,high,indole ring,motif,False,4
+tyrosine,amino_acid,aromatic_amino_acid,,aromatic_ring_residue,protein_amide_backbone,aromatic_amino_acid,protein_peptide,molecular chemistry,high,phenol ring,motif,False,4
+arginine,amino_acid,basic_amino_acid,aliphatic_amino_acid,protein_amide_backbone,,protein_peptide,,molecular chemistry,medium,guanidino side chain,motif,True,1
+cysteine,amino_acid,sulfur_amino_acid,,sulfur_heterocycle_thione,protein_amide_backbone,sulfur_antioxidant,protein_peptide,molecular chemistry,medium,thiol; sulfur MSS is approximate (thione-defined),motif,False,2
+methionine,amino_acid,sulfur_amino_acid,,sulfur_heterocycle_thione,protein_amide_backbone,sulfur_antioxidant,protein_peptide,molecular chemistry,medium,thioether; sulfur MSS approximate,motif,False,2
+riboflavin,cofactor,flavin,,flavin_redox_cofactor,,redox_broad,,molecular chemistry,high,isoalloxazine flavin; EXPLORATORY singleton,motif,True,1
+acetyl-coa,cofactor,purine_cofactor,thiol_cofactor,purine_ring_breathing,sulfur_heterocycle_thione,nucleic_purine,sulfur_antioxidant,molecular chemistry,high,contains adenine + thioester; purine theme is LEGITIMATE chemistry,motif,False,2
+coenzyme a,cofactor,purine_cofactor,thiol_cofactor,purine_ring_breathing,sulfur_heterocycle_thione,nucleic_purine,sulfur_antioxidant,molecular chemistry,high,contains adenine + free thiol; purine theme legitimate,motif,False,2
+glutathione,cofactor,thiol_peptide,,sulfur_heterocycle_thione,protein_amide_backbone,sulfur_antioxidant,protein_peptide,molecular chemistry,medium,gamma-glutamyl-cys-gly thiol,motif,True,1
+ergothioneine,cofactor,thione,,sulfur_heterocycle_thione,,sulfur_antioxidant,,molecular chemistry,high,histidine-derived thione — strong MSS match,motif,True,1
+oleate,lipid,fatty_acid,,lipid_acyl_chain,carboxylate_organic_acid,lipid_acyl,,molecular chemistry,high,C18:1 fatty acid,motif,False,2
+stearate,lipid,fatty_acid,,lipid_acyl_chain,carboxylate_organic_acid,lipid_acyl,,molecular chemistry,high,C18:0 fatty acid,motif,False,2
+phosphatidylinositol,lipid,phospholipid,,lipid_acyl_chain,,lipid_acyl,,molecular chemistry,high,phospholipid; EXPLORATORY singleton,motif,True,1
+cholesterol,lipid,sterol,,sterol_ring_system,,sterol_membrane,,molecular chemistry,high,sterol; EXPLORATORY singleton,motif,True,1
+triolein,lipid,triacylglycerol,,lipid_acyl_chain,,lipid_acyl,,molecular chemistry,high,triacylglycerol; EXPLORATORY singleton,motif,True,1
+acetoacetate,organic_acid,carboxylic_acid,,carboxylate_organic_acid,,organic_acid_metabolism,,molecular chemistry,high,carboxylate,motif,False,6
+ascorbate,organic_acid,carboxylic_acid,,carboxylate_organic_acid,,organic_acid_metabolism,,molecular chemistry,high,carboxylate,motif,False,6
+citrate,organic_acid,carboxylic_acid,,carboxylate_organic_acid,,organic_acid_metabolism,,molecular chemistry,high,carboxylate,motif,False,6
+lactate,organic_acid,carboxylic_acid,,carboxylate_organic_acid,,organic_acid_metabolism,,molecular chemistry,high,carboxylate,motif,False,6
+phosphoenolpyruvate,organic_acid,carboxylic_acid,phosphorylated_metabolite,carboxylate_organic_acid,,organic_acid_metabolism,,molecular chemistry,high,phosphoenol + carboxylate,motif,False,6
+pyruvate,organic_acid,carboxylic_acid,,carboxylate_organic_acid,,organic_acid_metabolism,,molecular chemistry,high,carboxylate,motif,False,6
+phosphate,organic_acid,inorganic_phosphate,,,,organic_acid_metabolism,,molecular chemistry,low,inorganic; no clean biochemical MSS; theme weak fit; EXPLORATORY singleton,theme,True,1
+glycerol,polyol,polyol,,glycan_co_network,,saccharide_glycan,,molecular chemistry,low,polyol grouped with glycans; EXPLORATORY singleton,motif,True,1
+glycogen,polysaccharide,polysaccharide,,glycan_co_network,,saccharide_glycan,,molecular chemistry,high,glucose polymer; EXPLORATORY singleton,motif,True,1
+albumin,protein,protein,,protein_amide_backbone,aromatic_ring_residue,protein_peptide,aromatic_amino_acid,molecular chemistry,high,protein; EXPLORATORY singleton,motif,True,1
+adenine,purine,aminopurine,,purine_ring_breathing,,nucleic_purine,,molecular chemistry,high,6-aminopurine,motif,True,1
+guanine,purine,oxopurine,aminopurine,oxopurine_carbonyl,purine_ring_breathing,nucleic_purine,,molecular chemistry,high,2-amino-6-oxopurine (multi-label),motif,False,4
+hypoxanthine,purine,oxopurine,,oxopurine_carbonyl,purine_ring_breathing,nucleic_purine,,molecular chemistry,high,6-oxopurine,motif,False,4
+urate,purine,oxopurine,,oxopurine_carbonyl,,nucleic_purine,,molecular chemistry,high,uric acid; oxopurine,motif,False,4
+xanthine,purine,oxopurine,,oxopurine_carbonyl,purine_ring_breathing,nucleic_purine,,molecular chemistry,high,"2,6-dioxopurine",motif,False,4
+thymine,pyrimidine,oxopyrimidine,,pyrimidine_ring,,nucleic_pyrimidine,,molecular chemistry,high,5-methyl oxopyrimidine,motif,False,2
+uracil,pyrimidine,oxopyrimidine,,pyrimidine_ring,,nucleic_pyrimidine,,molecular chemistry,high,oxopyrimidine,motif,False,2
+n-acetylglucosamine,saccharide,amino_sugar,,glycan_co_network,,saccharide_glycan,,molecular chemistry,medium,N-acetyl amino sugar; EXPLORATORY singleton,motif,True,1
+fructose,saccharide,monosaccharide,,glycan_co_network,,saccharide_glycan,,molecular chemistry,high,hexose,motif,False,4
+galactose,saccharide,monosaccharide,,glycan_co_network,,saccharide_glycan,,molecular chemistry,high,hexose,motif,False,4
+glucose,saccharide,monosaccharide,,glycan_co_network,,saccharide_glycan,,molecular chemistry,high,hexose,motif,False,4
+mannose,saccharide,monosaccharide,,glycan_co_network,,saccharide_glycan,,molecular chemistry,high,hexose,motif,False,4
+fructose-6-phosphate,saccharide,phosphorylated_sugar,,glycan_co_network,,saccharide_glycan,,molecular chemistry,medium,phosphorylated hexose; EXPLORATORY singleton,motif,True,1
+creatinine,small_nitrogenous,guanidino_small_n,,,,organic_acid_metabolism,,molecular chemistry,low,cyclic guanidino; no strong theme; weak fit,theme,False,2
+urea,small_nitrogenous,guanidino_small_n,,,,organic_acid_metabolism,,molecular chemistry,low,urea; no strong theme; weak fit,theme,False,2

@@ -1,0 +1,12 @@
+broad_family,n,exact,mss,subclass,family_loao,theme,highest_common
+amino_acid,16,0,0,0,0,0,none
+cofactor,5,1,0,0,4,0,broad presence only (non-specific)
+lipid,5,0,1,0,0,0,none
+organic_acid,7,0,0,2,3,0,broad presence only (non-specific)
+polyol,1,0,0,0,0,0,broad presence only (non-specific)
+polysaccharide,1,0,0,0,0,0,broad presence only (non-specific)
+protein,1,0,0,0,0,0,none
+purine,5,3,1,3,3,1,exact analyte
+pyrimidine,2,1,0,0,0,0,exact analyte
+saccharide,6,0,0,0,0,0,broad presence only (non-specific)
+small_nitrogenous,2,2,0,0,0,0,exact analyte

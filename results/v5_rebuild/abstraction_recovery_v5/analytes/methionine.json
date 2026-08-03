@@ -1,0 +1,57 @@
+{
+  "analyte": "methionine",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": false
+  },
+  "subclass": "sulfur_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.333,
+    "mass_retained": 0.199,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "sulfur_heterocycle_thione",
+    "rank_agsers": 2.0,
+    "enrich_over_null": -0.0108,
+    "present_top3": true,
+    "specific": false,
+    "status": "motif present but nonspecific",
+    "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+    "assigned": "sulfur_amino_acid",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "protein_peptide",
+    "rank_agsers": 4,
+    "enrich_over_null": -0.0085,
+    "present_top3": false,
+    "specific": false,
+    "tier": "not recovered"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "weak",
+    "recovered": false
+  },
+  "delta_purine": -0.1033,
+  "ood_sers": 0.1276,
+  "confidence_sers": 0.1989,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+}

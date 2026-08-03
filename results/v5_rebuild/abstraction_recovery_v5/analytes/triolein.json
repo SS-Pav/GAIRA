@@ -1,0 +1,57 @@
+{
+  "analyte": "triolein",
+  "broad_family": {
+    "nn_same_family": true,
+    "loao_recovered": false
+  },
+  "subclass": "triacylglycerol",
+  "subclass_exploratory": true,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.0,
+    "mass_retained": 0.097,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "lipid_acyl_chain",
+    "rank_agsers": 11.0,
+    "enrich_over_null": -0.0032,
+    "present_top3": false,
+    "specific": false,
+    "status": "motif not recovered",
+    "tier": "not recovered"
+  },
+  "molecular_subclass": {
+    "assigned": "triacylglycerol",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "lipid_acyl",
+    "rank_agsers": 6,
+    "enrich_over_null": -0.01,
+    "present_top3": false,
+    "specific": false,
+    "tier": "not recovered"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "weak",
+    "recovered": false
+  },
+  "delta_purine": 0.163,
+  "ood_sers": 0.1456,
+  "confidence_sers": 0.2033,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+}

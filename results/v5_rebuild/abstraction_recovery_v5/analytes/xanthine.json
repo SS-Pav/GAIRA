@@ -1,0 +1,57 @@
+{
+  "analyte": "xanthine",
+  "broad_family": {
+    "nn_same_family": true,
+    "loao_recovered": true
+  },
+  "subclass": "oxopurine",
+  "subclass_exploratory": false,
+  "exact_identity": {
+    "latent": true,
+    "mss": true,
+    "theme": true,
+    "verdict": "specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.333,
+    "mass_retained": 0.342,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "oxopurine_carbonyl",
+    "rank_agsers": 1.0,
+    "enrich_over_null": 0.095,
+    "present_top3": true,
+    "specific": false,
+    "status": "motif present but nonspecific",
+    "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+    "assigned": "oxopurine",
+    "loao_centroid_recovered": true,
+    "nn_same_subclass": true,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "nucleic_purine",
+    "rank_agsers": 1,
+    "enrich_over_null": 0.1471,
+    "present_top3": true,
+    "specific": true,
+    "tier": "specific"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "strong",
+    "recovered": true
+  },
+  "delta_purine": -0.1085,
+  "ood_sers": 0.1743,
+  "confidence_sers": 0.2908,
+  "highest_recovered_level": "exact analyte",
+  "evidence_profile": "exact analyte recovered; matrix recovered",
+  "conclusion": "Exact analyte specifically recovered from Ag-SERS."
+}

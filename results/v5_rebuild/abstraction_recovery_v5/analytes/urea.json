@@ -1,0 +1,57 @@
+{
+  "analyte": "urea",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": false
+  },
+  "subclass": "guanidino_small_n",
+  "subclass_exploratory": false,
+  "exact_identity": {
+    "latent": true,
+    "mss": true,
+    "theme": true,
+    "verdict": "specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.333,
+    "mass_retained": 0.246,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "unassigned",
+    "rank_agsers": NaN,
+    "enrich_over_null": NaN,
+    "present_top3": false,
+    "specific": false,
+    "status": "assignment unavailable",
+    "tier": "not recovered"
+  },
+  "molecular_subclass": {
+    "assigned": "guanidino_small_n",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "organic_acid_metabolism",
+    "rank_agsers": 3,
+    "enrich_over_null": -0.0118,
+    "present_top3": true,
+    "specific": false,
+    "tier": "present (non-specific)"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "weak",
+    "recovered": false
+  },
+  "delta_purine": 0.0955,
+  "ood_sers": 0.2901,
+  "confidence_sers": 0.1807,
+  "highest_recovered_level": "exact analyte",
+  "evidence_profile": "exact analyte recovered",
+  "conclusion": "Exact analyte specifically recovered from Ag-SERS."
+}

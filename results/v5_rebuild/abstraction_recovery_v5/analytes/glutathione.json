@@ -1,0 +1,57 @@
+{
+  "analyte": "glutathione",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": true
+  },
+  "subclass": "thiol_peptide",
+  "subclass_exploratory": true,
+  "exact_identity": {
+    "latent": true,
+    "mss": false,
+    "theme": false,
+    "verdict": "specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.667,
+    "mass_retained": 0.268,
+    "recovered": true
+  },
+  "mss_motif": {
+    "expected": "sulfur_heterocycle_thione",
+    "rank_agsers": 2.0,
+    "enrich_over_null": -0.0063,
+    "present_top3": true,
+    "specific": false,
+    "status": "motif present but nonspecific",
+    "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+    "assigned": "thiol_peptide",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "protein_peptide",
+    "rank_agsers": 4,
+    "enrich_over_null": -0.012,
+    "present_top3": false,
+    "specific": false,
+    "tier": "not recovered"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "delta_purine": 0.0419,
+  "ood_sers": 0.1361,
+  "confidence_sers": 0.2291,
+  "highest_recovered_level": "exact analyte",
+  "evidence_profile": "exact analyte recovered",
+  "conclusion": "Exact analyte specifically recovered from Ag-SERS."
+}

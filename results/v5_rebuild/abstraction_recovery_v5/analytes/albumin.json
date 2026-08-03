@@ -1,0 +1,57 @@
+{
+  "analyte": "albumin",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": false
+  },
+  "subclass": "protein",
+  "subclass_exploratory": true,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.333,
+    "mass_retained": 0.125,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "aromatic_ring_residue",
+    "rank_agsers": 7.0,
+    "enrich_over_null": -0.0077,
+    "present_top3": false,
+    "specific": false,
+    "status": "motif not recovered",
+    "tier": "not recovered"
+  },
+  "molecular_subclass": {
+    "assigned": "protein",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "protein_peptide",
+    "rank_agsers": 4,
+    "enrich_over_null": -0.0061,
+    "present_top3": false,
+    "specific": false,
+    "tier": "not recovered"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "strong",
+    "recovered": true
+  },
+  "delta_purine": 0.0757,
+  "ood_sers": 0.1286,
+  "confidence_sers": 0.2398,
+  "highest_recovered_level": "none",
+  "evidence_profile": "matrix recovered",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+}

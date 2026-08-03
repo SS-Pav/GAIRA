@@ -1,0 +1,57 @@
+{
+  "analyte": "riboflavin",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": true
+  },
+  "subclass": "flavin",
+  "subclass_exploratory": true,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.333,
+    "mass_retained": 0.131,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "flavin_redox_cofactor",
+    "rank_agsers": 12.0,
+    "enrich_over_null": -0.0072,
+    "present_top3": false,
+    "specific": false,
+    "status": "motif not recovered",
+    "tier": "not recovered"
+  },
+  "molecular_subclass": {
+    "assigned": "flavin",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "redox_broad",
+    "rank_agsers": 11,
+    "enrich_over_null": -0.0021,
+    "present_top3": false,
+    "specific": false,
+    "tier": "not recovered"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "delta_purine": -0.0254,
+  "ood_sers": 0.1289,
+  "confidence_sers": 0.2067,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+}

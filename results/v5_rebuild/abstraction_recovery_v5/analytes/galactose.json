@@ -1,0 +1,57 @@
+{
+  "analyte": "galactose",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": false
+  },
+  "subclass": "monosaccharide",
+  "subclass_exploratory": false,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.333,
+    "mass_retained": 0.139,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "glycan_co_network",
+    "rank_agsers": 4.0,
+    "enrich_over_null": -0.0018,
+    "present_top3": false,
+    "specific": false,
+    "status": "motif not recovered",
+    "tier": "not recovered"
+  },
+  "molecular_subclass": {
+    "assigned": "monosaccharide",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "saccharide_glycan",
+    "rank_agsers": 2,
+    "enrich_over_null": -0.0058,
+    "present_top3": true,
+    "specific": false,
+    "tier": "present (non-specific)"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "delta_purine": 0.0381,
+  "ood_sers": 0.1177,
+  "confidence_sers": 0.2074,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+}

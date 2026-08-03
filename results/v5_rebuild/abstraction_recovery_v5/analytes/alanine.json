@@ -1,0 +1,57 @@
+{
+  "analyte": "alanine",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": false
+  },
+  "subclass": "aliphatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.0,
+    "mass_retained": 0.099,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "protein_amide_backbone",
+    "rank_agsers": 10.0,
+    "enrich_over_null": -0.0122,
+    "present_top3": false,
+    "specific": false,
+    "status": "motif not recovered",
+    "tier": "not recovered"
+  },
+  "molecular_subclass": {
+    "assigned": "aliphatic_amino_acid",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "protein_peptide",
+    "rank_agsers": 4,
+    "enrich_over_null": -0.0128,
+    "present_top3": false,
+    "specific": false,
+    "tier": "not recovered"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "weak",
+    "recovered": false
+  },
+  "delta_purine": 0.0645,
+  "ood_sers": 0.1256,
+  "confidence_sers": 0.1993,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+}

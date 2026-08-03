@@ -1,0 +1,57 @@
+{
+  "analyte": "thymine",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": false
+  },
+  "subclass": "oxopyrimidine",
+  "subclass_exploratory": false,
+  "exact_identity": {
+    "latent": true,
+    "mss": false,
+    "theme": false,
+    "verdict": "specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.0,
+    "mass_retained": 0.143,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "pyrimidine_ring",
+    "rank_agsers": 3.0,
+    "enrich_over_null": -0.0038,
+    "present_top3": true,
+    "specific": false,
+    "status": "motif present but nonspecific",
+    "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+    "assigned": "oxopyrimidine",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "nucleic_pyrimidine",
+    "rank_agsers": 8,
+    "enrich_over_null": -0.0038,
+    "present_top3": false,
+    "specific": false,
+    "tier": "not recovered"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "weak",
+    "recovered": false
+  },
+  "delta_purine": -0.0852,
+  "ood_sers": 0.1188,
+  "confidence_sers": 0.2123,
+  "highest_recovered_level": "exact analyte",
+  "evidence_profile": "exact analyte recovered",
+  "conclusion": "Exact analyte specifically recovered from Ag-SERS."
+}

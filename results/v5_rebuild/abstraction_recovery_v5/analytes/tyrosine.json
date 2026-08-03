@@ -1,0 +1,57 @@
+{
+  "analyte": "tyrosine",
+  "broad_family": {
+    "nn_same_family": false,
+    "loao_recovered": false
+  },
+  "subclass": "aromatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+    "latent": false,
+    "mss": false,
+    "theme": false,
+    "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+    "top3_overlap": 0.0,
+    "mass_retained": 0.079,
+    "recovered": false
+  },
+  "mss_motif": {
+    "expected": "aromatic_ring_residue",
+    "rank_agsers": 6.0,
+    "enrich_over_null": -0.0079,
+    "present_top3": false,
+    "specific": false,
+    "status": "motif not recovered",
+    "tier": "not recovered"
+  },
+  "molecular_subclass": {
+    "assigned": "aromatic_amino_acid",
+    "loao_centroid_recovered": false,
+    "nn_same_subclass": false,
+    "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+    "expected": "protein_peptide",
+    "rank_agsers": 4,
+    "enrich_over_null": -0.0091,
+    "present_top3": false,
+    "specific": false,
+    "tier": "not recovered"
+  },
+  "perturbation": {
+    "status": "not tested",
+    "validated": false
+  },
+  "matrix": {
+    "tier": "moderate",
+    "recovered": false
+  },
+  "delta_purine": 0.0205,
+  "ood_sers": 0.1573,
+  "confidence_sers": 0.1962,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+}

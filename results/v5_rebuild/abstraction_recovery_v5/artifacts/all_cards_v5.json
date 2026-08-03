@@ -1,0 +1,2909 @@
+{
+ "acetoacetate": {
+  "analyte": "acetoacetate",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": true
+  },
+  "subclass": "carboxylic_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.108,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "carboxylate_organic_acid",
+   "rank_agsers": 1.0,
+   "enrich_over_null": -0.0027,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "carboxylic_acid",
+   "loao_centroid_recovered": true,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "organic_acid_metabolism",
+   "rank_agsers": 3,
+   "enrich_over_null": -0.0095,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.0383,
+  "ood_sers": 0.2081,
+  "confidence_sers": 0.2019,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "acetyl-coa": {
+  "analyte": "acetyl-coa",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": true
+  },
+  "subclass": "purine_cofactor",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.147,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "sulfur_heterocycle_thione",
+   "rank_agsers": 2.0,
+   "enrich_over_null": -0.0153,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "purine_cofactor",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "nucleic_purine",
+   "rank_agsers": 1,
+   "enrich_over_null": -0.0558,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": -0.0364,
+  "ood_sers": 0.1539,
+  "confidence_sers": 0.1938,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "adenine": {
+  "analyte": "adenine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "aminopurine",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.127,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "purine_ring_breathing",
+   "rank_agsers": 4.0,
+   "enrich_over_null": 0.0009,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "aminopurine",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "nucleic_purine",
+   "rank_agsers": 1,
+   "enrich_over_null": -0.0106,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "dose-response",
+   "validated": true
+  },
+  "matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "delta_purine": -0.1157,
+  "ood_sers": 0.1388,
+  "confidence_sers": 0.2195,
+  "highest_recovered_level": "perturbation-only",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated; perturbation validated; matrix recovered",
+  "conclusion": "Static identity weak, but functional perturbation response validates the expected chemistry."
+ },
+ "alanine": {
+  "analyte": "alanine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "aliphatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.099,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "protein_amide_backbone",
+   "rank_agsers": 10.0,
+   "enrich_over_null": -0.0122,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "aliphatic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0128,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": 0.0645,
+  "ood_sers": 0.1256,
+  "confidence_sers": 0.1993,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "albumin": {
+  "analyte": "albumin",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "protein",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.125,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "aromatic_ring_residue",
+   "rank_agsers": 7.0,
+   "enrich_over_null": -0.0077,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "protein",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0061,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "delta_purine": 0.0757,
+  "ood_sers": 0.1286,
+  "confidence_sers": 0.2398,
+  "highest_recovered_level": "none",
+  "evidence_profile": "matrix recovered",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "arginine": {
+  "analyte": "arginine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "basic_amino_acid",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.158,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "protein_amide_backbone",
+   "rank_agsers": 10.0,
+   "enrich_over_null": -0.0036,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "basic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0052,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.1386,
+  "ood_sers": 0.2065,
+  "confidence_sers": 0.1856,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "ascorbate": {
+  "analyte": "ascorbate",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": true
+  },
+  "subclass": "carboxylic_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.132,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "carboxylate_organic_acid",
+   "rank_agsers": 1.0,
+   "enrich_over_null": -0.007,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "carboxylic_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "organic_acid_metabolism",
+   "rank_agsers": 3,
+   "enrich_over_null": -0.0075,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": 0.0798,
+  "ood_sers": 0.1427,
+  "confidence_sers": 0.2003,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "cholesterol": {
+  "analyte": "cholesterol",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "sterol",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.152,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "sterol_ring_system",
+   "rank_agsers": 8.0,
+   "enrich_over_null": -0.0208,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "sterol",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "sterol_membrane",
+   "rank_agsers": 9,
+   "enrich_over_null": -0.0054,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": 0.0622,
+  "ood_sers": 0.3183,
+  "confidence_sers": 0.2197,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "citrate": {
+  "analyte": "citrate",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "carboxylic_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.667,
+   "mass_retained": 0.253,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "carboxylate_organic_acid",
+   "rank_agsers": 1.0,
+   "enrich_over_null": -0.0142,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "carboxylic_acid",
+   "loao_centroid_recovered": true,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "organic_acid_metabolism",
+   "rank_agsers": 3,
+   "enrich_over_null": -0.0115,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": -0.0933,
+  "ood_sers": 0.1465,
+  "confidence_sers": 0.1899,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "coenzyme a": {
+  "analyte": "coenzyme a",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": true
+  },
+  "subclass": "purine_cofactor",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.138,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "sulfur_heterocycle_thione",
+   "rank_agsers": 2.0,
+   "enrich_over_null": -0.015,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "purine_cofactor",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "nucleic_purine",
+   "rank_agsers": 1,
+   "enrich_over_null": -0.0441,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": -0.0229,
+  "ood_sers": 0.1735,
+  "confidence_sers": 0.1931,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "creatinine": {
+  "analyte": "creatinine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "guanidino_small_n",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": true,
+   "mss": true,
+   "theme": true,
+   "verdict": "specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.228,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "unassigned",
+   "rank_agsers": NaN,
+   "enrich_over_null": NaN,
+   "present_top3": false,
+   "specific": false,
+   "status": "assignment unavailable",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "guanidino_small_n",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "organic_acid_metabolism",
+   "rank_agsers": 3,
+   "enrich_over_null": -0.0043,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": -0.0662,
+  "ood_sers": 0.1536,
+  "confidence_sers": 0.1999,
+  "highest_recovered_level": "exact analyte",
+  "evidence_profile": "exact analyte recovered",
+  "conclusion": "Exact analyte specifically recovered from Ag-SERS."
+ },
+ "cysteine": {
+  "analyte": "cysteine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "sulfur_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.221,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "sulfur_heterocycle_thione",
+   "rank_agsers": 2.0,
+   "enrich_over_null": -0.0134,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "sulfur_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0091,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": -0.1001,
+  "ood_sers": 0.1228,
+  "confidence_sers": 0.2075,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "ergothioneine": {
+  "analyte": "ergothioneine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "thione",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.086,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "sulfur_heterocycle_thione",
+   "rank_agsers": 8.0,
+   "enrich_over_null": -0.0395,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "thione",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "sulfur_antioxidant",
+   "rank_agsers": 5,
+   "enrich_over_null": 0.0135,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "dose-response",
+   "validated": true
+  },
+  "matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "delta_purine": -0.0252,
+  "ood_sers": 0.307,
+  "confidence_sers": 0.2571,
+  "highest_recovered_level": "perturbation-only",
+  "evidence_profile": "perturbation validated; matrix recovered",
+  "conclusion": "Static identity weak, but functional perturbation response validates the expected chemistry."
+ },
+ "fructose": {
+  "analyte": "fructose",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "monosaccharide",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.158,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "glycan_co_network",
+   "rank_agsers": 4.0,
+   "enrich_over_null": -0.0008,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "monosaccharide",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "saccharide_glycan",
+   "rank_agsers": 2,
+   "enrich_over_null": -0.0078,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.1196,
+  "ood_sers": 0.1429,
+  "confidence_sers": 0.1941,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "fructose-6-phosphate": {
+  "analyte": "fructose-6-phosphate",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "phosphorylated_sugar",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.139,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "glycan_co_network",
+   "rank_agsers": 5.0,
+   "enrich_over_null": -0.0037,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "phosphorylated_sugar",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "saccharide_glycan",
+   "rank_agsers": 2,
+   "enrich_over_null": -0.0079,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": 0.1247,
+  "ood_sers": 0.1113,
+  "confidence_sers": 0.2071,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "galactose": {
+  "analyte": "galactose",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "monosaccharide",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.139,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "glycan_co_network",
+   "rank_agsers": 4.0,
+   "enrich_over_null": -0.0018,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "monosaccharide",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "saccharide_glycan",
+   "rank_agsers": 2,
+   "enrich_over_null": -0.0058,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.0381,
+  "ood_sers": 0.1177,
+  "confidence_sers": 0.2074,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "glucose": {
+  "analyte": "glucose",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "monosaccharide",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.104,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "glycan_co_network",
+   "rank_agsers": 4.0,
+   "enrich_over_null": -0.0024,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "monosaccharide",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "saccharide_glycan",
+   "rank_agsers": 2,
+   "enrich_over_null": -0.0057,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": 0.024,
+  "ood_sers": 0.124,
+  "confidence_sers": 0.2052,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "glutamate": {
+  "analyte": "glutamate",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "acidic_amino_acid",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.103,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "carboxylate_organic_acid",
+   "rank_agsers": 2.0,
+   "enrich_over_null": -0.0195,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "acidic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "organic_acid_metabolism",
+   "rank_agsers": 3,
+   "enrich_over_null": -0.0144,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": 0.0577,
+  "ood_sers": 0.1491,
+  "confidence_sers": 0.2059,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "glutathione": {
+  "analyte": "glutathione",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": true
+  },
+  "subclass": "thiol_peptide",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": true,
+   "mss": false,
+   "theme": false,
+   "verdict": "specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.667,
+   "mass_retained": 0.268,
+   "recovered": true
+  },
+  "mss_motif": {
+   "expected": "sulfur_heterocycle_thione",
+   "rank_agsers": 2.0,
+   "enrich_over_null": -0.0063,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "thiol_peptide",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.012,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.0419,
+  "ood_sers": 0.1361,
+  "confidence_sers": 0.2291,
+  "highest_recovered_level": "exact analyte",
+  "evidence_profile": "exact analyte recovered",
+  "conclusion": "Exact analyte specifically recovered from Ag-SERS."
+ },
+ "glycerol": {
+  "analyte": "glycerol",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "polyol",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.11,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "glycan_co_network",
+   "rank_agsers": 6.0,
+   "enrich_over_null": -0.0049,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "polyol",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "saccharide_glycan",
+   "rank_agsers": 2,
+   "enrich_over_null": -0.0091,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.1365,
+  "ood_sers": 0.096,
+  "confidence_sers": 0.2084,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "glycine": {
+  "analyte": "glycine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "aliphatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.125,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "protein_amide_backbone",
+   "rank_agsers": 9.0,
+   "enrich_over_null": -0.0064,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "aliphatic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0068,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": 0.1117,
+  "ood_sers": 0.1254,
+  "confidence_sers": 0.2117,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "glycogen": {
+  "analyte": "glycogen",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "polysaccharide",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.179,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "glycan_co_network",
+   "rank_agsers": 5.0,
+   "enrich_over_null": -0.0053,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "polysaccharide",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "saccharide_glycan",
+   "rank_agsers": 2,
+   "enrich_over_null": -0.0155,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.0454,
+  "ood_sers": 0.137,
+  "confidence_sers": 0.211,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "guanine": {
+  "analyte": "guanine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": true
+  },
+  "subclass": "oxopurine",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.222,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "oxopurine_carbonyl",
+   "rank_agsers": 1.0,
+   "enrich_over_null": 0.0497,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "oxopurine",
+   "loao_centroid_recovered": true,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "nucleic_purine",
+   "rank_agsers": 1,
+   "enrich_over_null": 0.0425,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "delta_purine": -0.2522,
+  "ood_sers": 0.159,
+  "confidence_sers": 0.2327,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated; matrix recovered",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "histidine": {
+  "analyte": "histidine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "aromatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.109,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "aromatic_ring_residue",
+   "rank_agsers": 6.0,
+   "enrich_over_null": -0.0085,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "aromatic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0129,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.0664,
+  "ood_sers": 0.1542,
+  "confidence_sers": 0.1969,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "hydroxyproline": {
+  "analyte": "hydroxyproline",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "aliphatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.094,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "protein_amide_backbone",
+   "rank_agsers": 10.0,
+   "enrich_over_null": -0.0083,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "aliphatic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0105,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "delta_purine": 0.1117,
+  "ood_sers": 0.1242,
+  "confidence_sers": 0.2034,
+  "highest_recovered_level": "none",
+  "evidence_profile": "matrix recovered",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "hypoxanthine": {
+  "analyte": "hypoxanthine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "oxopurine",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": true,
+   "mss": false,
+   "theme": true,
+   "verdict": "specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.667,
+   "mass_retained": 0.346,
+   "recovered": true
+  },
+  "mss_motif": {
+   "expected": "purine_ring_breathing",
+   "rank_agsers": 1.0,
+   "enrich_over_null": 0.0431,
+   "present_top3": true,
+   "specific": true,
+   "status": "expected motif recovered",
+   "tier": "specific"
+  },
+  "molecular_subclass": {
+   "assigned": "oxopurine",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "nucleic_purine",
+   "rank_agsers": 1,
+   "enrich_over_null": 0.0112,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "delta_purine": 0.0039,
+  "ood_sers": 0.1313,
+  "confidence_sers": 0.2463,
+  "highest_recovered_level": "exact analyte",
+  "evidence_profile": "exact analyte recovered; matrix recovered",
+  "conclusion": "Exact analyte specifically recovered from Ag-SERS."
+ },
+ "isoleucine": {
+  "analyte": "isoleucine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "aliphatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.094,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "protein_amide_backbone",
+   "rank_agsers": 10.0,
+   "enrich_over_null": -0.0115,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "aliphatic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0143,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.0804,
+  "ood_sers": 0.1672,
+  "confidence_sers": 0.1963,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "lactate": {
+  "analyte": "lactate",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "carboxylic_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.158,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "carboxylate_organic_acid",
+   "rank_agsers": 1.0,
+   "enrich_over_null": -0.0139,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "carboxylic_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "organic_acid_metabolism",
+   "rank_agsers": 3,
+   "enrich_over_null": -0.0106,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.1214,
+  "ood_sers": 0.1239,
+  "confidence_sers": 0.2115,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "leucine": {
+  "analyte": "leucine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "aliphatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.058,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "protein_amide_backbone",
+   "rank_agsers": 11.0,
+   "enrich_over_null": -0.0102,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "aliphatic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0108,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": 0.0481,
+  "ood_sers": 0.1281,
+  "confidence_sers": 0.2031,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "mannose": {
+  "analyte": "mannose",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "monosaccharide",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.208,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "glycan_co_network",
+   "rank_agsers": 9.0,
+   "enrich_over_null": -0.0083,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "monosaccharide",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "saccharide_glycan",
+   "rank_agsers": 2,
+   "enrich_over_null": -0.0172,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.0806,
+  "ood_sers": 0.1162,
+  "confidence_sers": 0.2056,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "methionine": {
+  "analyte": "methionine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "sulfur_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.199,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "sulfur_heterocycle_thione",
+   "rank_agsers": 2.0,
+   "enrich_over_null": -0.0108,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "sulfur_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0085,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": -0.1033,
+  "ood_sers": 0.1276,
+  "confidence_sers": 0.1989,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "n-acetylglucosamine": {
+  "analyte": "n-acetylglucosamine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "amino_sugar",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.136,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "glycan_co_network",
+   "rank_agsers": 5.0,
+   "enrich_over_null": -0.0049,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "amino_sugar",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "saccharide_glycan",
+   "rank_agsers": 2,
+   "enrich_over_null": -0.0139,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": 0.1051,
+  "ood_sers": 0.1453,
+  "confidence_sers": 0.1942,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "oleate": {
+  "analyte": "oleate",
+  "broad_family": {
+   "nn_same_family": true,
+   "loao_recovered": false
+  },
+  "subclass": "fatty_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.087,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "carboxylate_organic_acid",
+   "rank_agsers": 2.0,
+   "enrich_over_null": -0.012,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "fatty_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "lipid_acyl",
+   "rank_agsers": 6,
+   "enrich_over_null": -0.0144,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "delta_purine": 0.1757,
+  "ood_sers": 0.1173,
+  "confidence_sers": 0.2078,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated; matrix recovered",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "phenylalanine": {
+  "analyte": "phenylalanine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "aromatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.11,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "aromatic_ring_residue",
+   "rank_agsers": 7.0,
+   "enrich_over_null": -0.0107,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "aromatic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0068,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.1295,
+  "ood_sers": 0.1166,
+  "confidence_sers": 0.2036,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "phosphate": {
+  "analyte": "phosphate",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": true
+  },
+  "subclass": "inorganic_phosphate",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.139,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "unassigned",
+   "rank_agsers": NaN,
+   "enrich_over_null": NaN,
+   "present_top3": false,
+   "specific": false,
+   "status": "assignment unavailable",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "inorganic_phosphate",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "organic_acid_metabolism",
+   "rank_agsers": 3,
+   "enrich_over_null": -0.0103,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": 0.0021,
+  "ood_sers": 0.1248,
+  "confidence_sers": 0.2017,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "phosphatidylinositol": {
+  "analyte": "phosphatidylinositol",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "phospholipid",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.186,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "lipid_acyl_chain",
+   "rank_agsers": 12.0,
+   "enrich_over_null": -0.0061,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "phospholipid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "lipid_acyl",
+   "rank_agsers": 7,
+   "enrich_over_null": -0.019,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": -0.0208,
+  "ood_sers": 0.1654,
+  "confidence_sers": 0.1853,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "phosphoenolpyruvate": {
+  "analyte": "phosphoenolpyruvate",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "carboxylic_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.219,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "carboxylate_organic_acid",
+   "rank_agsers": 1.0,
+   "enrich_over_null": -0.0133,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "carboxylic_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "organic_acid_metabolism",
+   "rank_agsers": 3,
+   "enrich_over_null": -0.0105,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": -0.0154,
+  "ood_sers": 0.1414,
+  "confidence_sers": 0.1983,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "proline": {
+  "analyte": "proline",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "aliphatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.048,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "protein_amide_backbone",
+   "rank_agsers": 11.0,
+   "enrich_over_null": -0.0152,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "aliphatic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0156,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.0996,
+  "ood_sers": 0.1771,
+  "confidence_sers": 0.1914,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "pyruvate": {
+  "analyte": "pyruvate",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "carboxylic_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.165,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "carboxylate_organic_acid",
+   "rank_agsers": 2.0,
+   "enrich_over_null": -0.0145,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "carboxylic_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "organic_acid_metabolism",
+   "rank_agsers": 3,
+   "enrich_over_null": -0.0083,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": -0.007,
+  "ood_sers": 0.1116,
+  "confidence_sers": 0.2097,
+  "highest_recovered_level": "broad presence only (non-specific)",
+  "evidence_profile": "expected motif/theme PRESENT (top-3) but not specific \u2014 common-background dominated",
+  "conclusion": "Ag-SERS shows the expected motif/theme in its top-3, but this PRESENCE is not analyte-specific above the shared background \u2014 no molecular identification is claimed."
+ },
+ "riboflavin": {
+  "analyte": "riboflavin",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": true
+  },
+  "subclass": "flavin",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.131,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "flavin_redox_cofactor",
+   "rank_agsers": 12.0,
+   "enrich_over_null": -0.0072,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "flavin",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "redox_broad",
+   "rank_agsers": 11,
+   "enrich_over_null": -0.0021,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": -0.0254,
+  "ood_sers": 0.1289,
+  "confidence_sers": 0.2067,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "serine": {
+  "analyte": "serine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "aliphatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.145,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "protein_amide_backbone",
+   "rank_agsers": 10.0,
+   "enrich_over_null": -0.0046,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "aliphatic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0054,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.1332,
+  "ood_sers": 0.1701,
+  "confidence_sers": 0.1917,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "stearate": {
+  "analyte": "stearate",
+  "broad_family": {
+   "nn_same_family": true,
+   "loao_recovered": false
+  },
+  "subclass": "fatty_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.128,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "carboxylate_organic_acid",
+   "rank_agsers": 1.0,
+   "enrich_over_null": 0.0076,
+   "present_top3": true,
+   "specific": true,
+   "status": "expected motif recovered",
+   "tier": "specific"
+  },
+  "molecular_subclass": {
+   "assigned": "fatty_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "lipid_acyl",
+   "rank_agsers": 5,
+   "enrich_over_null": -0.0009,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.0692,
+  "ood_sers": 0.168,
+  "confidence_sers": 0.2096,
+  "highest_recovered_level": "component/motif (specific)",
+  "evidence_profile": "latent fingerprint lost, expected MSS retained",
+  "conclusion": "Exact identity lost, but the expected carboxylate_organic_acid motif is specifically recovered."
+ },
+ "thymine": {
+  "analyte": "thymine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "oxopyrimidine",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": true,
+   "mss": false,
+   "theme": false,
+   "verdict": "specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.143,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "pyrimidine_ring",
+   "rank_agsers": 3.0,
+   "enrich_over_null": -0.0038,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "oxopyrimidine",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "nucleic_pyrimidine",
+   "rank_agsers": 8,
+   "enrich_over_null": -0.0038,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": -0.0852,
+  "ood_sers": 0.1188,
+  "confidence_sers": 0.2123,
+  "highest_recovered_level": "exact analyte",
+  "evidence_profile": "exact analyte recovered",
+  "conclusion": "Exact analyte specifically recovered from Ag-SERS."
+ },
+ "triolein": {
+  "analyte": "triolein",
+  "broad_family": {
+   "nn_same_family": true,
+   "loao_recovered": false
+  },
+  "subclass": "triacylglycerol",
+  "subclass_exploratory": true,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.097,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "lipid_acyl_chain",
+   "rank_agsers": 11.0,
+   "enrich_over_null": -0.0032,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "triacylglycerol",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "lipid_acyl",
+   "rank_agsers": 6,
+   "enrich_over_null": -0.01,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": 0.163,
+  "ood_sers": 0.1456,
+  "confidence_sers": 0.2033,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "tryptophan": {
+  "analyte": "tryptophan",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "aromatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.092,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "aromatic_ring_residue",
+   "rank_agsers": 5.0,
+   "enrich_over_null": -0.0058,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "aromatic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0067,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.0638,
+  "ood_sers": 0.1089,
+  "confidence_sers": 0.2177,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "tyrosine": {
+  "analyte": "tyrosine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "aromatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.079,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "aromatic_ring_residue",
+   "rank_agsers": 6.0,
+   "enrich_over_null": -0.0079,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "aromatic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0091,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.0205,
+  "ood_sers": 0.1573,
+  "confidence_sers": 0.1962,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "uracil": {
+  "analyte": "uracil",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "oxopyrimidine",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.0,
+   "mass_retained": 0.037,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "pyrimidine_ring",
+   "rank_agsers": 4.0,
+   "enrich_over_null": -0.0073,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "oxopyrimidine",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "nucleic_pyrimidine",
+   "rank_agsers": 8,
+   "enrich_over_null": -0.0077,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.1088,
+  "ood_sers": 0.1659,
+  "confidence_sers": 0.2101,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "urate": {
+  "analyte": "urate",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": true
+  },
+  "subclass": "oxopurine",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": true,
+   "mss": false,
+   "theme": false,
+   "verdict": "specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.221,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "oxopurine_carbonyl",
+   "rank_agsers": 1.0,
+   "enrich_over_null": 0.0771,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "oxopurine",
+   "loao_centroid_recovered": true,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "nucleic_purine",
+   "rank_agsers": 1,
+   "enrich_over_null": 0.0483,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "directional depletion",
+   "validated": true
+  },
+  "matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "delta_purine": 0.1368,
+  "ood_sers": 0.2944,
+  "confidence_sers": 0.2378,
+  "highest_recovered_level": "exact analyte",
+  "evidence_profile": "exact analyte recovered; perturbation validated; matrix recovered",
+  "conclusion": "Exact analyte specifically recovered from Ag-SERS."
+ },
+ "urea": {
+  "analyte": "urea",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "guanidino_small_n",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": true,
+   "mss": true,
+   "theme": true,
+   "verdict": "specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.246,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "unassigned",
+   "rank_agsers": NaN,
+   "enrich_over_null": NaN,
+   "present_top3": false,
+   "specific": false,
+   "status": "assignment unavailable",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "guanidino_small_n",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "organic_acid_metabolism",
+   "rank_agsers": 3,
+   "enrich_over_null": -0.0118,
+   "present_top3": true,
+   "specific": false,
+   "tier": "present (non-specific)"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "weak",
+   "recovered": false
+  },
+  "delta_purine": 0.0955,
+  "ood_sers": 0.2901,
+  "confidence_sers": 0.1807,
+  "highest_recovered_level": "exact analyte",
+  "evidence_profile": "exact analyte recovered",
+  "conclusion": "Exact analyte specifically recovered from Ag-SERS."
+ },
+ "valine": {
+  "analyte": "valine",
+  "broad_family": {
+   "nn_same_family": false,
+   "loao_recovered": false
+  },
+  "subclass": "aliphatic_amino_acid",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": false,
+   "mss": false,
+   "theme": false,
+   "verdict": "not specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.128,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "protein_amide_backbone",
+   "rank_agsers": 10.0,
+   "enrich_over_null": -0.0141,
+   "present_top3": false,
+   "specific": false,
+   "status": "motif not recovered",
+   "tier": "not recovered"
+  },
+  "molecular_subclass": {
+   "assigned": "aliphatic_amino_acid",
+   "loao_centroid_recovered": false,
+   "nn_same_subclass": false,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "protein_peptide",
+   "rank_agsers": 4,
+   "enrich_over_null": -0.0149,
+   "present_top3": false,
+   "specific": false,
+   "tier": "not recovered"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "moderate",
+   "recovered": false
+  },
+  "delta_purine": 0.0076,
+  "ood_sers": 0.1585,
+  "confidence_sers": 0.199,
+  "highest_recovered_level": "none",
+  "evidence_profile": "no specific evidence",
+  "conclusion": "No specific biochemical evidence survives Ag-SERS abstraction for this analyte."
+ },
+ "xanthine": {
+  "analyte": "xanthine",
+  "broad_family": {
+   "nn_same_family": true,
+   "loao_recovered": true
+  },
+  "subclass": "oxopurine",
+  "subclass_exploratory": false,
+  "exact_identity": {
+   "latent": true,
+   "mss": true,
+   "theme": true,
+   "verdict": "specifically recovered"
+  },
+  "nmf_component": {
+   "top3_overlap": 0.333,
+   "mass_retained": 0.342,
+   "recovered": false
+  },
+  "mss_motif": {
+   "expected": "oxopurine_carbonyl",
+   "rank_agsers": 1.0,
+   "enrich_over_null": 0.095,
+   "present_top3": true,
+   "specific": false,
+   "status": "motif present but nonspecific",
+   "tier": "present (non-specific)"
+  },
+  "molecular_subclass": {
+   "assigned": "oxopurine",
+   "loao_centroid_recovered": true,
+   "nn_same_subclass": true,
+   "note": "cross-modal subclass classification is at chance in aggregate"
+  },
+  "biochemical_theme": {
+   "expected": "nucleic_purine",
+   "rank_agsers": 1,
+   "enrich_over_null": 0.1471,
+   "present_top3": true,
+   "specific": true,
+   "tier": "specific"
+  },
+  "perturbation": {
+   "status": "not tested",
+   "validated": false
+  },
+  "matrix": {
+   "tier": "strong",
+   "recovered": true
+  },
+  "delta_purine": -0.1085,
+  "ood_sers": 0.1743,
+  "confidence_sers": 0.2908,
+  "highest_recovered_level": "exact analyte",
+  "evidence_profile": "exact analyte recovered; matrix recovered",
+  "conclusion": "Exact analyte specifically recovered from Ag-SERS."
+ }
+}
