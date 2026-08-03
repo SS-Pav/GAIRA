@@ -1,0 +1,49 @@
+"""GAIRA Foundation Model Explorer V4 — Hierarchical biochemical recovery across Raman,
+Ag-SERS, perturbation and biological matrix.
+
+    streamlit run gaira_foundation_explorer_v4/app.py
+
+Additive: Explorers V1, V2 and V3 are untouched and still run. Reads ONLY committed V4
+recoverability artifacts + the frozen atlas fingerprint (09ed804a…), verified at load. Nothing
+retrained; V4 changes analysis and interpretation only.
+"""
+from __future__ import annotations
+import sys
+from pathlib import Path
+import streamlit as st
+
+HERE = Path(__file__).resolve().parent
+REPO = HERE.parent
+sys.path.insert(0, str(HERE)); sys.path.insert(0, str(REPO / "src"))
+from v4_core import data as D, ui
+from v4_core.pages import PAGES
+
+st.set_page_config(page_title="GAIRA Explorer V4 · Hierarchical Recovery", page_icon="🧭",
+                   layout="wide", initial_sidebar_state="expanded")
+
+
+def main():
+    ui.inject_css()
+    with st.sidebar:
+        st.markdown('<div style="font-family:Newsreader,serif;font-size:1.3rem;font-weight:600;'
+                    f'color:{ui.INK};line-height:1.15">GAIRA Explorer V4</div>'
+                    f'<div style="color:{ui.FAINT};font-size:.82rem;margin:.3rem 0 .9rem">'
+                    'Hierarchical biochemical recovery · null-calibrated</div>', unsafe_allow_html=True)
+        if not D.present():
+            st.error("V4 artifacts not found at results/v5_rebuild/hierarchical_recoverability_v4/. "
+                     "Run its code/ scripts."); st.stop()
+        choice = st.radio("Contents", [p[0] for p in PAGES], label_visibility="collapsed")
+        st.markdown("<hr style='margin:.8rem 0'>", unsafe_allow_html=True)
+        fp = D.fingerprint_ok(); repro = D.reproduces_v3()
+        fc = ui.OI["green"] if fp else ui.OI["verm"]
+        st.markdown(f"<div style='font-size:.78rem;color:{ui.FAINT};line-height:1.6'>"
+                    f"<b style='color:{fc}'>{'✓ frozen atlas verified' if fp else '⚠ fingerprint mismatch'}</b><br>"
+                    f"<code style='font-size:.72rem'>{D.CANON_FINGERPRINT[:24]}…</code><br>"
+                    f"{'✓ reproduces V3 exactly' if repro else '· V3 reproducibility unrecorded'}<br>"
+                    "51 analytes · V1/V2/V3 retained · SERS validates, never trains.</div>",
+                    unsafe_allow_html=True)
+    dict(PAGES)[choice]()
+
+
+if __name__ == "__main__":
+    main()
