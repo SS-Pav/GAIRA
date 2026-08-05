@@ -1,0 +1,1420 @@
+{
+  "version": "mss_v1",
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "derivation": {
+    "weights": {
+      "band": 0.3,
+      "basis_cosine": 0.3,
+      "exemplar": 0.3,
+      "perturbation": 0.1
+    },
+    "band_tolerance_cm": 16.0,
+    "band_sigma_cm": 9.0,
+    "keep_threshold": 0.12,
+    "max_contributors": 6,
+    "theme_evidence_used": false,
+    "note": "V6: no theme label, parent theme or ontology weight enters any MSS quantity. MSS is an independent spectroscopy layer."
+  },
+  "n_motifs": 13,
+  "motifs": [
+    {
+      "id": "purine_ring_breathing",
+      "name": "Purine ring breathing",
+      "description": "Ring-breathing and stretching modes of the purine scaffold (adenine-type). The dominant SERS reporter for nucleic-purine chemistry; strong Ag adsorber.",
+      "bands_cm": [
+        720,
+        730,
+        1250,
+        1334,
+        1480,
+        1580
+      ],
+      "exemplars": [
+        "adenine",
+        "guanine",
+        "hypoxanthine",
+        "xanthine"
+      ],
+      "non_biochemical": false,
+      "chemical_class": "",
+      "contributors": [
+        {
+          "component": 3,
+          "raw": 0.864420785480483,
+          "band": 0.8333,
+          "basis_cosine": 0.8047,
+          "exemplar": 0.91,
+          "perturbation": 1.0,
+          "n_dose": 7,
+          "matched_analytes": [
+            "adenine"
+          ],
+          "weight": 0.3549
+        },
+        {
+          "component": 15,
+          "raw": 0.5307776138519833,
+          "band": 0.3333,
+          "basis_cosine": 0.1026,
+          "exemplar": 1.0,
+          "perturbation": 1.0,
+          "n_dose": 4,
+          "matched_analytes": [
+            "guanine",
+            "xanthine"
+          ],
+          "weight": 0.2179
+        },
+        {
+          "component": 0,
+          "raw": 0.294436258313431,
+          "band": 0.3333,
+          "basis_cosine": 0.3148,
+          "exemplar": 0.0,
+          "perturbation": 1.0,
+          "n_dose": 7,
+          "matched_analytes": [],
+          "weight": 0.1209
+        },
+        {
+          "component": 2,
+          "raw": 0.2674672897861088,
+          "band": 0.3333,
+          "basis_cosine": 0.2249,
+          "exemplar": 0.0,
+          "perturbation": 1.0,
+          "n_dose": 5,
+          "matched_analytes": [],
+          "weight": 0.1098
+        },
+        {
+          "component": 13,
+          "raw": 0.24126140077894634,
+          "band": 0.3333,
+          "basis_cosine": 0.1375,
+          "exemplar": 0.0,
+          "perturbation": 1.0,
+          "n_dose": 7,
+          "matched_analytes": [],
+          "weight": 0.0991
+        },
+        {
+          "component": 18,
+          "raw": 0.23725183287852747,
+          "band": 0.3333,
+          "basis_cosine": 0.1242,
+          "exemplar": 0.0,
+          "perturbation": 1.0,
+          "n_dose": 6,
+          "matched_analytes": [],
+          "weight": 0.0974
+        }
+      ],
+      "confidence": 0.6826,
+      "stability": 0.8192,
+      "evidence_breadth": 0.8333,
+      "spectral_purity": 0.0771,
+      "coverage_analytes": [],
+      "reference_analytes": [
+        "adenine",
+        "guanine",
+        "xanthine"
+      ],
+      "perturbation": {}
+    },
+    {
+      "id": "oxopurine_carbonyl",
+      "name": "Oxopurine carbonyl",
+      "description": "2,6-dioxopurine ring + carbonyl modes shared by xanthine/urate/guanine. The subgroup that responds when purines are oxidised (e.g. uricase depletion).",
+      "bands_cm": [
+        640,
+        938,
+        1230,
+        1330,
+        1580,
+        1660
+      ],
+      "exemplars": [
+        "xanthine",
+        "guanine",
+        "urate",
+        "hypoxanthine"
+      ],
+      "non_biochemical": false,
+      "chemical_class": "",
+      "contributors": [
+        {
+          "component": 15,
+          "raw": 0.6526372424535675,
+          "band": 0.6667,
+          "basis_cosine": 0.3977,
+          "exemplar": 1.0,
+          "perturbation": 0.3333,
+          "n_dose": 4,
+          "matched_analytes": [
+            "guanine",
+            "xanthine"
+          ],
+          "weight": 0.3743
+        },
+        {
+          "component": 20,
+          "raw": 0.269323103767671,
+          "band": 0.1667,
+          "basis_cosine": 0.2244,
+          "exemplar": 0.5067,
+          "perturbation": 0.0,
+          "n_dose": 4,
+          "matched_analytes": [
+            "urate"
+          ],
+          "weight": 0.1545
+        },
+        {
+          "component": 0,
+          "raw": 0.2306036901588968,
+          "band": 0.3333,
+          "basis_cosine": 0.3242,
+          "exemplar": 0.0,
+          "perturbation": 0.3333,
+          "n_dose": 7,
+          "matched_analytes": [],
+          "weight": 0.1323
+        },
+        {
+          "component": 7,
+          "raw": 0.21561085975803518,
+          "band": 0.3333,
+          "basis_cosine": 0.3854,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 3,
+          "matched_analytes": [],
+          "weight": 0.1237
+        },
+        {
+          "component": 2,
+          "raw": 0.19755537191839195,
+          "band": 0.3333,
+          "basis_cosine": 0.2696,
+          "exemplar": 0.0,
+          "perturbation": 0.1667,
+          "n_dose": 5,
+          "matched_analytes": [],
+          "weight": 0.1133
+        },
+        {
+          "component": 17,
+          "raw": 0.1777631826751284,
+          "band": 0.1667,
+          "basis_cosine": 0.2325,
+          "exemplar": 0.1933,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [
+            "urate"
+          ],
+          "weight": 0.102
+        }
+      ],
+      "confidence": 0.6232,
+      "stability": 0.8309,
+      "evidence_breadth": 0.75,
+      "spectral_purity": 0.0724,
+      "coverage_analytes": [],
+      "reference_analytes": [
+        "guanine",
+        "urate",
+        "xanthine"
+      ],
+      "perturbation": {}
+    },
+    {
+      "id": "pyrimidine_ring",
+      "name": "Pyrimidine ring",
+      "description": "Ring modes of the pyrimidine scaffold (uracil / cytosine / thymine). Weaker Ag adsorber than purines; distinguished by the ~790 cm^-1 ring mode.",
+      "bands_cm": [
+        560,
+        578,
+        790,
+        1236,
+        1396,
+        1660
+      ],
+      "exemplars": [
+        "uracil",
+        "cytosine",
+        "thymine",
+        "uridine"
+      ],
+      "non_biochemical": false,
+      "chemical_class": "",
+      "contributors": [
+        {
+          "component": 17,
+          "raw": 0.7443575616280517,
+          "band": 0.8333,
+          "basis_cosine": 0.6479,
+          "exemplar": 1.0,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [
+            "cytosine",
+            "uracil"
+          ],
+          "weight": 0.3719
+        },
+        {
+          "component": 13,
+          "raw": 0.45841961210183113,
+          "band": 0.3333,
+          "basis_cosine": 0.1947,
+          "exemplar": 1.0,
+          "perturbation": 0.0,
+          "n_dose": 7,
+          "matched_analytes": [
+            "thymine"
+          ],
+          "weight": 0.229
+        },
+        {
+          "component": 23,
+          "raw": 0.3652639623245064,
+          "band": 0.3333,
+          "basis_cosine": 0.3659,
+          "exemplar": 0.5183,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [
+            "cytosine"
+          ],
+          "weight": 0.1825
+        },
+        {
+          "component": 7,
+          "raw": 0.1566266010783176,
+          "band": 0.1667,
+          "basis_cosine": 0.3554,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 3,
+          "matched_analytes": [],
+          "weight": 0.0783
+        },
+        {
+          "component": 14,
+          "raw": 0.14033690545091246,
+          "band": 0.3333,
+          "basis_cosine": 0.1345,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [],
+          "weight": 0.0701
+        },
+        {
+          "component": 21,
+          "raw": 0.13659803949614055,
+          "band": 0.3333,
+          "basis_cosine": 0.122,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [],
+          "weight": 0.0682
+        }
+      ],
+      "confidence": 0.4875,
+      "stability": 0.78,
+      "evidence_breadth": 0.625,
+      "spectral_purity": 0.1155,
+      "coverage_analytes": [],
+      "reference_analytes": [
+        "cytosine",
+        "thymine",
+        "uracil"
+      ],
+      "perturbation": {}
+    },
+    {
+      "id": "aromatic_ring_residue",
+      "name": "Aromatic amino-acid residue",
+      "description": "Aromatic side-chain ring modes \u2014 phenylalanine 1004 cm^-1 ring breathing, tyrosine 828/850 Fermi doublet, tryptophan ring modes.",
+      "bands_cm": [
+        640,
+        828,
+        852,
+        1006,
+        1178,
+        1614
+      ],
+      "exemplars": [
+        "phenylalanine",
+        "tyrosine",
+        "tryptophan"
+      ],
+      "non_biochemical": false,
+      "chemical_class": "",
+      "contributors": [
+        {
+          "component": 5,
+          "raw": 0.6873529434152188,
+          "band": 0.6667,
+          "basis_cosine": 0.6245,
+          "exemplar": 1.0,
+          "perturbation": 0.0,
+          "n_dose": 7,
+          "matched_analytes": [
+            "phenylalanine",
+            "tyrosine"
+          ],
+          "weight": 0.3305
+        },
+        {
+          "component": 6,
+          "raw": 0.440990620628247,
+          "band": 0.1667,
+          "basis_cosine": 0.4175,
+          "exemplar": 0.8858,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [
+            "phenylalanine",
+            "tryptophan"
+          ],
+          "weight": 0.212
+        },
+        {
+          "component": 11,
+          "raw": 0.3512846003210268,
+          "band": 0.1667,
+          "basis_cosine": 0.4059,
+          "exemplar": 0.5983,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [
+            "alanine"
+          ],
+          "weight": 0.1689
+        },
+        {
+          "component": 22,
+          "raw": 0.21998070514470067,
+          "band": 0.3333,
+          "basis_cosine": 0.1016,
+          "exemplar": 0.2983,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [
+            "tryptophan"
+          ],
+          "weight": 0.1058
+        },
+        {
+          "component": 15,
+          "raw": 0.1904169781615878,
+          "band": 0.1667,
+          "basis_cosine": 0.2472,
+          "exemplar": 0.2208,
+          "perturbation": 0.0,
+          "n_dose": 4,
+          "matched_analytes": [
+            "tyrosine"
+          ],
+          "weight": 0.0916
+        },
+        {
+          "component": 19,
+          "raw": 0.18966197783847677,
+          "band": 0.5,
+          "basis_cosine": 0.1322,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [],
+          "weight": 0.0912
+        }
+      ],
+      "confidence": 0.5689,
+      "stability": 0.8032,
+      "evidence_breadth": 0.7083,
+      "spectral_purity": 0.0679,
+      "coverage_analytes": [],
+      "reference_analytes": [
+        "alanine",
+        "phenylalanine",
+        "tryptophan",
+        "tyrosine"
+      ],
+      "perturbation": {}
+    },
+    {
+      "id": "protein_amide_backbone",
+      "name": "Protein amide backbone",
+      "description": "Peptide backbone signature \u2014 amide I (~1650), amide III (~1240), C\u03b1-C and backbone skeletal modes. Broad, mixture-dominated in real proteins.",
+      "bands_cm": [
+        856,
+        1000,
+        1130,
+        1240,
+        1336,
+        1654
+      ],
+      "exemplars": [
+        "albumin",
+        "ubiquitin",
+        "trypsin",
+        "superoxide dismutases"
+      ],
+      "non_biochemical": false,
+      "chemical_class": "",
+      "contributors": [
+        {
+          "component": 2,
+          "raw": 0.667499263810928,
+          "band": 0.8333,
+          "basis_cosine": 0.3361,
+          "exemplar": 1.0,
+          "perturbation": 0.1667,
+          "n_dose": 5,
+          "matched_analytes": [
+            "superoxide dismutases",
+            "trypsin",
+            "trypsinogen",
+            "ubiquitin"
+          ],
+          "weight": 0.3992
+        },
+        {
+          "component": 11,
+          "raw": 0.2327404311570912,
+          "band": 0.3333,
+          "basis_cosine": 0.3869,
+          "exemplar": 0.0,
+          "perturbation": 0.1667,
+          "n_dose": 5,
+          "matched_analytes": [],
+          "weight": 0.1392
+        },
+        {
+          "component": 0,
+          "raw": 0.21178516935818023,
+          "band": 0.3333,
+          "basis_cosine": 0.3171,
+          "exemplar": 0.0,
+          "perturbation": 0.1667,
+          "n_dose": 7,
+          "matched_analytes": [],
+          "weight": 0.1267
+        },
+        {
+          "component": 18,
+          "raw": 0.20039355223100663,
+          "band": 0.3333,
+          "basis_cosine": 0.3346,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [],
+          "weight": 0.1198
+        },
+        {
+          "component": 7,
+          "raw": 0.18152370202350995,
+          "band": 0.1667,
+          "basis_cosine": 0.4384,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 3,
+          "matched_analytes": [],
+          "weight": 0.1086
+        },
+        {
+          "component": 10,
+          "raw": 0.17818343032775033,
+          "band": 0.3333,
+          "basis_cosine": 0.2051,
+          "exemplar": 0.0,
+          "perturbation": 0.1667,
+          "n_dose": 4,
+          "matched_analytes": [],
+          "weight": 0.1066
+        }
+      ],
+      "confidence": 0.6302,
+      "stability": 0.8897,
+      "evidence_breadth": 0.7083,
+      "spectral_purity": 0.0865,
+      "coverage_analytes": [],
+      "reference_analytes": [
+        "superoxide dismutases",
+        "trypsin",
+        "trypsinogen",
+        "ubiquitin"
+      ],
+      "perturbation": {}
+    },
+    {
+      "id": "lipid_acyl_chain",
+      "name": "Lipid acyl chain",
+      "description": "Aliphatic acyl-chain modes \u2014 CH2 twist (~1300), scissor (~1440), C-C skeletal (~1060/1130), C=C (~1654). Shared by fatty acids and triglycerides.",
+      "bands_cm": [
+        1062,
+        1130,
+        1260,
+        1302,
+        1442,
+        1654
+      ],
+      "exemplars": [
+        "elaidic acid",
+        "arachidonic acid",
+        "palmitic acid",
+        "tripalmitolein"
+      ],
+      "non_biochemical": false,
+      "chemical_class": "",
+      "contributors": [
+        {
+          "component": 7,
+          "raw": 0.5417010668888934,
+          "band": 0.6667,
+          "basis_cosine": 0.5732,
+          "exemplar": 0.5658,
+          "perturbation": 0.0,
+          "n_dose": 3,
+          "matched_analytes": [
+            "arachidonic acid"
+          ],
+          "weight": 0.2712
+        },
+        {
+          "component": 16,
+          "raw": 0.44382177090731756,
+          "band": 0.5,
+          "basis_cosine": 0.6261,
+          "exemplar": 0.3533,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [
+            "palmitic acid"
+          ],
+          "weight": 0.2222
+        },
+        {
+          "component": 1,
+          "raw": 0.382093237711635,
+          "band": 0.3333,
+          "basis_cosine": 0.5011,
+          "exemplar": 0.4392,
+          "perturbation": 0.0,
+          "n_dose": 4,
+          "matched_analytes": [
+            "elaidic acid",
+            "tripalmitolein"
+          ],
+          "weight": 0.1913
+        },
+        {
+          "component": 10,
+          "raw": 0.22650677906685945,
+          "band": 0.5,
+          "basis_cosine": 0.255,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 4,
+          "matched_analytes": [],
+          "weight": 0.1134
+        },
+        {
+          "component": 12,
+          "raw": 0.20761334107584672,
+          "band": 0.5,
+          "basis_cosine": 0.192,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [],
+          "weight": 0.1039
+        },
+        {
+          "component": 2,
+          "raw": 0.19588284560793773,
+          "band": 0.3333,
+          "basis_cosine": 0.3196,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [],
+          "weight": 0.0981
+        }
+      ],
+      "confidence": 0.5496,
+      "stability": 0.8794,
+      "evidence_breadth": 0.625,
+      "spectral_purity": 0.0432,
+      "coverage_analytes": [],
+      "reference_analytes": [
+        "arachidonic acid",
+        "elaidic acid",
+        "palmitic acid",
+        "tripalmitolein"
+      ],
+      "perturbation": {}
+    },
+    {
+      "id": "sterol_ring_system",
+      "name": "Sterol ring system",
+      "description": "Fused steroid ring skeletal modes (cholesterol / estrone family). Weakly represented in the reference corpus \u2014 a low-coverage motif, flagged as such.",
+      "bands_cm": [
+        536,
+        700,
+        1250,
+        1440,
+        1670
+      ],
+      "exemplars": [
+        "estrone",
+        "cholesterol",
+        "diethylstilbestrol"
+      ],
+      "non_biochemical": false,
+      "chemical_class": "",
+      "contributors": [
+        {
+          "component": 3,
+          "raw": 0.35840773429742034,
+          "band": 0.4,
+          "basis_cosine": 0.1855,
+          "exemplar": 0.6092,
+          "perturbation": 0.0,
+          "n_dose": 7,
+          "matched_analytes": [
+            "estrone"
+          ],
+          "weight": 0.2444
+        },
+        {
+          "component": 7,
+          "raw": 0.2775013905262995,
+          "band": 0.6,
+          "basis_cosine": 0.325,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 3,
+          "matched_analytes": [],
+          "weight": 0.1892
+        },
+        {
+          "component": 2,
+          "raw": 0.26742967445637855,
+          "band": 0.4,
+          "basis_cosine": 0.4914,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [],
+          "weight": 0.1824
+        },
+        {
+          "component": 8,
+          "raw": 0.19661185300066153,
+          "band": 0.0,
+          "basis_cosine": 0.029,
+          "exemplar": 0.5708,
+          "perturbation": 0.1667,
+          "n_dose": 6,
+          "matched_analytes": [
+            "diethylstilbestrol"
+          ],
+          "weight": 0.1341
+        },
+        {
+          "component": 15,
+          "raw": 0.1850449893197566,
+          "band": 0.4,
+          "basis_cosine": 0.1613,
+          "exemplar": 0.0,
+          "perturbation": 0.1667,
+          "n_dose": 4,
+          "matched_analytes": [],
+          "weight": 0.1262
+        },
+        {
+          "component": 1,
+          "raw": 0.18151123841947378,
+          "band": 0.2,
+          "basis_cosine": 0.405,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 4,
+          "matched_analytes": [],
+          "weight": 0.1238
+        }
+      ],
+      "confidence": 0.5244,
+      "stability": 0.8989,
+      "evidence_breadth": 0.5833,
+      "spectral_purity": 0.0183,
+      "coverage_analytes": [],
+      "reference_analytes": [
+        "diethylstilbestrol",
+        "estrone"
+      ],
+      "perturbation": {}
+    },
+    {
+      "id": "glycan_co_network",
+      "name": "Glycan C-O network",
+      "description": "Carbohydrate C-O / C-C / C-O-C ring and anomeric modes. Congested 450-1150 cm^-1 region shared across mono- and poly-saccharides.",
+      "bands_cm": [
+        816,
+        872,
+        916,
+        1054,
+        1108,
+        1122
+      ],
+      "exemplars": [
+        "glucose",
+        "galactose",
+        "fructose",
+        "cellulose"
+      ],
+      "non_biochemical": false,
+      "chemical_class": "",
+      "contributors": [
+        {
+          "component": 10,
+          "raw": 0.6275603256252666,
+          "band": 0.6667,
+          "basis_cosine": 0.4252,
+          "exemplar": 1.0,
+          "perturbation": 0.0,
+          "n_dose": 4,
+          "matched_analytes": [
+            "d glucose",
+            "glucose"
+          ],
+          "weight": 0.2006
+        },
+        {
+          "component": 18,
+          "raw": 0.5951315162835003,
+          "band": 0.5,
+          "basis_cosine": 0.4838,
+          "exemplar": 1.0,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [
+            "cellulose",
+            "lactose"
+          ],
+          "weight": 0.1902
+        },
+        {
+          "component": 4,
+          "raw": 0.5889497575143643,
+          "band": 0.5,
+          "basis_cosine": 0.4632,
+          "exemplar": 1.0,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [
+            "fructose",
+            "galactose"
+          ],
+          "weight": 0.1882
+        },
+        {
+          "component": 20,
+          "raw": 0.4808708942894926,
+          "band": 0.3333,
+          "basis_cosine": 0.214,
+          "exemplar": 1.0,
+          "perturbation": 0.1667,
+          "n_dose": 4,
+          "matched_analytes": [
+            "fructose"
+          ],
+          "weight": 0.1537
+        },
+        {
+          "component": 12,
+          "raw": 0.4679581755677832,
+          "band": 0.3333,
+          "basis_cosine": 0.2265,
+          "exemplar": 1.0,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [
+            "d glucose",
+            "glucose"
+          ],
+          "weight": 0.1496
+        },
+        {
+          "component": 21,
+          "raw": 0.3681115215844644,
+          "band": 0.3333,
+          "basis_cosine": 0.1104,
+          "exemplar": 0.7833,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [
+            "fructose 6 phosphate"
+          ],
+          "weight": 0.1177
+        }
+      ],
+      "confidence": 0.6095,
+      "stability": 0.7699,
+      "evidence_breadth": 0.7917,
+      "spectral_purity": 0.0087,
+      "coverage_analytes": [],
+      "reference_analytes": [
+        "cellulose",
+        "d glucose",
+        "fructose",
+        "fructose 6 phosphate",
+        "galactose",
+        "glucose",
+        "lactose"
+      ],
+      "perturbation": {}
+    },
+    {
+      "id": "carboxylate_organic_acid",
+      "name": "Carboxylate / organic acid",
+      "description": "Carboxylate symmetric stretch (~1400) and C-COO / skeletal modes of small TCA-cycle and metabolic acids.",
+      "bands_cm": [
+        760,
+        940,
+        1382,
+        1398,
+        1628
+      ],
+      "exemplars": [
+        "citrate",
+        "succinic acid",
+        "pyruvate",
+        "fumarate"
+      ],
+      "non_biochemical": false,
+      "chemical_class": "",
+      "contributors": [
+        {
+          "component": 23,
+          "raw": 0.6041192207760926,
+          "band": 0.8,
+          "basis_cosine": 0.2137,
+          "exemplar": 1.0,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [
+            "citrate",
+            "phosphoenolpyruvate",
+            "pyruvate"
+          ],
+          "weight": 0.3393
+        },
+        {
+          "component": 14,
+          "raw": 0.5937986725366723,
+          "band": 0.6,
+          "basis_cosine": 0.4677,
+          "exemplar": 0.9117,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [
+            "citrate",
+            "succinic acid"
+          ],
+          "weight": 0.3335
+        },
+        {
+          "component": 22,
+          "raw": 0.29159863329821795,
+          "band": 0.2,
+          "basis_cosine": 0.3062,
+          "exemplar": 0.4658,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [
+            "fumarate"
+          ],
+          "weight": 0.1638
+        },
+        {
+          "component": 17,
+          "raw": 0.15482791314591646,
+          "band": 0.4,
+          "basis_cosine": 0.1161,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [],
+          "weight": 0.0869
+        },
+        {
+          "component": 13,
+          "raw": 0.13636316208095806,
+          "band": 0.2,
+          "basis_cosine": 0.2545,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 7,
+          "matched_analytes": [],
+          "weight": 0.0766
+        }
+      ],
+      "confidence": 0.4965,
+      "stability": 0.7639,
+      "evidence_breadth": 0.65,
+      "spectral_purity": 0.1063,
+      "coverage_analytes": [],
+      "reference_analytes": [
+        "citrate",
+        "fumarate",
+        "phosphoenolpyruvate",
+        "pyruvate",
+        "succinic acid"
+      ],
+      "perturbation": {}
+    },
+    {
+      "id": "sulfur_heterocycle_thione",
+      "name": "Sulfur heterocycle / thione",
+      "description": "Thione / thiol and C-S modes \u2014 the ergothioneine thione ring and cysteine/ glutathione thiols. Strong Ag chemisorbers; the cleanest SERS antioxidant reporter.",
+      "bands_cm": [
+        536,
+        640,
+        674,
+        838,
+        970,
+        1200
+      ],
+      "exemplars": [
+        "ergothioneine",
+        "cysteine",
+        "glutathione",
+        "methionine"
+      ],
+      "non_biochemical": false,
+      "chemical_class": "",
+      "contributors": [
+        {
+          "component": 19,
+          "raw": 0.5332176778605331,
+          "band": 0.6667,
+          "basis_cosine": 0.4774,
+          "exemplar": 0.5283,
+          "perturbation": 0.315,
+          "n_dose": 5,
+          "matched_analytes": [
+            "cysteine",
+            "ergothioneine"
+          ],
+          "weight": 0.2625
+        },
+        {
+          "component": 15,
+          "raw": 0.38809393825848987,
+          "band": 0.1667,
+          "basis_cosine": 0.3239,
+          "exemplar": 0.6567,
+          "perturbation": 0.4393,
+          "n_dose": 4,
+          "matched_analytes": [
+            "cysteine",
+            "methionine"
+          ],
+          "weight": 0.191
+        },
+        {
+          "component": 21,
+          "raw": 0.34653136136192564,
+          "band": 0.3333,
+          "basis_cosine": 0.3826,
+          "exemplar": 0.4392,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [
+            "ergothioneine"
+          ],
+          "weight": 0.1706
+        },
+        {
+          "component": 5,
+          "raw": 0.2775403423401929,
+          "band": 0.3333,
+          "basis_cosine": 0.4322,
+          "exemplar": 0.0,
+          "perturbation": 0.4787,
+          "n_dose": 7,
+          "matched_analytes": [],
+          "weight": 0.1366
+        },
+        {
+          "component": 3,
+          "raw": 0.24317536523319883,
+          "band": 0.1667,
+          "basis_cosine": 0.1133,
+          "exemplar": 0.4267,
+          "perturbation": 0.312,
+          "n_dose": 7,
+          "matched_analytes": [
+            "methionine"
+          ],
+          "weight": 0.1197
+        },
+        {
+          "component": 20,
+          "raw": 0.24304703682334444,
+          "band": 0.1667,
+          "basis_cosine": 0.2287,
+          "exemplar": 0.3158,
+          "perturbation": 0.297,
+          "n_dose": 4,
+          "matched_analytes": [
+            "cysteine"
+          ],
+          "weight": 0.1196
+        }
+      ],
+      "confidence": 0.7234,
+      "stability": 0.7891,
+      "evidence_breadth": 0.9167,
+      "spectral_purity": 0.0239,
+      "coverage_analytes": [],
+      "reference_analytes": [
+        "cysteine",
+        "ergothioneine",
+        "methionine"
+      ],
+      "perturbation": {}
+    },
+    {
+      "id": "porphyrin_macrocycle",
+      "name": "Porphyrin macrocycle",
+      "description": "Resonance-enhanced tetrapyrrole macrocycle modes of heme proteins (hemoglobin, myoglobin, cytochrome c) \u2014 pyrrole breathing and C\u03b1-Cm stretches.",
+      "bands_cm": [
+        750,
+        1130,
+        1362,
+        1590,
+        1620
+      ],
+      "exemplars": [
+        "hemoglobin",
+        "myoglobin",
+        "cytochrome c",
+        "melanin"
+      ],
+      "non_biochemical": false,
+      "chemical_class": "",
+      "contributors": [
+        {
+          "component": 8,
+          "raw": 0.6764337203667957,
+          "band": 0.6,
+          "basis_cosine": 0.6548,
+          "exemplar": 1.0,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [
+            "cytochrome c",
+            "hemoglobin",
+            "melanin",
+            "myoglobin"
+          ],
+          "weight": 0.3277
+        },
+        {
+          "component": 13,
+          "raw": 0.49136769109950523,
+          "band": 0.4,
+          "basis_cosine": 0.3937,
+          "exemplar": 0.8442,
+          "perturbation": 0.0,
+          "n_dose": 7,
+          "matched_analytes": [
+            "cytochrome c",
+            "hemoglobin",
+            "myoglobin"
+          ],
+          "weight": 0.2381
+        },
+        {
+          "component": 0,
+          "raw": 0.43687762902885685,
+          "band": 0.6,
+          "basis_cosine": 0.3521,
+          "exemplar": 0.5042,
+          "perturbation": 0.0,
+          "n_dose": 7,
+          "matched_analytes": [
+            "hemoglobin",
+            "myoglobin"
+          ],
+          "weight": 0.2117
+        },
+        {
+          "component": 22,
+          "raw": 0.15865880540399024,
+          "band": 0.4,
+          "basis_cosine": 0.1289,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [],
+          "weight": 0.0769
+        },
+        {
+          "component": 18,
+          "raw": 0.15081504555660696,
+          "band": 0.2,
+          "basis_cosine": 0.3027,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [],
+          "weight": 0.0731
+        },
+        {
+          "component": 2,
+          "raw": 0.14997061647602783,
+          "band": 0.4,
+          "basis_cosine": 0.0999,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [],
+          "weight": 0.0727
+        }
+      ],
+      "confidence": 0.5153,
+      "stability": 0.8245,
+      "evidence_breadth": 0.625,
+      "spectral_purity": 0.0987,
+      "coverage_analytes": [],
+      "reference_analytes": [
+        "cytochrome c",
+        "hemoglobin",
+        "melanin",
+        "myoglobin"
+      ],
+      "perturbation": {}
+    },
+    {
+      "id": "flavin_redox_cofactor",
+      "name": "Flavin / redox cofactor",
+      "description": "Isoalloxazine (flavin) and related redox-cofactor ring modes \u2014 riboflavin/ FAD, ubiquinone. Resonance-enhanced; the dominant redox reporter.",
+      "bands_cm": [
+        754,
+        1178,
+        1348,
+        1408,
+        1578
+      ],
+      "exemplars": [
+        "riboflavin",
+        "ubiquinone",
+        "nadh",
+        "fad"
+      ],
+      "non_biochemical": false,
+      "chemical_class": "",
+      "contributors": [
+        {
+          "component": 0,
+          "raw": 0.7335047116041646,
+          "band": 0.8,
+          "basis_cosine": 0.645,
+          "exemplar": 1.0,
+          "perturbation": 0.0,
+          "n_dose": 7,
+          "matched_analytes": [
+            "riboflavin"
+          ],
+          "weight": 0.4316
+        },
+        {
+          "component": 22,
+          "raw": 0.3112506894567621,
+          "band": 0.6,
+          "basis_cosine": 0.4375,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [],
+          "weight": 0.1831
+        },
+        {
+          "component": 8,
+          "raw": 0.2093687011397392,
+          "band": 0.4,
+          "basis_cosine": 0.2979,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [],
+          "weight": 0.1232
+        },
+        {
+          "component": 17,
+          "raw": 0.18533168292118585,
+          "band": 0.2,
+          "basis_cosine": 0.0569,
+          "exemplar": 0.3608,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [
+            "riboflavin"
+          ],
+          "weight": 0.109
+        },
+        {
+          "component": 2,
+          "raw": 0.1394614767227735,
+          "band": 0.4,
+          "basis_cosine": 0.0649,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [],
+          "weight": 0.0821
+        },
+        {
+          "component": 13,
+          "raw": 0.12071066565605518,
+          "band": 0.2,
+          "basis_cosine": 0.2024,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 7,
+          "matched_analytes": [],
+          "weight": 0.071
+        }
+      ],
+      "confidence": 0.4748,
+      "stability": 0.814,
+      "evidence_breadth": 0.5833,
+      "spectral_purity": 0.1259,
+      "coverage_analytes": [],
+      "reference_analytes": [
+        "riboflavin"
+      ],
+      "perturbation": {}
+    },
+    {
+      "id": "colloid_matrix_background",
+      "name": "Colloid / matrix background",
+      "description": "Non-biochemical substrate + matrix contribution (citrate capping, buffer, serum background). Reported for honesty; NOT a biochemical motif.",
+      "bands_cm": [
+        930,
+        1050,
+        1400
+      ],
+      "exemplars": [
+        "citrate",
+        "phosphate",
+        "urea"
+      ],
+      "non_biochemical": true,
+      "chemical_class": "",
+      "contributors": [
+        {
+          "component": 14,
+          "raw": 0.6546343675623761,
+          "band": 0.6667,
+          "basis_cosine": 0.5429,
+          "exemplar": 0.9725,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [
+            "citrate",
+            "phosphate"
+          ],
+          "weight": 0.2787
+        },
+        {
+          "component": 21,
+          "raw": 0.42409595380689835,
+          "band": 0.3333,
+          "basis_cosine": 0.0803,
+          "exemplar": 1.0,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [
+            "fructose 6 phosphate",
+            "ure"
+          ],
+          "weight": 0.1805
+        },
+        {
+          "component": 23,
+          "raw": 0.4162885683534921,
+          "band": 0.3333,
+          "basis_cosine": 0.1162,
+          "exemplar": 0.8825,
+          "perturbation": 0.1667,
+          "n_dose": 5,
+          "matched_analytes": [
+            "citrate"
+          ],
+          "weight": 0.1772
+        },
+        {
+          "component": 6,
+          "raw": 0.30661013438241436,
+          "band": 0.0,
+          "basis_cosine": 0.022,
+          "exemplar": 1.0,
+          "perturbation": 0.0,
+          "n_dose": 5,
+          "matched_analytes": [
+            "ure",
+            "urea"
+          ],
+          "weight": 0.1305
+        },
+        {
+          "component": 10,
+          "raw": 0.29438122996662963,
+          "band": 0.6667,
+          "basis_cosine": 0.3146,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 4,
+          "matched_analytes": [],
+          "weight": 0.1253
+        },
+        {
+          "component": 9,
+          "raw": 0.25292280768005687,
+          "band": 0.6667,
+          "basis_cosine": 0.1764,
+          "exemplar": 0.0,
+          "perturbation": 0.0,
+          "n_dose": 6,
+          "matched_analytes": [],
+          "weight": 0.1077
+        }
+      ],
+      "confidence": 0.4772,
+      "stability": 0.7635,
+      "evidence_breadth": 0.625,
+      "spectral_purity": 0.0301,
+      "coverage_analytes": [],
+      "reference_analytes": [
+        "citrate",
+        "fructose 6 phosphate",
+        "phosphate",
+        "ure",
+        "urea"
+      ],
+      "perturbation": {}
+    }
+  ]
+}
