@@ -1,0 +1,335 @@
+{
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "n_biochemical_motifs": 17,
+  "motif_ids": [
+    "purine_ring_breathing",
+    "oxopurine_carbonyl",
+    "pyrimidine_ring",
+    "nucleic_backbone_phosphate",
+    "aromatic_ring_residue",
+    "protein_amide_backbone",
+    "amino_acid_zwitterion",
+    "fatty_acyl_chain",
+    "triglyceride_ester",
+    "sterol_ring_system",
+    "glycan_co_network",
+    "polysaccharide_glycosidic",
+    "carboxylate_organic_acid",
+    "sulfur_heterocycle_thione",
+    "porphyrin_macrocycle",
+    "flavin_redox_cofactor",
+    "carotenoid_polyene"
+  ],
+  "K_range": [
+    2,
+    17
+  ],
+  "methods": [
+    "A_manual",
+    "B_activation",
+    "C_spectral",
+    "D_ontology",
+    "E_hybrid"
+  ],
+  "n_permutations": 2000,
+  "label_coverage": 0.976,
+  "interpretability_definition": "0.4*chemical_coherence + 0.3*spectral_coherence + 0.3*resolution, where chemical_coherence = 1 - normalised entropy of member analytes' chemical families, spectral_coherence = mean pairwise cosine of member motifs' implied Raman spectra, resolution = log(K)/log(K_max). Resolution is included so that a 2-theme hierarchy is not rewarded for being trivially coherent.",
+  "recoverability_definition": "kappa = (top1 - permutation_null_top1) / (1 - permutation_null_top1). Raw top-1 rises mechanically as K falls; kappa removes that.",
+  "admissibility_rule": "A theme must span at most one non-bridging chemical superclass. Superclasses fixed on chemistry before scoring; phosphate_ester is the only BRIDGING class.",
+  "superclass_map": {
+    "nucleobase_purine": "nucleic",
+    "nucleobase_pyrimidine": "nucleic",
+    "phosphate_ester": "BRIDGING",
+    "aromatic_sidechain": "protein",
+    "polypeptide": "protein",
+    "free_amino_acid": "protein",
+    "fatty_acid": "lipid",
+    "acylglycerol": "lipid",
+    "sterol": "lipid",
+    "monosaccharide": "carbohydrate",
+    "polysaccharide": "carbohydrate",
+    "organic_acid": "metabolite",
+    "sulfur_metabolite": "metabolite",
+    "tetrapyrrole": "cofactor",
+    "redox_cofactor": "cofactor",
+    "polyene": "cofactor"
+  },
+  "n_admissible": 21,
+  "n_total": 70,
+  "raw_score_optimum": {
+    "method": "C_spectral",
+    "K": 13,
+    "kappa": 0.5948,
+    "interpretability": 0.7604,
+    "score_kappa_x_interp": 0.4523,
+    "chemically_admissible": false,
+    "theme_names": "Purine | Oxopurine | Pyrimidine | Monosaccharide + Phosphate | Aromatic residue | Polysaccharide + Protein | Free amino acid | Acyl lipid | Sterol | Organic acid | Sulfur metabolite | Flavin + Porphyrin | Carotenoid"
+  },
+  "tie_break_tolerance": 0.02,
+  "selected": {
+    "method": "E_hybrid",
+    "K": 13,
+    "top1": 0.6135,
+    "null_top1": 0.1629,
+    "kappa": 0.5383,
+    "macro_f1": 0.5014,
+    "balanced_acc": 0.5543,
+    "ece": 0.2818,
+    "interpretability": 0.7991,
+    "score_kappa_x_interp": 0.4301,
+    "chemically_admissible": true,
+    "theme_names": "Purine | Pyrimidine | Monosaccharide + Phosphate | Aromatic residue | Protein backbone | Free amino acid | Acyl lipid | Sterol | Polysaccharide | Organic acid | Sulfur metabolite | Flavin + Porphyrin | Carotenoid"
+  },
+  "pareto_front": [
+    {
+      "method": "C_spectral",
+      "K": 13,
+      "kappa": 0.5948,
+      "interpretability": 0.7604,
+      "score_kappa_x_interp": 0.4523,
+      "top1": 0.6687,
+      "null_top1": 0.1823,
+      "chemically_admissible": false,
+      "theme_names": "Purine | Oxopurine | Pyrimidine | Monosaccharide + Phosphate | Aromatic residue | Polysaccharide + Protein | Free amino acid | Acyl lipid | Sterol | Organic acid | Sulfur metabolite | Flavin + Porphyrin | Carotenoid"
+    },
+    {
+      "method": "B_activation",
+      "K": 17,
+      "kappa": 0.5248,
+      "interpretability": 0.8422,
+      "score_kappa_x_interp": 0.442,
+      "top1": 0.5706,
+      "null_top1": 0.0963,
+      "chemically_admissible": true,
+      "theme_names": "Purine | Oxopurine | Pyrimidine | Phosphate ester | Aromatic residue | Protein backbone | Free amino acid | Fatty acyl | Acylglycerol | Sterol | Monosaccharide | Polysaccharide | Organic acid | Sulfur metabolite | Porphyrin | Flavin | Carotenoid"
+    },
+    {
+      "method": "C_spectral",
+      "K": 14,
+      "kappa": 0.5437,
+      "interpretability": 0.8072,
+      "score_kappa_x_interp": 0.4389,
+      "top1": 0.6196,
+      "null_top1": 0.1664,
+      "chemically_admissible": true,
+      "theme_names": "Purine | Oxopurine | Pyrimidine | Monosaccharide + Phosphate | Aromatic residue | Protein backbone | Free amino acid | Acyl lipid | Sterol | Polysaccharide | Organic acid | Sulfur metabolite | Flavin + Porphyrin | Carotenoid"
+    },
+    {
+      "method": "E_hybrid",
+      "K": 5,
+      "kappa": 0.8089,
+      "interpretability": 0.5421,
+      "score_kappa_x_interp": 0.4385,
+      "top1": 0.8834,
+      "null_top1": 0.3901,
+      "chemically_admissible": false,
+      "theme_names": "Flavin + Oxopurine + Porphyrin\u2026 | Pyrimidine | Free + Organic + Monosaccharide\u2026 | Aromatic + Carotenoid | Acyl lipid"
+    },
+    {
+      "method": "C_spectral",
+      "K": 11,
+      "kappa": 0.6194,
+      "interpretability": 0.688,
+      "score_kappa_x_interp": 0.4262,
+      "top1": 0.6871,
+      "null_top1": 0.1779,
+      "chemically_admissible": false,
+      "theme_names": "Purine + Sterol | Oxopurine | Pyrimidine | Monosaccharide + Phosphate | Aromatic + Carotenoid | Polysaccharide + Protein | Free amino acid | Acyl lipid | Organic acid | Sulfur metabolite | Flavin + Porphyrin"
+    },
+    {
+      "method": "E_hybrid",
+      "K": 9,
+      "kappa": 0.6778,
+      "interpretability": 0.6006,
+      "score_kappa_x_interp": 0.4071,
+      "top1": 0.7362,
+      "null_top1": 0.1812,
+      "chemically_admissible": false,
+      "theme_names": "Oxopurine + Purine + Sulfur | Pyrimidine | Monosaccharide + Phosphate | Aromatic + Carotenoid | Polysaccharide + Protein | Free + Organic | Acyl lipid | Sterol | Flavin + Porphyrin"
+    },
+    {
+      "method": "E_hybrid",
+      "K": 7,
+      "kappa": 0.7202,
+      "interpretability": 0.5498,
+      "score_kappa_x_interp": 0.3959,
+      "top1": 0.7975,
+      "null_top1": 0.2765,
+      "chemically_admissible": false,
+      "theme_names": "Oxopurine + Purine + Sulfur | Pyrimidine | Monosaccharide + Phosphate + Polysaccharide\u2026 | Aromatic + Carotenoid | Free + Organic | Acyl lipid | Flavin + Porphyrin + Sterol"
+    },
+    {
+      "method": "E_hybrid",
+      "K": 10,
+      "kappa": 0.6352,
+      "interpretability": 0.6114,
+      "score_kappa_x_interp": 0.3883,
+      "top1": 0.6994,
+      "null_top1": 0.176,
+      "chemically_admissible": false,
+      "theme_names": "Purine | Pyrimidine | Monosaccharide + Phosphate | Aromatic + Carotenoid | Polysaccharide + Protein | Free + Organic | Acyl lipid | Sterol | Sulfur metabolite | Flavin + Porphyrin"
+    },
+    {
+      "method": "E_hybrid",
+      "K": 3,
+      "kappa": 0.9138,
+      "interpretability": 0.3949,
+      "score_kappa_x_interp": 0.3609,
+      "top1": 0.9509,
+      "null_top1": 0.4309,
+      "chemically_admissible": false,
+      "theme_names": "Flavin + Oxopurine + Porphyrin\u2026 | Free + Aromatic + Organic\u2026 | Acyl lipid"
+    },
+    {
+      "method": "B_activation",
+      "K": 2,
+      "kappa": 0.9425,
+      "interpretability": 0.3729,
+      "score_kappa_x_interp": 0.3514,
+      "top1": 0.9816,
+      "null_top1": 0.6797,
+      "chemically_admissible": false,
+      "theme_names": "Free + Aromatic + Organic\u2026 | Acyl lipid"
+    },
+    {
+      "method": "E_hybrid",
+      "K": 2,
+      "kappa": 0.9425,
+      "interpretability": 0.3729,
+      "score_kappa_x_interp": 0.3514,
+      "top1": 0.9816,
+      "null_top1": 0.6797,
+      "chemically_admissible": false,
+      "theme_names": "Free + Aromatic + Organic\u2026 | Acyl lipid"
+    }
+  ],
+  "selected_partition": {
+    "K": 13,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "best_per_method": [
+    {
+      "method": "A_manual",
+      "K": 17,
+      "kappa": 0.5243,
+      "interpretability": 0.8422,
+      "score_kappa_x_interp": 0.4415,
+      "top1": 0.5706
+    },
+    {
+      "method": "B_activation",
+      "K": 17,
+      "kappa": 0.5248,
+      "interpretability": 0.8422,
+      "score_kappa_x_interp": 0.442,
+      "top1": 0.5706
+    },
+    {
+      "method": "C_spectral",
+      "K": 13,
+      "kappa": 0.5948,
+      "interpretability": 0.7604,
+      "score_kappa_x_interp": 0.4523,
+      "top1": 0.6687
+    },
+    {
+      "method": "D_ontology",
+      "K": 17,
+      "kappa": 0.5246,
+      "interpretability": 0.8422,
+      "score_kappa_x_interp": 0.4418,
+      "top1": 0.5706
+    },
+    {
+      "method": "E_hybrid",
+      "K": 17,
+      "kappa": 0.5243,
+      "interpretability": 0.8422,
+      "score_kappa_x_interp": 0.4415,
+      "top1": 0.5706
+    }
+  ]
+}

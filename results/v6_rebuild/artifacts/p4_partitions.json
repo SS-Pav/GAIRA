@@ -1,0 +1,4917 @@
+{
+  "A_manual|2": {
+    "K": 2,
+    "themes": [
+      {
+        "name": "Free + Aromatic + Flavin\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue",
+          "flavin_redox_cofactor",
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "protein_amide_backbone",
+          "purine_ring_breathing",
+          "pyrimidine_ring",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Organic + Carotenoid + Fatty\u2026",
+        "motifs": [
+          "carboxylate_organic_acid",
+          "carotenoid_polyene",
+          "fatty_acyl_chain",
+          "glycan_co_network",
+          "polysaccharide_glycosidic",
+          "sterol_ring_system",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "A_manual|3": {
+    "K": 3,
+    "themes": [
+      {
+        "name": "Nucleic acid",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Free + Aromatic + Flavin\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue",
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle",
+          "protein_amide_backbone",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Organic + Carotenoid + Fatty\u2026",
+        "motifs": [
+          "carboxylate_organic_acid",
+          "carotenoid_polyene",
+          "fatty_acyl_chain",
+          "glycan_co_network",
+          "polysaccharide_glycosidic",
+          "sterol_ring_system",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "A_manual|4": {
+    "K": 4,
+    "themes": [
+      {
+        "name": "Nucleic acid",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Protein / amino acid",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Organic + Carotenoid + Flavin\u2026",
+        "motifs": [
+          "carboxylate_organic_acid",
+          "carotenoid_polyene",
+          "flavin_redox_cofactor",
+          "glycan_co_network",
+          "polysaccharide_glycosidic",
+          "porphyrin_macrocycle",
+          "sulfur_heterocycle_thione"
+        ]
+      }
+    ]
+  },
+  "A_manual|5": {
+    "K": 5,
+    "themes": [
+      {
+        "name": "Nucleic acid",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Protein / amino acid",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Carbohydrate",
+        "motifs": [
+          "glycan_co_network",
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic + Carotenoid + Flavin\u2026",
+        "motifs": [
+          "carboxylate_organic_acid",
+          "carotenoid_polyene",
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle",
+          "sulfur_heterocycle_thione"
+        ]
+      }
+    ]
+  },
+  "A_manual|6": {
+    "K": 6,
+    "themes": [
+      {
+        "name": "Nucleic acid",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Protein / amino acid",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Carbohydrate",
+        "motifs": [
+          "glycan_co_network",
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Cofactor / redox",
+        "motifs": [
+          "carotenoid_polyene",
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle",
+          "sulfur_heterocycle_thione"
+        ]
+      }
+    ]
+  },
+  "A_manual|8": {
+    "K": 8,
+    "themes": [
+      {
+        "name": "Nucleobase",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Protein",
+        "motifs": [
+          "aromatic_ring_residue",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Carbohydrate",
+        "motifs": [
+          "glycan_co_network",
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Cofactor / redox",
+        "motifs": [
+          "carotenoid_polyene",
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle",
+          "sulfur_heterocycle_thione"
+        ]
+      }
+    ]
+  },
+  "A_manual|10": {
+    "K": 10,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Carbohydrate",
+        "motifs": [
+          "glycan_co_network",
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Cofactor / redox",
+        "motifs": [
+          "carotenoid_polyene",
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle",
+          "sulfur_heterocycle_thione"
+        ]
+      }
+    ]
+  },
+  "A_manual|12": {
+    "K": 12,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Cofactor / redox",
+        "motifs": [
+          "carotenoid_polyene",
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle",
+          "sulfur_heterocycle_thione"
+        ]
+      }
+    ]
+  },
+  "A_manual|14": {
+    "K": 14,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Fatty acyl",
+        "motifs": [
+          "fatty_acyl_chain"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Conjugated cofactor",
+        "motifs": [
+          "carotenoid_polyene",
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      }
+    ]
+  },
+  "A_manual|17": {
+    "K": 17,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Fatty acyl",
+        "motifs": [
+          "fatty_acyl_chain"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "B_activation|2": {
+    "K": 2,
+    "themes": [
+      {
+        "name": "Free + Aromatic + Organic\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue",
+          "carboxylate_organic_acid",
+          "carotenoid_polyene",
+          "flavin_redox_cofactor",
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "polysaccharide_glycosidic",
+          "porphyrin_macrocycle",
+          "protein_amide_backbone",
+          "purine_ring_breathing",
+          "pyrimidine_ring",
+          "sterol_ring_system",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "B_activation|3": {
+    "K": 3,
+    "themes": [
+      {
+        "name": "Flavin + Phosphate + Oxopurine\u2026",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "purine_ring_breathing",
+          "pyrimidine_ring",
+          "sterol_ring_system",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Free + Aromatic + Organic\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue",
+          "carboxylate_organic_acid",
+          "carotenoid_polyene",
+          "glycan_co_network",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "B_activation|4": {
+    "K": 4,
+    "themes": [
+      {
+        "name": "Flavin + Phosphate + Oxopurine\u2026",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "purine_ring_breathing",
+          "pyrimidine_ring",
+          "sterol_ring_system",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Free + Organic + Monosaccharide\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid",
+          "glycan_co_network",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "B_activation|5": {
+    "K": 5,
+    "themes": [
+      {
+        "name": "Phosphate + Oxopurine + Purine\u2026",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Free + Organic + Monosaccharide\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid",
+          "glycan_co_network",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin + Sterol",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle",
+          "sterol_ring_system"
+        ]
+      }
+    ]
+  },
+  "B_activation|6": {
+    "K": 6,
+    "themes": [
+      {
+        "name": "Phosphate + Oxopurine + Purine\u2026",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Polysaccharide + Protein",
+        "motifs": [
+          "glycan_co_network",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin + Sterol",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle",
+          "sterol_ring_system"
+        ]
+      }
+    ]
+  },
+  "B_activation|7": {
+    "K": 7,
+    "themes": [
+      {
+        "name": "Phosphate + Purine + Pyrimidine",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Oxopurine + Sulfur",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Polysaccharide + Protein",
+        "motifs": [
+          "glycan_co_network",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin + Sterol",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle",
+          "sterol_ring_system"
+        ]
+      }
+    ]
+  },
+  "B_activation|8": {
+    "K": 8,
+    "themes": [
+      {
+        "name": "Phosphate + Purine + Pyrimidine",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Oxopurine + Sulfur",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Polysaccharide + Protein",
+        "motifs": [
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin + Sterol",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      }
+    ]
+  },
+  "B_activation|9": {
+    "K": 9,
+    "themes": [
+      {
+        "name": "Phosphate + Purine + Pyrimidine",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Oxopurine + Sulfur",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Polysaccharide + Protein",
+        "motifs": [
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      }
+    ]
+  },
+  "B_activation|10": {
+    "K": 10,
+    "themes": [
+      {
+        "name": "Phosphate + Purine + Pyrimidine",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Oxopurine + Sulfur",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      }
+    ]
+  },
+  "B_activation|11": {
+    "K": 11,
+    "themes": [
+      {
+        "name": "Purine + Pyrimidine",
+        "motifs": [
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Oxopurine + Sulfur",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      }
+    ]
+  },
+  "B_activation|12": {
+    "K": 12,
+    "themes": [
+      {
+        "name": "Purine + Pyrimidine",
+        "motifs": [
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Oxopurine + Sulfur",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      }
+    ]
+  },
+  "B_activation|13": {
+    "K": 13,
+    "themes": [
+      {
+        "name": "Purine + Pyrimidine",
+        "motifs": [
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Oxopurine + Sulfur",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "B_activation|14": {
+    "K": 14,
+    "themes": [
+      {
+        "name": "Purine + Pyrimidine",
+        "motifs": [
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "B_activation|15": {
+    "K": 15,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "B_activation|16": {
+    "K": 16,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "B_activation|17": {
+    "K": 17,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Fatty acyl",
+        "motifs": [
+          "fatty_acyl_chain"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "C_spectral|2": {
+    "K": 2,
+    "themes": [
+      {
+        "name": "Aromatic + Carotenoid + Flavin\u2026",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene",
+          "flavin_redox_cofactor",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "purine_ring_breathing",
+          "sterol_ring_system",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Free + Organic + Fatty\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid",
+          "fatty_acyl_chain",
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone",
+          "pyrimidine_ring",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "C_spectral|3": {
+    "K": 3,
+    "themes": [
+      {
+        "name": "Flavin + Oxopurine + Porphyrin\u2026",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "purine_ring_breathing",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Free + Organic + Fatty\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid",
+          "fatty_acyl_chain",
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone",
+          "pyrimidine_ring",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid + Sulfur",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene",
+          "sulfur_heterocycle_thione"
+        ]
+      }
+    ]
+  },
+  "C_spectral|4": {
+    "K": 4,
+    "themes": [
+      {
+        "name": "Flavin + Oxopurine + Porphyrin\u2026",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "purine_ring_breathing",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Free + Organic + Monosaccharide\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid",
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid + Sulfur",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "C_spectral|5": {
+    "K": 5,
+    "themes": [
+      {
+        "name": "Flavin + Oxopurine + Porphyrin\u2026",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "purine_ring_breathing",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Free + Organic + Monosaccharide\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid",
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid + Sulfur",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "C_spectral|6": {
+    "K": 6,
+    "themes": [
+      {
+        "name": "Flavin + Oxopurine + Porphyrin\u2026",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "purine_ring_breathing",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate + Polysaccharide\u2026",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid + Sulfur",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "C_spectral|7": {
+    "K": 7,
+    "themes": [
+      {
+        "name": "Flavin + Oxopurine + Porphyrin\u2026",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "purine_ring_breathing",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate + Polysaccharide\u2026",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      }
+    ]
+  },
+  "C_spectral|8": {
+    "K": 8,
+    "themes": [
+      {
+        "name": "Flavin + Oxopurine + Porphyrin\u2026",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "purine_ring_breathing",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Polysaccharide + Protein",
+        "motifs": [
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      }
+    ]
+  },
+  "C_spectral|9": {
+    "K": 9,
+    "themes": [
+      {
+        "name": "Purine + Sterol",
+        "motifs": [
+          "purine_ring_breathing",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Flavin + Oxopurine + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Polysaccharide + Protein",
+        "motifs": [
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      }
+    ]
+  },
+  "C_spectral|10": {
+    "K": 10,
+    "themes": [
+      {
+        "name": "Purine + Sterol",
+        "motifs": [
+          "purine_ring_breathing",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Flavin + Oxopurine + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Polysaccharide + Protein",
+        "motifs": [
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      }
+    ]
+  },
+  "C_spectral|11": {
+    "K": 11,
+    "themes": [
+      {
+        "name": "Purine + Sterol",
+        "motifs": [
+          "purine_ring_breathing",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Polysaccharide + Protein",
+        "motifs": [
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      }
+    ]
+  },
+  "C_spectral|12": {
+    "K": 12,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Polysaccharide + Protein",
+        "motifs": [
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      }
+    ]
+  },
+  "C_spectral|13": {
+    "K": 13,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Polysaccharide + Protein",
+        "motifs": [
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "C_spectral|14": {
+    "K": 14,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "C_spectral|15": {
+    "K": 15,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "C_spectral|16": {
+    "K": 16,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "C_spectral|17": {
+    "K": 17,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Fatty acyl",
+        "motifs": [
+          "fatty_acyl_chain"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "D_ontology|6": {
+    "K": 6,
+    "themes": [
+      {
+        "name": "Free + Aromatic + Organic\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue",
+          "carboxylate_organic_acid",
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "protein_amide_backbone",
+          "purine_ring_breathing",
+          "pyrimidine_ring",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Fatty + Sterol",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "D_ontology|7": {
+    "K": 7,
+    "themes": [
+      {
+        "name": "Organic + Monosaccharide + Phosphate\u2026",
+        "motifs": [
+          "carboxylate_organic_acid",
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "protein_amide_backbone",
+          "purine_ring_breathing",
+          "pyrimidine_ring",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Free + Aromatic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Fatty + Sterol",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "D_ontology|8": {
+    "K": 8,
+    "themes": [
+      {
+        "name": "Organic + Phosphate + Oxopurine\u2026",
+        "motifs": [
+          "carboxylate_organic_acid",
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Free + Aromatic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Porphyrin + Protein\u2026",
+        "motifs": [
+          "glycan_co_network",
+          "porphyrin_macrocycle",
+          "protein_amide_backbone",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Fatty + Sterol",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "D_ontology|9": {
+    "K": 9,
+    "themes": [
+      {
+        "name": "Organic + Phosphate + Oxopurine\u2026",
+        "motifs": [
+          "carboxylate_organic_acid",
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Free + Aromatic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Porphyrin + Protein",
+        "motifs": [
+          "glycan_co_network",
+          "porphyrin_macrocycle",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Fatty + Sterol",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "D_ontology|10": {
+    "K": 10,
+    "themes": [
+      {
+        "name": "Nucleic acid",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Free + Aromatic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Porphyrin + Protein",
+        "motifs": [
+          "glycan_co_network",
+          "porphyrin_macrocycle",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Fatty + Sterol",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "D_ontology|11": {
+    "K": 11,
+    "themes": [
+      {
+        "name": "Nucleic acid",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Free + Aromatic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Porphyrin + Protein",
+        "motifs": [
+          "porphyrin_macrocycle",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Fatty + Sterol",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "D_ontology|12": {
+    "K": 12,
+    "themes": [
+      {
+        "name": "Nucleic acid",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Free + Aromatic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Fatty + Sterol",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "D_ontology|13": {
+    "K": 13,
+    "themes": [
+      {
+        "name": "Nucleic acid",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Fatty + Sterol",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "D_ontology|14": {
+    "K": 14,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Phosphate + Pyrimidine",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Fatty + Sterol",
+        "motifs": [
+          "fatty_acyl_chain",
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "D_ontology|15": {
+    "K": 15,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Phosphate + Pyrimidine",
+        "motifs": [
+          "nucleic_backbone_phosphate",
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Fatty acyl",
+        "motifs": [
+          "fatty_acyl_chain"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "D_ontology|16": {
+    "K": 16,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Fatty acyl",
+        "motifs": [
+          "fatty_acyl_chain"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "D_ontology|17": {
+    "K": 17,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Fatty acyl",
+        "motifs": [
+          "fatty_acyl_chain"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|2": {
+    "K": 2,
+    "themes": [
+      {
+        "name": "Free + Aromatic + Organic\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue",
+          "carboxylate_organic_acid",
+          "carotenoid_polyene",
+          "flavin_redox_cofactor",
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "oxopurine_carbonyl",
+          "polysaccharide_glycosidic",
+          "porphyrin_macrocycle",
+          "protein_amide_backbone",
+          "purine_ring_breathing",
+          "pyrimidine_ring",
+          "sterol_ring_system",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|3": {
+    "K": 3,
+    "themes": [
+      {
+        "name": "Flavin + Oxopurine + Porphyrin\u2026",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "purine_ring_breathing",
+          "pyrimidine_ring",
+          "sterol_ring_system",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Free + Aromatic + Organic\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue",
+          "carboxylate_organic_acid",
+          "carotenoid_polyene",
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|4": {
+    "K": 4,
+    "themes": [
+      {
+        "name": "Flavin + Oxopurine + Porphyrin\u2026",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "purine_ring_breathing",
+          "pyrimidine_ring",
+          "sterol_ring_system",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Free + Organic + Monosaccharide\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid",
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|5": {
+    "K": 5,
+    "themes": [
+      {
+        "name": "Flavin + Oxopurine + Porphyrin\u2026",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "purine_ring_breathing",
+          "sterol_ring_system",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Free + Organic + Monosaccharide\u2026",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid",
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|6": {
+    "K": 6,
+    "themes": [
+      {
+        "name": "Flavin + Oxopurine + Porphyrin\u2026",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "oxopurine_carbonyl",
+          "porphyrin_macrocycle",
+          "purine_ring_breathing",
+          "sterol_ring_system",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate + Polysaccharide\u2026",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|7": {
+    "K": 7,
+    "themes": [
+      {
+        "name": "Oxopurine + Purine + Sulfur",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate + Polysaccharide\u2026",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin + Sterol",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle",
+          "sterol_ring_system"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|8": {
+    "K": 8,
+    "themes": [
+      {
+        "name": "Oxopurine + Purine + Sulfur",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Polysaccharide + Protein",
+        "motifs": [
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin + Sterol",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle",
+          "sterol_ring_system"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|9": {
+    "K": 9,
+    "themes": [
+      {
+        "name": "Oxopurine + Purine + Sulfur",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Polysaccharide + Protein",
+        "motifs": [
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|10": {
+    "K": 10,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Polysaccharide + Protein",
+        "motifs": [
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free + Organic",
+        "motifs": [
+          "amino_acid_zwitterion",
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|11": {
+    "K": 11,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Polysaccharide + Protein",
+        "motifs": [
+          "polysaccharide_glycosidic",
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|12": {
+    "K": 12,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic + Carotenoid",
+        "motifs": [
+          "aromatic_ring_residue",
+          "carotenoid_polyene"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|13": {
+    "K": 13,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Monosaccharide + Phosphate",
+        "motifs": [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|14": {
+    "K": 14,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Flavin + Porphyrin",
+        "motifs": [
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|15": {
+    "K": 15,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|16": {
+    "K": 16,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Acyl lipid",
+        "motifs": [
+          "fatty_acyl_chain",
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  },
+  "E_hybrid|17": {
+    "K": 17,
+    "themes": [
+      {
+        "name": "Purine",
+        "motifs": [
+          "purine_ring_breathing"
+        ]
+      },
+      {
+        "name": "Oxopurine",
+        "motifs": [
+          "oxopurine_carbonyl"
+        ]
+      },
+      {
+        "name": "Pyrimidine",
+        "motifs": [
+          "pyrimidine_ring"
+        ]
+      },
+      {
+        "name": "Phosphate ester",
+        "motifs": [
+          "nucleic_backbone_phosphate"
+        ]
+      },
+      {
+        "name": "Aromatic residue",
+        "motifs": [
+          "aromatic_ring_residue"
+        ]
+      },
+      {
+        "name": "Protein backbone",
+        "motifs": [
+          "protein_amide_backbone"
+        ]
+      },
+      {
+        "name": "Free amino acid",
+        "motifs": [
+          "amino_acid_zwitterion"
+        ]
+      },
+      {
+        "name": "Fatty acyl",
+        "motifs": [
+          "fatty_acyl_chain"
+        ]
+      },
+      {
+        "name": "Acylglycerol",
+        "motifs": [
+          "triglyceride_ester"
+        ]
+      },
+      {
+        "name": "Sterol",
+        "motifs": [
+          "sterol_ring_system"
+        ]
+      },
+      {
+        "name": "Monosaccharide",
+        "motifs": [
+          "glycan_co_network"
+        ]
+      },
+      {
+        "name": "Polysaccharide",
+        "motifs": [
+          "polysaccharide_glycosidic"
+        ]
+      },
+      {
+        "name": "Organic acid",
+        "motifs": [
+          "carboxylate_organic_acid"
+        ]
+      },
+      {
+        "name": "Sulfur metabolite",
+        "motifs": [
+          "sulfur_heterocycle_thione"
+        ]
+      },
+      {
+        "name": "Porphyrin",
+        "motifs": [
+          "porphyrin_macrocycle"
+        ]
+      },
+      {
+        "name": "Flavin",
+        "motifs": [
+          "flavin_redox_cofactor"
+        ]
+      },
+      {
+        "name": "Carotenoid",
+        "motifs": [
+          "carotenoid_polyene"
+        ]
+      }
+    ]
+  }
+}
