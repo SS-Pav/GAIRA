@@ -1,0 +1,40 @@
+{
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "v1_mixing_weights": {
+    "band": 0.4,
+    "exemplar": 0.35,
+    "theme": 0.25
+  },
+  "v1_theme_source": "gaira.engine.ontology.Ontology.W[component, parent_theme]",
+  "leakage_code_sites": {
+    "src/gaira/engine/mss.py:190": "ti = self.onto.theme_index(parent)",
+    "src/gaira/engine/mss.py:195": "theme = float(self.onto.W[j, ti])",
+    "src/gaira/engine/mss.py:196": "raw = wb*band + we*exemplar + wt*theme   <-- 25% from themes",
+    "src/gaira/engine/mss.py:209": "evidence_breadth includes the theme indicator",
+    "src/gaira/engine/mss.py:169": "purine_motif = parent_theme == 'nucleic_purine' (perturbation gate)"
+  },
+  "n_contributor_edges": 70,
+  "mean_theme_share_of_raw_score": 0.1343,
+  "median_theme_share_of_raw_score": 0.1172,
+  "max_theme_share_of_raw_score": 0.639,
+  "n_edges_with_no_spectral_or_chemical_evidence": 0,
+  "n_edges_that_would_drop_below_keep_threshold": 15,
+  "edges_existing_only_because_of_theme": [],
+  "part1": {
+    "mean_component_weight_cosine_v1_v6": 0.9601,
+    "mean_activation_spearman": 0.8873,
+    "mean_band_fidelity_v1": 0.5938,
+    "mean_band_fidelity_v6": 0.6328,
+    "band_fidelity_improved_for": 12,
+    "band_fidelity_n_motifs": 13,
+    "mean_stability_v1": 0.8117,
+    "mean_stability_v6": 0.8174,
+    "breadth_v1_is_constant": true,
+    "breadth_v1_value": 0.3333,
+    "breadth_v6_range": [
+      0.583,
+      0.917
+    ],
+    "perturbation_ablation_mean_cosine_v6_vs_v6nopert": 0.9826
+  }
+}
