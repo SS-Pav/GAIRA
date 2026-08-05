@@ -1,0 +1,6 @@
+tier,analyte,family,expected_themes,predicted_theme,theme_rank,motif_rank,predicted_motif,theme_confidence,top_component,nearest_analytes
+excellent,triarachidin,triglyceride,Acyl lipid,Acyl lipid,1,1,triglyceride_ester,0.839,16,"tribehenin, tristearin, trimyristin"
+good,lauric acid,fatty_acid,Acyl lipid,Acyl lipid,1,2,triglyceride_ester,0.7716,16,"trimyristin, tristearin, trilaurin"
+moderate,(+)-galactose,saccharide,Monosaccharide + Phosphate,Purine,2,6,sulfur_heterocycle_thione,0.2002,15,"ethinylestradiol, phosphatidylinositol, hypoxanthine"
+poor,acetyl-coa,cofactor,Sulfur metabolite,Purine,6,3,purine_ring_breathing,0.16,3,"coenzyme a, hypoxanthine, ethinylestradiol"
+failure,ascorbate,organic_acid,Organic acid,Acyl lipid,10,13,fatty_acyl_chain,0.2656,20,"cholesterol, glucose oxidase, 2-deoxy-d-ribose"

@@ -1,0 +1,14 @@
+,Purine,Pyrimidine,Monosaccharide + Phosphate,Aromatic residue,Protein backbone,Free amino acid,Acyl lipid,Sterol,Polysaccharide,Organic acid,Sulfur metabolite,Flavin + Porphyrin,Carotenoid
+Purine,6,1,1,0,0,0,0,0,0,0,1,0,0
+Pyrimidine,0,2,0,0,0,0,0,0,0,0,0,1,0
+Monosaccharide + Phosphate,2,1,25,0,0,0,4,0,2,2,0,0,0
+Aromatic residue,0,0,1,1,0,1,0,0,0,0,0,1,1
+Protein backbone,0,0,0,0,2,0,18,0,1,0,1,1,0
+Free amino acid,0,0,3,0,0,4,2,0,0,2,0,0,0
+Acyl lipid,0,0,0,0,0,0,32,0,0,0,0,0,0
+Sterol,2,0,0,0,0,0,7,2,0,0,0,1,0
+Polysaccharide,0,0,0,0,0,0,0,0,5,0,0,0,0
+Organic acid,0,0,2,0,0,0,2,0,0,3,0,1,0
+Sulfur metabolite,6,0,0,0,0,1,1,0,0,0,1,0,0
+Flavin + Porphyrin,0,0,0,0,0,0,1,0,0,0,0,7,0
+Carotenoid,0,0,0,0,0,0,0,0,0,0,0,0,2
