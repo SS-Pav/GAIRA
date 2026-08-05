@@ -1,0 +1,308 @@
+{
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "continuous_space": {
+    "dim": 6,
+    "themes": [
+      "Nucleic chemistry",
+      "Carbohydrate chemistry",
+      "Protein chemistry",
+      "Lipid chemistry",
+      "Energy metabolism",
+      "Redox / pigments"
+    ],
+    "pca_explained_variance": [
+      0.5703,
+      0.1843,
+      0.1371,
+      0.0685
+    ],
+    "umap_available": true,
+    "mean_pairwise_theme_distance": 0.3244
+  },
+  "information_bottleneck": {
+    "elbow_K": 3,
+    "mi_family_motif": 0.272,
+    "at_elbow": {
+      "K": 3,
+      "explained_variance_motif": 0.5582,
+      "reconstruction_error": 0.4651,
+      "kl_divergence": 0.2218,
+      "mi_family_theme": 0.3419,
+      "mi_family_motif": 0.272,
+      "compression_ratio": 5.667,
+      "theme_entropy": 0.7806,
+      "membership_entropy": 0.0827,
+      "mean_support": 1.353,
+      "chemically_admissible": false,
+      "themes": "flavin_redox_cofactor, oxopurine_carbonyl, porphyrin_macrocycle, purine_ring_breathing, pyrimidine_ring, sterol_ring_system, sulfur_heterocycle_thione | amino_acid_zwitterion, aromatic_ring_residue, c",
+      "grouping": "hybrid_clustering",
+      "mi_retained": 1.257
+    },
+    "at_L2": {
+      "K": 6,
+      "explained_variance_motif": 0.7961,
+      "reconstruction_error": 0.316,
+      "kl_divergence": 0.177,
+      "mi_family_theme": 0.2914,
+      "mi_family_motif": 0.272,
+      "compression_ratio": 2.833,
+      "theme_entropy": 0.7899,
+      "membership_entropy": 0.0609,
+      "mean_support": 1.294,
+      "chemically_admissible": false,
+      "themes": "flavin_redox_cofactor, oxopurine_carbonyl, porphyrin_macrocycle, purine_ring_breathing, sterol_ring_system, sulfur_heterocycle_thione | pyrimidine_ring | glycan_co_network, nucleic_backbone_phosphate,",
+      "grouping": "hybrid_clustering",
+      "mi_retained": 1.0713
+    }
+  },
+  "recoverability": {
+    "motif_top1": 0.5031,
+    "n_scored": 163,
+    "worst_motifs": [
+      "purine_ring_breathing",
+      "nucleic_backbone_phosphate",
+      "fatty_acyl_chain",
+      "sterol_ring_system",
+      "aromatic_ring_residue"
+    ],
+    "top_confusions": [
+      {
+        "expected": "fatty_acyl_chain",
+        "predicted": "triglyceride_ester",
+        "n": 13,
+        "rate": 0.867,
+        "spectral_cosine": 0.938,
+        "component_overlap": 0.913,
+        "shared_components": "c16, c7, c1",
+        "overlapping_bands_cm": "1062, 1128, 1301, 1440"
+      },
+      {
+        "expected": "sterol_ring_system",
+        "predicted": "triglyceride_ester",
+        "n": 7,
+        "rate": 0.583,
+        "spectral_cosine": 0.442,
+        "component_overlap": 0.133,
+        "shared_components": "c12, c2",
+        "overlapping_bands_cm": "1128, 1440"
+      },
+      {
+        "expected": "glycan_co_network",
+        "predicted": "polysaccharide_glycosidic",
+        "n": 5,
+        "rate": 0.192,
+        "spectral_cosine": 0.707,
+        "component_overlap": 0.432,
+        "shared_components": "c18, c10",
+        "overlapping_bands_cm": "872, 916, 1108, 1122"
+      },
+      {
+        "expected": "nucleic_backbone_phosphate",
+        "predicted": "glycan_co_network",
+        "n": 3,
+        "rate": 0.3,
+        "spectral_cosine": 0.84,
+        "component_overlap": 0.596,
+        "shared_components": "c10, c4, c20",
+        "overlapping_bands_cm": "835, 920, 1052, 1094"
+      },
+      {
+        "expected": "sulfur_heterocycle_thione",
+        "predicted": "purine_ring_breathing",
+        "n": 3,
+        "rate": 0.333,
+        "spectral_cosine": 0.645,
+        "component_overlap": 0.428,
+        "shared_components": "c3, c15",
+        "overlapping_bands_cm": "\u2014"
+      },
+      {
+        "expected": "glycan_co_network",
+        "predicted": "carotenoid_polyene",
+        "n": 3,
+        "rate": 0.115,
+        "spectral_cosine": 0.516,
+        "component_overlap": 0.276,
+        "shared_components": "c12, c4",
+        "overlapping_bands_cm": "\u2014"
+      },
+      {
+        "expected": "purine_ring_breathing",
+        "predicted": "pyrimidine_ring",
+        "n": 3,
+        "rate": 0.75,
+        "spectral_cosine": 0.564,
+        "component_overlap": 0.563,
+        "shared_components": "c17, c23, c13",
+        "overlapping_bands_cm": "1250"
+      },
+      {
+        "expected": "nucleic_backbone_phosphate",
+        "predicted": "triglyceride_ester",
+        "n": 2,
+        "rate": 0.2,
+        "spectral_cosine": 0.333,
+        "component_overlap": 0.0,
+        "shared_components": "\u2014",
+        "overlapping_bands_cm": "1052"
+      }
+    ]
+  },
+  "uncertainty_propagation": {
+    "n_analytes": 87,
+    "median_coord_to_mss_ratio": 0.1088,
+    "median_mss_to_theme_ratio": 1.3912,
+    "median_theme_confidence": 0.0235,
+    "note": "linear (delta-method) propagation of the empirical replicate covariance through the two frozen linear maps"
+  },
+  "ontology_graph": {
+    "n_nodes": 25,
+    "n_edges": 51,
+    "n_multi_parent_motifs": 11,
+    "multi_parent_motifs": [
+      "oxopurine_carbonyl",
+      "nucleic_backbone_phosphate",
+      "aromatic_ring_residue",
+      "protein_amide_backbone",
+      "amino_acid_zwitterion",
+      "sterol_ring_system",
+      "polysaccharide_glycosidic",
+      "carboxylate_organic_acid",
+      "sulfur_heterocycle_thione",
+      "flavin_redox_cofactor",
+      "carotenoid_polyene"
+    ],
+    "n_communities": 5,
+    "highest_betweenness": [
+      {
+        "node": "sterol_ring_system",
+        "kind": "motif",
+        "betweenness": 0.1109
+      },
+      {
+        "node": "oxopurine_carbonyl",
+        "kind": "motif",
+        "betweenness": 0.0181
+      },
+      {
+        "node": "nucleic_backbone_phosphate",
+        "kind": "motif",
+        "betweenness": 0.0163
+      },
+      {
+        "node": "flavin_redox_cofactor",
+        "kind": "motif",
+        "betweenness": 0.0111
+      },
+      {
+        "node": "sulfur_heterocycle_thione",
+        "kind": "motif",
+        "betweenness": 0.0047
+      }
+    ]
+  },
+  "pareto": {
+    "n_pareto": 11,
+    "front": [
+      {
+        "K": 2,
+        "interpretability": 0.4817,
+        "information_retained": 0.4275,
+        "recoverability": 0.9693,
+        "stability": 1.0,
+        "compression": 8.5,
+        "chemically_admissible": false
+      },
+      {
+        "K": 3,
+        "interpretability": 0.4663,
+        "information_retained": 0.5582,
+        "recoverability": 0.8773,
+        "stability": 0.9989,
+        "compression": 5.667,
+        "chemically_admissible": false
+      },
+      {
+        "K": 4,
+        "interpretability": 0.5114,
+        "information_retained": 0.6533,
+        "recoverability": 0.7791,
+        "stability": 0.9992,
+        "compression": 4.25,
+        "chemically_admissible": false
+      },
+      {
+        "K": 5,
+        "interpretability": 0.6021,
+        "information_retained": 0.7268,
+        "recoverability": 0.7607,
+        "stability": 0.9936,
+        "compression": 3.4,
+        "chemically_admissible": false
+      },
+      {
+        "K": 6,
+        "interpretability": 0.6272,
+        "information_retained": 0.7961,
+        "recoverability": 0.6748,
+        "stability": 0.9934,
+        "compression": 2.833,
+        "chemically_admissible": false
+      },
+      {
+        "K": 7,
+        "interpretability": 0.656,
+        "information_retained": 0.8656,
+        "recoverability": 0.6933,
+        "stability": 0.9929,
+        "compression": 2.429,
+        "chemically_admissible": false
+      },
+      {
+        "K": 9,
+        "interpretability": 0.7771,
+        "information_retained": 0.928,
+        "recoverability": 0.638,
+        "stability": 0.9976,
+        "compression": 1.889,
+        "chemically_admissible": false
+      },
+      {
+        "K": 10,
+        "interpretability": 0.8388,
+        "information_retained": 0.9366,
+        "recoverability": 0.589,
+        "stability": 0.9994,
+        "compression": 1.7,
+        "chemically_admissible": false
+      },
+      {
+        "K": 11,
+        "interpretability": 0.8903,
+        "information_retained": 0.9498,
+        "recoverability": 0.5399,
+        "stability": 0.9994,
+        "compression": 1.545,
+        "chemically_admissible": false
+      },
+      {
+        "K": 13,
+        "interpretability": 0.9716,
+        "information_retained": 0.9812,
+        "recoverability": 0.5337,
+        "stability": 0.9994,
+        "compression": 1.308,
+        "chemically_admissible": true
+      },
+      {
+        "K": 17,
+        "interpretability": 1.0,
+        "information_retained": 1.0,
+        "recoverability": 0.5031,
+        "stability": 0.9999,
+        "compression": 1.0,
+        "chemically_admissible": true
+      }
+    ]
+  }
+}

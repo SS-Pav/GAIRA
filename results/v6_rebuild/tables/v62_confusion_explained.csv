@@ -1,0 +1,43 @@
+expected,predicted,n,rate,spectral_cosine,component_overlap,shared_components,overlapping_bands_cm
+fatty_acyl_chain,triglyceride_ester,13,0.867,0.938,0.913,"c16, c7, c1","1062, 1128, 1301, 1440"
+sterol_ring_system,triglyceride_ester,7,0.583,0.442,0.133,"c12, c2","1128, 1440"
+glycan_co_network,polysaccharide_glycosidic,5,0.192,0.707,0.432,"c18, c10","872, 916, 1108, 1122"
+nucleic_backbone_phosphate,glycan_co_network,3,0.3,0.84,0.596,"c10, c4, c20","835, 920, 1052, 1094"
+sulfur_heterocycle_thione,purine_ring_breathing,3,0.333,0.645,0.428,"c3, c15",—
+glycan_co_network,carotenoid_polyene,3,0.115,0.516,0.276,"c12, c4",—
+purine_ring_breathing,pyrimidine_ring,3,0.75,0.564,0.563,"c17, c23, c13",1250
+nucleic_backbone_phosphate,triglyceride_ester,2,0.2,0.333,0.0,—,1052
+amino_acid_zwitterion,carboxylate_organic_acid,2,0.182,0.644,0.525,"c14, c22","930, 1410"
+nucleic_backbone_phosphate,carboxylate_organic_acid,2,0.2,0.565,0.344,"c23, c17",920
+sulfur_heterocycle_thione,amino_acid_zwitterion,2,0.222,0.437,0.09,c21,—
+aromatic_ring_residue,amino_acid_zwitterion,2,0.4,0.448,0.264,"c11, c22","852, 1006"
+sterol_ring_system,purine_ring_breathing,2,0.167,0.711,0.448,"c3, c13",702
+protein_amide_backbone,triglyceride_ester,2,0.087,0.588,0.186,"c2, c12",1130
+oxopurine_carbonyl,sulfur_heterocycle_thione,2,0.4,0.633,0.667,"c19, c15, c20",640
+amino_acid_zwitterion,carotenoid_polyene,2,0.182,0.291,0.0,—,"1030, 1520"
+pyrimidine_ring,porphyrin_macrocycle,1,0.333,0.374,0.221,c13,—
+glycan_co_network,sulfur_heterocycle_thione,1,0.038,0.476,0.233,"c20, c21",816
+carboxylate_organic_acid,pyrimidine_ring,1,0.125,0.613,0.479,"c23, c17, c14","1382, 1398"
+carboxylate_organic_acid,fatty_acyl_chain,1,0.125,0.268,0.0,—,—
+carboxylate_organic_acid,amino_acid_zwitterion,1,0.125,0.644,0.525,"c14, c22","940, 1398"
+glycan_co_network,amino_acid_zwitterion,1,0.038,0.542,0.207,"c10, c21","872, 916, 1054"
+carboxylate_organic_acid,polysaccharide_glycosidic,1,0.125,0.507,0.344,"c14, c18",940
+oxopurine_carbonyl,nucleic_backbone_phosphate,1,0.2,0.386,0.108,c20,"938, 1230"
+sulfur_heterocycle_thione,oxopurine_carbonyl,1,0.111,0.633,0.667,"c19, c15, c20",640
+sulfur_heterocycle_thione,protein_amide_backbone,1,0.111,0.373,0.0,—,838
+glycan_co_network,triglyceride_ester,1,0.038,0.411,0.081,c12,"1054, 1108, 1122"
+nucleic_backbone_phosphate,pyrimidine_ring,1,0.1,0.639,0.633,"c17, c23, c21","788, 1240"
+glycan_co_network,protein_amide_backbone,1,0.038,0.63,0.459,"c10, c18, c12","872, 1108, 1122"
+glycan_co_network,nucleic_backbone_phosphate,1,0.038,0.84,0.596,"c10, c4, c20","816, 916, 1054, 1108"
+sterol_ring_system,porphyrin_macrocycle,1,0.083,0.78,0.6,"c8, c13, c2",1128
+nucleic_backbone_phosphate,protein_amide_backbone,1,0.1,0.526,0.148,c10,"835, 1240"
+triglyceride_ester,fatty_acyl_chain,1,0.059,0.938,0.913,"c16, c7, c1","1065, 1128, 1301, 1440"
+purine_ring_breathing,sterol_ring_system,1,0.25,0.711,0.448,"c3, c13",720
+amino_acid_zwitterion,protein_amide_backbone,1,0.091,0.509,0.236,"c14, c10","870, 1345"
+protein_amide_backbone,sulfur_heterocycle_thione,1,0.043,0.373,0.0,—,856
+protein_amide_backbone,polysaccharide_glycosidic,1,0.043,0.789,0.624,"c18, c2, c14","1130, 1336"
+protein_amide_backbone,aromatic_ring_residue,1,0.043,0.513,0.138,c6,"856, 1000"
+aromatic_ring_residue,carotenoid_polyene,1,0.2,0.76,0.613,"c6, c5","1006, 1178"
+aromatic_ring_residue,flavin_redox_cofactor,1,0.2,0.547,0.287,"c0, c22",1178
+nucleic_backbone_phosphate,sulfur_heterocycle_thione,1,0.1,0.481,0.243,"c21, c20",835
+porphyrin_macrocycle,protein_amide_backbone,1,0.167,0.445,0.149,"c2, c18",1130

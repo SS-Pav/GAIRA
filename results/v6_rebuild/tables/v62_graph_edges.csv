@@ -1,0 +1,52 @@
+source,target,weight
+purine_ring_breathing,L2·Nucleic chemistry,1.0
+oxopurine_carbonyl,L2·Nucleic chemistry,0.7254
+oxopurine_carbonyl,L2·Protein chemistry,0.0346
+oxopurine_carbonyl,L2·Energy metabolism,0.24
+pyrimidine_ring,L2·Nucleic chemistry,1.0
+nucleic_backbone_phosphate,L2·Nucleic chemistry,0.2075
+nucleic_backbone_phosphate,L2·Carbohydrate chemistry,0.7256
+nucleic_backbone_phosphate,L2·Energy metabolism,0.0669
+aromatic_ring_residue,L2·Protein chemistry,0.9242
+aromatic_ring_residue,L2·Redox / pigments,0.0758
+protein_amide_backbone,L2·Carbohydrate chemistry,0.0715
+protein_amide_backbone,L2·Protein chemistry,0.8833
+protein_amide_backbone,L2·Redox / pigments,0.0452
+amino_acid_zwitterion,L2·Carbohydrate chemistry,0.0238
+amino_acid_zwitterion,L2·Protein chemistry,0.8649
+amino_acid_zwitterion,L2·Energy metabolism,0.1112
+fatty_acyl_chain,L2·Lipid chemistry,1.0
+triglyceride_ester,L2·Lipid chemistry,1.0
+sterol_ring_system,L2·Nucleic chemistry,0.0652
+sterol_ring_system,L2·Protein chemistry,0.0325
+sterol_ring_system,L2·Lipid chemistry,0.0793
+sterol_ring_system,L2·Redox / pigments,0.823
+glycan_co_network,L2·Carbohydrate chemistry,1.0
+polysaccharide_glycosidic,L2·Carbohydrate chemistry,0.8734
+polysaccharide_glycosidic,L2·Protein chemistry,0.1266
+carboxylate_organic_acid,L2·Carbohydrate chemistry,0.0241
+carboxylate_organic_acid,L2·Protein chemistry,0.0854
+carboxylate_organic_acid,L2·Energy metabolism,0.8905
+sulfur_heterocycle_thione,L2·Nucleic chemistry,0.0794
+sulfur_heterocycle_thione,L2·Energy metabolism,0.9206
+porphyrin_macrocycle,L2·Redox / pigments,1.0
+flavin_redox_cofactor,L2·Nucleic chemistry,0.0227
+flavin_redox_cofactor,L2·Redox / pigments,0.9773
+carotenoid_polyene,L2·Protein chemistry,0.6536
+carotenoid_polyene,L2·Redox / pigments,0.3464
+L2·Nucleic chemistry,L3·Energy + Nucleic,1.0
+L2·Nucleic chemistry,L3·Protein + Redox,0.0441
+L2·Carbohydrate chemistry,L3·Energy + Nucleic,0.2781
+L2·Carbohydrate chemistry,L3·Carbohydrate chemistry,1.0
+L2·Carbohydrate chemistry,L3·Protein + Redox,0.0484
+L2·Protein chemistry,L3·Protein + Redox,1.0
+L2·Protein chemistry,L3·Carbohydrate chemistry,0.126
+L2·Protein chemistry,L3·Energy + Nucleic,0.0559
+L2·Lipid chemistry,L3·Lipid chemistry,1.0
+L2·Energy metabolism,L3·Energy + Nucleic,1.0
+L2·Energy metabolism,L3·Carbohydrate chemistry,0.11
+L2·Energy metabolism,L3·Protein + Redox,0.2023
+L2·Redox / pigments,L3·Energy + Nucleic,0.1411
+L2·Redox / pigments,L3·Carbohydrate chemistry,0.0369
+L2·Redox / pigments,L3·Protein + Redox,0.9712
+L2·Redox / pigments,L3·Lipid chemistry,0.1512

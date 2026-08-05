@@ -1,0 +1,28 @@
+node,label,kind,level,degree,in_degree,out_degree,betweenness,eigenvector,community,uncertainty
+sterol_ring_system,sterol_ring_system,motif,1,4,0,4,0.2012,0.148,4,0.3632
+nucleic_backbone_phosphate,nucleic_backbone_phosphate,motif,1,3,0,3,0.0227,0.0903,2,0.413
+protein_amide_backbone,protein_amide_backbone,motif,1,3,0,3,0.0216,0.166,1,0.2446
+oxopurine_carbonyl,oxopurine_carbonyl,motif,1,3,0,3,0.02,0.1148,0,0.3861
+flavin_redox_cofactor,flavin_redox_cofactor,motif,1,2,0,2,0.0136,0.1616,4,0.0605
+amino_acid_zwitterion,amino_acid_zwitterion,motif,1,3,0,3,0.0109,0.1637,1,0.2561
+carboxylate_organic_acid,carboxylate_organic_acid,motif,1,3,0,3,0.0109,0.1139,0,0.2251
+sulfur_heterocycle_thione,sulfur_heterocycle_thione,motif,1,2,0,2,0.0053,0.1095,0,0.1547
+aromatic_ring_residue,aromatic_ring_residue,motif,1,2,0,2,0.0047,0.1722,1,0.1499
+carotenoid_polyene,carotenoid_polyene,motif,1,2,0,2,0.0047,0.1694,1,0.3601
+polysaccharide_glycosidic,polysaccharide_glycosidic,motif,1,2,0,2,0.0042,0.0933,2,0.212
+purine_ring_breathing,purine_ring_breathing,motif,1,1,0,1,0.0,0.1139,0,-0.0
+pyrimidine_ring,pyrimidine_ring,motif,1,1,0,1,0.0,0.1139,0,-0.0
+fatty_acyl_chain,fatty_acyl_chain,motif,1,1,0,1,0.0,0.0136,3,-0.0
+triglyceride_ester,triglyceride_ester,motif,1,1,0,1,0.0,0.0136,3,-0.0
+glycan_co_network,glycan_co_network,motif,1,1,0,1,0.0,0.0817,2,-0.0
+porphyrin_macrocycle,porphyrin_macrocycle,motif,1,1,0,1,0.0,0.1627,4,-0.0
+L2·Redox / pigments,Redox / pigments,theme_L2,2,10,6,4,0.2738,0.3874,4,
+L2·Nucleic chemistry,Nucleic chemistry,theme_L2,2,9,7,2,0.2594,0.2713,0,
+L2·Protein chemistry,Protein chemistry,theme_L2,2,11,8,3,0.2374,0.412,1,
+L2·Lipid chemistry,Lipid chemistry,theme_L2,2,4,3,1,0.1562,0.0324,3,
+L2·Carbohydrate chemistry,Carbohydrate chemistry,theme_L2,2,9,6,3,0.1508,0.1947,2,
+L2·Energy metabolism,Energy metabolism,theme_L2,2,8,5,3,0.0824,0.2599,0,
+L3·Energy + Nucleic,Energy + Nucleic,system_L3,3,5,5,0,0.0832,0.2784,0,
+L3·Protein + Redox,Protein + Redox,system_L3,3,5,5,0,0.0832,0.362,1,
+L3·Carbohydrate chemistry,Carbohydrate chemistry,system_L3,3,4,4,0,0.0388,0.1215,2,
+L3·Lipid chemistry,Lipid chemistry,system_L3,3,2,2,0,0.035,0.0382,3,
