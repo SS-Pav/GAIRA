@@ -1,0 +1,5 @@
+motif,dominant_theme,dominant_weight,shared_with,shared_weight,entropy,n_themes,components_responsible,overlapping_bands_cm,confidence
+carotenoid_polyene,Protein chemistry,0.6536,Redox / pigments,0.3464,0.3601,2,"c6(0.41), c12(0.24), c5(0.20)","1005, 1157, 1190, 1270, 1520",0.2874
+oxopurine_carbonyl,Nucleic chemistry,0.7254,Energy metabolism,0.24,0.3861,3,"c15(0.33), c19(0.21), c20(0.14)","640, 938",0.2257
+nucleic_backbone_phosphate,Carbohydrate chemistry,0.7256,Nucleic chemistry,0.2075,0.413,3,"c17(0.21), c23(0.18), c4(0.15)","788, 920, 1240",0.1832
+sterol_ring_system,Redox / pigments,0.823,Lipid chemistry,0.0793,0.3632,4,"c3(0.22), c8(0.21), c13(0.17)","548, 608, 702, 958, 1128, 1440, 1670",0.203

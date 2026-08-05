@@ -1,0 +1,18 @@
+motif,derived_dominant,learned_dominant,agree,cosine,derived_entropy,learned_entropy,max_abs_diff
+purine_ring_breathing,Nucleic chemistry,Nucleic chemistry,True,0.988,-0.0,0.2209,0.135
+oxopurine_carbonyl,Nucleic chemistry,Protein chemistry,False,0.6621,0.3861,0.87,0.4717
+pyrimidine_ring,Nucleic chemistry,Nucleic chemistry,True,0.9574,-0.0,0.5007,0.3114
+nucleic_backbone_phosphate,Carbohydrate chemistry,Nucleic chemistry,False,0.8533,0.413,0.5035,0.2807
+aromatic_ring_residue,Protein chemistry,Protein chemistry,True,0.999,0.1499,0.2508,0.0477
+protein_amide_backbone,Protein chemistry,Protein chemistry,True,0.9696,0.2446,0.3143,0.1792
+amino_acid_zwitterion,Protein chemistry,Protein chemistry,True,0.946,0.2561,0.5673,0.2198
+fatty_acyl_chain,Lipid chemistry,Lipid chemistry,True,0.9938,-0.0,0.1823,0.1007
+triglyceride_ester,Lipid chemistry,Lipid chemistry,True,0.9983,-0.0,0.1188,0.0549
+sterol_ring_system,Redox / pigments,Protein chemistry,False,0.5947,0.3632,0.6037,0.5086
+glycan_co_network,Carbohydrate chemistry,Carbohydrate chemistry,True,0.9809,-0.0,0.3018,0.1822
+polysaccharide_glycosidic,Carbohydrate chemistry,Carbohydrate chemistry,True,0.8725,0.212,0.5755,0.3734
+carboxylate_organic_acid,Energy metabolism,Protein chemistry,False,0.0832,0.2251,0.5544,0.8905
+sulfur_heterocycle_thione,Energy metabolism,Nucleic chemistry,False,0.4851,0.1547,0.6574,0.6769
+porphyrin_macrocycle,Redox / pigments,Redox / pigments,True,0.9393,-0.0,0.5272,0.3472
+flavin_redox_cofactor,Redox / pigments,Protein chemistry,False,0.6795,0.0605,0.5727,0.5448
+carotenoid_polyene,Protein chemistry,Protein chemistry,True,0.8948,0.3601,0.222,0.3178

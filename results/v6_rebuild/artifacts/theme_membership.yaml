@@ -1,0 +1,525 @@
+schema: v62_theme_membership
+atlas_fingerprint: 09ed804a40836f4a05a91ba10900cded
+temperature: 0.05
+floor: 0.02
+note: Soft, non-negative, row-stochastic motif->theme membership. A motif may belong
+  to several themes; shared biochemical motifs are represented, not suppressed.
+levels:
+  L1_fine:
+    K: 17
+    source: the MSS motifs themselves
+    chemically_admissible: true
+    themes:
+    - name: Purine
+      seed_motifs:
+      - purine_ring_breathing
+    - name: Purine
+      seed_motifs:
+      - oxopurine_carbonyl
+    - name: Pyrimidine
+      seed_motifs:
+      - pyrimidine_ring
+    - name: Phosphate ester
+      seed_motifs:
+      - nucleic_backbone_phosphate
+    - name: Aromatic residue
+      seed_motifs:
+      - aromatic_ring_residue
+    - name: Protein backbone
+      seed_motifs:
+      - protein_amide_backbone
+    - name: Free amino acid
+      seed_motifs:
+      - amino_acid_zwitterion
+    - name: Fatty acyl
+      seed_motifs:
+      - fatty_acyl_chain
+    - name: Acylglycerol
+      seed_motifs:
+      - triglyceride_ester
+    - name: Sterol
+      seed_motifs:
+      - sterol_ring_system
+    - name: Monosaccharide
+      seed_motifs:
+      - glycan_co_network
+    - name: Polysaccharide
+      seed_motifs:
+      - polysaccharide_glycosidic
+    - name: Organic acid
+      seed_motifs:
+      - carboxylate_organic_acid
+    - name: Sulfur metabolite
+      seed_motifs:
+      - sulfur_heterocycle_thione
+    - name: Porphyrin
+      seed_motifs:
+      - porphyrin_macrocycle
+    - name: Flavin
+      seed_motifs:
+      - flavin_redox_cofactor
+    - name: Carotenoid
+      seed_motifs:
+      - carotenoid_polyene
+    motifs:
+      purine_ring_breathing:
+        chemical_class: nucleobase_purine
+        theme_weights:
+          Purine: 1.0
+        entropy: -0.0
+        dominant_theme: Purine
+        runner_up_theme: null
+      oxopurine_carbonyl:
+        chemical_class: nucleobase_purine
+        theme_weights:
+          Purine: 1.0
+        entropy: -0.0
+        dominant_theme: Purine
+        runner_up_theme: null
+      pyrimidine_ring:
+        chemical_class: nucleobase_pyrimidine
+        theme_weights:
+          Pyrimidine: 1.0
+        entropy: -0.0
+        dominant_theme: Pyrimidine
+        runner_up_theme: null
+      nucleic_backbone_phosphate:
+        chemical_class: phosphate_ester
+        theme_weights:
+          Phosphate ester: 1.0
+        entropy: -0.0
+        dominant_theme: Phosphate ester
+        runner_up_theme: null
+      aromatic_ring_residue:
+        chemical_class: aromatic_sidechain
+        theme_weights:
+          Aromatic residue: 1.0
+        entropy: -0.0
+        dominant_theme: Aromatic residue
+        runner_up_theme: null
+      protein_amide_backbone:
+        chemical_class: polypeptide
+        theme_weights:
+          Protein backbone: 1.0
+        entropy: -0.0
+        dominant_theme: Protein backbone
+        runner_up_theme: null
+      amino_acid_zwitterion:
+        chemical_class: free_amino_acid
+        theme_weights:
+          Free amino acid: 0.9767
+          Organic acid: 0.0233
+        entropy: 0.039
+        dominant_theme: Free amino acid
+        runner_up_theme: Organic acid
+      fatty_acyl_chain:
+        chemical_class: fatty_acid
+        theme_weights:
+          Fatty acyl: 0.5615
+          Acylglycerol: 0.4385
+        entropy: 0.242
+        dominant_theme: Fatty acyl
+        runner_up_theme: Acylglycerol
+      triglyceride_ester:
+        chemical_class: acylglycerol
+        theme_weights:
+          Acylglycerol: 0.5615
+          Fatty acyl: 0.4385
+        entropy: 0.242
+        dominant_theme: Acylglycerol
+        runner_up_theme: Fatty acyl
+      sterol_ring_system:
+        chemical_class: sterol
+        theme_weights:
+          Sterol: 1.0
+        entropy: -0.0
+        dominant_theme: Sterol
+        runner_up_theme: null
+      glycan_co_network:
+        chemical_class: monosaccharide
+        theme_weights:
+          Monosaccharide: 1.0
+        entropy: -0.0
+        dominant_theme: Monosaccharide
+        runner_up_theme: null
+      polysaccharide_glycosidic:
+        chemical_class: polysaccharide
+        theme_weights:
+          Polysaccharide: 1.0
+        entropy: -0.0
+        dominant_theme: Polysaccharide
+        runner_up_theme: null
+      carboxylate_organic_acid:
+        chemical_class: organic_acid
+        theme_weights:
+          Organic acid: 0.9767
+          Free amino acid: 0.0233
+        entropy: 0.039
+        dominant_theme: Organic acid
+        runner_up_theme: Free amino acid
+      sulfur_heterocycle_thione:
+        chemical_class: sulfur_metabolite
+        theme_weights:
+          Sulfur metabolite: 1.0
+        entropy: -0.0
+        dominant_theme: Sulfur metabolite
+        runner_up_theme: null
+      porphyrin_macrocycle:
+        chemical_class: tetrapyrrole
+        theme_weights:
+          Porphyrin: 0.9648
+          Flavin: 0.0352
+        entropy: 0.0538
+        dominant_theme: Porphyrin
+        runner_up_theme: Flavin
+      flavin_redox_cofactor:
+        chemical_class: redox_cofactor
+        theme_weights:
+          Flavin: 0.9648
+          Porphyrin: 0.0352
+        entropy: 0.0538
+        dominant_theme: Flavin
+        runner_up_theme: Porphyrin
+      carotenoid_polyene:
+        chemical_class: polyene
+        theme_weights:
+          Carotenoid: 1.0
+        entropy: -0.0
+        dominant_theme: Carotenoid
+        runner_up_theme: null
+  L2_medium:
+    K: 6
+    source: K=8 hybrid clustering was chemically inadmissible; fell back to the chemical-superclass
+      grouping
+    chemically_admissible: true
+    themes:
+    - name: Nucleic chemistry
+      seed_motifs:
+      - oxopurine_carbonyl
+      - purine_ring_breathing
+      - pyrimidine_ring
+    - name: Carbohydrate chemistry
+      seed_motifs:
+      - glycan_co_network
+      - nucleic_backbone_phosphate
+      - polysaccharide_glycosidic
+    - name: Protein chemistry
+      seed_motifs:
+      - amino_acid_zwitterion
+      - aromatic_ring_residue
+      - protein_amide_backbone
+    - name: Lipid chemistry
+      seed_motifs:
+      - fatty_acyl_chain
+      - sterol_ring_system
+      - triglyceride_ester
+    - name: Energy metabolism
+      seed_motifs:
+      - carboxylate_organic_acid
+      - sulfur_heterocycle_thione
+    - name: Redox / pigments
+      seed_motifs:
+      - carotenoid_polyene
+      - flavin_redox_cofactor
+      - porphyrin_macrocycle
+    motifs:
+      purine_ring_breathing:
+        chemical_class: nucleobase_purine
+        theme_weights:
+          Nucleic chemistry: 1.0
+        entropy: -0.0
+        dominant_theme: Nucleic chemistry
+        runner_up_theme: null
+      oxopurine_carbonyl:
+        chemical_class: nucleobase_purine
+        theme_weights:
+          Nucleic chemistry: 0.7254
+          Energy metabolism: 0.24
+          Protein chemistry: 0.0346
+        entropy: 0.3861
+        dominant_theme: Nucleic chemistry
+        runner_up_theme: Energy metabolism
+      pyrimidine_ring:
+        chemical_class: nucleobase_pyrimidine
+        theme_weights:
+          Nucleic chemistry: 1.0
+        entropy: -0.0
+        dominant_theme: Nucleic chemistry
+        runner_up_theme: null
+      nucleic_backbone_phosphate:
+        chemical_class: phosphate_ester
+        theme_weights:
+          Carbohydrate chemistry: 0.7256
+          Nucleic chemistry: 0.2075
+          Energy metabolism: 0.0669
+        entropy: 0.413
+        dominant_theme: Carbohydrate chemistry
+        runner_up_theme: Nucleic chemistry
+      aromatic_ring_residue:
+        chemical_class: aromatic_sidechain
+        theme_weights:
+          Protein chemistry: 0.9242
+          Redox / pigments: 0.0758
+        entropy: 0.1499
+        dominant_theme: Protein chemistry
+        runner_up_theme: Redox / pigments
+      protein_amide_backbone:
+        chemical_class: polypeptide
+        theme_weights:
+          Protein chemistry: 0.8833
+          Carbohydrate chemistry: 0.0715
+          Redox / pigments: 0.0452
+        entropy: 0.2446
+        dominant_theme: Protein chemistry
+        runner_up_theme: Carbohydrate chemistry
+      amino_acid_zwitterion:
+        chemical_class: free_amino_acid
+        theme_weights:
+          Protein chemistry: 0.8649
+          Energy metabolism: 0.1112
+          Carbohydrate chemistry: 0.0238
+        entropy: 0.2561
+        dominant_theme: Protein chemistry
+        runner_up_theme: Energy metabolism
+      fatty_acyl_chain:
+        chemical_class: fatty_acid
+        theme_weights:
+          Lipid chemistry: 1.0
+        entropy: -0.0
+        dominant_theme: Lipid chemistry
+        runner_up_theme: null
+      triglyceride_ester:
+        chemical_class: acylglycerol
+        theme_weights:
+          Lipid chemistry: 1.0
+        entropy: -0.0
+        dominant_theme: Lipid chemistry
+        runner_up_theme: null
+      sterol_ring_system:
+        chemical_class: sterol
+        theme_weights:
+          Redox / pigments: 0.823
+          Lipid chemistry: 0.0793
+          Nucleic chemistry: 0.0652
+          Protein chemistry: 0.0325
+        entropy: 0.3632
+        dominant_theme: Redox / pigments
+        runner_up_theme: Lipid chemistry
+      glycan_co_network:
+        chemical_class: monosaccharide
+        theme_weights:
+          Carbohydrate chemistry: 1.0
+        entropy: -0.0
+        dominant_theme: Carbohydrate chemistry
+        runner_up_theme: null
+      polysaccharide_glycosidic:
+        chemical_class: polysaccharide
+        theme_weights:
+          Carbohydrate chemistry: 0.8734
+          Protein chemistry: 0.1266
+        entropy: 0.212
+        dominant_theme: Carbohydrate chemistry
+        runner_up_theme: Protein chemistry
+      carboxylate_organic_acid:
+        chemical_class: organic_acid
+        theme_weights:
+          Energy metabolism: 0.8905
+          Protein chemistry: 0.0854
+          Carbohydrate chemistry: 0.0241
+        entropy: 0.2251
+        dominant_theme: Energy metabolism
+        runner_up_theme: Protein chemistry
+      sulfur_heterocycle_thione:
+        chemical_class: sulfur_metabolite
+        theme_weights:
+          Energy metabolism: 0.9206
+          Nucleic chemistry: 0.0794
+        entropy: 0.1547
+        dominant_theme: Energy metabolism
+        runner_up_theme: Nucleic chemistry
+      porphyrin_macrocycle:
+        chemical_class: tetrapyrrole
+        theme_weights:
+          Redox / pigments: 1.0
+        entropy: -0.0
+        dominant_theme: Redox / pigments
+        runner_up_theme: null
+      flavin_redox_cofactor:
+        chemical_class: redox_cofactor
+        theme_weights:
+          Redox / pigments: 0.9773
+          Nucleic chemistry: 0.0227
+        entropy: 0.0605
+        dominant_theme: Redox / pigments
+        runner_up_theme: Nucleic chemistry
+      carotenoid_polyene:
+        chemical_class: polyene
+        theme_weights:
+          Protein chemistry: 0.6536
+          Redox / pigments: 0.3464
+        entropy: 0.3601
+        dominant_theme: Protein chemistry
+        runner_up_theme: Redox / pigments
+  L3_coarse:
+    K: 4
+    source: agglomerated from the L2 theme centroids to K=4
+    chemically_admissible: false
+    themes:
+    - name: Energy + Nucleic
+      seed_motifs:
+      - carboxylate_organic_acid
+      - oxopurine_carbonyl
+      - purine_ring_breathing
+      - pyrimidine_ring
+      - sulfur_heterocycle_thione
+    - name: Carbohydrate chemistry
+      seed_motifs:
+      - glycan_co_network
+      - nucleic_backbone_phosphate
+      - polysaccharide_glycosidic
+    - name: Protein + Redox
+      seed_motifs:
+      - amino_acid_zwitterion
+      - aromatic_ring_residue
+      - carotenoid_polyene
+      - flavin_redox_cofactor
+      - porphyrin_macrocycle
+      - protein_amide_backbone
+    - name: Lipid chemistry
+      seed_motifs:
+      - fatty_acyl_chain
+      - sterol_ring_system
+      - triglyceride_ester
+    motifs:
+      purine_ring_breathing:
+        chemical_class: nucleobase_purine
+        theme_weights:
+          Energy + Nucleic: 1.0
+        entropy: -0.0
+        dominant_theme: Energy + Nucleic
+        runner_up_theme: null
+      oxopurine_carbonyl:
+        chemical_class: nucleobase_purine
+        theme_weights:
+          Energy + Nucleic: 0.9559
+          Protein + Redox: 0.0441
+        entropy: 0.1303
+        dominant_theme: Energy + Nucleic
+        runner_up_theme: Protein + Redox
+      pyrimidine_ring:
+        chemical_class: nucleobase_pyrimidine
+        theme_weights:
+          Energy + Nucleic: 1.0
+        entropy: -0.0
+        dominant_theme: Energy + Nucleic
+        runner_up_theme: null
+      nucleic_backbone_phosphate:
+        chemical_class: phosphate_ester
+        theme_weights:
+          Carbohydrate chemistry: 0.7219
+          Energy + Nucleic: 0.2781
+        entropy: 0.4264
+        dominant_theme: Carbohydrate chemistry
+        runner_up_theme: Energy + Nucleic
+      aromatic_ring_residue:
+        chemical_class: aromatic_sidechain
+        theme_weights:
+          Protein + Redox: 1.0
+        entropy: -0.0
+        dominant_theme: Protein + Redox
+        runner_up_theme: null
+      protein_amide_backbone:
+        chemical_class: polypeptide
+        theme_weights:
+          Protein + Redox: 0.8761
+          Carbohydrate chemistry: 0.1239
+        entropy: 0.2703
+        dominant_theme: Protein + Redox
+        runner_up_theme: Carbohydrate chemistry
+      amino_acid_zwitterion:
+        chemical_class: free_amino_acid
+        theme_weights:
+          Protein + Redox: 0.8181
+          Carbohydrate chemistry: 0.126
+          Energy + Nucleic: 0.0559
+        entropy: 0.4231
+        dominant_theme: Protein + Redox
+        runner_up_theme: Carbohydrate chemistry
+      fatty_acyl_chain:
+        chemical_class: fatty_acid
+        theme_weights:
+          Lipid chemistry: 1.0
+        entropy: -0.0
+        dominant_theme: Lipid chemistry
+        runner_up_theme: null
+      triglyceride_ester:
+        chemical_class: acylglycerol
+        theme_weights:
+          Lipid chemistry: 1.0
+        entropy: -0.0
+        dominant_theme: Lipid chemistry
+        runner_up_theme: null
+      sterol_ring_system:
+        chemical_class: sterol
+        theme_weights:
+          Protein + Redox: 0.6709
+          Lipid chemistry: 0.1512
+          Energy + Nucleic: 0.1411
+          Carbohydrate chemistry: 0.0369
+        entropy: 0.6863
+        dominant_theme: Protein + Redox
+        runner_up_theme: Lipid chemistry
+      glycan_co_network:
+        chemical_class: monosaccharide
+        theme_weights:
+          Carbohydrate chemistry: 1.0
+        entropy: -0.0
+        dominant_theme: Carbohydrate chemistry
+        runner_up_theme: null
+      polysaccharide_glycosidic:
+        chemical_class: polysaccharide
+        theme_weights:
+          Carbohydrate chemistry: 0.9516
+          Protein + Redox: 0.0484
+        entropy: 0.1397
+        dominant_theme: Carbohydrate chemistry
+        runner_up_theme: Protein + Redox
+      carboxylate_organic_acid:
+        chemical_class: organic_acid
+        theme_weights:
+          Energy + Nucleic: 0.6876
+          Protein + Redox: 0.2023
+          Carbohydrate chemistry: 0.11
+        entropy: 0.5941
+        dominant_theme: Energy + Nucleic
+        runner_up_theme: Protein + Redox
+      sulfur_heterocycle_thione:
+        chemical_class: sulfur_metabolite
+        theme_weights:
+          Energy + Nucleic: 1.0
+        entropy: -0.0
+        dominant_theme: Energy + Nucleic
+        runner_up_theme: null
+      porphyrin_macrocycle:
+        chemical_class: tetrapyrrole
+        theme_weights:
+          Protein + Redox: 0.9712
+          Energy + Nucleic: 0.0288
+        entropy: 0.0942
+        dominant_theme: Protein + Redox
+        runner_up_theme: Energy + Nucleic
+      flavin_redox_cofactor:
+        chemical_class: redox_cofactor
+        theme_weights:
+          Protein + Redox: 0.9223
+          Energy + Nucleic: 0.0777
+        entropy: 0.197
+        dominant_theme: Protein + Redox
+        runner_up_theme: Energy + Nucleic
+      carotenoid_polyene:
+        chemical_class: polyene
+        theme_weights:
+          Protein + Redox: 1.0
+        entropy: -0.0
+        dominant_theme: Protein + Redox
+        runner_up_theme: null

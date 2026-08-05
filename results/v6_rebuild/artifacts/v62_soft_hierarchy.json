@@ -1,0 +1,298 @@
+{
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "philosophy": "maximum biochemical abstraction subject to minimum information loss; analyte accuracy is a secondary metric",
+  "soft_parameters": {
+    "temperature": 0.05,
+    "floor": 0.02,
+    "selection_rule": "largest temperature with mean support <= 2.5 themes/motif",
+    "sweep": [
+      {
+        "temperature": 0.02,
+        "mean_support": 1.176,
+        "mean_entropy": 0.028,
+        "mean_dominant_weight": 0.9841
+      },
+      {
+        "temperature": 0.03,
+        "mean_support": 1.294,
+        "mean_entropy": 0.0532,
+        "mean_dominant_weight": 0.9662
+      },
+      {
+        "temperature": 0.04,
+        "mean_support": 1.765,
+        "mean_entropy": 0.1137,
+        "mean_dominant_weight": 0.9318
+      },
+      {
+        "temperature": 0.05,
+        "mean_support": 2.059,
+        "mean_entropy": 0.1662,
+        "mean_dominant_weight": 0.8977
+      },
+      {
+        "temperature": 0.07,
+        "mean_support": 2.765,
+        "mean_entropy": 0.2797,
+        "mean_dominant_weight": 0.8237
+      },
+      {
+        "temperature": 0.1,
+        "mean_support": 4.176,
+        "mean_entropy": 0.4681,
+        "mean_dominant_weight": 0.7073
+      },
+      {
+        "temperature": 0.12,
+        "mean_support": 4.941,
+        "mean_entropy": 0.5736,
+        "mean_dominant_weight": 0.6402
+      },
+      {
+        "temperature": 0.15,
+        "mean_support": 5.824,
+        "mean_entropy": 0.7096,
+        "mean_dominant_weight": 0.551
+      },
+      {
+        "temperature": 0.2,
+        "mean_support": 6.0,
+        "mean_entropy": 0.8266,
+        "mean_dominant_weight": 0.4534
+      }
+    ]
+  },
+  "levels": {
+    "L1_fine": {
+      "K": 17,
+      "names": [
+        "Purine",
+        "Purine",
+        "Pyrimidine",
+        "Phosphate ester",
+        "Aromatic residue",
+        "Protein backbone",
+        "Free amino acid",
+        "Fatty acyl",
+        "Acylglycerol",
+        "Sterol",
+        "Monosaccharide",
+        "Polysaccharide",
+        "Organic acid",
+        "Sulfur metabolite",
+        "Porphyrin",
+        "Flavin",
+        "Carotenoid"
+      ],
+      "admissible": true,
+      "source": "the MSS motifs themselves",
+      "groups": [
+        [
+          "purine_ring_breathing"
+        ],
+        [
+          "oxopurine_carbonyl"
+        ],
+        [
+          "pyrimidine_ring"
+        ],
+        [
+          "nucleic_backbone_phosphate"
+        ],
+        [
+          "aromatic_ring_residue"
+        ],
+        [
+          "protein_amide_backbone"
+        ],
+        [
+          "amino_acid_zwitterion"
+        ],
+        [
+          "fatty_acyl_chain"
+        ],
+        [
+          "triglyceride_ester"
+        ],
+        [
+          "sterol_ring_system"
+        ],
+        [
+          "glycan_co_network"
+        ],
+        [
+          "polysaccharide_glycosidic"
+        ],
+        [
+          "carboxylate_organic_acid"
+        ],
+        [
+          "sulfur_heterocycle_thione"
+        ],
+        [
+          "porphyrin_macrocycle"
+        ],
+        [
+          "flavin_redox_cofactor"
+        ],
+        [
+          "carotenoid_polyene"
+        ]
+      ]
+    },
+    "L2_medium": {
+      "K": 6,
+      "names": [
+        "Nucleic chemistry",
+        "Carbohydrate chemistry",
+        "Protein chemistry",
+        "Lipid chemistry",
+        "Energy metabolism",
+        "Redox / pigments"
+      ],
+      "admissible": true,
+      "source": "K=8 hybrid clustering was chemically inadmissible; fell back to the chemical-superclass grouping",
+      "groups": [
+        [
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring"
+        ],
+        [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "polysaccharide_glycosidic"
+        ],
+        [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue",
+          "protein_amide_backbone"
+        ],
+        [
+          "fatty_acyl_chain",
+          "sterol_ring_system",
+          "triglyceride_ester"
+        ],
+        [
+          "carboxylate_organic_acid",
+          "sulfur_heterocycle_thione"
+        ],
+        [
+          "carotenoid_polyene",
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle"
+        ]
+      ]
+    },
+    "L3_coarse": {
+      "K": 4,
+      "names": [
+        "Energy + Nucleic",
+        "Carbohydrate chemistry",
+        "Protein + Redox",
+        "Lipid chemistry"
+      ],
+      "admissible": false,
+      "source": "agglomerated from the L2 theme centroids to K=4",
+      "groups": [
+        [
+          "carboxylate_organic_acid",
+          "oxopurine_carbonyl",
+          "purine_ring_breathing",
+          "pyrimidine_ring",
+          "sulfur_heterocycle_thione"
+        ],
+        [
+          "glycan_co_network",
+          "nucleic_backbone_phosphate",
+          "polysaccharide_glycosidic"
+        ],
+        [
+          "amino_acid_zwitterion",
+          "aromatic_ring_residue",
+          "carotenoid_polyene",
+          "flavin_redox_cofactor",
+          "porphyrin_macrocycle",
+          "protein_amide_backbone"
+        ],
+        [
+          "fatty_acyl_chain",
+          "sterol_ring_system",
+          "triglyceride_ester"
+        ]
+      ]
+    }
+  },
+  "membership": {
+    "mean_entropy_L2": 0.1662,
+    "n_motifs_multi_theme_L2": 11,
+    "n_motifs_single_theme_L2": 6,
+    "mean_dominant_weight_L2": 0.8977
+  },
+  "shared_motifs": {
+    "n_detected": 4,
+    "criterion": "dominant theme weight < 0.85 at L2",
+    "top": [
+      {
+        "motif": "carotenoid_polyene",
+        "dominant_theme": "Protein chemistry",
+        "dominant_weight": 0.6536,
+        "shared_with": "Redox / pigments",
+        "shared_weight": 0.3464,
+        "entropy": 0.3601,
+        "n_themes": 2,
+        "components_responsible": "c6(0.41), c12(0.24), c5(0.20)",
+        "overlapping_bands_cm": "1005, 1157, 1190, 1270, 1520",
+        "confidence": 0.2874
+      },
+      {
+        "motif": "oxopurine_carbonyl",
+        "dominant_theme": "Nucleic chemistry",
+        "dominant_weight": 0.7254,
+        "shared_with": "Energy metabolism",
+        "shared_weight": 0.24,
+        "entropy": 0.3861,
+        "n_themes": 3,
+        "components_responsible": "c15(0.33), c19(0.21), c20(0.14)",
+        "overlapping_bands_cm": "640, 938",
+        "confidence": 0.2257
+      },
+      {
+        "motif": "nucleic_backbone_phosphate",
+        "dominant_theme": "Carbohydrate chemistry",
+        "dominant_weight": 0.7256,
+        "shared_with": "Nucleic chemistry",
+        "shared_weight": 0.2075,
+        "entropy": 0.413,
+        "n_themes": 3,
+        "components_responsible": "c17(0.21), c23(0.18), c4(0.15)",
+        "overlapping_bands_cm": "788, 920, 1240",
+        "confidence": 0.1832
+      },
+      {
+        "motif": "sterol_ring_system",
+        "dominant_theme": "Redox / pigments",
+        "dominant_weight": 0.823,
+        "shared_with": "Lipid chemistry",
+        "shared_weight": 0.0793,
+        "entropy": 0.3632,
+        "n_themes": 4,
+        "components_responsible": "c3(0.22), c8(0.21), c13(0.17)",
+        "overlapping_bands_cm": "548, 608, 702, 958, 1128, 1440, 1670",
+        "confidence": 0.203
+      }
+    ]
+  },
+  "learned_vs_derived": {
+    "mean_cosine": 0.8175,
+    "dominant_theme_agreement": 0.6471,
+    "mean_entropy_derived": 0.1662,
+    "mean_entropy_learned": 0.4437
+  },
+  "uncertainty": {
+    "mean_entropy": 0.8359,
+    "mean_margin": 0.2066,
+    "mean_confidence": 0.0913,
+    "n_low_confidence": 142
+  }
+}
