@@ -1,0 +1,258 @@
+# GAIRA V6 — Molecular Spectral Signature (MSS) definitions.
+#
+# WHAT CHANGED FROM v1, AND WHY (all changes are evidence-driven; see
+# results/v6_rebuild/tables/p2_motif_audit.csv and p2_family_census.csv):
+#
+#   * NO parent_theme field.  v1 carried `parent_theme` and fed the component->theme
+#     ontology weight into every MSS score (mss.py:195-196, 25% of the raw score).
+#     V6 motifs are defined by SPECTROSCOPY and REFERENCE CHEMISTRY only, so the
+#     theme layer can be derived FROM them without circularity.
+#     `chemical_class` is a descriptive tag; it is never used in any computation.
+#
+#   * Exemplar lists expanded.  v1 exemplars named only 35.9 % of the 167 corpus
+#     analytes; whole families were unclaimed (triglyceride 93 % uncovered,
+#     nucleic_acid 100 %, phospholipid 100 %, carotenoid 100 %).
+#
+#   * lipid_acyl_chain SPLIT into fatty_acyl_chain + triglyceride_ester.  The corpus
+#     holds 15 triglycerides and 12 free fatty acids; the ester carbonyl (~1745) and
+#     C-O-C (~1160) separate them and v1 had no motif for either.
+#
+#   * sterol_ring_system REBUILT.  v1's worst motif: discriminative AUC 0.68 (all
+#     others >= 0.80), band fidelity 0.49, and its top-activating family was
+#     fatty_acid, not sterol.  Re-banded on canonical cholesterol/steroid modes.
+#
+#   * NEW: amino_acid_zwitterion, polysaccharide_glycosidic,
+#     nucleic_backbone_phosphate, carotenoid_polyene — four chemistries the corpus
+#     contains in quantity and v1 described with no motif at all.
+#
+#   * citrate REMOVED from colloid_matrix_background exemplars.  v1 listed it as an
+#     exemplar of BOTH that motif and carboxylate_organic_acid, which is why those
+#     two had a component-support cosine of 0.687 (2nd most redundant pair).
+#
+#   * flavin_redox_cofactor RETAINED but flagged low_coverage: only 2 corpus
+#     analytes, the lowest confidence of any motif (0.475), and a 0.699 component
+#     overlap with porphyrin_macrocycle.  Both borrow protein/purine components
+#     because the corpus contains no pure flavin or porphyrin reference.
+#
+# Bands are canonical solution/solid Raman assignments. Matching in mss_v6.py is
+# region-based (+/- 16 cm-1) and additionally scored by the cosine between the
+# component's FROZEN BASIS SPECTRUM and a Gaussian profile built from these bands.
+# A motif is NOT a molecule.
+
+version: "mss_v6"
+band_match_tolerance_cm: 16
+band_sigma_cm: 9.0
+derivation:
+  weights: {band: 0.30, basis_cosine: 0.30, exemplar: 0.30, perturbation: 0.10}
+  keep_threshold: 0.12
+  max_contributors: 6
+  exemplar_saturation_pct: 12.0
+  theme_evidence_used: false
+
+motifs:
+  # ── nucleic ──
+  - id: purine_ring_breathing
+    name: "Purine ring breathing"
+    chemical_class: nucleobase_purine
+    description: >
+      Ring-breathing and stretching modes of the purine scaffold (adenine-type).
+      Strong Ag adsorber; the dominant nucleic reporter.
+    bands_cm: [720, 730, 1250, 1334, 1480, 1580]
+    exemplars: [adenine, guanine, hypoxanthine, xanthine, a-dna, b-dna, t-rna]
+
+  - id: oxopurine_carbonyl
+    name: "Oxopurine carbonyl"
+    chemical_class: nucleobase_purine
+    description: >
+      2,6-dioxopurine ring plus carbonyl modes shared by xanthine, urate and
+      guanine — the subgroup that responds when purines are oxidised.
+    bands_cm: [640, 938, 1230, 1330, 1580, 1660]
+    exemplars: [xanthine, guanine, urate, hypoxanthine, creatinine]
+
+  - id: pyrimidine_ring
+    name: "Pyrimidine ring"
+    chemical_class: nucleobase_pyrimidine
+    description: >
+      Ring modes of the pyrimidine scaffold. Distinguished by the ~790 cm-1 ring
+      mode; a weaker Ag adsorber than the purines.
+    bands_cm: [560, 578, 790, 1236, 1396, 1660]
+    exemplars: [uracil, cytosine, thymine, uridine, a-dna, b-dna, t-rna]
+
+  - id: nucleic_backbone_phosphate
+    name: "Nucleic backbone / phosphate ester"
+    chemical_class: phosphate_ester
+    description: >
+      Sugar-phosphate backbone modes — PO2- symmetric stretch (~1094), O-P-O
+      (~810/835), ribose C-O (~1050). NEW in V6: the corpus holds three nucleic
+      acids and several phosphorylated metabolites that no v1 motif described.
+    bands_cm: [788, 835, 920, 1052, 1094, 1240]
+    exemplars: [a-dna, b-dna, t-rna, phosphate, phosphoenolpyruvate,
+                fructose-6-phosphate, phosphatidylinositol, α-phosphatidylcholine,
+                α-phosphatidylethanolamine]
+
+  # ── protein / amino acid ──
+  - id: aromatic_ring_residue
+    name: "Aromatic amino-acid residue"
+    chemical_class: aromatic_sidechain
+    description: >
+      Aromatic side-chain ring modes — phenylalanine 1004 ring breathing, the
+      tyrosine 828/850 Fermi doublet, tryptophan ring modes.
+    bands_cm: [640, 828, 852, 1006, 1178, 1614]
+    exemplars: [phenylalanine, tyrosine, tryptophan, histidine]
+
+  - id: protein_amide_backbone
+    name: "Protein amide backbone"
+    chemical_class: polypeptide
+    description: >
+      Peptide backbone signature — amide I (~1655), amide III (~1240), Ca-C and
+      skeletal modes. Broad and mixture-dominated in real proteins.
+    bands_cm: [856, 1000, 1130, 1240, 1336, 1654]
+    exemplars: [albumin, alb, ubiquitin, trypsin, trypsinogen, trypsin inhibitor,
+                superoxide dismutases, insulin, collagen, elastin, keratin, lysozyme,
+                papain, pepsin, pepsinogen, carbonic anhydrase, lactalbumin, thaumatin,
+                tubulin, xylanase, elastase, ferritin, lectin, glucose oxidase,
+                glutathione transferase, triosephosphate isomerase, major proteinase,
+                horseradish peroxidase, α-chymotrypsinogen a (type ii)]
+
+  - id: amino_acid_zwitterion
+    name: "Amino-acid zwitterion"
+    chemical_class: free_amino_acid
+    description: >
+      Free amino-acid modes absent from a peptide backbone — COO- symmetric stretch
+      (~1410), C-N stretch (~1030), NH3+ deformation (~1520), C-COO- skeletal
+      (~870). NEW in V6: 17 free amino acids, 65 % unclaimed by v1.
+    bands_cm: [870, 930, 1030, 1345, 1410, 1520]
+    exemplars: [alanine, glycine, valine, leucine, isoleucine, serine, threonine,
+                proline, hydroxyproline, asparagine, glutamate, aspartate,
+                aspartic acid, arginine, lysine]
+
+  # ── lipid ──
+  - id: fatty_acyl_chain
+    name: "Free fatty-acyl chain"
+    chemical_class: fatty_acid
+    description: >
+      Aliphatic acyl-chain modes of free fatty acids — C-C trans (~1062/1128),
+      CH2 twist (~1301), CH2 scissor (~1440), cis C=C (~1655). v1 merged this with
+      the triglycerides; V6 separates them.
+    bands_cm: [1062, 1128, 1265, 1301, 1440, 1655]
+    exemplars: [palmitic acid, myristic acid, lauric acid, arachidic acid,
+                arachidonic acid, linoleic acid, α-linolenic acid, elaidic acid,
+                oleate, stearate, palmitoleic acid, vaccenic acid,
+                12-methyltetradecanoic acid, 13-methylmyristicacid,
+                14-methylhexadecanoic acid, 14-methylpentadecanoic acid,
+                15-methylpalmiticacid]
+
+  - id: triglyceride_ester
+    name: "Triglyceride ester carbonyl"
+    chemical_class: acylglycerol
+    description: >
+      Glycerol tri-ester modes — ester C=O (~1745) and C-O-C (~1160) on top of the
+      acyl-chain skeleton. NEW in V6: 15 triglycerides, 93 % unclaimed by v1.
+    bands_cm: [1065, 1128, 1160, 1301, 1440, 1745]
+    exemplars: [tripalmitin, tristearin, trimyristin, trilaurin, triarachidin,
+                tribehenin, tricaprin, tricaproin, tricaprylin, trielaidin,
+                trierucin, trilinolein, trilinolenin, tripalmitolein,
+                tripetroselinin, triolein, tri-11-eicosenoin]
+
+  - id: sterol_ring_system
+    name: "Sterol / steroid ring system"
+    chemical_class: sterol
+    description: >
+      Fused steroid ring skeletal modes — cholesterol 548/608/702 ring, 958 C-C,
+      1128 skeletal, 1670 C=C. REBUILT in V6: v1's bands gave the lowest
+      discriminative power of any motif (AUC 0.68) and top-activated on fatty acids.
+    bands_cm: [548, 608, 702, 958, 1128, 1440, 1670]
+    exemplars: [cholesterol, cholesteryl linoleate, cholesteryl oleate,
+                cholesteryl palmitate, cholesteryl stearate, estrone, estradiol,
+                estriol, ethinylestradiol, diethylstilbestrol]
+
+  # ── carbohydrate ──
+  - id: glycan_co_network
+    name: "Monosaccharide C-O network"
+    chemical_class: monosaccharide
+    description: >
+      Carbohydrate C-O / C-C / anomeric modes in the congested 450-1150 cm-1
+      region, characteristic of free mono- and disaccharides.
+    bands_cm: [816, 872, 916, 1054, 1108, 1122]
+    exemplars: [glucose, (+)-glucose, β-d-glucose, (+)-dextrose, galactose,
+                (+)-galactose, fructose, (-)-fructose, mannose, (+)-mannose,
+                (+)-arabinose, (-)-arabinose, (+)-xylose, (-)-ribose,
+                2-deoxy-d-ribose, (+)-fucose, (+)-lactose, lactose, (+)-maltose,
+                (+)-sucrose, (+)-trehalose, (+)-raffinose pentahydrate,
+                glucosamine, (+)-galactosamine, n-acetylglucosamine,
+                n-acetyl- d-glucosamine, glycerol]
+
+  - id: polysaccharide_glycosidic
+    name: "Polysaccharide glycosidic linkage"
+    chemical_class: polysaccharide
+    description: >
+      Glycosidic C-O-C linkage modes (~890 beta, ~940 alpha) with ring and CH2OH
+      modes — the polymer signature that separates starch/cellulose/glycogen from
+      free sugars. NEW in V6.
+    bands_cm: [890, 940, 1080, 1122, 1340, 1460]
+    exemplars: [cellulose, amylose, amylopectin, glycogen, chitin]
+
+  # ── metabolite / cofactor ──
+  - id: carboxylate_organic_acid
+    name: "Carboxylate / organic acid"
+    chemical_class: organic_acid
+    description: >
+      Carboxylate symmetric stretch (~1400) and C-COO / skeletal modes of small
+      TCA-cycle and metabolic acids.
+    bands_cm: [760, 940, 1382, 1398, 1628]
+    exemplars: [citrate, succinic acid, pyruvate, fumarate, lactate, malic acid,
+                acetoacetate, ascorbate, aspartate]
+
+  - id: sulfur_heterocycle_thione
+    name: "Sulfur heterocycle / thiol"
+    chemical_class: sulfur_metabolite
+    description: >
+      Thione / thiol and C-S modes — the ergothioneine thione ring and the
+      cysteine/glutathione thiols. Strong Ag chemisorbers.
+    bands_cm: [536, 640, 674, 838, 970, 1200]
+    exemplars: [ergothioneine, cysteine, glutathione, gluth, methionine,
+                coenzyme a, acetyl-coa, acetyl coenzyme a]
+
+  - id: porphyrin_macrocycle
+    name: "Porphyrin macrocycle"
+    chemical_class: tetrapyrrole
+    description: >
+      Resonance-enhanced tetrapyrrole modes of heme proteins — pyrrole breathing
+      and Ca-Cm stretches. LOW COVERAGE: no pure porphyrin reference exists in the
+      corpus, so this motif borrows protein components.
+    bands_cm: [750, 1130, 1362, 1590, 1620]
+    exemplars: [hemoglobin, myoglobin, cytochrome c, melanin, ferritin,
+                horseradish peroxidase]
+    low_coverage: true
+
+  - id: flavin_redox_cofactor
+    name: "Flavin / redox cofactor"
+    chemical_class: redox_cofactor
+    description: >
+      Isoalloxazine (flavin) ring modes — riboflavin/FAD. LOW COVERAGE: two corpus
+      analytes, the lowest confidence of any v1 motif, and 0.70 component overlap
+      with porphyrin_macrocycle. Retained for completeness, not for inference.
+    bands_cm: [754, 1178, 1348, 1408, 1578]
+    exemplars: [riboflavin, riboﬂavin, ubiquinone, nadh, fad]
+    low_coverage: true
+
+  - id: carotenoid_polyene
+    name: "Carotenoid polyene"
+    chemical_class: polyene
+    description: >
+      Conjugated polyene modes — nu1 C=C (~1520), nu2 C-C (~1157), nu3 CH3 rock
+      (~1005). Extremely strong resonance Raman scatterers. NEW in V6.
+    bands_cm: [1005, 1157, 1190, 1270, 1520]
+    exemplars: [carotene, β-carotene, lycopene, astaxanthin]
+
+  # ── non-biochemical ──
+  - id: colloid_matrix_background
+    name: "Colloid / matrix background"
+    chemical_class: non_biochemical
+    description: >
+      Substrate and matrix contribution (buffer, capping agent, serum background).
+      Reported for honesty; NOT a biochemical motif. citrate was removed from the
+      v1 exemplar list because it double-counted with carboxylate_organic_acid.
+    bands_cm: [930, 1050, 1400]
+    exemplars: [urea, ure, phosphate]
+    non_biochemical: true

@@ -1,0 +1,145 @@
+{
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "n_motifs_audited": 13,
+  "n_corpus_analytes": 167,
+  "exemplar_coverage_pct": 35.9,
+  "n_uncovered_analytes": 107,
+  "largest_uncovered_families": {
+    "saccharide": 17,
+    "protein": 17,
+    "triglyceride": 14,
+    "amino_acid": 11,
+    "fatty_acid": 10,
+    "organic_acid": 8,
+    "sterol": 7,
+    "polysaccharide": 4
+  },
+  "mean_discriminative_auc": 0.9211,
+  "motifs_with_auc_below_0.6": [],
+  "most_redundant_pairs": [
+    {
+      "motif_a": "porphyrin_macrocycle",
+      "motif_b": "flavin_redox_cofactor",
+      "activation_corr": 0.6927,
+      "component_support_cosine": 0.6986
+    },
+    {
+      "motif_a": "carboxylate_organic_acid",
+      "motif_b": "colloid_matrix_background",
+      "activation_corr": 0.6776,
+      "component_support_cosine": 0.6874
+    },
+    {
+      "motif_a": "purine_ring_breathing",
+      "motif_b": "sterol_ring_system",
+      "activation_corr": 0.2434,
+      "component_support_cosine": 0.6793
+    },
+    {
+      "motif_a": "pyrimidine_ring",
+      "motif_b": "carboxylate_organic_acid",
+      "activation_corr": 0.4663,
+      "component_support_cosine": 0.5346
+    },
+    {
+      "motif_a": "lipid_acyl_chain",
+      "motif_b": "sterol_ring_system",
+      "activation_corr": 0.5824,
+      "component_support_cosine": 0.5014
+    }
+  ],
+  "mean_spectral_purity": 0.0673,
+  "mean_band_fidelity": 0.6328,
+  "family_census": {
+    "protein": {
+      "n_analytes": 32,
+      "n_uncovered": 17,
+      "pct_uncovered": 53.1
+    },
+    "saccharide": {
+      "n_analytes": 27,
+      "n_uncovered": 17,
+      "pct_uncovered": 63.0
+    },
+    "amino_acid": {
+      "n_analytes": 17,
+      "n_uncovered": 11,
+      "pct_uncovered": 64.7
+    },
+    "triglyceride": {
+      "n_analytes": 15,
+      "n_uncovered": 14,
+      "pct_uncovered": 93.3
+    },
+    "organic_acid": {
+      "n_analytes": 15,
+      "n_uncovered": 8,
+      "pct_uncovered": 53.3
+    },
+    "fatty_acid": {
+      "n_analytes": 12,
+      "n_uncovered": 10,
+      "pct_uncovered": 83.3
+    },
+    "sterol": {
+      "n_analytes": 9,
+      "n_uncovered": 7,
+      "pct_uncovered": 77.8
+    },
+    "cofactor": {
+      "n_analytes": 6,
+      "n_uncovered": 2,
+      "pct_uncovered": 33.3
+    },
+    "unknown": {
+      "n_analytes": 6,
+      "n_uncovered": 4,
+      "pct_uncovered": 66.7
+    },
+    "purine": {
+      "n_analytes": 5,
+      "n_uncovered": 0,
+      "pct_uncovered": 0.0
+    },
+    "polysaccharide": {
+      "n_analytes": 5,
+      "n_uncovered": 4,
+      "pct_uncovered": 80.0
+    },
+    "lipid": {
+      "n_analytes": 5,
+      "n_uncovered": 4,
+      "pct_uncovered": 80.0
+    },
+    "nucleic_acid": {
+      "n_analytes": 3,
+      "n_uncovered": 3,
+      "pct_uncovered": 100.0
+    },
+    "pyrimidine": {
+      "n_analytes": 3,
+      "n_uncovered": 0,
+      "pct_uncovered": 0.0
+    },
+    "phospholipid": {
+      "n_analytes": 2,
+      "n_uncovered": 2,
+      "pct_uncovered": 100.0
+    },
+    "small_nitrogenous": {
+      "n_analytes": 2,
+      "n_uncovered": 1,
+      "pct_uncovered": 50.0
+    },
+    "carotenoid": {
+      "n_analytes": 2,
+      "n_uncovered": 2,
+      "pct_uncovered": 100.0
+    },
+    "polyol": {
+      "n_analytes": 1,
+      "n_uncovered": 1,
+      "pct_uncovered": 100.0
+    }
+  }
+}
