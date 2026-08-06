@@ -1,0 +1,46 @@
+{
+  "verdict": "HIERARCHICAL ABSTRACTION DOES NOT IMPROVE OVER CSM \u2014 the stability gains are those of a low-information representation, not of a better one",
+  "recommended_action": "discard",
+  "axes_improved": {
+    "robustness_A": false,
+    "robustness_B": true,
+    "activation_stability_under_noise": true,
+    "clean_molecule_retrieval": false,
+    "clean_class_retrieval": false,
+    "replicate_consistency": true,
+    "biochemical_coherence": false,
+    "cross_fold_reproducibility": false
+  },
+  "n_axes_improved": 3,
+  "informativeness_floor_passed": false,
+  "information_retained_ratio": 0.18478320846102947,
+  "class_retrieval_ratio": 0.4579439252331099,
+  "robustness_delta_vs_csm_A": -0.4122525776013209,
+  "clean_accuracy_cost_vs_csm_A": 0.4466019417475729,
+  "mean_aurc": {
+    "aurc_A_top1": {
+      "CSM": 0.9016749101861601,
+      "LSM": 0.8908126391730994,
+      "META": 0.4894223325848392,
+      "RAW": 0.9249402302881754
+    },
+    "aurc_B_top1": {
+      "CSM": 0.9360939460355505,
+      "LSM": 0.9237922570679761,
+      "META": 0.9442649863082155,
+      "RAW": 0.8679553415632971
+    },
+    "aurc_activation_stability": {
+      "CSM": 0.9277871077220682,
+      "LSM": 0.9197717580008739,
+      "META": 0.9746285241722025,
+      "RAW": 0.9050615576189429
+    },
+    "retained_at_worst": {
+      "CSM": 0.7881241565442232,
+      "LSM": 0.7623828647915573,
+      "META": 0.3073394495404132,
+      "RAW": 0.8135245901629043
+    }
+  }
+}

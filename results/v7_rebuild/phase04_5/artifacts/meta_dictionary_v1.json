@@ -1,0 +1,101 @@
+{
+  "schema": "gaira_v7_meta_dictionary_v1",
+  "variant": "plain",
+  "K": 3,
+  "lambda": null,
+  "fingerprint": "d24fbc288fe99ada2be47f667c3edf5b",
+  "csm_ids": [
+    "csm00",
+    "csm01",
+    "csm02",
+    "csm03",
+    "csm04",
+    "csm05",
+    "csm06",
+    "csm07",
+    "csm08",
+    "csm09",
+    "csm10",
+    "csm11",
+    "csm12",
+    "csm13",
+    "csm14",
+    "csm15",
+    "csm16",
+    "csm17",
+    "csm18",
+    "csm19",
+    "csm20",
+    "csm21",
+    "csm22",
+    "csm23",
+    "csm24",
+    "csm25",
+    "csm26",
+    "csm27",
+    "csm28",
+    "csm29",
+    "csm30",
+    "csm31",
+    "csm32",
+    "csm33",
+    "csm34",
+    "csm35",
+    "csm36",
+    "csm37",
+    "csm38",
+    "csm39",
+    "csm40",
+    "csm41",
+    "csm42",
+    "csm43",
+    "csm44",
+    "csm45",
+    "csm46",
+    "csm47",
+    "csm48"
+  ],
+  "components": [
+    {
+      "meta_component": "MC-01",
+      "loadings": {
+        "csm31": 1.592631,
+        "csm25": 1.202267,
+        "csm33": 0.951786,
+        "csm30": 0.732089,
+        "csm32": 0.314502,
+        "csm29": 0.222161,
+        "csm34": 0.126447,
+        "csm15": 0.120901
+      }
+    },
+    {
+      "meta_component": "MC-02",
+      "loadings": {
+        "csm00": 1.475395,
+        "csm01": 0.640386,
+        "csm09": 0.504305,
+        "csm02": 0.237349,
+        "csm07": 0.182212,
+        "csm36": 0.172947,
+        "csm04": 0.123389,
+        "csm08": 0.091106
+      }
+    },
+    {
+      "meta_component": "MC-03",
+      "loadings": {
+        "csm12": 1.131759,
+        "csm11": 0.486135,
+        "csm20": 0.433294,
+        "csm15": 0.403848,
+        "csm16": 0.36984,
+        "csm14": 0.269901,
+        "csm17": 0.264979,
+        "csm19": 0.239922
+      }
+    }
+  ],
+  "inference": "spectrum \u2192 frozen CSM projection \u2192 49 activations \u2192 NNLS onto this frozen H \u2192 Meta Component vector; no fitting",
+  "status": "CANDIDATE \u2014 the CSM layer remains canonical unless this layer demonstrates measurable benefit"
+}

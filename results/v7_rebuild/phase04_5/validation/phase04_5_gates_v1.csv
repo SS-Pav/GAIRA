@@ -1,0 +1,12 @@
+gate,status,detail
+frozen inputs verified,PASS,"atlas, LSM, CSM, theme"
+NMF applied to the CSM ACTIVATION matrix only,PASS,"A = (375, 49); not spectra, not a similarity matrix, not a graph"
+"K selected on a Pareto frontier, not reconstruction",PASS,reconstruction weight 0.14 of 1.0
+both variants compared,PASS,plain and geometry-regularised
+geometry used only as a one-sided prior,PASS,tr(H L H^T) rewards smoothness; no term separates distant CSMs
+inference is projection only,PASS,NNLS onto the frozen H
+all four representations on identical splits,PASS,"RAW / LSM / CSM / META, same frozen folds and query sets"
+"robustness measured, not assumed",PASS,240 rows = 12 perturbations x 5 levels x 4 representations
+stability gains gated by an informativeness floor,PASS,retains 0.185 of CSM information — floor 0.50
+verdict follows the numbers,PASS,"3/8 axes improved, informativeness FAIL → discard"
+K diagnostic reported but not used for selection,PASS,selecting K on the downstream metric would be circular

@@ -1,0 +1,153 @@
+{
+  "schema": "gaira_v7_phase_manifest_v1",
+  "phase": "04.5",
+  "phase_name": "Hierarchical NMF over frozen CSM activations",
+  "built_utc": "2026-08-06T17:55:09.053557+00:00",
+  "output_root": "/Users/surajpg/projects/GAIRA/results/v7_rebuild/phase04_5",
+  "redirectable_via": "GAIRA_V7_OUTPUT_ROOT",
+  "frozen_inputs": {
+    "atlas": "09ed804a40836f4a05a91ba10900cded",
+    "lsm": "208482d6f7178b5b8f16cace91be55b0",
+    "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+    "theme": "f54d4835ffdf8aa2d50a4a203da0e8f4"
+  },
+  "selected": {
+    "variant": "plain",
+    "K": 3,
+    "fingerprint": "d24fbc288fe99ada2be47f667c3edf5b"
+  },
+  "seed": 0,
+  "outputs": [
+    {
+      "artifact_id": "model_selection_sweep_v1.csv",
+      "path": "results/v7_rebuild/phase04_5/tables/model_selection_sweep_v1.csv",
+      "sha256": "406d83186f40ecc51ef9a7bb881ff58ab09538ca0861045e1db9a166b185e449",
+      "rows": 16
+    },
+    {
+      "artifact_id": "model_selection_v1.json",
+      "path": "results/v7_rebuild/phase04_5/artifacts/model_selection_v1.json",
+      "sha256": "d96517fcc3ec867feb7614e71019aff5b4b58d9916c57d81257a7fef74dc7fe0"
+    },
+    {
+      "artifact_id": "meta_component_evidence_v1.csv",
+      "path": "results/v7_rebuild/phase04_5/tables/meta_component_evidence_v1.csv",
+      "sha256": "40517d4fcff9ca5442092e1fe0decd46ff26e94e15ed78079d1a0702cf2fcb7c",
+      "rows": 3
+    },
+    {
+      "artifact_id": "representation_comparison_v1.csv",
+      "path": "results/v7_rebuild/phase04_5/tables/representation_comparison_v1.csv",
+      "sha256": "6f07f6dc0663935e60b0ffc267a6bc6e885de327c960a1f6b90e6344e15ee908",
+      "rows": 4
+    },
+    {
+      "artifact_id": "calibration_v1.csv",
+      "path": "results/v7_rebuild/phase04_5/validation/calibration_v1.csv",
+      "sha256": "324fc66bba0b7383cfc8054fb487a89e01f5ede6d9641ce16a68a56b350ec3ce",
+      "rows": 4
+    },
+    {
+      "artifact_id": "robustness_curves_v1.csv",
+      "path": "results/v7_rebuild/phase04_5/tables/robustness_curves_v1.csv",
+      "sha256": "46a3b1a5e04868d531645fde4c24c35d22b9065b386035145dfbc2b349a789a4",
+      "rows": 240
+    },
+    {
+      "artifact_id": "robustness_auc_v1.csv",
+      "path": "results/v7_rebuild/phase04_5/tables/robustness_auc_v1.csv",
+      "sha256": "c0cf5e93949a7987e8b210c690972ef6f14ab2239c8ee49c5e3100514db27203",
+      "rows": 48
+    },
+    {
+      "artifact_id": "k_downstream_diagnostic_v1.csv",
+      "path": "results/v7_rebuild/phase04_5/validation/k_downstream_diagnostic_v1.csv",
+      "sha256": "0f9ac5b5a81edca02c880c935771a58136a78ff3b7eb93ad6486ab991ffb56df",
+      "rows": 16
+    },
+    {
+      "artifact_id": "meta_components_v1.npz",
+      "path": "results/v7_rebuild/phase04_5/artifacts/meta_components_v1.npz",
+      "sha256": "35b30bb3fd00eee0f300e2f6861307c404c59bb6f4d75ad8bff45779aa585345"
+    },
+    {
+      "artifact_id": "meta_dictionary_v1.json",
+      "path": "results/v7_rebuild/phase04_5/artifacts/meta_dictionary_v1.json",
+      "sha256": "23c35af6244af014d334b636b4c7aa92deece37ac88f3c99578e27518c93dbd4"
+    },
+    {
+      "artifact_id": "verdict_v1.json",
+      "path": "results/v7_rebuild/phase04_5/artifacts/verdict_v1.json",
+      "sha256": "2ba98415915d2f180187f3f3e51e508be7c1c3d9518d5065048afe8fdcbd88d0"
+    },
+    {
+      "artifact_id": "phase04_5_gates_v1.csv",
+      "path": "results/v7_rebuild/phase04_5/validation/phase04_5_gates_v1.csv",
+      "sha256": "f46af0dcc7dfe3718571a892c86089fffb7d2be07fb5d50c59cf480069c76708",
+      "rows": 11
+    }
+  ],
+  "gates": [
+    {
+      "gate": "frozen inputs verified",
+      "status": "PASS",
+      "detail": "atlas, LSM, CSM, theme"
+    },
+    {
+      "gate": "NMF applied to the CSM ACTIVATION matrix only",
+      "status": "PASS",
+      "detail": "A = (375, 49); not spectra, not a similarity matrix, not a graph"
+    },
+    {
+      "gate": "K selected on a Pareto frontier, not reconstruction",
+      "status": "PASS",
+      "detail": "reconstruction weight 0.14 of 1.0"
+    },
+    {
+      "gate": "both variants compared",
+      "status": "PASS",
+      "detail": "plain and geometry-regularised"
+    },
+    {
+      "gate": "geometry used only as a one-sided prior",
+      "status": "PASS",
+      "detail": "tr(H L H^T) rewards smoothness; no term separates distant CSMs"
+    },
+    {
+      "gate": "inference is projection only",
+      "status": "PASS",
+      "detail": "NNLS onto the frozen H"
+    },
+    {
+      "gate": "all four representations on identical splits",
+      "status": "PASS",
+      "detail": "RAW / LSM / CSM / META, same frozen folds and query sets"
+    },
+    {
+      "gate": "robustness measured, not assumed",
+      "status": "PASS",
+      "detail": "240 rows = 12 perturbations x 5 levels x 4 representations"
+    },
+    {
+      "gate": "stability gains gated by an informativeness floor",
+      "status": "PASS",
+      "detail": "retains 0.185 of CSM information \u2014 floor 0.50"
+    },
+    {
+      "gate": "verdict follows the numbers",
+      "status": "PASS",
+      "detail": "3/8 axes improved, informativeness FAIL \u2192 discard"
+    },
+    {
+      "gate": "K diagnostic reported but not used for selection",
+      "status": "PASS",
+      "detail": "selecting K on the downstream metric would be circular"
+    }
+  ],
+  "code_dirty": true,
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.4.3",
+    "pandas": "2.3.3"
+  }
+}

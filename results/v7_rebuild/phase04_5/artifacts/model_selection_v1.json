@@ -1,0 +1,44 @@
+{
+  "selected_variant": "plain",
+  "selected_K": 3,
+  "pareto_weights": {
+    "explained_variance": {
+      "weight": 0.14,
+      "direction": "max"
+    },
+    "bootstrap_stability": {
+      "weight": 0.22,
+      "direction": "max"
+    },
+    "consensus_stability": {
+      "weight": 0.18,
+      "direction": "max"
+    },
+    "component_sparsity": {
+      "weight": 0.12,
+      "direction": "max"
+    },
+    "interpretability": {
+      "weight": 0.14,
+      "direction": "max"
+    },
+    "redundancy": {
+      "weight": 0.1,
+      "direction": "min"
+    },
+    "mutual_coherence": {
+      "weight": 0.06,
+      "direction": "min"
+    },
+    "activation_entropy": {
+      "weight": 0.04,
+      "direction": "min"
+    }
+  },
+  "reconstruction_is_minority_weighted": true,
+  "best_per_variant": {
+    "plain": 3,
+    "geometry_regularised": 3
+  },
+  "lambda": 0.1
+}
