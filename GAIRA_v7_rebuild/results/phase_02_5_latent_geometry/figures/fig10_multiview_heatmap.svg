@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="490.99956pt" height="450.255938pt" viewBox="0 0 490.99956 450.255938" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-06T01:55:38.549035</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 450.255938 
+L 490.99956 450.255938 
+L 490.99956 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 94.121344 356.134594 
+L 424.457344 356.134594 
+L 424.457344 25.798594 
+L 94.121344 25.798594 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#pc628afed6c)">
+    <image xlink:href="data:image/png;base64,
+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" id="image3e71de6217" transform="scale(1 -1) translate(0 -330.48)" x="94.121344" y="-25.654594" width="330.48" height="330.48"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m0bdeb3e0a5" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="97.424704" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ff7f0e" transform="translate(98.630047 426.989063) rotate(-90)">chromophore_pigment.m00</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="104.031424" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ff9896" transform="translate(105.236767 411.083125) rotate(-90)">peptide_protein.m01</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="110.638144" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ff7f0e" transform="translate(111.843487 426.989063) rotate(-90)">chromophore_pigment.m01</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="117.244864" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ff9896" transform="translate(118.450207 411.083125) rotate(-90)">peptide_protein.m09</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="123.851584" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ff9896" transform="translate(125.056928 411.083125) rotate(-90)">peptide_protein.m04</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="130.458304" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ff9896" transform="translate(131.663647 411.083125) rotate(-90)">peptide_protein.m08</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="137.065024" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ffbb78" transform="translate(138.270367 397.54475) rotate(-90)">fatty_acid.m02</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="143.671744" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #7f7f7f" transform="translate(144.877088 405.971375) rotate(-90)">sterol_steroid.m00</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="150.278464" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #1f77b4" transform="translate(151.547776 402.440156) rotate(-90)">acylglycerol.m00</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="156.885184" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ffbb78" transform="translate(158.090528 397.54475) rotate(-90)">fatty_acid.m03</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="163.491904" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ffbb78" transform="translate(164.697248 397.54475) rotate(-90)">fatty_acid.m00</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="170.098624" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #c5b0d5" transform="translate(171.303967 434.436031) rotate(-90)">phospholipid_sphingolipid.m00</text>
+     </g>
+    </g>
+    <g id="xtick_13">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="176.705344" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #1f77b4" transform="translate(177.974656 402.440156) rotate(-90)">acylglycerol.m02</text>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="183.312064" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ffbb78" transform="translate(184.517408 397.54475) rotate(-90)">fatty_acid.m04</text>
+     </g>
+    </g>
+    <g id="xtick_15">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="189.918784" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #1f77b4" transform="translate(191.188096 402.440156) rotate(-90)">acylglycerol.m01</text>
+     </g>
+    </g>
+    <g id="xtick_16">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="196.525504" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ffbb78" transform="translate(197.730848 397.54475) rotate(-90)">fatty_acid.m01</text>
+     </g>
+    </g>
+    <g id="xtick_17">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="203.132224" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ff9896" transform="translate(204.337568 411.083125) rotate(-90)">peptide_protein.m07</text>
+     </g>
+    </g>
+    <g id="xtick_18">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="209.738944" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ff9896" transform="translate(210.944288 411.083125) rotate(-90)">peptide_protein.m05</text>
+     </g>
+    </g>
+    <g id="xtick_19">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="216.345664" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ff9896" transform="translate(217.551008 411.083125) rotate(-90)">peptide_protein.m00</text>
+     </g>
+    </g>
+    <g id="xtick_20">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="222.952384" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ff9896" transform="translate(224.157728 411.083125) rotate(-90)">peptide_protein.m06</text>
+     </g>
+    </g>
+    <g id="xtick_21">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="229.559104" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #7f7f7f" transform="translate(230.764448 405.971375) rotate(-90)">sterol_steroid.m01</text>
+     </g>
+    </g>
+    <g id="xtick_22">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="236.165824" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #c7c7c7" transform="translate(237.371168 421.035656) rotate(-90)">sulfur_thiol_cofactor.m01</text>
+     </g>
+    </g>
+    <g id="xtick_23">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="242.772544" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #2ca02c" transform="translate(243.977888 412.452344) rotate(-90)">free_amino_acid.m02</text>
+     </g>
+    </g>
+    <g id="xtick_24">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="249.379264" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ff9896" transform="translate(250.584608 411.083125) rotate(-90)">peptide_protein.m02</text>
+     </g>
+    </g>
+    <g id="xtick_25">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="255.985984" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #f7b6d2" transform="translate(257.191328 416.873375) rotate(-90)">small_nitrogenous.m00</text>
+     </g>
+    </g>
+    <g id="xtick_26">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="262.592704" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_26">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #2ca02c" transform="translate(263.798048 412.452344) rotate(-90)">free_amino_acid.m04</text>
+     </g>
+    </g>
+    <g id="xtick_27">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="269.199424" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_27">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #2ca02c" transform="translate(270.404768 412.452344) rotate(-90)">free_amino_acid.m01</text>
+     </g>
+    </g>
+    <g id="xtick_28">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="275.806144" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_28">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #2ca02c" transform="translate(277.011488 412.452344) rotate(-90)">free_amino_acid.m05</text>
+     </g>
+    </g>
+    <g id="xtick_29">
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="282.412864" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_29">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #98df8a" transform="translate(283.618208 426.289) rotate(-90)">mono_oligosaccharide.m01</text>
+     </g>
+    </g>
+    <g id="xtick_30">
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="289.019584" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_30">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #2ca02c" transform="translate(290.224928 412.452344) rotate(-90)">free_amino_acid.m06</text>
+     </g>
+    </g>
+    <g id="xtick_31">
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="295.626304" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_31">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #98df8a" transform="translate(296.831648 426.289) rotate(-90)">mono_oligosaccharide.m04</text>
+     </g>
+    </g>
+    <g id="xtick_32">
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="302.233024" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_32">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #2ca02c" transform="translate(303.438368 412.452344) rotate(-90)">free_amino_acid.m03</text>
+     </g>
+    </g>
+    <g id="xtick_33">
+     <g id="line2d_33">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="308.839744" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_33">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #8c564b" transform="translate(310.109056 409.593875) rotate(-90)">polysaccharide.m01</text>
+     </g>
+    </g>
+    <g id="xtick_34">
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="315.446464" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_34">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #98df8a" transform="translate(316.651808 426.289) rotate(-90)">mono_oligosaccharide.m02</text>
+     </g>
+    </g>
+    <g id="xtick_35">
+     <g id="line2d_35">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="322.053184" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_35">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #98df8a" transform="translate(323.258528 426.289) rotate(-90)">mono_oligosaccharide.m05</text>
+     </g>
+    </g>
+    <g id="xtick_36">
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="328.659904" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_36">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #7f7f7f" transform="translate(329.865248 405.971375) rotate(-90)">sterol_steroid.m02</text>
+     </g>
+    </g>
+    <g id="xtick_37">
+     <g id="line2d_37">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="335.266624" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_37">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #aec7e8" transform="translate(336.471968 437.295938) rotate(-90)">carboxylic_acid_metabolite.m01</text>
+     </g>
+    </g>
+    <g id="xtick_38">
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="341.873344" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_38">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #c5b0d5" transform="translate(343.078688 434.436031) rotate(-90)">phospholipid_sphingolipid.m01</text>
+     </g>
+    </g>
+    <g id="xtick_39">
+     <g id="line2d_39">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="348.480064" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_39">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #c49c94" transform="translate(349.749376 389.680906) rotate(-90)">purine.m00</text>
+     </g>
+    </g>
+    <g id="xtick_40">
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="355.086784" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_40">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #c7c7c7" transform="translate(356.292128 421.035656) rotate(-90)">sulfur_thiol_cofactor.m00</text>
+     </g>
+    </g>
+    <g id="xtick_41">
+     <g id="line2d_41">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="361.693504" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_41">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #98df8a" transform="translate(362.898848 426.289) rotate(-90)">mono_oligosaccharide.m00</text>
+     </g>
+    </g>
+    <g id="xtick_42">
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="368.300224" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_42">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #9467bd" transform="translate(369.505568 426.423406) rotate(-90)">phosphate_metabolite.m00</text>
+     </g>
+    </g>
+    <g id="xtick_43">
+     <g id="line2d_43">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="374.906944" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_43">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #98df8a" transform="translate(376.112288 426.289) rotate(-90)">mono_oligosaccharide.m03</text>
+     </g>
+    </g>
+    <g id="xtick_44">
+     <g id="line2d_44">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="381.513664" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_44">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #ff9896" transform="translate(382.719008 411.083125) rotate(-90)">peptide_protein.m03</text>
+     </g>
+    </g>
+    <g id="xtick_45">
+     <g id="line2d_45">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="388.120384" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_45">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #8c564b" transform="translate(389.389696 409.593875) rotate(-90)">polysaccharide.m00</text>
+     </g>
+    </g>
+    <g id="xtick_46">
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="394.727104" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_46">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #d62728" transform="translate(395.932448 423.870406) rotate(-90)">nucleic_acid_polymer.m00</text>
+     </g>
+    </g>
+    <g id="xtick_47">
+     <g id="line2d_47">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="401.333824" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_47">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #e377c2" transform="translate(402.603136 399.445125) rotate(-90)">pyrimidine.m00</text>
+     </g>
+    </g>
+    <g id="xtick_48">
+     <g id="line2d_48">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="407.940544" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_48">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #c49c94" transform="translate(409.209856 389.680906) rotate(-90)">purine.m01</text>
+     </g>
+    </g>
+    <g id="xtick_49">
+     <g id="line2d_49">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="414.547264" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_49">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #aec7e8" transform="translate(415.752608 437.295938) rotate(-90)">carboxylic_acid_metabolite.m00</text>
+     </g>
+    </g>
+    <g id="xtick_50">
+     <g id="line2d_50">
+      <g>
+       <use xlink:href="#m0bdeb3e0a5" x="421.153984" y="356.134594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_50">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; fill: #2ca02c" transform="translate(422.359328 412.452344) rotate(-90)">free_amino_acid.m00</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_51">
+      <defs>
+       <path id="md109256941" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="29.101954" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_51">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ff7f0e" x="87.121344" y="30.849594" transform="rotate(-0 87.121344 30.849594)">chromophore_pigment.m00</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_52">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="35.708674" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_52">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ff9896" x="87.121344" y="37.456314" transform="rotate(-0 87.121344 37.456314)">peptide_protein.m01</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_53">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="42.315394" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_53">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ff7f0e" x="87.121344" y="44.063034" transform="rotate(-0 87.121344 44.063034)">chromophore_pigment.m01</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_54">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="48.922114" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_54">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ff9896" x="87.121344" y="50.669754" transform="rotate(-0 87.121344 50.669754)">peptide_protein.m09</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_55">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="55.528834" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_55">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ff9896" x="87.121344" y="57.276474" transform="rotate(-0 87.121344 57.276474)">peptide_protein.m04</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_56">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="62.135554" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_56">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ff9896" x="87.121344" y="63.883194" transform="rotate(-0 87.121344 63.883194)">peptide_protein.m08</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_57">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="68.742274" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_57">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffbb78" x="87.121344" y="70.489914" transform="rotate(-0 87.121344 70.489914)">fatty_acid.m02</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_58">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="75.348994" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_58">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #7f7f7f" x="87.121344" y="77.096634" transform="rotate(-0 87.121344 77.096634)">sterol_steroid.m00</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_59">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="81.955714" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_59">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1f77b4" x="87.121344" y="83.703354" transform="rotate(-0 87.121344 83.703354)">acylglycerol.m00</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_60">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="88.562434" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_60">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffbb78" x="87.121344" y="90.310074" transform="rotate(-0 87.121344 90.310074)">fatty_acid.m03</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_61">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="95.169154" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_61">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffbb78" x="87.121344" y="96.916794" transform="rotate(-0 87.121344 96.916794)">fatty_acid.m00</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_62">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="101.775874" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_62">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #c5b0d5" x="87.121344" y="103.523514" transform="rotate(-0 87.121344 103.523514)">phospholipid_sphingolipid.m00</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_63">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="108.382594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_63">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1f77b4" x="87.121344" y="110.130234" transform="rotate(-0 87.121344 110.130234)">acylglycerol.m02</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_64">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="114.989314" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_64">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffbb78" x="87.121344" y="116.736954" transform="rotate(-0 87.121344 116.736954)">fatty_acid.m04</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_65">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="121.596034" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_65">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1f77b4" x="87.121344" y="123.343674" transform="rotate(-0 87.121344 123.343674)">acylglycerol.m01</text>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_66">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="128.202754" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_66">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffbb78" x="87.121344" y="129.950394" transform="rotate(-0 87.121344 129.950394)">fatty_acid.m01</text>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_67">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="134.809474" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_67">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ff9896" x="87.121344" y="136.557114" transform="rotate(-0 87.121344 136.557114)">peptide_protein.m07</text>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_68">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="141.416194" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_68">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ff9896" x="87.121344" y="143.163834" transform="rotate(-0 87.121344 143.163834)">peptide_protein.m05</text>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_69">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="148.022914" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_69">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ff9896" x="87.121344" y="149.770554" transform="rotate(-0 87.121344 149.770554)">peptide_protein.m00</text>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_70">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="154.629634" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_70">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ff9896" x="87.121344" y="156.377274" transform="rotate(-0 87.121344 156.377274)">peptide_protein.m06</text>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_71">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="161.236354" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_71">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #7f7f7f" x="87.121344" y="162.983994" transform="rotate(-0 87.121344 162.983994)">sterol_steroid.m01</text>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_72">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="167.843074" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_72">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #c7c7c7" x="87.121344" y="169.590714" transform="rotate(-0 87.121344 169.590714)">sulfur_thiol_cofactor.m01</text>
+     </g>
+    </g>
+    <g id="ytick_23">
+     <g id="line2d_73">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="174.449794" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_73">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #2ca02c" x="87.121344" y="176.197434" transform="rotate(-0 87.121344 176.197434)">free_amino_acid.m02</text>
+     </g>
+    </g>
+    <g id="ytick_24">
+     <g id="line2d_74">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="181.056514" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_74">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ff9896" x="87.121344" y="182.804154" transform="rotate(-0 87.121344 182.804154)">peptide_protein.m02</text>
+     </g>
+    </g>
+    <g id="ytick_25">
+     <g id="line2d_75">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="187.663234" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_75">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #f7b6d2" x="87.121344" y="189.410874" transform="rotate(-0 87.121344 189.410874)">small_nitrogenous.m00</text>
+     </g>
+    </g>
+    <g id="ytick_26">
+     <g id="line2d_76">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="194.269954" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_76">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #2ca02c" x="87.121344" y="196.017594" transform="rotate(-0 87.121344 196.017594)">free_amino_acid.m04</text>
+     </g>
+    </g>
+    <g id="ytick_27">
+     <g id="line2d_77">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="200.876674" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_77">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #2ca02c" x="87.121344" y="202.624314" transform="rotate(-0 87.121344 202.624314)">free_amino_acid.m01</text>
+     </g>
+    </g>
+    <g id="ytick_28">
+     <g id="line2d_78">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="207.483394" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_78">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #2ca02c" x="87.121344" y="209.231034" transform="rotate(-0 87.121344 209.231034)">free_amino_acid.m05</text>
+     </g>
+    </g>
+    <g id="ytick_29">
+     <g id="line2d_79">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="214.090114" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_79">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #98df8a" x="87.121344" y="215.837754" transform="rotate(-0 87.121344 215.837754)">mono_oligosaccharide.m01</text>
+     </g>
+    </g>
+    <g id="ytick_30">
+     <g id="line2d_80">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="220.696834" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_80">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #2ca02c" x="87.121344" y="222.444474" transform="rotate(-0 87.121344 222.444474)">free_amino_acid.m06</text>
+     </g>
+    </g>
+    <g id="ytick_31">
+     <g id="line2d_81">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="227.303554" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_81">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #98df8a" x="87.121344" y="229.051194" transform="rotate(-0 87.121344 229.051194)">mono_oligosaccharide.m04</text>
+     </g>
+    </g>
+    <g id="ytick_32">
+     <g id="line2d_82">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="233.910274" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_82">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #2ca02c" x="87.121344" y="235.657914" transform="rotate(-0 87.121344 235.657914)">free_amino_acid.m03</text>
+     </g>
+    </g>
+    <g id="ytick_33">
+     <g id="line2d_83">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="240.516994" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_83">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #8c564b" x="87.121344" y="242.264634" transform="rotate(-0 87.121344 242.264634)">polysaccharide.m01</text>
+     </g>
+    </g>
+    <g id="ytick_34">
+     <g id="line2d_84">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="247.123714" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_84">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #98df8a" x="87.121344" y="248.871354" transform="rotate(-0 87.121344 248.871354)">mono_oligosaccharide.m02</text>
+     </g>
+    </g>
+    <g id="ytick_35">
+     <g id="line2d_85">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="253.730434" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_85">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #98df8a" x="87.121344" y="255.478074" transform="rotate(-0 87.121344 255.478074)">mono_oligosaccharide.m05</text>
+     </g>
+    </g>
+    <g id="ytick_36">
+     <g id="line2d_86">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="260.337154" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_86">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #7f7f7f" x="87.121344" y="262.084794" transform="rotate(-0 87.121344 262.084794)">sterol_steroid.m02</text>
+     </g>
+    </g>
+    <g id="ytick_37">
+     <g id="line2d_87">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="266.943874" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_87">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #aec7e8" x="87.121344" y="268.691514" transform="rotate(-0 87.121344 268.691514)">carboxylic_acid_metabolite.m01</text>
+     </g>
+    </g>
+    <g id="ytick_38">
+     <g id="line2d_88">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="273.550594" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_88">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #c5b0d5" x="87.121344" y="275.298234" transform="rotate(-0 87.121344 275.298234)">phospholipid_sphingolipid.m01</text>
+     </g>
+    </g>
+    <g id="ytick_39">
+     <g id="line2d_89">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="280.157314" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_89">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #c49c94" x="87.121344" y="281.904954" transform="rotate(-0 87.121344 281.904954)">purine.m00</text>
+     </g>
+    </g>
+    <g id="ytick_40">
+     <g id="line2d_90">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="286.764034" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_90">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #c7c7c7" x="87.121344" y="288.511674" transform="rotate(-0 87.121344 288.511674)">sulfur_thiol_cofactor.m00</text>
+     </g>
+    </g>
+    <g id="ytick_41">
+     <g id="line2d_91">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="293.370754" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_91">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #98df8a" x="87.121344" y="295.118394" transform="rotate(-0 87.121344 295.118394)">mono_oligosaccharide.m00</text>
+     </g>
+    </g>
+    <g id="ytick_42">
+     <g id="line2d_92">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="299.977474" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_92">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #9467bd" x="87.121344" y="301.725114" transform="rotate(-0 87.121344 301.725114)">phosphate_metabolite.m00</text>
+     </g>
+    </g>
+    <g id="ytick_43">
+     <g id="line2d_93">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="306.584194" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_93">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #98df8a" x="87.121344" y="308.331834" transform="rotate(-0 87.121344 308.331834)">mono_oligosaccharide.m03</text>
+     </g>
+    </g>
+    <g id="ytick_44">
+     <g id="line2d_94">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="313.190914" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_94">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ff9896" x="87.121344" y="314.938554" transform="rotate(-0 87.121344 314.938554)">peptide_protein.m03</text>
+     </g>
+    </g>
+    <g id="ytick_45">
+     <g id="line2d_95">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="319.797634" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_95">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #8c564b" x="87.121344" y="321.545274" transform="rotate(-0 87.121344 321.545274)">polysaccharide.m00</text>
+     </g>
+    </g>
+    <g id="ytick_46">
+     <g id="line2d_96">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="326.404354" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_96">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d62728" x="87.121344" y="328.151994" transform="rotate(-0 87.121344 328.151994)">nucleic_acid_polymer.m00</text>
+     </g>
+    </g>
+    <g id="ytick_47">
+     <g id="line2d_97">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="333.011074" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_97">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e377c2" x="87.121344" y="334.758714" transform="rotate(-0 87.121344 334.758714)">pyrimidine.m00</text>
+     </g>
+    </g>
+    <g id="ytick_48">
+     <g id="line2d_98">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="339.617794" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_98">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #c49c94" x="87.121344" y="341.365434" transform="rotate(-0 87.121344 341.365434)">purine.m01</text>
+     </g>
+    </g>
+    <g id="ytick_49">
+     <g id="line2d_99">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="346.224514" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_99">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #aec7e8" x="87.121344" y="347.972154" transform="rotate(-0 87.121344 347.972154)">carboxylic_acid_metabolite.m00</text>
+     </g>
+    </g>
+    <g id="ytick_50">
+     <g id="line2d_100">
+      <g>
+       <use xlink:href="#md109256941" x="94.121344" y="352.831234" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_100">
+      <text style="font-size: 4.6px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #2ca02c" x="87.121344" y="354.578874" transform="rotate(-0 87.121344 354.578874)">free_amino_acid.m00</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 94.121344 356.134594 
+L 94.121344 25.798594 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 424.457344 356.134594 
+L 424.457344 25.798594 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 94.121344 356.134594 
+L 424.457344 356.134594 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 94.121344 25.798594 
+L 424.457344 25.798594 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_101">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1a1a1a" x="94.121344" y="19.798594" transform="rotate(-0 94.121344 19.798594)">Primary multi-view geometry (weighted_similarity) similarity</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 445.103344 315.152194 
+L 457.521904 315.152194 
+L 457.521904 66.780994 
+L 445.103344 66.780994 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAABEAAAFZCAYAAAB+EcRPAAAB/0lEQVR4nO2cQY7FMAxCgfr+V87oz7JbUwmh5ADIecYk6aIE5mC5huBWAwPuRbRWwK8Sg86YmKiKCQ0iwBPChI7tMAWsunyitQJui+Nt/zT5RHd23mtoSPsJyhOE2H4cZlNSnjxdTJ4QsymHCUKYaK2AH9igFj8pTE7K1UIxTJgyxZMTBQryiVKYwPDBgQ6w6mIiC1hcJq81jPniJ49PkPHZUKb7CQ0iSNkO94XAFAVEle2JrihoMpuQsx06KkEKEwUxQRMTes4dVM0OQipR0Oygq8V0VIKqFjPlfqK9BDzdmZhzRyYmZy+iOzvvdY+M5AGUoRDktHhkmGJ1Xbdk0EBOso0Y02IYRNTlExq6M+qKR8ZcLXSZfNIdoSoKxjHFMhQCVxScriftcYhgvVQWjwyKguMQwV6EXUzY9crQZfLRFZRdxyhP0d1eST45GZWoK0+0lwCGui3+xPa0HKNKsT1jmPAyqWciZIiojAmCfIIYJog5ixECFl1McLfzXkPD+01rBfz/OcEhoi4msoiw6RiFYzsoY8IUJgiaHWZEwZQxQYqIcmaHOdtRSHcmqMVy/MVIXUzIIrBaK8DXYmVUoiAmLGOiIrNprYDrky99oqoWy8GEZVEghwjXImpjwhQmJ4eJbp4E/7VVIS2esjw5niuompjgbif4yEBKiyfGJ3/M1DNnioLtpAAAAABJRU5ErkJggg==" id="imagecfabf39d8f" transform="scale(1 -1) translate(0 -248.4)" x="444.96" y="-66.24" width="12.24" height="248.4"/>
+   <g id="matplotlib.axis_3"/>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_51">
+     <g id="line2d_101">
+      <defs>
+       <path id="m23fbcd512c" d="M 0 0 
+L 3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m23fbcd512c" x="457.521904" y="283.508787" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_102">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="464.521904" y="286.738123" transform="rotate(-0 464.521904 286.738123)">0.2</text>
+     </g>
+    </g>
+    <g id="ytick_52">
+     <g id="line2d_102">
+      <g>
+       <use xlink:href="#m23fbcd512c" x="457.521904" y="229.326839" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_103">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="464.521904" y="232.556175" transform="rotate(-0 464.521904 232.556175)">0.4</text>
+     </g>
+    </g>
+    <g id="ytick_53">
+     <g id="line2d_103">
+      <g>
+       <use xlink:href="#m23fbcd512c" x="457.521904" y="175.14489" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_104">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="464.521904" y="178.374226" transform="rotate(-0 464.521904 178.374226)">0.6</text>
+     </g>
+    </g>
+    <g id="ytick_54">
+     <g id="line2d_104">
+      <g>
+       <use xlink:href="#m23fbcd512c" x="457.521904" y="120.962942" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_105">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="464.521904" y="124.192278" transform="rotate(-0 464.521904 124.192278)">0.8</text>
+     </g>
+    </g>
+    <g id="ytick_55">
+     <g id="line2d_105">
+      <g>
+       <use xlink:href="#m23fbcd512c" x="457.521904" y="66.780994" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_106">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="464.521904" y="70.01033" transform="rotate(-0 464.521904 70.01033)">1.0</text>
+     </g>
+    </g>
+   </g>
+   <g id="LineCollection_1"/>
+   <g id="patch_8">
+    <path d="M 445.103344 315.152194 
+L 451.312624 315.152194 
+L 457.521904 315.152194 
+L 457.521904 66.780994 
+L 451.312624 66.780994 
+L 445.103344 66.780994 
+L 445.103344 315.152194 
+z
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc628afed6c">
+   <rect x="94.121344" y="25.798594" width="330.336" height="330.336"/>
+  </clipPath>
+ </defs>
+</svg>
