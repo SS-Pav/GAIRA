@@ -3,7 +3,7 @@
 **Status** GATE_FAILED — 15 of 16 gates pass; G6 (calibration ECE ≤ 0.10) fails, and §6 argues
 the failure is the finding rather than a defect to be patched.
 **Scope** Raman only. No SERS, no cross-modality experiment.
-**Engine fingerprint** `cf82bc8d5d0519ab5221ee9104a7223b`
+**Engine fingerprint** `20d8bd99ce71f45a125c6a2b1d719e51`
 **Frozen inputs verified** LSM `208482d6f7178b5b8f16cace91be55b0` · CSM `0b4aa550ccefed3edabdbde5bae11c8d`
 
 ---

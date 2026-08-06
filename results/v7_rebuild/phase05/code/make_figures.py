@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import sys
+import textwrap
 from pathlib import Path
 
 import matplotlib
@@ -582,7 +583,7 @@ def f14_schematic(c):
 # ── F15 ──────────────────────────────────────────────────────────────────────
 def f15_summary(c):
     fig = plt.figure(figsize=(11.0, 7.4))
-    gs = fig.add_gridspec(2, 3, height_ratios=[1.0, 0.95], hspace=0.45, wspace=0.32)
+    gs = fig.add_gridspec(2, 3, height_ratios=[1.0, 1.05], hspace=0.40, wspace=0.55)
     ax = fig.add_subplot(gs[0, 0])
     d = c.robs.set_index("representation")
     xs = [d.loc[r, "clean_class_top1_grouped"] for r in REP_ORDER]
@@ -620,13 +621,20 @@ def f15_summary(c):
     ax = fig.add_subplot(gs[1, :])
     ax.axis("off"); ax.set_xlim(0, 1); ax.set_ylim(0, 1)
     g = c.gates
+    # Four columns, and the count of rows follows the number of gates rather than assuming it:
+    # the grid silently overflowed the page when the gate list grew from 14 to 16.
+    ncol = 4
+    nrow = int(np.ceil(len(g) / ncol))
+    w, gap_x = 0.225, 0.245
+    h = min(0.20, (0.82 - 0.10) / nrow - 0.035)
     for i, (_, row) in enumerate(g.iterrows()):
-        x = 0.02 + (i % 5) * 0.196
-        y = 0.68 - (i // 5) * 0.30
+        x = 0.015 + (i % ncol) * gap_x
+        y = 0.80 - (i // ncol) * (h + 0.035)
         ok = row.status == "PASS"
-        box(ax, x, y, 0.185, 0.22, row.gate.replace(" (", "\n("),
-            "#ecfdf5" if ok else "#fef2f2", GREEN if ok else RED, 6.4)
-    ax.text(0.02, 0.03, f"{int((g.status == 'PASS').sum())} of {len(g)} gates pass · "
+        label = "\n".join(textwrap.wrap(row.gate, 34))
+        box(ax, x, y, w, h, label, "#ecfdf5" if ok else "#fef2f2",
+            GREEN if ok else RED, 6.0)
+    ax.text(0.015, 0.02, f"{int((g.status == 'PASS').sum())} of {len(g)} gates pass · "
             f"engine fingerprint {c.state['engine_fingerprint']} · "
             "Raman only, no cross-modality experiment", fontsize=8, color=MUTED)
     fig.suptitle("Figure 15 · Phase 05 architecture summary", x=0.04, ha="left", fontsize=11,
