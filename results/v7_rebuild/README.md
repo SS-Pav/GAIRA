@@ -5,7 +5,8 @@ Generated artefacts for the GAIRA V7 rebuild. One directory per phase.
 | Phase | Directory | Status |
 |---|---|---|
 | 00 Benchmark lock and canonical data foundation | `phase00/` | **COMPLETE** |
-| 01 Balanced reference construction | — | not started |
+| 01 Local Spectral Motif discovery (Strategy A) | `phase01/` | **COMPLETE** |
+| — Balanced reference construction (plan's original Phase 01) | — | **not done** — see PHASE_01_REPORT.md §2 |
 | 02 Local Spectral Motifs | — | not started |
 | 03 Consensus Spectral Motifs | — | not started |
 | 04 Biochemical themes | — | not started |

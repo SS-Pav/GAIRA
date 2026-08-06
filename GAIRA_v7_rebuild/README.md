@@ -106,7 +106,8 @@ GAIRA_v7_rebuild/
 | Phase | Name | Status | Output | Gate |
 |---|---|---|---|---|
 | 00 | Benchmark lock | ✅ **COMPLETE** | [`results/v7_rebuild/phase00/`](../results/v7_rebuild/phase00/) | 12/12 PASS |
-| 01 | Balanced references | Not started | — | — |
+| 01 | **Local Spectral Motifs (Strategy A)** | ✅ **COMPLETE** | [`results/v7_rebuild/phase01/`](../results/v7_rebuild/phase01/) | 9/9 PASS |
+| — | Balanced references *(the plan's original Phase 01)* | Not done — superseded in numbering | — | — |
 | 02 | LSM construction | Not started | — | — |
 | 03 | CSM construction | Not started | — | — |
 | 04 | Themes | Not started | — | — |
@@ -123,15 +124,20 @@ waived because the next phase is more interesting.
 
 ## What is implemented
 
-**Phase 00 only.** Benchmark lock (the frozen basis is reproduced from raw, bit-exactly),
-canonical molecule identities (167 surface forms → 154 molecules), the chemical partition
-(16 fine / 6 broad), frozen analyte-grouped CV splits, the frozen quality score, the frozen
-evaluation harness, and the V5 control baseline measured under it.
+**Phase 00** — benchmark lock (frozen basis reproduced from raw, bit-exactly), canonical
+molecule identities (167 surface forms → 154 molecules), the chemical partition (16 fine /
+6 broad), frozen analyte-grouped CV splits, the frozen quality score, the frozen evaluation
+harness, and the V5 control baseline measured under it.
+
+**Phase 01 (Strategy A)** — `src/gaira/v7/lsm/`: 98 Local Spectral Motifs decomposing 23 of
+24 frozen atlas components deterministically, with a registry, an interpretation path that
+conserves atlas evidence exactly, and a validation suite. The atlas is unchanged.
 
 ## What is not yet implemented
 
-No balanced reference matrix, no local decomposition, no LSM, no CSM, no theme mapping, no BSV,
-no V7 engine, no V7 atlas, no V7 validation.
+No balanced reference matrix, no class-local decomposition, no CSM, no theme mapping, no BSV,
+no V7 engine, no V7 atlas, no end-to-end V7 validation. No downstream benefit of the motif
+layer has been demonstrated against the Phase-00 harness.
 
 ---
 
@@ -216,6 +222,16 @@ Full definitions in `context/TERMINOLOGY_AND_DEFINITIONS.md`.
 **Phase 00 is complete** — benchmark locked (basis reproduced from raw, bit-exactly), canonical
 molecule identities frozen (167 surface forms → 154 molecules), the chemical partition and
 cross-validation splits frozen, and the V5 control baseline measured under the frozen harness.
-Report: [`results/v7_rebuild/phase00/reports/PHASE_00_REPORT.md`](../results/v7_rebuild/phase00/reports/PHASE_00_REPORT.md).
+Report: [`PHASE_00_REPORT.md`](../results/v7_rebuild/phase00/reports/PHASE_00_REPORT.md).
 
-**Next step: Phase 01 — balanced reference construction. NOT STARTED; awaiting explicit approval.**
+**Phase 01 (Strategy A) is complete** — 98 Local Spectral Motifs decompose 23 of the 24 frozen
+atlas components, without refitting anything and with the atlas fingerprint unchanged.
+Report: [`PHASE_01_REPORT.md`](../results/v7_rebuild/phase01/reports/PHASE_01_REPORT.md).
+
+> ⚠ **The phase numbering has diverged from this plan.** The plan's Phase 01 was *balanced
+> reference construction*; the phase actually executed was Local Spectral Motif discovery over
+> the frozen components, which is a different construction of "LSM" from the one in
+> `architecture/LEARNING_MODE_ARCHITECTURE.md`. Both the naming collision and the skipped
+> balanced-reference step need resolving before Phase 02 — see PHASE_01_REPORT.md §2 and §9.
+
+**Next step: awaiting explicit approval. Phase 02 NOT STARTED.**
