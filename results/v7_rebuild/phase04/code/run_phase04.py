@@ -391,17 +391,18 @@ def main() -> int:
     outputs.append(wtab(per_class, "per_class_retrieval_v1.csv", OUT.validation))
 
     # levels 2–3: activation recovery against the molecule's own reference profile
+    # Split A again: the reference profile is the mean over the molecule's OTHER spectra.
+    # Under split B the molecule's other spectra are withheld with it, so the comparison
+    # target does not exist and the table came out empty.
     rec_rows = []
     for name, A in (("lsm", A_lsm), ("csm", A_csm), ("theme", T_acc), ("bsv", BSV)):
         held, true = [], []
-        for f in sorted(set(folds)):
-            te, tr = folds == f, folds != f
-            for i in np.where(te)[0]:
-                same = np.where((y == y[i]) & tr)[0]
-                if same.size == 0:
-                    continue
-                held.append(A[i])
-                true.append(A[same].mean(axis=0))
+        for i in np.where(repl)[0]:
+            same = np.array([j for j in np.where(y == y[i])[0] if j != i])
+            if same.size == 0:
+                continue
+            held.append(A[i])
+            true.append(A[same].mean(axis=0))
         if held:
             rec_rows.append({"level": name, **VAL.activation_recovery(np.array(held),
                                                                        np.array(true))})

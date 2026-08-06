@@ -2,7 +2,7 @@
   "schema": "gaira_v7_phase_manifest_v1",
   "phase": "04",
   "phase_name": "Frozen projection engine and hierarchical inference",
-  "built_utc": "2026-08-06T16:33:01.592781+00:00",
+  "built_utc": "2026-08-06T16:36:47.753577+00:00",
   "output_root": "/Users/surajpg/projects/GAIRA/results/v7_rebuild/phase04",
   "redirectable_via": "GAIRA_V7_OUTPUT_ROOT",
   "frozen_inputs": {
@@ -82,8 +82,8 @@
     {
       "artifact_id": "activation_recovery_v1.csv",
       "path": "results/v7_rebuild/phase04/validation/activation_recovery_v1.csv",
-      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
-      "rows": 0
+      "sha256": "143f809a89b2b212fd58f62f01ec3df86be55026a5456a8ad3fddfd617441f9b",
+      "rows": 4
     },
     {
       "artifact_id": "bsv_noise_robustness_v1.csv",

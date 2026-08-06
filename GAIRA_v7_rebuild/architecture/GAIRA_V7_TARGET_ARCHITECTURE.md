@@ -94,7 +94,12 @@ CSM → theme soft mapping                                         ── PHASE 
    15 bridge CSMs keep split membership; 9 poorly-explained CSMs left unplaced
         │
         ▼
-continuous BSV reference space                                   ── PHASE 04
+continuous BSV reference space                                   ── PHASE 04 ✔ COMPLETE
+   BSV = Sᵀc over 4 accepted themes; absolute, non-negative
+   effective rank 2.40 of nominal K = 4 (risk R-12)
+   frozen projection engine: elastic-net → direct CSM → confidence-weighted themes
+   held out: molecule top-1 0.799, class top-1 on UNSEEN molecules 0.855 (raw 0.608)
+   OPEN: OOD cannot separate real Ag-SERS (AUROC 0.548); confidence ECE 0.486
    reference distributions per theme axis
    normalisation frame (μ, σ), OOD support, uncertainty model
         │
