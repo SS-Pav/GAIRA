@@ -1,0 +1,768 @@
+{
+  "ontology": "v7_fine_16",
+  "frozen_in": "phase00",
+  "class_order": [
+    "acylglycerol",
+    "carboxylic_acid_metabolite",
+    "chromophore_pigment",
+    "fatty_acid",
+    "free_amino_acid",
+    "mono_oligosaccharide",
+    "nucleic_acid_polymer",
+    "peptide_protein",
+    "phosphate_metabolite",
+    "phospholipid_sphingolipid",
+    "polysaccharide",
+    "purine",
+    "pyrimidine",
+    "small_nitrogenous",
+    "sterol_steroid",
+    "sulfur_thiol_cofactor"
+  ],
+  "adjacent_pairs": [
+    [
+      "fatty_acid",
+      "acylglycerol"
+    ],
+    [
+      "fatty_acid",
+      "phospholipid_sphingolipid"
+    ],
+    [
+      "acylglycerol",
+      "phospholipid_sphingolipid"
+    ],
+    [
+      "purine",
+      "nucleic_acid_polymer"
+    ],
+    [
+      "pyrimidine",
+      "nucleic_acid_polymer"
+    ],
+    [
+      "purine",
+      "pyrimidine"
+    ],
+    [
+      "peptide_protein",
+      "free_amino_acid"
+    ],
+    [
+      "mono_oligosaccharide",
+      "polysaccharide"
+    ],
+    [
+      "carboxylic_acid_metabolite",
+      "phosphate_metabolite"
+    ],
+    [
+      "free_amino_acid",
+      "small_nitrogenous"
+    ],
+    [
+      "sulfur_thiol_cofactor",
+      "free_amino_acid"
+    ],
+    [
+      "sterol_steroid",
+      "acylglycerol"
+    ]
+  ],
+  "classes": [
+    {
+      "class_index": 0,
+      "class_id": "acylglycerol",
+      "class_name": "acylglycerol",
+      "broad_class": [
+        "lipid"
+      ],
+      "n_molecules": 17,
+      "n_spectra": 23,
+      "canonical_molecules": [
+        "tri-11-eicosenoin",
+        "triarachidin",
+        "tribehenin",
+        "tricaprin",
+        "tricaproin",
+        "tricaprylin",
+        "trielaidin",
+        "trierucin",
+        "trilaurin",
+        "trilinolein",
+        "trilinolenin",
+        "trimyristin",
+        "triolein",
+        "tripalmitin",
+        "tripalmitolein",
+        "tripetroselinin",
+        "tristearin"
+      ],
+      "spectra_per_molecule": 1.353,
+      "adjacent_classes": [
+        "fatty_acid",
+        "phospholipid_sphingolipid",
+        "sterol_steroid"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 20,
+        "gobbato_raman_metabolites": 3
+      },
+      "excitation_distribution": {
+        "1064.0": 17,
+        "785.0": 6
+      },
+      "replicate_distribution": {
+        "1": 14,
+        "2": 2,
+        "5": 1
+      },
+      "molecule_share": 0.1104,
+      "spectrum_share": 0.0613,
+      "imbalance_vs_uniform": 0.981
+    },
+    {
+      "class_index": 1,
+      "class_id": "carboxylic_acid_metabolite",
+      "class_name": "carboxylic acid metabolite",
+      "broad_class": [
+        "energy_metabolism"
+      ],
+      "n_molecules": 8,
+      "n_spectra": 23,
+      "canonical_molecules": [
+        "acetoacetate",
+        "ascorbate",
+        "citrate",
+        "fumarate",
+        "lactate",
+        "malic acid",
+        "pyruvate",
+        "succinic acid"
+      ],
+      "spectra_per_molecule": 2.875,
+      "adjacent_classes": [
+        "phosphate_metabolite"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 7,
+        "amino_acid_raman_grounding": 1,
+        "gobbato_raman_metabolites": 15
+      },
+      "excitation_distribution": {
+        "785.0": 23
+      },
+      "replicate_distribution": {
+        "1": 2,
+        "2": 1,
+        "3": 1,
+        "4": 4
+      },
+      "molecule_share": 0.0519,
+      "spectrum_share": 0.0613,
+      "imbalance_vs_uniform": 0.981
+    },
+    {
+      "class_index": 2,
+      "class_id": "chromophore_pigment",
+      "class_name": "chromophore pigment",
+      "broad_class": [
+        "redox_cofactor"
+      ],
+      "n_molecules": 4,
+      "n_spectra": 10,
+      "canonical_molecules": [
+        "carotene",
+        "melanin",
+        "riboflavin",
+        "\u03b2-carotene"
+      ],
+      "spectra_per_molecule": 2.5,
+      "adjacent_classes": [],
+      "source_distribution": {
+        "RamanBioLib": 6,
+        "amino_acid_raman_grounding": 1,
+        "gobbato_raman_metabolites": 3
+      },
+      "excitation_distribution": {
+        "457.9": 1,
+        "514.5": 1,
+        "632.8": 1,
+        "785.0": 7
+      },
+      "replicate_distribution": {
+        "1": 2,
+        "4": 2
+      },
+      "molecule_share": 0.026,
+      "spectrum_share": 0.0267,
+      "imbalance_vs_uniform": 0.427
+    },
+    {
+      "class_index": 3,
+      "class_id": "fatty_acid",
+      "class_name": "fatty acid",
+      "broad_class": [
+        "lipid"
+      ],
+      "n_molecules": 17,
+      "n_spectra": 27,
+      "canonical_molecules": [
+        "12-methyltetradecanoic acid",
+        "13-methylmyristicacid",
+        "14-methylhexadecanoic acid",
+        "14-methylpentadecanoic acid",
+        "15-methylpalmiticacid",
+        "arachidic acid",
+        "arachidonic acid",
+        "elaidic acid",
+        "lauric acid",
+        "linoleic acid",
+        "myristic acid",
+        "oleate",
+        "palmitic acid",
+        "palmitoleic acid",
+        "stearate",
+        "vaccenic acid",
+        "\u03b1-linolenic acid"
+      ],
+      "spectra_per_molecule": 1.588,
+      "adjacent_classes": [
+        "acylglycerol",
+        "phospholipid_sphingolipid"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 21,
+        "gobbato_raman_metabolites": 6
+      },
+      "excitation_distribution": {
+        "532.0": 10,
+        "785.0": 17
+      },
+      "replicate_distribution": {
+        "1": 13,
+        "2": 2,
+        "5": 2
+      },
+      "molecule_share": 0.1104,
+      "spectrum_share": 0.072,
+      "imbalance_vs_uniform": 1.152
+    },
+    {
+      "class_index": 4,
+      "class_id": "free_amino_acid",
+      "class_name": "free amino acid",
+      "broad_class": [
+        "protein_amino_acid"
+      ],
+      "n_molecules": 18,
+      "n_spectra": 75,
+      "canonical_molecules": [
+        "alanine",
+        "arginine",
+        "asparagine",
+        "aspartate",
+        "cysteine",
+        "glutamate",
+        "glycine",
+        "histidine",
+        "hydroxyproline",
+        "isoleucine",
+        "leucine",
+        "methionine",
+        "phenylalanine",
+        "proline",
+        "serine",
+        "tryptophan",
+        "tyrosine",
+        "valine"
+      ],
+      "spectra_per_molecule": 4.167,
+      "adjacent_classes": [
+        "peptide_protein",
+        "small_nitrogenous",
+        "sulfur_thiol_cofactor"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 13,
+        "amino_acid_raman_grounding": 14,
+        "gobbato_raman_metabolites": 48
+      },
+      "excitation_distribution": {
+        "488.0": 2,
+        "785.0": 73
+      },
+      "replicate_distribution": {
+        "1": 1,
+        "2": 1,
+        "3": 3,
+        "4": 3,
+        "5": 9,
+        "6": 1
+      },
+      "molecule_share": 0.1169,
+      "spectrum_share": 0.2,
+      "imbalance_vs_uniform": 3.2
+    },
+    {
+      "class_index": 5,
+      "class_id": "mono_oligosaccharide",
+      "class_name": "mono oligosaccharide",
+      "broad_class": [
+        "carbohydrate"
+      ],
+      "n_molecules": 20,
+      "n_spectra": 43,
+      "canonical_molecules": [
+        "(+)-arabinose",
+        "(+)-fucose",
+        "(+)-galactosamine",
+        "(+)-galactose",
+        "(+)-glucose",
+        "(+)-lactose",
+        "(+)-maltose",
+        "(+)-mannose",
+        "(+)-raffinose pentahydrate",
+        "(+)-sucrose",
+        "(+)-trehalose",
+        "(+)-xylose",
+        "(-)-arabinose",
+        "(-)-fructose",
+        "(-)-ribose",
+        "2-deoxy-d-ribose",
+        "glucosamine",
+        "glycerol",
+        "n-acetylglucosamine",
+        "\u03b2-d-glucose"
+      ],
+      "spectra_per_molecule": 2.15,
+      "adjacent_classes": [
+        "polysaccharide"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 24,
+        "amino_acid_raman_grounding": 1,
+        "gobbato_raman_metabolites": 18
+      },
+      "excitation_distribution": {
+        "1064.0": 11,
+        "488.0": 1,
+        "785.0": 31
+      },
+      "replicate_distribution": {
+        "1": 12,
+        "2": 2,
+        "4": 4,
+        "5": 1,
+        "6": 1
+      },
+      "molecule_share": 0.1299,
+      "spectrum_share": 0.1147,
+      "imbalance_vs_uniform": 1.835
+    },
+    {
+      "class_index": 6,
+      "class_id": "nucleic_acid_polymer",
+      "class_name": "nucleic acid polymer",
+      "broad_class": [
+        "nucleic"
+      ],
+      "n_molecules": 3,
+      "n_spectra": 3,
+      "canonical_molecules": [
+        "a-dna",
+        "b-dna",
+        "t-rna"
+      ],
+      "spectra_per_molecule": 1.0,
+      "adjacent_classes": [
+        "purine",
+        "pyrimidine"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 3
+      },
+      "excitation_distribution": {
+        "488.0": 1,
+        "514.5": 2
+      },
+      "replicate_distribution": {
+        "1": 3
+      },
+      "molecule_share": 0.0195,
+      "spectrum_share": 0.008,
+      "imbalance_vs_uniform": 0.128
+    },
+    {
+      "class_index": 7,
+      "class_id": "peptide_protein",
+      "class_name": "peptide protein",
+      "broad_class": [
+        "protein_amino_acid"
+      ],
+      "n_molecules": 30,
+      "n_spectra": 80,
+      "canonical_molecules": [
+        "albumin",
+        "carbonic anhydrase",
+        "collagen",
+        "cytochrome c",
+        "elastase",
+        "elastin",
+        "ferritin",
+        "glucose oxidase",
+        "glutathione transferase",
+        "hemoglobin",
+        "horseradish peroxidase",
+        "insulin",
+        "keratin",
+        "lactalbumin",
+        "lectin",
+        "major proteinase",
+        "myoglobin",
+        "papain",
+        "pepsin",
+        "pepsinogen",
+        "superoxide dismutases",
+        "thaumatin",
+        "triosephosphate isomerase",
+        "trypsin",
+        "trypsin inhibitor",
+        "trypsinogen",
+        "tubulin",
+        "ubiquitin",
+        "xylanase",
+        "\u03b1-chymotrypsinogen a (type ii)"
+      ],
+      "spectra_per_molecule": 2.667,
+      "adjacent_classes": [
+        "free_amino_acid"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 76,
+        "amino_acid_raman_grounding": 1,
+        "gobbato_raman_metabolites": 3
+      },
+      "excitation_distribution": {
+        "1064.0": 23,
+        "488.0": 25,
+        "532.0": 27,
+        "633.0": 1,
+        "785.0": 4
+      },
+      "replicate_distribution": {
+        "1": 4,
+        "2": 6,
+        "3": 19,
+        "7": 1
+      },
+      "molecule_share": 0.1948,
+      "spectrum_share": 0.2133,
+      "imbalance_vs_uniform": 3.413
+    },
+    {
+      "class_index": 8,
+      "class_id": "phosphate_metabolite",
+      "class_name": "phosphate metabolite",
+      "broad_class": [
+        "energy_metabolism"
+      ],
+      "n_molecules": 3,
+      "n_spectra": 11,
+      "canonical_molecules": [
+        "fructose-6-phosphate",
+        "phosphate",
+        "phosphoenolpyruvate"
+      ],
+      "spectra_per_molecule": 3.667,
+      "adjacent_classes": [
+        "carboxylic_acid_metabolite"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 2,
+        "gobbato_raman_metabolites": 9
+      },
+      "excitation_distribution": {
+        "785.0": 11
+      },
+      "replicate_distribution": {
+        "3": 1,
+        "4": 2
+      },
+      "molecule_share": 0.0195,
+      "spectrum_share": 0.0293,
+      "imbalance_vs_uniform": 0.469
+    },
+    {
+      "class_index": 9,
+      "class_id": "phospholipid_sphingolipid",
+      "class_name": "phospholipid sphingolipid",
+      "broad_class": [
+        "lipid"
+      ],
+      "n_molecules": 5,
+      "n_spectra": 8,
+      "canonical_molecules": [
+        "ceramide",
+        "phosphatidylinositol",
+        "sphingomyelin",
+        "\u03b1-phosphatidylcholine",
+        "\u03b1-phosphatidylethanolamine"
+      ],
+      "spectra_per_molecule": 1.6,
+      "adjacent_classes": [
+        "acylglycerol",
+        "fatty_acid"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 5,
+        "gobbato_raman_metabolites": 3
+      },
+      "excitation_distribution": {
+        "1064.0": 1,
+        "532.0": 3,
+        "785.0": 3,
+        "850.0": 1
+      },
+      "replicate_distribution": {
+        "1": 3,
+        "2": 1,
+        "3": 1
+      },
+      "molecule_share": 0.0325,
+      "spectrum_share": 0.0213,
+      "imbalance_vs_uniform": 0.341
+    },
+    {
+      "class_index": 10,
+      "class_id": "polysaccharide",
+      "class_name": "polysaccharide",
+      "broad_class": [
+        "carbohydrate"
+      ],
+      "n_molecules": 5,
+      "n_spectra": 10,
+      "canonical_molecules": [
+        "amylopectin",
+        "amylose",
+        "cellulose",
+        "chitin",
+        "glycogen"
+      ],
+      "spectra_per_molecule": 2.0,
+      "adjacent_classes": [
+        "mono_oligosaccharide"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 7,
+        "gobbato_raman_metabolites": 3
+      },
+      "excitation_distribution": {
+        "1064.0": 3,
+        "785.0": 7
+      },
+      "replicate_distribution": {
+        "1": 2,
+        "2": 2,
+        "4": 1
+      },
+      "molecule_share": 0.0325,
+      "spectrum_share": 0.0267,
+      "imbalance_vs_uniform": 0.427
+    },
+    {
+      "class_index": 11,
+      "class_id": "purine",
+      "class_name": "purine",
+      "broad_class": [
+        "nucleic"
+      ],
+      "n_molecules": 5,
+      "n_spectra": 17,
+      "canonical_molecules": [
+        "adenine",
+        "guanine",
+        "hypoxanthine",
+        "urate",
+        "xanthine"
+      ],
+      "spectra_per_molecule": 3.4,
+      "adjacent_classes": [
+        "nucleic_acid_polymer",
+        "pyrimidine"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 2,
+        "gobbato_raman_metabolites": 15
+      },
+      "excitation_distribution": {
+        "785.0": 17
+      },
+      "replicate_distribution": {
+        "3": 3,
+        "4": 2
+      },
+      "molecule_share": 0.0325,
+      "spectrum_share": 0.0453,
+      "imbalance_vs_uniform": 0.725
+    },
+    {
+      "class_index": 12,
+      "class_id": "pyrimidine",
+      "class_name": "pyrimidine",
+      "broad_class": [
+        "nucleic"
+      ],
+      "n_molecules": 3,
+      "n_spectra": 9,
+      "canonical_molecules": [
+        "cytosine",
+        "thymine",
+        "uracil"
+      ],
+      "spectra_per_molecule": 3.0,
+      "adjacent_classes": [
+        "nucleic_acid_polymer",
+        "purine"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 3,
+        "gobbato_raman_metabolites": 6
+      },
+      "excitation_distribution": {
+        "785.0": 9
+      },
+      "replicate_distribution": {
+        "1": 1,
+        "4": 2
+      },
+      "molecule_share": 0.0195,
+      "spectrum_share": 0.024,
+      "imbalance_vs_uniform": 0.384
+    },
+    {
+      "class_index": 13,
+      "class_id": "small_nitrogenous",
+      "class_name": "small nitrogenous",
+      "broad_class": [
+        "energy_metabolism"
+      ],
+      "n_molecules": 2,
+      "n_spectra": 7,
+      "canonical_molecules": [
+        "creatinine",
+        "urea"
+      ],
+      "spectra_per_molecule": 3.5,
+      "adjacent_classes": [
+        "free_amino_acid"
+      ],
+      "source_distribution": {
+        "amino_acid_raman_grounding": 1,
+        "gobbato_raman_metabolites": 6
+      },
+      "excitation_distribution": {
+        "785.0": 7
+      },
+      "replicate_distribution": {
+        "3": 1,
+        "4": 1
+      },
+      "molecule_share": 0.013,
+      "spectrum_share": 0.0187,
+      "imbalance_vs_uniform": 0.299
+    },
+    {
+      "class_index": 14,
+      "class_id": "sterol_steroid",
+      "class_name": "sterol steroid",
+      "broad_class": [
+        "lipid"
+      ],
+      "n_molecules": 10,
+      "n_spectra": 13,
+      "canonical_molecules": [
+        "cholesterol",
+        "cholesteryl linoleate",
+        "cholesteryl oleate",
+        "cholesteryl palmitate",
+        "cholesteryl stearate",
+        "diethylstilbestrol",
+        "estradiol",
+        "estriol",
+        "estrone",
+        "ethinylestradiol"
+      ],
+      "spectra_per_molecule": 1.3,
+      "adjacent_classes": [
+        "acylglycerol"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 10,
+        "gobbato_raman_metabolites": 3
+      },
+      "excitation_distribution": {
+        "532.0": 10,
+        "785.0": 3
+      },
+      "replicate_distribution": {
+        "1": 9,
+        "4": 1
+      },
+      "molecule_share": 0.0649,
+      "spectrum_share": 0.0347,
+      "imbalance_vs_uniform": 0.555
+    },
+    {
+      "class_index": 15,
+      "class_id": "sulfur_thiol_cofactor",
+      "class_name": "sulfur thiol cofactor",
+      "broad_class": [
+        "redox_cofactor"
+      ],
+      "n_molecules": 4,
+      "n_spectra": 16,
+      "canonical_molecules": [
+        "acetyl-coa",
+        "coenzyme a",
+        "ergothioneine",
+        "glutathione"
+      ],
+      "spectra_per_molecule": 4.0,
+      "adjacent_classes": [
+        "free_amino_acid"
+      ],
+      "source_distribution": {
+        "RamanBioLib": 3,
+        "amino_acid_raman_grounding": 1,
+        "gobbato_raman_metabolites": 12
+      },
+      "excitation_distribution": {
+        "785.0": 16
+      },
+      "replicate_distribution": {
+        "3": 1,
+        "4": 2,
+        "5": 1
+      },
+      "molecule_share": 0.026,
+      "spectrum_share": 0.0427,
+      "imbalance_vs_uniform": 0.683
+    }
+  ],
+  "_provenance": {
+    "phase": "06",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "split_fingerprint": "f043c3f009c2a1ab2b30808765580a75",
+    "code_fingerprint": "3b42b5ed95f26f5111e27053dae5ed1a",
+    "created_utc": "2026-08-06T23:16:46.176123+00:00",
+    "model_selection_rule": "nested molecule-grouped CV, inner-fold macro-F1",
+    "scope": "Raman only"
+  }
+}

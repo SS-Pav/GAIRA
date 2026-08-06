@@ -1,0 +1,37 @@
+{
+  "mean_true_class_rank": 1.3946666666666667,
+  "median_true_class_rank": 1.0,
+  "true_class_rank_le3": 0.976,
+  "mean_true_class_evidence": 0.6467355706210822,
+  "mean_true_class_evidence_share": 0.43121800567911,
+  "mean_margin": 0.3858546143659661,
+  "mean_entropy": 0.6029558993079223,
+  "effective_rank": 12.122881778672351,
+  "replicate_consistency": 0.946713753545329,
+  "within_class_cosine": 0.7602443160780011,
+  "between_class_cosine": 0.2634938768511016,
+  "separation": 0.49675043922689954,
+  "adjacency": {
+    "n_errors": 62,
+    "adjacent_fraction": 0.45161290322580644,
+    "chance_adjacent": 0.1086021505376344,
+    "lift": 4.158415841545868
+  },
+  "broad_top1": 0.808,
+  "n_broad_classes": 6,
+  "_provenance": {
+    "phase": "06",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "split_fingerprint": "f043c3f009c2a1ab2b30808765580a75",
+    "code_fingerprint": "3b42b5ed95f26f5111e27053dae5ed1a",
+    "created_utc": "2026-08-06T23:16:46.176123+00:00",
+    "model_selection_rule": "nested molecule-grouped CV, inner-fold macro-F1",
+    "scope": "Raman only"
+  }
+}

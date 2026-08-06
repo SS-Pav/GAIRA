@@ -1,0 +1,193 @@
+{
+  "experiment": "held-out chemistry novelty",
+  "not_cross_modality": true,
+  "classes": [
+    {
+      "held_class": "sterol_steroid",
+      "usable": true,
+      "n_novel_spectra": 13,
+      "n_novel_molecules": 10,
+      "joint_auroc": 0.9844878878028049,
+      "per_channel_auroc": {
+        "max_evidence": 0.9742881427964301,
+        "support_margin": 0.8546536336591585,
+        "entropy": 0.9181895452613684,
+        "total_evidence": 0.8219294517637059
+      },
+      "mean_max_evidence_novel": 0.24172377348463495,
+      "mean_max_evidence_in_domain": 0.669584609103688,
+      "mean_entropy_novel": 0.7599928902243333,
+      "mean_entropy_in_domain": 0.5558906801723756,
+      "mean_margin_novel": 0.0916617578811282,
+      "mean_margin_in_domain": 0.3883202875220159,
+      "threshold_at_95pct_in_domain": 1.058840211922267,
+      "abstain_rate_on_novel": 1.0,
+      "false_abstain_rate_in_domain": 0.052486187845303865,
+      "nearest_represented_classes": {
+        "acylglycerol": 1,
+        "carboxylic_acid_metabolite": 5,
+        "chromophore_pigment": 3,
+        "fatty_acid": 2,
+        "free_amino_acid": 1,
+        "purine": 1
+      }
+    },
+    {
+      "held_class": "purine",
+      "usable": true,
+      "n_novel_spectra": 17,
+      "n_novel_molecules": 5,
+      "joint_auroc": 0.9094643443969767,
+      "per_channel_auroc": {
+        "max_evidence": 0.8958264870193887,
+        "support_margin": 0.7867236279986856,
+        "entropy": 0.8391390075583306,
+        "total_evidence": 0.7734143936904371
+      },
+      "mean_max_evidence_novel": 0.26414679542932273,
+      "mean_max_evidence_in_domain": 0.6694893848823235,
+      "mean_entropy_novel": 0.7274732194756726,
+      "mean_entropy_in_domain": 0.5677878121657635,
+      "mean_margin_novel": 0.14055427277828134,
+      "mean_margin_in_domain": 0.3832603231412933,
+      "threshold_at_95pct_in_domain": 1.0226164460948781,
+      "abstain_rate_on_novel": 0.7647058823529411,
+      "false_abstain_rate_in_domain": 0.05027932960893855,
+      "nearest_represented_classes": {
+        "free_amino_acid": 1,
+        "nucleic_acid_polymer": 1,
+        "phospholipid_sphingolipid": 3,
+        "small_nitrogenous": 3,
+        "sterol_steroid": 2,
+        "sulfur_thiol_cofactor": 7
+      }
+    },
+    {
+      "held_class": "sulfur_thiol_cofactor",
+      "usable": true,
+      "n_novel_spectra": 16,
+      "n_novel_molecules": 4,
+      "joint_auroc": 0.9731894150417827,
+      "per_channel_auroc": {
+        "max_evidence": 0.966399721448468,
+        "support_margin": 0.8299094707520891,
+        "entropy": 0.8290389972144847,
+        "total_evidence": 0.737291086350975
+      },
+      "mean_max_evidence_novel": 0.27331466617752176,
+      "mean_max_evidence_in_domain": 0.6829916794542319,
+      "mean_entropy_novel": 0.7229941451208919,
+      "mean_entropy_in_domain": 0.5585732616840888,
+      "mean_margin_novel": 0.1253895053400907,
+      "mean_margin_in_domain": 0.4059403930449869,
+      "threshold_at_95pct_in_domain": 1.0423163075997899,
+      "abstain_rate_on_novel": 0.625,
+      "false_abstain_rate_in_domain": 0.05013927576601671,
+      "nearest_represented_classes": {
+        "carboxylic_acid_metabolite": 3,
+        "free_amino_acid": 8,
+        "peptide_protein": 1,
+        "purine": 4
+      }
+    },
+    {
+      "held_class": "mono_oligosaccharide",
+      "usable": true,
+      "n_novel_spectra": 43,
+      "n_novel_molecules": 20,
+      "joint_auroc": 0.9595825161109555,
+      "per_channel_auroc": {
+        "max_evidence": 0.9478145138694312,
+        "support_margin": 0.8817595965256374,
+        "entropy": 0.9263098907256935,
+        "total_evidence": 0.7369010927430653
+      },
+      "mean_max_evidence_novel": 0.2836293639727824,
+      "mean_max_evidence_in_domain": 0.6895147386617845,
+      "mean_entropy_novel": 0.7664149476067283,
+      "mean_entropy_in_domain": 0.5427009240050947,
+      "mean_margin_novel": 0.08488912903848754,
+      "mean_margin_in_domain": 0.4174308835971507,
+      "threshold_at_95pct_in_domain": 0.8504631879996001,
+      "abstain_rate_on_novel": 0.9534883720930233,
+      "false_abstain_rate_in_domain": 0.05120481927710843,
+      "nearest_represented_classes": {
+        "carboxylic_acid_metabolite": 12,
+        "chromophore_pigment": 4,
+        "free_amino_acid": 10,
+        "nucleic_acid_polymer": 1,
+        "peptide_protein": 4,
+        "phosphate_metabolite": 6,
+        "polysaccharide": 2,
+        "sulfur_thiol_cofactor": 4
+      }
+    },
+    {
+      "held_class": "acylglycerol",
+      "usable": true,
+      "n_novel_spectra": 23,
+      "n_novel_molecules": 17,
+      "joint_auroc": 0.4891304347826087,
+      "per_channel_auroc": {
+        "max_evidence": 0.53125,
+        "support_margin": 0.7025691699604744,
+        "entropy": 0.4420701581027668,
+        "total_evidence": 0.46825592885375494
+      },
+      "mean_max_evidence_novel": 0.6136899087867992,
+      "mean_max_evidence_in_domain": 0.6652542009271158,
+      "mean_entropy_novel": 0.5162389995006048,
+      "mean_entropy_in_domain": 0.56368535690028,
+      "mean_margin_novel": 0.22437957345196943,
+      "mean_margin_in_domain": 0.41474295910551345,
+      "threshold_at_95pct_in_domain": 1.0559208924628254,
+      "abstain_rate_on_novel": 0.0,
+      "false_abstain_rate_in_domain": 0.05113636363636364,
+      "nearest_represented_classes": {
+        "fatty_acid": 17,
+        "phospholipid_sphingolipid": 6
+      }
+    },
+    {
+      "held_class": "pyrimidine",
+      "usable": true,
+      "n_novel_spectra": 9,
+      "n_novel_molecules": 3,
+      "joint_auroc": 0.864602307225258,
+      "per_channel_auroc": {
+        "max_evidence": 0.8925318761384335,
+        "support_margin": 0.7616879174256224,
+        "entropy": 0.5297510625379478,
+        "total_evidence": 0.7474195506982392
+      },
+      "mean_max_evidence_novel": 0.4400135438884814,
+      "mean_max_evidence_in_domain": 0.6817756333254918,
+      "mean_entropy_novel": 0.5883909081315816,
+      "mean_entropy_in_domain": 0.5595326178896877,
+      "mean_margin_novel": 0.16536379392202546,
+      "mean_margin_in_domain": 0.40594003009548185,
+      "threshold_at_95pct_in_domain": 1.0684121685977264,
+      "abstain_rate_on_novel": 0.0,
+      "false_abstain_rate_in_domain": 0.05191256830601093,
+      "nearest_represented_classes": {
+        "carboxylic_acid_metabolite": 5,
+        "peptide_protein": 4
+      }
+    }
+  ],
+  "_provenance": {
+    "phase": "06",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "split_fingerprint": "f043c3f009c2a1ab2b30808765580a75",
+    "code_fingerprint": "3b42b5ed95f26f5111e27053dae5ed1a",
+    "created_utc": "2026-08-06T23:16:46.176123+00:00",
+    "model_selection_rule": "nested molecule-grouped CV, inner-fold macro-F1",
+    "scope": "Raman only"
+  }
+}

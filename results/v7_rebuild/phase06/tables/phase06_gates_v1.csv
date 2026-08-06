@@ -1,0 +1,19 @@
+gate,status
+G1 frozen fingerprints verified,PASS
+G2 no upstream refitting,PASS
+G3 nested molecule-grouped validation used,PASS
+G4 fine-class top-1 >= 0.80,PASS
+G5 fine-class top-3 >= 0.95,PASS
+G6 macro-F1 >= 0.75,PASS
+G7 chemistry evidence matches CSM class top-1 within 0.02,PASS
+G8 exceeds legacy Theme/BSV top-1 by >= 0.20,PASS
+G9 replicate consistency >= 0.90,PASS
+G10 robustness retention >= raw Raman,PASS
+G11 calibration informative and non-degenerate,PASS
+G12 no broken provenance chains,PASS
+G13 radar generated from the 16-d chemistry vector only,PASS
+G14 no manual 11-axis map in canonical Phase 06 inference,PASS
+G15 no SERS or cross-modality data used,PASS
+G16 held-out chemistry novelty evaluated honestly,PASS
+G17 Phase 06 artifacts deterministic on rerun,PASS
+G18 every pre-registered candidate and calibrator actually ran,PASS

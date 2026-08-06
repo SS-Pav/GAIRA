@@ -1,0 +1,17 @@
+true_class,acylglycerol,carboxylic_acid_metabolite,chromophore_pigment,fatty_acid,free_amino_acid,mono_oligosaccharide,nucleic_acid_polymer,peptide_protein,phosphate_metabolite,phospholipid_sphingolipid,polysaccharide,purine,pyrimidine,small_nitrogenous,sterol_steroid,sulfur_thiol_cofactor
+acylglycerol,18,0,0,4,0,0,0,0,0,1,0,0,0,0,0,0
+carboxylic_acid_metabolite,0,18,0,0,0,3,0,0,1,1,0,0,0,0,0,0
+chromophore_pigment,0,0,8,0,0,0,0,2,0,0,0,0,0,0,0,0
+fatty_acid,5,0,0,21,0,0,0,0,0,1,0,0,0,0,0,0
+free_amino_acid,0,1,0,0,64,0,0,1,0,0,0,0,0,6,0,3
+mono_oligosaccharide,0,1,0,0,0,40,0,0,1,0,1,0,0,0,0,0
+nucleic_acid_polymer,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+peptide_protein,0,0,5,0,0,0,0,64,0,3,3,0,5,0,0,0
+phosphate_metabolite,0,0,0,0,0,0,0,0,10,0,0,0,1,0,0,0
+phospholipid_sphingolipid,0,0,0,0,0,0,0,0,0,5,0,3,0,0,0,0
+polysaccharide,0,0,0,0,0,0,0,1,0,0,9,0,0,0,0,0
+purine,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,0
+pyrimidine,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0
+small_nitrogenous,0,0,0,0,4,0,0,0,0,0,0,0,0,3,0,0
+sterol_steroid,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0
+sulfur_thiol_cofactor,0,0,0,0,1,1,0,0,0,0,0,3,0,0,0,11

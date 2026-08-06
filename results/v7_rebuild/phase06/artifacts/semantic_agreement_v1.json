@@ -1,0 +1,22 @@
+{
+  "adjusted_rand_curated_vs_unsupervised": 0.594609582146103,
+  "adjusted_mutual_info_curated_vs_unsupervised": 0.7254364968236212,
+  "adjusted_rand_broad_vs_unsupervised": 0.4107913508726132,
+  "n_unsupervised_clusters": 16,
+  "note": "accuracy on unsupervised labels is structurally inflated and is reported only for completeness; agreement indices are the interpretable comparison",
+  "_provenance": {
+    "phase": "06",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "split_fingerprint": "f043c3f009c2a1ab2b30808765580a75",
+    "code_fingerprint": "3b42b5ed95f26f5111e27053dae5ed1a",
+    "created_utc": "2026-08-06T23:16:46.176123+00:00",
+    "model_selection_rule": "nested molecule-grouped CV, inner-fold macro-F1",
+    "scope": "Raman only"
+  }
+}

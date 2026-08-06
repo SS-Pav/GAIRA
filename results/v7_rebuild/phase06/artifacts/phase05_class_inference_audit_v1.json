@@ -1,0 +1,40 @@
+{
+  "traced_formula": "e_c(x) = max_{i in c} cos(a(x), r_i)",
+  "source_locations": [
+    "src/gaira/v7/inference/engine.py:86-89",
+    "results/v7_rebuild/phase05/code/run_phase05.py::topk_class"
+  ],
+  "aggregation": "max",
+  "size_correction": "none",
+  "calibrated": false,
+  "phase05_reported": {
+    "class_top1": 0.8453333333333334,
+    "class_top3": 0.9706666666666667,
+    "macro_f1": 0.8067832265276851,
+    "balanced_accuracy": 0.79661202673088,
+    "molecule_top1": null,
+    "molecule_top1_note": "undefined by construction: the molecule is absent from the reference bank"
+  },
+  "reproduced": {
+    "class_top1": 0.8453333333333334,
+    "class_top3": 0.9706666666666667,
+    "macro_f1": 0.8067832265276851,
+    "balanced_accuracy": 0.79661202673088
+  },
+  "bit_for_bit": true,
+  "_provenance": {
+    "phase": "06",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "split_fingerprint": "f043c3f009c2a1ab2b30808765580a75",
+    "code_fingerprint": "3b42b5ed95f26f5111e27053dae5ed1a",
+    "created_utc": "2026-08-06T23:16:46.176123+00:00",
+    "model_selection_rule": "nested molecule-grouped CV, inner-fold macro-F1",
+    "scope": "Raman only"
+  }
+}

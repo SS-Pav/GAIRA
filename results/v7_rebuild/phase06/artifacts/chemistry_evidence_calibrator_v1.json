@@ -1,0 +1,37 @@
+{
+  "method": "temperature",
+  "reason": "log_loss among non-degenerate",
+  "params": {
+    "T": 0.45384103992113356
+  },
+  "metrics": {
+    "method": "temperature",
+    "selection_reason": "log_loss among non-degenerate",
+    "ece": 0.1247004091112479,
+    "classwise_ece": 0.0260572269303303,
+    "brier": 0.32001671117593056,
+    "log_loss": 0.8260358669954215,
+    "sharpness": 0.22496481653191708,
+    "discrimination": 0.6677831598474698,
+    "top1_after_calibration": 0.8346666666666667
+  },
+  "non_degeneracy_floors": {
+    "sharpness": 0.05,
+    "discrimination": 0.6
+  },
+  "_provenance": {
+    "phase": "06",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "split_fingerprint": "f043c3f009c2a1ab2b30808765580a75",
+    "code_fingerprint": "3b42b5ed95f26f5111e27053dae5ed1a",
+    "created_utc": "2026-08-06T23:16:46.176123+00:00",
+    "model_selection_rule": "nested molecule-grouped CV, inner-fold macro-F1",
+    "scope": "Raman only"
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "phase": "06",
+  "artifacts": [
+    {
+      "artifact_id": "chemistry_class_registry_v1.json",
+      "path": "results/v7_rebuild/phase06/artifacts/chemistry_class_registry_v1.json",
+      "sha256": "a922e2acf9fdae87a0e1c67a2d097bebd061a8bcd960519036183ffa9731ca26"
+    },
+    {
+      "artifact_id": "chemistry_class_registry_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/chemistry_class_registry_v1.csv",
+      "sha256": "b3cb827a2c2c9c85b052630152e0197ce577e066c0effc4efba6d0cbd532dc59",
+      "rows": 16
+    },
+    {
+      "artifact_id": "phase05_class_inference_audit_v1.json",
+      "path": "results/v7_rebuild/phase06/artifacts/phase05_class_inference_audit_v1.json",
+      "sha256": "c857c0703b7aa99d5c43f1f355762c6ea42a019cb592222379ffaa93881b5aeb"
+    },
+    {
+      "artifact_id": "phase05_reproduction_per_class_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/phase05_reproduction_per_class_v1.csv",
+      "sha256": "494e56a38220903dfaf70dfb034faf47fb6e80acc020be0a2923fb10d372479b",
+      "rows": 16
+    },
+    {
+      "artifact_id": "phase05_reproduction_confusion_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/phase05_reproduction_confusion_v1.csv",
+      "sha256": "e0a28a96e24c1243d5988738dfc82f70e25c7489099e8583b9810e43ccfadad5",
+      "rows": 16
+    },
+    {
+      "artifact_id": "evidence_model_benchmark_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/evidence_model_benchmark_v1.csv",
+      "sha256": "f66e3dc31524a668ec1b868b9791f85e54d1b563b1741accc32757b11e3340c3",
+      "rows": 37
+    },
+    {
+      "artifact_id": "nested_cv_folds_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/nested_cv_folds_v1.csv",
+      "sha256": "c0dc90bfc191f55c495e3a1cf44dcac2d315e26f383e7bb3c0d608a6dd8d2d1c",
+      "rows": 5
+    },
+    {
+      "artifact_id": "chemistry_per_class_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/chemistry_per_class_v1.csv",
+      "sha256": "ac1cc6a08b86ab42e5c79962324ae0cbe487e0aec5631d7774345deefdaa19c2",
+      "rows": 16
+    },
+    {
+      "artifact_id": "chemistry_confusion_matrix_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/chemistry_confusion_matrix_v1.csv",
+      "sha256": "299ba70a6f93c8c73e59609b557fdd1d296c27dbc059f573c35937caf4e379da",
+      "rows": 16
+    },
+    {
+      "artifact_id": "calibration_benchmark_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/calibration_benchmark_v1.csv",
+      "sha256": "4142ced868954cb0c6bc7a1170d873d95b019d50b22c9bf00145df7e47a153f4",
+      "rows": 30
+    },
+    {
+      "artifact_id": "calibration_summary_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/calibration_summary_v1.csv",
+      "sha256": "4a7453fdbe36870ee71bbd701e35c59c69dd3c7eb8d1adb9ab6fde8b7927da5a",
+      "rows": 6
+    },
+    {
+      "artifact_id": "reliability_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/reliability_v1.csv",
+      "sha256": "165624ac124d723b3de8657a6d2215b8d041ceb9cb35dc170ba40f76f1bd6c9d",
+      "rows": 10
+    },
+    {
+      "artifact_id": "selective_accuracy_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/selective_accuracy_v1.csv",
+      "sha256": "6bb5b3b11af1a78836dbc65afe337251fcc30268f4f57a20c88bda3817e75b18",
+      "rows": 25
+    },
+    {
+      "artifact_id": "classwise_calibration_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/classwise_calibration_v1.csv",
+      "sha256": "f75ac33e0ae7b29ee5842c91ef7dbb6e40527b64c1559cd18b50c75675d291d4",
+      "rows": 16
+    },
+    {
+      "artifact_id": "normalisation_comparison_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/normalisation_comparison_v1.csv",
+      "sha256": "bb4d1103735fd1d628ba7d793c2d6a6b65d65378dc42e613f2f06c90fb62efe1",
+      "rows": 3
+    },
+    {
+      "artifact_id": "soft_evidence_validation_v1.json",
+      "path": "results/v7_rebuild/phase06/artifacts/soft_evidence_validation_v1.json",
+      "sha256": "e8e48e710f2da071f6308d1918e8a7b0c67fabeb829be2ae6b5f047503b70149"
+    },
+    {
+      "artifact_id": "chemistry_predictions_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/chemistry_predictions_v1.csv",
+      "sha256": "9bb9b87e8d4ad26d3b49a35747db64e49913c1a5d0d077e2be9d4bdbd82c75fb",
+      "rows": 375
+    },
+    {
+      "artifact_id": "layer_comparison_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/layer_comparison_v1.csv",
+      "sha256": "0a443c16b65914248e0754c76a17694070700aaefdd3a929357f559ea1c635f1",
+      "rows": 7
+    },
+    {
+      "artifact_id": "semantic_agreement_v1.json",
+      "path": "results/v7_rebuild/phase06/artifacts/semantic_agreement_v1.json",
+      "sha256": "fad621c79a8c91bfeb9e4a61adf37b5cd6720dec591962a987fd9e334030308d"
+    },
+    {
+      "artifact_id": "semantic_comparator_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/semantic_comparator_v1.csv",
+      "sha256": "31528c5f6fb3203deeb6a9361416c581a3c16ed3b0b6a3010d590920524f2ff0",
+      "rows": 3
+    },
+    {
+      "artifact_id": "robustness_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/robustness_v1.csv",
+      "sha256": "78c1f69eedf2305b77b6a1db85927cb28fe3b27cb98e76591fd8285a953dcad0",
+      "rows": 275
+    },
+    {
+      "artifact_id": "robustness_summary_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/robustness_summary_v1.csv",
+      "sha256": "72f88f0801f72064848cafd11e4075e73ad0480c2bb534750e8c7a4e4bbf7485",
+      "rows": 5
+    },
+    {
+      "artifact_id": "holdout_chemistry_novelty_v1.json",
+      "path": "results/v7_rebuild/phase06/artifacts/holdout_chemistry_novelty_v1.json",
+      "sha256": "f3f946a7b42d8281d1dc2fb552a89c6988333a23d5cde3b84c6c2fb2f9560579"
+    },
+    {
+      "artifact_id": "holdout_chemistry_novelty_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/holdout_chemistry_novelty_v1.csv",
+      "sha256": "44c3f81be0824659cb75123118f7aed7f84bbfef5c43d4299cbe75b6b0ecaea1",
+      "rows": 6
+    },
+    {
+      "artifact_id": "failure_analysis_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/failure_analysis_v1.csv",
+      "sha256": "c40678c6ce91de677fccfbfbaeb4b2b3291bd6da83800854198e04fe5320e57e",
+      "rows": 375
+    },
+    {
+      "artifact_id": "low_ev_cases_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/low_ev_cases_v1.csv",
+      "sha256": "c9485925f992c39b44bf3f4fdcc8359ddff59a3adb81e5fcb8fe59c5258b18c3",
+      "rows": 16
+    },
+    {
+      "artifact_id": "failure_by_source_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/failure_by_source_v1.csv",
+      "sha256": "e40df9b768fa684fd2ec4a2c18d5460a6c347749b164bc4b3ca491c37cc79f0f",
+      "rows": 3
+    },
+    {
+      "artifact_id": "failure_by_excitation_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/failure_by_excitation_v1.csv",
+      "sha256": "5f1a906d708d0ee4ae2a23f9aef63730a6aa031fa621447f39046a42349765eb",
+      "rows": 9
+    },
+    {
+      "artifact_id": "failure_by_error_type_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/failure_by_error_type_v1.csv",
+      "sha256": "891b60eeba20b14a16560d367152f20dbe2fbf38b7f4b9665f27203984f136c9",
+      "rows": 3
+    },
+    {
+      "artifact_id": "provenance_integrity_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/provenance_integrity_v1.csv",
+      "sha256": "bdc3f915967be3e13f7beaa6fd184c809bc7e4fe92bcc42dd4d3900646943dc1",
+      "rows": 16
+    },
+    {
+      "artifact_id": "chemistry_evidence_provenance_v1.json",
+      "path": "results/v7_rebuild/phase06/artifacts/chemistry_evidence_provenance_v1.json",
+      "sha256": "61460fccd3b799125f3ca6cd87b23c09b2e33c6832a1225ebc3e7f1df9a59775"
+    },
+    {
+      "artifact_id": "chemistry_evidence_model_v1.json",
+      "path": "results/v7_rebuild/phase06/artifacts/chemistry_evidence_model_v1.json",
+      "sha256": "2739648acf1f6523e18a3d072048305f47382388f8d2a7a4ded48d441f4e0b5a"
+    },
+    {
+      "artifact_id": "chemistry_evidence_calibrator_v1.json",
+      "path": "results/v7_rebuild/phase06/artifacts/chemistry_evidence_calibrator_v1.json",
+      "sha256": "da1113a54e807f8aa1151b4148cf25018d77c0e870bccb38211da78e2835889d"
+    },
+    {
+      "artifact_id": "chemistry_evidence_reference_vectors_v1.npz",
+      "path": "results/v7_rebuild/phase06/artifacts/chemistry_evidence_reference_vectors_v1.npz",
+      "sha256": "19ff54d32f7744c93f9f366a374d57f149b5c522303cb778312c113974a0361b"
+    },
+    {
+      "artifact_id": "chemistry_evidence_predictions_v1.npz",
+      "path": "results/v7_rebuild/phase06/artifacts/chemistry_evidence_predictions_v1.npz",
+      "sha256": "508b684c50d1ecb024897cb04eba3f72a894b03da1c124e4b7cc8e23f85f277c"
+    },
+    {
+      "artifact_id": "phase06_gates_v1.csv",
+      "path": "results/v7_rebuild/phase06/tables/phase06_gates_v1.csv",
+      "sha256": "82c7c6f072c49497060a964a6ab9436c1f7833408701ece0521d6a1bff525184",
+      "rows": 18
+    },
+    {
+      "artifact_id": "phase06_summary_v1.json",
+      "path": "results/v7_rebuild/phase06/artifacts/phase06_summary_v1.json",
+      "sha256": "a634d4cd8be9e5fe4b5600d06c3433ac27a582f2bc6e512f8abff4858b009d82"
+    }
+  ],
+  "input_fingerprints": {
+    "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+    "lsm": "208482d6f7178b5b8f16cace91be55b0",
+    "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+    "atlas": "09ed804a40836f4a05a91ba10900cded"
+  },
+  "split_fingerprint": "f043c3f009c2a1ab2b30808765580a75",
+  "code_fingerprint": "3b42b5ed95f26f5111e27053dae5ed1a",
+  "seed": 0,
+  "_provenance": {
+    "phase": "06",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "split_fingerprint": "f043c3f009c2a1ab2b30808765580a75",
+    "code_fingerprint": "3b42b5ed95f26f5111e27053dae5ed1a",
+    "created_utc": "2026-08-06T23:16:46.176123+00:00",
+    "model_selection_rule": "nested molecule-grouped CV, inner-fold macro-F1",
+    "scope": "Raman only"
+  }
+}
