@@ -29,7 +29,15 @@ def _rownorm(M):
 
 
 def csm_graph_laplacian(D_csm: np.ndarray, k: int = 5) -> np.ndarray:
-    """Symmetric-normalised Laplacian of the frozen CSM k-NN graph.
+    """**Combinatorial** Laplacian `L = D − W` of the frozen CSM k-NN graph.
+
+    Combinatorial, not symmetric-normalised, and the distinction is not cosmetic. The prior is
+    supposed to be a pure smoothness reward: `tr(H L Hᵀ) = ½ Σ_ij w_ij ‖h_·i − h_·j‖²`, which
+    is exactly zero when every CSM carries the same loading and grows only with *differences*
+    between neighbours. The symmetric-normalised Laplacian `I − D^-½ W D^-½` has null space
+    `D^½1` rather than `1`, so it penalises a uniform loading in proportion to each CSM's
+    degree — a hidden preference for loading on low-degree CSMs that nothing in the design
+    called for. The unit test caught it.
 
     Built from the Phase 02.5 distance matrix, which is frozen and simply read. The graph is
     symmetrised by union rather than intersection so a CSM that is somebody's neighbour is
@@ -43,9 +51,7 @@ def csm_graph_laplacian(D_csm: np.ndarray, k: int = 5) -> np.ndarray:
             w = float(np.exp(-(D_csm[i, j] ** 2) / (sigma ** 2)))
             Wg[i, j] = max(Wg[i, j], w)
             Wg[j, i] = max(Wg[j, i], w)
-    d = Wg.sum(axis=1)
-    dinv = 1.0 / np.sqrt(d + EPS)
-    return np.eye(n) - (dinv[:, None] * Wg * dinv[None, :]), Wg
+    return np.diag(Wg.sum(axis=1)) - Wg, Wg
 
 
 def fit_plain(A: np.ndarray, K: int, seed: int = SEED, alpha_H: float = 0.0) -> dict:

@@ -155,8 +155,6 @@ def main() -> int:
             rows.append(r)
         log(f"  {variant} done")
     sweep = pd.DataFrame(rows)
-    outputs.append(wtab(sweep, "model_selection_sweep_v1.csv"))
-
     comp = np.zeros(len(sweep))
     for crit, (w, d) in PARETO.items():
         v = sweep[crit].to_numpy(float)
@@ -164,6 +162,8 @@ def main() -> int:
         zc = np.full_like(v, 0.5) if span < 1e-12 else (v - v.min()) / span
         comp += w * (zc if d > 0 else 1 - zc)
     sweep["pareto"] = comp
+    # written AFTER the composite is added, so the table and the decision cannot disagree
+    outputs.append(wtab(sweep, "model_selection_sweep_v1.csv"))
     best = sweep.sort_values("pareto", ascending=False).iloc[0]
     variant, K = str(best.variant), int(best.K)
     log(f"  SELECTED: {variant}, K = {K} (Pareto {best.pareto:.4f}); "

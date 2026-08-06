@@ -2,7 +2,7 @@
   "schema": "gaira_v7_phase_manifest_v1",
   "phase": "04.5",
   "phase_name": "Hierarchical NMF over frozen CSM activations",
-  "built_utc": "2026-08-06T17:55:09.053557+00:00",
+  "built_utc": "2026-08-06T18:32:56.069302+00:00",
   "output_root": "/Users/surajpg/projects/GAIRA/results/v7_rebuild/phase04_5",
   "redirectable_via": "GAIRA_V7_OUTPUT_ROOT",
   "frozen_inputs": {
@@ -21,7 +21,7 @@
     {
       "artifact_id": "model_selection_sweep_v1.csv",
       "path": "results/v7_rebuild/phase04_5/tables/model_selection_sweep_v1.csv",
-      "sha256": "406d83186f40ecc51ef9a7bb881ff58ab09538ca0861045e1db9a166b185e449",
+      "sha256": "ce0a0f562d8b5d9eea4de62789d1ff1f87d8d7362eec10d957339527fe47f5c8",
       "rows": 16
     },
     {
@@ -62,13 +62,13 @@
     {
       "artifact_id": "k_downstream_diagnostic_v1.csv",
       "path": "results/v7_rebuild/phase04_5/validation/k_downstream_diagnostic_v1.csv",
-      "sha256": "0f9ac5b5a81edca02c880c935771a58136a78ff3b7eb93ad6486ab991ffb56df",
+      "sha256": "d6fe34b44204248ee37e3b2d7f216fd16adf6c5b9f220e73e4292282c7c84448",
       "rows": 16
     },
     {
       "artifact_id": "meta_components_v1.npz",
       "path": "results/v7_rebuild/phase04_5/artifacts/meta_components_v1.npz",
-      "sha256": "35b30bb3fd00eee0f300e2f6861307c404c59bb6f4d75ad8bff45779aa585345"
+      "sha256": "0ddc07f72d8d917c62fee090fec02063d74d12799068a95976d88c96c415d96d"
     },
     {
       "artifact_id": "meta_dictionary_v1.json",
