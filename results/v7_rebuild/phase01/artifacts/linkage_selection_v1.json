@@ -1,0 +1,11 @@
+{
+  "selected_linkage": "ward",
+  "rule": "lowest mean size Gini among linkages within 0.05 mean silhouette of the best (0.4552)",
+  "admissible": [
+    "average",
+    "ward",
+    "complete"
+  ],
+  "selected_mean_silhouette": 0.4262,
+  "selected_mean_size_gini": 0.2935
+}
