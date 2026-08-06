@@ -88,6 +88,53 @@
       ]
     }
   },
+  "macro_f1_classes_ge5_molecules": 0.8259728774434733,
+  "selection_stability": {
+    "k": 4,
+    "members_per_fold": {
+      "0": [
+        "D:A_max_idf:lam0.5",
+        "D:A_max_idf:lam1.0",
+        "A:topk_mean:idf",
+        "A:max:idf"
+      ],
+      "1": [
+        "A:logsumexp:idf",
+        "A:max:idf",
+        "D:A_max_idf:lam0.5",
+        "A:weighted_vote:idf"
+      ],
+      "2": [
+        "D:A_max_idf:lam2.0",
+        "D:A_max_idf:lam0.5",
+        "D:A_max_idf:lam1.0",
+        "A:weighted_vote:idf"
+      ],
+      "3": [
+        "D:A_max_idf:lam0.5",
+        "A:logsumexp:idf",
+        "A:logsumexp:none",
+        "A:max:idf"
+      ],
+      "4": [
+        "A:topk_mean:none",
+        "D:A_max_idf:lam0.5",
+        "C:shrinkage_lda",
+        "A:weighted_vote:none"
+      ]
+    },
+    "fully_nested": true,
+    "top1": 0.84,
+    "top3": 0.9706666666666667,
+    "macro_f1": 0.8086126202474612,
+    "balanced_accuracy": 0.8346190851744126,
+    "replicate_consistency": 0.9493278747453094,
+    "modal_top1": 0.8346666666666667,
+    "modal_macro_f1": 0.7927049686920258,
+    "delta_top1": 0.005333333333333301,
+    "delta_macro_f1": 0.015907651555435387,
+    "ensemble_preferred": false
+  },
   "calibration": {
     "method": "temperature",
     "selection_reason": "log_loss among non-degenerate",
@@ -108,7 +155,7 @@
     "mean_margin": 0.3858546143659661,
     "mean_entropy": 0.6029558993079223,
     "effective_rank": 12.122881778672351,
-    "replicate_consistency": 0.946713753545329,
+    "replicate_consistency": 0.9467137535453293,
     "within_class_cosine": 0.7602443160780011,
     "between_class_cosine": 0.2634938768511016,
     "separation": 0.49675043922689954,
@@ -127,7 +174,7 @@
       "top1": 0.8346666666666667,
       "top3": 0.976,
       "macro_f1": 0.7927049686920258,
-      "replicate_consistency": 0.946713753545329,
+      "replicate_consistency": 0.9467137535453293,
       "mean_entropy": 0.6029558993079223,
       "effective_rank": 12.122881778672351,
       "spread_of_total_mass": 0.864275851189606,
@@ -183,7 +230,7 @@
       "top3": 0.96,
       "macro_f1": 0.8146724547153469,
       "balanced_accuracy": 0.8094448434886359,
-      "replicate_consistency": 0.9499343507700311,
+      "replicate_consistency": 0.9499343507700313,
       "effective_rank": 11.039267484246686
     },
     {
@@ -203,7 +250,7 @@
       "top3": 0.7973333333333333,
       "macro_f1": 0.3609177369510035,
       "balanced_accuracy": 0.41253452422770803,
-      "replicate_consistency": 0.9964235579393318,
+      "replicate_consistency": 0.9964235579393317,
       "effective_rank": 4.7593166255345976
     },
     {
@@ -233,7 +280,7 @@
       "top3": 0.976,
       "macro_f1": 0.7927049686920258,
       "balanced_accuracy": 0.8297952123885832,
-      "replicate_consistency": 0.946713753545329,
+      "replicate_consistency": 0.9467137535453293,
       "effective_rank": 12.122881778672351
     }
   ],
@@ -476,8 +523,8 @@
       "atlas": "09ed804a40836f4a05a91ba10900cded"
     },
     "split_fingerprint": "f043c3f009c2a1ab2b30808765580a75",
-    "code_fingerprint": "3b42b5ed95f26f5111e27053dae5ed1a",
-    "created_utc": "2026-08-06T23:16:46.176123+00:00",
+    "code_fingerprint": "0592e8633a1ea76f6070edc6957d5e40",
+    "created_utc": "2026-08-06T23:30:02.111570+00:00",
     "model_selection_rule": "nested molecule-grouped CV, inner-fold macro-F1",
     "scope": "Raman only"
   }

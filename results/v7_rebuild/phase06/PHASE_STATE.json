@@ -2,8 +2,8 @@
   "phase": "06",
   "name": "Validated Chemistry Evidence Layer",
   "status": "COMPLETE",
-  "started": "2026-08-06T23:16:46.176123+00:00",
-  "finished": "2026-08-06T23:17:59.845435+00:00",
+  "started": "2026-08-06T23:30:02.111570+00:00",
+  "finished": "2026-08-06T23:31:15.710729+00:00",
   "seed": 0,
   "selected_model": "D:A_max_idf:lam0.5",
   "calibration": "temperature",
@@ -14,7 +14,7 @@
     "atlas": "09ed804a40836f4a05a91ba10900cded"
   },
   "split_fingerprint": "f043c3f009c2a1ab2b30808765580a75",
-  "code_fingerprint": "3b42b5ed95f26f5111e27053dae5ed1a",
+  "code_fingerprint": "0592e8633a1ea76f6070edc6957d5e40",
   "scope": "Raman only; no SERS, serum, plasma, EV, mixture or DART-Met data",
   "implements": "A-19 Chemistry Evidence Layer (16-d)",
   "does_not_implement": [
@@ -25,7 +25,7 @@
     {
       "artifact_id": "chemistry_class_registry_v1.json",
       "path": "results/v7_rebuild/phase06/artifacts/chemistry_class_registry_v1.json",
-      "sha256": "a922e2acf9fdae87a0e1c67a2d097bebd061a8bcd960519036183ffa9731ca26"
+      "sha256": "36405f4a2d7087f349e26f6c3daa9de3d11181bbca58245b0c1ed7824b38da0e"
     },
     {
       "artifact_id": "chemistry_class_registry_v1.csv",
@@ -36,7 +36,7 @@
     {
       "artifact_id": "phase05_class_inference_audit_v1.json",
       "path": "results/v7_rebuild/phase06/artifacts/phase05_class_inference_audit_v1.json",
-      "sha256": "c857c0703b7aa99d5c43f1f355762c6ea42a019cb592222379ffaa93881b5aeb"
+      "sha256": "3284cbd6af7c9e18a7edb2f6c935b37f68bf5a2604cfde818e795f0a78a70634"
     },
     {
       "artifact_id": "phase05_reproduction_per_class_v1.csv",
@@ -53,7 +53,7 @@
     {
       "artifact_id": "evidence_model_benchmark_v1.csv",
       "path": "results/v7_rebuild/phase06/tables/evidence_model_benchmark_v1.csv",
-      "sha256": "f66e3dc31524a668ec1b868b9791f85e54d1b563b1741accc32757b11e3340c3",
+      "sha256": "74d176d74f87d33df538d9c4ea9e945d49a25d1a4c772542cacab72f27c5ed43",
       "rows": 37
     },
     {
@@ -61,6 +61,11 @@
       "path": "results/v7_rebuild/phase06/tables/nested_cv_folds_v1.csv",
       "sha256": "c0dc90bfc191f55c495e3a1cf44dcac2d315e26f383e7bb3c0d608a6dd8d2d1c",
       "rows": 5
+    },
+    {
+      "artifact_id": "selection_stability_ensemble_v1.json",
+      "path": "results/v7_rebuild/phase06/artifacts/selection_stability_ensemble_v1.json",
+      "sha256": "afb2f2e4cb8e172e613dbe64d8f630f15c56e3bcbf2250155b54ade7d46cba5e"
     },
     {
       "artifact_id": "chemistry_per_class_v1.csv",
@@ -107,13 +112,13 @@
     {
       "artifact_id": "normalisation_comparison_v1.csv",
       "path": "results/v7_rebuild/phase06/tables/normalisation_comparison_v1.csv",
-      "sha256": "bb4d1103735fd1d628ba7d793c2d6a6b65d65378dc42e613f2f06c90fb62efe1",
+      "sha256": "be88820a448c1a3b1a8a883200ceaf15f44f0f1e72676231c20cdeeb09b4e76e",
       "rows": 3
     },
     {
       "artifact_id": "soft_evidence_validation_v1.json",
       "path": "results/v7_rebuild/phase06/artifacts/soft_evidence_validation_v1.json",
-      "sha256": "e8e48e710f2da071f6308d1918e8a7b0c67fabeb829be2ae6b5f047503b70149"
+      "sha256": "34ea169e494b1e83967379f0b29ca2a08b920edb2d9a84fe1ff7bf6292e95dfa"
     },
     {
       "artifact_id": "chemistry_predictions_v1.csv",
@@ -124,13 +129,13 @@
     {
       "artifact_id": "layer_comparison_v1.csv",
       "path": "results/v7_rebuild/phase06/tables/layer_comparison_v1.csv",
-      "sha256": "0a443c16b65914248e0754c76a17694070700aaefdd3a929357f559ea1c635f1",
+      "sha256": "34481c094b77aaaf1deb605f16cb11711e477a3a2817ab09adfb9556634959dd",
       "rows": 7
     },
     {
       "artifact_id": "semantic_agreement_v1.json",
       "path": "results/v7_rebuild/phase06/artifacts/semantic_agreement_v1.json",
-      "sha256": "fad621c79a8c91bfeb9e4a61adf37b5cd6720dec591962a987fd9e334030308d"
+      "sha256": "32f62367cd817751e30a6fd303072f33e5f08803c20d7cd0235599097d2c8a7c"
     },
     {
       "artifact_id": "semantic_comparator_v1.csv",
@@ -153,7 +158,7 @@
     {
       "artifact_id": "holdout_chemistry_novelty_v1.json",
       "path": "results/v7_rebuild/phase06/artifacts/holdout_chemistry_novelty_v1.json",
-      "sha256": "f3f946a7b42d8281d1dc2fb552a89c6988333a23d5cde3b84c6c2fb2f9560579"
+      "sha256": "592b802f7331b140253649a778c14e50e9fb9df164c664e074827d4d13374f19"
     },
     {
       "artifact_id": "holdout_chemistry_novelty_v1.csv",
@@ -200,27 +205,27 @@
     {
       "artifact_id": "chemistry_evidence_provenance_v1.json",
       "path": "results/v7_rebuild/phase06/artifacts/chemistry_evidence_provenance_v1.json",
-      "sha256": "61460fccd3b799125f3ca6cd87b23c09b2e33c6832a1225ebc3e7f1df9a59775"
+      "sha256": "38c83f676cb730c74a9eb52f8b925a42a0489ad43bc06f0591b100b526c990a5"
     },
     {
       "artifact_id": "chemistry_evidence_model_v1.json",
       "path": "results/v7_rebuild/phase06/artifacts/chemistry_evidence_model_v1.json",
-      "sha256": "2739648acf1f6523e18a3d072048305f47382388f8d2a7a4ded48d441f4e0b5a"
+      "sha256": "cc498613870159562b62c60bcd939697b965294ca340d7a83d2423d13d970745"
     },
     {
       "artifact_id": "chemistry_evidence_calibrator_v1.json",
       "path": "results/v7_rebuild/phase06/artifacts/chemistry_evidence_calibrator_v1.json",
-      "sha256": "da1113a54e807f8aa1151b4148cf25018d77c0e870bccb38211da78e2835889d"
+      "sha256": "4781b291158c52c57570fa0cf71d4a3211b6f808a03f74b00f21a9ac2e4c7ba3"
     },
     {
       "artifact_id": "chemistry_evidence_reference_vectors_v1.npz",
       "path": "results/v7_rebuild/phase06/artifacts/chemistry_evidence_reference_vectors_v1.npz",
-      "sha256": "19ff54d32f7744c93f9f366a374d57f149b5c522303cb778312c113974a0361b"
+      "sha256": "75f1a5c990481b99b97b152baa509eaf285d0090a96171de4e29d62d42ffa6d4"
     },
     {
       "artifact_id": "chemistry_evidence_predictions_v1.npz",
       "path": "results/v7_rebuild/phase06/artifacts/chemistry_evidence_predictions_v1.npz",
-      "sha256": "508b684c50d1ecb024897cb04eba3f72a894b03da1c124e4b7cc8e23f85f277c"
+      "sha256": "2e6e6959bc5cc86609b2a1928e64f6f4ff82e6ffeb911dc9f89071e1cc4a8a80"
     },
     {
       "artifact_id": "phase06_gates_v1.csv",
@@ -231,12 +236,12 @@
     {
       "artifact_id": "phase06_summary_v1.json",
       "path": "results/v7_rebuild/phase06/artifacts/phase06_summary_v1.json",
-      "sha256": "a634d4cd8be9e5fe4b5600d06c3433ac27a582f2bc6e512f8abff4858b009d82"
+      "sha256": "ca396882ca83a5839a42e2c0b026c02f3b4b89103e65cac07389f8e6fa87090f"
     },
     {
       "artifact_id": "chemistry_evidence_manifest_v1.json",
       "path": "results/v7_rebuild/phase06/manifests/chemistry_evidence_manifest_v1.json",
-      "sha256": "f0983146d5554666e0240d62dc4046198b8dcb234cfab4a222177a2bdcb936e0"
+      "sha256": "56c4847011bc2c66abb3aca1ea0b80a2370ba1e6885cd61b6db07eb9c35df8df"
     }
   ]
 }

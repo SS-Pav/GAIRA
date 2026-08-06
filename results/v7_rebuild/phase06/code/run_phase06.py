@@ -299,11 +299,58 @@ def main() -> int:
                    ("mrr", VAL.mrr)):
         ci[nm] = VAL.bootstrap_ci(E, y, cls, fn, n_boot=2000, seed=SEED)
         log(f"  {nm:20s} {ci[nm][0]:.4f}  95% CI [{ci[nm][1]:.4f}, {ci[nm][2]:.4f}]")
+    # Selection-stability check, FULLY NESTED. Three different candidates won across five outer
+    # folds, so the canonical model is a modal choice with 2 of 5 votes. Is that modal choice a
+    # poor summary of the selection?
+    #
+    # The ensemble must be built inside each fold. A first version averaged the four models that
+    # won *somewhere* across the five folds — but that set is informed by inner loops that saw
+    # other folds' test molecules, a second-order leak that inflated the result. Here each outer
+    # fold ensembles the top-K candidates by ITS OWN inner-fold score, so nothing outside the
+    # fold's training set influences which models are combined.
+    ENS_K = 4
+    E_ens = np.zeros_like(E)
+    ens_members = {}
+    for f in sorted(set(folds)):
+        te, tr = folds == f, folds != f
+        sc = nested["inner_scores"][int(f)]
+        top = [n for n, _ in sorted(sc.items(), key=lambda kv: (-kv[1], kv[0]))[:ENS_K]]
+        ens_members[int(f)] = top
+        acc = np.zeros((int(te.sum()), len(REG.CLASS_ORDER)))
+        for name in top:
+            Ei = EVD.predict(fit_fn(A[tr], y[tr], cls[tr], usable[name]), A[te])
+            acc += Ei / (Ei.sum(axis=1, keepdims=True) + 1e-12)
+        E_ens[te] = acc / len(top)
+    ens = {"k": ENS_K, "members_per_fold": ens_members, "fully_nested": True,
+           "top1": VAL.topk(E_ens, cls, 1), "top3": VAL.topk(E_ens, cls, 3),
+           "macro_f1": VAL.macro_f1(E_ens, cls),
+           "balanced_accuracy": VAL.balanced_accuracy(E_ens, cls),
+           "replicate_consistency": VAL.replicate_consistency(E_ens, y),
+           "modal_top1": VAL.topk(E, cls, 1), "modal_macro_f1": VAL.macro_f1(E, cls)}
+    ens["delta_top1"] = ens["top1"] - ens["modal_top1"]
+    ens["delta_macro_f1"] = ens["macro_f1"] - ens["modal_macro_f1"]
+    # Pre-declared: the ensemble replaces the modal single model only if it improves macro-F1 by
+    # more than 0.02 -- more than the G7 tolerance. A smaller gain does not justify shipping a
+    # model that cannot be stated in one line and whose provenance is an average.
+    ens["ensemble_preferred"] = bool(ens["delta_macro_f1"] > 0.02)
+    log(f"  selection stability (fully nested, top-{ENS_K} per fold): top1 {ens['top1']:.3f} "
+        f"({ens['delta_top1']:+.3f}), macroF1 {ens['macro_f1']:.3f} "
+        f"({ens['delta_macro_f1']:+.3f}) → ensemble preferred: {ens['ensemble_preferred']}")
+    outputs.append(wjson(ens, "selection_stability_ensemble_v1.json"))
     pc = VAL.per_class(E, cls)
     outputs.append(wtab(pc, "chemistry_per_class_v1.csv"))
     cm = VAL.confusion(E, cls)
     outputs.append(wtab(cm.reset_index().rename(columns={"index": "true_class"}),
                         "chemistry_confusion_matrix_v1.csv"))
+    # Macro-F1 restricted to evaluable classes. A 2-molecule class held out one molecule at a
+    # time has exactly one reference; giving it equal weight in a macro average over 16 classes
+    # drags the headline for a reason that is not a modelling property.
+    reg_by = {r["class_id"]: r["n_molecules"] for r in registry}
+    big = np.array([reg_by[c] >= 5 for c in REG.CLASS_ORDER])
+    pcx = VAL.per_class(E, cls)
+    macro_big = float(pcx[[reg_by[c] >= 5 for c in pcx.class_id]].f1.mean())
+    log(f"  macro-F1 over the {int(big.sum())} classes with >= 5 molecules: {macro_big:.4f} "
+        f"(all 16: {VAL.macro_f1(E, cls):.4f})")
     adj = VAL.adjacency_of_errors(E, cls)
     log(f"  errors: {adj['n_errors']} · chemically adjacent {adj['adjacent_fraction']:.3f} "
         f"vs chance {adj['chance_adjacent']:.3f} (lift {adj['lift']:.2f}x)")
@@ -888,6 +935,8 @@ def main() -> int:
         "selected_model": {"candidate": selected, "config": sel_cfg,
                            "per_fold": nested["chosen_per_fold"]},
         "performance": {k: {"value": v[0], "ci95": [v[1], v[2]]} for k, v in ci.items()},
+        "macro_f1_classes_ge5_molecules": macro_big,
+        "selection_stability": ens,
         "calibration": cal_final,
         "soft_evidence": soft,
         "normalisation": norm_tab.to_dict("records"),

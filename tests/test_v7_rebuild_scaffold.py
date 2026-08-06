@@ -271,18 +271,24 @@ def test_mss_is_marked_legacy():
     assert "legacy terminology" in readme.lower()
 
 
-def test_bsv_is_described_as_absolute():
+def test_the_canonical_coordinate_is_described_as_absolute():
+    """The BSV was archived after Phase 05 (A-14); the *invariant* it carried was not.
+
+    This test originally required the phrase "absolute BSV" in three documents. The BSV is now
+    legacy and BSV2 is planned, so the phrase moved — but the property must never be optional:
+    a canonical coordinate is a position, differences are derived, and neither is a label.
+    """
     terminology = (V7 / "context" / "TERMINOLOGY_AND_DEFINITIONS.md").read_text()
     assert "**absolute**" in terminology
-    assert "a delta or difference" in terminology, "BSV must be stated not to be a delta"
-    assert "a hard label" in terminology, "BSV must be stated not to be a hard label"
-    assert "**The BSV is not:**" in terminology
+    assert "a delta or difference" in terminology
+    assert "a hard label" in terminology
+    assert "**The BSV is not:**" in terminology, "the legacy definition must be preserved"
+    assert "BSV2" in terminology, "the successor must be defined"
+    assert "**absolute**" in terminology.split("## BSV2")[1], "BSV2 must inherit absoluteness"
 
-    for name in ("architecture/GAIRA_V7_TARGET_ARCHITECTURE.md",
-                 "architecture/INFERENCE_MODE_ARCHITECTURE.md",
-                 "plan/GAIRA_V7_REBUILD_PLAN.md"):
-        text = (V7 / name).read_text().lower()
-        assert "absolute bsv" in text, f"{name} does not describe the BSV as absolute"
+    arch = (V7 / "architecture" / "GAIRA_V7_TARGET_ARCHITECTURE.md").read_text().lower()
+    assert "absolute coordinates" in arch or "absolute bsv" in arch
+    assert "computed as a difference" in arch
 
 
 def test_delta_bsv_is_described_as_derived():
@@ -299,7 +305,11 @@ def test_no_document_calls_pca_or_umap_inference():
     for name in ("architecture/GAIRA_V7_TARGET_ARCHITECTURE.md",
                  "architecture/INFERENCE_MODE_ARCHITECTURE.md"):
         text = (V7 / name).read_text()
-        assert "never the canonical BSV" in text or "not the canonical BSV" in text
+        assert any(p in text for p in ("never the canonical BSV", "not the canonical BSV",
+                                       "never a canonical coordinate")), \
+            f"{name} must state that a visualisation projection is not a canonical coordinate"
+        assert "describe PCA or UMAP as inference" in text, \
+            f"{name} must state the PCA/UMAP prohibition"
 
 
 def test_second_nmf_is_not_presupposed():
@@ -339,12 +349,24 @@ def test_no_document_claims_v7_performance():
     assert not offenders, "V7 performance claimed before implementation:\n" + "\n".join(offenders)
 
 
-def test_readme_declares_no_model_fitted():
-    """V7's representation is unbuilt until Phase 02; the README must keep saying so."""
+def test_readme_status_is_truthful_about_what_has_been_built():
+    """The README must state the current build status, not a frozen snapshot of an old one.
+
+    This test originally asserted "no V7 model has been fitted". That was true through Phase 01
+    and is now false: eight phases are complete. The invariant worth testing is not a particular
+    sentence but that the README names the completed phases, names the archived ones, and still
+    carries the V5 atlas fingerprint it must never modify.
+    """
     readme = (V7 / "README.md").read_text()
-    assert "no v7 model has been fitted" in readme.lower()
+    low = readme.lower()
     assert CANONICAL_ATLAS_FINGERPRINT in readme
     assert "gaira-v7-rebuild" in readme
+    assert "complete" in low, "the README must state which phases are complete"
+    assert "archived on evidence" in low, "retired layers must be labelled, not deleted"
+    assert "unmodified" in low and "production" in low, \
+        "the README must keep stating that the V5 atlas is untouched and in production"
+    assert "no v7 model has been fitted" not in low, \
+        "this claim is false as of Phase 01 and must not be reintroduced"
 
 
 def test_readme_phase_status_table_is_current():

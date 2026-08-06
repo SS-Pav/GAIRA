@@ -149,7 +149,7 @@ def nested_cv(A, y, cls, folds, candidates, fit_fn, predict_fn, select_metric=ma
     """
     outer = sorted(set(folds))
     E_out = np.zeros((len(A), NC))
-    chosen, per_fold = {}, []
+    chosen, per_fold, inner_scores = {}, [], {}
     for f in outer:
         te, tr = folds == f, folds != f
         inner = sorted(set(folds[tr]))
@@ -170,7 +170,16 @@ def nested_cv(A, y, cls, folds, candidates, fit_fn, predict_fn, select_metric=ma
                 scores[name] = float(np.mean(sc))
                 if scores[name] > best_s:
                     best_s, best = scores[name], name
+        if best is None:
+            # Every candidate failed, or no inner fold was large enough to score one. Failing
+            # loudly beats a KeyError three frames down, and beats silently falling back to an
+            # arbitrary candidate.
+            raise RuntimeError(
+                f"outer fold {f}: no candidate could be selected — "
+                f"{len(candidates)} offered, {len(set(folds[tr]))} inner folds, "
+                f"{int(tr.sum())} training spectra")
         chosen[int(f)] = best
+        inner_scores[int(f)] = scores
         m = fit_fn(A[tr], y[tr], cls[tr], candidates[best])
         E_out[te] = predict_fn(m, A[te])
         per_fold.append({"fold": int(f), "selected": best, "inner_score": best_s,
@@ -181,6 +190,7 @@ def nested_cv(A, y, cls, folds, candidates, fit_fn, predict_fn, select_metric=ma
             log(f"    fold {f}: selected {best} (inner {select_metric.__name__} {best_s:.3f}) "
                 f"→ outer top-1 {per_fold[-1]['outer_top1']:.3f}")
     return {"E": E_out, "chosen_per_fold": chosen, "per_fold": per_fold,
+            "inner_scores": inner_scores,
             "modal_choice": max(set(chosen.values()),
                                 key=lambda c: (sum(v == c for v in chosen.values()), str(c)))}
 

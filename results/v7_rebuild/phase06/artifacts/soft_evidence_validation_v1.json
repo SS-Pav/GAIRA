@@ -7,7 +7,7 @@
   "mean_margin": 0.3858546143659661,
   "mean_entropy": 0.6029558993079223,
   "effective_rank": 12.122881778672351,
-  "replicate_consistency": 0.946713753545329,
+  "replicate_consistency": 0.9467137535453293,
   "within_class_cosine": 0.7602443160780011,
   "between_class_cosine": 0.2634938768511016,
   "separation": 0.49675043922689954,
@@ -29,8 +29,8 @@
       "atlas": "09ed804a40836f4a05a91ba10900cded"
     },
     "split_fingerprint": "f043c3f009c2a1ab2b30808765580a75",
-    "code_fingerprint": "3b42b5ed95f26f5111e27053dae5ed1a",
-    "created_utc": "2026-08-06T23:16:46.176123+00:00",
+    "code_fingerprint": "0592e8633a1ea76f6070edc6957d5e40",
+    "created_utc": "2026-08-06T23:30:02.111570+00:00",
     "model_selection_rule": "nested molecule-grouped CV, inner-fold macro-F1",
     "scope": "Raman only"
   }

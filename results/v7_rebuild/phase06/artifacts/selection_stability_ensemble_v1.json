@@ -1,0 +1,61 @@
+{
+  "k": 4,
+  "members_per_fold": {
+    "0": [
+      "D:A_max_idf:lam0.5",
+      "D:A_max_idf:lam1.0",
+      "A:topk_mean:idf",
+      "A:max:idf"
+    ],
+    "1": [
+      "A:logsumexp:idf",
+      "A:max:idf",
+      "D:A_max_idf:lam0.5",
+      "A:weighted_vote:idf"
+    ],
+    "2": [
+      "D:A_max_idf:lam2.0",
+      "D:A_max_idf:lam0.5",
+      "D:A_max_idf:lam1.0",
+      "A:weighted_vote:idf"
+    ],
+    "3": [
+      "D:A_max_idf:lam0.5",
+      "A:logsumexp:idf",
+      "A:logsumexp:none",
+      "A:max:idf"
+    ],
+    "4": [
+      "A:topk_mean:none",
+      "D:A_max_idf:lam0.5",
+      "C:shrinkage_lda",
+      "A:weighted_vote:none"
+    ]
+  },
+  "fully_nested": true,
+  "top1": 0.84,
+  "top3": 0.9706666666666667,
+  "macro_f1": 0.8086126202474612,
+  "balanced_accuracy": 0.8346190851744126,
+  "replicate_consistency": 0.9493278747453094,
+  "modal_top1": 0.8346666666666667,
+  "modal_macro_f1": 0.7927049686920258,
+  "delta_top1": 0.005333333333333301,
+  "delta_macro_f1": 0.015907651555435387,
+  "ensemble_preferred": false,
+  "_provenance": {
+    "phase": "06",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "split_fingerprint": "f043c3f009c2a1ab2b30808765580a75",
+    "code_fingerprint": "0592e8633a1ea76f6070edc6957d5e40",
+    "created_utc": "2026-08-06T23:30:02.111570+00:00",
+    "model_selection_rule": "nested molecule-grouped CV, inner-fold macro-F1",
+    "scope": "Raman only"
+  }
+}

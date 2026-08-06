@@ -255,4 +255,4 @@ Report: [`PHASE_01_REPORT.md`](../results/v7_rebuild/phase01/reports/PHASE_01_RE
 > (architecture check before implementation) and **P-17** (redraw the pipeline every phase)
 > were added as a result.
 
-**Next step: awaiting explicit approval. Phase 02 NOT STARTED.**
+**Next step: Phase 06 — the Chemistry Evidence Layer. Phases 00–05 are complete; Phases 03, 04 and 04.5 are archived on evidence.**
