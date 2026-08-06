@@ -1,0 +1,1682 @@
+{
+  "schema": "lsm_graph_v1",
+  "nodes": [
+    {
+      "lsm_id": "acylglycerol.m00",
+      "class": "acylglycerol",
+      "type": "class_shared",
+      "csm": "csm01"
+    },
+    {
+      "lsm_id": "acylglycerol.m01",
+      "class": "acylglycerol",
+      "type": "subfamily",
+      "csm": "csm00"
+    },
+    {
+      "lsm_id": "acylglycerol.m02",
+      "class": "acylglycerol",
+      "type": "subfamily",
+      "csm": "csm02"
+    },
+    {
+      "lsm_id": "carboxylic_acid_metabolite.m00",
+      "class": "carboxylic_acid_metabolite",
+      "type": "class_shared",
+      "csm": "csm03"
+    },
+    {
+      "lsm_id": "carboxylic_acid_metabolite.m01",
+      "class": "carboxylic_acid_metabolite",
+      "type": "class_shared",
+      "csm": "csm04"
+    },
+    {
+      "lsm_id": "chromophore_pigment.m00",
+      "class": "chromophore_pigment",
+      "type": "class_shared",
+      "csm": "csm05"
+    },
+    {
+      "lsm_id": "chromophore_pigment.m01",
+      "class": "chromophore_pigment",
+      "type": "subfamily",
+      "csm": "csm06"
+    },
+    {
+      "lsm_id": "fatty_acid.m00",
+      "class": "fatty_acid",
+      "type": "subfamily",
+      "csm": "csm07"
+    },
+    {
+      "lsm_id": "fatty_acid.m01",
+      "class": "fatty_acid",
+      "type": "subfamily",
+      "csm": "csm00"
+    },
+    {
+      "lsm_id": "fatty_acid.m02",
+      "class": "fatty_acid",
+      "type": "subfamily",
+      "csm": "csm08"
+    },
+    {
+      "lsm_id": "fatty_acid.m03",
+      "class": "fatty_acid",
+      "type": "class_shared",
+      "csm": "csm09"
+    },
+    {
+      "lsm_id": "fatty_acid.m04",
+      "class": "fatty_acid",
+      "type": "subfamily",
+      "csm": "csm10"
+    },
+    {
+      "lsm_id": "free_amino_acid.m00",
+      "class": "free_amino_acid",
+      "type": "subfamily",
+      "csm": "csm11"
+    },
+    {
+      "lsm_id": "free_amino_acid.m01",
+      "class": "free_amino_acid",
+      "type": "subfamily",
+      "csm": "csm12"
+    },
+    {
+      "lsm_id": "free_amino_acid.m02",
+      "class": "free_amino_acid",
+      "type": "molecule_discriminating",
+      "csm": "csm13"
+    },
+    {
+      "lsm_id": "free_amino_acid.m03",
+      "class": "free_amino_acid",
+      "type": "subfamily",
+      "csm": "csm14"
+    },
+    {
+      "lsm_id": "free_amino_acid.m04",
+      "class": "free_amino_acid",
+      "type": "molecule_discriminating",
+      "csm": "csm15"
+    },
+    {
+      "lsm_id": "free_amino_acid.m05",
+      "class": "free_amino_acid",
+      "type": "subfamily",
+      "csm": "csm16"
+    },
+    {
+      "lsm_id": "free_amino_acid.m06",
+      "class": "free_amino_acid",
+      "type": "subfamily",
+      "csm": "csm17"
+    },
+    {
+      "lsm_id": "mono_oligosaccharide.m00",
+      "class": "mono_oligosaccharide",
+      "type": "subfamily",
+      "csm": "csm18"
+    },
+    {
+      "lsm_id": "mono_oligosaccharide.m01",
+      "class": "mono_oligosaccharide",
+      "type": "subfamily",
+      "csm": "csm19"
+    },
+    {
+      "lsm_id": "mono_oligosaccharide.m02",
+      "class": "mono_oligosaccharide",
+      "type": "class_shared",
+      "csm": "csm20"
+    },
+    {
+      "lsm_id": "mono_oligosaccharide.m03",
+      "class": "mono_oligosaccharide",
+      "type": "subfamily",
+      "csm": "csm21"
+    },
+    {
+      "lsm_id": "mono_oligosaccharide.m04",
+      "class": "mono_oligosaccharide",
+      "type": "class_shared",
+      "csm": "csm22"
+    },
+    {
+      "lsm_id": "mono_oligosaccharide.m05",
+      "class": "mono_oligosaccharide",
+      "type": "subfamily",
+      "csm": "csm23"
+    },
+    {
+      "lsm_id": "nucleic_acid_polymer.m00",
+      "class": "nucleic_acid_polymer",
+      "type": "class_shared",
+      "csm": "csm24"
+    },
+    {
+      "lsm_id": "peptide_protein.m00",
+      "class": "peptide_protein",
+      "type": "class_shared",
+      "csm": "csm25"
+    },
+    {
+      "lsm_id": "peptide_protein.m01",
+      "class": "peptide_protein",
+      "type": "molecule_discriminating",
+      "csm": "csm26"
+    },
+    {
+      "lsm_id": "peptide_protein.m02",
+      "class": "peptide_protein",
+      "type": "subfamily",
+      "csm": "csm27"
+    },
+    {
+      "lsm_id": "peptide_protein.m03",
+      "class": "peptide_protein",
+      "type": "subfamily",
+      "csm": "csm28"
+    },
+    {
+      "lsm_id": "peptide_protein.m04",
+      "class": "peptide_protein",
+      "type": "subfamily",
+      "csm": "csm29"
+    },
+    {
+      "lsm_id": "peptide_protein.m05",
+      "class": "peptide_protein",
+      "type": "subfamily",
+      "csm": "csm30"
+    },
+    {
+      "lsm_id": "peptide_protein.m06",
+      "class": "peptide_protein",
+      "type": "subfamily",
+      "csm": "csm31"
+    },
+    {
+      "lsm_id": "peptide_protein.m07",
+      "class": "peptide_protein",
+      "type": "subfamily",
+      "csm": "csm32"
+    },
+    {
+      "lsm_id": "peptide_protein.m08",
+      "class": "peptide_protein",
+      "type": "subfamily",
+      "csm": "csm33"
+    },
+    {
+      "lsm_id": "peptide_protein.m09",
+      "class": "peptide_protein",
+      "type": "subfamily",
+      "csm": "csm34"
+    },
+    {
+      "lsm_id": "phosphate_metabolite.m00",
+      "class": "phosphate_metabolite",
+      "type": "class_shared",
+      "csm": "csm35"
+    },
+    {
+      "lsm_id": "phospholipid_sphingolipid.m00",
+      "class": "phospholipid_sphingolipid",
+      "type": "class_shared",
+      "csm": "csm36"
+    },
+    {
+      "lsm_id": "phospholipid_sphingolipid.m01",
+      "class": "phospholipid_sphingolipid",
+      "type": "class_shared",
+      "csm": "csm37"
+    },
+    {
+      "lsm_id": "polysaccharide.m00",
+      "class": "polysaccharide",
+      "type": "class_shared",
+      "csm": "csm38"
+    },
+    {
+      "lsm_id": "polysaccharide.m01",
+      "class": "polysaccharide",
+      "type": "class_shared",
+      "csm": "csm39"
+    },
+    {
+      "lsm_id": "purine.m00",
+      "class": "purine",
+      "type": "class_shared",
+      "csm": "csm40"
+    },
+    {
+      "lsm_id": "purine.m01",
+      "class": "purine",
+      "type": "class_shared",
+      "csm": "csm41"
+    },
+    {
+      "lsm_id": "pyrimidine.m00",
+      "class": "pyrimidine",
+      "type": "class_shared",
+      "csm": "csm42"
+    },
+    {
+      "lsm_id": "small_nitrogenous.m00",
+      "class": "small_nitrogenous",
+      "type": "class_shared",
+      "csm": "csm43"
+    },
+    {
+      "lsm_id": "sterol_steroid.m00",
+      "class": "sterol_steroid",
+      "type": "class_shared",
+      "csm": "csm44"
+    },
+    {
+      "lsm_id": "sterol_steroid.m01",
+      "class": "sterol_steroid",
+      "type": "subfamily",
+      "csm": "csm45"
+    },
+    {
+      "lsm_id": "sterol_steroid.m02",
+      "class": "sterol_steroid",
+      "type": "subfamily",
+      "csm": "csm46"
+    },
+    {
+      "lsm_id": "sulfur_thiol_cofactor.m00",
+      "class": "sulfur_thiol_cofactor",
+      "type": "class_shared",
+      "csm": "csm47"
+    },
+    {
+      "lsm_id": "sulfur_thiol_cofactor.m01",
+      "class": "sulfur_thiol_cofactor",
+      "type": "class_shared",
+      "csm": "csm48"
+    }
+  ],
+  "edges": [
+    {
+      "source": "acylglycerol.m00",
+      "target": "acylglycerol.m02",
+      "weight": 0.35987,
+      "features": {
+        "spectral_cosine": 0.806647,
+        "band_overlap": 0.533182,
+        "peak_agreement": 0.533333,
+        "bootstrap_cooccurrence": 0.803844,
+        "activation_cooccurrence": 0.96082,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.0
+      }
+    },
+    {
+      "source": "acylglycerol.m00",
+      "target": "fatty_acid.m00",
+      "weight": 0.532106,
+      "features": {
+        "spectral_cosine": 0.629815,
+        "band_overlap": 0.41978,
+        "peak_agreement": 0.533333,
+        "bootstrap_cooccurrence": 0.632969,
+        "activation_cooccurrence": 0.917931,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.223162
+      }
+    },
+    {
+      "source": "acylglycerol.m00",
+      "target": "fatty_acid.m03",
+      "weight": 0.846596,
+      "features": {
+        "spectral_cosine": 0.919591,
+        "band_overlap": 0.921083,
+        "peak_agreement": 0.615385,
+        "bootstrap_cooccurrence": 0.890501,
+        "activation_cooccurrence": 0.983781,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.688268
+      }
+    },
+    {
+      "source": "acylglycerol.m00",
+      "target": "fatty_acid.m04",
+      "weight": 0.502479,
+      "features": {
+        "spectral_cosine": 0.776097,
+        "band_overlap": 0.314909,
+        "peak_agreement": 0.4,
+        "bootstrap_cooccurrence": 0.772193,
+        "activation_cooccurrence": 0.959457,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.185856
+      }
+    },
+    {
+      "source": "acylglycerol.m00",
+      "target": "free_amino_acid.m06",
+      "weight": 0.502505,
+      "features": {
+        "spectral_cosine": 0.574208,
+        "band_overlap": 0.432889,
+        "peak_agreement": 0.266667,
+        "bootstrap_cooccurrence": 0.382792,
+        "activation_cooccurrence": 0.774336,
+        "provenance_overlap": 1.0,
+        "substitutability": 1.0
+      }
+    },
+    {
+      "source": "acylglycerol.m00",
+      "target": "phospholipid_sphingolipid.m00",
+      "weight": 0.780513,
+      "features": {
+        "spectral_cosine": 0.898756,
+        "band_overlap": 0.664154,
+        "peak_agreement": 0.666667,
+        "bootstrap_cooccurrence": 0.874055,
+        "activation_cooccurrence": 0.97188,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.668438
+      }
+    },
+    {
+      "source": "acylglycerol.m00",
+      "target": "sterol_steroid.m00",
+      "weight": 0.746234,
+      "features": {
+        "spectral_cosine": 0.8748,
+        "band_overlap": 0.696468,
+        "peak_agreement": 0.4,
+        "bootstrap_cooccurrence": 0.872191,
+        "activation_cooccurrence": 0.965693,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.868626
+      }
+    },
+    {
+      "source": "acylglycerol.m01",
+      "target": "fatty_acid.m01",
+      "weight": 0.887063,
+      "features": {
+        "spectral_cosine": 0.947993,
+        "band_overlap": 0.783935,
+        "peak_agreement": 0.857143,
+        "bootstrap_cooccurrence": 0.915928,
+        "activation_cooccurrence": 0.953933,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.929706
+      }
+    },
+    {
+      "source": "acylglycerol.m02",
+      "target": "fatty_acid.m00",
+      "weight": 0.811394,
+      "features": {
+        "spectral_cosine": 0.880062,
+        "band_overlap": 0.818442,
+        "peak_agreement": 0.75,
+        "bootstrap_cooccurrence": 0.895417,
+        "activation_cooccurrence": 0.957479,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.500105
+      }
+    },
+    {
+      "source": "acylglycerol.m02",
+      "target": "fatty_acid.m03",
+      "weight": 0.516761,
+      "features": {
+        "spectral_cosine": 0.736268,
+        "band_overlap": 0.473342,
+        "peak_agreement": 0.428571,
+        "bootstrap_cooccurrence": 0.719032,
+        "activation_cooccurrence": 0.934541,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.101656
+      }
+    },
+    {
+      "source": "acylglycerol.m02",
+      "target": "fatty_acid.m04",
+      "weight": 0.776422,
+      "features": {
+        "spectral_cosine": 0.908511,
+        "band_overlap": 0.698233,
+        "peak_agreement": 0.5,
+        "bootstrap_cooccurrence": 0.893503,
+        "activation_cooccurrence": 0.991329,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.799832
+      }
+    },
+    {
+      "source": "acylglycerol.m02",
+      "target": "free_amino_acid.m06",
+      "weight": 0.41841,
+      "features": {
+        "spectral_cosine": 0.441129,
+        "band_overlap": 0.249089,
+        "peak_agreement": 0.375,
+        "bootstrap_cooccurrence": 0.300175,
+        "activation_cooccurrence": 0.722589,
+        "provenance_overlap": 1.0,
+        "substitutability": 1.0
+      }
+    },
+    {
+      "source": "acylglycerol.m02",
+      "target": "phospholipid_sphingolipid.m00",
+      "weight": 0.730013,
+      "features": {
+        "spectral_cosine": 0.831896,
+        "band_overlap": 0.668189,
+        "peak_agreement": 0.625,
+        "bootstrap_cooccurrence": 0.83061,
+        "activation_cooccurrence": 0.948272,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.479814
+      }
+    },
+    {
+      "source": "acylglycerol.m02",
+      "target": "sterol_steroid.m00",
+      "weight": 0.664849,
+      "features": {
+        "spectral_cosine": 0.731419,
+        "band_overlap": 0.5421,
+        "peak_agreement": 0.5,
+        "bootstrap_cooccurrence": 0.731938,
+        "activation_cooccurrence": 0.917274,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.717848
+      }
+    },
+    {
+      "source": "carboxylic_acid_metabolite.m01",
+      "target": "free_amino_acid.m00",
+      "weight": 0.210946,
+      "features": {
+        "spectral_cosine": 0.43106,
+        "band_overlap": 0.042115,
+        "peak_agreement": 0.375,
+        "bootstrap_cooccurrence": 0.128685,
+        "activation_cooccurrence": 0.533798,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.455866
+      }
+    },
+    {
+      "source": "carboxylic_acid_metabolite.m01",
+      "target": "mono_oligosaccharide.m02",
+      "weight": 0.190214,
+      "features": {
+        "spectral_cosine": 0.47259,
+        "band_overlap": 0.03993,
+        "peak_agreement": 0.125,
+        "bootstrap_cooccurrence": 0.144948,
+        "activation_cooccurrence": 0.528048,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.67665
+      }
+    },
+    {
+      "source": "carboxylic_acid_metabolite.m01",
+      "target": "mono_oligosaccharide.m03",
+      "weight": 0.444928,
+      "features": {
+        "spectral_cosine": 0.713383,
+        "band_overlap": 0.43963,
+        "peak_agreement": 0.25,
+        "bootstrap_cooccurrence": 0.147645,
+        "activation_cooccurrence": 0.734759,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.894645
+      }
+    },
+    {
+      "source": "carboxylic_acid_metabolite.m01",
+      "target": "peptide_protein.m03",
+      "weight": 0.441802,
+      "features": {
+        "spectral_cosine": 0.699719,
+        "band_overlap": 0.384242,
+        "peak_agreement": 0.375,
+        "bootstrap_cooccurrence": 0.139125,
+        "activation_cooccurrence": 0.723959,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.7329
+      }
+    },
+    {
+      "source": "carboxylic_acid_metabolite.m01",
+      "target": "phosphate_metabolite.m00",
+      "weight": 0.284947,
+      "features": {
+        "spectral_cosine": 0.529636,
+        "band_overlap": 0.144541,
+        "peak_agreement": 0.125,
+        "bootstrap_cooccurrence": 0.203999,
+        "activation_cooccurrence": 0.605727,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.642131
+      }
+    },
+    {
+      "source": "carboxylic_acid_metabolite.m01",
+      "target": "polysaccharide.m00",
+      "weight": 0.482224,
+      "features": {
+        "spectral_cosine": 0.685485,
+        "band_overlap": 0.36885,
+        "peak_agreement": 0.5,
+        "bootstrap_cooccurrence": 0.197683,
+        "activation_cooccurrence": 0.689573,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.817295
+      }
+    },
+    {
+      "source": "fatty_acid.m00",
+      "target": "fatty_acid.m03",
+      "weight": 0.274489,
+      "features": {
+        "spectral_cosine": 0.586281,
+        "band_overlap": 0.331879,
+        "peak_agreement": 0.428571,
+        "bootstrap_cooccurrence": 0.583672,
+        "activation_cooccurrence": 0.889808,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.0
+      }
+    },
+    {
+      "source": "fatty_acid.m00",
+      "target": "fatty_acid.m04",
+      "weight": 0.36317,
+      "features": {
+        "spectral_cosine": 0.741086,
+        "band_overlap": 0.566103,
+        "peak_agreement": 0.625,
+        "bootstrap_cooccurrence": 0.749819,
+        "activation_cooccurrence": 0.939437,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.0
+      }
+    },
+    {
+      "source": "fatty_acid.m00",
+      "target": "free_amino_acid.m06",
+      "weight": 0.437599,
+      "features": {
+        "spectral_cosine": 0.435025,
+        "band_overlap": 0.300757,
+        "peak_agreement": 0.375,
+        "bootstrap_cooccurrence": 0.294076,
+        "activation_cooccurrence": 0.748954,
+        "provenance_overlap": 1.0,
+        "substitutability": 1.0
+      }
+    },
+    {
+      "source": "fatty_acid.m00",
+      "target": "phospholipid_sphingolipid.m00",
+      "weight": 0.677372,
+      "features": {
+        "spectral_cosine": 0.735899,
+        "band_overlap": 0.700249,
+        "peak_agreement": 0.5,
+        "bootstrap_cooccurrence": 0.745781,
+        "activation_cooccurrence": 0.913719,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.439867
+      }
+    },
+    {
+      "source": "fatty_acid.m00",
+      "target": "sterol_steroid.m00",
+      "weight": 0.488245,
+      "features": {
+        "spectral_cosine": 0.549855,
+        "band_overlap": 0.264296,
+        "peak_agreement": 0.5,
+        "bootstrap_cooccurrence": 0.563891,
+        "activation_cooccurrence": 0.852518,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.555522
+      }
+    },
+    {
+      "source": "fatty_acid.m03",
+      "target": "fatty_acid.m04",
+      "weight": 0.299051,
+      "features": {
+        "spectral_cosine": 0.746523,
+        "band_overlap": 0.278916,
+        "peak_agreement": 0.571429,
+        "bootstrap_cooccurrence": 0.726239,
+        "activation_cooccurrence": 0.93458,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.0
+      }
+    },
+    {
+      "source": "fatty_acid.m03",
+      "target": "free_amino_acid.m06",
+      "weight": 0.432379,
+      "features": {
+        "spectral_cosine": 0.529898,
+        "band_overlap": 0.396811,
+        "peak_agreement": 0.142857,
+        "bootstrap_cooccurrence": 0.345872,
+        "activation_cooccurrence": 0.746572,
+        "provenance_overlap": 1.0,
+        "substitutability": 1.0
+      }
+    },
+    {
+      "source": "fatty_acid.m03",
+      "target": "phospholipid_sphingolipid.m00",
+      "weight": 0.759153,
+      "features": {
+        "spectral_cosine": 0.891464,
+        "band_overlap": 0.636803,
+        "peak_agreement": 0.571429,
+        "bootstrap_cooccurrence": 0.857208,
+        "activation_cooccurrence": 0.982592,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.73388
+      }
+    },
+    {
+      "source": "fatty_acid.m03",
+      "target": "sterol_steroid.m00",
+      "weight": 0.764862,
+      "features": {
+        "spectral_cosine": 0.895924,
+        "band_overlap": 0.721134,
+        "peak_agreement": 0.428571,
+        "bootstrap_cooccurrence": 0.886459,
+        "activation_cooccurrence": 0.975961,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.845851
+      }
+    },
+    {
+      "source": "fatty_acid.m04",
+      "target": "free_amino_acid.m06",
+      "weight": 0.379295,
+      "features": {
+        "spectral_cosine": 0.465153,
+        "band_overlap": 0.196154,
+        "peak_agreement": 0.25,
+        "bootstrap_cooccurrence": 0.323909,
+        "activation_cooccurrence": 0.725336,
+        "provenance_overlap": 1.0,
+        "substitutability": 1.0
+      }
+    },
+    {
+      "source": "fatty_acid.m04",
+      "target": "phospholipid_sphingolipid.m00",
+      "weight": 0.635187,
+      "features": {
+        "spectral_cosine": 0.797035,
+        "band_overlap": 0.398428,
+        "peak_agreement": 0.5,
+        "bootstrap_cooccurrence": 0.790372,
+        "activation_cooccurrence": 0.944355,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.71589
+      }
+    },
+    {
+      "source": "fatty_acid.m04",
+      "target": "sterol_steroid.m00",
+      "weight": 0.565125,
+      "features": {
+        "spectral_cosine": 0.731936,
+        "band_overlap": 0.34491,
+        "peak_agreement": 0.375,
+        "bootstrap_cooccurrence": 0.72767,
+        "activation_cooccurrence": 0.915188,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.680416
+      }
+    },
+    {
+      "source": "free_amino_acid.m00",
+      "target": "mono_oligosaccharide.m02",
+      "weight": 0.442748,
+      "features": {
+        "spectral_cosine": 0.528919,
+        "band_overlap": 0.279081,
+        "peak_agreement": 0.5,
+        "bootstrap_cooccurrence": 0.335874,
+        "activation_cooccurrence": 0.591611,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.617594
+      }
+    },
+    {
+      "source": "free_amino_acid.m00",
+      "target": "mono_oligosaccharide.m03",
+      "weight": 0.173463,
+      "features": {
+        "spectral_cosine": 0.446731,
+        "band_overlap": 0.024062,
+        "peak_agreement": 0.125,
+        "bootstrap_cooccurrence": 0.191766,
+        "activation_cooccurrence": 0.645623,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.57433
+      }
+    },
+    {
+      "source": "free_amino_acid.m00",
+      "target": "peptide_protein.m03",
+      "weight": 0.468462,
+      "features": {
+        "spectral_cosine": 0.552161,
+        "band_overlap": 0.300895,
+        "peak_agreement": 0.5,
+        "bootstrap_cooccurrence": 0.383696,
+        "activation_cooccurrence": 0.693566,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.576833
+      }
+    },
+    {
+      "source": "free_amino_acid.m00",
+      "target": "phosphate_metabolite.m00",
+      "weight": 0.24553,
+      "features": {
+        "spectral_cosine": 0.570243,
+        "band_overlap": 0.028076,
+        "peak_agreement": 0.25,
+        "bootstrap_cooccurrence": 0.470815,
+        "activation_cooccurrence": 0.731694,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.62744
+      }
+    },
+    {
+      "source": "free_amino_acid.m00",
+      "target": "polysaccharide.m00",
+      "weight": 0.51636,
+      "features": {
+        "spectral_cosine": 0.579786,
+        "band_overlap": 0.272161,
+        "peak_agreement": 0.625,
+        "bootstrap_cooccurrence": 0.459361,
+        "activation_cooccurrence": 0.739402,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.91199
+      }
+    },
+    {
+      "source": "free_amino_acid.m06",
+      "target": "phospholipid_sphingolipid.m00",
+      "weight": 0.41301,
+      "features": {
+        "spectral_cosine": 0.572066,
+        "band_overlap": 0.338958,
+        "peak_agreement": 0.25,
+        "bootstrap_cooccurrence": 0.382708,
+        "activation_cooccurrence": 0.738719,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.301759
+      }
+    },
+    {
+      "source": "free_amino_acid.m06",
+      "target": "sterol_steroid.m00",
+      "weight": 0.449212,
+      "features": {
+        "spectral_cosine": 0.569204,
+        "band_overlap": 0.357756,
+        "peak_agreement": 0.25,
+        "bootstrap_cooccurrence": 0.391394,
+        "activation_cooccurrence": 0.763342,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.577381
+      }
+    },
+    {
+      "source": "mono_oligosaccharide.m02",
+      "target": "mono_oligosaccharide.m03",
+      "weight": 0.068557,
+      "features": {
+        "spectral_cosine": 0.458151,
+        "band_overlap": 0.095632,
+        "peak_agreement": 0.0,
+        "bootstrap_cooccurrence": 0.308038,
+        "activation_cooccurrence": 0.71465,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.0
+      }
+    },
+    {
+      "source": "mono_oligosaccharide.m02",
+      "target": "peptide_protein.m03",
+      "weight": 0.377637,
+      "features": {
+        "spectral_cosine": 0.510406,
+        "band_overlap": 0.144279,
+        "peak_agreement": 0.375,
+        "bootstrap_cooccurrence": 0.380584,
+        "activation_cooccurrence": 0.809882,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.655794
+      }
+    },
+    {
+      "source": "mono_oligosaccharide.m02",
+      "target": "phosphate_metabolite.m00",
+      "weight": 0.293853,
+      "features": {
+        "spectral_cosine": 0.50256,
+        "band_overlap": 0.100193,
+        "peak_agreement": 0.125,
+        "bootstrap_cooccurrence": 0.455891,
+        "activation_cooccurrence": 0.66076,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.665469
+      }
+    },
+    {
+      "source": "mono_oligosaccharide.m02",
+      "target": "polysaccharide.m00",
+      "weight": 0.384341,
+      "features": {
+        "spectral_cosine": 0.515763,
+        "band_overlap": 0.119896,
+        "peak_agreement": 0.5,
+        "bootstrap_cooccurrence": 0.467969,
+        "activation_cooccurrence": 0.786395,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.596802
+      }
+    },
+    {
+      "source": "mono_oligosaccharide.m03",
+      "target": "peptide_protein.m03",
+      "weight": 0.508784,
+      "features": {
+        "spectral_cosine": 0.694597,
+        "band_overlap": 0.337936,
+        "peak_agreement": 0.375,
+        "bootstrap_cooccurrence": 0.399751,
+        "activation_cooccurrence": 0.889269,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.703107
+      }
+    },
+    {
+      "source": "mono_oligosaccharide.m03",
+      "target": "phosphate_metabolite.m00",
+      "weight": 0.524517,
+      "features": {
+        "spectral_cosine": 0.629376,
+        "band_overlap": 0.390749,
+        "peak_agreement": 0.375,
+        "bootstrap_cooccurrence": 0.388931,
+        "activation_cooccurrence": 0.808456,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.9258
+      }
+    },
+    {
+      "source": "mono_oligosaccharide.m03",
+      "target": "polysaccharide.m00",
+      "weight": 0.520852,
+      "features": {
+        "spectral_cosine": 0.721383,
+        "band_overlap": 0.29919,
+        "peak_agreement": 0.375,
+        "bootstrap_cooccurrence": 0.463337,
+        "activation_cooccurrence": 0.927289,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.858677
+      }
+    },
+    {
+      "source": "nucleic_acid_polymer.m00",
+      "target": "purine.m00",
+      "weight": 0.446573,
+      "features": {
+        "spectral_cosine": 0.547824,
+        "band_overlap": 0.278964,
+        "peak_agreement": 0.375,
+        "bootstrap_cooccurrence": 0.436405,
+        "activation_cooccurrence": 0.667273,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.578878
+      }
+    },
+    {
+      "source": "nucleic_acid_polymer.m00",
+      "target": "sulfur_thiol_cofactor.m00",
+      "weight": 0.379634,
+      "features": {
+        "spectral_cosine": 0.604934,
+        "band_overlap": 0.23409,
+        "peak_agreement": 0.125,
+        "bootstrap_cooccurrence": 0.605449,
+        "activation_cooccurrence": 0.695866,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.442352
+      }
+    },
+    {
+      "source": "peptide_protein.m03",
+      "target": "phosphate_metabolite.m00",
+      "weight": 0.427334,
+      "features": {
+        "spectral_cosine": 0.607366,
+        "band_overlap": 0.190441,
+        "peak_agreement": 0.25,
+        "bootstrap_cooccurrence": 0.513489,
+        "activation_cooccurrence": 0.847997,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.891824
+      }
+    },
+    {
+      "source": "peptide_protein.m03",
+      "target": "polysaccharide.m00",
+      "weight": 0.862422,
+      "features": {
+        "spectral_cosine": 0.970131,
+        "band_overlap": 0.780074,
+        "peak_agreement": 0.875,
+        "bootstrap_cooccurrence": 0.800352,
+        "activation_cooccurrence": 0.975015,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.787502
+      }
+    },
+    {
+      "source": "phosphate_metabolite.m00",
+      "target": "polysaccharide.m00",
+      "weight": 0.439482,
+      "features": {
+        "spectral_cosine": 0.621243,
+        "band_overlap": 0.178797,
+        "peak_agreement": 0.25,
+        "bootstrap_cooccurrence": 0.630652,
+        "activation_cooccurrence": 0.862254,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.954459
+      }
+    },
+    {
+      "source": "phospholipid_sphingolipid.m00",
+      "target": "sterol_steroid.m00",
+      "weight": 0.661925,
+      "features": {
+        "spectral_cosine": 0.860339,
+        "band_overlap": 0.375223,
+        "peak_agreement": 0.5,
+        "bootstrap_cooccurrence": 0.846533,
+        "activation_cooccurrence": 0.95949,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.95733
+      }
+    },
+    {
+      "source": "purine.m00",
+      "target": "sulfur_thiol_cofactor.m00",
+      "weight": 0.697117,
+      "features": {
+        "spectral_cosine": 0.829892,
+        "band_overlap": 0.607357,
+        "peak_agreement": 0.5,
+        "bootstrap_cooccurrence": 0.662596,
+        "activation_cooccurrence": 0.940675,
+        "provenance_overlap": 1.0,
+        "substitutability": 0.763195
+      }
+    }
+  ],
+  "threshold_sweep": [
+    {
+      "alpha": 0.2,
+      "n_edges": 320,
+      "n_communities": 3,
+      "n_nontrivial": 3,
+      "n_singletons": 0,
+      "largest_community": 21,
+      "community_stability": 0.7381019520717249,
+      "partition": {
+        "peptide_protein.m08": 0,
+        "fatty_acid.m03": 0,
+        "peptide_protein.m00": 0,
+        "peptide_protein.m05": 0,
+        "acylglycerol.m02": 0,
+        "fatty_acid.m04": 0,
+        "free_amino_acid.m06": 0,
+        "sterol_steroid.m00": 0,
+        "phospholipid_sphingolipid.m00": 0,
+        "fatty_acid.m00": 0,
+        "fatty_acid.m02": 0,
+        "acylglycerol.m00": 0,
+        "free_amino_acid.m03": 0,
+        "fatty_acid.m01": 1,
+        "free_amino_acid.m05": 1,
+        "sterol_steroid.m01": 1,
+        "peptide_protein.m06": 1,
+        "peptide_protein.m09": 1,
+        "peptide_protein.m07": 1,
+        "free_amino_acid.m04": 1,
+        "free_amino_acid.m02": 1,
+        "small_nitrogenous.m00": 1,
+        "sterol_steroid.m02": 1,
+        "sulfur_thiol_cofactor.m01": 1,
+        "acylglycerol.m01": 1,
+        "peptide_protein.m02": 1,
+        "carboxylic_acid_metabolite.m00": 1,
+        "peptide_protein.m01": 1,
+        "chromophore_pigment.m01": 1,
+        "purine.m00": 2,
+        "peptide_protein.m03": 2,
+        "chromophore_pigment.m00": 2,
+        "mono_oligosaccharide.m04": 2,
+        "pyrimidine.m00": 2,
+        "peptide_protein.m04": 2,
+        "mono_oligosaccharide.m03": 2,
+        "mono_oligosaccharide.m01": 2,
+        "polysaccharide.m00": 2,
+        "mono_oligosaccharide.m02": 2,
+        "sulfur_thiol_cofactor.m00": 2,
+        "free_amino_acid.m00": 2,
+        "phospholipid_sphingolipid.m01": 2,
+        "mono_oligosaccharide.m05": 2,
+        "nucleic_acid_polymer.m00": 2,
+        "phosphate_metabolite.m00": 2,
+        "carboxylic_acid_metabolite.m01": 2,
+        "free_amino_acid.m01": 2,
+        "mono_oligosaccharide.m00": 2,
+        "polysaccharide.m01": 2,
+        "purine.m01": 2
+      }
+    },
+    {
+      "alpha": 0.15,
+      "n_edges": 256,
+      "n_communities": 3,
+      "n_nontrivial": 3,
+      "n_singletons": 0,
+      "largest_community": 22,
+      "community_stability": 0.6404170489149704,
+      "partition": {
+        "peptide_protein.m08": 0,
+        "peptide_protein.m06": 0,
+        "fatty_acid.m03": 0,
+        "peptide_protein.m00": 0,
+        "peptide_protein.m05": 0,
+        "acylglycerol.m02": 0,
+        "fatty_acid.m04": 0,
+        "free_amino_acid.m06": 0,
+        "sterol_steroid.m00": 0,
+        "phospholipid_sphingolipid.m00": 0,
+        "fatty_acid.m00": 0,
+        "fatty_acid.m02": 0,
+        "acylglycerol.m00": 0,
+        "free_amino_acid.m03": 0,
+        "fatty_acid.m01": 1,
+        "free_amino_acid.m05": 1,
+        "sterol_steroid.m01": 1,
+        "peptide_protein.m09": 1,
+        "peptide_protein.m07": 1,
+        "free_amino_acid.m04": 1,
+        "free_amino_acid.m02": 1,
+        "small_nitrogenous.m00": 1,
+        "sulfur_thiol_cofactor.m01": 1,
+        "acylglycerol.m01": 1,
+        "peptide_protein.m02": 1,
+        "carboxylic_acid_metabolite.m00": 1,
+        "sterol_steroid.m02": 1,
+        "chromophore_pigment.m01": 1,
+        "purine.m00": 2,
+        "peptide_protein.m03": 2,
+        "chromophore_pigment.m00": 2,
+        "mono_oligosaccharide.m04": 2,
+        "pyrimidine.m00": 2,
+        "peptide_protein.m04": 2,
+        "mono_oligosaccharide.m03": 2,
+        "mono_oligosaccharide.m01": 2,
+        "polysaccharide.m00": 2,
+        "mono_oligosaccharide.m02": 2,
+        "sulfur_thiol_cofactor.m00": 2,
+        "free_amino_acid.m00": 2,
+        "phospholipid_sphingolipid.m01": 2,
+        "mono_oligosaccharide.m05": 2,
+        "nucleic_acid_polymer.m00": 2,
+        "phosphate_metabolite.m00": 2,
+        "carboxylic_acid_metabolite.m01": 2,
+        "free_amino_acid.m01": 2,
+        "mono_oligosaccharide.m00": 2,
+        "polysaccharide.m01": 2,
+        "purine.m01": 2,
+        "peptide_protein.m01": 2
+      }
+    },
+    {
+      "alpha": 0.1,
+      "n_edges": 191,
+      "n_communities": 4,
+      "n_nontrivial": 3,
+      "n_singletons": 1,
+      "largest_community": 29,
+      "community_stability": 0.5913810245516515,
+      "partition": {
+        "peptide_protein.m08": 0,
+        "peptide_protein.m06": 0,
+        "fatty_acid.m03": 0,
+        "peptide_protein.m00": 0,
+        "peptide_protein.m05": 0,
+        "acylglycerol.m02": 0,
+        "fatty_acid.m04": 0,
+        "free_amino_acid.m04": 0,
+        "free_amino_acid.m06": 0,
+        "peptide_protein.m04": 0,
+        "sterol_steroid.m00": 0,
+        "phospholipid_sphingolipid.m00": 0,
+        "fatty_acid.m00": 0,
+        "fatty_acid.m02": 0,
+        "acylglycerol.m00": 0,
+        "free_amino_acid.m03": 0,
+        "fatty_acid.m01": 1,
+        "carboxylic_acid_metabolite.m00": 1,
+        "free_amino_acid.m02": 1,
+        "acylglycerol.m01": 1,
+        "purine.m00": 2,
+        "peptide_protein.m03": 2,
+        "chromophore_pigment.m00": 2,
+        "mono_oligosaccharide.m04": 2,
+        "pyrimidine.m00": 2,
+        "free_amino_acid.m05": 2,
+        "sterol_steroid.m01": 2,
+        "peptide_protein.m09": 2,
+        "mono_oligosaccharide.m03": 2,
+        "peptide_protein.m07": 2,
+        "mono_oligosaccharide.m01": 2,
+        "polysaccharide.m00": 2,
+        "mono_oligosaccharide.m02": 2,
+        "sulfur_thiol_cofactor.m00": 2,
+        "free_amino_acid.m00": 2,
+        "phospholipid_sphingolipid.m01": 2,
+        "mono_oligosaccharide.m05": 2,
+        "nucleic_acid_polymer.m00": 2,
+        "peptide_protein.m02": 2,
+        "phosphate_metabolite.m00": 2,
+        "chromophore_pigment.m01": 2,
+        "carboxylic_acid_metabolite.m01": 2,
+        "small_nitrogenous.m00": 2,
+        "free_amino_acid.m01": 2,
+        "sulfur_thiol_cofactor.m01": 2,
+        "mono_oligosaccharide.m00": 2,
+        "polysaccharide.m01": 2,
+        "purine.m01": 2,
+        "sterol_steroid.m02": 2,
+        "peptide_protein.m01": 3
+      }
+    },
+    {
+      "alpha": 0.05,
+      "n_edges": 128,
+      "n_communities": 11,
+      "n_nontrivial": 4,
+      "n_singletons": 7,
+      "largest_community": 25,
+      "community_stability": 0.7123185561407628,
+      "partition": {
+        "peptide_protein.m06": 0,
+        "fatty_acid.m03": 0,
+        "peptide_protein.m00": 0,
+        "peptide_protein.m05": 0,
+        "acylglycerol.m02": 0,
+        "fatty_acid.m04": 0,
+        "free_amino_acid.m06": 0,
+        "sterol_steroid.m00": 0,
+        "phospholipid_sphingolipid.m00": 0,
+        "fatty_acid.m00": 0,
+        "fatty_acid.m02": 0,
+        "acylglycerol.m00": 0,
+        "peptide_protein.m08": 0,
+        "fatty_acid.m01": 1,
+        "carboxylic_acid_metabolite.m00": 1,
+        "acylglycerol.m01": 1,
+        "purine.m00": 2,
+        "peptide_protein.m03": 2,
+        "mono_oligosaccharide.m04": 2,
+        "pyrimidine.m00": 2,
+        "peptide_protein.m09": 2,
+        "mono_oligosaccharide.m03": 2,
+        "peptide_protein.m07": 2,
+        "mono_oligosaccharide.m01": 2,
+        "polysaccharide.m00": 2,
+        "mono_oligosaccharide.m02": 2,
+        "sulfur_thiol_cofactor.m00": 2,
+        "free_amino_acid.m00": 2,
+        "phospholipid_sphingolipid.m01": 2,
+        "mono_oligosaccharide.m05": 2,
+        "nucleic_acid_polymer.m00": 2,
+        "phosphate_metabolite.m00": 2,
+        "chromophore_pigment.m01": 2,
+        "carboxylic_acid_metabolite.m01": 2,
+        "free_amino_acid.m01": 2,
+        "sulfur_thiol_cofactor.m01": 2,
+        "mono_oligosaccharide.m00": 2,
+        "polysaccharide.m01": 2,
+        "purine.m01": 2,
+        "free_amino_acid.m03": 2,
+        "sterol_steroid.m02": 2,
+        "chromophore_pigment.m00": 3,
+        "free_amino_acid.m02": 4,
+        "free_amino_acid.m04": 5,
+        "free_amino_acid.m05": 6,
+        "peptide_protein.m01": 7,
+        "peptide_protein.m02": 8,
+        "small_nitrogenous.m00": 8,
+        "peptide_protein.m04": 9,
+        "sterol_steroid.m01": 10
+      }
+    },
+    {
+      "alpha": 0.02,
+      "n_edges": 77,
+      "n_communities": 23,
+      "n_nontrivial": 7,
+      "n_singletons": 16,
+      "largest_community": 13,
+      "community_stability": 0.8751718072092377,
+      "partition": {
+        "fatty_acid.m03": 0,
+        "acylglycerol.m02": 0,
+        "fatty_acid.m04": 0,
+        "free_amino_acid.m06": 0,
+        "sterol_steroid.m00": 0,
+        "phospholipid_sphingolipid.m00": 0,
+        "fatty_acid.m00": 0,
+        "acylglycerol.m00": 0,
+        "peptide_protein.m08": 0,
+        "fatty_acid.m01": 1,
+        "carboxylic_acid_metabolite.m00": 1,
+        "acylglycerol.m01": 1,
+        "polysaccharide.m00": 2,
+        "purine.m00": 2,
+        "mono_oligosaccharide.m02": 2,
+        "peptide_protein.m03": 2,
+        "carboxylic_acid_metabolite.m01": 2,
+        "sulfur_thiol_cofactor.m00": 2,
+        "free_amino_acid.m00": 2,
+        "mono_oligosaccharide.m03": 2,
+        "phospholipid_sphingolipid.m01": 2,
+        "nucleic_acid_polymer.m00": 2,
+        "mono_oligosaccharide.m00": 2,
+        "phosphate_metabolite.m00": 2,
+        "sterol_steroid.m02": 2,
+        "chromophore_pigment.m00": 3,
+        "chromophore_pigment.m01": 4,
+        "fatty_acid.m02": 5,
+        "peptide_protein.m05": 5,
+        "free_amino_acid.m01": 6,
+        "sulfur_thiol_cofactor.m01": 6,
+        "peptide_protein.m07": 6,
+        "free_amino_acid.m02": 7,
+        "free_amino_acid.m03": 8,
+        "polysaccharide.m01": 8,
+        "free_amino_acid.m04": 9,
+        "free_amino_acid.m05": 10,
+        "mono_oligosaccharide.m01": 11,
+        "mono_oligosaccharide.m04": 12,
+        "mono_oligosaccharide.m05": 13,
+        "peptide_protein.m00": 14,
+        "peptide_protein.m01": 15,
+        "peptide_protein.m02": 16,
+        "small_nitrogenous.m00": 16,
+        "peptide_protein.m04": 17,
+        "peptide_protein.m06": 18,
+        "peptide_protein.m09": 19,
+        "purine.m01": 20,
+        "pyrimidine.m00": 21,
+        "sterol_steroid.m01": 22
+      }
+    },
+    {
+      "alpha": 0.01,
+      "n_edges": 55,
+      "n_communities": 24,
+      "n_nontrivial": 6,
+      "n_singletons": 18,
+      "largest_community": 10,
+      "community_stability": 0.8767152934882413,
+      "partition": {
+        "fatty_acid.m03": 0,
+        "acylglycerol.m02": 0,
+        "fatty_acid.m04": 0,
+        "free_amino_acid.m06": 0,
+        "sterol_steroid.m00": 0,
+        "phospholipid_sphingolipid.m00": 0,
+        "fatty_acid.m00": 0,
+        "fatty_acid.m02": 0,
+        "acylglycerol.m00": 0,
+        "peptide_protein.m08": 0,
+        "fatty_acid.m01": 1,
+        "acylglycerol.m01": 1,
+        "polysaccharide.m00": 2,
+        "mono_oligosaccharide.m02": 2,
+        "peptide_protein.m03": 2,
+        "carboxylic_acid_metabolite.m01": 2,
+        "free_amino_acid.m00": 2,
+        "mono_oligosaccharide.m03": 2,
+        "carboxylic_acid_metabolite.m00": 2,
+        "phosphate_metabolite.m00": 2,
+        "chromophore_pigment.m00": 3,
+        "chromophore_pigment.m01": 4,
+        "free_amino_acid.m01": 5,
+        "sulfur_thiol_cofactor.m01": 5,
+        "sterol_steroid.m02": 5,
+        "peptide_protein.m07": 5,
+        "free_amino_acid.m02": 6,
+        "purine.m00": 7,
+        "sulfur_thiol_cofactor.m00": 7,
+        "phospholipid_sphingolipid.m01": 7,
+        "nucleic_acid_polymer.m00": 7,
+        "polysaccharide.m01": 7,
+        "free_amino_acid.m03": 7,
+        "free_amino_acid.m04": 8,
+        "free_amino_acid.m05": 9,
+        "mono_oligosaccharide.m00": 10,
+        "mono_oligosaccharide.m01": 11,
+        "mono_oligosaccharide.m04": 12,
+        "mono_oligosaccharide.m05": 13,
+        "peptide_protein.m00": 14,
+        "peptide_protein.m01": 15,
+        "peptide_protein.m02": 16,
+        "small_nitrogenous.m00": 16,
+        "peptide_protein.m04": 17,
+        "peptide_protein.m05": 18,
+        "peptide_protein.m06": 19,
+        "peptide_protein.m09": 20,
+        "purine.m01": 21,
+        "pyrimidine.m00": 22,
+        "sterol_steroid.m01": 23
+      }
+    },
+    {
+      "alpha": 0.005,
+      "n_edges": 42,
+      "n_communities": 28,
+      "n_nontrivial": 4,
+      "n_singletons": 24,
+      "largest_community": 10,
+      "community_stability": 0.9479429047753218,
+      "partition": {
+        "fatty_acid.m03": 0,
+        "acylglycerol.m02": 0,
+        "fatty_acid.m04": 0,
+        "free_amino_acid.m06": 0,
+        "sterol_steroid.m00": 0,
+        "phospholipid_sphingolipid.m00": 0,
+        "fatty_acid.m00": 0,
+        "fatty_acid.m02": 0,
+        "acylglycerol.m00": 0,
+        "fatty_acid.m01": 1,
+        "acylglycerol.m01": 1,
+        "polysaccharide.m00": 2,
+        "mono_oligosaccharide.m02": 2,
+        "peptide_protein.m03": 2,
+        "carboxylic_acid_metabolite.m01": 2,
+        "free_amino_acid.m00": 2,
+        "mono_oligosaccharide.m03": 2,
+        "free_amino_acid.m01": 2,
+        "peptide_protein.m07": 2,
+        "carboxylic_acid_metabolite.m00": 2,
+        "phosphate_metabolite.m00": 2,
+        "chromophore_pigment.m00": 3,
+        "chromophore_pigment.m01": 4,
+        "free_amino_acid.m02": 5,
+        "purine.m00": 6,
+        "sulfur_thiol_cofactor.m00": 6,
+        "nucleic_acid_polymer.m00": 6,
+        "polysaccharide.m01": 6,
+        "free_amino_acid.m03": 6,
+        "free_amino_acid.m04": 7,
+        "free_amino_acid.m05": 8,
+        "mono_oligosaccharide.m00": 9,
+        "mono_oligosaccharide.m01": 10,
+        "mono_oligosaccharide.m04": 11,
+        "mono_oligosaccharide.m05": 12,
+        "peptide_protein.m00": 13,
+        "peptide_protein.m01": 14,
+        "peptide_protein.m02": 15,
+        "peptide_protein.m04": 16,
+        "peptide_protein.m05": 17,
+        "peptide_protein.m06": 18,
+        "peptide_protein.m08": 19,
+        "peptide_protein.m09": 20,
+        "phospholipid_sphingolipid.m01": 21,
+        "purine.m01": 22,
+        "pyrimidine.m00": 23,
+        "small_nitrogenous.m00": 24,
+        "sterol_steroid.m01": 25,
+        "sterol_steroid.m02": 26,
+        "sulfur_thiol_cofactor.m01": 27
+      }
+    },
+    {
+      "alpha": 0.002,
+      "n_edges": 33,
+      "n_communities": 31,
+      "n_nontrivial": 5,
+      "n_singletons": 26,
+      "largest_community": 9,
+      "community_stability": 0.9608263121850347,
+      "partition": {
+        "fatty_acid.m03": 0,
+        "acylglycerol.m02": 0,
+        "fatty_acid.m04": 0,
+        "free_amino_acid.m06": 0,
+        "sterol_steroid.m00": 0,
+        "phospholipid_sphingolipid.m00": 0,
+        "fatty_acid.m00": 0,
+        "fatty_acid.m02": 0,
+        "acylglycerol.m00": 0,
+        "fatty_acid.m01": 1,
+        "acylglycerol.m01": 1,
+        "carboxylic_acid_metabolite.m00": 2,
+        "polysaccharide.m00": 3,
+        "peptide_protein.m03": 3,
+        "carboxylic_acid_metabolite.m01": 3,
+        "free_amino_acid.m00": 3,
+        "mono_oligosaccharide.m03": 3,
+        "free_amino_acid.m01": 3,
+        "peptide_protein.m07": 3,
+        "phosphate_metabolite.m00": 3,
+        "chromophore_pigment.m00": 4,
+        "chromophore_pigment.m01": 5,
+        "free_amino_acid.m02": 6,
+        "free_amino_acid.m03": 7,
+        "nucleic_acid_polymer.m00": 7,
+        "polysaccharide.m01": 7,
+        "free_amino_acid.m04": 8,
+        "free_amino_acid.m05": 9,
+        "mono_oligosaccharide.m00": 10,
+        "mono_oligosaccharide.m01": 11,
+        "mono_oligosaccharide.m02": 12,
+        "mono_oligosaccharide.m04": 13,
+        "mono_oligosaccharide.m05": 14,
+        "peptide_protein.m00": 15,
+        "peptide_protein.m01": 16,
+        "peptide_protein.m02": 17,
+        "peptide_protein.m04": 18,
+        "peptide_protein.m05": 19,
+        "peptide_protein.m06": 20,
+        "peptide_protein.m08": 21,
+        "peptide_protein.m09": 22,
+        "phospholipid_sphingolipid.m01": 23,
+        "sulfur_thiol_cofactor.m00": 24,
+        "purine.m00": 24,
+        "purine.m01": 25,
+        "pyrimidine.m00": 26,
+        "small_nitrogenous.m00": 27,
+        "sterol_steroid.m01": 28,
+        "sterol_steroid.m02": 29,
+        "sulfur_thiol_cofactor.m01": 30
+      }
+    },
+    {
+      "alpha": 0.001,
+      "n_edges": 27,
+      "n_communities": 35,
+      "n_nontrivial": 4,
+      "n_singletons": 31,
+      "largest_community": 9,
+      "community_stability": 0.8696958492313399,
+      "partition": {
+        "fatty_acid.m03": 0,
+        "acylglycerol.m02": 0,
+        "fatty_acid.m04": 0,
+        "free_amino_acid.m06": 0,
+        "sterol_steroid.m00": 0,
+        "phospholipid_sphingolipid.m00": 0,
+        "fatty_acid.m00": 0,
+        "fatty_acid.m02": 0,
+        "acylglycerol.m00": 0,
+        "fatty_acid.m01": 1,
+        "acylglycerol.m01": 1,
+        "carboxylic_acid_metabolite.m00": 2,
+        "carboxylic_acid_metabolite.m01": 3,
+        "chromophore_pigment.m00": 4,
+        "chromophore_pigment.m01": 5,
+        "polysaccharide.m00": 6,
+        "peptide_protein.m03": 6,
+        "free_amino_acid.m00": 6,
+        "mono_oligosaccharide.m03": 6,
+        "free_amino_acid.m01": 6,
+        "phosphate_metabolite.m00": 6,
+        "free_amino_acid.m02": 7,
+        "free_amino_acid.m03": 8,
+        "free_amino_acid.m04": 9,
+        "free_amino_acid.m05": 10,
+        "mono_oligosaccharide.m00": 11,
+        "mono_oligosaccharide.m01": 12,
+        "mono_oligosaccharide.m02": 13,
+        "mono_oligosaccharide.m04": 14,
+        "mono_oligosaccharide.m05": 15,
+        "nucleic_acid_polymer.m00": 16,
+        "peptide_protein.m00": 17,
+        "peptide_protein.m01": 18,
+        "peptide_protein.m02": 19,
+        "peptide_protein.m04": 20,
+        "peptide_protein.m05": 21,
+        "peptide_protein.m06": 22,
+        "peptide_protein.m07": 23,
+        "peptide_protein.m08": 24,
+        "peptide_protein.m09": 25,
+        "phospholipid_sphingolipid.m01": 26,
+        "polysaccharide.m01": 27,
+        "sulfur_thiol_cofactor.m00": 28,
+        "purine.m00": 28,
+        "purine.m01": 29,
+        "pyrimidine.m00": 30,
+        "small_nitrogenous.m00": 31,
+        "sterol_steroid.m01": 32,
+        "sterol_steroid.m02": 33,
+        "sulfur_thiol_cofactor.m01": 34
+      }
+    }
+  ],
+  "selected_threshold": 1.0,
+  "stable_region": [
+    0.005,
+    0.2
+  ],
+  "selection_rationale": "The pre-registered single-threshold rule FAILED under both the raw-weight and the significance sweep: no contiguous run of three cuts produces an invariant partition, because the LSM similarity structure is a continuum with a few strongly-supported groups embedded in it. Following the rule's own R-07 branch ('the graph construction is inadequate and must be revised \u2014 that is a finding'), the estimator was revised from 'pick one cut in a stable region' to 'take the consensus across the whole sweep': two LSMs join a CSM when they are co-assigned at a majority of the nine swept significance levels. The dependence on where the cut falls is removed by construction rather than certified after the fact.",
+  "feature_correlation": {
+    "names": [
+      "spectral_cosine",
+      "band_overlap",
+      "peak_agreement",
+      "bootstrap_cooccurrence",
+      "activation_cooccurrence",
+      "provenance_overlap",
+      "substitutability"
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.4515,
+        0.3358,
+        0.8083,
+        0.6567,
+        0.0264,
+        -0.0934
+      ],
+      [
+        0.4515,
+        1.0,
+        0.439,
+        0.3345,
+        0.3621,
+        0.066,
+        -0.038
+      ],
+      [
+        0.3358,
+        0.439,
+        1.0,
+        0.2891,
+        0.2603,
+        0.05,
+        -0.0067
+      ],
+      [
+        0.8083,
+        0.3345,
+        0.2891,
+        1.0,
+        0.5248,
+        0.0565,
+        -0.0183
+      ],
+      [
+        0.6567,
+        0.3621,
+        0.2603,
+        0.5248,
+        1.0,
+        0.0083,
+        -0.1957
+      ],
+      [
+        0.0264,
+        0.066,
+        0.05,
+        0.0565,
+        0.0083,
+        1.0,
+        -0.1326
+      ],
+      [
+        -0.0934,
+        -0.038,
+        -0.0067,
+        -0.0183,
+        -0.1957,
+        -0.1326,
+        1.0
+      ]
+    ]
+  }
+}

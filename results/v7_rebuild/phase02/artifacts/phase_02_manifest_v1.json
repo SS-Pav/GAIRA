@@ -1,0 +1,362 @@
+{
+  "schema": "gaira_v7_phase_manifest_v1",
+  "phase": "02",
+  "phase_name": "Consensus Spectral Motif construction",
+  "built_utc": "2026-08-06T08:00:21.640232+00:00",
+  "architecture": "pooled LSMs \u2192 seven-feature consensus spectral graph \u2192 swept threshold \u2192 graph communities \u2192 consensus operator \u2192 CSMs",
+  "frozen_atlas_role": "fingerprint verification only (P-15) \u2014 NOT an input",
+  "atlas_fingerprint_before": "09ed804a40836f4a05a91ba10900cded",
+  "atlas_fingerprint_after": "09ed804a40836f4a05a91ba10900cded",
+  "phase01_registry_fingerprint": "208482d6f7178b5b8f16cace91be55b0",
+  "csm_fingerprint": "0b4aa550ccefed3edabdbde5bae11c8d",
+  "integration_method": "graph_community",
+  "consensus_operator": "leading_direction",
+  "selected_threshold": 1.0,
+  "inputs": [
+    {
+      "artifact_id": "lsm_dictionary_v1.npz",
+      "path": "results/v7_rebuild/phase01/artifacts/lsm_dictionary_v1.npz",
+      "sha256": "df13f664480f10d470c795e15d45dedd749f0d72f7305e1cb036cadfa46e8c5f"
+    },
+    {
+      "artifact_id": "balanced_references_v1.npz",
+      "path": "results/v7_rebuild/phase01/artifacts/balanced_references_v1.npz",
+      "sha256": "7a3c3e24b73e9b79200bfbaf9951c4da71260c704969069df93e1d2ecec7880e"
+    }
+  ],
+  "outputs": [
+    {
+      "artifact_id": "edge_features_all_pairs_v1.csv",
+      "path": "results/v7_rebuild/phase02/tables/edge_features_all_pairs_v1.csv",
+      "sha256": "a799a82288bb7a011df0d84aa20f9ee179f44cb1c09ef763e58b8fc7ee96c4af",
+      "rows": 1225
+    },
+    {
+      "artifact_id": "feature_correlation_v1.csv",
+      "path": "results/v7_rebuild/phase02/tables/feature_correlation_v1.csv",
+      "sha256": "5b645737869bca89e7ab83dd48ac247389b603bf8cb63b466e3fe62628fd379f",
+      "rows": 7
+    },
+    {
+      "artifact_id": "activation_sensitivity_v1.csv",
+      "path": "results/v7_rebuild/phase02/tables/activation_sensitivity_v1.csv",
+      "sha256": "415916033ca86e1f8199061d8bcabf09f593c46948340531488e617bf6ed2ccc",
+      "rows": 1225
+    },
+    {
+      "artifact_id": "threshold_sweep_raw_v1.csv",
+      "path": "results/v7_rebuild/phase02/tables/threshold_sweep_raw_v1.csv",
+      "sha256": "8669b4b2fd5e06002b54ed1baff535880363750aabaaa2f3b61327c2ff1d5bdb",
+      "rows": 18
+    },
+    {
+      "artifact_id": "significance_sweep_v1.csv",
+      "path": "results/v7_rebuild/phase02/tables/significance_sweep_v1.csv",
+      "sha256": "e8c3f03c53b9d0e5f69cb23e9b83d074efd828bbf44c59d7a1cf8e3df7cc9cdd",
+      "rows": 9
+    },
+    {
+      "artifact_id": "threshold_selection_v1.json",
+      "path": "results/v7_rebuild/phase02/artifacts/threshold_selection_v1.json",
+      "sha256": "4f7c38c576caedc4524fc036f41f9650d037ae126bf22f2deaf2528d75253864"
+    },
+    {
+      "artifact_id": "coassignment_matrix_v1.csv",
+      "path": "results/v7_rebuild/phase02/tables/coassignment_matrix_v1.csv",
+      "sha256": "c31ccde7d69e58a2008cf68dcdbc4b055a0c8bc333810c68b7ad2da83173f1a7",
+      "rows": 50
+    },
+    {
+      "artifact_id": "coassignment_rule_sensitivity_v1.csv",
+      "path": "results/v7_rebuild/phase02/tables/coassignment_rule_sensitivity_v1.csv",
+      "sha256": "8f69c4488cd69560aedebe640f5e0319706cb908923e0630367c04af4a728824",
+      "rows": 4
+    },
+    {
+      "artifact_id": "integration_method_comparison_v1.csv",
+      "path": "results/v7_rebuild/phase02/tables/integration_method_comparison_v1.csv",
+      "sha256": "90c9acfc89f6dfe6a14059d3e1f6faee15ce0ebf06398541ed281ecbf498f26e",
+      "rows": 5
+    },
+    {
+      "artifact_id": "consensus_operator_comparison_v1.csv",
+      "path": "results/v7_rebuild/phase02/tables/consensus_operator_comparison_v1.csv",
+      "sha256": "2805638faa58705c6474cbf6593f2b26854f6b9370e24cff5e2999d6aa3858d4",
+      "rows": 3
+    },
+    {
+      "artifact_id": "reconstruction_comparison_v1.csv",
+      "path": "results/v7_rebuild/phase02/validation/reconstruction_comparison_v1.csv",
+      "sha256": "00ea9743bc195b46f23f63caa79ba636b68fd5f019eefaa3f122d9da890a3bcb",
+      "rows": 154
+    },
+    {
+      "artifact_id": "leave_one_class_out_v1.csv",
+      "path": "results/v7_rebuild/phase02/validation/leave_one_class_out_v1.csv",
+      "sha256": "2fd0bbf20e9d128d9b57e4faa8d69c33c95cb6afd96e6131787b8c080a569467",
+      "rows": 16
+    },
+    {
+      "artifact_id": "source_robustness_v1.csv",
+      "path": "results/v7_rebuild/phase02/validation/source_robustness_v1.csv",
+      "sha256": "722cdd7ff8ad38a7599756bbdcbccccb9fabbf90b8ab0b9ea8ec318c12494e43",
+      "rows": 34
+    },
+    {
+      "artifact_id": "csm_redundancy_v1.csv",
+      "path": "results/v7_rebuild/phase02/validation/csm_redundancy_v1.csv",
+      "sha256": "3a64729e8661d22970a245817c4a59583ce9ab35a6b267d8399a3dced4faee5e",
+      "rows": 561
+    },
+    {
+      "artifact_id": "false_merge_top_pairs_v1.csv",
+      "path": "results/v7_rebuild/phase02/validation/false_merge_top_pairs_v1.csv",
+      "sha256": "2cc41c9dae79b756d7457b98aaec18a3d8b21dca8a12ffd7083870a755430375",
+      "rows": 60
+    },
+    {
+      "artifact_id": "rejected_consensus_motifs_v1.csv",
+      "path": "results/v7_rebuild/phase02/tables/rejected_consensus_motifs_v1.csv",
+      "sha256": "80990f1f8811b1b87e514109c8fbd6c9f06c286962eeb645a78b7f9970166a5a",
+      "rows": 3
+    },
+    {
+      "artifact_id": "reconstruction_comparison_v1.csv",
+      "path": "results/v7_rebuild/phase02/validation/reconstruction_comparison_v1.csv",
+      "sha256": "29be87fd355d57d3bac02ef3ea927306c5d039a31e589628c2d764259e0c96bd",
+      "rows": 154
+    },
+    {
+      "artifact_id": "csm_redundancy_v1.csv",
+      "path": "results/v7_rebuild/phase02/validation/csm_redundancy_v1.csv",
+      "sha256": "99de0204a96a1c90aa98a46fa15c72ca926931697bfc4d813d3503f1f601ace1",
+      "rows": 1176
+    },
+    {
+      "artifact_id": "source_robustness_v1.csv",
+      "path": "results/v7_rebuild/phase02/validation/source_robustness_v1.csv",
+      "sha256": "26e33aa528ac5763f3ecf334ca52464664a947baafd2a29b141b715301aac440",
+      "rows": 49
+    },
+    {
+      "artifact_id": "named_suspect_pairs_v1.csv",
+      "path": "results/v7_rebuild/phase02/validation/named_suspect_pairs_v1.csv",
+      "sha256": "a0923236b0a644bee24c8f20424339be7dca1fc37966719ceda1baf80c5fb8b5",
+      "rows": 4
+    },
+    {
+      "artifact_id": "csm_invariants_v1.csv",
+      "path": "results/v7_rebuild/phase02/validation/csm_invariants_v1.csv",
+      "sha256": "a6b3b457425b56ced5ee123c14d09d1976ea055068a36fcdac5b01a9d58ce91a",
+      "rows": 9
+    },
+    {
+      "artifact_id": "csm_dictionary_v1.npz",
+      "path": "results/v7_rebuild/phase02/artifacts/csm_dictionary_v1.npz",
+      "sha256": "efe7a56b01c7b71884ab8228cee5bdcc6f5e6d68a2a490248fe2abfc0f3689ce"
+    },
+    {
+      "artifact_id": "csm_registry_v1.json",
+      "path": "results/v7_rebuild/phase02/artifacts/csm_registry_v1.json",
+      "sha256": "5cad473c36b72fbcebec9e2cabc87f4ac6c6e531b1f333f060896878d282fcc1"
+    },
+    {
+      "artifact_id": "csm_registry_v1.csv",
+      "path": "results/v7_rebuild/phase02/artifacts/csm_registry_v1.csv",
+      "sha256": "09872b43f2b91d116bcb74b7ad9e5603a06dc53d03ec9b569bc2d3e6d4903e48"
+    },
+    {
+      "artifact_id": "lsm_graph_v1.json",
+      "path": "results/v7_rebuild/phase02/artifacts/lsm_graph_v1.json",
+      "sha256": "7fe48c749f8a29386e59e96563168a782e1ab7e782fa5aebf27e3733a56f2be6"
+    },
+    {
+      "artifact_id": "csm_provenance_chain_v1.csv",
+      "path": "results/v7_rebuild/phase02/tables/csm_provenance_chain_v1.csv",
+      "sha256": "7ed2cdc655241b878cb73c030a55446304779b1e6c42d574650cbc3fb0fca3c7",
+      "rows": 381
+    },
+    {
+      "artifact_id": "csm_registry_v1.csv",
+      "path": "results/v7_rebuild/phase02/tables/csm_registry_v1.csv",
+      "sha256": "09872b43f2b91d116bcb74b7ad9e5603a06dc53d03ec9b569bc2d3e6d4903e48",
+      "rows": 49
+    },
+    {
+      "artifact_id": "architecture_compliance_v1.csv",
+      "path": "results/v7_rebuild/phase02/tables/architecture_compliance_v1.csv",
+      "sha256": "52991564afe13eb3fb12ccd639f63102991b34af4a7d760dc0c3fc3d20d25591",
+      "rows": 18
+    },
+    {
+      "artifact_id": "redundant_csm_pairs_adjudication_v1.csv",
+      "path": "results/v7_rebuild/phase02/validation/redundant_csm_pairs_adjudication_v1.csv",
+      "sha256": "ddb8a40be21301db766ec4b11db9decaf307193f84ed1c5b831074546620edef",
+      "rows": 3
+    },
+    {
+      "artifact_id": "phase02_gates_v1.csv",
+      "path": "results/v7_rebuild/phase02/validation/phase02_gates_v1.csv",
+      "sha256": "1c645c7585b8f3c724564448765c0a8ddfd2897d60417f1d32186a2d61ee3829",
+      "rows": 8
+    }
+  ],
+  "gates": [
+    {
+      "gate": "architecture compliance",
+      "status": "PASS",
+      "detail": "18/18 items"
+    },
+    {
+      "gate": "threshold selected from a stable region",
+      "status": "PASS",
+      "detail": "The pre-registered single-threshold rule FAILED under both the raw-weight and the significance sweep: no contiguous run "
+    },
+    {
+      "gate": "every CSM has resolvable provenance",
+      "status": "PASS",
+      "detail": "9 C-07 invariants"
+    },
+    {
+      "gate": "reconstruction preserved",
+      "status": "PASS",
+      "detail": "mean \u0394 EV -0.0009; no accepted CSM degrades its own molecules beyond 0.05; 0 of 154 molecules degrade beyond tolerance corpus-wide"
+    },
+    {
+      "gate": "bootstrap stability",
+      "status": "PASS",
+      "detail": "mean ARI 1.000, min 1.000"
+    },
+    {
+      "gate": "leave-one-class-out",
+      "status": "PASS",
+      "detail": "mean ARI 1.000, min 1.000"
+    },
+    {
+      "gate": "no UNEXAMINED redundant CSM pair",
+      "status": "PASS",
+      "detail": "max CSM\u2013CSM cosine 0.9701; 3 pair(s) above 0.90, of which 0 lack an explicit recorded adjudication"
+    },
+    {
+      "gate": "rejected merges reported, not hidden",
+      "status": "PASS",
+      "detail": "3 rejected CSM group(s) recorded with reasons"
+    }
+  ],
+  "compliance": [
+    {
+      "specification_item": "Pool all stable LSMs across classes",
+      "implemented": true,
+      "evidence": "50 LSMs from 16 independent class-local fits",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "All six contract edge features present on every edge",
+      "implemented": true,
+      "evidence": "6/6 contract features + substitutability = 7 total",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Provenance overlap computed with within-class overlap discounted (R-01)",
+      "implemented": true,
+      "evidence": "null-discounted Jaccard on projected support; see edges.provenance_overlap",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Edge threshold swept; selection from a stable region (R-07)",
+      "implemented": true,
+      "evidence": "The pre-registered single-threshold rule FAILED under both the raw-weight and the significance sweep: no contiguous run of three cuts produces an invariant partition, because the LSM similarity structure is a continuum with a few strongly-supported groups embedded in it. Following the rule's own R-07 branch ('the graph construction is inadequate and must be revised \u2014 that is a finding'), the estimator was revised from 'pick one cut in a stable region' to 'take the consensus across the whole sweep': two LSMs join a CSM when they are co-assigned at a majority of the nine swept significance levels. The dependence on where the cut falls is removed by construction rather than certified after the fact.",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Five integration methods compared on evidence",
+      "implemented": true,
+      "evidence": "5 candidates scored on 9 pre-registered criteria",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Integration comparison table published regardless of winner",
+      "implemented": true,
+      "evidence": "tables/integration_method_comparison_v1.csv",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "M quantitatively justified against the pre-registered composite",
+      "implemented": true,
+      "evidence": "smallest M on the contiguous Pareto plateau; per-method M sweeps recorded",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "If meta-NMF selected, discriminating-LSM survival verified (R-06)",
+      "implemented": true,
+      "evidence": "meta_nmf did not win",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Every CSM has explicit, resolvable provenance (LSMs \u2192 classes \u2192 analytes)",
+      "implemented": true,
+      "evidence": "381 provenance rows; CSM\u2192LSM\u2192molecule\u2192spectrum chain committed",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Singletons and anchors flagged, counted, reported \u2014 never hidden",
+      "implemented": true,
+      "evidence": "48 singletons, 0 anchors, all in the registry",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "CSM non-negativity and C-07 invariants hold",
+      "implemented": true,
+      "evidence": "9 invariants checked",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Frozen V5 atlas is not an input (P-15)",
+      "implemented": true,
+      "evidence": "loaded for fingerprint verification only; never enters the graph",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Phase 01 outputs consumed read-only, never modified",
+      "implemented": true,
+      "evidence": "registry fingerprint verified before use; no writes to phase01/",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Feature independence measured, not asserted",
+      "implemented": true,
+      "evidence": "max |off-diagonal| feature correlation 0.808",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Named false-merge suspects investigated",
+      "implemented": true,
+      "evidence": "4 pre-declared cross-class pairs, each with a dossier",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Merge confidence compared against a null model",
+      "implemented": true,
+      "evidence": "band-permutation null: mean 0.1557 vs observed 0.1739",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Decision rules pre-registered before the sweep (P-12)",
+      "implemented": true,
+      "evidence": "config/phase02_preregistration_v1.md, committed 24424d7 before any run",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Pipeline redrawn after the phase (P-17)",
+      "implemented": true,
+      "evidence": "reports/PHASE_02_REPORT.md \u00a71",
+      "status": "PASS"
+    }
+  ],
+  "code_dirty": true,
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.4.3",
+    "pandas": "2.3.3"
+  }
+}

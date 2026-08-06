@@ -1,0 +1,4272 @@
+{
+  "schema": "v7_csm_serialization_v1",
+  "registry_schema": "gaira_v7_csm_registry_v1",
+  "atlas_build": "208482d6f7178b5b8f16cace91be55b0",
+  "M": 49,
+  "integration_method": "graph_community",
+  "consensus_operator": "leading_direction",
+  "selected_threshold": 1.0,
+  "method_selection": {
+    "candidates_evaluated": [
+      "graph_community",
+      "consensus_clustering",
+      "spectral",
+      "meta_nmf",
+      "hybrid"
+    ],
+    "criteria": {
+      "consensus_stability": {
+        "weight": 0.2,
+        "direction": "max"
+      },
+      "within_cohesion": {
+        "weight": 0.15,
+        "direction": "max"
+      },
+      "between_separation": {
+        "weight": 0.15,
+        "direction": "max"
+      },
+      "chemical_coherence": {
+        "weight": 0.1,
+        "direction": "max"
+      },
+      "retained_lsm_information": {
+        "weight": 0.15,
+        "direction": "max"
+      },
+      "heldout_reconstruction": {
+        "weight": 0.1,
+        "direction": "max"
+      },
+      "hyperparameter_sensitivity": {
+        "weight": 0.05,
+        "direction": "min"
+      },
+      "singleton_fraction": {
+        "weight": 0.05,
+        "direction": "min"
+      },
+      "csm_redundancy": {
+        "weight": 0.05,
+        "direction": "min"
+      }
+    },
+    "scores": [
+      {
+        "M": 34,
+        "consensus_stability": 1.0,
+        "within_cohesion": 0.5885972028437271,
+        "between_separation": 1.0,
+        "chemical_coherence": 0.926295518207283,
+        "retained_lsm_information": 0.9189678366534866,
+        "heldout_reconstruction": 0.7639661631016671,
+        "hyperparameter_sensitivity": 0.0,
+        "singleton_fraction": 0.8823529411764706,
+        "csm_redundancy": 0.8405688889034971,
+        "method": "graph_community",
+        "composite": 0.8977600696124853
+      },
+      {
+        "M": 20,
+        "consensus_stability": 0.18148067662774714,
+        "within_cohesion": 0.48619607745255644,
+        "between_separation": 1.0,
+        "chemical_coherence": 0.9005952380952381,
+        "retained_lsm_information": 0.7318194283242371,
+        "heldout_reconstruction": 0.6489210099967404,
+        "hyperparameter_sensitivity": 0.08778021047193803,
+        "singleton_fraction": 0.85,
+        "csm_redundancy": 0.8405688889034966,
+        "method": "spectral",
+        "composite": 0.6102362139353086
+      },
+      {
+        "M": 30,
+        "consensus_stability": 0.5264134571602848,
+        "within_cohesion": 0.32177826919385916,
+        "between_separation": 0.9912590548235657,
+        "chemical_coherence": 0.8587301587301588,
+        "retained_lsm_information": 0.9001666234520433,
+        "heldout_reconstruction": 0.7723205266240984,
+        "hyperparameter_sensitivity": 0.47358654283971513,
+        "singleton_fraction": 0.6666666666666666,
+        "csm_redundancy": 0.7827931462212923,
+        "method": "hybrid",
+        "composite": 0.5355303330579729
+      },
+      {
+        "M": 8,
+        "consensus_stability": 0.23285810026404546,
+        "within_cohesion": 0.1777232219316013,
+        "between_separation": 0.992646075640201,
+        "chemical_coherence": 0.475,
+        "retained_lsm_information": 0.6852339246789851,
+        "heldout_reconstruction": 0.6006239952494159,
+        "hyperparameter_sensitivity": 0.09176946671584214,
+        "singleton_fraction": 0.0,
+        "csm_redundancy": 0.7724029072464641,
+        "method": "meta_nmf",
+        "composite": 0.3792859682731856
+      },
+      {
+        "M": 1,
+        "consensus_stability": 0.0,
+        "within_cohesion": 0.021639193249577526,
+        "between_separation": 1.0,
+        "chemical_coherence": 0.2,
+        "retained_lsm_information": 0.407722749776232,
+        "heldout_reconstruction": 0.39934627845111315,
+        "hyperparameter_sensitivity": 0.0,
+        "singleton_fraction": 0.0,
+        "csm_redundancy": 0.0,
+        "method": "consensus_clustering",
+        "composite": 0.3
+      }
+    ],
+    "winner": "graph_community",
+    "rationale": "graph_community maximises the pre-registered composite (0.8978 vs 0.6102 for spectral); full table published regardless"
+  },
+  "fingerprint": "0b4aa550ccefed3edabdbde5bae11c8d",
+  "config": {
+    "alpha": {
+      "band_overlap": 0.25,
+      "spectral_cosine": 0.2,
+      "peak_agreement": 0.15,
+      "bootstrap_cooccurrence": 0.15,
+      "substitutability": 0.1,
+      "activation_cooccurrence": 0.1,
+      "provenance_overlap": 0.05
+    },
+    "tau_grid": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9
+    ],
+    "louvain_seeds": 12,
+    "r_bootstrap": 24,
+    "min_activation": 0.05,
+    "ev_degrade_max": 0.05,
+    "base_seed": 0
+  },
+  "summary": {
+    "schema": "gaira_v7_csm_registry_v1",
+    "integration_method": "graph_community",
+    "selected_threshold": 1.0,
+    "consensus_operator": "leading_direction",
+    "M": 49,
+    "n_accepted": 49,
+    "n_rejected_merges": 3,
+    "n_lsms_reverted": 18,
+    "n_singletons": 48,
+    "n_cross_class": 1,
+    "n_anchored": 0,
+    "mean_cohesion": 0.9997,
+    "mean_uncertainty": 0.0003,
+    "fingerprint": "0b4aa550ccefed3edabdbde5bae11c8d"
+  },
+  "csms": [
+    {
+      "csm_id": "csm00",
+      "index": 0,
+      "contributing_lsms": [
+        {
+          "lsm_id": "acylglycerol.m01",
+          "weight": 0.5
+        },
+        {
+          "lsm_id": "fatty_acid.m01",
+          "weight": 0.5
+        }
+      ],
+      "supporting_classes": [
+        "acylglycerol",
+        "fatty_acid"
+      ],
+      "supporting_analytes": [
+        "arachidonic acid",
+        "linoleic acid",
+        "oleate",
+        "palmitoleic acid",
+        "tri-11-eicosenoin",
+        "trielaidin",
+        "trierucin",
+        "trilinolein",
+        "trilinolenin",
+        "triolein",
+        "tripalmitolein",
+        "tripetroselinin",
+        "vaccenic acid",
+        "\u03b1-linolenic acid"
+      ],
+      "projected_support": [
+        "arachidonic acid",
+        "linoleic acid",
+        "trilinolenin",
+        "\u03b1-linolenic acid"
+      ],
+      "n_lsms": 2,
+      "n_classes": 2,
+      "n_analytes": 14,
+      "dominant_bands": [
+        866.0,
+        970.0,
+        1082.0,
+        1264.0,
+        1436.0,
+        1654.0
+      ],
+      "band_assignment": "866: glycerol C\u2013C [acylglycerol] | 970: unassigned | 1082: C\u2013C skeletal (trans) / PO2- symmetric | 1264: amide III / =C\u2013H in-plane bend | 1436: CH2 / CH3 scissoring | 1654: cis C=C [fatty_acid]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 0.9868,
+      "uncertainty": 0.0155,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": -0.0054,
+      "loco_survival": 1.0,
+      "source_robust": false,
+      "mean_edge_weight": 0.8871,
+      "min_edge_weight": 0.8871,
+      "max_external_weight": 0.5431,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": false,
+      "is_anchored": false,
+      "is_cross_class": true,
+      "anchor_justification": null,
+      "status": "accepted",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm00",
+        "lsms": [
+          "acylglycerol.m01",
+          "fatty_acid.m01"
+        ],
+        "classes": [
+          "acylglycerol",
+          "fatty_acid"
+        ],
+        "canonical_molecules": [
+          "arachidonic acid",
+          "linoleic acid",
+          "oleate",
+          "palmitoleic acid",
+          "tri-11-eicosenoin",
+          "trielaidin",
+          "trierucin",
+          "trilinolein",
+          "trilinolenin",
+          "triolein",
+          "tripalmitolein",
+          "tripetroselinin",
+          "vaccenic acid",
+          "\u03b1-linolenic acid"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm01",
+      "index": 1,
+      "contributing_lsms": [
+        {
+          "lsm_id": "acylglycerol.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "acylglycerol"
+      ],
+      "supporting_analytes": [
+        "tri-11-eicosenoin",
+        "tricaprin",
+        "tricaproin",
+        "tricaprylin",
+        "trielaidin",
+        "trierucin",
+        "trilaurin",
+        "trilinolein",
+        "trimyristin",
+        "triolein",
+        "tripalmitolein",
+        "tripetroselinin"
+      ],
+      "projected_support": [],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 12,
+      "dominant_bands": [
+        848.0,
+        1068.0,
+        1118.0,
+        1304.0,
+        1440.0,
+        1676.0,
+        1744.0
+      ],
+      "band_assignment": "848: tyrosine Fermi doublet / C\u2013C skeletal | 1068: C\u2013C skeletal (trans) / PO2- symmetric | 1118: unassigned | 1304: CH2 twist | 1440: CH2 / CH3 scissoring | 1676: amide I / C=C stretch | 1744: ester C=O [acylglycerol]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.8466,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm01",
+        "lsms": [
+          "acylglycerol.m00"
+        ],
+        "classes": [
+          "acylglycerol"
+        ],
+        "canonical_molecules": [
+          "tri-11-eicosenoin",
+          "tricaprin",
+          "tricaproin",
+          "tricaprylin",
+          "trielaidin",
+          "trierucin",
+          "trilaurin",
+          "trilinolein",
+          "trimyristin",
+          "triolein",
+          "tripalmitolein",
+          "tripetroselinin"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm02",
+      "index": 2,
+      "contributing_lsms": [
+        {
+          "lsm_id": "acylglycerol.m02",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "acylglycerol"
+      ],
+      "supporting_analytes": [
+        "triarachidin",
+        "tribehenin",
+        "tricaprin",
+        "trielaidin",
+        "trierucin",
+        "trilaurin",
+        "trimyristin",
+        "tripalmitin",
+        "tripetroselinin",
+        "tristearin"
+      ],
+      "projected_support": [],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 10,
+      "dominant_bands": [
+        892.0,
+        1062.0,
+        1130.0,
+        1180.0,
+        1248.0,
+        1298.0,
+        1368.0,
+        1442.0,
+        1742.0
+      ],
+      "band_assignment": "892: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1062: C\u2013C skeletal (trans) / PO2- symmetric | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1180: C\u2013C / C=C conjugated stretch | 1248: amide III / =C\u2013H in-plane bend | 1298: CH2 twist | 1368: unassigned | 1442: CH2 / CH3 scissoring | 1742: ester C=O [acylglycerol]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.8114,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm02",
+        "lsms": [
+          "acylglycerol.m02"
+        ],
+        "classes": [
+          "acylglycerol"
+        ],
+        "canonical_molecules": [
+          "triarachidin",
+          "tribehenin",
+          "tricaprin",
+          "trielaidin",
+          "trierucin",
+          "trilaurin",
+          "trimyristin",
+          "tripalmitin",
+          "tripetroselinin",
+          "tristearin"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm03",
+      "index": 3,
+      "contributing_lsms": [
+        {
+          "lsm_id": "carboxylic_acid_metabolite.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "carboxylic_acid_metabolite"
+      ],
+      "supporting_analytes": [
+        "acetoacetate",
+        "citrate",
+        "fumarate",
+        "malic acid",
+        "pyruvate",
+        "succinic acid"
+      ],
+      "projected_support": [
+        "citrate",
+        "fumarate",
+        "succinic acid"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 6,
+      "dominant_bands": [
+        640.0,
+        684.0,
+        784.0,
+        830.0,
+        938.0,
+        1168.0,
+        1294.0,
+        1430.0,
+        1658.0,
+        1704.0
+      ],
+      "band_assignment": "640: C\u2013S stretch / phenyl ring | 684: unassigned | 784: unassigned | 830: tyrosine Fermi doublet / C\u2013C skeletal | 938: C\u2013C backbone stretch | 1168: C\u2013C / C=C conjugated stretch | 1294: CH2 twist | 1430: CH2 / CH3 scissoring | 1658: amide I / C=C stretch | 1704: carboxylic acid C=O [carboxylic_acid_metabolite]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4351,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm03",
+        "lsms": [
+          "carboxylic_acid_metabolite.m00"
+        ],
+        "classes": [
+          "carboxylic_acid_metabolite"
+        ],
+        "canonical_molecules": [
+          "acetoacetate",
+          "citrate",
+          "fumarate",
+          "malic acid",
+          "pyruvate",
+          "succinic acid"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm04",
+      "index": 4,
+      "contributing_lsms": [
+        {
+          "lsm_id": "carboxylic_acid_metabolite.m01",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "carboxylic_acid_metabolite"
+      ],
+      "supporting_analytes": [
+        "acetoacetate",
+        "ascorbate",
+        "citrate",
+        "fumarate",
+        "lactate",
+        "malic acid",
+        "pyruvate"
+      ],
+      "projected_support": [
+        "(+)-lactose",
+        "ascorbate",
+        "lactate"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 7,
+      "dominant_bands": [
+        476.0,
+        566.0,
+        628.0,
+        822.0,
+        876.0,
+        1088.0,
+        1130.0,
+        1260.0,
+        1324.0,
+        1668.0
+      ],
+      "band_assignment": "476: unassigned | 566: unassigned | 628: C\u2013S stretch / phenyl ring | 822: tyrosine Fermi doublet / C\u2013C skeletal | 876: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1088: C\u2013C skeletal (trans) / PO2- symmetric | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1260: amide III / =C\u2013H in-plane bend | 1324: unassigned | 1668: amide I / C=C stretch",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4822,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm04",
+        "lsms": [
+          "carboxylic_acid_metabolite.m01"
+        ],
+        "classes": [
+          "carboxylic_acid_metabolite"
+        ],
+        "canonical_molecules": [
+          "acetoacetate",
+          "ascorbate",
+          "citrate",
+          "fumarate",
+          "lactate",
+          "malic acid",
+          "pyruvate"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm05",
+      "index": 5,
+      "contributing_lsms": [
+        {
+          "lsm_id": "chromophore_pigment.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "chromophore_pigment"
+      ],
+      "supporting_analytes": [
+        "carotene",
+        "riboflavin",
+        "\u03b2-carotene"
+      ],
+      "projected_support": [
+        "carotene",
+        "\u03b2-carotene"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 3,
+      "dominant_bands": [
+        1006.0,
+        1156.0,
+        1270.0,
+        1518.0
+      ],
+      "band_assignment": "1006: phenylalanine ring breathing | 1156: C\u2013C conjugated [chromophore_pigment] | 1270: amide III / =C\u2013H in-plane bend | 1518: C=C conjugated [chromophore_pigment]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3159,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm05",
+        "lsms": [
+          "chromophore_pigment.m00"
+        ],
+        "classes": [
+          "chromophore_pigment"
+        ],
+        "canonical_molecules": [
+          "carotene",
+          "riboflavin",
+          "\u03b2-carotene"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm06",
+      "index": 6,
+      "contributing_lsms": [
+        {
+          "lsm_id": "chromophore_pigment.m01",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "chromophore_pigment"
+      ],
+      "supporting_analytes": [
+        "melanin",
+        "riboflavin"
+      ],
+      "projected_support": [
+        "cytochrome c",
+        "hemoglobin",
+        "melanin",
+        "myoglobin",
+        "riboflavin"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 2,
+      "dominant_bands": [
+        742.0,
+        788.0,
+        1060.0,
+        1180.0,
+        1224.0,
+        1346.0,
+        1402.0,
+        1464.0,
+        1498.0,
+        1622.0
+      ],
+      "band_assignment": "742: unassigned | 788: unassigned | 1060: C\u2013N / C\u2013O stretch | 1180: C\u2013C / C=C conjugated stretch | 1224: amide III / C\u2013O\u2013C asymmetric | 1346: CH deformation / tryptophan | 1402: COO- symmetric stretch | 1464: CH2 / CH3 scissoring | 1498: unassigned | 1622: unassigned",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3562,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm06",
+        "lsms": [
+          "chromophore_pigment.m01"
+        ],
+        "classes": [
+          "chromophore_pigment"
+        ],
+        "canonical_molecules": [
+          "melanin",
+          "riboflavin"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm07",
+      "index": 7,
+      "contributing_lsms": [
+        {
+          "lsm_id": "fatty_acid.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "fatty_acid"
+      ],
+      "supporting_analytes": [
+        "14-methylhexadecanoic acid",
+        "14-methylpentadecanoic acid",
+        "15-methylpalmiticacid",
+        "arachidic acid",
+        "lauric acid",
+        "myristic acid",
+        "oleate",
+        "palmitic acid",
+        "stearate",
+        "vaccenic acid"
+      ],
+      "projected_support": [
+        "arachidic acid",
+        "lauric acid",
+        "myristic acid",
+        "palmitic acid"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 10,
+      "dominant_bands": [
+        892.0,
+        1064.0,
+        1128.0,
+        1176.0,
+        1296.0,
+        1422.0,
+        1438.0,
+        1464.0
+      ],
+      "band_assignment": "892: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1064: C\u2013C trans chain [fatty_acid] | 1128: C\u2013C skeletal (gauche) / C\u2013N stretch | 1176: C\u2013C / C=C conjugated stretch | 1296: CH2 twist | 1422: unassigned | 1438: CH2 / CH3 scissoring | 1464: CH2 / CH3 scissoring",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.8114,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm07",
+        "lsms": [
+          "fatty_acid.m00"
+        ],
+        "classes": [
+          "fatty_acid"
+        ],
+        "canonical_molecules": [
+          "14-methylhexadecanoic acid",
+          "14-methylpentadecanoic acid",
+          "15-methylpalmiticacid",
+          "arachidic acid",
+          "lauric acid",
+          "myristic acid",
+          "oleate",
+          "palmitic acid",
+          "stearate",
+          "vaccenic acid"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm08",
+      "index": 8,
+      "contributing_lsms": [
+        {
+          "lsm_id": "fatty_acid.m02",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "fatty_acid"
+      ],
+      "supporting_analytes": [
+        "13-methylmyristicacid",
+        "14-methylhexadecanoic acid",
+        "arachidic acid",
+        "lauric acid",
+        "oleate",
+        "palmitic acid",
+        "palmitoleic acid",
+        "stearate",
+        "vaccenic acid"
+      ],
+      "projected_support": [
+        "12-methyltetradecanoic acid",
+        "13-methylmyristicacid",
+        "14-methylhexadecanoic acid",
+        "14-methylpentadecanoic acid",
+        "15-methylpalmiticacid",
+        "cholesteryl stearate",
+        "triarachidin",
+        "tribehenin",
+        "tricaprin",
+        "tricaproin",
+        "tricaprylin",
+        "trielaidin",
+        "trierucin",
+        "trilaurin",
+        "trimyristin",
+        "tripalmitin",
+        "tristearin"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 9,
+      "dominant_bands": [
+        826.0,
+        912.0,
+        1070.0,
+        1110.0,
+        1146.0,
+        1304.0,
+        1376.0,
+        1452.0,
+        1474.0,
+        1658.0
+      ],
+      "band_assignment": "826: tyrosine Fermi doublet / C\u2013C skeletal | 912: unassigned | 1070: C\u2013C trans chain [fatty_acid] | 1110: unassigned | 1146: unassigned | 1304: CH2 twist | 1376: unassigned | 1452: CH2 / CH3 scissoring | 1474: unassigned | 1658: cis C=C [fatty_acid]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4942,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm08",
+        "lsms": [
+          "fatty_acid.m02"
+        ],
+        "classes": [
+          "fatty_acid"
+        ],
+        "canonical_molecules": [
+          "13-methylmyristicacid",
+          "14-methylhexadecanoic acid",
+          "arachidic acid",
+          "lauric acid",
+          "oleate",
+          "palmitic acid",
+          "palmitoleic acid",
+          "stearate",
+          "vaccenic acid"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm09",
+      "index": 9,
+      "contributing_lsms": [
+        {
+          "lsm_id": "fatty_acid.m03",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "fatty_acid"
+      ],
+      "supporting_analytes": [
+        "12-methyltetradecanoic acid",
+        "arachidic acid",
+        "elaidic acid",
+        "lauric acid",
+        "linoleic acid",
+        "oleate",
+        "palmitic acid",
+        "palmitoleic acid",
+        "stearate",
+        "vaccenic acid",
+        "\u03b1-linolenic acid"
+      ],
+      "projected_support": [
+        "12-methyltetradecanoic acid",
+        "14-methylpentadecanoic acid",
+        "15-methylpalmiticacid",
+        "arachidic acid",
+        "ceramide",
+        "cholesteryl oleate",
+        "cholesteryl palmitate",
+        "cholesteryl stearate",
+        "elaidic acid",
+        "lauric acid",
+        "sphingomyelin",
+        "stearate",
+        "tri-11-eicosenoin",
+        "triarachidin",
+        "tribehenin",
+        "tricaprin",
+        "tricaproin",
+        "tricaprylin",
+        "trielaidin",
+        "trierucin",
+        "trilaurin",
+        "trimyristin",
+        "tripalmitin",
+        "tripalmitolein",
+        "tripetroselinin",
+        "tristearin",
+        "vaccenic acid"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 11,
+      "dominant_bands": [
+        906.0,
+        1096.0,
+        1120.0,
+        1302.0,
+        1440.0,
+        1668.0
+      ],
+      "band_assignment": "906: unassigned | 1096: C\u2013C skeletal (trans) / PO2- symmetric | 1120: C\u2013C skeletal (gauche) / C\u2013N stretch | 1302: CH2 twist | 1440: CH2 / CH3 scissoring | 1668: cis C=C [fatty_acid]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.8466,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm09",
+        "lsms": [
+          "fatty_acid.m03"
+        ],
+        "classes": [
+          "fatty_acid"
+        ],
+        "canonical_molecules": [
+          "12-methyltetradecanoic acid",
+          "arachidic acid",
+          "elaidic acid",
+          "lauric acid",
+          "linoleic acid",
+          "oleate",
+          "palmitic acid",
+          "palmitoleic acid",
+          "stearate",
+          "vaccenic acid",
+          "\u03b1-linolenic acid"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm10",
+      "index": 10,
+      "contributing_lsms": [
+        {
+          "lsm_id": "fatty_acid.m04",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "fatty_acid"
+      ],
+      "supporting_analytes": [
+        "12-methyltetradecanoic acid",
+        "13-methylmyristicacid",
+        "14-methylpentadecanoic acid",
+        "15-methylpalmiticacid",
+        "arachidic acid",
+        "lauric acid",
+        "palmitic acid",
+        "stearate"
+      ],
+      "projected_support": [
+        "14-methylpentadecanoic acid",
+        "15-methylpalmiticacid",
+        "triarachidin",
+        "tribehenin"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 8,
+      "dominant_bands": [
+        818.0,
+        904.0,
+        1062.0,
+        1102.0,
+        1136.0,
+        1172.0,
+        1298.0,
+        1412.0,
+        1446.0,
+        1648.0
+      ],
+      "band_assignment": "818: unassigned | 904: unassigned | 1062: C\u2013C trans chain [fatty_acid] | 1102: unassigned | 1136: C\u2013C skeletal (gauche) / C\u2013N stretch | 1172: C\u2013C / C=C conjugated stretch | 1298: CH2 twist | 1412: COO- symmetric stretch | 1446: CH2 / CH3 scissoring | 1648: amide I / C=C stretch",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.7764,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm10",
+        "lsms": [
+          "fatty_acid.m04"
+        ],
+        "classes": [
+          "fatty_acid"
+        ],
+        "canonical_molecules": [
+          "12-methyltetradecanoic acid",
+          "13-methylmyristicacid",
+          "14-methylpentadecanoic acid",
+          "15-methylpalmiticacid",
+          "arachidic acid",
+          "lauric acid",
+          "palmitic acid",
+          "stearate"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm11",
+      "index": 11,
+      "contributing_lsms": [
+        {
+          "lsm_id": "free_amino_acid.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "free_amino_acid"
+      ],
+      "supporting_analytes": [
+        "alanine",
+        "asparagine",
+        "aspartate",
+        "glutamate",
+        "isoleucine",
+        "leucine",
+        "methionine",
+        "tryptophan",
+        "valine"
+      ],
+      "projected_support": [],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 9,
+      "dominant_bands": [
+        542.0,
+        756.0,
+        870.0,
+        946.0,
+        1078.0,
+        1122.0,
+        1338.0,
+        1356.0,
+        1424.0,
+        1622.0
+      ],
+      "band_assignment": "542: S\u2013S / skeletal deformation | 756: ring breathing (indole / pyrrole) | 870: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 946: C\u2013C backbone stretch | 1078: C\u2013C skeletal (trans) / PO2- symmetric | 1122: C\u2013C skeletal (gauche) / C\u2013N stretch | 1338: CH deformation / tryptophan | 1356: CH deformation / tryptophan | 1424: unassigned | 1622: unassigned",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.5164,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm11",
+        "lsms": [
+          "free_amino_acid.m00"
+        ],
+        "classes": [
+          "free_amino_acid"
+        ],
+        "canonical_molecules": [
+          "alanine",
+          "asparagine",
+          "aspartate",
+          "glutamate",
+          "isoleucine",
+          "leucine",
+          "methionine",
+          "tryptophan",
+          "valine"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm12",
+      "index": 12,
+      "contributing_lsms": [
+        {
+          "lsm_id": "free_amino_acid.m01",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "free_amino_acid"
+      ],
+      "supporting_analytes": [
+        "alanine",
+        "glutamate",
+        "histidine",
+        "hydroxyproline",
+        "isoleucine",
+        "leucine",
+        "proline",
+        "serine",
+        "tryptophan",
+        "valine"
+      ],
+      "projected_support": [
+        "alanine",
+        "hydroxyproline"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 10,
+      "dominant_bands": [
+        532.0,
+        612.0,
+        852.0,
+        920.0,
+        964.0,
+        1018.0,
+        1114.0,
+        1322.0,
+        1358.0,
+        1462.0
+      ],
+      "band_assignment": "532: S\u2013S / skeletal deformation | 612: unassigned | 852: tyrosine Fermi doublet / C\u2013C skeletal | 920: unassigned | 964: unassigned | 1018: unassigned | 1114: unassigned | 1322: unassigned | 1358: CH deformation / tryptophan | 1462: CH2 / CH3 scissoring",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.5408,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm12",
+        "lsms": [
+          "free_amino_acid.m01"
+        ],
+        "classes": [
+          "free_amino_acid"
+        ],
+        "canonical_molecules": [
+          "alanine",
+          "glutamate",
+          "histidine",
+          "hydroxyproline",
+          "isoleucine",
+          "leucine",
+          "proline",
+          "serine",
+          "tryptophan",
+          "valine"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm13",
+      "index": 13,
+      "contributing_lsms": [
+        {
+          "lsm_id": "free_amino_acid.m02",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "free_amino_acid"
+      ],
+      "supporting_analytes": [
+        "cysteine",
+        "glutamate",
+        "methionine"
+      ],
+      "projected_support": [
+        "cysteine"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 3,
+      "dominant_bands": [
+        452.0,
+        538.0,
+        640.0,
+        692.0,
+        720.0,
+        772.0,
+        870.0,
+        1200.0,
+        1346.0,
+        1426.0
+      ],
+      "band_assignment": "452: unassigned | 538: S\u2013S / skeletal deformation | 640: C\u2013S stretch / phenyl ring | 692: unassigned | 720: ring breathing | 772: unassigned | 870: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1200: amide III / C\u2013O\u2013C asymmetric | 1346: CH deformation / tryptophan | 1426: unassigned",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.2998,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "molecule_discriminating"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm13",
+        "lsms": [
+          "free_amino_acid.m02"
+        ],
+        "classes": [
+          "free_amino_acid"
+        ],
+        "canonical_molecules": [
+          "cysteine",
+          "glutamate",
+          "methionine"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm14",
+      "index": 14,
+      "contributing_lsms": [
+        {
+          "lsm_id": "free_amino_acid.m03",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "free_amino_acid"
+      ],
+      "supporting_analytes": [
+        "aspartate",
+        "glutamate",
+        "glycine",
+        "isoleucine",
+        "leucine",
+        "methionine",
+        "proline",
+        "serine",
+        "valine"
+      ],
+      "projected_support": [
+        "glycine",
+        "proline"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 9,
+      "dominant_bands": [
+        504.0,
+        602.0,
+        840.0,
+        896.0,
+        1034.0,
+        1084.0,
+        1238.0,
+        1326.0,
+        1410.0,
+        1444.0
+      ],
+      "band_assignment": "504: S\u2013S / skeletal deformation | 602: unassigned | 840: tyrosine Fermi doublet / C\u2013C skeletal | 896: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1034: C\u2013N / C\u2013O stretch | 1084: C\u2013C skeletal (trans) / PO2- symmetric | 1238: amide III / C\u2013O\u2013C asymmetric | 1326: unassigned | 1410: COO- symmetric [free_amino_acid] | 1444: CH2 / CH3 scissoring",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4713,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm14",
+        "lsms": [
+          "free_amino_acid.m03"
+        ],
+        "classes": [
+          "free_amino_acid"
+        ],
+        "canonical_molecules": [
+          "aspartate",
+          "glutamate",
+          "glycine",
+          "isoleucine",
+          "leucine",
+          "methionine",
+          "proline",
+          "serine",
+          "valine"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm15",
+      "index": 15,
+      "contributing_lsms": [
+        {
+          "lsm_id": "free_amino_acid.m04",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "free_amino_acid"
+      ],
+      "supporting_analytes": [
+        "isoleucine",
+        "phenylalanine",
+        "serine",
+        "tryptophan"
+      ],
+      "projected_support": [
+        "phenylalanine",
+        "urea"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 4,
+      "dominant_bands": [
+        468.0,
+        622.0,
+        752.0,
+        818.0,
+        1004.0,
+        1034.0,
+        1212.0,
+        1358.0,
+        1556.0,
+        1606.0
+      ],
+      "band_assignment": "468: unassigned | 622: C\u2013S stretch / phenyl ring | 752: ring breathing (indole / pyrrole) | 818: unassigned | 1004: phenylalanine ring breathing | 1034: C\u2013N / C\u2013O stretch | 1212: amide III / C\u2013O\u2013C asymmetric | 1358: CH deformation / tryptophan | 1556: amide II / COO- asymmetric | 1606: aromatic ring C=C",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3096,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "molecule_discriminating"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm15",
+        "lsms": [
+          "free_amino_acid.m04"
+        ],
+        "classes": [
+          "free_amino_acid"
+        ],
+        "canonical_molecules": [
+          "isoleucine",
+          "phenylalanine",
+          "serine",
+          "tryptophan"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm16",
+      "index": 16,
+      "contributing_lsms": [
+        {
+          "lsm_id": "free_amino_acid.m05",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "free_amino_acid"
+      ],
+      "supporting_analytes": [
+        "aspartate",
+        "isoleucine",
+        "leucine",
+        "phenylalanine",
+        "proline",
+        "tyrosine",
+        "valine"
+      ],
+      "projected_support": [
+        "tyrosine"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 7,
+      "dominant_bands": [
+        642.0,
+        796.0,
+        828.0,
+        846.0,
+        986.0,
+        1178.0,
+        1200.0,
+        1266.0,
+        1328.0,
+        1614.0
+      ],
+      "band_assignment": "642: C\u2013S stretch / phenyl ring | 796: unassigned | 828: tyrosine Fermi doublet / C\u2013C skeletal | 846: tyrosine Fermi doublet / C\u2013C skeletal | 986: unassigned | 1178: C\u2013C / C=C conjugated stretch | 1200: amide III / C\u2013O\u2013C asymmetric | 1266: amide III / =C\u2013H in-plane bend | 1328: unassigned | 1614: aromatic ring C=C",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.279,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm16",
+        "lsms": [
+          "free_amino_acid.m05"
+        ],
+        "classes": [
+          "free_amino_acid"
+        ],
+        "canonical_molecules": [
+          "aspartate",
+          "isoleucine",
+          "leucine",
+          "phenylalanine",
+          "proline",
+          "tyrosine",
+          "valine"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm17",
+      "index": 17,
+      "contributing_lsms": [
+        {
+          "lsm_id": "free_amino_acid.m06",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "free_amino_acid"
+      ],
+      "supporting_analytes": [
+        "arginine",
+        "aspartate",
+        "glutamate",
+        "histidine",
+        "hydroxyproline",
+        "isoleucine",
+        "methionine",
+        "serine"
+      ],
+      "projected_support": [
+        "arginine"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 8,
+      "dominant_bands": [
+        552.0,
+        722.0,
+        924.0,
+        982.0,
+        1066.0,
+        1176.0,
+        1272.0,
+        1318.0,
+        1352.0,
+        1440.0
+      ],
+      "band_assignment": "552: S\u2013S / skeletal deformation | 722: ring breathing | 924: unassigned | 982: unassigned | 1066: C\u2013C skeletal (trans) / PO2- symmetric | 1176: C\u2013C / C=C conjugated stretch | 1272: amide III / =C\u2013H in-plane bend | 1318: CH2 twist | 1352: CH deformation / tryptophan | 1440: CH2 / CH3 scissoring",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.5025,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm17",
+        "lsms": [
+          "free_amino_acid.m06"
+        ],
+        "classes": [
+          "free_amino_acid"
+        ],
+        "canonical_molecules": [
+          "arginine",
+          "aspartate",
+          "glutamate",
+          "histidine",
+          "hydroxyproline",
+          "isoleucine",
+          "methionine",
+          "serine"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm18",
+      "index": 18,
+      "contributing_lsms": [
+        {
+          "lsm_id": "mono_oligosaccharide.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "mono_oligosaccharide"
+      ],
+      "supporting_analytes": [
+        "(+)-fucose",
+        "(+)-galactosamine",
+        "(+)-galactose",
+        "(+)-mannose",
+        "(+)-raffinose pentahydrate",
+        "(-)-fructose",
+        "(-)-ribose"
+      ],
+      "projected_support": [
+        "(+)-galactosamine"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 7,
+      "dominant_bands": [
+        530.0,
+        818.0,
+        874.0,
+        948.0,
+        998.0,
+        1062.0,
+        1156.0,
+        1270.0,
+        1332.0,
+        1452.0
+      ],
+      "band_assignment": "530: S\u2013S / skeletal deformation | 818: unassigned | 874: anomeric C\u2013H [mono_oligosaccharide] | 948: C\u2013C backbone stretch | 998: unassigned | 1062: C\u2013C skeletal (trans) / PO2- symmetric | 1156: C\u2013C / C=C conjugated stretch | 1270: amide III / =C\u2013H in-plane bend | 1332: CH deformation / tryptophan | 1452: CH2 / CH3 scissoring",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3937,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm18",
+        "lsms": [
+          "mono_oligosaccharide.m00"
+        ],
+        "classes": [
+          "mono_oligosaccharide"
+        ],
+        "canonical_molecules": [
+          "(+)-fucose",
+          "(+)-galactosamine",
+          "(+)-galactose",
+          "(+)-mannose",
+          "(+)-raffinose pentahydrate",
+          "(-)-fructose",
+          "(-)-ribose"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm19",
+      "index": 19,
+      "contributing_lsms": [
+        {
+          "lsm_id": "mono_oligosaccharide.m01",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "mono_oligosaccharide"
+      ],
+      "supporting_analytes": [
+        "(+)-arabinose",
+        "(+)-galactose",
+        "(+)-glucose",
+        "(+)-lactose",
+        "(+)-mannose",
+        "(+)-raffinose pentahydrate",
+        "(+)-sucrose",
+        "(+)-trehalose",
+        "(-)-arabinose",
+        "glycerol",
+        "\u03b2-d-glucose"
+      ],
+      "projected_support": [
+        "(+)-arabinose",
+        "(-)-arabinose"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 11,
+      "dominant_bands": [
+        510.0,
+        580.0,
+        698.0,
+        842.0,
+        936.0,
+        992.0,
+        1052.0,
+        1258.0,
+        1312.0,
+        1474.0
+      ],
+      "band_assignment": "510: S\u2013S / skeletal deformation | 580: unassigned | 698: unassigned | 842: anomeric C\u2013H [mono_oligosaccharide] | 936: C\u2013C backbone stretch | 992: unassigned | 1052: C\u2013N / C\u2013O stretch | 1258: amide III / =C\u2013H in-plane bend | 1312: CH2 twist | 1474: unassigned",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3442,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm19",
+        "lsms": [
+          "mono_oligosaccharide.m01"
+        ],
+        "classes": [
+          "mono_oligosaccharide"
+        ],
+        "canonical_molecules": [
+          "(+)-arabinose",
+          "(+)-galactose",
+          "(+)-glucose",
+          "(+)-lactose",
+          "(+)-mannose",
+          "(+)-raffinose pentahydrate",
+          "(+)-sucrose",
+          "(+)-trehalose",
+          "(-)-arabinose",
+          "glycerol",
+          "\u03b2-d-glucose"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm20",
+      "index": 20,
+      "contributing_lsms": [
+        {
+          "lsm_id": "mono_oligosaccharide.m02",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "mono_oligosaccharide"
+      ],
+      "supporting_analytes": [
+        "(+)-fucose",
+        "(+)-glucose",
+        "(+)-lactose",
+        "(+)-maltose",
+        "(+)-mannose",
+        "(+)-raffinose pentahydrate",
+        "(+)-sucrose",
+        "(+)-trehalose",
+        "(-)-ribose",
+        "2-deoxy-d-ribose",
+        "glycerol",
+        "\u03b2-d-glucose"
+      ],
+      "projected_support": [
+        "\u03b2-d-glucose"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 12,
+      "dominant_bands": [
+        542.0,
+        648.0,
+        840.0,
+        914.0,
+        1074.0,
+        1120.0,
+        1150.0,
+        1274.0,
+        1344.0,
+        1460.0
+      ],
+      "band_assignment": "542: S\u2013S / skeletal deformation | 648: C\u2013S stretch / phenyl ring | 840: anomeric C\u2013H [mono_oligosaccharide] | 914: unassigned | 1074: C\u2013C skeletal (trans) / PO2- symmetric | 1120: C\u2013O\u2013C glycosidic [mono_oligosaccharide] | 1150: C\u2013C / C=C conjugated stretch | 1274: amide III / =C\u2013H in-plane bend | 1344: CH deformation / tryptophan | 1460: CH2 / CH3 scissoring",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4427,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm20",
+        "lsms": [
+          "mono_oligosaccharide.m02"
+        ],
+        "classes": [
+          "mono_oligosaccharide"
+        ],
+        "canonical_molecules": [
+          "(+)-fucose",
+          "(+)-glucose",
+          "(+)-lactose",
+          "(+)-maltose",
+          "(+)-mannose",
+          "(+)-raffinose pentahydrate",
+          "(+)-sucrose",
+          "(+)-trehalose",
+          "(-)-ribose",
+          "2-deoxy-d-ribose",
+          "glycerol",
+          "\u03b2-d-glucose"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm21",
+      "index": 21,
+      "contributing_lsms": [
+        {
+          "lsm_id": "mono_oligosaccharide.m03",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "mono_oligosaccharide"
+      ],
+      "supporting_analytes": [
+        "(+)-arabinose",
+        "(+)-galactose",
+        "(+)-glucose",
+        "(+)-lactose",
+        "(+)-maltose",
+        "(+)-mannose",
+        "(+)-sucrose",
+        "(+)-trehalose",
+        "glucosamine",
+        "glycerol",
+        "n-acetylglucosamine"
+      ],
+      "projected_support": [
+        "glucosamine"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 11,
+      "dominant_bands": [
+        478.0,
+        524.0,
+        576.0,
+        852.0,
+        972.0,
+        1038.0,
+        1132.0,
+        1258.0,
+        1330.0,
+        1380.0
+      ],
+      "band_assignment": "478: unassigned | 524: S\u2013S / skeletal deformation | 576: unassigned | 852: anomeric C\u2013H [mono_oligosaccharide] | 972: unassigned | 1038: C\u2013N / C\u2013O stretch | 1132: C\u2013C skeletal (gauche) / C\u2013N stretch | 1258: amide III / =C\u2013H in-plane bend | 1330: CH deformation / tryptophan | 1380: unassigned",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.5408,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm21",
+        "lsms": [
+          "mono_oligosaccharide.m03"
+        ],
+        "classes": [
+          "mono_oligosaccharide"
+        ],
+        "canonical_molecules": [
+          "(+)-arabinose",
+          "(+)-galactose",
+          "(+)-glucose",
+          "(+)-lactose",
+          "(+)-maltose",
+          "(+)-mannose",
+          "(+)-sucrose",
+          "(+)-trehalose",
+          "glucosamine",
+          "glycerol",
+          "n-acetylglucosamine"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm22",
+      "index": 22,
+      "contributing_lsms": [
+        {
+          "lsm_id": "mono_oligosaccharide.m04",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "mono_oligosaccharide"
+      ],
+      "supporting_analytes": [
+        "(+)-fucose",
+        "(+)-galactose",
+        "(+)-lactose",
+        "(+)-mannose",
+        "(+)-raffinose pentahydrate",
+        "(+)-sucrose",
+        "(+)-xylose",
+        "(-)-fructose",
+        "(-)-ribose",
+        "2-deoxy-d-ribose",
+        "glycerol",
+        "n-acetylglucosamine"
+      ],
+      "projected_support": [
+        "(-)-fructose",
+        "2-deoxy-d-ribose"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 12,
+      "dominant_bands": [
+        626.0,
+        674.0,
+        812.0,
+        876.0,
+        924.0,
+        978.0,
+        1046.0,
+        1084.0,
+        1276.0,
+        1470.0
+      ],
+      "band_assignment": "626: C\u2013S stretch / phenyl ring | 674: unassigned | 812: unassigned | 876: anomeric C\u2013H [mono_oligosaccharide] | 924: unassigned | 978: unassigned | 1046: C\u2013N / C\u2013O stretch | 1084: C\u2013O\u2013C glycosidic [mono_oligosaccharide] | 1276: amide III / =C\u2013H in-plane bend | 1470: unassigned",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3625,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm22",
+        "lsms": [
+          "mono_oligosaccharide.m04"
+        ],
+        "classes": [
+          "mono_oligosaccharide"
+        ],
+        "canonical_molecules": [
+          "(+)-fucose",
+          "(+)-galactose",
+          "(+)-lactose",
+          "(+)-mannose",
+          "(+)-raffinose pentahydrate",
+          "(+)-sucrose",
+          "(+)-xylose",
+          "(-)-fructose",
+          "(-)-ribose",
+          "2-deoxy-d-ribose",
+          "glycerol",
+          "n-acetylglucosamine"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm23",
+      "index": 23,
+      "contributing_lsms": [
+        {
+          "lsm_id": "mono_oligosaccharide.m05",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "mono_oligosaccharide"
+      ],
+      "supporting_analytes": [
+        "(+)-galactose",
+        "(+)-lactose",
+        "(+)-maltose",
+        "(+)-mannose",
+        "(+)-trehalose",
+        "(+)-xylose",
+        "glucosamine"
+      ],
+      "projected_support": [
+        "(+)-xylose"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 7,
+      "dominant_bands": [
+        524.0,
+        604.0,
+        832.0,
+        904.0,
+        932.0,
+        1016.0,
+        1084.0,
+        1116.0,
+        1148.0,
+        1398.0
+      ],
+      "band_assignment": "524: S\u2013S / skeletal deformation | 604: unassigned | 832: tyrosine Fermi doublet / C\u2013C skeletal | 904: unassigned | 932: C\u2013C backbone stretch | 1016: unassigned | 1084: C\u2013O\u2013C glycosidic [mono_oligosaccharide] | 1116: C\u2013O\u2013C glycosidic [mono_oligosaccharide] | 1148: unassigned | 1398: COO- symmetric stretch",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3453,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm23",
+        "lsms": [
+          "mono_oligosaccharide.m05"
+        ],
+        "classes": [
+          "mono_oligosaccharide"
+        ],
+        "canonical_molecules": [
+          "(+)-galactose",
+          "(+)-lactose",
+          "(+)-maltose",
+          "(+)-mannose",
+          "(+)-trehalose",
+          "(+)-xylose",
+          "glucosamine"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm24",
+      "index": 24,
+      "contributing_lsms": [
+        {
+          "lsm_id": "nucleic_acid_polymer.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "nucleic_acid_polymer"
+      ],
+      "supporting_analytes": [
+        "a-dna",
+        "b-dna",
+        "t-rna"
+      ],
+      "projected_support": [
+        "a-dna",
+        "t-rna"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 3,
+      "dominant_bands": [
+        668.0,
+        728.0,
+        784.0,
+        1096.0,
+        1252.0,
+        1336.0,
+        1374.0,
+        1486.0,
+        1574.0,
+        1670.0
+      ],
+      "band_assignment": "668: unassigned | 728: ring breathing | 784: backbone O\u2013P\u2013O [nucleic_acid_polymer] | 1096: PO2- symmetric [nucleic_acid_polymer] | 1252: amide III / =C\u2013H in-plane bend | 1336: CH deformation / tryptophan | 1374: unassigned | 1486: unassigned | 1574: amide II / COO- asymmetric | 1670: amide I / C=C stretch",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4651,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm24",
+        "lsms": [
+          "nucleic_acid_polymer.m00"
+        ],
+        "classes": [
+          "nucleic_acid_polymer"
+        ],
+        "canonical_molecules": [
+          "a-dna",
+          "b-dna",
+          "t-rna"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm25",
+      "index": 25,
+      "contributing_lsms": [
+        {
+          "lsm_id": "peptide_protein.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "peptide_protein"
+      ],
+      "supporting_analytes": [
+        "collagen",
+        "elastase",
+        "elastin",
+        "ferritin",
+        "glutathione transferase",
+        "keratin",
+        "major proteinase",
+        "papain",
+        "pepsin",
+        "pepsinogen",
+        "superoxide dismutases",
+        "thaumatin",
+        "triosephosphate isomerase",
+        "trypsin",
+        "trypsin inhibitor",
+        "trypsinogen",
+        "ubiquitin",
+        "\u03b1-chymotrypsinogen a (type ii)"
+      ],
+      "projected_support": [],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 18,
+      "dominant_bands": [
+        520.0,
+        644.0,
+        856.0,
+        1000.0,
+        1030.0,
+        1102.0,
+        1170.0,
+        1246.0,
+        1452.0,
+        1676.0
+      ],
+      "band_assignment": "520: S\u2013S / skeletal deformation | 644: C\u2013S stretch / phenyl ring | 856: tyrosine Fermi doublet / C\u2013C skeletal | 1000: phenylalanine [peptide_protein] | 1030: C\u2013N / C\u2013O stretch | 1102: unassigned | 1170: C\u2013C / C=C conjugated stretch | 1246: amide III [peptide_protein] | 1452: CH2 / CH3 scissoring | 1676: amide I [peptide_protein]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3487,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm25",
+        "lsms": [
+          "peptide_protein.m00"
+        ],
+        "classes": [
+          "peptide_protein"
+        ],
+        "canonical_molecules": [
+          "collagen",
+          "elastase",
+          "elastin",
+          "ferritin",
+          "glutathione transferase",
+          "keratin",
+          "major proteinase",
+          "papain",
+          "pepsin",
+          "pepsinogen",
+          "superoxide dismutases",
+          "thaumatin",
+          "triosephosphate isomerase",
+          "trypsin",
+          "trypsin inhibitor",
+          "trypsinogen",
+          "ubiquitin",
+          "\u03b1-chymotrypsinogen a (type ii)"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm26",
+      "index": 26,
+      "contributing_lsms": [
+        {
+          "lsm_id": "peptide_protein.m01",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "peptide_protein"
+      ],
+      "supporting_analytes": [
+        "cytochrome c",
+        "hemoglobin",
+        "myoglobin",
+        "\u03b1-chymotrypsinogen a (type ii)"
+      ],
+      "projected_support": [
+        "cytochrome c",
+        "hemoglobin",
+        "myoglobin"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 4,
+      "dominant_bands": [
+        686.0,
+        750.0,
+        980.0,
+        1130.0,
+        1174.0,
+        1226.0,
+        1312.0,
+        1362.0,
+        1400.0,
+        1588.0
+      ],
+      "band_assignment": "686: unassigned | 750: ring breathing (indole / pyrrole) | 980: unassigned | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1174: C\u2013C / C=C conjugated stretch | 1226: amide III / C\u2013O\u2013C asymmetric | 1312: CH2 twist | 1362: unassigned | 1400: COO- symmetric stretch | 1588: unassigned",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.2671,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "molecule_discriminating"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm26",
+        "lsms": [
+          "peptide_protein.m01"
+        ],
+        "classes": [
+          "peptide_protein"
+        ],
+        "canonical_molecules": [
+          "cytochrome c",
+          "hemoglobin",
+          "myoglobin",
+          "\u03b1-chymotrypsinogen a (type ii)"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm27",
+      "index": 27,
+      "contributing_lsms": [
+        {
+          "lsm_id": "peptide_protein.m02",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "peptide_protein"
+      ],
+      "supporting_analytes": [
+        "albumin",
+        "collagen",
+        "elastase",
+        "elastin",
+        "ferritin",
+        "insulin",
+        "pepsin",
+        "trypsin inhibitor",
+        "tubulin"
+      ],
+      "projected_support": [
+        "creatinine",
+        "tubulin"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 9,
+      "dominant_bands": [
+        542.0,
+        676.0,
+        712.0,
+        832.0,
+        950.0,
+        1002.0,
+        1038.0,
+        1128.0,
+        1418.0,
+        1458.0
+      ],
+      "band_assignment": "542: S\u2013S / skeletal deformation | 676: unassigned | 712: ring breathing | 832: tyrosine Fermi doublet / C\u2013C skeletal | 950: C\u2013C backbone stretch | 1002: phenylalanine [peptide_protein] | 1038: C\u2013N / C\u2013O stretch | 1128: C\u2013C skeletal (gauche) / C\u2013N stretch | 1418: COO- symmetric stretch | 1458: CH2 / CH3 scissoring",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4186,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm27",
+        "lsms": [
+          "peptide_protein.m02"
+        ],
+        "classes": [
+          "peptide_protein"
+        ],
+        "canonical_molecules": [
+          "albumin",
+          "collagen",
+          "elastase",
+          "elastin",
+          "ferritin",
+          "insulin",
+          "pepsin",
+          "trypsin inhibitor",
+          "tubulin"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm28",
+      "index": 28,
+      "contributing_lsms": [
+        {
+          "lsm_id": "peptide_protein.m03",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "peptide_protein"
+      ],
+      "supporting_analytes": [
+        "albumin",
+        "collagen",
+        "ferritin",
+        "glutathione transferase",
+        "lactalbumin",
+        "papain",
+        "pepsin",
+        "triosephosphate isomerase",
+        "trypsin inhibitor",
+        "xylanase"
+      ],
+      "projected_support": [
+        "amylopectin",
+        "amylose",
+        "xylanase"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 10,
+      "dominant_bands": [
+        482.0,
+        582.0,
+        864.0,
+        942.0,
+        1130.0,
+        1260.0,
+        1336.0,
+        1390.0,
+        1464.0,
+        1658.0
+      ],
+      "band_assignment": "482: S\u2013S / skeletal deformation | 582: unassigned | 864: unassigned | 942: C\u2013C backbone stretch | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1260: amide III [peptide_protein] | 1336: CH deformation / tryptophan | 1390: COO- symmetric stretch | 1464: CH2 / CH3 scissoring | 1658: amide I [peptide_protein]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.8624,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm28",
+        "lsms": [
+          "peptide_protein.m03"
+        ],
+        "classes": [
+          "peptide_protein"
+        ],
+        "canonical_molecules": [
+          "albumin",
+          "collagen",
+          "ferritin",
+          "glutathione transferase",
+          "lactalbumin",
+          "papain",
+          "pepsin",
+          "triosephosphate isomerase",
+          "trypsin inhibitor",
+          "xylanase"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm29",
+      "index": 29,
+      "contributing_lsms": [
+        {
+          "lsm_id": "peptide_protein.m04",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "peptide_protein"
+      ],
+      "supporting_analytes": [
+        "collagen",
+        "elastase",
+        "elastin",
+        "glucose oxidase",
+        "glutathione transferase",
+        "major proteinase",
+        "pepsin",
+        "pepsinogen",
+        "superoxide dismutases",
+        "trypsinogen",
+        "ubiquitin"
+      ],
+      "projected_support": [],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 11,
+      "dominant_bands": [
+        848.0,
+        1006.0,
+        1140.0,
+        1234.0,
+        1280.0,
+        1342.0,
+        1476.0,
+        1556.0,
+        1622.0,
+        1672.0
+      ],
+      "band_assignment": "848: tyrosine Fermi doublet / C\u2013C skeletal | 1006: phenylalanine [peptide_protein] | 1140: C\u2013C skeletal (gauche) / C\u2013N stretch | 1234: amide III [peptide_protein] | 1280: amide III [peptide_protein] | 1342: CH deformation / tryptophan | 1476: unassigned | 1556: amide II / COO- asymmetric | 1622: unassigned | 1672: amide I [peptide_protein]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.2863,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm29",
+        "lsms": [
+          "peptide_protein.m04"
+        ],
+        "classes": [
+          "peptide_protein"
+        ],
+        "canonical_molecules": [
+          "collagen",
+          "elastase",
+          "elastin",
+          "glucose oxidase",
+          "glutathione transferase",
+          "major proteinase",
+          "pepsin",
+          "pepsinogen",
+          "superoxide dismutases",
+          "trypsinogen",
+          "ubiquitin"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm30",
+      "index": 30,
+      "contributing_lsms": [
+        {
+          "lsm_id": "peptide_protein.m05",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "peptide_protein"
+      ],
+      "supporting_analytes": [
+        "albumin",
+        "carbonic anhydrase",
+        "elastin",
+        "ferritin",
+        "glucose oxidase",
+        "glutathione transferase",
+        "horseradish peroxidase",
+        "insulin",
+        "keratin",
+        "lactalbumin",
+        "major proteinase",
+        "superoxide dismutases",
+        "triosephosphate isomerase",
+        "trypsin inhibitor",
+        "ubiquitin",
+        "\u03b1-chymotrypsinogen a (type ii)"
+      ],
+      "projected_support": [],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 16,
+      "dominant_bands": [
+        528.0,
+        902.0,
+        958.0,
+        1002.0,
+        1032.0,
+        1104.0,
+        1208.0,
+        1320.0,
+        1452.0,
+        1662.0
+      ],
+      "band_assignment": "528: S\u2013S / skeletal deformation | 902: unassigned | 958: C\u2013C backbone stretch | 1002: phenylalanine [peptide_protein] | 1032: C\u2013N / C\u2013O stretch | 1104: unassigned | 1208: amide III / C\u2013O\u2013C asymmetric | 1320: CH2 twist | 1452: CH2 / CH3 scissoring | 1662: amide I [peptide_protein]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3835,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm30",
+        "lsms": [
+          "peptide_protein.m05"
+        ],
+        "classes": [
+          "peptide_protein"
+        ],
+        "canonical_molecules": [
+          "albumin",
+          "carbonic anhydrase",
+          "elastin",
+          "ferritin",
+          "glucose oxidase",
+          "glutathione transferase",
+          "horseradish peroxidase",
+          "insulin",
+          "keratin",
+          "lactalbumin",
+          "major proteinase",
+          "superoxide dismutases",
+          "triosephosphate isomerase",
+          "trypsin inhibitor",
+          "ubiquitin",
+          "\u03b1-chymotrypsinogen a (type ii)"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm31",
+      "index": 31,
+      "contributing_lsms": [
+        {
+          "lsm_id": "peptide_protein.m06",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "peptide_protein"
+      ],
+      "supporting_analytes": [
+        "carbonic anhydrase",
+        "elastase",
+        "insulin",
+        "lactalbumin",
+        "lectin",
+        "pepsin",
+        "pepsinogen",
+        "superoxide dismutases",
+        "thaumatin",
+        "trypsin",
+        "trypsin inhibitor",
+        "trypsinogen",
+        "ubiquitin",
+        "\u03b1-chymotrypsinogen a (type ii)"
+      ],
+      "projected_support": [],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 14,
+      "dominant_bands": [
+        624.0,
+        752.0,
+        834.0,
+        1006.0,
+        1126.0,
+        1238.0,
+        1346.0,
+        1452.0,
+        1606.0,
+        1674.0
+      ],
+      "band_assignment": "624: C\u2013S stretch / phenyl ring | 752: ring breathing (indole / pyrrole) | 834: tyrosine Fermi doublet / C\u2013C skeletal | 1006: phenylalanine [peptide_protein] | 1126: C\u2013C skeletal (gauche) / C\u2013N stretch | 1238: amide III [peptide_protein] | 1346: CH deformation / tryptophan | 1452: CH2 / CH3 scissoring | 1606: aromatic ring C=C | 1674: amide I [peptide_protein]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3228,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm31",
+        "lsms": [
+          "peptide_protein.m06"
+        ],
+        "classes": [
+          "peptide_protein"
+        ],
+        "canonical_molecules": [
+          "carbonic anhydrase",
+          "elastase",
+          "insulin",
+          "lactalbumin",
+          "lectin",
+          "pepsin",
+          "pepsinogen",
+          "superoxide dismutases",
+          "thaumatin",
+          "trypsin",
+          "trypsin inhibitor",
+          "trypsinogen",
+          "ubiquitin",
+          "\u03b1-chymotrypsinogen a (type ii)"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm32",
+      "index": 32,
+      "contributing_lsms": [
+        {
+          "lsm_id": "peptide_protein.m07",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "peptide_protein"
+      ],
+      "supporting_analytes": [
+        "albumin",
+        "elastase",
+        "ferritin",
+        "glutathione transferase",
+        "insulin",
+        "keratin",
+        "lactalbumin",
+        "major proteinase",
+        "papain",
+        "pepsinogen",
+        "thaumatin",
+        "trypsin",
+        "trypsin inhibitor",
+        "trypsinogen"
+      ],
+      "projected_support": [],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 14,
+      "dominant_bands": [
+        510.0,
+        646.0,
+        856.0,
+        1010.0,
+        1040.0,
+        1210.0,
+        1346.0,
+        1448.0,
+        1618.0,
+        1664.0
+      ],
+      "band_assignment": "510: S\u2013S / skeletal deformation | 646: C\u2013S stretch / phenyl ring | 856: tyrosine Fermi doublet / C\u2013C skeletal | 1010: phenylalanine [peptide_protein] | 1040: C\u2013N / C\u2013O stretch | 1210: amide III / C\u2013O\u2013C asymmetric | 1346: CH deformation / tryptophan | 1448: CH2 / CH3 scissoring | 1618: aromatic ring C=C | 1664: amide I [peptide_protein]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4665,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm32",
+        "lsms": [
+          "peptide_protein.m07"
+        ],
+        "classes": [
+          "peptide_protein"
+        ],
+        "canonical_molecules": [
+          "albumin",
+          "elastase",
+          "ferritin",
+          "glutathione transferase",
+          "insulin",
+          "keratin",
+          "lactalbumin",
+          "major proteinase",
+          "papain",
+          "pepsinogen",
+          "thaumatin",
+          "trypsin",
+          "trypsin inhibitor",
+          "trypsinogen"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm33",
+      "index": 33,
+      "contributing_lsms": [
+        {
+          "lsm_id": "peptide_protein.m08",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "peptide_protein"
+      ],
+      "supporting_analytes": [
+        "carbonic anhydrase",
+        "elastase",
+        "ferritin",
+        "glutathione transferase",
+        "horseradish peroxidase",
+        "keratin",
+        "lactalbumin",
+        "lectin",
+        "major proteinase",
+        "papain",
+        "pepsin",
+        "pepsinogen",
+        "thaumatin",
+        "triosephosphate isomerase",
+        "trypsin",
+        "trypsinogen",
+        "\u03b1-chymotrypsinogen a (type ii)"
+      ],
+      "projected_support": [],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 17,
+      "dominant_bands": [
+        500.0,
+        762.0,
+        880.0,
+        1018.0,
+        1130.0,
+        1248.0,
+        1340.0,
+        1446.0,
+        1554.0,
+        1666.0
+      ],
+      "band_assignment": "500: S\u2013S / skeletal deformation | 762: ring breathing (indole / pyrrole) | 880: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1018: unassigned | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1248: amide III [peptide_protein] | 1340: CH deformation / tryptophan | 1446: CH2 / CH3 scissoring | 1554: amide II / COO- asymmetric | 1666: amide I [peptide_protein]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4056,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm33",
+        "lsms": [
+          "peptide_protein.m08"
+        ],
+        "classes": [
+          "peptide_protein"
+        ],
+        "canonical_molecules": [
+          "carbonic anhydrase",
+          "elastase",
+          "ferritin",
+          "glutathione transferase",
+          "horseradish peroxidase",
+          "keratin",
+          "lactalbumin",
+          "lectin",
+          "major proteinase",
+          "papain",
+          "pepsin",
+          "pepsinogen",
+          "thaumatin",
+          "triosephosphate isomerase",
+          "trypsin",
+          "trypsinogen",
+          "\u03b1-chymotrypsinogen a (type ii)"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm34",
+      "index": 34,
+      "contributing_lsms": [
+        {
+          "lsm_id": "peptide_protein.m09",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "peptide_protein"
+      ],
+      "supporting_analytes": [
+        "albumin",
+        "carbonic anhydrase",
+        "elastase",
+        "ferritin",
+        "hemoglobin",
+        "horseradish peroxidase",
+        "lectin",
+        "myoglobin",
+        "pepsin",
+        "thaumatin"
+      ],
+      "projected_support": [
+        "cytochrome c",
+        "hemoglobin",
+        "melanin",
+        "myoglobin"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 10,
+      "dominant_bands": [
+        672.0,
+        754.0,
+        1006.0,
+        1134.0,
+        1172.0,
+        1226.0,
+        1304.0,
+        1372.0,
+        1430.0,
+        1580.0
+      ],
+      "band_assignment": "672: unassigned | 754: ring breathing (indole / pyrrole) | 1006: phenylalanine [peptide_protein] | 1134: C\u2013C skeletal (gauche) / C\u2013N stretch | 1172: C\u2013C / C=C conjugated stretch | 1226: amide III / C\u2013O\u2013C asymmetric | 1304: CH2 twist | 1372: unassigned | 1430: CH2 / CH3 scissoring | 1580: amide II / COO- asymmetric",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3205,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm34",
+        "lsms": [
+          "peptide_protein.m09"
+        ],
+        "classes": [
+          "peptide_protein"
+        ],
+        "canonical_molecules": [
+          "albumin",
+          "carbonic anhydrase",
+          "elastase",
+          "ferritin",
+          "hemoglobin",
+          "horseradish peroxidase",
+          "lectin",
+          "myoglobin",
+          "pepsin",
+          "thaumatin"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm35",
+      "index": 35,
+      "contributing_lsms": [
+        {
+          "lsm_id": "phosphate_metabolite.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "phosphate_metabolite"
+      ],
+      "supporting_analytes": [
+        "fructose-6-phosphate",
+        "phosphate",
+        "phosphoenolpyruvate"
+      ],
+      "projected_support": [
+        "citrate",
+        "fructose-6-phosphate",
+        "phosphate"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 3,
+      "dominant_bands": [
+        558.0,
+        784.0,
+        936.0,
+        972.0,
+        1066.0,
+        1132.0,
+        1378.0,
+        1460.0,
+        1628.0,
+        1702.0
+      ],
+      "band_assignment": "558: S\u2013S / skeletal deformation | 784: unassigned | 936: C\u2013C backbone stretch | 972: PO4 symmetric stretch [phosphate_metabolite] | 1066: C\u2013C skeletal (trans) / PO2- symmetric | 1132: C\u2013C skeletal (gauche) / C\u2013N stretch | 1378: unassigned | 1460: CH2 / CH3 scissoring | 1628: unassigned | 1702: C=O ester / carboxylic acid",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.5245,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm35",
+        "lsms": [
+          "phosphate_metabolite.m00"
+        ],
+        "classes": [
+          "phosphate_metabolite"
+        ],
+        "canonical_molecules": [
+          "fructose-6-phosphate",
+          "phosphate",
+          "phosphoenolpyruvate"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm36",
+      "index": 36,
+      "contributing_lsms": [
+        {
+          "lsm_id": "phospholipid_sphingolipid.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "phospholipid_sphingolipid"
+      ],
+      "supporting_analytes": [
+        "ceramide",
+        "sphingomyelin",
+        "\u03b1-phosphatidylcholine",
+        "\u03b1-phosphatidylethanolamine"
+      ],
+      "projected_support": [],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 4,
+      "dominant_bands": [
+        720.0,
+        880.0,
+        1062.0,
+        1128.0,
+        1296.0,
+        1438.0,
+        1658.0,
+        1742.0
+      ],
+      "band_assignment": "720: ring breathing | 880: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1062: C\u2013C skeletal (trans) / PO2- symmetric | 1128: C\u2013C skeletal (gauche) / C\u2013N stretch | 1296: CH2 twist | 1438: CH2 / CH3 scissoring | 1658: amide I / C=C stretch | 1742: ester C=O [phospholipid_sphingolipid]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.7805,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm36",
+        "lsms": [
+          "phospholipid_sphingolipid.m00"
+        ],
+        "classes": [
+          "phospholipid_sphingolipid"
+        ],
+        "canonical_molecules": [
+          "ceramide",
+          "sphingomyelin",
+          "\u03b1-phosphatidylcholine",
+          "\u03b1-phosphatidylethanolamine"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm37",
+      "index": 37,
+      "contributing_lsms": [
+        {
+          "lsm_id": "phospholipid_sphingolipid.m01",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "phospholipid_sphingolipid"
+      ],
+      "supporting_analytes": [
+        "phosphatidylinositol",
+        "\u03b1-phosphatidylcholine",
+        "\u03b1-phosphatidylethanolamine"
+      ],
+      "projected_support": [
+        "phosphatidylinositol"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 3,
+      "dominant_bands": [
+        470.0,
+        530.0,
+        650.0,
+        862.0,
+        928.0,
+        1090.0,
+        1182.0,
+        1320.0,
+        1502.0,
+        1650.0
+      ],
+      "band_assignment": "470: unassigned | 530: S\u2013S / skeletal deformation | 650: C\u2013S stretch / phenyl ring | 862: unassigned | 928: unassigned | 1090: PO2- symmetric stretch [phospholipid_sphingolipid] | 1182: unassigned | 1320: CH2 twist | 1502: conjugated C=C (carotenoid) | 1650: amide I / C=C stretch",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4311,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm37",
+        "lsms": [
+          "phospholipid_sphingolipid.m01"
+        ],
+        "classes": [
+          "phospholipid_sphingolipid"
+        ],
+        "canonical_molecules": [
+          "phosphatidylinositol",
+          "\u03b1-phosphatidylcholine",
+          "\u03b1-phosphatidylethanolamine"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm38",
+      "index": 38,
+      "contributing_lsms": [
+        {
+          "lsm_id": "polysaccharide.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "polysaccharide"
+      ],
+      "supporting_analytes": [
+        "amylopectin",
+        "amylose",
+        "chitin",
+        "glycogen"
+      ],
+      "projected_support": [],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 4,
+      "dominant_bands": [
+        480.0,
+        580.0,
+        862.0,
+        940.0,
+        1046.0,
+        1082.0,
+        1130.0,
+        1252.0,
+        1338.0,
+        1462.0
+      ],
+      "band_assignment": "480: S\u2013S / skeletal deformation | 580: unassigned | 862: unassigned | 940: C\u2013O\u2013C ring [polysaccharide] | 1046: C\u2013N / C\u2013O stretch | 1082: C\u2013O\u2013C glycosidic [polysaccharide] | 1130: C\u2013O\u2013C glycosidic [polysaccharide] | 1252: amide III / =C\u2013H in-plane bend | 1338: CH deformation / tryptophan | 1462: CH2 / CH3 scissoring",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.8624,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm38",
+        "lsms": [
+          "polysaccharide.m00"
+        ],
+        "classes": [
+          "polysaccharide"
+        ],
+        "canonical_molecules": [
+          "amylopectin",
+          "amylose",
+          "chitin",
+          "glycogen"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm39",
+      "index": 39,
+      "contributing_lsms": [
+        {
+          "lsm_id": "polysaccharide.m01",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "polysaccharide"
+      ],
+      "supporting_analytes": [
+        "amylose",
+        "cellulose",
+        "chitin",
+        "glycogen"
+      ],
+      "projected_support": [
+        "cellulose"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 4,
+      "dominant_bands": [
+        498.0,
+        896.0,
+        954.0,
+        1058.0,
+        1098.0,
+        1150.0,
+        1266.0,
+        1330.0,
+        1378.0,
+        1414.0
+      ],
+      "band_assignment": "498: S\u2013S / skeletal deformation | 896: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 954: C\u2013O\u2013C ring [polysaccharide] | 1058: C\u2013N / C\u2013O stretch | 1098: C\u2013O\u2013C glycosidic [polysaccharide] | 1150: C\u2013C / C=C conjugated stretch | 1266: amide III / =C\u2013H in-plane bend | 1330: CH deformation / tryptophan | 1378: unassigned | 1414: COO- symmetric stretch",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4713,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm39",
+        "lsms": [
+          "polysaccharide.m01"
+        ],
+        "classes": [
+          "polysaccharide"
+        ],
+        "canonical_molecules": [
+          "amylose",
+          "cellulose",
+          "chitin",
+          "glycogen"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm40",
+      "index": 40,
+      "contributing_lsms": [
+        {
+          "lsm_id": "purine.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "purine"
+      ],
+      "supporting_analytes": [
+        "adenine",
+        "hypoxanthine",
+        "urate",
+        "xanthine"
+      ],
+      "projected_support": [
+        "adenine"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 4,
+      "dominant_bands": [
+        534.0,
+        624.0,
+        722.0,
+        944.0,
+        1038.0,
+        1124.0,
+        1248.0,
+        1334.0,
+        1488.0,
+        1650.0
+      ],
+      "band_assignment": "534: S\u2013S / skeletal deformation | 624: C\u2013S stretch / phenyl ring | 722: purine ring breathing [purine] | 944: C\u2013C backbone stretch | 1038: C\u2013N / C\u2013O stretch | 1124: C\u2013C skeletal (gauche) / C\u2013N stretch | 1248: amide III / =C\u2013H in-plane bend | 1334: purine N7\u2013C5 stretch [purine] | 1488: unassigned | 1650: amide I / C=C stretch",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.6971,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm40",
+        "lsms": [
+          "purine.m00"
+        ],
+        "classes": [
+          "purine"
+        ],
+        "canonical_molecules": [
+          "adenine",
+          "hypoxanthine",
+          "urate",
+          "xanthine"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm41",
+      "index": 41,
+      "contributing_lsms": [
+        {
+          "lsm_id": "purine.m01",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "purine"
+      ],
+      "supporting_analytes": [
+        "adenine",
+        "guanine",
+        "hypoxanthine",
+        "xanthine"
+      ],
+      "projected_support": [
+        "guanine",
+        "xanthine"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 4,
+      "dominant_bands": [
+        544.0,
+        650.0,
+        938.0,
+        958.0,
+        1230.0,
+        1264.0,
+        1330.0,
+        1434.0,
+        1552.0,
+        1680.0
+      ],
+      "band_assignment": "544: S\u2013S / skeletal deformation | 650: C\u2013S stretch / phenyl ring | 938: C\u2013C backbone stretch | 958: C\u2013C backbone stretch | 1230: amide III / C\u2013O\u2013C asymmetric | 1264: amide III / =C\u2013H in-plane bend | 1330: purine N7\u2013C5 stretch [purine] | 1434: CH2 / CH3 scissoring | 1552: amide II / COO- asymmetric | 1680: amide I / C=C stretch",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3372,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm41",
+        "lsms": [
+          "purine.m01"
+        ],
+        "classes": [
+          "purine"
+        ],
+        "canonical_molecules": [
+          "adenine",
+          "guanine",
+          "hypoxanthine",
+          "xanthine"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm42",
+      "index": 42,
+      "contributing_lsms": [
+        {
+          "lsm_id": "pyrimidine.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "pyrimidine"
+      ],
+      "supporting_analytes": [
+        "cytosine",
+        "thymine",
+        "uracil"
+      ],
+      "projected_support": [
+        "cytosine",
+        "uracil"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 3,
+      "dominant_bands": [
+        552.0,
+        578.0,
+        600.0,
+        792.0,
+        986.0,
+        1102.0,
+        1236.0,
+        1276.0,
+        1368.0,
+        1672.0
+      ],
+      "band_assignment": "552: S\u2013S / skeletal deformation | 578: unassigned | 600: unassigned | 792: pyrimidine ring breathing [pyrimidine] | 986: unassigned | 1102: unassigned | 1236: amide III / C\u2013O\u2013C asymmetric | 1276: amide III / =C\u2013H in-plane bend | 1368: unassigned | 1672: C=O / C=N [pyrimidine]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3298,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm42",
+        "lsms": [
+          "pyrimidine.m00"
+        ],
+        "classes": [
+          "pyrimidine"
+        ],
+        "canonical_molecules": [
+          "cytosine",
+          "thymine",
+          "uracil"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm43",
+      "index": 43,
+      "contributing_lsms": [
+        {
+          "lsm_id": "small_nitrogenous.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "small_nitrogenous"
+      ],
+      "supporting_analytes": [
+        "creatinine",
+        "urea"
+      ],
+      "projected_support": [
+        "creatinine",
+        "tubulin",
+        "urea"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 2,
+      "dominant_bands": [
+        578.0,
+        606.0,
+        674.0,
+        838.0,
+        904.0,
+        1010.0,
+        1246.0,
+        1416.0,
+        1658.0,
+        1712.0
+      ],
+      "band_assignment": "578: unassigned | 606: unassigned | 674: unassigned | 838: tyrosine Fermi doublet / C\u2013C skeletal | 904: unassigned | 1010: C\u2013N symmetric [small_nitrogenous] | 1246: amide III / =C\u2013H in-plane bend | 1416: COO- symmetric stretch | 1658: amide I / C=C stretch | 1712: C=O ester / carboxylic acid",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4186,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm43",
+        "lsms": [
+          "small_nitrogenous.m00"
+        ],
+        "classes": [
+          "small_nitrogenous"
+        ],
+        "canonical_molecules": [
+          "creatinine",
+          "urea"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm44",
+      "index": 44,
+      "contributing_lsms": [
+        {
+          "lsm_id": "sterol_steroid.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "sterol_steroid"
+      ],
+      "supporting_analytes": [
+        "cholesterol",
+        "cholesteryl linoleate",
+        "cholesteryl oleate",
+        "cholesteryl palmitate",
+        "cholesteryl stearate",
+        "ethinylestradiol"
+      ],
+      "projected_support": [],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 6,
+      "dominant_bands": [
+        610.0,
+        702.0,
+        882.0,
+        926.0,
+        1030.0,
+        1134.0,
+        1182.0,
+        1304.0,
+        1442.0,
+        1672.0
+      ],
+      "band_assignment": "610: unassigned | 702: sterol ring skeletal [sterol_steroid] | 882: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 926: unassigned | 1030: C\u2013N / C\u2013O stretch | 1134: C\u2013C skeletal (gauche) / C\u2013N stretch | 1182: unassigned | 1304: CH2 twist | 1442: CH2 / CH3 scissoring | 1672: C=C sterol [sterol_steroid]",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.7649,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm44",
+        "lsms": [
+          "sterol_steroid.m00"
+        ],
+        "classes": [
+          "sterol_steroid"
+        ],
+        "canonical_molecules": [
+          "cholesterol",
+          "cholesteryl linoleate",
+          "cholesteryl oleate",
+          "cholesteryl palmitate",
+          "cholesteryl stearate",
+          "ethinylestradiol"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm45",
+      "index": 45,
+      "contributing_lsms": [
+        {
+          "lsm_id": "sterol_steroid.m01",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "sterol_steroid"
+      ],
+      "supporting_analytes": [
+        "cholesterol",
+        "cholesteryl oleate",
+        "diethylstilbestrol",
+        "estradiol",
+        "estriol"
+      ],
+      "projected_support": [
+        "diethylstilbestrol",
+        "estradiol",
+        "estriol"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 5,
+      "dominant_bands": [
+        552.0,
+        738.0,
+        816.0,
+        1008.0,
+        1114.0,
+        1260.0,
+        1300.0,
+        1436.0,
+        1608.0,
+        1634.0
+      ],
+      "band_assignment": "552: S\u2013S / skeletal deformation | 738: unassigned | 816: unassigned | 1008: phenylalanine ring breathing | 1114: unassigned | 1260: amide III / =C\u2013H in-plane bend | 1300: CH2 twist | 1436: CH2 / CH3 scissoring | 1608: aromatic ring C=C | 1634: amide I / C=C stretch",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.3144,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm45",
+        "lsms": [
+          "sterol_steroid.m01"
+        ],
+        "classes": [
+          "sterol_steroid"
+        ],
+        "canonical_molecules": [
+          "cholesterol",
+          "cholesteryl oleate",
+          "diethylstilbestrol",
+          "estradiol",
+          "estriol"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm46",
+      "index": 46,
+      "contributing_lsms": [
+        {
+          "lsm_id": "sterol_steroid.m02",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "sterol_steroid"
+      ],
+      "supporting_analytes": [
+        "cholesterol",
+        "estradiol",
+        "estriol",
+        "estrone",
+        "ethinylestradiol"
+      ],
+      "projected_support": [
+        "estrone",
+        "ethinylestradiol"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 5,
+      "dominant_bands": [
+        500.0,
+        594.0,
+        730.0,
+        932.0,
+        968.0,
+        1008.0,
+        1258.0,
+        1340.0,
+        1436.0,
+        1616.0
+      ],
+      "band_assignment": "500: S\u2013S / skeletal deformation | 594: unassigned | 730: ring breathing | 932: C\u2013C backbone stretch | 968: unassigned | 1008: phenylalanine ring breathing | 1258: amide III / =C\u2013H in-plane bend | 1340: CH deformation / tryptophan | 1436: CH2 / CH3 scissoring | 1616: aromatic ring C=C",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4279,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "subfamily"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm46",
+        "lsms": [
+          "sterol_steroid.m02"
+        ],
+        "classes": [
+          "sterol_steroid"
+        ],
+        "canonical_molecules": [
+          "cholesterol",
+          "estradiol",
+          "estriol",
+          "estrone",
+          "ethinylestradiol"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm47",
+      "index": 47,
+      "contributing_lsms": [
+        {
+          "lsm_id": "sulfur_thiol_cofactor.m00",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "sulfur_thiol_cofactor"
+      ],
+      "supporting_analytes": [
+        "acetyl-coa",
+        "coenzyme a",
+        "glutathione"
+      ],
+      "projected_support": [],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 3,
+      "dominant_bands": [
+        526.0,
+        632.0,
+        724.0,
+        806.0,
+        886.0,
+        1036.0,
+        1334.0,
+        1410.0,
+        1510.0,
+        1668.0
+      ],
+      "band_assignment": "526: S\u2013S stretch [sulfur_thiol_cofactor] | 632: C\u2013S stretch [sulfur_thiol_cofactor] | 724: ring breathing | 806: unassigned | 886: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1036: C\u2013N / C\u2013O stretch | 1334: CH deformation / tryptophan | 1410: COO- symmetric stretch | 1510: conjugated C=C (carotenoid) | 1668: amide I / C=C stretch",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.6971,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm47",
+        "lsms": [
+          "sulfur_thiol_cofactor.m00"
+        ],
+        "classes": [
+          "sulfur_thiol_cofactor"
+        ],
+        "canonical_molecules": [
+          "acetyl-coa",
+          "coenzyme a",
+          "glutathione"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    },
+    {
+      "csm_id": "csm48",
+      "index": 48,
+      "contributing_lsms": [
+        {
+          "lsm_id": "sulfur_thiol_cofactor.m01",
+          "weight": 1.0
+        }
+      ],
+      "supporting_classes": [
+        "sulfur_thiol_cofactor"
+      ],
+      "supporting_analytes": [
+        "coenzyme a",
+        "ergothioneine",
+        "glutathione"
+      ],
+      "projected_support": [
+        "ergothioneine"
+      ],
+      "n_lsms": 1,
+      "n_classes": 1,
+      "n_analytes": 3,
+      "dominant_bands": [
+        506.0,
+        716.0,
+        908.0,
+        962.0,
+        1008.0,
+        1086.0,
+        1206.0,
+        1450.0,
+        1496.0,
+        1638.0
+      ],
+      "band_assignment": "506: S\u2013S stretch [sulfur_thiol_cofactor] | 716: ring breathing | 908: unassigned | 962: unassigned | 1008: phenylalanine ring breathing | 1086: C\u2013C skeletal (trans) / PO2- symmetric | 1206: amide III / C\u2013O\u2013C asymmetric | 1450: CH2 / CH3 scissoring | 1496: unassigned | 1638: amide I / C=C stretch",
+      "interpretation": "",
+      "diagnostic_status": "diagnostic",
+      "cohesion": 1.0,
+      "uncertainty": 0.0,
+      "bootstrap_confidence": 1.0,
+      "ev_delta_vs_lsms": 0.0,
+      "loco_survival": 1.0,
+      "source_robust": true,
+      "mean_edge_weight": 1.0,
+      "min_edge_weight": 1.0,
+      "max_external_weight": 0.4205,
+      "min_coassignment": 1.0,
+      "lsm_types": [
+        "class_shared"
+      ],
+      "is_singleton": true,
+      "is_anchored": false,
+      "is_cross_class": false,
+      "anchor_justification": null,
+      "status": "singleton",
+      "rejection_reason": null,
+      "provenance": {
+        "csm": "csm48",
+        "lsms": [
+          "sulfur_thiol_cofactor.m01"
+        ],
+        "classes": [
+          "sulfur_thiol_cofactor"
+        ],
+        "canonical_molecules": [
+          "coenzyme a",
+          "ergothioneine",
+          "glutathione"
+        ],
+        "resolves_to_spectra_via": "phase00 canonical_molecule_registry -> spectrum_id"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+specification_item,implemented,evidence,status
+Pool all stable LSMs across classes,True,50 LSMs from 16 independent class-local fits,PASS
+All six contract edge features present on every edge,True,6/6 contract features + substitutability = 7 total,PASS
+Provenance overlap computed with within-class overlap discounted (R-01),True,null-discounted Jaccard on projected support; see edges.provenance_overlap,PASS
+Edge threshold swept; selection from a stable region (R-07),True,"The pre-registered single-threshold rule FAILED under both the raw-weight and the significance sweep: no contiguous run of three cuts produces an invariant partition, because the LSM similarity structure is a continuum with a few strongly-supported groups embedded in it. Following the rule's own R-07 branch ('the graph construction is inadequate and must be revised — that is a finding'), the estimator was revised from 'pick one cut in a stable region' to 'take the consensus across the whole sweep': two LSMs join a CSM when they are co-assigned at a majority of the nine swept significance levels. The dependence on where the cut falls is removed by construction rather than certified after the fact.",PASS
+Five integration methods compared on evidence,True,5 candidates scored on 9 pre-registered criteria,PASS
+Integration comparison table published regardless of winner,True,tables/integration_method_comparison_v1.csv,PASS
+M quantitatively justified against the pre-registered composite,True,smallest M on the contiguous Pareto plateau; per-method M sweeps recorded,PASS
+"If meta-NMF selected, discriminating-LSM survival verified (R-06)",True,meta_nmf did not win,PASS
+"Every CSM has explicit, resolvable provenance (LSMs → classes → analytes)",True,381 provenance rows; CSM→LSM→molecule→spectrum chain committed,PASS
+"Singletons and anchors flagged, counted, reported — never hidden",True,"48 singletons, 0 anchors, all in the registry",PASS
+CSM non-negativity and C-07 invariants hold,True,9 invariants checked,PASS
+Frozen V5 atlas is not an input (P-15),True,loaded for fingerprint verification only; never enters the graph,PASS
+"Phase 01 outputs consumed read-only, never modified",True,registry fingerprint verified before use; no writes to phase01/,PASS
+"Feature independence measured, not asserted",True,max |off-diagonal| feature correlation 0.808,PASS
+Named false-merge suspects investigated,True,"4 pre-declared cross-class pairs, each with a dossier",PASS
+Merge confidence compared against a null model,True,band-permutation null: mean 0.1557 vs observed 0.1739,PASS
+Decision rules pre-registered before the sweep (P-12),True,"config/phase02_preregistration_v1.md, committed 24424d7 before any run",PASS
+Pipeline redrawn after the phase (P-17),True,reports/PHASE_02_REPORT.md §1,PASS

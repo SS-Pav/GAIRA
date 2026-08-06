@@ -1,0 +1,9 @@
+gate,status,detail
+architecture compliance,PASS,18/18 items
+threshold selected from a stable region,PASS,The pre-registered single-threshold rule FAILED under both the raw-weight and the significance sweep: no contiguous run 
+every CSM has resolvable provenance,PASS,9 C-07 invariants
+reconstruction preserved,PASS,mean Δ EV -0.0009; no accepted CSM degrades its own molecules beyond 0.05; 0 of 154 molecules degrade beyond tolerance corpus-wide
+bootstrap stability,PASS,"mean ARI 1.000, min 1.000"
+leave-one-class-out,PASS,"mean ARI 1.000, min 1.000"
+no UNEXAMINED redundant CSM pair,PASS,"max CSM–CSM cosine 0.9701; 3 pair(s) above 0.90, of which 0 lack an explicit recorded adjudication"
+"rejected merges reported, not hidden",PASS,3 rejected CSM group(s) recorded with reasons

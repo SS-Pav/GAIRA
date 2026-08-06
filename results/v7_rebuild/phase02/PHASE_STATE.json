@@ -1,0 +1,38 @@
+{
+  "schema": "gaira_v7_phase_state_v1",
+  "phase": "02",
+  "phase_name": "Consensus Spectral Motif construction",
+  "status": "COMPLETE",
+  "architecture_compliant": true,
+  "completed_utc": "2026-08-06T08:02:08.346705+00:00",
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "atlas_unchanged": true,
+  "phase01_registry_fingerprint": "208482d6f7178b5b8f16cace91be55b0",
+  "csm_fingerprint": "0b4aa550ccefed3edabdbde5bae11c8d",
+  "integration_method": "graph_community",
+  "consensus_operator": "leading_direction",
+  "selected_threshold": 1.0,
+  "estimator": "threshold_consensus",
+  "stable_region": [
+    0.005,
+    0.2
+  ],
+  "csms": {
+    "M": 49,
+    "accepted": 1,
+    "singleton": 48,
+    "rejected": 3,
+    "cross_class": 1
+  },
+  "reconstruction": {
+    "ev_lsm": 0.8578,
+    "ev_csm": 0.857,
+    "delta": -0.0009
+  },
+  "bootstrap": {
+    "mean_ari": 1.0,
+    "min_ari": 1.0
+  },
+  "gates_passed": 8,
+  "gates_total": 8
+}

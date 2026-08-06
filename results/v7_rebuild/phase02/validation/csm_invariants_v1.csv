@@ -1,0 +1,10 @@
+invariant,status,detail
+csm_id unique,PASS,
+CSM >= 0,PASS,
+is_singleton <=> n_lsms == 1,PASS,
+is_anchored implies justification,PASS,
+every LSM assigned to exactly one CSM,PASS,50 assignments over 50 LSMs; duplicates=0; missing=[]
+every CSM resolves to classes,PASS,
+every CSM resolves to analytes,PASS,
+n_lsms matches contributing list,PASS,
+weights sum to 1 per CSM,PASS,

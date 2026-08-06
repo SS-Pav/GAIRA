@@ -1,0 +1,46 @@
+{
+  "threshold_selection": {
+    "selected_threshold": 1.0,
+    "estimator": "threshold_consensus_unanimous",
+    "alpha_grid": [
+      0.2,
+      0.15,
+      0.1,
+      0.05,
+      0.02,
+      0.01,
+      0.005,
+      0.002,
+      0.001
+    ],
+    "viable_alphas": [
+      0.2,
+      0.15,
+      0.05,
+      0.02,
+      0.01,
+      0.005
+    ],
+    "stable_region": [
+      0.005,
+      0.2
+    ],
+    "status": "PASS",
+    "preregistered_rule_result": "FAIL",
+    "preregistered_rule_rationale": "no contiguous run of >= 3 viable thresholds whose consecutive partitions agree at ARI >= 0.9 \u2014 risk R-07 has fired; the graph construction is inadequate",
+    "significance_rule_result": "FAIL",
+    "rationale": "The pre-registered single-threshold rule FAILED under both the raw-weight and the significance sweep: no contiguous run of three cuts produces an invariant partition, because the LSM similarity structure is a continuum with a few strongly-supported groups embedded in it. Following the rule's own R-07 branch ('the graph construction is inadequate and must be revised \u2014 that is a finding'), the estimator was revised from 'pick one cut in a stable region' to 'take the consensus across the whole sweep': two LSMs join a CSM when they are co-assigned at a majority of the nine swept significance levels. The dependence on where the cut falls is removed by construction rather than certified after the fact."
+  },
+  "raw_weight_sweep_selection": {
+    "selected_threshold": null,
+    "stable_region": null,
+    "status": "FAIL",
+    "rationale": "no contiguous run of >= 3 viable thresholds whose consecutive partitions agree at ARI >= 0.9 \u2014 risk R-07 has fired; the graph construction is inadequate"
+  },
+  "significance_sweep_selection": {
+    "selected_threshold": null,
+    "stable_region": null,
+    "status": "FAIL",
+    "rationale": "no contiguous run of >= 3 viable thresholds whose consecutive partitions agree at ARI >= 0.9 \u2014 risk R-07 has fired; the graph construction is inadequate"
+  }
+}

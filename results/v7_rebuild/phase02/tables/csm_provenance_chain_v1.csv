@@ -1,0 +1,382 @@
+csm_id,lsm_id,chemical_class,canonical_id,n_spectra,sources
+csm00,acylglycerol.m01,acylglycerol,tri-11-eicosenoin,1,RamanBioLib
+csm00,acylglycerol.m01,acylglycerol,trielaidin,1,RamanBioLib
+csm00,acylglycerol.m01,acylglycerol,trierucin,1,RamanBioLib
+csm00,acylglycerol.m01,acylglycerol,trilinolein,2,RamanBioLib
+csm00,acylglycerol.m01,acylglycerol,trilinolenin,2,RamanBioLib
+csm00,acylglycerol.m01,acylglycerol,triolein,5,RamanBioLib;gobbato_raman_metabolites
+csm00,acylglycerol.m01,acylglycerol,tripalmitolein,1,RamanBioLib
+csm00,acylglycerol.m01,acylglycerol,tripetroselinin,1,RamanBioLib
+csm00,fatty_acid.m01,fatty_acid,arachidonic acid,1,RamanBioLib
+csm00,fatty_acid.m01,fatty_acid,linoleic acid,1,RamanBioLib
+csm00,fatty_acid.m01,fatty_acid,oleate,5,RamanBioLib;gobbato_raman_metabolites
+csm00,fatty_acid.m01,fatty_acid,palmitoleic acid,1,RamanBioLib
+csm00,fatty_acid.m01,fatty_acid,vaccenic acid,1,RamanBioLib
+csm00,fatty_acid.m01,fatty_acid,α-linolenic acid,1,RamanBioLib
+csm01,acylglycerol.m00,acylglycerol,tri-11-eicosenoin,1,RamanBioLib
+csm01,acylglycerol.m00,acylglycerol,tricaprin,1,RamanBioLib
+csm01,acylglycerol.m00,acylglycerol,tricaproin,1,RamanBioLib
+csm01,acylglycerol.m00,acylglycerol,tricaprylin,1,RamanBioLib
+csm01,acylglycerol.m00,acylglycerol,trielaidin,1,RamanBioLib
+csm01,acylglycerol.m00,acylglycerol,trierucin,1,RamanBioLib
+csm01,acylglycerol.m00,acylglycerol,trilaurin,1,RamanBioLib
+csm01,acylglycerol.m00,acylglycerol,trilinolein,2,RamanBioLib
+csm01,acylglycerol.m00,acylglycerol,trimyristin,1,RamanBioLib
+csm01,acylglycerol.m00,acylglycerol,triolein,5,RamanBioLib;gobbato_raman_metabolites
+csm01,acylglycerol.m00,acylglycerol,tripalmitolein,1,RamanBioLib
+csm01,acylglycerol.m00,acylglycerol,tripetroselinin,1,RamanBioLib
+csm02,acylglycerol.m02,acylglycerol,triarachidin,1,RamanBioLib
+csm02,acylglycerol.m02,acylglycerol,tribehenin,1,RamanBioLib
+csm02,acylglycerol.m02,acylglycerol,tricaprin,1,RamanBioLib
+csm02,acylglycerol.m02,acylglycerol,trielaidin,1,RamanBioLib
+csm02,acylglycerol.m02,acylglycerol,trierucin,1,RamanBioLib
+csm02,acylglycerol.m02,acylglycerol,trilaurin,1,RamanBioLib
+csm02,acylglycerol.m02,acylglycerol,trimyristin,1,RamanBioLib
+csm02,acylglycerol.m02,acylglycerol,tripalmitin,1,RamanBioLib
+csm02,acylglycerol.m02,acylglycerol,tripetroselinin,1,RamanBioLib
+csm02,acylglycerol.m02,acylglycerol,tristearin,1,RamanBioLib
+csm03,carboxylic_acid_metabolite.m00,carboxylic_acid_metabolite,acetoacetate,4,RamanBioLib;gobbato_raman_metabolites
+csm03,carboxylic_acid_metabolite.m00,carboxylic_acid_metabolite,citrate,4,RamanBioLib;gobbato_raman_metabolites
+csm03,carboxylic_acid_metabolite.m00,carboxylic_acid_metabolite,fumarate,1,RamanBioLib
+csm03,carboxylic_acid_metabolite.m00,carboxylic_acid_metabolite,malic acid,2,RamanBioLib;amino_acid_raman_grounding
+csm03,carboxylic_acid_metabolite.m00,carboxylic_acid_metabolite,pyruvate,4,RamanBioLib;gobbato_raman_metabolites
+csm03,carboxylic_acid_metabolite.m00,carboxylic_acid_metabolite,succinic acid,1,RamanBioLib
+csm04,carboxylic_acid_metabolite.m01,carboxylic_acid_metabolite,acetoacetate,4,RamanBioLib;gobbato_raman_metabolites
+csm04,carboxylic_acid_metabolite.m01,carboxylic_acid_metabolite,ascorbate,4,RamanBioLib;gobbato_raman_metabolites
+csm04,carboxylic_acid_metabolite.m01,carboxylic_acid_metabolite,citrate,4,RamanBioLib;gobbato_raman_metabolites
+csm04,carboxylic_acid_metabolite.m01,carboxylic_acid_metabolite,fumarate,1,RamanBioLib
+csm04,carboxylic_acid_metabolite.m01,carboxylic_acid_metabolite,lactate,3,gobbato_raman_metabolites
+csm04,carboxylic_acid_metabolite.m01,carboxylic_acid_metabolite,malic acid,2,RamanBioLib;amino_acid_raman_grounding
+csm04,carboxylic_acid_metabolite.m01,carboxylic_acid_metabolite,pyruvate,4,RamanBioLib;gobbato_raman_metabolites
+csm05,chromophore_pigment.m00,chromophore_pigment,carotene,1,amino_acid_raman_grounding
+csm05,chromophore_pigment.m00,chromophore_pigment,riboflavin,4,RamanBioLib;gobbato_raman_metabolites
+csm05,chromophore_pigment.m00,chromophore_pigment,β-carotene,1,RamanBioLib
+csm06,chromophore_pigment.m01,chromophore_pigment,melanin,4,RamanBioLib
+csm06,chromophore_pigment.m01,chromophore_pigment,riboflavin,4,RamanBioLib;gobbato_raman_metabolites
+csm07,fatty_acid.m00,fatty_acid,14-methylhexadecanoic acid,1,RamanBioLib
+csm07,fatty_acid.m00,fatty_acid,14-methylpentadecanoic acid,1,RamanBioLib
+csm07,fatty_acid.m00,fatty_acid,15-methylpalmiticacid,1,RamanBioLib
+csm07,fatty_acid.m00,fatty_acid,arachidic acid,1,RamanBioLib
+csm07,fatty_acid.m00,fatty_acid,lauric acid,1,RamanBioLib
+csm07,fatty_acid.m00,fatty_acid,myristic acid,2,RamanBioLib
+csm07,fatty_acid.m00,fatty_acid,oleate,5,RamanBioLib;gobbato_raman_metabolites
+csm07,fatty_acid.m00,fatty_acid,palmitic acid,2,RamanBioLib
+csm07,fatty_acid.m00,fatty_acid,stearate,5,RamanBioLib;gobbato_raman_metabolites
+csm07,fatty_acid.m00,fatty_acid,vaccenic acid,1,RamanBioLib
+csm08,fatty_acid.m02,fatty_acid,13-methylmyristicacid,1,RamanBioLib
+csm08,fatty_acid.m02,fatty_acid,14-methylhexadecanoic acid,1,RamanBioLib
+csm08,fatty_acid.m02,fatty_acid,arachidic acid,1,RamanBioLib
+csm08,fatty_acid.m02,fatty_acid,lauric acid,1,RamanBioLib
+csm08,fatty_acid.m02,fatty_acid,oleate,5,RamanBioLib;gobbato_raman_metabolites
+csm08,fatty_acid.m02,fatty_acid,palmitic acid,2,RamanBioLib
+csm08,fatty_acid.m02,fatty_acid,palmitoleic acid,1,RamanBioLib
+csm08,fatty_acid.m02,fatty_acid,stearate,5,RamanBioLib;gobbato_raman_metabolites
+csm08,fatty_acid.m02,fatty_acid,vaccenic acid,1,RamanBioLib
+csm09,fatty_acid.m03,fatty_acid,12-methyltetradecanoic acid,1,RamanBioLib
+csm09,fatty_acid.m03,fatty_acid,arachidic acid,1,RamanBioLib
+csm09,fatty_acid.m03,fatty_acid,elaidic acid,1,RamanBioLib
+csm09,fatty_acid.m03,fatty_acid,lauric acid,1,RamanBioLib
+csm09,fatty_acid.m03,fatty_acid,linoleic acid,1,RamanBioLib
+csm09,fatty_acid.m03,fatty_acid,oleate,5,RamanBioLib;gobbato_raman_metabolites
+csm09,fatty_acid.m03,fatty_acid,palmitic acid,2,RamanBioLib
+csm09,fatty_acid.m03,fatty_acid,palmitoleic acid,1,RamanBioLib
+csm09,fatty_acid.m03,fatty_acid,stearate,5,RamanBioLib;gobbato_raman_metabolites
+csm09,fatty_acid.m03,fatty_acid,vaccenic acid,1,RamanBioLib
+csm09,fatty_acid.m03,fatty_acid,α-linolenic acid,1,RamanBioLib
+csm10,fatty_acid.m04,fatty_acid,12-methyltetradecanoic acid,1,RamanBioLib
+csm10,fatty_acid.m04,fatty_acid,13-methylmyristicacid,1,RamanBioLib
+csm10,fatty_acid.m04,fatty_acid,14-methylpentadecanoic acid,1,RamanBioLib
+csm10,fatty_acid.m04,fatty_acid,15-methylpalmiticacid,1,RamanBioLib
+csm10,fatty_acid.m04,fatty_acid,arachidic acid,1,RamanBioLib
+csm10,fatty_acid.m04,fatty_acid,lauric acid,1,RamanBioLib
+csm10,fatty_acid.m04,fatty_acid,palmitic acid,2,RamanBioLib
+csm10,fatty_acid.m04,fatty_acid,stearate,5,RamanBioLib;gobbato_raman_metabolites
+csm11,free_amino_acid.m00,free_amino_acid,alanine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm11,free_amino_acid.m00,free_amino_acid,asparagine,1,RamanBioLib
+csm11,free_amino_acid.m00,free_amino_acid,aspartate,2,RamanBioLib;amino_acid_raman_grounding
+csm11,free_amino_acid.m00,free_amino_acid,glutamate,6,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm11,free_amino_acid.m00,free_amino_acid,isoleucine,3,gobbato_raman_metabolites
+csm11,free_amino_acid.m00,free_amino_acid,leucine,4,amino_acid_raman_grounding;gobbato_raman_metabolites
+csm11,free_amino_acid.m00,free_amino_acid,methionine,4,amino_acid_raman_grounding;gobbato_raman_metabolites
+csm11,free_amino_acid.m00,free_amino_acid,tryptophan,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm11,free_amino_acid.m00,free_amino_acid,valine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm12,free_amino_acid.m01,free_amino_acid,alanine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm12,free_amino_acid.m01,free_amino_acid,glutamate,6,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm12,free_amino_acid.m01,free_amino_acid,histidine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm12,free_amino_acid.m01,free_amino_acid,hydroxyproline,3,gobbato_raman_metabolites
+csm12,free_amino_acid.m01,free_amino_acid,isoleucine,3,gobbato_raman_metabolites
+csm12,free_amino_acid.m01,free_amino_acid,leucine,4,amino_acid_raman_grounding;gobbato_raman_metabolites
+csm12,free_amino_acid.m01,free_amino_acid,proline,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm12,free_amino_acid.m01,free_amino_acid,serine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm12,free_amino_acid.m01,free_amino_acid,tryptophan,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm12,free_amino_acid.m01,free_amino_acid,valine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm13,free_amino_acid.m02,free_amino_acid,cysteine,3,gobbato_raman_metabolites
+csm13,free_amino_acid.m02,free_amino_acid,glutamate,6,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm13,free_amino_acid.m02,free_amino_acid,methionine,4,amino_acid_raman_grounding;gobbato_raman_metabolites
+csm14,free_amino_acid.m03,free_amino_acid,aspartate,2,RamanBioLib;amino_acid_raman_grounding
+csm14,free_amino_acid.m03,free_amino_acid,glutamate,6,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm14,free_amino_acid.m03,free_amino_acid,glycine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm14,free_amino_acid.m03,free_amino_acid,isoleucine,3,gobbato_raman_metabolites
+csm14,free_amino_acid.m03,free_amino_acid,leucine,4,amino_acid_raman_grounding;gobbato_raman_metabolites
+csm14,free_amino_acid.m03,free_amino_acid,methionine,4,amino_acid_raman_grounding;gobbato_raman_metabolites
+csm14,free_amino_acid.m03,free_amino_acid,proline,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm14,free_amino_acid.m03,free_amino_acid,serine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm14,free_amino_acid.m03,free_amino_acid,valine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm15,free_amino_acid.m04,free_amino_acid,isoleucine,3,gobbato_raman_metabolites
+csm15,free_amino_acid.m04,free_amino_acid,phenylalanine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm15,free_amino_acid.m04,free_amino_acid,serine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm15,free_amino_acid.m04,free_amino_acid,tryptophan,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm16,free_amino_acid.m05,free_amino_acid,aspartate,2,RamanBioLib;amino_acid_raman_grounding
+csm16,free_amino_acid.m05,free_amino_acid,isoleucine,3,gobbato_raman_metabolites
+csm16,free_amino_acid.m05,free_amino_acid,leucine,4,amino_acid_raman_grounding;gobbato_raman_metabolites
+csm16,free_amino_acid.m05,free_amino_acid,phenylalanine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm16,free_amino_acid.m05,free_amino_acid,proline,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm16,free_amino_acid.m05,free_amino_acid,tyrosine,4,RamanBioLib;gobbato_raman_metabolites
+csm16,free_amino_acid.m05,free_amino_acid,valine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm17,free_amino_acid.m06,free_amino_acid,arginine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm17,free_amino_acid.m06,free_amino_acid,aspartate,2,RamanBioLib;amino_acid_raman_grounding
+csm17,free_amino_acid.m06,free_amino_acid,glutamate,6,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm17,free_amino_acid.m06,free_amino_acid,histidine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm17,free_amino_acid.m06,free_amino_acid,hydroxyproline,3,gobbato_raman_metabolites
+csm17,free_amino_acid.m06,free_amino_acid,isoleucine,3,gobbato_raman_metabolites
+csm17,free_amino_acid.m06,free_amino_acid,methionine,4,amino_acid_raman_grounding;gobbato_raman_metabolites
+csm17,free_amino_acid.m06,free_amino_acid,serine,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm18,mono_oligosaccharide.m00,mono_oligosaccharide,(+)-fucose,1,RamanBioLib
+csm18,mono_oligosaccharide.m00,mono_oligosaccharide,(+)-galactosamine,1,RamanBioLib
+csm18,mono_oligosaccharide.m00,mono_oligosaccharide,(+)-galactose,4,RamanBioLib;gobbato_raman_metabolites
+csm18,mono_oligosaccharide.m00,mono_oligosaccharide,(+)-mannose,4,RamanBioLib;gobbato_raman_metabolites
+csm18,mono_oligosaccharide.m00,mono_oligosaccharide,(+)-raffinose pentahydrate,1,RamanBioLib
+csm18,mono_oligosaccharide.m00,mono_oligosaccharide,(-)-fructose,5,RamanBioLib;gobbato_raman_metabolites
+csm18,mono_oligosaccharide.m00,mono_oligosaccharide,(-)-ribose,1,RamanBioLib
+csm19,mono_oligosaccharide.m01,mono_oligosaccharide,(+)-arabinose,1,RamanBioLib
+csm19,mono_oligosaccharide.m01,mono_oligosaccharide,(+)-galactose,4,RamanBioLib;gobbato_raman_metabolites
+csm19,mono_oligosaccharide.m01,mono_oligosaccharide,(+)-glucose,6,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm19,mono_oligosaccharide.m01,mono_oligosaccharide,(+)-lactose,2,RamanBioLib
+csm19,mono_oligosaccharide.m01,mono_oligosaccharide,(+)-mannose,4,RamanBioLib;gobbato_raman_metabolites
+csm19,mono_oligosaccharide.m01,mono_oligosaccharide,(+)-raffinose pentahydrate,1,RamanBioLib
+csm19,mono_oligosaccharide.m01,mono_oligosaccharide,(+)-sucrose,1,RamanBioLib
+csm19,mono_oligosaccharide.m01,mono_oligosaccharide,(+)-trehalose,1,RamanBioLib
+csm19,mono_oligosaccharide.m01,mono_oligosaccharide,(-)-arabinose,1,RamanBioLib
+csm19,mono_oligosaccharide.m01,mono_oligosaccharide,glycerol,4,RamanBioLib;gobbato_raman_metabolites
+csm19,mono_oligosaccharide.m01,mono_oligosaccharide,β-d-glucose,1,RamanBioLib
+csm20,mono_oligosaccharide.m02,mono_oligosaccharide,(+)-fucose,1,RamanBioLib
+csm20,mono_oligosaccharide.m02,mono_oligosaccharide,(+)-glucose,6,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm20,mono_oligosaccharide.m02,mono_oligosaccharide,(+)-lactose,2,RamanBioLib
+csm20,mono_oligosaccharide.m02,mono_oligosaccharide,(+)-maltose,1,RamanBioLib
+csm20,mono_oligosaccharide.m02,mono_oligosaccharide,(+)-mannose,4,RamanBioLib;gobbato_raman_metabolites
+csm20,mono_oligosaccharide.m02,mono_oligosaccharide,(+)-raffinose pentahydrate,1,RamanBioLib
+csm20,mono_oligosaccharide.m02,mono_oligosaccharide,(+)-sucrose,1,RamanBioLib
+csm20,mono_oligosaccharide.m02,mono_oligosaccharide,(+)-trehalose,1,RamanBioLib
+csm20,mono_oligosaccharide.m02,mono_oligosaccharide,(-)-ribose,1,RamanBioLib
+csm20,mono_oligosaccharide.m02,mono_oligosaccharide,2-deoxy-d-ribose,1,RamanBioLib
+csm20,mono_oligosaccharide.m02,mono_oligosaccharide,glycerol,4,RamanBioLib;gobbato_raman_metabolites
+csm20,mono_oligosaccharide.m02,mono_oligosaccharide,β-d-glucose,1,RamanBioLib
+csm21,mono_oligosaccharide.m03,mono_oligosaccharide,(+)-arabinose,1,RamanBioLib
+csm21,mono_oligosaccharide.m03,mono_oligosaccharide,(+)-galactose,4,RamanBioLib;gobbato_raman_metabolites
+csm21,mono_oligosaccharide.m03,mono_oligosaccharide,(+)-glucose,6,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm21,mono_oligosaccharide.m03,mono_oligosaccharide,(+)-lactose,2,RamanBioLib
+csm21,mono_oligosaccharide.m03,mono_oligosaccharide,(+)-maltose,1,RamanBioLib
+csm21,mono_oligosaccharide.m03,mono_oligosaccharide,(+)-mannose,4,RamanBioLib;gobbato_raman_metabolites
+csm21,mono_oligosaccharide.m03,mono_oligosaccharide,(+)-sucrose,1,RamanBioLib
+csm21,mono_oligosaccharide.m03,mono_oligosaccharide,(+)-trehalose,1,RamanBioLib
+csm21,mono_oligosaccharide.m03,mono_oligosaccharide,glucosamine,1,RamanBioLib
+csm21,mono_oligosaccharide.m03,mono_oligosaccharide,glycerol,4,RamanBioLib;gobbato_raman_metabolites
+csm21,mono_oligosaccharide.m03,mono_oligosaccharide,n-acetylglucosamine,4,RamanBioLib;gobbato_raman_metabolites
+csm22,mono_oligosaccharide.m04,mono_oligosaccharide,(+)-fucose,1,RamanBioLib
+csm22,mono_oligosaccharide.m04,mono_oligosaccharide,(+)-galactose,4,RamanBioLib;gobbato_raman_metabolites
+csm22,mono_oligosaccharide.m04,mono_oligosaccharide,(+)-lactose,2,RamanBioLib
+csm22,mono_oligosaccharide.m04,mono_oligosaccharide,(+)-mannose,4,RamanBioLib;gobbato_raman_metabolites
+csm22,mono_oligosaccharide.m04,mono_oligosaccharide,(+)-raffinose pentahydrate,1,RamanBioLib
+csm22,mono_oligosaccharide.m04,mono_oligosaccharide,(+)-sucrose,1,RamanBioLib
+csm22,mono_oligosaccharide.m04,mono_oligosaccharide,(+)-xylose,2,RamanBioLib
+csm22,mono_oligosaccharide.m04,mono_oligosaccharide,(-)-fructose,5,RamanBioLib;gobbato_raman_metabolites
+csm22,mono_oligosaccharide.m04,mono_oligosaccharide,(-)-ribose,1,RamanBioLib
+csm22,mono_oligosaccharide.m04,mono_oligosaccharide,2-deoxy-d-ribose,1,RamanBioLib
+csm22,mono_oligosaccharide.m04,mono_oligosaccharide,glycerol,4,RamanBioLib;gobbato_raman_metabolites
+csm22,mono_oligosaccharide.m04,mono_oligosaccharide,n-acetylglucosamine,4,RamanBioLib;gobbato_raman_metabolites
+csm23,mono_oligosaccharide.m05,mono_oligosaccharide,(+)-galactose,4,RamanBioLib;gobbato_raman_metabolites
+csm23,mono_oligosaccharide.m05,mono_oligosaccharide,(+)-lactose,2,RamanBioLib
+csm23,mono_oligosaccharide.m05,mono_oligosaccharide,(+)-maltose,1,RamanBioLib
+csm23,mono_oligosaccharide.m05,mono_oligosaccharide,(+)-mannose,4,RamanBioLib;gobbato_raman_metabolites
+csm23,mono_oligosaccharide.m05,mono_oligosaccharide,(+)-trehalose,1,RamanBioLib
+csm23,mono_oligosaccharide.m05,mono_oligosaccharide,(+)-xylose,2,RamanBioLib
+csm23,mono_oligosaccharide.m05,mono_oligosaccharide,glucosamine,1,RamanBioLib
+csm24,nucleic_acid_polymer.m00,nucleic_acid_polymer,a-dna,1,RamanBioLib
+csm24,nucleic_acid_polymer.m00,nucleic_acid_polymer,b-dna,1,RamanBioLib
+csm24,nucleic_acid_polymer.m00,nucleic_acid_polymer,t-rna,1,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,collagen,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,elastase,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,elastin,1,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,ferritin,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,glutathione transferase,2,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,keratin,1,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,major proteinase,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,papain,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,pepsin,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,pepsinogen,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,superoxide dismutases,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,thaumatin,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,triosephosphate isomerase,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,trypsin,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,trypsin inhibitor,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,trypsinogen,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,ubiquitin,3,RamanBioLib
+csm25,peptide_protein.m00,peptide_protein,α-chymotrypsinogen a (type ii),3,RamanBioLib
+csm26,peptide_protein.m01,peptide_protein,cytochrome c,2,RamanBioLib
+csm26,peptide_protein.m01,peptide_protein,hemoglobin,2,RamanBioLib
+csm26,peptide_protein.m01,peptide_protein,myoglobin,2,RamanBioLib
+csm26,peptide_protein.m01,peptide_protein,α-chymotrypsinogen a (type ii),3,RamanBioLib
+csm27,peptide_protein.m02,peptide_protein,albumin,7,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm27,peptide_protein.m02,peptide_protein,collagen,3,RamanBioLib
+csm27,peptide_protein.m02,peptide_protein,elastase,3,RamanBioLib
+csm27,peptide_protein.m02,peptide_protein,elastin,1,RamanBioLib
+csm27,peptide_protein.m02,peptide_protein,ferritin,3,RamanBioLib
+csm27,peptide_protein.m02,peptide_protein,insulin,1,RamanBioLib
+csm27,peptide_protein.m02,peptide_protein,pepsin,3,RamanBioLib
+csm27,peptide_protein.m02,peptide_protein,trypsin inhibitor,3,RamanBioLib
+csm27,peptide_protein.m02,peptide_protein,tubulin,1,RamanBioLib
+csm28,peptide_protein.m03,peptide_protein,albumin,7,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm28,peptide_protein.m03,peptide_protein,collagen,3,RamanBioLib
+csm28,peptide_protein.m03,peptide_protein,ferritin,3,RamanBioLib
+csm28,peptide_protein.m03,peptide_protein,glutathione transferase,2,RamanBioLib
+csm28,peptide_protein.m03,peptide_protein,lactalbumin,3,RamanBioLib
+csm28,peptide_protein.m03,peptide_protein,papain,3,RamanBioLib
+csm28,peptide_protein.m03,peptide_protein,pepsin,3,RamanBioLib
+csm28,peptide_protein.m03,peptide_protein,triosephosphate isomerase,3,RamanBioLib
+csm28,peptide_protein.m03,peptide_protein,trypsin inhibitor,3,RamanBioLib
+csm28,peptide_protein.m03,peptide_protein,xylanase,3,RamanBioLib
+csm29,peptide_protein.m04,peptide_protein,collagen,3,RamanBioLib
+csm29,peptide_protein.m04,peptide_protein,elastase,3,RamanBioLib
+csm29,peptide_protein.m04,peptide_protein,elastin,1,RamanBioLib
+csm29,peptide_protein.m04,peptide_protein,glucose oxidase,2,RamanBioLib
+csm29,peptide_protein.m04,peptide_protein,glutathione transferase,2,RamanBioLib
+csm29,peptide_protein.m04,peptide_protein,major proteinase,3,RamanBioLib
+csm29,peptide_protein.m04,peptide_protein,pepsin,3,RamanBioLib
+csm29,peptide_protein.m04,peptide_protein,pepsinogen,3,RamanBioLib
+csm29,peptide_protein.m04,peptide_protein,superoxide dismutases,3,RamanBioLib
+csm29,peptide_protein.m04,peptide_protein,trypsinogen,3,RamanBioLib
+csm29,peptide_protein.m04,peptide_protein,ubiquitin,3,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,albumin,7,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm30,peptide_protein.m05,peptide_protein,carbonic anhydrase,3,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,elastin,1,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,ferritin,3,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,glucose oxidase,2,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,glutathione transferase,2,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,horseradish peroxidase,2,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,insulin,1,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,keratin,1,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,lactalbumin,3,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,major proteinase,3,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,superoxide dismutases,3,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,triosephosphate isomerase,3,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,trypsin inhibitor,3,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,ubiquitin,3,RamanBioLib
+csm30,peptide_protein.m05,peptide_protein,α-chymotrypsinogen a (type ii),3,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,carbonic anhydrase,3,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,elastase,3,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,insulin,1,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,lactalbumin,3,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,lectin,3,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,pepsin,3,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,pepsinogen,3,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,superoxide dismutases,3,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,thaumatin,3,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,trypsin,3,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,trypsin inhibitor,3,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,trypsinogen,3,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,ubiquitin,3,RamanBioLib
+csm31,peptide_protein.m06,peptide_protein,α-chymotrypsinogen a (type ii),3,RamanBioLib
+csm32,peptide_protein.m07,peptide_protein,albumin,7,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm32,peptide_protein.m07,peptide_protein,elastase,3,RamanBioLib
+csm32,peptide_protein.m07,peptide_protein,ferritin,3,RamanBioLib
+csm32,peptide_protein.m07,peptide_protein,glutathione transferase,2,RamanBioLib
+csm32,peptide_protein.m07,peptide_protein,insulin,1,RamanBioLib
+csm32,peptide_protein.m07,peptide_protein,keratin,1,RamanBioLib
+csm32,peptide_protein.m07,peptide_protein,lactalbumin,3,RamanBioLib
+csm32,peptide_protein.m07,peptide_protein,major proteinase,3,RamanBioLib
+csm32,peptide_protein.m07,peptide_protein,papain,3,RamanBioLib
+csm32,peptide_protein.m07,peptide_protein,pepsinogen,3,RamanBioLib
+csm32,peptide_protein.m07,peptide_protein,thaumatin,3,RamanBioLib
+csm32,peptide_protein.m07,peptide_protein,trypsin,3,RamanBioLib
+csm32,peptide_protein.m07,peptide_protein,trypsin inhibitor,3,RamanBioLib
+csm32,peptide_protein.m07,peptide_protein,trypsinogen,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,carbonic anhydrase,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,elastase,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,ferritin,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,glutathione transferase,2,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,horseradish peroxidase,2,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,keratin,1,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,lactalbumin,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,lectin,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,major proteinase,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,papain,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,pepsin,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,pepsinogen,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,thaumatin,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,triosephosphate isomerase,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,trypsin,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,trypsinogen,3,RamanBioLib
+csm33,peptide_protein.m08,peptide_protein,α-chymotrypsinogen a (type ii),3,RamanBioLib
+csm34,peptide_protein.m09,peptide_protein,albumin,7,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm34,peptide_protein.m09,peptide_protein,carbonic anhydrase,3,RamanBioLib
+csm34,peptide_protein.m09,peptide_protein,elastase,3,RamanBioLib
+csm34,peptide_protein.m09,peptide_protein,ferritin,3,RamanBioLib
+csm34,peptide_protein.m09,peptide_protein,hemoglobin,2,RamanBioLib
+csm34,peptide_protein.m09,peptide_protein,horseradish peroxidase,2,RamanBioLib
+csm34,peptide_protein.m09,peptide_protein,lectin,3,RamanBioLib
+csm34,peptide_protein.m09,peptide_protein,myoglobin,2,RamanBioLib
+csm34,peptide_protein.m09,peptide_protein,pepsin,3,RamanBioLib
+csm34,peptide_protein.m09,peptide_protein,thaumatin,3,RamanBioLib
+csm35,phosphate_metabolite.m00,phosphate_metabolite,fructose-6-phosphate,4,RamanBioLib;gobbato_raman_metabolites
+csm35,phosphate_metabolite.m00,phosphate_metabolite,phosphate,3,gobbato_raman_metabolites
+csm35,phosphate_metabolite.m00,phosphate_metabolite,phosphoenolpyruvate,4,RamanBioLib;gobbato_raman_metabolites
+csm36,phospholipid_sphingolipid.m00,phospholipid_sphingolipid,ceramide,2,RamanBioLib
+csm36,phospholipid_sphingolipid.m00,phospholipid_sphingolipid,sphingomyelin,1,RamanBioLib
+csm36,phospholipid_sphingolipid.m00,phospholipid_sphingolipid,α-phosphatidylcholine,1,RamanBioLib
+csm36,phospholipid_sphingolipid.m00,phospholipid_sphingolipid,α-phosphatidylethanolamine,1,RamanBioLib
+csm37,phospholipid_sphingolipid.m01,phospholipid_sphingolipid,phosphatidylinositol,3,gobbato_raman_metabolites
+csm37,phospholipid_sphingolipid.m01,phospholipid_sphingolipid,α-phosphatidylcholine,1,RamanBioLib
+csm37,phospholipid_sphingolipid.m01,phospholipid_sphingolipid,α-phosphatidylethanolamine,1,RamanBioLib
+csm38,polysaccharide.m00,polysaccharide,amylopectin,2,RamanBioLib
+csm38,polysaccharide.m00,polysaccharide,amylose,2,RamanBioLib
+csm38,polysaccharide.m00,polysaccharide,chitin,1,RamanBioLib
+csm38,polysaccharide.m00,polysaccharide,glycogen,4,RamanBioLib;gobbato_raman_metabolites
+csm39,polysaccharide.m01,polysaccharide,amylose,2,RamanBioLib
+csm39,polysaccharide.m01,polysaccharide,cellulose,1,RamanBioLib
+csm39,polysaccharide.m01,polysaccharide,chitin,1,RamanBioLib
+csm39,polysaccharide.m01,polysaccharide,glycogen,4,RamanBioLib;gobbato_raman_metabolites
+csm40,purine.m00,purine,adenine,4,RamanBioLib;gobbato_raman_metabolites
+csm40,purine.m00,purine,hypoxanthine,3,gobbato_raman_metabolites
+csm40,purine.m00,purine,urate,3,gobbato_raman_metabolites
+csm40,purine.m00,purine,xanthine,3,gobbato_raman_metabolites
+csm41,purine.m01,purine,adenine,4,RamanBioLib;gobbato_raman_metabolites
+csm41,purine.m01,purine,guanine,4,RamanBioLib;gobbato_raman_metabolites
+csm41,purine.m01,purine,hypoxanthine,3,gobbato_raman_metabolites
+csm41,purine.m01,purine,xanthine,3,gobbato_raman_metabolites
+csm42,pyrimidine.m00,pyrimidine,cytosine,1,RamanBioLib
+csm42,pyrimidine.m00,pyrimidine,thymine,4,RamanBioLib;gobbato_raman_metabolites
+csm42,pyrimidine.m00,pyrimidine,uracil,4,RamanBioLib;gobbato_raman_metabolites
+csm43,small_nitrogenous.m00,small_nitrogenous,creatinine,3,gobbato_raman_metabolites
+csm43,small_nitrogenous.m00,small_nitrogenous,urea,4,amino_acid_raman_grounding;gobbato_raman_metabolites
+csm44,sterol_steroid.m00,sterol_steroid,cholesterol,4,RamanBioLib;gobbato_raman_metabolites
+csm44,sterol_steroid.m00,sterol_steroid,cholesteryl linoleate,1,RamanBioLib
+csm44,sterol_steroid.m00,sterol_steroid,cholesteryl oleate,1,RamanBioLib
+csm44,sterol_steroid.m00,sterol_steroid,cholesteryl palmitate,1,RamanBioLib
+csm44,sterol_steroid.m00,sterol_steroid,cholesteryl stearate,1,RamanBioLib
+csm44,sterol_steroid.m00,sterol_steroid,ethinylestradiol,1,RamanBioLib
+csm45,sterol_steroid.m01,sterol_steroid,cholesterol,4,RamanBioLib;gobbato_raman_metabolites
+csm45,sterol_steroid.m01,sterol_steroid,cholesteryl oleate,1,RamanBioLib
+csm45,sterol_steroid.m01,sterol_steroid,diethylstilbestrol,1,RamanBioLib
+csm45,sterol_steroid.m01,sterol_steroid,estradiol,1,RamanBioLib
+csm45,sterol_steroid.m01,sterol_steroid,estriol,1,RamanBioLib
+csm46,sterol_steroid.m02,sterol_steroid,cholesterol,4,RamanBioLib;gobbato_raman_metabolites
+csm46,sterol_steroid.m02,sterol_steroid,estradiol,1,RamanBioLib
+csm46,sterol_steroid.m02,sterol_steroid,estriol,1,RamanBioLib
+csm46,sterol_steroid.m02,sterol_steroid,estrone,1,RamanBioLib
+csm46,sterol_steroid.m02,sterol_steroid,ethinylestradiol,1,RamanBioLib
+csm47,sulfur_thiol_cofactor.m00,sulfur_thiol_cofactor,acetyl-coa,4,RamanBioLib;gobbato_raman_metabolites
+csm47,sulfur_thiol_cofactor.m00,sulfur_thiol_cofactor,coenzyme a,4,RamanBioLib;gobbato_raman_metabolites
+csm47,sulfur_thiol_cofactor.m00,sulfur_thiol_cofactor,glutathione,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+csm48,sulfur_thiol_cofactor.m01,sulfur_thiol_cofactor,coenzyme a,4,RamanBioLib;gobbato_raman_metabolites
+csm48,sulfur_thiol_cofactor.m01,sulfur_thiol_cofactor,ergothioneine,3,gobbato_raman_metabolites
+csm48,sulfur_thiol_cofactor.m01,sulfur_thiol_cofactor,glutathione,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
