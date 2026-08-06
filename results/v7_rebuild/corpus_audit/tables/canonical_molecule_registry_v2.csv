@@ -1,0 +1,155 @@
+canonical_id,n_source_labels,source_labels,normalized_labels,source_datasets,n_spectra,n_excitations,excitations,chemistry_class,class_conflict,structure_identifier,identifier_source
+(+)-arabinose,1,l-(+)-arabinose,(+)-arabinose,RamanBioLib,1,1,1064.0,mono_oligosaccharide,False,,none available in source data
+(+)-fucose,1,d-(+)-fucose,(+)-fucose,RamanBioLib,1,1,785.0,mono_oligosaccharide,False,,none available in source data
+(+)-galactosamine,1,d-(+)-galactosamine,(+)-galactosamine,RamanBioLib,1,1,785.0,mono_oligosaccharide,False,,none available in source data
+(+)-galactose,2,d-(+)-galactose;galactose,(+)-galactose;galactose,RamanBioLib;gobbato_raman_metabolites,4,2,785.0;1064.0,mono_oligosaccharide,False,,none available in source data
+(+)-glucose,3,d-(+)-dextrose;d-(+)-glucose;glucose,(+)-dextrose;(+)-glucose;glucose,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,6,2,785.0;1064.0,mono_oligosaccharide,False,,none available in source data
+(+)-lactose,2,d-(+)-lactose monohydrate;lactose,(+)-lactose;lactose,RamanBioLib,2,2,785.0;1064.0,mono_oligosaccharide,False,,none available in source data
+(+)-maltose,1,d-(+)-maltose monohydrate,(+)-maltose,RamanBioLib,1,1,1064.0,mono_oligosaccharide,False,,none available in source data
+(+)-mannose,2,d-(+)-mannose;mannose,(+)-mannose;mannose,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,mono_oligosaccharide,False,,none available in source data
+(+)-raffinose pentahydrate,1,d-(+)-raffinose pentahydrate,(+)-raffinose pentahydrate,RamanBioLib,1,1,1064.0,mono_oligosaccharide,False,,none available in source data
+(+)-sucrose,1,d-(+)-sucrose,(+)-sucrose,RamanBioLib,1,1,1064.0,mono_oligosaccharide,False,,none available in source data
+(+)-trehalose,1,d-(+)-trehalose,(+)-trehalose,RamanBioLib,1,1,785.0,mono_oligosaccharide,False,,none available in source data
+(+)-xylose,1,d-(+)-xylose,(+)-xylose,RamanBioLib,2,2,785.0;1064.0,mono_oligosaccharide,False,,none available in source data
+(-)-arabinose,1,d-(-)-arabinose,(-)-arabinose,RamanBioLib,1,1,785.0,mono_oligosaccharide,False,,none available in source data
+(-)-fructose,2,d-(-)-fructose;fructose,(-)-fructose;fructose,RamanBioLib;gobbato_raman_metabolites,5,2,785.0;1064.0,mono_oligosaccharide,False,,none available in source data
+(-)-ribose,1,d-(-)-ribose,(-)-ribose,RamanBioLib,1,1,1064.0,mono_oligosaccharide,False,,none available in source data
+12-methyltetradecanoic acid,1,12-methyltetradecanoic acid,12-methyltetradecanoic acid,RamanBioLib,1,1,785.0,fatty_acid,False,,none available in source data
+13-methylmyristicacid,1,13-methylmyristicacid,13-methylmyristicacid,RamanBioLib,1,1,785.0,fatty_acid,False,,none available in source data
+14-methylhexadecanoic acid,1,14-methylhexadecanoic acid,14-methylhexadecanoic acid,RamanBioLib,1,1,785.0,fatty_acid,False,,none available in source data
+14-methylpentadecanoic acid,1,14-methylpentadecanoic acid,14-methylpentadecanoic acid,RamanBioLib,1,1,785.0,fatty_acid,False,,none available in source data
+15-methylpalmiticacid,1,15-methylpalmiticacid,15-methylpalmiticacid,RamanBioLib,1,1,785.0,fatty_acid,False,,none available in source data
+2-deoxy-d-ribose,1,2-deoxy-d-ribose,2-deoxy-d-ribose,RamanBioLib,1,1,1064.0,mono_oligosaccharide,False,,none available in source data
+a-dna,1,a-dna,a-dna,RamanBioLib,1,1,514.5,nucleic_acid_polymer,False,,none available in source data
+acetoacetate,1,acetoacetate,acetoacetate,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,carboxylic_acid_metabolite,False,,none available in source data
+acetyl-coa,2,acetyl coenzyme a;acetyl-coa,acetyl coenzyme a;acetyl-coa,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,sulfur_thiol_cofactor,False,,none available in source data
+adenine,1,adenine,adenine,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,purine,False,,none available in source data
+alanine,3,ala;alanine;l-alanine,alanine,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1,785.0,free_amino_acid,False,,none available in source data
+albumin,2,alb;albumin,alb;albumin,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,7,4,488.0;532.0;785.0;1064.0,peptide_protein,False,,none available in source data
+amylopectin,1,amylopectin,amylopectin,RamanBioLib,2,2,785.0;1064.0,polysaccharide,False,,none available in source data
+amylose,1,amylose,amylose,RamanBioLib,2,2,785.0;1064.0,polysaccharide,False,,none available in source data
+arachidic acid,1,arachidic acid,arachidic acid,RamanBioLib,1,1,532.0,fatty_acid,False,,none available in source data
+arachidonic acid,1,arachidonic acid,arachidonic acid,RamanBioLib,1,1,532.0,fatty_acid,False,,none available in source data
+arginine,3,arg;arginine;l-arginine,arginine,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1,785.0,free_amino_acid,False,,none available in source data
+ascorbate,2,ascorbate;ascorbic acid,ascorbate,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,carboxylic_acid_metabolite,False,,none available in source data
+asparagine,1,l-asparagine,asparagine,RamanBioLib,1,1,488.0,free_amino_acid,False,,none available in source data
+aspartate,2,asp;l-aspartic acid,aspartate;aspartic acid,RamanBioLib;amino_acid_raman_grounding,2,2,488.0;785.0,free_amino_acid,False,,none available in source data
+b-dna,1,b-dna,b-dna,RamanBioLib,1,1,514.5,nucleic_acid_polymer,False,,none available in source data
+carbonic anhydrase,1,carbonic anhydrase,carbonic anhydrase,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+carotene,1,carotene,carotene,amino_acid_raman_grounding,1,1,785.0,chromophore_pigment,False,,none available in source data
+cellulose,1,cellulose,cellulose,RamanBioLib,1,1,785.0,polysaccharide,False,,none available in source data
+ceramide,1,ceramide,ceramide,RamanBioLib,2,2,850.0;1064.0,phospholipid_sphingolipid,False,,none available in source data
+chitin,1,chitin,chitin,RamanBioLib,1,1,785.0,polysaccharide,False,,none available in source data
+cholesterol,1,cholesterol,cholesterol,RamanBioLib;gobbato_raman_metabolites,4,2,532.0;785.0,sterol_steroid,False,,none available in source data
+cholesteryl linoleate,1,cholesteryl linoleate,cholesteryl linoleate,RamanBioLib,1,1,532.0,sterol_steroid,False,,none available in source data
+cholesteryl oleate,1,cholesteryl oleate,cholesteryl oleate,RamanBioLib,1,1,532.0,sterol_steroid,False,,none available in source data
+cholesteryl palmitate,1,cholesteryl palmitate,cholesteryl palmitate,RamanBioLib,1,1,532.0,sterol_steroid,False,,none available in source data
+cholesteryl stearate,1,cholesteryl stearate,cholesteryl stearate,RamanBioLib,1,1,532.0,sterol_steroid,False,,none available in source data
+citrate,2,citrate;citric acid,citrate,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,carboxylic_acid_metabolite,False,,none available in source data
+coenzyme a,1,coenzyme a,coenzyme a,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,sulfur_thiol_cofactor,False,,none available in source data
+collagen,1,collagen,collagen,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+creatinine,1,creatinine,creatinine,gobbato_raman_metabolites,3,1,785.0,small_nitrogenous,False,,none available in source data
+cysteine,1,cysteine,cysteine,gobbato_raman_metabolites,3,1,785.0,free_amino_acid,False,,none available in source data
+cytochrome c,1,cytochrome c,cytochrome c,RamanBioLib,2,2,488.0;532.0,peptide_protein,False,,none available in source data
+cytosine,1,cytosine,cytosine,RamanBioLib,1,1,785.0,pyrimidine,False,,none available in source data
+diethylstilbestrol,1,diethylstilbestrol,diethylstilbestrol,RamanBioLib,1,1,532.0,sterol_steroid,False,,none available in source data
+elaidic acid,1,elaidic acid,elaidic acid,RamanBioLib,1,1,532.0,fatty_acid,False,,none available in source data
+elastase,1,elastase,elastase,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+elastin,1,elastin,elastin,RamanBioLib,1,1,1064.0,peptide_protein,False,,none available in source data
+ergothioneine,1,ergothioneine,ergothioneine,gobbato_raman_metabolites,3,1,785.0,sulfur_thiol_cofactor,False,,none available in source data
+estradiol,1,estradiol,estradiol,RamanBioLib,1,1,532.0,sterol_steroid,False,,none available in source data
+estriol,1,estriol,estriol,RamanBioLib,1,1,532.0,sterol_steroid,False,,none available in source data
+estrone,1,estrone,estrone,RamanBioLib,1,1,532.0,sterol_steroid,False,,none available in source data
+ethinylestradiol,1,ethinylestradiol,ethinylestradiol,RamanBioLib,1,1,532.0,sterol_steroid,False,,none available in source data
+ferritin,1,ferritin,ferritin,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+fructose-6-phosphate,2,d-fructose-6-phosphate;fructose-6-phosphate,fructose-6-phosphate,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,phosphate_metabolite,False,,none available in source data
+fumarate,1,fumarate,fumarate,RamanBioLib,1,1,785.0,carboxylic_acid_metabolite,False,,none available in source data
+glucosamine,1,glucosamine,glucosamine,RamanBioLib,1,1,488.0,mono_oligosaccharide,False,,none available in source data
+glucose oxidase,1,glucose oxidase,glucose oxidase,RamanBioLib,2,2,532.0;1064.0,peptide_protein,False,,none available in source data
+glutamate,4,glutamate;glutamic acid;l-glu;l-glutamate,glutamate,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,6,1,785.0,free_amino_acid,False,,none available in source data
+glutathione,2,glutathione;gluth,glutathione;gluth,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1,785.0,sulfur_thiol_cofactor,False,,none available in source data
+glutathione transferase,1,glutathione transferase,glutathione transferase,RamanBioLib,2,2,488.0;532.0,peptide_protein,False,,none available in source data
+glycerol,1,glycerol,glycerol,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,mono_oligosaccharide,False,,none available in source data
+glycine,2,gly;glycine,glycine,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1,785.0,free_amino_acid,False,,none available in source data
+glycogen,1,glycogen,glycogen,RamanBioLib;gobbato_raman_metabolites,4,2,785.0;1064.0,polysaccharide,False,,none available in source data
+guanine,1,guanine,guanine,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,purine,False,,none available in source data
+hemoglobin,1,hemoglobin,hemoglobin,RamanBioLib,2,2,488.0;532.0,peptide_protein,False,,none available in source data
+histidine,3,his;histidine;l-histidine,histidine,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1,785.0,free_amino_acid,False,,none available in source data
+horseradish peroxidase,1,horseradish peroxidase,horseradish peroxidase,RamanBioLib,2,2,488.0;532.0,peptide_protein,False,,none available in source data
+hydroxyproline,1,hydroxyproline,hydroxyproline,gobbato_raman_metabolites,3,1,785.0,free_amino_acid,False,,none available in source data
+hypoxanthine,1,hypoxanthine,hypoxanthine,gobbato_raman_metabolites,3,1,785.0,purine,False,,none available in source data
+insulin,1,insulin,insulin,RamanBioLib,1,1,633.0,peptide_protein,False,,none available in source data
+isoleucine,1,isoleucine,isoleucine,gobbato_raman_metabolites,3,1,785.0,free_amino_acid,False,,none available in source data
+keratin,1,keratin,keratin,RamanBioLib,1,1,1064.0,peptide_protein,False,,none available in source data
+lactalbumin,1,lactalbumin,lactalbumin,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+lactate,1,lactate,lactate,gobbato_raman_metabolites,3,1,785.0,carboxylic_acid_metabolite,False,,none available in source data
+lauric acid,1,lauric acid,lauric acid,RamanBioLib,1,1,785.0,fatty_acid,False,,none available in source data
+lectin,1,lectin,lectin,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+leucine,2,leu;leucine,leucine,amino_acid_raman_grounding;gobbato_raman_metabolites,4,1,785.0,free_amino_acid,False,,none available in source data
+linoleic acid,1,linoleic acid,linoleic acid,RamanBioLib,1,1,532.0,fatty_acid,False,,none available in source data
+major proteinase,1,major proteinase,major proteinase,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+malic acid,1,malic acid,malic acid,RamanBioLib;amino_acid_raman_grounding,2,1,785.0,carboxylic_acid_metabolite,False,,none available in source data
+melanin,1,melanin,melanin,RamanBioLib,4,4,457.9;514.5;632.8;785.0,chromophore_pigment,False,,none available in source data
+methionine,2,met;methionine,methionine,amino_acid_raman_grounding;gobbato_raman_metabolites,4,1,785.0,free_amino_acid,False,,none available in source data
+myoglobin,1,myoglobin,myoglobin,RamanBioLib,2,2,488.0;532.0,peptide_protein,False,,none available in source data
+myristic acid,1,myristic acid,myristic acid,RamanBioLib,2,2,532.0;785.0,fatty_acid,False,,none available in source data
+n-acetylglucosamine,2,n-acetyl- d-glucosamine;n-acetylglucosamine,n-acetyl- d-glucosamine;n-acetylglucosamine,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,mono_oligosaccharide,False,,none available in source data
+oleate,2,oleate;oleic acid,oleate,RamanBioLib;gobbato_raman_metabolites,5,2,532.0;785.0,fatty_acid,False,,none available in source data
+palmitic acid,1,palmitic acid,palmitic acid,RamanBioLib,2,2,532.0;785.0,fatty_acid,False,,none available in source data
+palmitoleic acid,1,palmitoleic acid,palmitoleic acid,RamanBioLib,1,1,532.0,fatty_acid,False,,none available in source data
+papain,1,papain,papain,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+pepsin,1,pepsin,pepsin,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+pepsinogen,1,pepsinogen,pepsinogen,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+phenylalanine,3,l-phenylalanine;phe;phenylalanine,phenylalanine,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1,785.0,free_amino_acid,False,,none available in source data
+phosphate,1,phosphate,phosphate,gobbato_raman_metabolites,3,1,785.0,phosphate_metabolite,False,,none available in source data
+phosphatidylinositol,1,phosphatidylinositol,phosphatidylinositol,gobbato_raman_metabolites,3,1,785.0,phospholipid_sphingolipid,False,,none available in source data
+phosphoenolpyruvate,1,phosphoenolpyruvate,phosphoenolpyruvate,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,phosphate_metabolite,False,,none available in source data
+proline,3,l-proline;pro;proline,proline,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1,785.0,free_amino_acid,False,,none available in source data
+pyruvate,1,pyruvate,pyruvate,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,carboxylic_acid_metabolite,False,,none available in source data
+riboflavin,2,riboflavin;riboﬂavin,riboflavin;riboﬂavin,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,chromophore_pigment,False,,none available in source data
+serine,3,l-serine;ser;serine,serine,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1,785.0,free_amino_acid,False,,none available in source data
+sphingomyelin,1,sphingomyelin,sphingomyelin,RamanBioLib,1,1,532.0,phospholipid_sphingolipid,False,,none available in source data
+stearate,2,stearate;stearic acid,stearate,RamanBioLib;gobbato_raman_metabolites,5,2,532.0;785.0,fatty_acid,False,,none available in source data
+succinic acid,1,succinic acid,succinic acid,RamanBioLib,1,1,785.0,carboxylic_acid_metabolite,False,,none available in source data
+superoxide dismutases,1,superoxide dismutases,superoxide dismutases,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+t-rna,1,t-rna,t-rna,RamanBioLib,1,1,488.0,nucleic_acid_polymer,False,,none available in source data
+thaumatin,1,thaumatin,thaumatin,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+thymine,1,thymine,thymine,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,pyrimidine,False,,none available in source data
+tri-11-eicosenoin,1,tri-11-eicosenoin,tri-11-eicosenoin,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+triarachidin,1,triarachidin,triarachidin,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+tribehenin,1,tribehenin,tribehenin,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+tricaprin,1,tricaprin,tricaprin,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+tricaproin,1,tricaproin,tricaproin,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+tricaprylin,1,tricaprylin,tricaprylin,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+trielaidin,1,trielaidin,trielaidin,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+trierucin,1,trierucin,trierucin,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+trilaurin,1,trilaurin,trilaurin,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+trilinolein,1,trilinolein,trilinolein,RamanBioLib,2,2,785.0;1064.0,acylglycerol,False,,none available in source data
+trilinolenin,1,trilinolenin,trilinolenin,RamanBioLib,2,2,785.0;1064.0,acylglycerol,False,,none available in source data
+trimyristin,1,trimyristin,trimyristin,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+triolein,1,triolein,triolein,RamanBioLib;gobbato_raman_metabolites,5,2,785.0;1064.0,acylglycerol,False,,none available in source data
+triosephosphate isomerase,1,triosephosphate isomerase,triosephosphate isomerase,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+tripalmitin,1,tripalmitin,tripalmitin,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+tripalmitolein,1,tripalmitolein,tripalmitolein,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+tripetroselinin,1,tripetroselinin,tripetroselinin,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+tristearin,1,tristearin,tristearin,RamanBioLib,1,1,1064.0,acylglycerol,False,,none available in source data
+trypsin,1,trypsin,trypsin,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+trypsin inhibitor,1,trypsin inhibitor,trypsin inhibitor,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+trypsinogen,1,trypsinogen,trypsinogen,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+tryptophan,3,l-tryptophan;trp;tryptophan,tryptophan,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1,785.0,free_amino_acid,False,,none available in source data
+tubulin,1,tubulin,tubulin,RamanBioLib,1,1,532.0,peptide_protein,False,,none available in source data
+tyrosine,2,l-tyrosine;tyrosine,tyrosine,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,free_amino_acid,False,,none available in source data
+ubiquitin,1,ubiquitin,ubiquitin,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+uracil,1,uracil,uracil,RamanBioLib;gobbato_raman_metabolites,4,1,785.0,pyrimidine,False,,none available in source data
+urate,1,urate,urate,gobbato_raman_metabolites,3,1,785.0,purine,False,,none available in source data
+urea,2,ure;urea,ure;urea,amino_acid_raman_grounding;gobbato_raman_metabolites,4,1,785.0,small_nitrogenous,False,,none available in source data
+vaccenic acid,1,vaccenic acid,vaccenic acid,RamanBioLib,1,1,785.0,fatty_acid,False,,none available in source data
+valine,2,l-valine;valine,valine,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1,785.0,free_amino_acid,False,,none available in source data
+xanthine,1,xanthine,xanthine,gobbato_raman_metabolites,3,1,785.0,purine,False,,none available in source data
+xylanase,1,xylanase,xylanase,RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+α-chymotrypsinogen a (type ii),1,α-chymotrypsinogen a (type ii),α-chymotrypsinogen a (type ii),RamanBioLib,3,3,488.0;532.0;1064.0,peptide_protein,False,,none available in source data
+α-linolenic acid,1,α-linolenic acid,α-linolenic acid,RamanBioLib,1,1,532.0,fatty_acid,False,,none available in source data
+α-phosphatidylcholine,1,l-α-phosphatidylcholine,α-phosphatidylcholine,RamanBioLib,1,1,532.0,phospholipid_sphingolipid,False,,none available in source data
+α-phosphatidylethanolamine,1,l-α-phosphatidylethanolamine,α-phosphatidylethanolamine,RamanBioLib,1,1,532.0,phospholipid_sphingolipid,False,,none available in source data
+β-carotene,1,β-carotene,β-carotene,RamanBioLib,1,1,785.0,chromophore_pigment,False,,none available in source data
+β-d-glucose,1,β-d-glucose,β-d-glucose,RamanBioLib,1,1,785.0,mono_oligosaccharide,False,,none available in source data

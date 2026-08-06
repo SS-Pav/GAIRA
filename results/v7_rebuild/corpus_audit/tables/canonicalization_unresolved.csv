@@ -1,0 +1,3 @@
+item,kind,detail,action
+carotene vs β-carotene,11 unresolved,"loose-key collision across two sources, both chromophore_pigment; the source spreadsheet does not state which carotene isomer it holds",NOT merged; recorded as unresolved
+"RamanBioLib id 197 (insulin), 'Gold-coated glass sustrate' @633 nm",modality provenance,"gold + 633 nm is a plasmonic combination, but a SMOOTH gold-coated slide is a standard non-enhancing reflective substrate for normal Raman; the source library declares Raman and gives no roughening/nanostructure field","RETAINED, flagged; sensitivity tested"

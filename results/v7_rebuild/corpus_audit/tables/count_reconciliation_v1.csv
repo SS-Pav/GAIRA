@@ -1,0 +1,6 @@
+step,count,note,delta_from_previous
+A  raw Raman spectra (files/columns loaded),375,,0
+"B  dataset-specific source labels (source, label)",212,same label in two libraries counted twice,-163
+B' distinct raw label strings,194,cross-source identical strings collapsed,-18
+C  normalized analyte names (V5 synonyms layer),167,"L-/D- prefixes, acid/base names, salt forms",-27
+D  canonical molecule IDs (V7 layer),154,"NFKC, truncations, cross-source duplicates",-13

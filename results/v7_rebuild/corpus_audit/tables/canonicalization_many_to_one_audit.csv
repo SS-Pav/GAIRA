@@ -1,0 +1,31 @@
+canonical_id,n_source_labels,source_labels,normalized_labels,n_source_datasets,source_datasets,n_spectra,merge_classification,cross_source
+(+)-galactose,2,d-(+)-galactose;galactose,(+)-galactose;galactose,2,RamanBioLib;gobbato_raman_metabolites,4,7 stereoisomer prefix (generic→specific),True
+(+)-glucose,3,d-(+)-dextrose;d-(+)-glucose;glucose,(+)-dextrose;(+)-glucose;glucose,3,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,6,4 common vs systematic name;7 stereoisomer prefix (generic→specific),True
+(+)-lactose,2,d-(+)-lactose monohydrate;lactose,(+)-lactose;lactose,1,RamanBioLib,2,7 stereoisomer prefix (generic→specific),False
+(+)-mannose,2,d-(+)-mannose;mannose,(+)-mannose;mannose,2,RamanBioLib;gobbato_raman_metabolites,4,7 stereoisomer prefix (generic→specific),True
+(-)-fructose,2,d-(-)-fructose;fructose,(-)-fructose;fructose,2,RamanBioLib;gobbato_raman_metabolites,5,7 stereoisomer prefix (generic→specific),True
+acetyl-coa,2,acetyl coenzyme a;acetyl-coa,acetyl coenzyme a;acetyl-coa,2,RamanBioLib;gobbato_raman_metabolites,4,4 common vs systematic name,True
+alanine,3,ala;alanine;l-alanine,alanine,3,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1 spelling/formatting,True
+albumin,2,alb;albumin,alb;albumin,3,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,7,3 abbreviation,True
+arginine,3,arg;arginine;l-arginine,arginine,3,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1 spelling/formatting,True
+ascorbate,2,ascorbate;ascorbic acid,ascorbate,2,RamanBioLib;gobbato_raman_metabolites,4,1 spelling/formatting,True
+aspartate,2,asp;l-aspartic acid,aspartate;aspartic acid,2,RamanBioLib;amino_acid_raman_grounding,2,5 salt/free-acid equivalence,True
+citrate,2,citrate;citric acid,citrate,2,RamanBioLib;gobbato_raman_metabolites,4,1 spelling/formatting,True
+fructose-6-phosphate,2,d-fructose-6-phosphate;fructose-6-phosphate,fructose-6-phosphate,2,RamanBioLib;gobbato_raman_metabolites,4,1 spelling/formatting,True
+glutamate,4,glutamate;glutamic acid;l-glu;l-glutamate,glutamate,3,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,6,1 spelling/formatting,True
+glutathione,2,glutathione;gluth,glutathione;gluth,3,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,3 abbreviation,True
+glycine,2,gly;glycine,glycine,3,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1 spelling/formatting,True
+histidine,3,his;histidine;l-histidine,histidine,3,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1 spelling/formatting,True
+leucine,2,leu;leucine,leucine,2,amino_acid_raman_grounding;gobbato_raman_metabolites,4,1 spelling/formatting,True
+methionine,2,met;methionine,methionine,2,amino_acid_raman_grounding;gobbato_raman_metabolites,4,1 spelling/formatting,True
+n-acetylglucosamine,2,n-acetyl- d-glucosamine;n-acetylglucosamine,n-acetyl- d-glucosamine;n-acetylglucosamine,2,RamanBioLib;gobbato_raman_metabolites,4,1 spelling/formatting,True
+oleate,2,oleate;oleic acid,oleate,2,RamanBioLib;gobbato_raman_metabolites,5,1 spelling/formatting,True
+phenylalanine,3,l-phenylalanine;phe;phenylalanine,phenylalanine,3,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1 spelling/formatting,True
+proline,3,l-proline;pro;proline,proline,3,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1 spelling/formatting,True
+riboflavin,2,riboflavin;riboﬂavin,riboflavin;riboﬂavin,2,RamanBioLib;gobbato_raman_metabolites,4,2 Unicode normalization,True
+serine,3,l-serine;ser;serine,serine,3,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1 spelling/formatting,True
+stearate,2,stearate;stearic acid,stearate,2,RamanBioLib;gobbato_raman_metabolites,5,1 spelling/formatting,True
+tryptophan,3,l-tryptophan;trp;tryptophan,tryptophan,3,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1 spelling/formatting,True
+tyrosine,2,l-tyrosine;tyrosine,tyrosine,2,RamanBioLib;gobbato_raman_metabolites,4,1 spelling/formatting,True
+urea,2,ure;urea,ure;urea,2,amino_acid_raman_grounding;gobbato_raman_metabolites,4,3 abbreviation,True
+valine,2,l-valine;valine,valine,3,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,5,1 spelling/formatting,True

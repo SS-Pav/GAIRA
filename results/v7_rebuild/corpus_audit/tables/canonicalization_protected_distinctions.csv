@@ -1,0 +1,5 @@
+form_a,form_b,relationship,canonical_a,canonical_b,collapsed,status
+(+)-arabinose,(-)-arabinose,enantiomers,(+)-arabinose,(-)-arabinose,False,protected
+(+)-glucose,β-d-glucose,anomers,(+)-glucose,β-d-glucose,False,protected
+(-)-ribose,2-deoxy-d-ribose,distinct molecules (2'-OH),(-)-ribose,2-deoxy-d-ribose,False,protected
+carotene,β-carotene,isomer — provenance does not prove equivalence,carotene,β-carotene,False,protected

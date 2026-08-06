@@ -1,0 +1,53 @@
+{
+  "generated_utc": "2026-08-06T06:45:24.244502+00:00",
+  "raw_raman_spectra": 375,
+  "dataset_specific_source_labels": 212,
+  "distinct_raw_label_strings": 194,
+  "normalized_analyte_names": 167,
+  "canonical_molecule_ids": 154,
+  "unique_chemical_structures": null,
+  "structure_identifier_note": "no InChIKey/SMILES/CID present in any source dataset; none fetched externally — uncertainty preserved",
+  "protected_stereoisomers_retained": 4,
+  "alias_collisions": 30,
+  "cross_source_duplicate_molecules": 29,
+  "one_to_many_conflicts": 0,
+  "excitation_domains": 9,
+  "chemistry_classes": 16,
+  "sers_spectra_examined_and_excluded": 265,
+  "gobbato": {
+    "zip_present": true,
+    "archive_raman_files": 153,
+    "archive_raman_parseable": 153,
+    "archive_raman_unmatched_filenames": [],
+    "archive_raman_source_labels": 51,
+    "replicates_per_label": {
+      "3": 51
+    },
+    "archive_sers_files": 265,
+    "archive_sers_for_fitting": 31,
+    "archive_sers_source_labels": 53,
+    "loaded_raman_spectra": 153,
+    "loaded_sers_spectra_EXCLUDED": 265,
+    "raman_files_missing_from_corpus": 0,
+    "sers_files_leaked_into_corpus": 0,
+    "labels_with_both_raman_and_sers": 51,
+    "labels_sers_only_correctly_excluded": [
+      "DNA",
+      "RNA"
+    ],
+    "labels_raman_only": [],
+    "gobbato_normalized_labels": 51,
+    "gobbato_canonical_molecules": 51,
+    "overlap_with_ramanbiolib": 30,
+    "unique_to_gobbato": 21
+  },
+  "acid_base_merges_questionable": 0,
+  "substrate_suspects": [
+    {
+      "spectrum_id": "ramanbiolib::197",
+      "original_analyte_label": "insulin",
+      "substrate": "Gold-coated glass sustrate",
+      "excitation_nm": 633.0
+    }
+  ]
+}
