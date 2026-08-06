@@ -7,7 +7,11 @@ Companions: `PHASE_DEPENDENCY_MAP.md` (what blocks what),
 `VALIDATION_AND_DECISION_RULES.md` (how each layer's size is chosen),
 `SUCCESS_CRITERIA.md` (what replacement requires), `RISK_REGISTER.md` (what can go wrong).
 
-**Status: nothing implemented. Phase 00 has not started.**
+**Status (2026-08-06): Phases 00, 01, 02, 02.5, 03, 04, 04.5 and 05 are COMPLETE.**
+Phases 03, 04 and 04.5 are **archived on evidence** — see
+[`context/GAIRA_V7_ARCHITECTURE_STATUS_AFTER_PHASE05.md`](../context/GAIRA_V7_ARCHITECTURE_STATUS_AFTER_PHASE05.md).
+The remaining roadmap (Phases 06–11) was rewritten in the same pass and is in §"Remaining
+roadmap" below.
 
 ---
 
@@ -506,29 +510,82 @@ nucleic_acid 3 (100% uncovered), sphingolipid **absent entirely**.
 ## Phase sequence summary
 
 ```
-00 Benchmark lock ──▶ 01 Balanced references + LSMs ──▶ 02 CSMs ──▶ 03 Themes
-                                                                │           │
-                                                                │           ▼
-                                                                │        04 BSV
-                                                                │           │
-                                                                │           ▼
-                                                                │      04.5 Meta components
-                                                                │      (tested, DISCARDED)
-                                                                ▼
-                                            05 Canonical CSM inference engine
-                                            (Raman only; replaces the 03/04
-                                             Theme/BSV path — see the ⚠ block)
-                                                                │
-                                                                ▼
-                                                     06 Raman validation
-                                                                │
-                                                    ┌───────────┴───────────┐
-                                                    ▼                       ▼
-                                        07 Chemistry-aware learning   08 Corpus expansion
-                                              (deferred)                  (deferred)
+[✔ 00] Benchmark lock ──▶ [✔ 01] Balanced references + 50 LSMs ──▶ [✔ 02] 49 CSMs
+                                                                        │
+                                                       ┌────────────────┴────────────────┐
+                                                       ▼                                 ▼
+                                          [✔ 02.5] Latent geometry          [✔ 05] Canonical CSM
+                                          (visualisation + prior)            inference engine
+                                                       │                                 │
+                                                       ▼                                 │
+                                    ┌──────────────────────────────────┐                 │
+                                    │  ARCHIVED ON EVIDENCE            │                 │
+                                    │  [03] themes        → A-13       │                 │
+                                    │  [04] BSV           → A-14       │                 │
+                                    │  [04.5] Meta comps  → A-15       │                 │
+                                    │  [05] 11 evid. axes → A-16       │                 │
+                                    └──────────────────────────────────┘                 │
+                                                                                         ▼
+                                                        [ 06 ] Chemistry Evidence Layer (16-d)
+                                                                                         │ DG-06
+                                                                                         ▼
+                                                        [ 07 ] BSV2 Discovery
+                                                                                         │ DG-07
+                                                                                         ▼
+                                                        [ 08 ] Hierarchical Molecular Retrieval
+                                                                                         │ DG-08
+                                                                                         ▼
+                                                        [ 09 ] V5 head-to-head  [DECISION]
+                                                                                         │
+                                                              ┌──────────────────────────┴───────┐
+                                                              ▼                                  ▼
+                                                 [ 10 ] Chemistry-aware learning   [ 11 ] Corpus expansion
+                                                        (deferred)                        (deferred)
 ```
 
-Numbering is the one adopted 2026-08-06 (see the ⚠ block at the top of this document). The
-per-phase sections below still carry their **original** headings — original Phase 01 + 02 are
+Numbering is the one adopted 2026-08-06 (see the ⚠ blocks at the top of this document). The
+per-phase sections above still carry their **original** headings — original Phase 01 + 02 are
 canonical Phase 01, original Phase 03 is canonical Phase 02, and so on down. The mapping table
 at the top is authoritative.
+
+---
+
+## Remaining roadmap — rewritten 2026-08-06 after Phase 05
+
+Full specifications live in `phases/`. Summarised here so the plan is readable end to end.
+
+### Completed
+
+| Phase | What it delivered | Status |
+|---|---|---|
+| **00** | benchmark lock: 154 canonical molecules, 375 spectra, 16 fine classes, 5 grouped folds, V5 control, frozen success criteria | ✔ COMPLETE, 12/12 gates |
+| **01** | balanced references → 16 class-local NMF fits → **50 LSMs** | ✔ COMPLETE, 8/8 gates |
+| **02** | seven-feature consensus graph → **49 CSMs**, 1 merge accepted of 4 proposed | ✔ COMPLETE, 8/8 gates |
+| **02.5** | latent geometry: continuum not islands; K = 2 hydrophobic/polar; 7 bridges, 5 isolates | ✔ COMPLETE, analysis only |
+| **03** | biochemical themes, K = 5 archetypal, 4 accepted | **ARCHIVED (A-13)** |
+| **04** | frozen projection engine + BSV; the six-level hierarchy measurement | **ARCHIVED (A-14)** — the hierarchy result is retained as evidence D-06 |
+| **04.5** | Meta Components, hierarchical NMF over CSM activations | **ARCHIVED (A-15)** — discarded, negative result |
+| **05** | canonical CSM inference engine (Raman only): retrieval, calibration, rejection, provenance, 11 declared evidence axes | ✔ COMPLETE, 15/16 gates; the 11-axis profile is **ARCHIVED (A-16)** pending DG-06 |
+
+### Remaining
+
+| Phase | Objective | Gate |
+|---|---|---|
+| **06 — Chemistry Evidence Layer** | frozen calibrated map CSM ℝ₊^49 → ℝ₊^16 over the frozen `v7_fine_16` ontology; unassigned mass reported; R-01 control; first measurement against the frozen Tier-1 criteria | **DG-06** — proceed only if it *clearly exceeds* the archived 11-axis profile (0.664) and clears the informativeness floor |
+| **07 — BSV2 Discovery** | hierarchical NMF over Chemistry Evidence **only**; K ∈ {2,3,4,5,6,8,10,12,14} on a Pareto frontier over eight axes | **DG-07** — pre-registered informativeness floor; discard is an expected outcome |
+| **08 — Hierarchical Molecular Retrieval** | soft chemistry prior, class-conditioned retrieval, prototype + residual scoring, conformal sets if justified | **DG-08** — must beat direct cosine (molecule top-1 0.605) significantly, without degrading rejection |
+| **09 — V5 head-to-head** *(retained)* | measure the complete V7 stack against the V5 control under `v7_harness_v1` and deliver a replacement recommendation | **DG-09** — the frozen Tier-1 criteria, unadjusted (P-13) |
+| **10 — Chemistry-aware learning** | deferred | — |
+| **11 — Targeted corpus expansion** | deferred | — |
+
+> **Why Phase 09 is retained.** The Tier-1 success criteria were frozen in Phase 00 and **have
+> never been measured** (unknown U-06). Phase 05's 0.845 is a per-spectrum number on 5-fold
+> grouped CV; the frozen bar is a per-analyte number at n = 167 under `v7_harness_v1`. Dropping
+> the phase that measures the frozen bar would make the bar unreachable and would nullify P-13
+> in practice. Phase 06 takes a first measurement; Phase 09 delivers the decision.
+
+### Decision gates at a glance
+
+Every remaining phase ends with the same four-part gate — scientific validation, engineering
+validation, architecture compliance, and a decision of **Proceed / Repeat / Redesign**. The
+full specification is in `plan/VALIDATION_AND_DECISION_RULES.md` §7.

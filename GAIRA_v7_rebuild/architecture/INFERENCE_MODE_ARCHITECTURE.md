@@ -1,5 +1,12 @@
 # GAIRA V7 — Inference Mode Architecture
 
+> **PARTIALLY SUPERSEDED — revised 2026-08-06 after Phase 05.** The runtime path through
+> preprocessing and NNLS projection onto the frozen CSM basis is current and unchanged. The
+> steps *after* the CSM activation — theme mapping and BSV — are **ARCHIVED** (A-13, A-14).
+> The canonical representation is now the 49-d CSM activation vector itself. The authoritative
+> inference diagram is `GAIRA_V7_TARGET_ARCHITECTURE.md` §4 and Figure A2. The prohibited and
+> permitted lists in this document remain binding and unchanged.
+
 The live path: one spectrum in, one BSV plus evidence and QC out. Deterministic, batch-
 independent, and free of any fitting.
 

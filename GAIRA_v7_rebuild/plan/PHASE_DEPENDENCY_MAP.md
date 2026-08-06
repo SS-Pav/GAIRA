@@ -6,91 +6,104 @@ What blocks what, what can run in parallel, and where a failure forces a return.
 
 ## 1. The critical path
 
+> **Rewritten 2026-08-06 after Phase 05.** Canonical numbering. Archived phases are shown
+> because they are still on the *provenance* path even though they are off the *inference* path.
+
 ```
      ┌──────────────────────────────────────────────────────────────┐
-     │  PHASE 00 — Benchmark lock                                   │
-     │  canonical IDs · replicate groups · quality · class partition│
-     │  CV splits · metrics · V5 control · frozen success criteria  │
+     │  ✔ PHASE 00 — Benchmark lock                                 │
+     │  154 canonical molecules · 16 fine classes · 5 grouped folds │
+     │  V5 control · metrics · FROZEN success criteria              │
      └───────────────────────────┬──────────────────────────────────┘
-                                 │ gates: no leakage, baseline reproduced,
-                                 │        splits deterministic, criteria frozen
                                  ▼
      ┌──────────────────────────────────────────────────────────────┐
-     │  PHASE 01 — Balanced reference construction                  │
-     │  select from {A control, B weighted, C prototypes}           │
+     │  ✔ PHASE 01 — Balanced references + class-local LSMs         │
+     │  16 independent fits · adaptive k_c · 50 stable LSMs         │
      └───────────────────────────┬──────────────────────────────────┘
-                                 │ gates: rule pre-registered, no supervision,
-                                 │        balance improved without fidelity loss
                                  ▼
      ┌──────────────────────────────────────────────────────────────┐
-     │  PHASE 02 — Local Spectral Motifs                            │
-     │  per-class decomposition · adaptive k_c · stability selection │
+     │  ✔ PHASE 02 — Consensus Spectral Motifs                      │
+     │  49 CSMs · 1 merge of 4 proposed · full provenance           │
+     │  ★ THE CANONICAL REPRESENTATION (A-08)                       │
+     └───────────┬──────────────────────────────────┬───────────────┘
+                 │                                  │
+                 ▼                                  ▼
+     ┌───────────────────────────┐    ┌──────────────────────────────────┐
+     │ ✔ PHASE 02.5 — geometry   │    │  ✔ PHASE 05 — CSM inference      │
+     │ visualisation + prior     │    │  engine · retrieval · calibration│
+     │ NEVER an inference path   │    │  rejection · provenance          │
+     └───────────┬───────────────┘    └──────────────┬───────────────────┘
+                 ▼                                   │
+     ┌───────────────────────────────────┐           │
+     │  ARCHIVED ON EVIDENCE             │           │
+     │  03 themes  · 04 BSV · 04.5 Meta  │           │
+     │  outputs preserved, off the path  │           │
+     └───────────────────────────────────┘           │
+                                                     ▼
+     ┌──────────────────────────────────────────────────────────────┐
+     │  ▶ PHASE 06 — Chemistry Evidence Layer  (16-d)               │
+     │  frozen map + calibrator · unassigned mass · R-01 control    │
      └───────────────────────────┬──────────────────────────────────┘
-                                 │ gates: stability met, k_c justified,
-                                 │        rare classes routed, class bias tested
+                                 │ DG-06 — must clearly exceed the
+                                 │ archived 11-axis profile (0.664)
                                  ▼
      ┌──────────────────────────────────────────────────────────────┐
-     │  PHASE 03 — Consensus Spectral Motifs                        │
-     │  similarity graph · method comparison · CSM derivation        │
+     │  ▶ PHASE 07 — BSV2 Discovery                                 │
+     │  hierarchical NMF over Chemistry Evidence ONLY · K sweep     │
      └───────────────────────────┬──────────────────────────────────┘
-                                 │ gates: provenance complete, M justified,
-                                 │        method chosen on evidence, singletons flagged
+                                 │ DG-07 — pre-registered informativeness
+                                 │ floor; discard is an expected outcome
                                  ▼
      ┌──────────────────────────────────────────────────────────────┐
-     │  PHASE 04 — Biochemical themes                               │
-     │  soft sparse membership S · K selection                       │
+     │  ▶ PHASE 08 — Hierarchical Molecular Retrieval               │
+     │  CSM + soft chemistry prior · prototype + residual           │
      └───────────────────────────┬──────────────────────────────────┘
-                                 │ gates: chemistry only, soft membership,
-                                 │        K justified, value over CSM shown
+                                 │ DG-08 — must beat direct cosine 0.605
                                  ▼
      ┌──────────────────────────────────────────────────────────────┐
-     │  PHASE 05 — Biochemical State Vector                         │
-     │  absolute BSV · normalisation · uncertainty · OOD · eff. rank │
+     │  ▶ PHASE 09 — V5 head-to-head              [DECISION]        │
+     │  frozen Tier-1 criteria under v7_harness_v1, unadjusted      │
      └───────────────────────────┬──────────────────────────────────┘
-                                 │ gates: deterministic, absolute/delta distinct,
-                                 │        uncertainty propagated, eff. rank reported
-                                 ▼
-     ┌──────────────────────────────────────────────────────────────┐
-     │  PHASE 06 — End-to-end engine integration                    │
-     │  one inference path · frozen atlas bundle · invariant checks  │
-     └───────────────────────────┬──────────────────────────────────┘
-                                 │ gates: no inference fitting, batch independent,
-                                 │        clean clone works, fingerprint verified
-                                 ▼
-     ┌──────────────────────────────────────────────────────────────┐
-     │  PHASE 07 — Full in-domain Raman validation   [DECISION]     │
-     │  every layer · waterfall · head-to-head vs V5                 │
-     └───────────────────────────┬──────────────────────────────────┘
-                                 │ gate: pre-registered success criteria met
                     ┌────────────┴────────────┐
                     ▼                         ▼
         ┌───────────────────────┐  ┌────────────────────────┐
-        │ PHASE 08 — Chemistry- │  │ PHASE 09 — Targeted    │
+        │ PHASE 10 — Chemistry- │  │ PHASE 11 — Targeted    │
         │ aware learning        │  │ corpus expansion       │
         │ (deferred)            │  │ (deferred)             │
         └───────────────────────┘  └────────────────────────┘
 ```
 
+**Note the branch after Phase 02.** Phase 05 depends on Phase 02 directly, *not* on Phases 03–04.
+That is the structural consequence of archiving the theme/BSV path: the inference engine reads
+the CSM dictionary and nothing above it. Phase 02.5's geometry remains a dependency of the
+archived Phase 03 only, plus visualisation.
+
 ---
 
 ## 2. Dependency table
 
-| Phase | Hard prerequisites | Consumes | Produces |
-|---|---|---|---|
-| 00 | — | raw corpus, V5 assets, V6.3 ontology | canonical IDs, replicate groups, quality, partition, splits, metrics, baseline, frozen criteria |
-| 01 | 00 | canonical IDs, replicate groups, quality, splits | balanced reference matrix + selected strategy |
-| 02 | 01 | balanced references, class partition, splits | LSM dictionaries + registry |
-| 03 | 02 | LSMs, balanced references (for activations) | CSM dictionary + registry + graph |
-| 04 | 03 | CSMs, CSM registry, splits | theme registry + membership `S` |
-| 05 | 04 | CSMs, `S`, balanced references | BSV reference frame, OOD, uncertainty, vis transform |
-| 06 | 05 | all frozen layers | V7 engine + atlas bundle + manifest |
-| 07 | 06, **00** (splits + metrics + criteria) | V7 engine, V5 control | validation report + replacement recommendation |
-| 08 | 07 pass, frozen candidate | frozen V7 architecture | learning-gain attribution |
-| 09 | 07 residual analysis | residual directions | targeted acquisitions |
+| Phase | Hard prerequisites | Consumes | Produces | Status |
+|---|---|---|---|---|
+| 00 | — | raw corpus, V5 assets, V6.3 ontology | canonical IDs, partition, folds, metrics, baseline, frozen criteria | ✔ |
+| 01 | 00 | canonical IDs, folds, quality | balanced references + 50 LSMs + registry | ✔ |
+| 02 | 01 | LSMs, balanced references | 49 CSMs + registry + graph | ✔ |
+| 02.5 | 02 | CSM dictionary | geometry, priors — analysis only | ✔ |
+| ~~03~~ | ~~02, 02.5~~ | ~~CSMs~~ | ~~themes + `S`~~ | **ARCHIVED** |
+| ~~04~~ | ~~03~~ | ~~CSMs, `S`~~ | ~~BSV frame; the six-level hierarchy measurement~~ | **ARCHIVED** |
+| ~~04.5~~ | ~~02, 02.5~~ | ~~CSM activations~~ | ~~Meta Components~~ | **ARCHIVED — discarded** |
+| 05 | **02** (not 03/04) | CSM dictionary + registry, folds | inference engine, reference bank, calibrator, rejection, 11 evidence axes | ✔ |
+| **06** | **02, 05, 00** | CSM activations, folds, frozen criteria | chemistry-evidence map `E` + calibrator + R-01 control | ▶ next |
+| **07** | **06** | Chemistry Evidence matrix **only** | BSV2 programme dictionary `P` | ▶ |
+| **08** | **06**, 07 *(if DG-07 passed)* | CSM activations + Chemistry Evidence | hierarchical retrieval + prior weight `λ` | ▶ |
+| **09** | **08, 00** | full V7 stack, V5 control, frozen criteria | replacement recommendation | ▶ |
+| 10 | 09 pass | frozen V7 architecture | learning-gain attribution | deferred |
+| 11 | 09 residuals | residual directions | targeted acquisitions | deferred |
 
-Note Phase 07's double dependency: it needs Phase 06's engine **and** Phase 00's frozen
-splits, metrics, and criteria. That is deliberate — the yardstick is fixed before anything is
-built with it.
+Phase 09's double dependency on Phase 08 **and** Phase 00 is deliberate: the yardstick was fixed
+before anything was built with it, and it is not adjusted afterwards (P-13).
+
+Phase 08's dependency on Phase 07 is **conditional**. If DG-07 rejects BSV2, Phase 08 proceeds
+from Chemistry Evidence directly and BSV2 is simply absent from the retrieval score.
 
 ---
 

@@ -89,6 +89,8 @@ checkpoints/
 # onward ships one PDF carrying all its figures with captions, and that is the artefact people
 # read away from the repository.
 !results/v7_rebuild/*/reports/*.pdf
+# the V7 architecture documents are deliverables, not build output
+!GAIRA_v7_rebuild/reports/*.pdf
 
 # NOTE ON SCIENTIFIC ASSETS
 # The following are DELIBERATELY tracked (do NOT add ignore rules for them):

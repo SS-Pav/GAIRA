@@ -231,26 +231,46 @@ Critical (invalidates results, or ships a wrong answer).
 
 ## Summary
 
-| ID | Risk | P | S | Owner |
-|---|---|---|---|---|
-| R-01 | Class labels bias local decompositions | High | Med | 00/02/03 |
-| R-02 | Rare classes too small for NMF | High | Med | 02/03 |
-| R-03 | Local dictionaries incomparable | Med | **High** | 03 |
-| R-04 | Motif proliferation | Med | Med | 02/03 |
-| R-05 | Consensus clustering arbitrary | Med | Med | 03 |
-| R-06 | Second NMF removes detail | Med | **High** | 03 |
-| R-07 | Communities threshold-artefactual | High | Med | 03 |
-| R-08 | Anchors duplicate learned motifs | Med | Med | 03 |
-| R-09 | Alias / replicate leakage | Med | **Critical** | 00 |
-| R-10 | In-sample evaluation | Med | **Critical** | all |
-| R-11 | Themes decorative | Med | Med | 04 |
-| R-12 | BSV axes correlated | Med | Med | 04/05 |
-| R-13 | Runtime too complex | Low | Med | 06 |
-| R-14 | Inference nondeterministic | Low | **Critical** | 06 |
-| R-15 | SERS contamination | Low | **Critical** | 00/01/02 |
-| R-16 | Source/excitation confounding | Med | Med | 00/02 |
-| R-17 | Corpus is the binding constraint | Med | **High** | 07/09 |
+> **Outcomes recorded 2026-08-06 after Phase 05.** Owners are given in **canonical** phase
+> numbering. A risk marked REALISED did occur and was handled; one marked OPEN has not been
+> controlled and is carried into a named phase.
+
+| ID | Risk | P | S | Owner | Outcome after Phase 05 |
+|---|---|---|---|---|---|
+| R-01 | Class labels bias local decompositions | High | Med | 00/02/03 | **OPEN** — never controlled. Phase 06 must run the class-agnostic control (U-02) |
+| R-02 | Rare classes too small for NMF | High | Med | 02/03 | handled — adaptive `k_c`; rare classes routed, not oversampled |
+| R-03 | Local dictionaries incomparable | Med | **High** | 03 | **REALISED and resolved** — Phase 02 found 1 merge of 1,225 pairs; 48 of 49 CSMs are singletons |
+| R-04 | Motif proliferation | Med | Med | 02/03 | did not occur — 49 CSMs from 50 LSMs |
+| R-05 | Consensus clustering arbitrary | Med | Med | 03 | **REALISED** — no threshold gave an invariant partition; resolved by unanimity across the sweep |
+| R-06 | Second NMF removes detail | Med | **High** | 03 | **REALISED** — Phase 04.5 Meta Components retained 0.185 of CSM information; discarded |
+| R-07 | Communities threshold-artefactual | High | Med | 03 | **REALISED** — see R-05; the register's own revision branch was followed |
+| R-08 | Anchors duplicate learned motifs | Med | Med | 03 | did not occur — no anchored atoms were needed |
+| R-09 | Alias / replicate leakage | Med | **Critical** | 00 | controlled — molecule-grouped folds, all leakage checks false |
+| R-10 | In-sample evaluation | Med | **Critical** | all | **REALISED twice** — Phase 04 in-sample retrieval; Phase 05 gate G11. Both corrected |
+| R-11 | Themes decorative | Med | Med | 04 | **REALISED** — the theme layer was worse than decorative; archived (A-13) |
+| R-12 | BSV axes correlated | Med | Med | 04/05 | **REALISED** — BSV effective rank 2.40 of nominal 4; archived (A-14) |
+| R-13 | Runtime too complex | Low | Med | 06 | did not occur — inference is NNLS plus frozen matrix products |
+| R-14 | Inference nondeterministic | Low | **Critical** | 06 | controlled — determinism verified bit-for-bit (Phase 05 G12) |
+| R-15 | SERS contamination | Low | **Critical** | 00/01/02 | controlled — Raman-only scope; the SERS probe is out of scope (A-09) |
+| R-16 | Source/excitation confounding | Med | Med | 00/02 | reported — excitation PERMANOVA in Phase 02.5; no action taken |
+| R-17 | Corpus is the binding constraint | Med | **High** | 07/09 | **OPEN** — the leading alternative explanation if Phases 06–08 deliver small gains |
 
 **The four Critical risks — R-09, R-10, R-14, R-15 — are all detectable by mechanical checks
 and all have Phase gates.** None of them should ever surprise this project; the register
 exists so that they cannot.
+
+
+---
+
+## R-18 — A layer is adopted for being uninformative
+
+**Added 2026-08-06 after Phase 05.**
+
+| Field | Content |
+|---|---|
+| **Description** | Reproducibility, stability and calibration metrics are all maximised by an output that says nearly the same thing about every spectrum. A layer that loses most of the information can therefore *win* on those axes and be adopted for it. |
+| **Probability** | **Realised four times already** — Phase 03 softmax themes, Phase 04 theme-mode leakage, Phase 04.5 Meta Components (won every stability axis at 0.185 information retained), Phase 05 ECE-optimal constant calibrator (0.605 for every spectrum). |
+| **Severity** | **Critical** — it selects *for* the failure it should detect. |
+| **Detection** | A candidate that wins on stability while losing held-out task performance. Sharpness near zero. Discrimination near 0.5. Identical outputs for visibly different inputs. |
+| **Mitigation** | **P-18** — pre-register an informativeness floor before the measurement; evaluate stability gains only after the floor is cleared; discard rather than partially adopt. Written into DG-06, DG-07 and DG-08. |
+| **Owner** | every remaining phase |

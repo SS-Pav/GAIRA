@@ -1,3 +1,8 @@
+> ## SUPERSEDED — renumbered
+>
+> Now **Phase 10** (deferred). The canonical Phase 08 is
+> `phase_08_hierarchical_molecular_retrieval/`. Retained unmodified for provenance.
+
 # Phase 08 — Chemistry-aware representation learning
 
 **Status:** **Deferred** — begins only after a passing Phase 07 and a frozen unsupervised candidate

@@ -3,6 +3,16 @@
 Binding vocabulary for all V7 documents, code, artefacts, and reports. Where V7 diverges
 from earlier naming, the legacy term is recorded and marked legacy.
 
+> **Revised 2026-08-06, after Phase 05.** Three terms changed status. **Biochemical theme** and
+> **BSV** became *legacy* — they were built, measured and archived (see
+> `GAIRA_V7_ARCHITECTURE_STATUS_AFTER_PHASE05.md` A-13/A-14). **Chemistry Evidence**, **BSV2**
+> and **Molecular Retrieval** are new. The definition of *chemical class* is amended: it is now
+> admissible as an intermediate probabilistic coordinate, having previously been forbidden as
+> any kind of output. §7.1 of the status document explains why that prohibition was internally
+> inconsistent with the frozen success criteria from Phase 00 onward.
+>
+> Legacy definitions are **retained in full below**, marked LEGACY. Nothing is deleted.
+
 Each term is defined by: **mathematical meaning**, **scientific meaning**, **input**,
 **output**, and **provenance class** — one of
 
@@ -42,13 +52,28 @@ the reference matrix `X` into blocks `{X_c}` for independent local decomposition
 **Scientific.** A chemically curated organisational prior: *purine*, *saccharide*,
 *triglyceride*, *sterol*, *fatty_acid*, *protein*, and so on.
 
-**What it is not — three prohibitions:**
+**What it is not — three prohibitions (amended 2026-08-06):**
 
 1. It is **not a disease label**. No class in V7 refers to a condition, phenotype, or process.
-2. It is **not the inference output**. V7 never predicts class. Class exists only to
-   allocate decomposition capacity fairly.
+   *Unchanged.*
+2. It is **not a terminal hard label**. V7 never emits "this spectrum is a saccharide" as a
+   claim. Class may be reported only as a **probabilistic, uncertainty-carrying evidence
+   coordinate** with its calibration and its unassigned mass alongside — see *Chemistry
+   Evidence*. **Amended.** The previous wording was "It is not the inference output. V7 never
+   predicts class", which contradicted the Phase-00 frozen success criteria: S-01 and S-03 are
+   defined on `v7_fine_16` retrieval, i.e. exactly this task. The project has measured itself on
+   fine-class retrieval since Phase 00. The amendment resolves the conflict in favour of the
+   frozen criteria (P-13 forbids adjusting those) and narrows the prohibition to what it was
+   always meant to prevent.
 3. It is **not supervision inside the local fit**. The decomposition within a class is
-   unsupervised; the class only decides *which spectra enter which fit*.
+   unsupervised; the class only decides *which spectra enter which fit*. *Unchanged, and now
+   the load-bearing prohibition.*
+
+> **Standing risk, sharpened.** Because the Chemistry Evidence layer predicts the same 16
+> classes that partitioned the Phase-01 fits, part of its accuracy may be an imprint of the
+> partition rather than a property of the representation (R-01, U-02). Phase 06 must run a
+> class-agnostic decomposition control on the same folds before any Chemistry Evidence number
+> is described as a property of the representation.
 
 **Input.** Canonical analyte table + curated chemistry.
 **Output.** Class assignment per analyte; the block structure `{X_c}`.
@@ -156,7 +181,14 @@ result, or (b) stating the mapping above. In V7 comparisons, the phrase is
 
 ---
 
-## Biochemical theme
+## Biochemical theme — **LEGACY**
+
+> **Status: LEGACY as of Phase 05 (archived decision A-13).** Themes were built (Phase 03,
+> K = 5 archetypal, 4 accepted), measured (Phase 04), and retired: class top-1 on unseen
+> molecules fell 0.855 at the CSM layer to 0.405 at the theme layer. The definition below is
+> preserved verbatim because the Phase 03 artefacts remain on disk, fingerprinted and
+> reproducible. **Do not use "theme" for new work.** The V7 term for the interpretable layer is
+> **Chemistry Evidence**.
 
 **Mathematical.** A column of the soft membership matrix `S ∈ ℝ₊^{M×K}` mapping `M` CSMs to
 `K` themes. `S` is **sparse**, **non-negative**, and **row-normalised**
@@ -190,7 +222,15 @@ membership with a temperature and a floor.
 
 ---
 
-## Biochemical State Vector — BSV
+## Biochemical State Vector — BSV — **LEGACY**
+
+> **Status: LEGACY as of Phase 05 (archived decision A-14).** The BSV was defined as `Sᵀc` over
+> the accepted themes and therefore inherits the theme layer's information loss exactly; its
+> effective rank was 2.40 of a nominal K = 4 (risk R-12 realised). The definition is preserved
+> because the Phase 04 reference frame remains a fingerprinted artefact and because **ΔBSV, the
+> reference-normalised elevation and the DART trajectory definitions carry over unchanged to
+> BSV2** — the algebra of "absolute coordinate, differences are derived" is what survives, not
+> the particular basis. For new work use **BSV2**.
 
 **Mathematical.** For a spectrum `x`, with CSM activation vector `c(x) ∈ ℝ₊^M` obtained by
 fixed-dictionary non-negative projection,
@@ -230,6 +270,105 @@ biochemical coordinate system.
 **Input.** CSM activations + membership matrix `S`.
 **Output.** `ℝ₊^K` vector + uncertainty + QC/OOD flags.
 **Provenance class.** **derived**.
+
+---
+
+## Chemistry Evidence
+
+**Status: CURRENT.** The V7 interpretable layer. Replaces *biochemical theme* (LEGACY) and
+supersedes the eleven declared evidence axes of Phase 05 (archived A-16), subject to gate DG-06.
+
+**Mathematical.** For a spectrum `x` with CSM activation `c(x) ∈ ℝ₊^49`, a frozen map
+`E ∈ ℝ₊^{49×16}` and a frozen calibrator `Γ`,
+
+$$e(x) = \Gamma\big(E^{\top} c(x)\big) \in \mathbb{R}_+^{16}, \qquad \sum_{k=1}^{16} e_k(x) \le 1$$
+
+The shortfall `1 − Σ_k e_k(x)` is the **unassigned mass** and is reported, never redistributed
+across the coordinates.
+
+**Scientific.** A sixteen-dimensional probabilistic statement about *which chemistries the
+evidence supports*, one coordinate per class of the frozen `v7_fine_16` ontology: acylglycerol,
+carboxylic acid metabolite, chromophore pigment, fatty acid, free amino acid,
+mono/oligosaccharide, nucleic acid polymer, peptide protein, phosphate metabolite,
+phospholipid/sphingolipid, polysaccharide, purine, pyrimidine, small nitrogenous,
+sterol/steroid, sulfur/thiol cofactor.
+
+**Why sixteen.** Not a tuned hyperparameter. Sixteen is fixed by the evaluation ontology frozen
+in Phase 00, which is also the label space of the frozen Tier-1 success criteria (S-01, S-03).
+Choosing any other number would make V7 unmeasurable against its own bar.
+
+**What it is and is not.**
+
+| It is | It is not |
+|---|---|
+| a continuous, non-negative evidence coordinate | a hard classification |
+| calibrated, with its ECE and discrimination reported | a probability anyone may threshold silently |
+| accompanied by an explicit unassigned mass | a partition of unit mass across 16 bins |
+| *beside* CSM retrieval, never replacing it | the input to molecular retrieval on its own |
+| chemistry | biology — P-07 applies unchanged |
+
+**Input.** CSM activation vector + frozen map + frozen calibrator.
+**Output.** `ℝ₊^16` + unassigned mass + per-coordinate confidence + provenance.
+**Provenance class.** **learned** (the map, offline in Phase 06) applied as **derived**.
+
+---
+
+## BSV2 — Biochemical Programmes
+
+**Status: PLANNED (A-20).** Not implemented. Gate DG-07 can reject it, in which case Chemistry
+Evidence remains the terminal interpretable layer.
+
+**Mathematical.** A frozen non-negative programme dictionary `P ∈ ℝ₊^{K×16}` learned by
+hierarchical NMF over the Chemistry Evidence matrix, with inference by frozen projection
+
+$$\mathrm{BSV2}(x) = \arg\min_{b \ge 0} \; \lVert e(x) - b^{\top} P \rVert_2^2 \;\in\; \mathbb{R}_+^K$$
+
+**Scientific.** A *biochemical programme* is a pattern of chemistry co-occurrence — which
+chemistries tend to be evidenced together. `K` is selected on a Pareto frontier over
+reconstruction, held-out chemistry prediction, programme stability, interpretability, mutual
+information, noise robustness, calibration and compression. **Never on reconstruction alone**
+(R-12), and never on accuracy alone.
+
+**The critical distinction from the archived Meta Components (A-15).** Meta Components
+factorised `A ∈ ℝ₊^{375×49}` — spectra × *motif* activations — and retained 0.185 of the CSM
+layer's information. BSV2 factorises `Ev ∈ ℝ₊^{375×16}` — spectra × *chemistry* evidence. The
+object being compressed is different. Whether that is enough is an open question (U-04), and it
+is the reason DG-07 carries a pre-registered informativeness floor.
+
+**Inherited unchanged from the legacy BSV.** BSV2 is **absolute**, non-negative, continuous, and
+expressed in a fixed global coordinate system. ΔBSV2, reference-normalised elevation,
+cohort-standardised views and DART trajectories are defined exactly as they were for the BSV,
+and a difference is never called a BSV2.
+
+**Input.** Chemistry Evidence **only** — never CSM activations directly.
+**Output.** `ℝ₊^K` + uncertainty + programme provenance.
+**Provenance class.** **learned** (offline, Phase 07) applied as **derived**.
+
+---
+
+## Molecular Retrieval
+
+**Status: PLANNED (A-21).**
+
+**Mathematical.** A ranking over the 154 canonical molecules combining the CSM-space similarity
+with a soft chemistry prior:
+
+$$\mathrm{score}(x, a) \;=\; f\big(\mathrm{sim}(c(x),\, r_a)\big) \;+\; \lambda \cdot \log \, e_{\kappa(a)}(x)$$
+
+where `r_a` is molecule `a`'s reference activation vector, `κ(a)` its chemistry class, and `λ`
+is fitted offline on training folds only. Prototype-plus-residual scoring and conformal
+prediction sets are candidate refinements, each admitted only if it earns its place.
+
+**Scientific.** Retrieval that uses chemistry as a *prior*, not a filter. A hard class filter
+would make a class error unrecoverable; a soft prior re-weights and can be overruled by strong
+spectral evidence.
+
+**The baseline it must beat.** Direct cosine retrieval in CSM space: Split A molecule top-1
+**0.605**, top-5 0.795 (Phase 05). Anything that does not beat that is not adopted.
+
+**Input.** CSM activation + Chemistry Evidence.
+**Output.** ranked top-k + calibrated confidence (+ conformal set, if justified).
+**Provenance class.** **derived**, with a **learned** prior weight.
 
 ---
 
@@ -279,16 +418,21 @@ different coordinates, and the whole comparability argument collapses.
 
 ## Quick reference
 
-| Term | Symbol | Space | Class | Layer |
-|---|---|---|---|---|
-| Canonical Raman reference | `x`, `x̄_a` | `ℝ₊^D`, D=676 | curated / derived | input |
-| Chemical class | `c` | partition | curated | organisational prior |
-| Local Spectral Motif | `h ∈ H_c` | `ℝ₊^D` | learned | Phase 02 |
-| Consensus Spectral Motif | `csm_m` | `ℝ₊^D` | learned | Phase 03 |
-| CSM activation | `c(x)` | `ℝ₊^M` | derived | inference |
-| Membership matrix | `S` | `ℝ₊^{M×K}` | derived + curated | Phase 04 |
-| Biochemical theme | `t_k` | `ℝ₊` | derived | Phase 04 |
-| Biochemical State Vector | `BSV(x)` | `ℝ₊^K` | derived | Phase 05 |
-| ΔBSV | `BSV₂ − BSV₁` | `ℝ^K` | derived | analysis |
-| Atlas | — | bundle | frozen | product |
-| Legacy MSS | — | — | legacy | **use CSM** |
+| Term | Symbol | Space | Class | Introduced | Status |
+|---|---|---|---|---|---|
+| Canonical Raman reference | `x`, `x̄_a` | `ℝ₊^676` | curated / derived | input | ACTIVE |
+| Chemical class | `κ` | partition of 16 | curated | organisational prior | ACTIVE |
+| Local Spectral Motif | `h ∈ H_c` | `ℝ₊^676` | learned | Phase 01 | ACTIVE |
+| Consensus Spectral Motif | `csm_m` | `ℝ₊^676` | learned | Phase 02 | ACTIVE |
+| **CSM activation** | `c(x)` | `ℝ₊^49` | derived | inference | **ACTIVE — canonical** |
+| **Chemistry Evidence** | `e(x)` | `ℝ₊^16` | derived | Phase 06 | PLANNED |
+| **BSV2** | `b(x)` | `ℝ₊^K` | derived | Phase 07 | PLANNED |
+| **Molecular Retrieval** | ranked list | — | derived | Phase 08 | PLANNED |
+| ΔBSV2 | `b₂ − b₁` | `ℝ^K` | derived | analysis | PLANNED |
+| Atlas | — | bundle | frozen | product | ACTIVE |
+| Membership matrix | `S` | `ℝ₊^{49×4}` | derived + curated | Phase 03 | **LEGACY** |
+| Biochemical theme | `t_k` | `ℝ₊` | derived | Phase 03 | **LEGACY** |
+| Biochemical State Vector | `BSV(x)` | `ℝ₊^4` | derived | Phase 04 | **LEGACY** |
+| Meta Component | `mc_j` | `ℝ₊^3` | learned | Phase 04.5 | **LEGACY — discarded** |
+| Declared evidence axis | `a_j` | `ℝ₊^11` | curated + derived | Phase 05 | **LEGACY — superseded** |
+| Legacy MSS | — | — | legacy | V5 | **use CSM** |

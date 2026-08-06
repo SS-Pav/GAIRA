@@ -1,5 +1,15 @@
 # Phase 03 — Biochemical theme construction
 
+> ## ARCHIVED — decision A-13
+>
+> Built and measured as canonical **Phase 03**
+> (`results/v7_rebuild/phase03/`). Retired on evidence: class top-1 on unseen molecules fell
+> from 0.855 at the CSM layer to **0.405** at the theme layer. All outputs are preserved,
+> fingerprinted and reproducible; the theme layer is simply not on the inference path.
+> Superseded by the **Chemistry Evidence** layer (Phase 06). See
+> `context/GAIRA_V7_ARCHITECTURE_STATUS_AFTER_PHASE05.md` §3 F-01, §5.2 A-13.
+
+
 **Status:** COMPLETE — `K = 5`, archetypal analysis. 4 themes accepted, 1 rejected.
 Outputs at `results/v7_rebuild/phase03/`.
 

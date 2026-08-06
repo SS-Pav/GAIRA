@@ -146,7 +146,10 @@ graph construction is inadequate and must be revised — that is a finding, not 
 
 ---
 
-## 4. Theme count `K` — Phase 04
+## 4. Theme count `K` — Phase 04 — **LEGACY (A-13)**
+
+> Retained for provenance. The rule was applied in canonical Phase 03 and selected K = 5
+> (archetypal, 4 accepted). The theme layer is archived; the rule is superseded by §8.2.
 
 | Criterion | Direction | Note |
 |---|---|---|
@@ -176,7 +179,10 @@ that merely relabels CSMs is decorative (risk R-11).
 
 ---
 
-## 5. BSV dimension — Phase 05
+## 5. BSV dimension — Phase 05 — **LEGACY (A-14)**
+
+> Retained for provenance. Applied in canonical Phase 04; effective rank 2.40 of nominal
+> K = 4 (R-12 realised). Superseded by §8.2.
 
 **Rule.** BSV dimension **= `K`**, the selected number of biochemical themes. There is no
 separate choice.
@@ -231,3 +237,104 @@ history.
 **All of these are frozen before any V7 model is fitted.** The V6.3 revalidation is the
 template — it is the strongest piece of methodology the project has produced, and V7 adopts
 its harness wholesale rather than reinventing it.
+
+
+---
+
+## 8. Decision rules for the remaining phases — ADDED 2026-08-06
+
+### 8.0 Every remaining gate has the same four parts
+
+No phase from 06 onward is complete until all four are recorded in its `PHASE_STATE.json` and
+its report:
+
+| Part | What it asks | Failure means |
+|---|---|---|
+| **1. Scientific validation** | did the layer do what it claimed, on held-out data, against a pre-registered threshold? | the science does not support the layer |
+| **2. Engineering validation** | deterministic, batch-independent, no inference-time fitting, fingerprints verified, tests pass | the layer cannot be shipped even if the science holds |
+| **3. Architecture compliance** | non-negativity, provenance, layer isolation, no upstream artefact modified, P-18 respected | the layer violates a standing invariant |
+| **4. Decision** | **Proceed** · **Repeat** · **Redesign** | — |
+
+**Decision semantics, so the words mean the same thing every time:**
+
+- **Proceed** — all three validations pass. The next phase begins.
+- **Repeat** — a *defect* was found (an implementation error, a mis-specified metric, a
+  contaminated split). The phase re-runs after the fix. A repeat is **not** licence to try a
+  different threshold on the same result.
+- **Redesign** — the layer is sound but the *evidence does not support it*. The architecture
+  changes, the layer is archived with its outputs preserved, and the plan is rewritten. This is
+  what happened to A-13, A-14, A-15 and A-16, and it is a normal outcome (P-13).
+
+### 8.1 DG-06 — the Chemistry Evidence map
+
+**Selected on** the pre-registered composite: held-out class top-1 (weight 0.40), calibration
+quality as Brier (0.20), robustness retention (0.20), provenance completeness (0.10),
+interpretability (0.10). **Never on reconstruction of the CSM activations** — the map is not
+trying to reconstruct anything.
+
+| Rule | Specification |
+|---|---|
+| **Gate** | S-21 … S-27 (`SUCCESS_CRITERIA.md` §7.1) |
+| **Comparator** | the archived 11-axis profile, on identical folds, both re-measured in the same run |
+| **Informativeness floor** | ≥ 0.50 of the CSM layer's held-out class information, declared before the run |
+| **Mandatory control** | the R-01 class-agnostic decomposition control |
+| **Redesign trigger** | S-21 not met → reinstate A-16, archive Chemistry Evidence |
+
+### 8.2 DG-07 — BSV2 and its rank `K`
+
+**`K` is selected on a Pareto frontier over eight axes**: reconstruction, held-out chemistry
+prediction, programme stability, interpretability, mutual information, noise robustness,
+calibration, compression. The weighting is declared before the sweep. **Reconstruction alone is
+never sufficient** (R-12).
+
+| Rule | Specification |
+|---|---|
+| **Sweep** | K ∈ {2, 3, 4, 5, 6, 8, 10, 12, 14} |
+| **Gate** | S-28 … S-32 (`SUCCESS_CRITERIA.md` §7.2) |
+| **Informativeness floor** | **pre-registered before the sweep runs**: ≥ 0.50 of Chemistry Evidence's information *and* ≥ 0.50 of its held-out class prediction |
+| **Ordering rule** | stability, robustness and calibration gains are evaluated **only after** the floor is cleared. A layer that wins on stability and fails the floor is **discarded**, not "partially adopted" |
+| **Mandatory diagnostic** | the best achievable held-out class prediction over *every* (variant, K) combination, reported and **excluded from selection** — it pre-empts "a different K would have worked" |
+| **Publication rule** | the full frontier and every rejected point are published. No cherry-picking |
+| **Redesign trigger** | floor not cleared → BSV2 discarded, Chemistry Evidence is terminal, Phase 08 proceeds without it |
+
+### 8.3 DG-08 — hierarchical retrieval and the prior weight `λ`
+
+`λ` is fitted on training folds only, **nested** inside the CV so no test spectrum influences it
+— the Phase 05 metric-selection pattern, carried forward.
+
+| Rule | Specification |
+|---|---|
+| **Gate** | S-33 … S-37 (`SUCCESS_CRITERIA.md` §7.3) |
+| **Baseline** | direct cosine in CSM space: molecule top-1 0.605, top-3 0.763, top-5 0.795 |
+| **Significance** | McNemar exact + permutation on the frozen folds, α = 0.05 after correction |
+| **Mandatory ablation** | prior off / soft prior / **hard filter** — the third as a negative control demonstrating that softness is necessary |
+| **Hard constraint** | a class error must be recoverable. Any design in which a wrong class posterior removes the correct molecule from the candidate set is rejected at the gate regardless of its mean accuracy |
+| **Conformal sets** | shipped **only if** the exchangeability assumption is defensible under molecule-grouped splits. If it is not, say so and ship top-k |
+| **Redesign trigger** | S-33 not met → retrieval stays direct-cosine; the chemistry layer remains interpretive |
+
+### 8.4 DG-09 — the V5 replacement decision
+
+| Rule | Specification |
+|---|---|
+| **Gate** | the frozen Tier-1 criteria S-01 … S-07, **unadjusted** (`SUCCESS_CRITERIA.md` §2, §6) |
+| **Harness** | `v7_harness_v1`, the same harness that measured V5. Not a re-implementation |
+| **Outcomes** | **replace** · **partial adoption** (requires its own written justification, §5.3) · **retain V5 and publish the negative result** |
+| **Prohibited** | adjusting any threshold in either direction (P-13) |
+
+### 8.5 The informativeness rule, stated once for all gates
+
+> **P-18 — stability without informativeness is not evidence.**
+> No representation, mode, calibrator or model may be selected on a reproducibility, stability
+> or calibration metric unless it has first cleared a pre-registered informativeness floor.
+
+Four independent instances motivated this rule, and all four were caught only after the fact:
+
+| Phase | What was maximised | By what | Caught by |
+|---|---|---|---|
+| 03 | replicate consistency | a softmax theme mode assigning every spectrum the same flat vector | zero-evidence leakage test |
+| 04 | evidence consistency | the same mode, promoted to the engine | leakage veto in the aggregation layer |
+| 04.5 | every stability axis | Meta Components retaining 0.185 of CSM information | the 0.50 informativeness floor |
+| 05 | expected calibration error | Platt scaling reporting the base rate 0.605 for every spectrum | reading a figure and noticing three molecules with identical confidence |
+
+A fifth instance is expected. The floor is now declared before the measurement rather than
+after it.

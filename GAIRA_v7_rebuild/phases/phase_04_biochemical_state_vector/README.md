@@ -1,3 +1,13 @@
+> ## ARCHIVED — decision A-14
+>
+> Built and measured as canonical **Phase 04** (`results/v7_rebuild/phase04/`), which also
+> absorbed the original Phase 05 engine work. The BSV was defined as `Sᵀc` over the accepted
+> themes and inherits their information loss exactly; effective rank 2.40 of a nominal K = 4
+> (risk R-12 realised). Phase 04 ended `GATE_FAILED` on a SERS out-of-domain gate that is now
+> out of scope (A-09/A-17). All outputs preserved. Superseded by **BSV2** (Phase 07), which is
+> derived from Chemistry Evidence rather than from themes. See
+> `context/GAIRA_V7_ARCHITECTURE_STATUS_AFTER_PHASE05.md` §3 F-02, §5.2 A-14.
+
 # Phase 04 — Frozen projection engine and Biochemical State Vector
 
 **Status:** COMPLETE — 10 of 11 gates. Outputs at `results/v7_rebuild/phase04/`.

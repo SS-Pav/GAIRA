@@ -1,8 +1,19 @@
 # GAIRA V7 — Hierarchical Foundation Rebuild
 
-**Status: Phase 00 complete. No V7 model has been fitted.** The benchmark is locked, canonical
-molecule identities are frozen, and the V5 control baseline is measured. No latent component
-has been generated. No existing scientific asset has been modified.
+**Status (2026-08-06): Phases 00, 01, 02, 02.5, 03, 04, 04.5 and 05 are COMPLETE.**
+Phases 03, 04 and 04.5 are **archived on evidence** — the theme layer, the BSV and the Meta
+Components were built, measured, and retired because every abstraction above the Consensus
+Spectral Motif layer lost information. The **49-dimensional CSM activation vector is the
+canonical representation**. The V5 atlas is unmodified and remains in production.
+
+**Start here:**
+[`context/GAIRA_V7_ARCHITECTURE_STATUS_AFTER_PHASE05.md`](context/GAIRA_V7_ARCHITECTURE_STATUS_AFTER_PHASE05.md)
+— the evidence ledger: what is demonstrated, what is falsified, what remains unknown, and the
+status of every architectural decision. Then
+[`architecture/GAIRA_V7_TARGET_ARCHITECTURE.md`](architecture/GAIRA_V7_TARGET_ARCHITECTURE.md)
+for legacy / current / future, and
+[`reports/V7_ARCHITECTURE_UPDATE_AFTER_PHASE05.pdf`](reports/V7_ARCHITECTURE_UPDATE_AFTER_PHASE05.pdf)
+for the illustrated version.
 
 | Field | Value |
 |---|---|
@@ -10,6 +21,10 @@ has been generated. No existing scientific asset has been modified.
 | Source branch | `gaira-v5-rebuild-plan` |
 | Source commit | `ddbb3945d670eee58f5ad99f868fb3c36b2a2c06` |
 | Frozen V5 atlas (unchanged, still in production) | `09ed804a40836f4a05a91ba10900cded` |
+| LSM registry (Phase 01) | `208482d6f7178b5b8f16cace91be55b0` |
+| CSM dictionary (Phase 02) — **canonical** | `0b4aa550ccefed3edabdbde5bae11c8d` |
+| Inference engine (Phase 05) | `20d8bd99ce71f45a125c6a2b1d719e51` |
+| Next phase | **06 — Chemistry Evidence Layer** |
 
 ---
 

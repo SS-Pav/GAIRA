@@ -321,3 +321,41 @@ protein-dominated global component. What it cannot buy is confidence in a 2-anal
 Hence Phase 09: use V7's residual analysis to identify which spectral directions remain
 genuinely unsupported, and acquire references **for those specific directions** —
 not for whatever datasets happen to be available.
+
+
+---
+
+## P-18 Stability without informativeness is not evidence
+
+**Added 2026-08-06, after Phase 05.**
+
+No representation, mode, calibrator or model may be selected on a reproducibility, stability or
+calibration metric unless it has first cleared a **pre-registered informativeness floor**.
+
+The reason is empirical, not theoretical. Four times in V7, a metric of the "is it consistent?"
+family was maximised by an output that said nearly the same thing about every spectrum:
+
+| Phase | Metric maximised | By what | Consequence had it stood |
+|---|---|---|---|
+| 03 | replicate consistency | a softmax theme mode giving every theme non-zero activation regardless of evidence | themes with no CSM support would have been reported as present |
+| 04 | evidence consistency | the same mode, promoted into the engine | manufactured evidence in the shipped output |
+| 04.5 | *every* stability axis | Meta Components retaining 0.185 of the CSM layer's information | a layer would have been adopted for being uninformative |
+| 05 | expected calibration error | Platt scaling reporting 0.605 — the base rate — for every spectrum | a confidence that cannot distinguish a right answer from a wrong one |
+
+A constant predictor is perfectly reproducible and perfectly calibrated. Both properties are
+necessary and neither is sufficient, and metrics in this family cannot tell the difference on
+their own.
+
+**In practice:**
+
+1. Declare the floor **before** the measurement, in the phase's pre-registration.
+2. State it as a *ratio to the layer below*: how much of the previous layer's information and
+   held-out task performance must survive.
+3. Evaluate stability, robustness and calibration gains **only after** the floor is cleared.
+4. A candidate that wins on stability and fails the floor is **discarded**, not partially
+   adopted.
+5. Report the trap when it fires. It is a finding about the metric, and worth more than the
+   candidate it rejected.
+
+Related: P-12 (pre-register the decision rule), P-13 (a negative result is a result), R-11
+(theme abstraction becomes decorative), R-12 (BSV axes become correlated).

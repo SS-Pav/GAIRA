@@ -1,5 +1,10 @@
 # Phase 09 — Targeted corpus expansion
 
+> ## SUPERSEDED — renumbered
+>
+> Now **Phase 11** (deferred). Retained unmodified for provenance.
+
+
 **Status:** **Deferred** — driven by Phase 07 residual analysis
 
 ---

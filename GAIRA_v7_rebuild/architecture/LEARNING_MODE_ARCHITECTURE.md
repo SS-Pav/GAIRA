@@ -1,5 +1,12 @@
 # GAIRA V7 — Learning Mode Architecture
 
+> **PARTIALLY SUPERSEDED — revised 2026-08-06 after Phase 05.** Stages 1–4 (balanced
+> references → class-local decomposition → LSMs → CSMs) are IMPLEMENTED and remain current.
+> **Stage 5 (CSM → theme mapping) and Stage 6 (BSV) are ARCHIVED** on evidence (A-13, A-14);
+> they are replaced by the Chemistry Evidence map (Phase 06) and BSV2 (Phase 07). The
+> authoritative learning-mode diagram is `GAIRA_V7_TARGET_ARCHITECTURE.md` §3 and Figure A1.
+> Retained in full for provenance — the archived stages were built and measured, not abandoned.
+
 The offline build. This document specifies each stage mathematically and states what is
 **decided by evidence** rather than assumed.
 

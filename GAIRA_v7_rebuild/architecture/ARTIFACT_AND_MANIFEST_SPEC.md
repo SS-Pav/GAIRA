@@ -1,5 +1,11 @@
 # GAIRA V7 — Artifact and Manifest Specification
 
+> **REVISED SCOPE — 2026-08-06 after Phase 05.** The manifest and fingerprint rules are
+> unchanged and binding. The *list* of layers the fingerprint must cover has changed: the
+> theme registry, membership matrix and BSV reference frame are **ARCHIVED** (A-13, A-14) and
+> the bundle now covers the reference bank, calibrator, rejection thresholds and — once built
+> — the chemistry-evidence map and BSV2 programmes. See `GAIRA_V7_TARGET_ARCHITECTURE.md` §3.
+
 What gets frozen, how it is fingerprinted, and what a version bump means.
 
 ---

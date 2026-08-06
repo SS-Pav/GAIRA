@@ -1,5 +1,14 @@
 # Phase 07 — Full in-domain Raman validation
 
+> ## SUPERSEDED — renumbered and re-scoped
+>
+> This directory holds the original specification of the in-domain validation phase. Under the
+> canonical numbering adopted 2026-08-06 and the architecture revision after Phase 05, its
+> content is split: the **V5 head-to-head replacement decision** moves to **Phase 09**
+> (retained, `plan/GAIRA_V7_REBUILD_PLAN.md`), and the layer-by-layer validation is distributed
+> across the DG-06/07/08 gates. Retained unmodified for provenance.
+
+
 **Status:** Not started — blocked by Phase 06
 
 ---

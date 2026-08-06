@@ -3,8 +3,18 @@
 This is the reference context document for every V7 implementation prompt. Any later V7
 phase prompt may assume this document and nothing else about the project's history.
 
-**Status: specification only. Nothing in V7 has been implemented.** No NMF has been fitted,
-no latent component generated, no existing scientific asset modified.
+> **Status updated 2026-08-06.** Phases 00, 01, 02, 02.5, 03, 04, 04.5 and 05 are **COMPLETE**.
+> The V5 atlas `09ed804a40836f4a05a91ba10900cded` is unmodified and remains in production.
+> §6 of this document describes the **original** target representation; three of its layers were
+> built, measured and archived on evidence. The current and planned architecture is in
+> `architecture/GAIRA_V7_TARGET_ARCHITECTURE.md`, and the evidence ledger is in
+> `context/GAIRA_V7_ARCHITECTURE_STATUS_AFTER_PHASE05.md`. This document is retained as the
+> record of the scientific motivation, which is unchanged.
+>
+> **Corpus counts.** This document says "167 analytes" throughout, which was the pre-audit
+> normalised-name count. The canonical figure established by the Phase 01 corpus identity audit
+> is **154 canonical molecules** from **375 spectra** in **16 fine chemistry classes**. The V5
+> baseline tables are still reported at n = 167 because that is how they were frozen.
 
 ---
 
@@ -255,7 +265,7 @@ Two guardrails, stated now so no later phase can quietly violate them:
 
 ---
 
-## 6. The V7 target representation
+## 6. The V7 target representation — **AS ORIGINALLY SPECIFIED; see the status note above**
 
 ```
 Raw Raman grounding spectra
@@ -272,9 +282,9 @@ cross-class motif integration              (Phase 03 — similarity graph over a
         ↓
 Consensus Spectral Motifs (CSMs)           (Phase 03 — the canonical evidence unit)
         ↓
-soft biochemical themes                    (Phase 04 — sparse non-negative CSM→theme map)
+soft biochemical themes                    (Phase 04 — ARCHIVED A-13, evidence F-01)
         ↓
-absolute continuous Biochemical State Vector (BSV)   (Phase 05)
+absolute continuous Biochemical State Vector (BSV)   (Phase 05 — ARCHIVED A-14, evidence F-02)
         ↓
 context-aware interpretation               (domain layer, downstream, unchanged in kind)
 ```

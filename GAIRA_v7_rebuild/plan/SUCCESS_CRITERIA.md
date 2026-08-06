@@ -2,6 +2,13 @@
 
 What V7 must achieve before it replaces the current frozen atlas.
 
+> **REVISED 2026-08-06 after Phase 05 — by ADDITION ONLY.** The target architecture changed
+> (`context/GAIRA_V7_ARCHITECTURE_STATUS_AFTER_PHASE05.md`), so §7 below adds criteria for the
+> new layers. **Not one frozen threshold in §1–§6 has been altered, and none may be.** P-13
+> forbids it, and the whole value of a frozen bar is that it survives a change of plan. The
+> Tier-1 criteria have still **never been measured** under `v7_harness_v1` (unknown U-06);
+> Phase 06 takes the first measurement and Phase 09 delivers the decision.
+>
 > **STATUS: FROZEN in Phase 00.** These thresholds were provisional during the specification
 > pass and were frozen on completion of Phase 00, before any V7 model was fitted. They are not
 > adjusted afterwards — not upward if V7 looks strong, and not downward if V7 looks weak
@@ -167,3 +174,66 @@ permutation on the frozen folds).
 
 **These numbers are now fixed. No V7 result may be described as passing or failing against any
 other threshold.**
+
+
+---
+
+## 7. Architecture-specific criteria — ADDED 2026-08-06
+
+These do **not** replace §2. They are the layer-level bars for the phases that did not exist
+when §2 was frozen. §2 decides whether V7 replaces V5; §7 decides whether each new layer earns
+its place in V7 at all.
+
+### 7.1 Chemistry Evidence — Phase 06 (gate DG-06)
+
+| # | Criterion | Threshold | Rationale |
+|---|---|---|---|
+| **S-21** | Chemistry Evidence class top-1 on unseen molecules **clearly exceeds the archived 11-axis profile** | **≥ 0.744** (0.664 + 0.08), significant at α = 0.05 after correction | the same +8-point materiality argument as S-01 (§4), applied to the layer it replaces. A layer that ties its predecessor is not worth the architectural change |
+| **S-22** | Informativeness floor vs the CSM layer | retains **≥ 0.50** of the CSM layer's held-out class information | P-18. Pre-registered, not added after the numbers |
+| **S-23** | Calibration is informative | discrimination **≥ 0.75** and sharpness **> 0.05**, reported with ECE and Brier | P-18; ECE alone selects a constant predictor (Phase 05 F-06) |
+| **S-24** | Unassigned mass is reported per spectrum | present in every output record | evidence supporting no class must never be silently redistributed |
+| **S-25** | Provenance completeness | **100%** of Chemistry Evidence coordinates resolve to CSMs → LSMs → molecules → spectra | S-13, extended to the new layer |
+| **S-26** | R-01 control reported | the class-agnostic decomposition control is run and its gap published, **whatever it shows** | U-02; without it, 0.845 cannot be called a property of the representation |
+| **S-27** | Robustness not degraded | class retention under the 7 × 5 perturbation grid **≥ 0.90** | the CSM layer achieves 0.935; a large drop means the layer is fragile |
+
+### 7.2 BSV2 — Phase 07 (gate DG-07)
+
+| # | Criterion | Threshold | Rationale |
+|---|---|---|---|
+| **S-28** | Informativeness floor vs Chemistry Evidence | retains **≥ 0.50** of its information **and ≥ 0.50** of its held-out class prediction | P-18, **pre-registered before the K sweep runs**. This is the exact gate that discarded Meta Components |
+| **S-29** | Stability gains count only after S-28 | any stability, robustness or calibration advantage is disregarded if S-28 fails | the four-times-observed failure mode (§3 of the status document) |
+| **S-30** | Interpretability | every programme nameable from the chemistry it loads on; unnameable programmes reported as such | P-07, S-12 |
+| **S-31** | K justified on a published Pareto frontier | frontier and rejected points both published; no cherry-picking | R-12 |
+| **S-32** | Derived from Chemistry Evidence only | static check confirms no CSM path into `P` | A-20 is defined by this restriction |
+
+### 7.3 Molecular Retrieval — Phase 08 (gate DG-08)
+
+| # | Criterion | Threshold | Rationale |
+|---|---|---|---|
+| **S-33** | Molecule top-1 beats direct cosine | **> 0.605**, significant at α = 0.05 after correction (McNemar + permutation on the frozen folds) | the Phase 05 baseline is the thing to beat; a point estimate is not a result (§3) |
+| **S-34** | No class silently harmed | any chemistry class made worse by the prior is named in the report | a mean improvement that hides a class-level regression is not an improvement |
+| **S-35** | Rejection not degraded | open-set joint AUROC **≥ 0.921** | the Phase 05 value; a retrieval gain bought with a rejection loss is not progress |
+| **S-36** | Hard-filter negative control reported | the hard-filter ablation is run and published | demonstrates the soft prior is necessary rather than assumed |
+| **S-37** | Calibration remains informative | S-23 thresholds | P-18 |
+
+### 7.4 What "clearly exceeds" means, and why it is +8 points again
+
+S-21 reuses the +8-point margin from §4 for the same three reasons: the corpus is small enough
+that smaller differences sit inside sampling noise; V6.3 established that changes of ±0.02 in
+this corpus are not distinguishable from noise; and an architectural change of this size is not
+justified by a gain a user would not notice. The margin is applied to the layer's own predecessor
+rather than to V5, because DG-06 is a *layer* decision, not a *replacement* decision.
+
+### 7.5 Failure handling for the new layers
+
+Identical in spirit to §5, and worth stating for each gate:
+
+- **DG-06 fails** → reinstate A-16, the 11-axis declared evidence profile, as the interpretable
+  layer. Chemistry Evidence is archived alongside themes and Meta Components. Phase 07 is
+  re-planned or dropped.
+- **DG-07 fails** → BSV2 is discarded. Chemistry Evidence becomes the terminal interpretable
+  layer and Phase 08 proceeds without BSV2. This is an **expected** outcome, not a failure of
+  the phase.
+- **DG-08 fails** → retrieval stays direct-cosine in CSM space; the chemistry layer remains
+  interpretive only.
+- **In every case the criteria are not adjusted.** (P-13.)

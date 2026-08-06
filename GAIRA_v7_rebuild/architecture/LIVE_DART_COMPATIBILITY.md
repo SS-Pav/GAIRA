@@ -1,5 +1,12 @@
 # GAIRA V7 — Live Projection and DART Compatibility
 
+> **TERMINOLOGY UPDATED — 2026-08-06 after Phase 05.** Everything in this document holds, with
+> one substitution: **BSV → BSV2**. The BSV as defined in Phase 04 is ARCHIVED (A-14), but the
+> algebra this document depends on — absolute coordinates in a fixed global frame, differences
+> derived and never called a state vector, trajectories as sequences of absolute vectors —
+> carries over to BSV2 unchanged. Until Phase 07 delivers BSV2, trajectory work should use the
+> 49-d CSM activation vector, which satisfies every property this document requires.
+
 Requirements the V7 representation must satisfy to support live projection, future
 Raman→SERS observation models, and DART perturbation trajectories.
 

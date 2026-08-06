@@ -1,5 +1,12 @@
 # GAIRA V7 — Data Contracts
 
+> **PARTIALLY SUPERSEDED — revised 2026-08-06 after Phase 05.** Contracts C-01 … C-07 (corpus,
+> references, LSM, graph, CSM) are current. **C-08 (theme registry) and C-09 (BSV) describe
+> ARCHIVED objects** (A-13, A-14) and are retained for provenance; their replacements are the
+> Chemistry Evidence map (Phase 06) and the BSV2 programme dictionary (Phase 07), whose
+> contracts are written when those phases are specified in implementation detail. C-10
+> (inference output) is superseded by the Phase 05 engine's report schema.
+
 Schemas for every object crossing a phase boundary. Each is versioned; a breaking change
 requires a version bump and a migration note.
 
