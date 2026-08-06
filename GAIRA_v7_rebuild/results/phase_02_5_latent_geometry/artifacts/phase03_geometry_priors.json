@@ -1,0 +1,797 @@
+{
+  "schema": "gaira_v7_phase03_geometry_priors_v1",
+  "status": "PROVISIONAL \u2014 priors only; no themes are created here",
+  "source_phase": "02.5",
+  "primary_geometry": "weighted_similarity",
+  "primary_spectral_metric": "wasserstein",
+  "n_priors": 10,
+  "priors": [
+    {
+      "prior_id": "prior_lipid_superfamily",
+      "provisional_name": "lipid_superfamily",
+      "supporting_lsms": [
+        "acylglycerol.m00",
+        "acylglycerol.m02",
+        "fatty_acid.m00",
+        "fatty_acid.m03",
+        "fatty_acid.m04",
+        "free_amino_acid.m06",
+        "phospholipid_sphingolipid.m00",
+        "sterol_steroid.m00"
+      ],
+      "supporting_csms": [
+        "csm01",
+        "csm02",
+        "csm07",
+        "csm09",
+        "csm10",
+        "csm17",
+        "csm36",
+        "csm44"
+      ],
+      "geometry_type": "overlapping",
+      "shared_bands_cm1": [
+        892.0,
+        1062.0,
+        1118.0,
+        1134.0,
+        1172.0,
+        1296.0,
+        1438.0
+      ],
+      "contributing_classes": [
+        "acylglycerol",
+        "fatty_acid",
+        "free_amino_acid",
+        "phospholipid_sphingolipid",
+        "sterol_steroid"
+      ],
+      "n_molecules": 50,
+      "evidence_strength": "strong",
+      "evidence": {
+        "tier": "strong",
+        "separation_ratio": 2.0504096024593688,
+        "conductance": 0.7462405551243209,
+        "mean_local_dimension": 2.822251104031987,
+        "internal_stability": 0.4888989441930618,
+        "phase02_verdict": "rejected as a merge \u2014 reconstruction cost exceeded tolerance",
+        "phase02_isolated_ev_cost": -0.0756,
+        "source_confounding": "2/8 members single-source",
+        "confidence": 0.7103821894534545
+      },
+      "source_confounding": "2/8 members single-source",
+      "confidence": 0.7103821894534545,
+      "must_not_hard_merge": [
+        [
+          "acylglycerol.m00",
+          "acylglycerol.m02"
+        ],
+        [
+          "acylglycerol.m00",
+          "fatty_acid.m00"
+        ],
+        [
+          "acylglycerol.m00",
+          "fatty_acid.m03"
+        ],
+        [
+          "acylglycerol.m00",
+          "fatty_acid.m04"
+        ],
+        [
+          "acylglycerol.m00",
+          "free_amino_acid.m06"
+        ],
+        [
+          "acylglycerol.m00",
+          "phospholipid_sphingolipid.m00"
+        ],
+        [
+          "acylglycerol.m00",
+          "sterol_steroid.m00"
+        ],
+        [
+          "acylglycerol.m02",
+          "fatty_acid.m00"
+        ],
+        [
+          "acylglycerol.m02",
+          "fatty_acid.m03"
+        ],
+        [
+          "acylglycerol.m02",
+          "fatty_acid.m04"
+        ],
+        [
+          "acylglycerol.m02",
+          "free_amino_acid.m06"
+        ],
+        [
+          "acylglycerol.m02",
+          "phospholipid_sphingolipid.m00"
+        ],
+        [
+          "acylglycerol.m02",
+          "sterol_steroid.m00"
+        ],
+        [
+          "fatty_acid.m00",
+          "fatty_acid.m03"
+        ],
+        [
+          "fatty_acid.m00",
+          "fatty_acid.m04"
+        ],
+        [
+          "fatty_acid.m00",
+          "free_amino_acid.m06"
+        ],
+        [
+          "fatty_acid.m00",
+          "phospholipid_sphingolipid.m00"
+        ],
+        [
+          "fatty_acid.m00",
+          "sterol_steroid.m00"
+        ],
+        [
+          "fatty_acid.m03",
+          "fatty_acid.m04"
+        ],
+        [
+          "fatty_acid.m03",
+          "free_amino_acid.m06"
+        ],
+        [
+          "fatty_acid.m03",
+          "phospholipid_sphingolipid.m00"
+        ],
+        [
+          "fatty_acid.m03",
+          "sterol_steroid.m00"
+        ],
+        [
+          "fatty_acid.m04",
+          "free_amino_acid.m06"
+        ],
+        [
+          "fatty_acid.m04",
+          "phospholipid_sphingolipid.m00"
+        ],
+        [
+          "fatty_acid.m04",
+          "sterol_steroid.m00"
+        ],
+        [
+          "free_amino_acid.m06",
+          "phospholipid_sphingolipid.m00"
+        ],
+        [
+          "free_amino_acid.m06",
+          "sterol_steroid.m00"
+        ],
+        [
+          "phospholipid_sphingolipid.m00",
+          "sterol_steroid.m00"
+        ]
+      ],
+      "notes": "Phase 02 rejected this as a single motif at a cost of 0.076 EV. Phase 02.5 finds it is a coherent overlapping neighbourhood. It is a THEME candidate, not a motif: soft overlapping membership does not incur the reconstruction cost a merge does.",
+      "status": "PROVISIONAL \u2014 a prior for Phase 03, not a theme"
+    },
+    {
+      "prior_id": "prior_polar_skeletal_backbone",
+      "provisional_name": "polar_skeletal_backbone",
+      "supporting_lsms": [
+        "carboxylic_acid_metabolite.m01",
+        "free_amino_acid.m00",
+        "mono_oligosaccharide.m02",
+        "mono_oligosaccharide.m03",
+        "peptide_protein.m03",
+        "phosphate_metabolite.m00",
+        "polysaccharide.m00"
+      ],
+      "supporting_csms": [
+        "csm04",
+        "csm11",
+        "csm20",
+        "csm21",
+        "csm28",
+        "csm35",
+        "csm38"
+      ],
+      "geometry_type": "overlapping",
+      "shared_bands_cm1": [
+        476.0,
+        576.0,
+        852.0,
+        870.0,
+        936.0,
+        1074.0,
+        1120.0,
+        1252.0,
+        1330.0,
+        1344.0,
+        1460.0
+      ],
+      "contributing_classes": [
+        "carboxylic_acid_metabolite",
+        "free_amino_acid",
+        "mono_oligosaccharide",
+        "peptide_protein",
+        "phosphate_metabolite",
+        "polysaccharide"
+      ],
+      "n_molecules": 49,
+      "evidence_strength": "strong",
+      "evidence": {
+        "tier": "strong",
+        "separation_ratio": 2.3058101666360598,
+        "conductance": 0.7809258284999921,
+        "mean_local_dimension": 3.8740897793630844,
+        "internal_stability": 0.7704741927281974,
+        "phase02_verdict": "rejected as a merge \u2014 reconstruction cost exceeded tolerance",
+        "phase02_isolated_ev_cost": -0.0699,
+        "source_confounding": "0/7 members single-source",
+        "confidence": 0.8305473802046544
+      },
+      "source_confounding": "0/7 members single-source",
+      "confidence": 0.8305473802046544,
+      "must_not_hard_merge": [
+        [
+          "carboxylic_acid_metabolite.m01",
+          "free_amino_acid.m00"
+        ],
+        [
+          "carboxylic_acid_metabolite.m01",
+          "mono_oligosaccharide.m02"
+        ],
+        [
+          "carboxylic_acid_metabolite.m01",
+          "mono_oligosaccharide.m03"
+        ],
+        [
+          "carboxylic_acid_metabolite.m01",
+          "peptide_protein.m03"
+        ],
+        [
+          "carboxylic_acid_metabolite.m01",
+          "phosphate_metabolite.m00"
+        ],
+        [
+          "carboxylic_acid_metabolite.m01",
+          "polysaccharide.m00"
+        ],
+        [
+          "free_amino_acid.m00",
+          "mono_oligosaccharide.m02"
+        ],
+        [
+          "free_amino_acid.m00",
+          "mono_oligosaccharide.m03"
+        ],
+        [
+          "free_amino_acid.m00",
+          "peptide_protein.m03"
+        ],
+        [
+          "free_amino_acid.m00",
+          "phosphate_metabolite.m00"
+        ],
+        [
+          "free_amino_acid.m00",
+          "polysaccharide.m00"
+        ],
+        [
+          "mono_oligosaccharide.m02",
+          "mono_oligosaccharide.m03"
+        ],
+        [
+          "mono_oligosaccharide.m02",
+          "peptide_protein.m03"
+        ],
+        [
+          "mono_oligosaccharide.m02",
+          "phosphate_metabolite.m00"
+        ],
+        [
+          "mono_oligosaccharide.m02",
+          "polysaccharide.m00"
+        ],
+        [
+          "mono_oligosaccharide.m03",
+          "peptide_protein.m03"
+        ],
+        [
+          "mono_oligosaccharide.m03",
+          "phosphate_metabolite.m00"
+        ],
+        [
+          "mono_oligosaccharide.m03",
+          "polysaccharide.m00"
+        ],
+        [
+          "peptide_protein.m03",
+          "phosphate_metabolite.m00"
+        ],
+        [
+          "peptide_protein.m03",
+          "polysaccharide.m00"
+        ],
+        [
+          "phosphate_metabolite.m00",
+          "polysaccharide.m00"
+        ]
+      ],
+      "notes": "Phase 02 rejected this as a single motif at a cost of 0.070 EV. Phase 02.5 finds it is a coherent overlapping neighbourhood. It is a THEME candidate, not a motif: soft overlapping membership does not incur the reconstruction cost a merge does.",
+      "status": "PROVISIONAL \u2014 a prior for Phase 03, not a theme"
+    },
+    {
+      "prior_id": "prior_heterocyclic_ring_system",
+      "provisional_name": "heterocyclic_ring_system",
+      "supporting_lsms": [
+        "nucleic_acid_polymer.m00",
+        "purine.m00",
+        "sulfur_thiol_cofactor.m00"
+      ],
+      "supporting_csms": [
+        "csm24",
+        "csm40",
+        "csm47"
+      ],
+      "geometry_type": "overlapping",
+      "shared_bands_cm1": [
+        526.0,
+        624.0,
+        722.0,
+        1036.0,
+        1248.0,
+        1334.0,
+        1486.0,
+        1668.0
+      ],
+      "contributing_classes": [
+        "nucleic_acid_polymer",
+        "purine",
+        "sulfur_thiol_cofactor"
+      ],
+      "n_molecules": 10,
+      "evidence_strength": "strong",
+      "evidence": {
+        "tier": "strong",
+        "separation_ratio": 2.1023926220060143,
+        "conductance": 0.8986498516878481,
+        "mean_local_dimension": 3.2521349154502732,
+        "internal_stability": 1.0,
+        "phase02_verdict": "rejected as a merge \u2014 reconstruction cost exceeded tolerance",
+        "phase02_isolated_ev_cost": -0.075,
+        "source_confounding": "1/3 members single-source",
+        "confidence": 0.8255981555015035
+      },
+      "source_confounding": "1/3 members single-source",
+      "confidence": 0.8255981555015035,
+      "must_not_hard_merge": [
+        [
+          "nucleic_acid_polymer.m00",
+          "purine.m00"
+        ],
+        [
+          "nucleic_acid_polymer.m00",
+          "sulfur_thiol_cofactor.m00"
+        ],
+        [
+          "purine.m00",
+          "sulfur_thiol_cofactor.m00"
+        ]
+      ],
+      "notes": "Phase 02 rejected this as a single motif at a cost of 0.075 EV. Phase 02.5 finds it is a coherent overlapping neighbourhood. It is a THEME candidate, not a motif: soft overlapping membership does not incur the reconstruction cost a merge does.",
+      "status": "PROVISIONAL \u2014 a prior for Phase 03, not a theme"
+    },
+    {
+      "prior_id": "prior_cis_unsaturation",
+      "provisional_name": "cis_unsaturation",
+      "supporting_lsms": [
+        "acylglycerol.m01",
+        "fatty_acid.m01"
+      ],
+      "supporting_csms": [
+        "csm00"
+      ],
+      "geometry_type": "discrete",
+      "shared_bands_cm1": [
+        866.0,
+        970.0,
+        1082.0,
+        1262.0,
+        1432.0,
+        1652.0
+      ],
+      "contributing_classes": [
+        "acylglycerol",
+        "fatty_acid"
+      ],
+      "n_molecules": 14,
+      "evidence_strength": "established",
+      "evidence": {
+        "tier": "established",
+        "phase02_verdict": "ACCEPTED equivalence",
+        "cohesion": 0.9868,
+        "uncertainty": 0.0155,
+        "source_confounding": "flagged in Phase 02; defeated by the 532/1064 nm split",
+        "confidence": 0.9
+      },
+      "source_confounding": "flagged in Phase 02; defeated by the 532/1064 nm split",
+      "confidence": 0.9,
+      "must_not_hard_merge": [],
+      "notes": "The one Phase 02 equivalence. Already a single CSM; Phase 03 must not split it.",
+      "status": "PROVISIONAL \u2014 a prior for Phase 03, not a theme"
+    },
+    {
+      "prior_id": "prior_region_region02",
+      "provisional_name": "geometry_region_mixed_free_mono",
+      "supporting_lsms": [
+        "free_amino_acid.m02",
+        "free_amino_acid.m03",
+        "free_amino_acid.m04",
+        "free_amino_acid.m05",
+        "mono_oligosaccharide.m00",
+        "mono_oligosaccharide.m01",
+        "mono_oligosaccharide.m02",
+        "mono_oligosaccharide.m03",
+        "mono_oligosaccharide.m04",
+        "mono_oligosaccharide.m05",
+        "peptide_protein.m02",
+        "peptide_protein.m03",
+        "phosphate_metabolite.m00",
+        "polysaccharide.m00",
+        "small_nitrogenous.m00",
+        "sterol_steroid.m02"
+      ],
+      "supporting_csms": [
+        "csm13",
+        "csm14",
+        "csm15",
+        "csm16",
+        "csm18",
+        "csm19",
+        "csm20",
+        "csm21",
+        "csm22",
+        "csm23",
+        "csm27",
+        "csm28",
+        "csm35",
+        "csm38",
+        "csm43",
+        "csm46"
+      ],
+      "geometry_type": "branching",
+      "shared_bands_cm1": [
+        1336.0
+      ],
+      "contributing_classes": [
+        "free_amino_acid",
+        "mono_oligosaccharide",
+        "peptide_protein",
+        "phosphate_metabolite",
+        "polysaccharide",
+        "small_nitrogenous",
+        "sterol_steroid"
+      ],
+      "n_molecules": 61,
+      "evidence_strength": "exploratory",
+      "evidence": {
+        "tier": "exploratory",
+        "conductance": 0.4804636228120119,
+        "mean_local_dimension": 4.233797001325679,
+        "internal_stability": 0.8574228817489227,
+        "source_confounding": "source PERMANOVA p = 0.022",
+        "confidence": 0.542969152699569
+      },
+      "source_confounding": "source PERMANOVA p = 0.022",
+      "confidence": 0.542969152699569,
+      "must_not_hard_merge": [],
+      "notes": "Discovered by unsupervised community detection on the primary geometry; chemistry revealed only afterwards. Exploratory.",
+      "status": "PROVISIONAL \u2014 a prior for Phase 03, not a theme"
+    },
+    {
+      "prior_id": "prior_region_region01",
+      "provisional_name": "geometry_region_mixed_acylglycerol_chromophore",
+      "supporting_lsms": [
+        "acylglycerol.m00",
+        "acylglycerol.m02",
+        "chromophore_pigment.m00",
+        "fatty_acid.m00",
+        "fatty_acid.m02",
+        "fatty_acid.m03",
+        "fatty_acid.m04",
+        "peptide_protein.m04",
+        "peptide_protein.m05",
+        "peptide_protein.m06",
+        "peptide_protein.m08",
+        "phospholipid_sphingolipid.m00"
+      ],
+      "supporting_csms": [
+        "csm01",
+        "csm02",
+        "csm05",
+        "csm07",
+        "csm08",
+        "csm09",
+        "csm10",
+        "csm29",
+        "csm30",
+        "csm31",
+        "csm33",
+        "csm36"
+      ],
+      "geometry_type": "overlapping",
+      "shared_bands_cm1": [
+        1118.0,
+        1136.0,
+        1296.0,
+        1438.0,
+        1452.0,
+        1662.0
+      ],
+      "contributing_classes": [
+        "acylglycerol",
+        "chromophore_pigment",
+        "fatty_acid",
+        "peptide_protein",
+        "phospholipid_sphingolipid"
+      ],
+      "n_molecules": 64,
+      "evidence_strength": "exploratory",
+      "evidence": {
+        "tier": "exploratory",
+        "conductance": 0.5649078509726552,
+        "mean_local_dimension": 3.1560078387924992,
+        "internal_stability": 0.930952380952381,
+        "source_confounding": "source PERMANOVA p = 0.022",
+        "confidence": 0.5723809523809524
+      },
+      "source_confounding": "source PERMANOVA p = 0.022",
+      "confidence": 0.5723809523809524,
+      "must_not_hard_merge": [],
+      "notes": "Discovered by unsupervised community detection on the primary geometry; chemistry revealed only afterwards. Exploratory.",
+      "status": "PROVISIONAL \u2014 a prior for Phase 03, not a theme"
+    },
+    {
+      "prior_id": "prior_region_region04",
+      "provisional_name": "geometry_region_mixed_carboxylic_free",
+      "supporting_lsms": [
+        "carboxylic_acid_metabolite.m00",
+        "carboxylic_acid_metabolite.m01",
+        "free_amino_acid.m00",
+        "free_amino_acid.m01",
+        "free_amino_acid.m06",
+        "phospholipid_sphingolipid.m01",
+        "polysaccharide.m01",
+        "purine.m00",
+        "purine.m01",
+        "pyrimidine.m00",
+        "sulfur_thiol_cofactor.m00"
+      ],
+      "supporting_csms": [
+        "csm03",
+        "csm04",
+        "csm11",
+        "csm12",
+        "csm17",
+        "csm37",
+        "csm39",
+        "csm40",
+        "csm41",
+        "csm42",
+        "csm47"
+      ],
+      "geometry_type": "overlapping",
+      "shared_bands_cm1": [
+        532.0,
+        1318.0,
+        1334.0
+      ],
+      "contributing_classes": [
+        "carboxylic_acid_metabolite",
+        "free_amino_acid",
+        "phospholipid_sphingolipid",
+        "polysaccharide",
+        "purine",
+        "pyrimidine",
+        "sulfur_thiol_cofactor"
+      ],
+      "n_molecules": 40,
+      "evidence_strength": "exploratory",
+      "evidence": {
+        "tier": "exploratory",
+        "conductance": 0.6669520840274857,
+        "mean_local_dimension": 4.710298349866048,
+        "internal_stability": 0.44548645245974006,
+        "source_confounding": "source PERMANOVA p = 0.022",
+        "confidence": 0.378194580983896
+      },
+      "source_confounding": "source PERMANOVA p = 0.022",
+      "confidence": 0.378194580983896,
+      "must_not_hard_merge": [],
+      "notes": "Discovered by unsupervised community detection on the primary geometry; chemistry revealed only afterwards. Exploratory.",
+      "status": "PROVISIONAL \u2014 a prior for Phase 03, not a theme"
+    },
+    {
+      "prior_id": "prior_region_region03",
+      "provisional_name": "geometry_region_mixed_nucleic_peptide",
+      "supporting_lsms": [
+        "nucleic_acid_polymer.m00",
+        "peptide_protein.m01",
+        "peptide_protein.m07",
+        "sterol_steroid.m00",
+        "sterol_steroid.m01",
+        "sulfur_thiol_cofactor.m01"
+      ],
+      "supporting_csms": [
+        "csm24",
+        "csm26",
+        "csm32",
+        "csm44",
+        "csm45",
+        "csm48"
+      ],
+      "geometry_type": "overlapping",
+      "shared_bands_cm1": [
+        1442.0
+      ],
+      "contributing_classes": [
+        "nucleic_acid_polymer",
+        "peptide_protein",
+        "sterol_steroid",
+        "sulfur_thiol_cofactor"
+      ],
+      "n_molecules": 33,
+      "evidence_strength": "exploratory",
+      "evidence": {
+        "tier": "exploratory",
+        "conductance": 0.8046986700570047,
+        "mean_local_dimension": 4.225459120710922,
+        "internal_stability": 0.95,
+        "source_confounding": "source PERMANOVA p = 0.022",
+        "confidence": 0.5800000000000001
+      },
+      "source_confounding": "source PERMANOVA p = 0.022",
+      "confidence": 0.5800000000000001,
+      "must_not_hard_merge": [],
+      "notes": "Discovered by unsupervised community detection on the primary geometry; chemistry revealed only afterwards. Exploratory.",
+      "status": "PROVISIONAL \u2014 a prior for Phase 03, not a theme"
+    },
+    {
+      "prior_id": "prior_region_region00",
+      "provisional_name": "geometry_region_mixed_acylglycerol_chromophore",
+      "supporting_lsms": [
+        "acylglycerol.m01",
+        "chromophore_pigment.m01",
+        "fatty_acid.m01",
+        "peptide_protein.m00",
+        "peptide_protein.m09"
+      ],
+      "supporting_csms": [
+        "csm00",
+        "csm06",
+        "csm25",
+        "csm34"
+      ],
+      "geometry_type": "unresolved",
+      "shared_bands_cm1": [
+        856.0,
+        1170.0,
+        1430.0,
+        1452.0
+      ],
+      "contributing_classes": [
+        "acylglycerol",
+        "chromophore_pigment",
+        "fatty_acid",
+        "peptide_protein"
+      ],
+      "n_molecules": 40,
+      "evidence_strength": "exploratory",
+      "evidence": {
+        "tier": "exploratory",
+        "conductance": 0.6844848327172282,
+        "mean_local_dimension": 2.062794826813872,
+        "internal_stability": 0.32799999999999996,
+        "source_confounding": "source PERMANOVA p = 0.022",
+        "confidence": 0.3312
+      },
+      "source_confounding": "source PERMANOVA p = 0.022",
+      "confidence": 0.3312,
+      "must_not_hard_merge": [],
+      "notes": "Discovered by unsupervised community detection on the primary geometry; chemistry revealed only afterwards. Exploratory.",
+      "status": "PROVISIONAL \u2014 a prior for Phase 03, not a theme"
+    },
+    {
+      "prior_id": "prior_isolated_diagnostic",
+      "provisional_name": "isolated_diagnostic_motifs",
+      "supporting_lsms": [
+        "carboxylic_acid_metabolite.m00",
+        "chromophore_pigment.m00",
+        "free_amino_acid.m02",
+        "peptide_protein.m02",
+        "small_nitrogenous.m00"
+      ],
+      "supporting_csms": [
+        "csm03",
+        "csm05",
+        "csm13",
+        "csm27",
+        "csm43"
+      ],
+      "geometry_type": "discrete",
+      "shared_bands_cm1": [
+        674.0,
+        830.0,
+        1002.0,
+        1416.0,
+        1430.0
+      ],
+      "contributing_classes": [
+        "carboxylic_acid_metabolite",
+        "chromophore_pigment",
+        "free_amino_acid",
+        "peptide_protein",
+        "small_nitrogenous"
+      ],
+      "n_molecules": 23,
+      "evidence_strength": "established",
+      "evidence": {
+        "tier": "established",
+        "criterion": "kNN isolation above the 90th percentile",
+        "source_confounding": "per-motif; see confounding_v1.csv",
+        "confidence": 0.8
+      },
+      "source_confounding": "per-motif; see confounding_v1.csv",
+      "confidence": 0.8,
+      "must_not_hard_merge": [
+        [
+          "carboxylic_acid_metabolite.m00",
+          "chromophore_pigment.m00"
+        ],
+        [
+          "carboxylic_acid_metabolite.m00",
+          "free_amino_acid.m02"
+        ],
+        [
+          "carboxylic_acid_metabolite.m00",
+          "peptide_protein.m02"
+        ],
+        [
+          "carboxylic_acid_metabolite.m00",
+          "small_nitrogenous.m00"
+        ],
+        [
+          "chromophore_pigment.m00",
+          "free_amino_acid.m02"
+        ],
+        [
+          "chromophore_pigment.m00",
+          "peptide_protein.m02"
+        ],
+        [
+          "chromophore_pigment.m00",
+          "small_nitrogenous.m00"
+        ],
+        [
+          "free_amino_acid.m02",
+          "peptide_protein.m02"
+        ],
+        [
+          "free_amino_acid.m02",
+          "small_nitrogenous.m00"
+        ],
+        [
+          "peptide_protein.m02",
+          "small_nitrogenous.m00"
+        ]
+      ],
+      "notes": "These motifs have no close neighbour under the primary geometry. They are candidates for singleton themes or for exclusion from soft membership entirely \u2014 forcing them into a theme would be the L-03 failure mode, a motif borrowing foreign mass.",
+      "status": "PROVISIONAL \u2014 a prior for Phase 03, not a theme"
+    }
+  ]
+}

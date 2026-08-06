@@ -1,0 +1,20 @@
+{
+  "modularity_vs_null": {
+    "observed_modularity": 0.6204327749641587,
+    "null_mean": 0.07026785539141234,
+    "null_sd": 0.0029480234761547148,
+    "n_communities": 5,
+    "z": 186.62162083720517,
+    "p_empirical": 0.0
+  },
+  "knn_graph_edges": 159,
+  "mutual_knn_edges": 91,
+  "mst_edges": 49,
+  "cluster_bootstrap": {
+    "mean_ari": 0.8793233032834163,
+    "min_ari": 0.4989816700610998,
+    "mean_vi": 0.18087308711449537
+  },
+  "best_k": 2,
+  "best_linkage": "average"
+}

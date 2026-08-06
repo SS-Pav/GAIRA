@@ -1,0 +1,4 @@
+proposal,n_motifs,classes,mean_internal_distance,mean_external_distance,separation_ratio,conductance,mean_local_dimension,internal_stability,geometry_type,shared_bands_cm1
+proposal00,8,acylglycerol;fatty_acid;free_amino_acid;phospholipid_sphingolipid;sterol_steroid,0.06090594302504633,0.12488213042744861,2.0504096024593688,0.7462405551243209,2.822251104031987,0.4888989441930618,overlapping,892;1062;1118;1134;1172;1296;1438
+proposal03,7,carboxylic_acid_metabolite;free_amino_acid;mono_oligosaccharide;peptide_protein;phosphate_metabolite;polysaccharide,0.051077691264546025,0.11777545980839389,2.3058101666360598,0.7809258284999921,3.8740897793630844,0.7704741927281974,overlapping,476;576;852;870;936;1074;1120;1252;1330;1344;1460
+proposal16,3,nucleic_acid_polymer;purine;sulfur_thiol_cofactor,0.04664036095471653,0.09805635076099581,2.1023926220060143,0.8986498516878481,3.2521349154502732,1.0,overlapping,526;624;722;1036;1248;1334;1486;1668

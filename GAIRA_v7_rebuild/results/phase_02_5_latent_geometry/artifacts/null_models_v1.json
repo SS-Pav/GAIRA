@@ -1,0 +1,26 @@
+{
+  "band_position": {
+    "n": 25,
+    "destroys": "relative band positions between motifs"
+  },
+  "intensity_permutation": {
+    "n": 25,
+    "destroys": "relative intensity among a motif's own peaks"
+  },
+  "class_label": {
+    "n": 500,
+    "destroys": "the association between geometry and chemistry"
+  },
+  "molecule_activation": {
+    "n": 200,
+    "destroys": "which molecules a motif responds to"
+  },
+  "source_label": {
+    "n": 500,
+    "destroys": "the association between geometry and source"
+  },
+  "degree_preserving_graph": {
+    "n": 50,
+    "destroys": "community structure at fixed degree"
+  }
+}

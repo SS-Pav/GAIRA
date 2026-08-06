@@ -1,0 +1,20 @@
+{
+  "schema": "gaira_v7_phase_state_v1",
+  "phase": "02.5",
+  "phase_name": "Latent geometry of spectral motif space",
+  "status": "COMPLETE",
+  "analysis_only": true,
+  "themes_created": false,
+  "completed_utc": "2026-08-06T08:50:59.360558+00:00",
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "lsm_registry_fingerprint": "208482d6f7178b5b8f16cace91be55b0",
+  "csm_dictionary_fingerprint": "0b4aa550ccefed3edabdbde5bae11c8d",
+  "primary_spectral_metric": "wasserstein",
+  "primary_geometry": "weighted_similarity",
+  "n_priors": 10,
+  "geometry_verdict": "mixed",
+  "modularity_z": 186.62162083720517,
+  "knn_coherence": 0.24,
+  "knn_coherence_p": 0.0,
+  "n_single_source_motifs": 8
+}

@@ -1,0 +1,90 @@
+{
+  "views": {
+    "spectral_profile": {
+      "dim": 676,
+      "meaning": "L2-normalised 676-bin basis spectrum",
+      "captures": "overall band shape",
+      "blind_to": "amplitude"
+    },
+    "peak_representation": {
+      "dim": 175,
+      "meaning": "prominence-weighted peaks on an 8 cm-1 grid + shape summary",
+      "captures": "discrete diagnostic features",
+      "blind_to": "the continuum between peaks"
+    },
+    "band_family": {
+      "dim": 20,
+      "meaning": "intensity share across 20 vibrational-mode windows",
+      "captures": "which bond systems carry the intensity",
+      "blind_to": "fine peak position",
+      "columns": [
+        "450-550 S\u2013S / skeletal deformation",
+        "550-650 C\u2013S stretch",
+        "650-730 ring breathing (6-membered)",
+        "730-800 ring breathing (5-membered) / O\u2013P\u2013O",
+        "800-880 C\u2013C skeletal / tyrosine doublet",
+        "880-960 C\u2013C backbone / C\u2013O\u2013C ring",
+        "960-1010 PO4 / phenyl ring breathing",
+        "1010-1070 C\u2013N / C\u2013O stretch",
+        "1070-1130 C\u2013C trans chain / PO2- / glycosidic C\u2013O\u2013C",
+        "1130-1180 C\u2013C gauche / conjugated C\u2013C",
+        "1180-1250 amide III / C\u2013O\u2013C asymmetric",
+        "1250-1300 =C\u2013H in-plane bend / amide III",
+        "1300-1360 CH2 twist / CH deformation",
+        "1360-1420 COO- symmetric stretch",
+        "1420-1480 CH2 / CH3 scissoring",
+        "1480-1540 conjugated C=C",
+        "1540-1600 amide II / COO- asymmetric",
+        "1600-1650 aromatic ring C=C",
+        "1650-1700 amide I / cis C=C",
+        "1700-1800 C=O ester / carboxylic acid"
+      ]
+    },
+    "activation": {
+      "dim": 154,
+      "meaning": "molecule-balanced activation across 154 canonical molecules",
+      "captures": "what the motif responds to",
+      "blind_to": "what the motif looks like"
+    },
+    "reconstruction_contribution": {
+      "dim": 154,
+      "meaning": "marginal residual reduction per molecule",
+      "captures": "what the motif uniquely explains",
+      "blind_to": "shared explanatory mass"
+    },
+    "provenance": {
+      "dim": 17,
+      "meaning": "evidence breadth: molecule/spectrum counts, source and excitation diversity",
+      "captures": "how well-supported a motif is",
+      "blind_to": "chemistry \u2014 class identity is deliberately excluded",
+      "columns": [
+        "n_molecules",
+        "n_spectra",
+        "source_entropy",
+        "excitation_entropy",
+        "max_source_fraction",
+        "src::RamanBioLib",
+        "src::amino_acid_raman_grounding",
+        "src::gobbato_raman_metabolites",
+        "exc::1064.0",
+        "exc::457.9",
+        "exc::488.0",
+        "exc::514.5",
+        "exc::532.0",
+        "exc::632.8",
+        "exc::633.0",
+        "exc::785.0",
+        "exc::850.0"
+      ]
+    },
+    "edge_feature": {
+      "dim": 350,
+      "meaning": "the motif's row in all seven Phase 02 edge-feature matrices",
+      "captures": "relational position in the dictionary",
+      "blind_to": "absolute spectral identity"
+    }
+  },
+  "n_motifs": 50,
+  "chemistry_label_used_in_construction": false,
+  "source_label_used_in_construction": false
+}

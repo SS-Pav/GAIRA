@@ -1,0 +1,4 @@
+held_out,n_motifs_removed,mean_knn_jaccard,testable,kind
+RamanBioLib,38,0.4833333333333334,True,source
+amino_acid_raman_grounding,2,0.9416666666666668,True,source
+gobbato_raman_metabolites,10,0.845,True,source

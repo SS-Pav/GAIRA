@@ -1,0 +1,18 @@
+{
+  "n_csms": 49,
+  "knn_chemical_coherence_lsm": 0.24,
+  "knn_chemical_coherence_csm": 0.2530612244897959,
+  "local_dimension_lsm": 3.8618571358716456,
+  "local_dimension_csm": 3.9025059166330904,
+  "density_lsm": {
+    "n_modes": 2,
+    "valley_depth": 0.0026055144267758124,
+    "bimodal": false
+  },
+  "density_csm": {
+    "n_modes": 1,
+    "valley_depth": 0.0,
+    "bimodal": false
+  },
+  "neighbour_agreement_lsm_vs_csm": 0.98
+}
