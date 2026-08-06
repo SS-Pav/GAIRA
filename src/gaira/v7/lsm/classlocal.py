@@ -16,7 +16,7 @@ Composite over six criteria, all computed WITHOUT chemical labels:
     held-out reconstruction (analyte-grouped)   ↑
     diagnostic-band fidelity                    ↑
     stability across repeated fits              ↑
-    redundancy with sibling motifs              ↓
+    duplicate-pair fraction among motifs        ↓
     activation sparsity                         ↑
     residual band structure                     ↓
 
@@ -161,13 +161,28 @@ def _band_fidelity(X: np.ndarray, W: np.ndarray, H: np.ndarray) -> float:
     return float(np.mean(sims)) if sims else 0.0
 
 
-def _redundancy(H: np.ndarray) -> float:
+def _redundancy(H: np.ndarray, threshold: float = REDUNDANCY_COSINE) -> float:
+    """Fraction of component pairs that are genuine DUPLICATES (cosine >= threshold).
+
+    An earlier version used the MAX pairwise cosine. Measured on this corpus that penalised
+    *shared chemistry* as if it were duplication and became the sole obstacle to an adequate
+    k_c: acylglycerol k=2→3 gained +0.082 held-out reconstruction and lost −0.361 to a max
+    cosine of 0.807 — two motifs sharing acyl-chain bands, which is chemically expected and
+    correct. It also double-counted, because the rejection stage already removes duplicates at
+    the same threshold.
+
+    Scoring the duplicate FRACTION penalises what the criterion is for — actual duplication —
+    and aligns selection with rejection. Validated on held-out reconstruction, not in-sample
+    fit: k rose in 7 classes and held-out EV rose in every one of them (peptide_protein
+    0.645→0.718, acylglycerol 0.580→0.800), with stability staying above 0.89 and zero
+    duplicate pairs at any k. See `results/v7_rebuild/phase01_investigation/`.
+    """
     if H.shape[0] < 2:
         return 0.0
     N = H / (np.linalg.norm(H, axis=1, keepdims=True) + 1e-12)
     C = N @ N.T
     iu = np.triu_indices(H.shape[0], 1)
-    return float(C[iu].max())
+    return float((C[iu] >= threshold).mean())
 
 
 def _activation_sparsity(W: np.ndarray) -> float:

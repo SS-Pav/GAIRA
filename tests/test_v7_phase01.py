@@ -247,6 +247,58 @@ def test_hungarian_alignment_matches_permuted_components():
     assert np.all(s > 0.99)
 
 
+# ── C2. defects found by the scientific investigation — pinned so they cannot return ──
+def test_redundancy_measures_duplication_not_shared_chemistry():
+    """The defect that suppressed k_c across the whole corpus.
+
+    `redundancy` once used the MAX pairwise cosine, which penalised two motifs sharing
+    acyl-chain bands (cosine 0.807) as if they were duplicates. It became the sole obstacle
+    to an adequate k_c and left individual molecules reconstructed at EV 0.12-0.29. It must
+    score the DUPLICATE FRACTION.
+    """
+    D = 676
+    # two motifs sharing broad structure but chemically distinct — must NOT be penalised
+    shared = np.zeros((2, D))
+    shared[0, 100:140] = 1.0
+    shared[0, 300:310] = 1.0
+    shared[1, 100:140] = 1.0
+    shared[1, 500:510] = 1.0
+    N = shared / np.linalg.norm(shared, axis=1, keepdims=True)
+    assert (N @ N.T)[0, 1] > 0.7, "fixture must actually share structure"
+    assert CLS._redundancy(shared) == 0.0, (
+        "shared chemistry must not be scored as duplication")
+
+    # genuine duplicates — must be penalised
+    dup = np.vstack([shared[0], shared[0] * 1.001])
+    assert CLS._redundancy(dup) == 1.0
+
+
+def test_redundancy_aligns_with_the_rejection_threshold():
+    """Selection and rejection must use the same duplication threshold, not double-count."""
+    import inspect
+    src = inspect.getsource(CLS._redundancy)
+    assert "REDUNDANCY_COSINE" in src
+    assert ">=" in src and "mean()" in src
+
+
+def test_kc_is_adequate_for_the_largest_classes():
+    """A regression guard on the outcome, not the mechanism.
+
+    Under-decomposition is silent: every engineering gate passes while individual molecules
+    are unrepresentable. These bounds encode what the investigation established.
+    """
+    ct = pd.read_csv(T / "lsm_classes_v1.csv") if (T / "lsm_classes_v1.csv").is_file() else None
+    if ct is None:
+        pytest.skip("Phase 01 not run")
+    big = ct[ct.n_analytes >= 17]
+    assert (big.k_c >= 3).all(), (
+        f"a class of >=17 molecules taking k_c<3 indicates under-decomposition: "
+        f"{big[big.k_c < 3].chemical_class.tolist()}")
+    prot = ct[ct.chemical_class == "peptide_protein"]
+    if len(prot):
+        assert int(prot.k_c.iloc[0]) >= 5, "30 proteins are not one or two substructures"
+
+
 # ── D. the LSM object ─────────────────────────────────────────────────────────
 def _mk(mid, cls, n, stability=1.0, spectrum=None, anchor=False, index=0):
     sp = np.zeros(676) if spectrum is None else spectrum
@@ -460,6 +512,48 @@ def test_risk_checks_reported():
     ct = pd.read_csv(T / "lsm_classes_v1.csv")
     assert "prior_dominated" in bias.columns, "R-01 class-prior bias must be tested"
     assert "source_confounded" in ct.columns, "R-16 source composition must be reported"
+
+
+@ran
+def test_every_molecule_is_reconstructed_or_diagnosed():
+    """No molecule may be poorly reconstructed without a recorded diagnosis."""
+    inv = REPO / "results/v7_rebuild/phase01_investigation/tables"
+    if not (inv / "inv2_per_molecule_reconstruction_v1.csv").is_file():
+        pytest.skip("investigation not run")
+    d = pd.read_csv(inv / "inv2_per_molecule_reconstruction_v1.csv")
+    orph = pd.read_csv(inv / "inv6_orphan_diagnosis_v1.csv")
+    weak = set(d[d.ev < 0.5].molecule)
+    assert weak <= set(orph.molecule), (
+        f"undiagnosed poorly-reconstructed molecules: {weak - set(orph.molecule)}")
+    assert d.ev.mean() > 0.80, f"corpus mean reconstruction fell to {d.ev.mean():.3f}"
+
+
+@ran
+def test_no_duplicate_motifs_within_any_class():
+    inv = REPO / "results/v7_rebuild/phase01_investigation/tables"
+    if not (inv / "inv1_uniqueness_v1.csv").is_file():
+        pytest.skip("investigation not run")
+    u = pd.read_csv(inv / "inv1_uniqueness_v1.csv")
+    assert int(u["n_pairs_ge_0.95"].fillna(0).sum()) == 0
+
+
+@ran
+def test_kc_not_on_a_knife_edge():
+    inv = REPO / "results/v7_rebuild/phase01_investigation/tables"
+    if not (inv / "inv3_knife_edge_v1.csv").is_file():
+        pytest.skip("investigation not run")
+    k = pd.read_csv(inv / "inv3_knife_edge_v1.csv")
+    assert int(k.knife_edge.sum()) == 0, (
+        f"knife-edge classes: {k[k.knife_edge].chemical_class.tolist()}")
+
+
+@ran
+def test_all_three_lsm_types_are_populated():
+    """Phase 02 needs the typing to know what may be merged; an empty type is a red flag."""
+    st = json.loads((P01 / "PHASE_STATE.json").read_text())
+    tc = st["lsms"]["type_counts"]
+    assert set(tc) == {"class_shared", "subfamily", "molecule_discriminating"}
+    assert all(v > 0 for v in tc.values()), f"an LSM type is empty: {tc}"
 
 
 @ran
