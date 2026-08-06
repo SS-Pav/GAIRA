@@ -101,7 +101,7 @@ exactly what must *not* be merged away.
 
 Per class: `H_c`; per LSM: stability, recurrence, type, redundancy with siblings, dominant
 bands, activating analytes, source/excitation composition. Plus a per-class report including
-the source/excitation composition check (risk R-14).
+the source/excitation composition check (risk R-16).
 
 ---
 

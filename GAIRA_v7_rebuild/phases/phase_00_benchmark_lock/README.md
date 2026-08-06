@@ -1,6 +1,8 @@
 # Phase 00 — Benchmark lock and reproducibility baseline
 
-**Status:** Not started — **this is the next approved step**
+**Status:** ✅ **COMPLETE** — 12/12 gates PASS · validation 84 PASS / 3 WARN / 0 FAIL · 63 tests
+
+Outputs: `results/v7_rebuild/phase00/` · report: [`PHASE_00_REPORT.md`](../../../results/v7_rebuild/phase00/reports/PHASE_00_REPORT.md)
 
 ---
 
@@ -34,16 +36,33 @@ Everything downstream is measured against what is frozen here. V6.3 demonstrated
 
 ## Gate — all must pass before the next phase begins
 
-- [ ] No alias leakage — every surface form maps to exactly one canonical ID
-- [ ] No replicate leakage — no canonical ID or replicate crosses a fold
-- [ ] All three `cv_splits_v1.json` leakage checks read `false`
-- [ ] V5 baseline reproduced; fingerprint `09ed804a40836f4a05a91ba10900cded` verified
-- [ ] All inputs versioned and hashed
-- [ ] Splits deterministic under re-run and on a second machine
-- [ ] Every class has a written chemical rationale
-- [ ] `unknown` class resolved — assigned or excluded from partitioning
-- [ ] Quality score `q` frozen before Phase 01 begins
-- [ ] Success criteria frozen
+All twelve gates PASS. See `results/v7_rebuild/phase00/PHASE_STATE.json`.
+
+- [x] No alias leakage — every surface form maps to exactly one canonical ID
+- [x] No replicate leakage — no canonical ID or replicate crosses a fold boundary
+- [x] All three `cv_splits_v1.json` leakage checks read `false`
+- [x] V5 baseline reproduced; fingerprint `09ed804a40836f4a05a91ba10900cded` verified
+- [x] Atlas rebuilt bit-exactly from raw (max abs difference 0.0)
+- [x] All inputs versioned and hashed
+- [x] Splits deterministic under re-cut
+- [x] Every class has a written chemical rationale
+- [x] `unknown` class resolved (dissolved by the V6.3 fine ontology)
+- [x] Every canonical ID covered by the frozen ontology
+- [x] Quality score `q` frozen before Phase 01
+- [x] Success criteria frozen
+
+### Key results
+
+| | |
+|---|---:|
+| benchmark lock level | **3** (basis refitted from raw) |
+| max \|H_rebuilt − H_frozen\| | **0.0** |
+| surface forms → canonical molecules | 167 → **154** |
+| cross-source merges (leakage removed) | **11** (49 spectra) |
+| fine / broad classes | 16 / 6 |
+| CV folds (grouped by canonical_id) | 5 |
+| V5 control, MSS fine retrieval@1 | **0.6707** |
+| S-01 frozen replacement threshold | **≥ 0.7507** |
 
 ## Primary risks
 

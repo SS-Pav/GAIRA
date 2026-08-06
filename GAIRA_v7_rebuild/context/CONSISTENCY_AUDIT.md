@@ -135,15 +135,21 @@ Every quantitative claim was traced to its source and re-checked.
 | 10.7 | Principle IDs P-01…P-14 referenced consistently | ✅ |
 | 10.8 | Phase numbering matches directory names | ✅ |
 
-### One cross-reference correction made during the audit
+### One cross-reference correction — CORRECTED in Phase 00
 
-`LEARNING_MODE_ARCHITECTURE.md` Stage 1 cites the per-class source/excitation composition
+`LEARNING_MODE_ARCHITECTURE.md` Stage 1 cited the per-class source/excitation composition
 check as "risk R-14". In the register, source/excitation confounding is **R-16**; R-14 is
-inference nondeterminism. The correct reference for that check is **R-16**. The same check is
-cited correctly as R-16 in `DATASET_AND_PROVENANCE_CONTEXT.md`, the Phase-02 README, and the
-rebuild plan, so the register and the phase-level plan are consistent; only that single
-in-line citation is off. Recorded here rather than silently patched, and to be corrected in
-the first Phase-00 commit.
+inference nondeterminism. The same check was cited correctly as R-16 in
+`DATASET_AND_PROVENANCE_CONTEXT.md`, the Phase-02 README, and the rebuild plan, so only that
+single in-line citation was wrong.
+
+**Status: corrected in the Phase 00 commit** (`R-14` → `R-16` in
+`LEARNING_MODE_ARCHITECTURE.md` Stage 1). Recorded here rather than silently patched, so the
+change is visible as a change.
+
+Phase 00 then measured the risk it points at: **four fine classes are source-confounded** —
+`peptide_protein` (93.8% RamanBioLib), `acylglycerol` (94.4%), `sterol_steroid` (90.9%) and
+`nucleic_acid_polymer` (100%). See `results/v7_rebuild/phase00/reports/PHASE_00_REPORT.md` §6.
 
 ## 11. Figures
 

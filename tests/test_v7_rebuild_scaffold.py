@@ -299,10 +299,16 @@ def test_second_nmf_is_not_presupposed():
     assert "does not presuppose" in rules
 
 
-def test_success_criteria_are_marked_provisional():
+def test_success_criteria_freeze_state_matches_phase00():
+    """Before Phase 00 the criteria are provisional; after it they are frozen and pinned."""
     text = (V7 / "plan" / "SUCCESS_CRITERIA.md").read_text()
-    assert "PROVISIONAL" in text
-    assert "frozen into final form during Phase 00" in text or "frozen in Phase 00" in text
+    state = REPO / "results/v7_rebuild/phase00/PHASE_STATE.json"
+    if state.is_file() and json.loads(state.read_text())["status"] == "COMPLETE":
+        assert "STATUS: FROZEN in Phase 00" in text
+        assert "Frozen at source commit" in text
+        assert "0.7507" in text, "the frozen S-01 threshold must be pinned to a number"
+    else:
+        assert "PROVISIONAL" in text
 
 
 def test_no_document_claims_v7_performance():
@@ -321,11 +327,23 @@ def test_no_document_claims_v7_performance():
     assert not offenders, "V7 performance claimed before implementation:\n" + "\n".join(offenders)
 
 
-def test_readme_declares_unimplemented_status():
+def test_readme_declares_no_model_fitted():
+    """V7's representation is unbuilt until Phase 02; the README must keep saying so."""
     readme = (V7 / "README.md").read_text()
-    assert "specified, not implemented" in readme.lower()
+    assert "no v7 model has been fitted" in readme.lower()
     assert CANONICAL_ATLAS_FINGERPRINT in readme
     assert "gaira-v7-rebuild" in readme
+
+
+def test_readme_phase_status_table_is_current():
+    """The status table must not claim a phase is done before its gates pass."""
+    readme = (V7 / "README.md").read_text()
+    state = REPO / "results/v7_rebuild/phase00/PHASE_STATE.json"
+    if state.is_file():
+        complete = json.loads(state.read_text())["status"] == "COMPLETE"
+        assert ("| 00 | Benchmark lock | ✅ **COMPLETE**" in readme) == complete
+    else:
+        assert "| 00 | Benchmark lock | Not started" in readme
 
 
 # ─────────────────────────── existing artefacts untouched ───────────────────────────

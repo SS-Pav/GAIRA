@@ -1,7 +1,8 @@
 # GAIRA V7 — Hierarchical Foundation Rebuild
 
-**Status: specified, not implemented.** No V7 model has been fitted. No latent component has
-been generated. No existing scientific asset has been modified.
+**Status: Phase 00 complete. No V7 model has been fitted.** The benchmark is locked, canonical
+molecule identities are frozen, and the V5 control baseline is measured. No latent component
+has been generated. No existing scientific asset has been modified.
 
 | Field | Value |
 |---|---|
@@ -90,10 +91,10 @@ GAIRA_v7_rebuild/
 ├── plan/                      the rebuild plan, decision rules, criteria, risks, git policy
 ├── architecture/              target architecture, learning/inference modes, contracts, manifests
 ├── phases/                    one directory per phase, each with objectives, outputs, gates
-├── code/                      V7 implementation (empty)
+├── code/                      V7 implementation (Phase-00 code lives in results/v7_rebuild/phase00/code/)
 ├── data_contracts/            machine-readable schemas (empty)
 ├── results/                   tables · figures · manifests · checkpoints · phase_outputs
-├── reports/                   phase reports (empty)
+├── reports/                   phase reports (Phase-00 report in results/v7_rebuild/phase00/reports/)
 ├── tests/                     V7 tests (empty; scaffold test at repo-root `tests/`)
 └── archive/                   superseded V7 material (empty)
 ```
@@ -104,7 +105,7 @@ GAIRA_v7_rebuild/
 
 | Phase | Name | Status | Output | Gate |
 |---|---|---|---|---|
-| 00 | Benchmark lock | Not started | — | — |
+| 00 | Benchmark lock | ✅ **COMPLETE** | [`results/v7_rebuild/phase00/`](../results/v7_rebuild/phase00/) | 12/12 PASS |
 | 01 | Balanced references | Not started | — | — |
 | 02 | LSM construction | Not started | — | — |
 | 03 | CSM construction | Not started | — | — |
@@ -120,14 +121,17 @@ waived because the next phase is more interesting.
 
 ---
 
+## What is implemented
+
+**Phase 00 only.** Benchmark lock (the frozen basis is reproduced from raw, bit-exactly),
+canonical molecule identities (167 surface forms → 154 molecules), the chemical partition
+(16 fine / 6 broad), frozen analyte-grouped CV splits, the frozen quality score, the frozen
+evaluation harness, and the V5 control baseline measured under it.
+
 ## What is not yet implemented
 
-Everything. Specifically: no balanced reference matrix, no local decomposition, no LSM, no
-CSM, no theme mapping, no BSV, no V7 engine, no V7 atlas, no V7 validation. There is no V7
-code of any kind.
-
-This documentation pass establishes the specification so the rebuild does not become a pile of
-experimental scripts with a README written afterward.
+No balanced reference matrix, no local decomposition, no LSM, no CSM, no theme mapping, no BSV,
+no V7 engine, no V7 atlas, no V7 validation.
 
 ---
 
@@ -209,5 +213,9 @@ Full definitions in `context/TERMINOLOGY_AND_DEFINITIONS.md`.
 
 ---
 
-**Next approved step: Phase 00** — benchmark lock, canonical molecule identities, replicate
-groups, fixed cross-validation splits, and reproduction of the current atlas control.
+**Phase 00 is complete** — benchmark locked (basis reproduced from raw, bit-exactly), canonical
+molecule identities frozen (167 surface forms → 154 molecules), the chemical partition and
+cross-validation splits frozen, and the V5 control baseline measured under the frozen harness.
+Report: [`results/v7_rebuild/phase00/reports/PHASE_00_REPORT.md`](../results/v7_rebuild/phase00/reports/PHASE_00_REPORT.md).
+
+**Next step: Phase 01 — balanced reference construction. NOT STARTED; awaiting explicit approval.**

@@ -2,9 +2,11 @@
 
 What V7 must achieve before it replaces the current frozen atlas.
 
-> **STATUS: PROVISIONAL.** These thresholds are starting values. They are **frozen into final
-> form during Phase 00**, before any V7 model is fitted. Once frozen they are not adjusted —
-> not upward if V7 looks strong, and not downward if V7 looks weak (principle P-13).
+> **STATUS: FROZEN in Phase 00.** These thresholds were provisional during the specification
+> pass and were frozen on completion of Phase 00, before any V7 model was fitted. They are not
+> adjusted afterwards — not upward if V7 looks strong, and not downward if V7 looks weak
+> (principle P-13). The freeze record is in §6; the baseline they are measured against is
+> `results/v7_rebuild/phase00/tables/phase00_baseline_metrics.csv`.
 
 ---
 
@@ -46,7 +48,7 @@ Random-ontology control (12 size-matched draws): fine 0.096–0.106, broad ~0.22
 
 | # | Criterion | Threshold | Rationale |
 |---|---|---|---|
-| **S-01** | CSM/MSS-equivalent top-1 improvement | **≥ +8 percentage points** over 0.671 → **≥ 0.751** | must exceed the ±0.06 CI width of the V5 estimate by a clear margin; anything smaller is not distinguishable from noise at n=167 |
+| **S-01** | CSM/MSS-equivalent top-1 improvement | **≥ +8 percentage points** over 0.6707 → **≥ 0.7507** | must exceed the ±0.06 CI width of the V5 estimate by a clear margin; anything smaller is not distinguishable from noise at n=167 |
 | **S-02** | CSM top-3 | **≥ 90%** | the correct chemistry must be in the top three essentially always for the layer to be usable as evidence |
 | **S-03** | Fine-family retrieval improvement | **≥ +8 percentage points** | the fine-resolution ceiling (L-04) is the specific problem V7 exists to solve |
 | **S-04** | Broad-superclass retrieval | **maintained or improved** (≥ 0.808 at CSM level) | V5's genuine strength; a fine-resolution gain bought by losing coarse chemistry is not progress |
@@ -140,10 +142,28 @@ If V7 does not meet the Tier-1 criteria:
 
 | Field | Value |
 |---|---|
-| Status | **PROVISIONAL — to be frozen in Phase 00** |
-| Frozen by | *(Phase 00)* |
-| Frozen at commit | *(Phase 00)* |
-| Baseline harness | *(Phase 00 — must be the same harness for V5 and V7)* |
-| Baseline re-measured | *(Phase 00)* |
+| Status | **FROZEN** |
+| Frozen by | Phase 00 — `results/v7_rebuild/phase00/` |
+| Frozen at source commit | `b9f78ff5a22366f8d0ae7aab11d635e4ff961e24` |
+| Baseline harness | `v7_harness_v1` — the same harness measures V5 and V7 |
+| Split manifest | `v7_cv_v1` — 5 folds grouped by `canonical_id`, all leakage checks false |
+| Baseline re-measured | ✅ `phase00_baseline_metrics.csv` |
+| Quality score | `v7_q_v2`, frozen before Phase 01 |
+| Atlas fingerprint at freeze | `09ed804a40836f4a05a91ba10900cded` (rebuilt from raw, max abs diff 0.0) |
 
-Until this table is completed, no V7 result may be described as passing or failing.
+### Frozen Tier-1 thresholds, against the measured baseline
+
+| ID | Baseline (V5, `v7_harness_v1`) | Frozen threshold |
+|---|---:|---:|
+| S-01 CSM/MSS-equivalent fine top-1 | 0.6707 | **≥ 0.7507** |
+| S-02 CSM top-3 | — | ≥ 0.90 |
+| S-03 fine-family improvement | 0.6707 | **≥ +0.08** |
+| S-04 broad-superclass retrieval | 0.8084 | **≥ 0.8084** |
+| S-05 true projection failures | 31 of 54 | **< 31** |
+| S-09 LSM/CSM stability | 0.799 median | ≥ 0.799 |
+
+S-01 and S-03 must additionally be significant at α = 0.05 after correction (McNemar +
+permutation on the frozen folds).
+
+**These numbers are now fixed. No V7 result may be described as passing or failing against any
+other threshold.**
