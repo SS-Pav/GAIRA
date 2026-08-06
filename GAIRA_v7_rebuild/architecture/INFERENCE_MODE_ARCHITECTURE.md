@@ -81,7 +81,7 @@ Inference must **never**:
 > The output for a spectrum must be identical whether it is processed alone or as part of a
 > batch of ten thousand.
 
-This is directly testable and is a Phase-06 gate.
+This is directly testable and is a Phase-05 gate.
 
 ---
 
@@ -174,7 +174,7 @@ inference path never returns a delta under the name `bsv`.
 
 ## 7. Determinism and portability guarantees
 
-| Guarantee | Verified in Phase 06 by |
+| Guarantee | Verified in Phase 05 by |
 |---|---|
 | Identical input → byte-identical output | repeat run comparison |
 | Batch-independent | single-spectrum vs batch-of-N comparison |

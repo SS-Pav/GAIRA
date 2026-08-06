@@ -4,7 +4,7 @@ Requirements the V7 representation must satisfy to support live projection, futu
 Raman→SERS observation models, and DART perturbation trajectories.
 
 **None of this is implemented in V7.** These are forward constraints on the design, stated
-now so that Phases 02–06 do not build something that forecloses them.
+now so that Phases 01–05 do not build something that forecloses them.
 
 ---
 
@@ -62,7 +62,7 @@ substrate preference as chemistry.
 | Raman-only fitting | the exclusion list in the corpus card stays enforced |
 | Explicit validation boundary in the manifest | so a SERS spectrum projected through a Raman atlas is flagged, not silently scored |
 
-**Design consequence — do not discard the LSM layer after Phase 03.** It is tempting to treat
+**Design consequence — do not discard the LSM layer after Phase 02.** It is tempting to treat
 LSMs as scaffolding and ship only CSMs. The observation model will need mode-level structure.
 The LSM dictionary is therefore part of the frozen atlas and part of its fingerprint.
 
@@ -131,9 +131,9 @@ Every V7 phase must preserve all of:
 | 10 | Self-contained portable bundle | 06 |
 | 11 | Declared validation boundary in the manifest | 06 |
 
-**A property lost here is a capability lost later.** Non-negativity dropped in Phase 03 for a
+**A property lost here is a capability lost later.** Non-negativity dropped in Phase 02 for a
 cleaner consensus operator would quietly break the observation-model composition in §2.
-Dropping the LSM layer in Phase 06 to slim the bundle would remove the mode-level structure
+Dropping the LSM layer in Phase 05 to slim the bundle would remove the mode-level structure
 the SERS channel needs. These are the specific ways a good local decision becomes a bad
 architectural one, and they are why the checklist is stated before implementation rather
 than discovered after it.

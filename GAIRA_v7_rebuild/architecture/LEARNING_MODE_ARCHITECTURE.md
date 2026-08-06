@@ -40,7 +40,7 @@ benchmark.
 
 ---
 
-## Stage 1 — Local class decomposition (Phase 02)
+## Stage 1 — Local class decomposition (Phase 01)
 
 ### Objective
 
@@ -54,7 +54,7 @@ $$X_c \approx W_c H_c, \qquad W_c \in \mathbb{R}_+^{n_c \times k_c}, \; H_c \in 
 $$\min_{W_c, H_c \ge 0} \sum_{i=1}^{n_c} \omega_i \big\| x_{ci} - w_{ci} H_c \big\|^2 + \lambda \|H_c\|_1$$
 
 with `ω_i` the analyte-balanced quality weight and the optional L1 term promoting sparse,
-band-localised motifs. Whether sparse NMF beats plain NMF per class is itself a Phase-02
+band-localised motifs. Whether sparse NMF beats plain NMF per class is itself a Phase-01
 sweep, not an assumption.
 
 ### Repeated fits and stability selection
@@ -105,7 +105,7 @@ the source/excitation composition check (risk R-16).
 
 ---
 
-## Stage 2 — LSM integration: the motif similarity graph (Phase 03)
+## Stage 2 — LSM integration: the motif similarity graph (Phase 02)
 
 ### Pooling
 
@@ -150,7 +150,7 @@ stable over a range — not at a single lucky cut.
 
 ---
 
-## Stage 3 — CSM derivation (Phase 03)
+## Stage 3 — CSM derivation (Phase 02)
 
 Clusters of LSMs become **Consensus Spectral Motifs (CSMs)** — the canonical V7 evidence
 unit. For cluster `m`:
@@ -201,7 +201,7 @@ with rows of `V` inducing soft groupings of LSMs into `M` meta-motifs.
 
 ### The benchmark it must win
 
-Stage 4 is adopted **only if** it beats all of the following on the pre-registered Phase-03
+Stage 4 is adopted **only if** it beats all of the following on the pre-registered Phase-02
 criteria:
 
 | Candidate | Mechanism | Strength | Weakness |
@@ -222,19 +222,19 @@ The hybrid route is genuinely attractive: it would use the graph to establish *w
 correspond (multi-feature evidence) and a constrained non-negative refit to establish *how
 much* each contributes (soft overlapping membership).
 
-**Phase 03 must report the full comparison table regardless of which method wins**, so the
+**Phase 02 must report the full comparison table regardless of which method wins**, so the
 choice is auditable.
 
 ### Additional risk if Stage 4 is selected
 
 A second factorisation compresses; compression can erase exactly the molecule-discriminating
-residual structure Stage 1 worked to isolate (risk R-06). If Stage 4 is selected, Phase 03
+residual structure Stage 1 worked to isolate (risk R-06). If Stage 4 is selected, Phase 02
 must explicitly verify that molecule-discriminating LSMs survive into distinguishable CSMs —
 measured, not asserted.
 
 ---
 
-## Stage 5 — Theme construction (Phase 04)
+## Stage 5 — Theme construction (Phase 03)
 
 Themes are derived **from CSMs**, never asserted over them. This inverts the V5 direction and
 is the direct response to L-05.
@@ -258,19 +258,19 @@ superclass retrieval, stability, compression, and interpretability. Details in
 At the V6.2 theme layer, `theme_raw` and `theme_posterior` were numerically identical at
 every metric on every ontology — the Bayesian posterior refinement changed no decisions. The
 lesson: **abstraction layers added on top of an insufficient representation buy nothing.**
-Phase 04 must demonstrate that the theme layer adds value over the CSM layer, or record that
+Phase 03 must demonstrate that the theme layer adds value over the CSM layer, or record that
 it does not. A theme layer that merely relabels CSMs is decorative (risk R-11).
 
 ---
 
-## Stage 6 — BSV construction (Phase 05)
+## Stage 6 — BSV construction (Phase 04)
 
 $$\mathrm{BSV}(x) = t(x) = S^{\top} c(x) \in \mathbb{R}_+^{K}$$
 
 **BSV dimension = K = number of biochemical themes.** The BSV is absolute: a position in a
 fixed global coordinate system.
 
-Phase 05 additionally freezes: normalisation frame `(μ, σ)` per axis, reference
+Phase 04 additionally freezes: normalisation frame `(μ, σ)` per axis, reference
 distributions, the OOD support, the uncertainty propagation model, and — separately and
 distinctly named — the derived forms: reference-normalised elevation, ΔBSV,
 cohort-standardised views, and DART trajectories.
@@ -290,7 +290,7 @@ batch.
 ### The correlated-axes risk
 
 If themes end up highly correlated, `K` axes carry far fewer than `K` degrees of freedom and
-the BSV over-states its own resolution (risk R-12). Phase 05 must measure the **effective
+the BSV over-states its own resolution (risk R-12). Phase 04 must measure the **effective
 rank** of the BSV space separately from `K` and report both. Precedent: the V5 24-component
 space had participation ratio 15.2 — a 38% gap between nominal and effective dimensionality
 that was only visible because someone measured it.

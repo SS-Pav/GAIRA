@@ -3,8 +3,8 @@
 Schemas for every object crossing a phase boundary. Each is versioned; a breaking change
 requires a version bump and a migration note.
 
-Conventions: `D = 676` (canonical grid bins); `M` = CSM count (Phase 03); `K` = theme count
-= BSV dimension (Phase 04); all spectra, activations, memberships, and BSVs are **non-negative**.
+Conventions: `D = 676` (canonical grid bins); `M` = CSM count (Phase 02); `K` = theme count
+= BSV dimension (Phase 03); all spectra, activations, memberships, and BSVs are **non-negative**.
 
 ---
 
@@ -114,7 +114,7 @@ choice recorded in `strategy`.
 
 ---
 
-## C-05 LSM dictionary — *Phase 02*
+## C-05 LSM dictionary — *Phase 01*
 
 `lsm_dictionary_v1.npz` — per class, `H_c (k_c × D)`; plus `lsm_registry_v1.json`:
 
@@ -131,13 +131,13 @@ choice recorded in `strategy`.
               "retained": true, "retention_reason": "..." } ] }
 ```
 
-**Invariants.** `H_c ≥ 0`. Only `retained: true` LSMs proceed to Phase 03; discarded LSMs stay
+**Invariants.** `H_c ≥ 0`. Only `retained: true` LSMs proceed to Phase 02; discarded LSMs stay
 in the registry with a reason, so "what was thrown away" is answerable. `k_c ≤ ⌊n_analytes/2⌋`.
 Per-class source and excitation composition are mandatory (risk R-14).
 
 ---
 
-## C-06 LSM similarity graph — *Phase 03*
+## C-06 LSM similarity graph — *Phase 02*
 
 `lsm_graph_v1.json`
 
@@ -158,7 +158,7 @@ mandatory — a single unswept threshold is not acceptable evidence (risk R-07).
 
 ---
 
-## C-07 CSM dictionary — *Phase 03*
+## C-07 CSM dictionary — *Phase 02*
 
 `csm_dictionary_v1.npz` — `CSM (M × D)`, `grid (D,)`; plus `csm_registry_v1.json`:
 
@@ -184,7 +184,7 @@ mandatory — a single unswept threshold is not acceptable evidence (risk R-07).
 
 ---
 
-## C-08 Theme registry and membership — *Phase 04*
+## C-08 Theme registry and membership — *Phase 03*
 
 `theme_membership_v1.npz` — `S (M × K)`; plus `theme_registry_v1.yaml`:
 
@@ -208,7 +208,7 @@ to have exactly one parent.
 
 ---
 
-## C-09 BSV specification — *Phase 05*
+## C-09 BSV specification — *Phase 04*
 
 `bsv_reference_v1.json`
 
@@ -231,7 +231,7 @@ The visualisation block carries its disclaimer in the artefact itself, not only 
 
 ---
 
-## C-10 Inference output — *Phase 06*
+## C-10 Inference output — *Phase 05*
 
 `gaira_v7_inference_v1`
 
@@ -272,10 +272,10 @@ artefact IDs and hashes, and the gate-check results. Full spec:
 | # | Invariant | Where checked |
 |---|---|---|
 | 1 | All spectra, activations, memberships, and BSVs are non-negative | every phase |
-| 2 | Every artefact resolves to canonical analytes and source datasets | Phase 06 |
+| 2 | Every artefact resolves to canonical analytes and source datasets | Phase 05 |
 | 3 | No canonical ID crosses a CV fold boundary | Phase 00 gate |
 | 4 | No raw spectra in Git | CI / repo policy |
 | 5 | No absolute lab paths; `GAIRA_DATA_ROOT` only | scaffold test + CI |
-| 6 | Every artefact carries the build manifest hash | Phase 06 |
+| 6 | Every artefact carries the build manifest hash | Phase 05 |
 | 7 | Schema version present on every artefact | all |
-| 8 | Singleton and anchored status propagates to output uncertainty | Phase 05 / 06 |
+| 8 | Singleton and anchored status propagates to output uncertainty | Phase 04 / 05 |

@@ -94,15 +94,16 @@ def test_architecture_documents_exist(name):
 
 @pytest.mark.parametrize("phase", [
     "phase_00_benchmark_lock",
-    "phase_01_balanced_reference_construction",
-    "phase_02_local_spectral_motifs",
-    "phase_03_consensus_spectral_motifs",
-    "phase_04_biochemical_themes",
-    "phase_05_biochemical_state_vector",
-    "phase_06_end_to_end_integration",
-    "phase_07_in_domain_raman_validation",
-    "phase_08_chemistry_aware_learning",
-    "phase_09_targeted_corpus_expansion",
+    # Numbering adopted 2026-08-06: the original plan's Phase 01 (balanced references) and
+    # Phase 02 (LSMs) are one pipeline and were merged; everything below shifts down by one.
+    "phase_01_balanced_references_and_lsms",
+    "phase_02_consensus_spectral_motifs",
+    "phase_03_biochemical_themes",
+    "phase_04_biochemical_state_vector",
+    "phase_05_end_to_end_integration",
+    "phase_06_in_domain_raman_validation",
+    "phase_07_chemistry_aware_learning",
+    "phase_08_targeted_corpus_expansion",
 ])
 def test_phase_directories_exist(phase):
     d = V7 / "phases" / phase

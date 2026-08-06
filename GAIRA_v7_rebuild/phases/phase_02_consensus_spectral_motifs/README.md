@@ -1,6 +1,6 @@
-# Phase 03 — Consensus Spectral Motif construction
+# Phase 02 — Consensus Spectral Motif construction
 
-**Status:** Not started — blocked by Phase 02
+**Status:** IN PROGRESS — Phase 01 gate passed; corpus re-audited 2026-08-06
 
 ---
 
@@ -10,11 +10,11 @@ Reintegrate the per-class LSM dictionaries into one comparable cross-class coord
 
 ## Why this phase exists
 
-**This phase carries V7's central bet.** Partitioning (Phase 02) buys fair capacity allocation at the cost of comparability. If LSMs from different classes cannot be reintegrated, Strategy D has traded one problem for a worse one (risk R-03). The CSM is the canonical spectroscopic evidence unit of V7 and replaces the legacy MSS overlay.
+**This phase carries V7's central bet.** Partitioning (Phase 01) buys fair capacity allocation at the cost of comparability. If LSMs from different classes cannot be reintegrated, Strategy D has traded one problem for a worse one (risk R-03). The CSM is the canonical spectroscopic evidence unit of V7 and replaces the legacy MSS overlay.
 
 ## Inputs
 
-- stable LSMs from Phase 02
+- 50 stable LSMs from Phase 01 (registry fingerprint `208482d6f7178b5b8f16cace91be55b0`)
 - balanced references (for activation co-occurrence)
 - frozen CV splits
 
@@ -24,7 +24,7 @@ Reintegrate the per-class LSM dictionaries into one comparable cross-class coord
 - `lsm_graph_v1.json` (C-06) including the threshold sweep
 - **integration-method comparison table — committed regardless of the winner**
 - CSM reference manual: one page per CSM with spectrum, bands, provenance, uncertainty, flags
-- `reports/PHASE_03_REPORT.md`
+- `reports/PHASE_02_REPORT.md`
 
 ## Gate — all must pass before the next phase begins
 
@@ -80,7 +80,7 @@ existing CSM set exceeds threshold), written chemical justification, and a perma
 
 ## What belongs in this directory
 
-Phase-03 code, configs, notebooks, per-phase tables, and the phase report. Artefacts that
+Phase-02 code, configs, notebooks, per-phase tables, and the phase report. Artefacts that
 later phases consume belong in `../../results/` (tables, figures, manifests, checkpoints,
 phase_outputs) so the provenance chain stays in one place.
 
@@ -90,7 +90,7 @@ hard-coded absolute path · outputs from other phases.
 ## Reference documents
 
 - `../../context/GAIRA_V7_CONTEXT.md` — canonical scientific context
-- `../../plan/GAIRA_V7_REBUILD_PLAN.md` — Phase 03 in the full sequence
+- `../../plan/GAIRA_V7_REBUILD_PLAN.md` — Phase 02 in the full sequence (listed there under its original heading, Phase 03)
 - `../../plan/VALIDATION_AND_DECISION_RULES.md` — pre-registered selection rules
 - `../../plan/RISK_REGISTER.md` — full risk detail
 - `../../architecture/DATA_CONTRACTS.md` — artefact schemas

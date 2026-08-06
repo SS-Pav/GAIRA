@@ -54,33 +54,33 @@ balanced reference construction                                  ── PHASE 01
    strategy selected from {A all-spectra, B analyte-weighted, C robust prototype}
         │
         ▼
-chemical-family partition                                        ── PHASE 00 freeze / PHASE 02 use
+chemical-family partition                                        ── PHASE 00 freeze / PHASE 01 use
    X → {X_c}, one block per curated chemical class
    an organisational prior, never a target
         │
         ▼
-class-specific repeated non-negative decomposition               ── PHASE 02
+class-specific repeated non-negative decomposition               ── PHASE 01
    for each class c:  X_c ≈ W_c H_c,  W_c, H_c ≥ 0
    k_c chosen per class (adaptive, Pareto-plateau rule)
    R repeated fits under resampling + seed variation
         │
         ▼
-stable Local Spectral Motifs (LSMs)                              ── PHASE 02
+stable Local Spectral Motifs (LSMs)                              ── PHASE 01
    Hungarian alignment across runs → recurrence score
    retain only LSMs above the pre-registered stability threshold
    label each: class-shared | subfamily | molecule-discriminating
         │
         ▼
-LSM alignment and consensus clustering                           ── PHASE 03
+LSM alignment and consensus clustering                           ── PHASE 02
    pool all stable LSMs across all classes
    full-space similarity graph on 6 edge features
         │
         ▼
-cross-class motif graph                                          ── PHASE 03
+cross-class motif graph                                          ── PHASE 02
    nodes = LSMs, edges = multi-feature similarity
         │
         ▼
-Consensus Spectral Motifs (CSMs)                                 ── PHASE 03
+Consensus Spectral Motifs (CSMs)                                 ── PHASE 02
    integration method SELECTED ON EVIDENCE from:
      consensus clustering | graph communities |
      sparse non-negative meta-factorisation | hybrid
@@ -88,17 +88,17 @@ Consensus Spectral Motifs (CSMs)                                 ── PHASE 03
    optional anchored atoms for rare chemistry (Strategy F)
         │
         ▼
-CSM → theme soft mapping                                         ── PHASE 04
+CSM → theme soft mapping                                         ── PHASE 03
    S ∈ ℝ₊^{M×K}, sparse, non-negative, row-normalised
    K selected on a pre-registered Pareto frontier
         │
         ▼
-continuous BSV reference space                                   ── PHASE 05
+continuous BSV reference space                                   ── PHASE 04
    reference distributions per theme axis
    normalisation frame (μ, σ), OOD support, uncertainty model
         │
         ▼
-frozen GAIRA V7 Atlas                                            ── PHASE 06
+frozen GAIRA V7 Atlas                                            ── PHASE 05
    preprocessing spec + LSM dictionaries + CSM basis + S +
    theme registry + BSV reference stats + provenance + manifest
    ONE fingerprint over ALL layers
@@ -109,12 +109,12 @@ frozen GAIRA V7 Atlas                                            ── PHASE 06
 | Prior limitation | Addressed by |
 |---|---|
 | L-01 objective counts spectra | Phase 01 balanced reference construction |
-| L-02 stable but impure components | Phase 02 class-specific decomposition + adaptive `k_c` |
-| L-03 motifs borrow foreign mass | Phase 03 bottom-up CSMs with mandatory provenance; singletons visible |
-| L-04 fine retrieval plateau | the whole chain — measured, not assumed, in Phase 07 |
-| L-05 ontology cleanup insufficient | Phase 04 themes derived *from CSMs*, not asserted over them |
-| L-06 true representation failures | Phase 07 failure waterfall, retained as the primary success metric |
-| L-07 thin chemistry | Phase 02 adaptive `k_c` + Phase 03 anchors + Phase 09 targeted expansion |
+| L-02 stable but impure components | Phase 01 class-specific decomposition + adaptive `k_c` |
+| L-03 motifs borrow foreign mass | Phase 02 bottom-up CSMs with mandatory provenance; singletons visible |
+| L-04 fine retrieval plateau | the whole chain — measured, not assumed, in Phase 06 |
+| L-05 ontology cleanup insufficient | Phase 03 themes derived *from CSMs*, not asserted over them |
+| L-06 true representation failures | Phase 06 failure waterfall, retained as the primary success metric |
+| L-07 thin chemistry | Phase 01 adaptive `k_c` + Phase 02 anchors + Phase 08 targeted expansion |
 
 ---
 
@@ -201,20 +201,20 @@ depend on the batch.
 |---|---|---|---|---|
 | Preprocessing | spec | — | Phase 00 | apply |
 | Balanced reference | rows | `ℝ₊^{N×D}` | Phase 01 | not used live |
-| LSM dictionary | `H_c` per class | `ℝ₊^{k_c×D}` | Phase 02 | optional evidence projection |
-| CSM basis | `CSM` | `ℝ₊^{M×D}` | Phase 03 | **NNLS projection** |
-| Membership | `S` | `ℝ₊^{M×K}` | Phase 04 | matrix multiply |
-| Theme registry | names, definitions | — | Phase 04 | lookup |
-| BSV reference | `μ`, `σ`, support | `ℝ^K`, `ℝ₊^K` | Phase 05 | z-score, OOD |
-| Visualisation | `P`, `μ_P` | `ℝ^{K×2}` | Phase 05 | frozen transform |
+| LSM dictionary | `H_c` per class | `ℝ₊^{k_c×D}` | Phase 01 | optional evidence projection |
+| CSM basis | `CSM` | `ℝ₊^{M×D}` | Phase 02 | **NNLS projection** |
+| Membership | `S` | `ℝ₊^{M×K}` | Phase 03 | matrix multiply |
+| Theme registry | names, definitions | — | Phase 03 | lookup |
+| BSV reference | `μ`, `σ`, support | `ℝ^K`, `ℝ₊^K` | Phase 04 | z-score, OOD |
+| Visualisation | `P`, `μ_P` | `ℝ^{K×2}` | Phase 04 | frozen transform |
 | Domain context | rules | — | separate version | applied post-BSV |
 
-`D = 676`. `M` (CSM count) is selected in Phase 03. `K` (theme count, = BSV dimension) is
-selected in Phase 04.
+`D = 676`. `M` (CSM count) is selected in Phase 02. `K` (theme count, = BSV dimension) is
+selected in Phase 03.
 
 ---
 
-## 5. Invariants — must hold at every layer, checked in Phase 06
+## 5. Invariants — must hold at every layer, checked in Phase 05
 
 | Invariant | Check |
 |---|---|
@@ -247,8 +247,8 @@ development. V7's engine is a **parallel implementation**, not an edit.
 | NNLS projection | NNLS projection | **unchanged in kind** |
 
 The interface a caller sees — preprocess, project, read a BSV, get evidence and QC — is
-deliberately the same shape. That is what makes a Phase-07 head-to-head comparison possible
-and a Phase-07 replacement decision clean.
+deliberately the same shape. That is what makes a Phase-06 head-to-head comparison possible
+and a Phase-06 replacement decision clean.
 
 **Note on the disappearing MSS layer.** In V5 there were two objects between components and
 themes: the components (learned) and the MSS motifs (curated overlay). In V7 there is one:

@@ -467,13 +467,18 @@ nucleic_acid 3 (100% uncovered), sphingolipid **absent entirely**.
 ## Phase sequence summary
 
 ```
-00 Benchmark lock ──▶ 01 Balanced references ──▶ 02 LSMs ──▶ 03 CSMs ──▶ 04 Themes
-                                                                            │
-                                                                            ▼
-                                        07 Raman validation ◀── 06 Engine ◀── 05 BSV
-                                                │
-                                    ┌───────────┴───────────┐
-                                    ▼                       ▼
-                        08 Chemistry-aware learning   09 Corpus expansion
-                              (deferred)                  (deferred)
+00 Benchmark lock ──▶ 01 Balanced references + LSMs ──▶ 02 CSMs ──▶ 03 Themes
+                                                                       │
+                                                                       ▼
+                                   06 Raman validation ◀── 05 Engine ◀── 04 BSV
+                                            │
+                                ┌───────────┴───────────┐
+                                ▼                       ▼
+                    07 Chemistry-aware learning   08 Corpus expansion
+                          (deferred)                  (deferred)
 ```
+
+Numbering is the one adopted 2026-08-06 (see the ⚠ block at the top of this document). The
+per-phase sections below still carry their **original** headings — original Phase 01 + 02 are
+canonical Phase 01, original Phase 03 is canonical Phase 02, and so on down. The mapping table
+at the top is authoritative.

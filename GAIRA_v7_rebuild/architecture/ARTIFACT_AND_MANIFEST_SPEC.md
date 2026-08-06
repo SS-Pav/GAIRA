@@ -138,7 +138,7 @@ frozen artefact. It states, in machine-readable form, where this atlas has been 
 where it has not — so an engine can flag out-of-boundary input rather than silently returning
 a confident-looking number for a SERS spectrum or an in-vivo measurement.
 
-The **`supersedes`** block is what carries the Phase-07 replacement decision. Until Phase 07
+The **`supersedes`** block is what carries the Phase-06 replacement decision. Until Phase 06
 delivers a passing evaluation, every V7 atlas is `"status": "candidate"`.
 
 ---
@@ -231,6 +231,6 @@ The V5 frozen atlas is **read-only for the entire duration of V7**:
 | `src/gaira/preprocessing/**` | canonical preprocessing |
 | existing Streamlit apps | production surfaces |
 
-V7 **reads** these. V7 never writes them. The V5 atlas remains in production until Phase 07
+V7 **reads** these. V7 never writes them. The V5 atlas remains in production until Phase 06
 produces evidence that a V7 candidate clears the pre-registered replacement bar — and if it
 does not, the V5 atlas simply stays.
