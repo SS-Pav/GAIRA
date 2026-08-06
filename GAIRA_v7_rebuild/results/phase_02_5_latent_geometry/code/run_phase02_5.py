@@ -597,10 +597,20 @@ def main() -> int:
     outputs.append(wtab(fus_tab, "multiview_comparison_v1.csv"))
     log(f"  PRIMARY GEOMETRY: {winner}")
     Dfinal = cands[winner]
+    # TWO distinct objects, named so they cannot be confused:
+    #   D_primary_metric   — the selected single-view spectral geometry (steps 4-10 and the
+    #                        neighbourhood cards are computed on this)
+    #   D_primary_geometry — the Pareto-winning multi-view fusion
+    # An earlier version stored the fused matrix under a key the cards were not built from.
+    nb_agree = float(np.mean([
+        len(set(np.argsort(Dprim[i])[1:K_NN + 1]) & set(np.argsort(Dfinal[i])[1:K_NN + 1]))
+        / K_NN for i in range(len(ids))]))
+    log(f"  metric vs fused geometry: {nb_agree:.3f} mean k-NN agreement")
     np.savez_compressed(ARTIFACTS / "geometry_v1.npz",
                         **{f"D_{k}": v for k, v in Ds.items()},
                         **{f"fused_{k}": v for k, v in cands.items()},
-                        D_primary=Dfinal, motif_ids=np.array(ids, dtype=object))
+                        D_primary_metric=Dprim, D_primary_geometry=Dfinal,
+                        motif_ids=np.array(ids, dtype=object))
 
     # ── STEP 4b — CSM sensitivity control ────────────────────────────────────
     log("CSM sensitivity control (49 CSMs)")
@@ -665,6 +675,8 @@ def main() -> int:
                       "revealed_at_step": 8},
         "primary_spectral_metric": primary, "activation_metric": activation_metric,
         "primary_geometry": winner, "seed": SEED, "k_nn": K_NN,
+        "neighbourhoods_computed_on": "D_primary_metric",
+        "metric_vs_fused_knn_agreement": nb_agree,
         "outputs": outputs, "code_dirty": dirty,
         "environment": {"python": sys.version.split()[0], "numpy": np.__version__,
                         "pandas": pd.__version__},
@@ -677,6 +689,8 @@ def main() -> int:
         "atlas_fingerprint": fp_atlas,
         "lsm_registry_fingerprint": P01_FP, "csm_dictionary_fingerprint": P02_FP,
         "primary_spectral_metric": primary, "primary_geometry": winner,
+        "neighbourhoods_computed_on": "D_primary_metric",
+        "metric_vs_fused_knn_agreement": nb_agree,
         "n_priors": len(priors),
         "geometry_verdict": ("mixed" if len(set(region_tab.geometry_type)) > 1
                              else str(region_tab.geometry_type.iloc[0])),

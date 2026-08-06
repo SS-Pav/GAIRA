@@ -2,7 +2,7 @@
   "schema": "gaira_v7_phase_manifest_v1",
   "phase": "02.5",
   "phase_name": "Latent geometry of spectral motif space",
-  "built_utc": "2026-08-06T08:50:19.063751+00:00",
+  "built_utc": "2026-08-06T09:00:10.324999+00:00",
   "nature": "ANALYSIS ONLY \u2014 refits nothing, creates no themes",
   "frozen_inputs": {
     "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
@@ -21,6 +21,8 @@
   "primary_geometry": "weighted_similarity",
   "seed": 0,
   "k_nn": 5,
+  "neighbourhoods_computed_on": "D_primary_metric",
+  "metric_vs_fused_knn_agreement": 0.508,
   "outputs": [
     {
       "artifact_id": "representation_manifest_v1.json",

@@ -44,8 +44,10 @@ class Ctx:
     def __init__(self):
         g = np.load(A / "geometry_v1.npz", allow_pickle=True)
         self.ids = [str(s) for s in g["motif_ids"]]
-        self.D = g["D_primary"]
-        self.Ds = {k[2:]: g[k] for k in g.files if k.startswith("D_") and k != "D_primary"}
+        self.D = g["D_primary_metric"]          # neighbourhoods are computed on this
+        self.Dfused = g["D_primary_geometry"]
+        self.Ds = {k[2:]: g[k] for k in g.files
+                   if k.startswith("D_") and not k.startswith("D_primary")}
         self.fused = {k[6:]: g[k] for k in g.files if k.startswith("fused_")}
         e = np.load(A / "embeddings_v1.npz", allow_pickle=True)
         self.umap, self.diff, self.spec = e["umap"], e["diffusion"], e["spectral"]
