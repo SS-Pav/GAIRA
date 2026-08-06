@@ -1,0 +1,23 @@
+check,expected,got,status
+MANIFEST.atlas_fingerprint,09ed804a40836f4a05a91ba10900cded,09ed804a40836f4a05a91ba10900cded,PASS
+MANIFEST.versions.atlas_fingerprint,09ed804a40836f4a05a91ba10900cded,09ed804a40836f4a05a91ba10900cded,PASS
+manifold.fingerprint,09ed804a40836f4a05a91ba10900cded,09ed804a40836f4a05a91ba10900cded,PASS
+manifold.k,24,24,PASS
+preprocessing.window_cm,"[450.0, 1800.0]","[450.0, 1800.0]",PASS
+preprocessing.grid_step_cm,2.0,2.0,PASS
+preprocessing.pipeline,"{'baseline': 'asls', 'smooth': 'savgol', 'norm': 'l2'}","{'baseline': 'asls', 'smooth': 'savgol', 'norm': 'l2'}",PASS
+basis.shape,"(24, 676)","(24, 676)",PASS
+basis.fingerprint_recomputed,09ed804a40836f4a05a91ba10900cded,09ed804a40836f4a05a91ba10900cded,PASS
+basis.nonnegative,True,True,PASS
+file_sha256.biochemical_ontology_v2.yaml,b37cdc8ee3b2ab9ca341defc661328b08fecc0f5a7ce25908be604be91513aea,b37cdc8ee3b2ab9ca341defc661328b08fecc0f5a7ce25908be604be91513aea,PASS
+file_sha256.component_registry_v1.json,d9f205f80b787b675bdc5f72cf14d64fa065b90735ffcad683318c40cb29626d,d9f205f80b787b675bdc5f72cf14d64fa065b90735ffcad683318c40cb29626d,PASS
+file_sha256.component_theme_weights_v1.json,ab75d76cca02cade290aa7e56a5614da36708fa84fa988b17b5d9c61fc1006bf,ab75d76cca02cade290aa7e56a5614da36708fa84fa988b17b5d9c61fc1006bf,PASS
+file_sha256.manifold.json,fc0fae1e130af6725eb7f834cbd0b688da2c2636c5ad97cf8f02a1e079d2ab87,fc0fae1e130af6725eb7f834cbd0b688da2c2636c5ad97cf8f02a1e079d2ab87,PASS
+file_sha256.manifold_components.npz,ca385847146c7a9b72bd5c7ecfae85105ecf8740e43abe4a83ce894587444b9f,ca385847146c7a9b72bd5c7ecfae85105ecf8740e43abe4a83ce894587444b9f,PASS
+file_sha256.mss_motifs_v1.yaml,3983c2346e410a543a681143775546b2c75cb5ea738668ffebada8ec4ab3c702,3983c2346e410a543a681143775546b2c75cb5ea738668ffebada8ec4ab3c702,PASS
+file_sha256.reference_normalization_v1.json,f2a015ac795dea41e8716b17e9304fed87b67c7529f8d15dd98e24f92ff43614,f2a015ac795dea41e8716b17e9304fed87b67c7529f8d15dd98e24f92ff43614,PASS
+file_sha256.reference_support.npz,65b45ff59b4d3f05dbec1acb728c4ddc15722e2501a2705146297cf97a72819e,65b45ff59b4d3f05dbec1acb728c4ddc15722e2501a2705146297cf97a72819e,PASS
+rebuild.shape,"(24, 676)","(24, 676)",PASS
+rebuild.fingerprint,09ed804a40836f4a05a91ba10900cded,09ed804a40836f4a05a91ba10900cded,PASS
+rebuild.max_abs_difference,0.0,0.0,PASS
+rebuild.mean_rowwise_cosine,1.0,1.0,PASS

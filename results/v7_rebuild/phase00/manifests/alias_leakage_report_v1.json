@@ -1,0 +1,22 @@
+{
+  "n_surface_analytes": 167,
+  "n_canonical_ids": 154,
+  "n_merged_surface_forms": 13,
+  "n_canonical_ids_with_aliases": 12,
+  "n_cross_source_merges": 11,
+  "cross_source_merged_ids": [
+    "(+)-galactose",
+    "(+)-glucose",
+    "(+)-mannose",
+    "(-)-fructose",
+    "acetyl-coa",
+    "albumin",
+    "aspartate",
+    "glutathione",
+    "n-acetylglucosamine",
+    "riboflavin",
+    "urea"
+  ],
+  "spectra_affected_by_cross_source_merge": 49,
+  "interpretation": "Each cross-source merge is a molecule that appeared in two reference libraries under two spellings. Under naive surface-name grouping those spectra land in different CV folds and the same molecule is scored against itself."
+}

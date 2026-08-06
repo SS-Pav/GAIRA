@@ -1,0 +1,232 @@
+group_id,canonical_id,excitation_nm,n_spectra,sources,spectrum_ids,mean_quality
+(+)-arabinose|1064.0,(+)-arabinose,1064.0,1,RamanBioLib,ramanbiolib::189,0.86237
+(+)-dextrose|785.0,(+)-glucose,785.0,1,RamanBioLib,ramanbiolib::17,0.8959958333333332
+(+)-fucose|785.0,(+)-fucose,785.0,1,RamanBioLib,ramanbiolib::18,0.903141
+(+)-galactosamine|785.0,(+)-galactosamine,785.0,1,RamanBioLib,ramanbiolib::19,0.925864
+(+)-galactose|1064.0,(+)-galactose,1064.0,1,RamanBioLib,ramanbiolib::179,0.8872175
+(+)-glucose|1064.0,(+)-glucose,1064.0,1,RamanBioLib,ramanbiolib::180,0.8959958333333332
+(+)-lactose|1064.0,(+)-lactose,1064.0,1,RamanBioLib,ramanbiolib::181,0.8829309999999999
+(+)-maltose|1064.0,(+)-maltose,1064.0,1,RamanBioLib,ramanbiolib::182,0.891495
+(+)-mannose|785.0,(+)-mannose,785.0,1,RamanBioLib,ramanbiolib::20,0.8193595
+(+)-raffinose pentahydrate|1064.0,(+)-raffinose pentahydrate,1064.0,1,RamanBioLib,ramanbiolib::183,0.879832
+(+)-sucrose|1064.0,(+)-sucrose,1064.0,1,RamanBioLib,ramanbiolib::184,0.921724
+(+)-trehalose|785.0,(+)-trehalose,785.0,1,RamanBioLib,ramanbiolib::21,0.917938
+(+)-xylose|1064.0,(+)-xylose,1064.0,1,RamanBioLib,ramanbiolib::185,0.864749
+(+)-xylose|785.0,(+)-xylose,785.0,1,RamanBioLib,ramanbiolib::22,0.864749
+(-)-arabinose|785.0,(-)-arabinose,785.0,1,RamanBioLib,ramanbiolib::23,0.816425
+(-)-fructose|1064.0,(-)-fructose,1064.0,1,RamanBioLib,ramanbiolib::186,0.8806628
+(-)-fructose|785.0,(-)-fructose,785.0,1,RamanBioLib,ramanbiolib::24,0.8806628
+(-)-ribose|1064.0,(-)-ribose,1064.0,1,RamanBioLib,ramanbiolib::187,0.88612
+12-methyltetradecanoic acid|785.0,12-methyltetradecanoic acid,785.0,1,RamanBioLib,ramanbiolib::1,0.941496
+13-methylmyristicacid|785.0,13-methylmyristicacid,785.0,1,RamanBioLib,ramanbiolib::2,0.966861
+14-methylhexadecanoic acid|785.0,14-methylhexadecanoic acid,785.0,1,RamanBioLib,ramanbiolib::3,0.901358
+14-methylpentadecanoic acid|785.0,14-methylpentadecanoic acid,785.0,1,RamanBioLib,ramanbiolib::4,0.939161
+15-methylpalmiticacid|785.0,15-methylpalmiticacid,785.0,1,RamanBioLib,ramanbiolib::5,0.908612
+2-deoxy-d-ribose|1064.0,2-deoxy-d-ribose,1064.0,1,RamanBioLib,ramanbiolib::176,0.887931
+a-dna|514.5,a-dna,514.5,1,RamanBioLib,ramanbiolib::168,0.837159
+acetoacetate|785.0,acetoacetate,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Acetoacet::01;gobbato_raman_metabolites::Acetoacet::02;gobbato_raman_metabolites::Acetoacet::03;ramanbiolib::6,0.90431025
+acetyl coenzyme a|785.0,acetyl-coa,785.0,1,RamanBioLib,ramanbiolib::7,0.79402
+acetyl-coa|785.0,acetyl-coa,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::AcCoA::01;gobbato_raman_metabolites::AcCoA::02;gobbato_raman_metabolites::AcCoA::03,0.79402
+adenine|785.0,adenine,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Ade::01;gobbato_raman_metabolites::Ade::02;gobbato_raman_metabolites::Ade::03;ramanbiolib::8,0.88457275
+alanine|785.0,alanine,785.0,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,amino_acid_raman::alanine;gobbato_raman_metabolites::Ala::01;gobbato_raman_metabolites::Ala::02;gobbato_raman_metabolites::Ala::03;ramanbiolib::31,0.8501618000000001
+albumin|1064.0,albumin,1064.0,1,RamanBioLib,ramanbiolib::101,0.7321817142857142
+albumin|488.0,albumin,488.0,1,RamanBioLib,ramanbiolib::99,0.7321817142857142
+albumin|532.0,albumin,532.0,1,RamanBioLib,ramanbiolib::100,0.7321817142857142
+albumin|785.0,albumin,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Alb::01;gobbato_raman_metabolites::Alb::02;gobbato_raman_metabolites::Alb::03,0.7321817142857142
+alb|785.0,albumin,785.0,1,amino_acid_raman_grounding,amino_acid_raman::alb,0.7321817142857142
+amylopectin|1064.0,amylopectin,1064.0,1,RamanBioLib,ramanbiolib::177,0.8336265
+amylopectin|785.0,amylopectin,785.0,1,RamanBioLib,ramanbiolib::9,0.8336265
+amylose|1064.0,amylose,1064.0,1,RamanBioLib,ramanbiolib::178,0.8269979999999999
+amylose|785.0,amylose,785.0,1,RamanBioLib,ramanbiolib::10,0.8269979999999999
+arachidic acid|532.0,arachidic acid,532.0,1,RamanBioLib,ramanbiolib::63,0.806806
+arachidonic acid|532.0,arachidonic acid,532.0,1,RamanBioLib,ramanbiolib::61,0.714304
+arginine|785.0,arginine,785.0,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,amino_acid_raman::arginine;gobbato_raman_metabolites::Arg::01;gobbato_raman_metabolites::Arg::02;gobbato_raman_metabolites::Arg::03;ramanbiolib::32,0.8807644
+ascorbate|785.0,ascorbate,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Asc::01;gobbato_raman_metabolites::Asc::02;gobbato_raman_metabolites::Asc::03;ramanbiolib::11,0.9100572499999999
+asparagine|488.0,asparagine,488.0,1,RamanBioLib,ramanbiolib::193,0.883048
+aspartate|785.0,aspartate,785.0,1,amino_acid_raman_grounding,amino_acid_raman::aspartate,0.8281965
+aspartic acid|488.0,aspartate,488.0,1,RamanBioLib,ramanbiolib::194,0.8281965
+b-dna|514.5,b-dna,514.5,1,RamanBioLib,ramanbiolib::169,0.868947
+carbonic anhydrase|1064.0,carbonic anhydrase,1064.0,1,RamanBioLib,ramanbiolib::104,0.8872066666666667
+carbonic anhydrase|488.0,carbonic anhydrase,488.0,1,RamanBioLib,ramanbiolib::102,0.8872066666666667
+carbonic anhydrase|532.0,carbonic anhydrase,532.0,1,RamanBioLib,ramanbiolib::103,0.8872066666666667
+carotene|785.0,carotene,785.0,1,amino_acid_raman_grounding,amino_acid_raman::carotene,0.773916
+cellulose|785.0,cellulose,785.0,1,RamanBioLib,ramanbiolib::12,0.890389
+ceramide|1064.0,ceramide,1064.0,1,RamanBioLib,ramanbiolib::171,0.754478
+ceramide|850.0,ceramide,850.0,1,RamanBioLib,ramanbiolib::190,0.754478
+chitin|785.0,chitin,785.0,1,RamanBioLib,ramanbiolib::13,0.854658
+cholesterol|532.0,cholesterol,532.0,1,RamanBioLib,ramanbiolib::64,0.81843625
+cholesterol|785.0,cholesterol,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Chol::01;gobbato_raman_metabolites::Chol::02;gobbato_raman_metabolites::Chol::03,0.81843625
+cholesteryl linoleate|532.0,cholesteryl linoleate,532.0,1,RamanBioLib,ramanbiolib::65,0.929545
+cholesteryl oleate|532.0,cholesteryl oleate,532.0,1,RamanBioLib,ramanbiolib::66,0.929052
+cholesteryl palmitate|532.0,cholesteryl palmitate,532.0,1,RamanBioLib,ramanbiolib::67,0.930004
+cholesteryl stearate|532.0,cholesteryl stearate,532.0,1,RamanBioLib,ramanbiolib::68,0.923429
+citrate|785.0,citrate,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Citric::01;gobbato_raman_metabolites::Citric::02;gobbato_raman_metabolites::Citric::03;ramanbiolib::14,0.87284425
+coenzyme a|785.0,coenzyme a,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::CoA::01;gobbato_raman_metabolites::CoA::02;gobbato_raman_metabolites::CoA::03;ramanbiolib::15,0.7239525
+collagen|1064.0,collagen,1064.0,1,RamanBioLib,ramanbiolib::107,0.8817076666666667
+collagen|488.0,collagen,488.0,1,RamanBioLib,ramanbiolib::105,0.8817076666666667
+collagen|532.0,collagen,532.0,1,RamanBioLib,ramanbiolib::106,0.8817076666666667
+creatinine|785.0,creatinine,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Creat::01;gobbato_raman_metabolites::Creat::02;gobbato_raman_metabolites::Creat::03,0.891289
+cysteine|785.0,cysteine,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Cys::01;gobbato_raman_metabolites::Cys::02;gobbato_raman_metabolites::Cys::03,0.9005673333333334
+cytochrome c|488.0,cytochrome c,488.0,1,RamanBioLib,ramanbiolib::166,0.9240729999999999
+cytochrome c|532.0,cytochrome c,532.0,1,RamanBioLib,ramanbiolib::167,0.9240729999999999
+cytosine|785.0,cytosine,785.0,1,RamanBioLib,ramanbiolib::16,0.87501
+diethylstilbestrol|532.0,diethylstilbestrol,532.0,1,RamanBioLib,ramanbiolib::198,0.910616
+elaidic acid|532.0,elaidic acid,532.0,1,RamanBioLib,ramanbiolib::69,0.806587
+elastase|1064.0,elastase,1064.0,1,RamanBioLib,ramanbiolib::113,0.8894190000000001
+elastase|488.0,elastase,488.0,1,RamanBioLib,ramanbiolib::111,0.8894190000000001
+elastase|532.0,elastase,532.0,1,RamanBioLib,ramanbiolib::112,0.8894190000000001
+elastin|1064.0,elastin,1064.0,1,RamanBioLib,ramanbiolib::191,0.896698
+ergothioneine|785.0,ergothioneine,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Ergo::01;gobbato_raman_metabolites::Ergo::02;gobbato_raman_metabolites::Ergo::03,0.9018643333333333
+estradiol|532.0,estradiol,532.0,1,RamanBioLib,ramanbiolib::199,0.824185
+estriol|532.0,estriol,532.0,1,RamanBioLib,ramanbiolib::200,0.822305
+estrone|532.0,estrone,532.0,1,RamanBioLib,ramanbiolib::201,0.890191
+ethinylestradiol|532.0,ethinylestradiol,532.0,1,RamanBioLib,ramanbiolib::202,0.827509
+ferritin|1064.0,ferritin,1064.0,1,RamanBioLib,ramanbiolib::116,0.8438623333333334
+ferritin|488.0,ferritin,488.0,1,RamanBioLib,ramanbiolib::114,0.8438623333333334
+ferritin|532.0,ferritin,532.0,1,RamanBioLib,ramanbiolib::115,0.8438623333333334
+fructose-6-phosphate|785.0,fructose-6-phosphate,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Dfruct6P::01;gobbato_raman_metabolites::Dfruct6P::02;gobbato_raman_metabolites::Dfruct6P::03;ramanbiolib::25,0.7877505
+fructose|785.0,(-)-fructose,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Fruct::01;gobbato_raman_metabolites::Fruct::02;gobbato_raman_metabolites::Fruct::03,0.8806628
+fumarate|785.0,fumarate,785.0,1,RamanBioLib,ramanbiolib::26,0.736182
+galactose|785.0,(+)-galactose,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Galact::01;gobbato_raman_metabolites::Galact::02;gobbato_raman_metabolites::Galact::03,0.8872175
+glucosamine|488.0,glucosamine,488.0,1,RamanBioLib,ramanbiolib::195,0.915815
+glucose oxidase|1064.0,glucose oxidase,1064.0,1,RamanBioLib,ramanbiolib::162,0.932124
+glucose oxidase|532.0,glucose oxidase,532.0,1,RamanBioLib,ramanbiolib::161,0.932124
+glucose|785.0,(+)-glucose,785.0,4,amino_acid_raman_grounding;gobbato_raman_metabolites,amino_acid_raman::glucose;gobbato_raman_metabolites::Gluc::01;gobbato_raman_metabolites::Gluc::02;gobbato_raman_metabolites::Gluc::03,0.8959958333333332
+glutamate|785.0,glutamate,785.0,6,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,amino_acid_raman::glutamate#1;amino_acid_raman::glutamate#2;gobbato_raman_metabolites::Glutamic::01;gobbato_raman_metabolites::Glutamic::02;gobbato_raman_metabolites::Glutamic::03;ramanbiolib::33,0.8445566666666666
+glutathione transferase|488.0,glutathione transferase,488.0,1,RamanBioLib,ramanbiolib::117,0.8811225
+glutathione transferase|532.0,glutathione transferase,532.0,1,RamanBioLib,ramanbiolib::118,0.8811225
+glutathione|785.0,glutathione,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Glut::01;gobbato_raman_metabolites::Glut::02;gobbato_raman_metabolites::Glut::03;ramanbiolib::27,0.8204658
+gluth|785.0,glutathione,785.0,1,amino_acid_raman_grounding,amino_acid_raman::gluth,0.8204658
+glycerol|785.0,glycerol,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Glycerol::01;gobbato_raman_metabolites::Glycerol::02;gobbato_raman_metabolites::Glycerol::03;ramanbiolib::28,0.7925005
+glycine|785.0,glycine,785.0,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,amino_acid_raman::glycine;gobbato_raman_metabolites::Gly::01;gobbato_raman_metabolites::Gly::02;gobbato_raman_metabolites::Gly::03;ramanbiolib::29,0.829444
+glycogen|1064.0,glycogen,1064.0,1,RamanBioLib,ramanbiolib::188,0.5808355
+glycogen|785.0,glycogen,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Glycogen::01;gobbato_raman_metabolites::Glycogen::02;gobbato_raman_metabolites::Glycogen::03,0.5808355
+guanine|785.0,guanine,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Gua::01;gobbato_raman_metabolites::Gua::02;gobbato_raman_metabolites::Gua::03;ramanbiolib::30,0.87605025
+hemoglobin|488.0,hemoglobin,488.0,1,RamanBioLib,ramanbiolib::121,0.9435335
+hemoglobin|532.0,hemoglobin,532.0,1,RamanBioLib,ramanbiolib::122,0.9435335
+histidine|785.0,histidine,785.0,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,amino_acid_raman::histidine;gobbato_raman_metabolites::His::01;gobbato_raman_metabolites::His::02;gobbato_raman_metabolites::His::03;ramanbiolib::34,0.893927
+horseradish peroxidase|488.0,horseradish peroxidase,488.0,1,RamanBioLib,ramanbiolib::119,0.8685620000000001
+horseradish peroxidase|532.0,horseradish peroxidase,532.0,1,RamanBioLib,ramanbiolib::120,0.8685620000000001
+hydroxyproline|785.0,hydroxyproline,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Hydroxypro::01;gobbato_raman_metabolites::Hydroxypro::02;gobbato_raman_metabolites::Hydroxypro::03,0.9029386666666667
+hypoxanthine|785.0,hypoxanthine,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Hypox::01;gobbato_raman_metabolites::Hypox::02;gobbato_raman_metabolites::Hypox::03,0.711218
+insulin|633.0,insulin,633.0,1,RamanBioLib,ramanbiolib::197,0.815044
+isoleucine|785.0,isoleucine,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Ile::01;gobbato_raman_metabolites::Ile::02;gobbato_raman_metabolites::Ile::03,0.8043023333333333
+keratin|1064.0,keratin,1064.0,1,RamanBioLib,ramanbiolib::192,0.855673
+lactalbumin|1064.0,lactalbumin,1064.0,1,RamanBioLib,ramanbiolib::98,0.8910016666666666
+lactalbumin|488.0,lactalbumin,488.0,1,RamanBioLib,ramanbiolib::96,0.8910016666666666
+lactalbumin|532.0,lactalbumin,532.0,1,RamanBioLib,ramanbiolib::97,0.8910016666666666
+lactate|785.0,lactate,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Lact::01;gobbato_raman_metabolites::Lact::02;gobbato_raman_metabolites::Lact::03,0.8944386666666667
+lactose|785.0,(+)-lactose,785.0,1,RamanBioLib,ramanbiolib::41,0.8829309999999999
+lauric acid|785.0,lauric acid,785.0,1,RamanBioLib,ramanbiolib::42,0.897649
+lectin|1064.0,lectin,1064.0,1,RamanBioLib,ramanbiolib::125,0.8791213333333333
+lectin|488.0,lectin,488.0,1,RamanBioLib,ramanbiolib::123,0.8791213333333333
+lectin|532.0,lectin,532.0,1,RamanBioLib,ramanbiolib::124,0.8791213333333333
+leucine|785.0,leucine,785.0,4,amino_acid_raman_grounding;gobbato_raman_metabolites,amino_acid_raman::leucine;gobbato_raman_metabolites::Leu::01;gobbato_raman_metabolites::Leu::02;gobbato_raman_metabolites::Leu::03,0.8569835
+linoleic acid|532.0,linoleic acid,532.0,1,RamanBioLib,ramanbiolib::70,0.754908
+major proteinase|1064.0,major proteinase,1064.0,1,RamanBioLib,ramanbiolib::139,0.890739
+major proteinase|488.0,major proteinase,488.0,1,RamanBioLib,ramanbiolib::137,0.890739
+major proteinase|532.0,major proteinase,532.0,1,RamanBioLib,ramanbiolib::138,0.890739
+malic acid|785.0,malic acid,785.0,2,RamanBioLib;amino_acid_raman_grounding,amino_acid_raman::malic acid;ramanbiolib::43,0.8297405
+mannose|785.0,(+)-mannose,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Mann::01;gobbato_raman_metabolites::Mann::02;gobbato_raman_metabolites::Mann::03,0.8193595
+melanin|457.9,melanin,457.9,1,RamanBioLib,ramanbiolib::175,0.58440475
+melanin|514.5,melanin,514.5,1,RamanBioLib,ramanbiolib::174,0.58440475
+melanin|632.8,melanin,632.8,1,RamanBioLib,ramanbiolib::173,0.58440475
+melanin|785.0,melanin,785.0,1,RamanBioLib,ramanbiolib::172,0.58440475
+methionine|785.0,methionine,785.0,4,amino_acid_raman_grounding;gobbato_raman_metabolites,amino_acid_raman::methionine;gobbato_raman_metabolites::Methio::01;gobbato_raman_metabolites::Methio::02;gobbato_raman_metabolites::Methio::03,0.80237775
+myoglobin|488.0,myoglobin,488.0,1,RamanBioLib,ramanbiolib::126,0.9330415
+myoglobin|532.0,myoglobin,532.0,1,RamanBioLib,ramanbiolib::127,0.9330415
+myristic acid|532.0,myristic acid,532.0,1,RamanBioLib,ramanbiolib::71,0.8335075000000001
+myristic acid|785.0,myristic acid,785.0,1,RamanBioLib,ramanbiolib::44,0.8335075000000001
+n-acetyl- d-glucosamine|785.0,n-acetylglucosamine,785.0,1,RamanBioLib,ramanbiolib::45,0.83865
+n-acetylglucosamine|785.0,n-acetylglucosamine,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::NacDgluc::01;gobbato_raman_metabolites::NacDgluc::02;gobbato_raman_metabolites::NacDgluc::03,0.83865
+oleate|532.0,oleate,532.0,1,RamanBioLib,ramanbiolib::72,0.8251516000000001
+oleate|785.0,oleate,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Oleic::01;gobbato_raman_metabolites::Oleic::02;gobbato_raman_metabolites::Oleic::03;ramanbiolib::46,0.8251516000000001
+palmitic acid|532.0,palmitic acid,532.0,1,RamanBioLib,ramanbiolib::73,0.8443625
+palmitic acid|785.0,palmitic acid,785.0,1,RamanBioLib,ramanbiolib::47,0.8443625
+palmitoleic acid|532.0,palmitoleic acid,532.0,1,RamanBioLib,ramanbiolib::76,0.819898
+papain|1064.0,papain,1064.0,1,RamanBioLib,ramanbiolib::130,0.8599556666666667
+papain|488.0,papain,488.0,1,RamanBioLib,ramanbiolib::128,0.8599556666666667
+papain|532.0,papain,532.0,1,RamanBioLib,ramanbiolib::129,0.8599556666666667
+pepsinogen|1064.0,pepsinogen,1064.0,1,RamanBioLib,ramanbiolib::136,0.8621156666666666
+pepsinogen|488.0,pepsinogen,488.0,1,RamanBioLib,ramanbiolib::134,0.8621156666666666
+pepsinogen|532.0,pepsinogen,532.0,1,RamanBioLib,ramanbiolib::135,0.8621156666666666
+pepsin|1064.0,pepsin,1064.0,1,RamanBioLib,ramanbiolib::133,0.8752676666666668
+pepsin|488.0,pepsin,488.0,1,RamanBioLib,ramanbiolib::131,0.8752676666666668
+pepsin|532.0,pepsin,532.0,1,RamanBioLib,ramanbiolib::132,0.8752676666666668
+phenylalanine|785.0,phenylalanine,785.0,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,amino_acid_raman::phenylalanine;gobbato_raman_metabolites::Phe::01;gobbato_raman_metabolites::Phe::02;gobbato_raman_metabolites::Phe::03;ramanbiolib::35,0.8867794
+phosphate|785.0,phosphate,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Phosph::01;gobbato_raman_metabolites::Phosph::02;gobbato_raman_metabolites::Phosph::03,0.9020443333333333
+phosphatidylinositol|785.0,phosphatidylinositol,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::PhInositol::01;gobbato_raman_metabolites::PhInositol::02;gobbato_raman_metabolites::PhInositol::03,0.5477323333333334
+phosphoenolpyruvate|785.0,phosphoenolpyruvate,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::PEP::01;gobbato_raman_metabolites::PEP::02;gobbato_raman_metabolites::PEP::03;ramanbiolib::48,0.87696325
+proline|785.0,proline,785.0,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,amino_acid_raman::proline;gobbato_raman_metabolites::Pro::01;gobbato_raman_metabolites::Pro::02;gobbato_raman_metabolites::Pro::03;ramanbiolib::36,0.8576868
+pyruvate|785.0,pyruvate,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Pyr::01;gobbato_raman_metabolites::Pyr::02;gobbato_raman_metabolites::Pyr::03;ramanbiolib::49,0.8198205
+riboflavin|785.0,riboflavin,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Ribo::01;gobbato_raman_metabolites::Ribo::02;gobbato_raman_metabolites::Ribo::03,0.9151805
+riboﬂavin|785.0,riboflavin,785.0,1,RamanBioLib,ramanbiolib::50,0.9151805
+serine|785.0,serine,785.0,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,amino_acid_raman::serine;gobbato_raman_metabolites::Ser::01;gobbato_raman_metabolites::Ser::02;gobbato_raman_metabolites::Ser::03;ramanbiolib::37,0.8382582
+sphingomyelin|532.0,sphingomyelin,532.0,1,RamanBioLib,ramanbiolib::78,0.803618
+stearate|532.0,stearate,532.0,1,RamanBioLib,ramanbiolib::77,0.8933236000000001
+stearate|785.0,stearate,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Stearic::01;gobbato_raman_metabolites::Stearic::02;gobbato_raman_metabolites::Stearic::03;ramanbiolib::51,0.8933236000000001
+succinic acid|785.0,succinic acid,785.0,1,RamanBioLib,ramanbiolib::52,0.732423
+superoxide dismutases|1064.0,superoxide dismutases,1064.0,1,RamanBioLib,ramanbiolib::142,0.861002
+superoxide dismutases|488.0,superoxide dismutases,488.0,1,RamanBioLib,ramanbiolib::140,0.861002
+superoxide dismutases|532.0,superoxide dismutases,532.0,1,RamanBioLib,ramanbiolib::141,0.861002
+t-rna|488.0,t-rna,488.0,1,RamanBioLib,ramanbiolib::170,0.898381
+thaumatin|1064.0,thaumatin,1064.0,1,RamanBioLib,ramanbiolib::151,0.8959166666666666
+thaumatin|488.0,thaumatin,488.0,1,RamanBioLib,ramanbiolib::149,0.8959166666666666
+thaumatin|532.0,thaumatin,532.0,1,RamanBioLib,ramanbiolib::150,0.8959166666666666
+thymine|785.0,thymine,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Thy::01;gobbato_raman_metabolites::Thy::02;gobbato_raman_metabolites::Thy::03;ramanbiolib::53,0.865567
+tri-11-eicosenoin|1064.0,tri-11-eicosenoin,1064.0,1,RamanBioLib,ramanbiolib::85,0.961564
+triarachidin|1064.0,triarachidin,1064.0,1,RamanBioLib,ramanbiolib::79,0.835449
+tribehenin|1064.0,tribehenin,1064.0,1,RamanBioLib,ramanbiolib::80,0.885861
+tricaprin|1064.0,tricaprin,1064.0,1,RamanBioLib,ramanbiolib::82,0.937145
+tricaproin|1064.0,tricaproin,1064.0,1,RamanBioLib,ramanbiolib::81,0.923696
+tricaprylin|1064.0,tricaprylin,1064.0,1,RamanBioLib,ramanbiolib::83,0.904018
+trielaidin|1064.0,trielaidin,1064.0,1,RamanBioLib,ramanbiolib::84,0.895382
+trierucin|1064.0,trierucin,1064.0,1,RamanBioLib,ramanbiolib::86,0.895365
+trilaurin|1064.0,trilaurin,1064.0,1,RamanBioLib,ramanbiolib::89,0.918086
+trilinolein|1064.0,trilinolein,1064.0,1,RamanBioLib,ramanbiolib::87,0.8195975
+trilinolein|785.0,trilinolein,785.0,1,RamanBioLib,ramanbiolib::54,0.8195975
+trilinolenin|1064.0,trilinolenin,1064.0,1,RamanBioLib,ramanbiolib::88,0.8271744999999999
+trilinolenin|785.0,trilinolenin,785.0,1,RamanBioLib,ramanbiolib::55,0.8271744999999999
+trimyristin|1064.0,trimyristin,1064.0,1,RamanBioLib,ramanbiolib::90,0.885412
+triolein|1064.0,triolein,1064.0,1,RamanBioLib,ramanbiolib::91,0.8259169999999999
+triolein|785.0,triolein,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Triolein::01;gobbato_raman_metabolites::Triolein::02;gobbato_raman_metabolites::Triolein::03;ramanbiolib::56,0.8259169999999999
+triosephosphate isomerase|1064.0,triosephosphate isomerase,1064.0,1,RamanBioLib,ramanbiolib::154,0.8515466666666667
+triosephosphate isomerase|488.0,triosephosphate isomerase,488.0,1,RamanBioLib,ramanbiolib::152,0.8515466666666667
+triosephosphate isomerase|532.0,triosephosphate isomerase,532.0,1,RamanBioLib,ramanbiolib::153,0.8515466666666667
+tripalmitin|1064.0,tripalmitin,1064.0,1,RamanBioLib,ramanbiolib::92,0.927399
+tripalmitolein|1064.0,tripalmitolein,1064.0,1,RamanBioLib,ramanbiolib::94,0.819874
+tripetroselinin|1064.0,tripetroselinin,1064.0,1,RamanBioLib,ramanbiolib::93,0.847501
+tristearin|1064.0,tristearin,1064.0,1,RamanBioLib,ramanbiolib::95,0.8729
+trypsin inhibitor|1064.0,trypsin inhibitor,1064.0,1,RamanBioLib,ramanbiolib::148,0.8881793333333333
+trypsin inhibitor|488.0,trypsin inhibitor,488.0,1,RamanBioLib,ramanbiolib::146,0.8881793333333333
+trypsin inhibitor|532.0,trypsin inhibitor,532.0,1,RamanBioLib,ramanbiolib::147,0.8881793333333333
+trypsinogen|1064.0,trypsinogen,1064.0,1,RamanBioLib,ramanbiolib::145,0.8736099999999999
+trypsinogen|488.0,trypsinogen,488.0,1,RamanBioLib,ramanbiolib::143,0.8736099999999999
+trypsinogen|532.0,trypsinogen,532.0,1,RamanBioLib,ramanbiolib::144,0.8736099999999999
+trypsin|1064.0,trypsin,1064.0,1,RamanBioLib,ramanbiolib::157,0.8849736666666667
+trypsin|488.0,trypsin,488.0,1,RamanBioLib,ramanbiolib::155,0.8849736666666667
+trypsin|532.0,trypsin,532.0,1,RamanBioLib,ramanbiolib::156,0.8849736666666667
+tryptophan|785.0,tryptophan,785.0,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,amino_acid_raman::tryptophan;gobbato_raman_metabolites::Trp::01;gobbato_raman_metabolites::Trp::02;gobbato_raman_metabolites::Trp::03;ramanbiolib::38,0.9058394
+tubulin|532.0,tubulin,532.0,1,RamanBioLib,ramanbiolib::196,0.868885
+tyrosine|785.0,tyrosine,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Tyr::01;gobbato_raman_metabolites::Tyr::02;gobbato_raman_metabolites::Tyr::03;ramanbiolib::39,0.8895655
+ubiquitin|1064.0,ubiquitin,1064.0,1,RamanBioLib,ramanbiolib::160,0.9165243333333333
+ubiquitin|488.0,ubiquitin,488.0,1,RamanBioLib,ramanbiolib::158,0.9165243333333333
+ubiquitin|532.0,ubiquitin,532.0,1,RamanBioLib,ramanbiolib::159,0.9165243333333333
+uracil|785.0,uracil,785.0,4,RamanBioLib;gobbato_raman_metabolites,gobbato_raman_metabolites::Ura::01;gobbato_raman_metabolites::Ura::02;gobbato_raman_metabolites::Ura::03;ramanbiolib::57,0.8224137499999999
+urate|785.0,urate,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::UA::01;gobbato_raman_metabolites::UA::02;gobbato_raman_metabolites::UA::03,0.9020336666666666
+urea|785.0,urea,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Urea::01;gobbato_raman_metabolites::Urea::02;gobbato_raman_metabolites::Urea::03,0.6549845000000001
+ure|785.0,urea,785.0,1,amino_acid_raman_grounding,amino_acid_raman::ure,0.6549845000000001
+vaccenic acid|785.0,vaccenic acid,785.0,1,RamanBioLib,ramanbiolib::58,0.83218
+valine|785.0,valine,785.0,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites,amino_acid_raman::valine;gobbato_raman_metabolites::Val::01;gobbato_raman_metabolites::Val::02;gobbato_raman_metabolites::Val::03;ramanbiolib::40,0.8653156
+xanthine|785.0,xanthine,785.0,3,gobbato_raman_metabolites,gobbato_raman_metabolites::Xanth::01;gobbato_raman_metabolites::Xanth::02;gobbato_raman_metabolites::Xanth::03,0.8826583333333334
+xylanase|1064.0,xylanase,1064.0,1,RamanBioLib,ramanbiolib::165,0.8234373333333332
+xylanase|488.0,xylanase,488.0,1,RamanBioLib,ramanbiolib::163,0.8234373333333332
+xylanase|532.0,xylanase,532.0,1,RamanBioLib,ramanbiolib::164,0.8234373333333332
+α-chymotrypsinogen a (type ii)|1064.0,α-chymotrypsinogen a (type ii),1064.0,1,RamanBioLib,ramanbiolib::110,0.8497473333333333
+α-chymotrypsinogen a (type ii)|488.0,α-chymotrypsinogen a (type ii),488.0,1,RamanBioLib,ramanbiolib::108,0.8497473333333333
+α-chymotrypsinogen a (type ii)|532.0,α-chymotrypsinogen a (type ii),532.0,1,RamanBioLib,ramanbiolib::109,0.8497473333333333
+α-linolenic acid|532.0,α-linolenic acid,532.0,1,RamanBioLib,ramanbiolib::62,0.735683
+α-phosphatidylcholine|532.0,α-phosphatidylcholine,532.0,1,RamanBioLib,ramanbiolib::74,0.817899
+α-phosphatidylethanolamine|532.0,α-phosphatidylethanolamine,532.0,1,RamanBioLib,ramanbiolib::75,0.752102
+β-carotene|785.0,β-carotene,785.0,1,RamanBioLib,ramanbiolib::59,0.755689
+β-d-glucose|785.0,β-d-glucose,785.0,1,RamanBioLib,ramanbiolib::60,0.876062

@@ -1,0 +1,11 @@
+form_a,form_b,loose_key,canonical_a,canonical_b,decision,reason
+(+)-galactose,galactose,galactose,(+)-galactose,(+)-galactose,MERGED,Resolved to one canonical ID.
+(+)-glucose,glucose,glucose,(+)-glucose,(+)-glucose,MERGED,Resolved to one canonical ID.
+(+)-lactose,lactose,lactose,(+)-lactose,(+)-lactose,MERGED,Resolved to one canonical ID.
+(+)-mannose,mannose,mannose,(+)-mannose,(+)-mannose,MERGED,Resolved to one canonical ID.
+(-)-fructose,fructose,fructose,(-)-fructose,(-)-fructose,MERGED,Resolved to one canonical ID.
+riboflavin,riboﬂavin,riboflavin,riboflavin,riboflavin,MERGED,Resolved to one canonical ID.
+(+)-arabinose,(-)-arabinose,arabinose,(+)-arabinose,(-)-arabinose,NOT_MERGED_PROTECTED,Enantiomers. Distinct molecules; D- and L-arabinose are not interchangeable.
+(+)-glucose,β-d-glucose,,(+)-glucose,β-d-glucose,NOT_MERGED_PROTECTED,Anomers. β-D-glucose is a distinct anomeric form with its own reference spectrum.
+(-)-ribose,2-deoxy-d-ribose,,(-)-ribose,2-deoxy-d-ribose,NOT_MERGED_PROTECTED,Ribose vs 2-deoxyribose — different molecules (the 2'-OH is the RNA/DNA distinction).
+carotene,β-carotene,carotene,carotene,β-carotene,NOT_MERGED_UNRESOLVED,"Loose-key collision across two sources; both filed as chromophore_pigment. 'Carotene' most likely denotes the β isomer (the common commercial form), but the source spreadsheet does not say so, and α-carotene is a real alternative."

@@ -1,0 +1,323 @@
+{
+  "schema": "gaira_v7_phase_manifest_v1",
+  "phase": "00",
+  "phase_name": "Benchmark lock and reproducibility baseline",
+  "build_id": "v7-phase00-7b42b2ccfa71",
+  "built_utc": "2026-08-06T04:24:58.013296+00:00",
+  "load_mode": "full",
+  "benchmark_lock_level": 3,
+  "inputs": [
+    {
+      "artifact_id": "frozen_basis",
+      "path": "assets/foundation/manifold_components.npz",
+      "sha256": "ca385847146c7a9b72bd5c7ecfae85105ecf8740e43abe4a83ce894587444b9f"
+    },
+    {
+      "artifact_id": "frozen_manifest",
+      "path": "assets/foundation/MANIFEST.json",
+      "sha256": "dda465c15057542ad687bcde3d82f1a6f36a628ce0b8552a9c9ec92cb3f9eba7"
+    },
+    {
+      "artifact_id": "frozen_manifold",
+      "path": "assets/foundation/manifold.json",
+      "sha256": "fc0fae1e130af6725eb7f834cbd0b688da2c2636c5ad97cf8f02a1e079d2ab87"
+    },
+    {
+      "artifact_id": "component_registry",
+      "path": "assets/foundation/component_registry_v1.json",
+      "sha256": "d9f205f80b787b675bdc5f72cf14d64fa065b90735ffcad683318c40cb29626d"
+    },
+    {
+      "artifact_id": "sv_reps",
+      "path": "results/v6_rebuild/semantic_validation/artifacts/sv_reps.npz",
+      "sha256": "13949b3fdf9484682dad50e83436d5c51c04cf05a00c6ac931dec458437ee6ec"
+    },
+    {
+      "artifact_id": "v63_analyte_audit",
+      "path": "results/v6_rebuild/v63_ontology_revalidation/tables/v63_analyte_audit.csv",
+      "sha256": "4eeb30a5e6bf9d5af57258df60120afb77f7fc97a29c363a5d33bf183f718478"
+    }
+  ],
+  "config": {
+    "window_cm": [
+      450.0,
+      1800.0
+    ],
+    "grid_step_cm": 2.0,
+    "n_bins": 676,
+    "preprocessing": {
+      "baseline": "asls",
+      "smooth": "savgol",
+      "norm": "l2"
+    },
+    "q_version": "v7_q_v2",
+    "qc_floor": 0.35,
+    "split_version": "v7_cv_v1",
+    "n_folds": 5,
+    "harness_version": "v7_harness_v1",
+    "n_random_ontologies": 12,
+    "n_permutations": 1000,
+    "n_bootstrap": 4000
+  },
+  "seeds": {
+    "numpy": 0,
+    "nmf": 0,
+    "harness": 0,
+    "splits": 0
+  },
+  "code": {
+    "git_sha": "7b42b2ccfa713b8c9d2e47af0cdd19e81be9d82a",
+    "branch": "gaira-v7-rebuild",
+    "dirty": false,
+    "entry_point": "results/v7_rebuild/phase00/code/run_phase00.py"
+  },
+  "environment": {
+    "python": "3.12.7",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "sklearn": "1.8.0",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.8",
+    "blas": "accelerate unknown"
+  },
+  "outputs": [
+    {
+      "artifact_id": "dataset_card_v7.json",
+      "path": "results/v7_rebuild/phase00/manifests/dataset_card_v7.json",
+      "sha256": "aac46177fc16c905d9b9c79b37462b2bf6faa5c27011813ba8f5937279dad3f0"
+    },
+    {
+      "artifact_id": "phase00_corpus_checks.csv",
+      "path": "results/v7_rebuild/phase00/tables/phase00_corpus_checks.csv",
+      "sha256": "7f2589a618b82e4b35e6c70913db2c6ce9a88293655ff3bac60029957e45e0d9",
+      "rows": 8
+    },
+    {
+      "artifact_id": "canonical_analytes_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/canonical_analytes_v1.csv",
+      "sha256": "43e0136dec23b501131eee8cebd495a9a725762d84646158c898d75655f68355",
+      "rows": 154
+    },
+    {
+      "artifact_id": "alias_table_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/alias_table_v1.csv",
+      "sha256": "df0c94be823d99235785c617411e2cde413f9058bcd62b482680af117f23ba8a",
+      "rows": 167
+    },
+    {
+      "artifact_id": "alias_near_miss_audit_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/alias_near_miss_audit_v1.csv",
+      "sha256": "45a49b71d397a4791c95a9de9971ed6c5f2b5feb45bb758884c00360269c327c",
+      "rows": 10
+    },
+    {
+      "artifact_id": "chemical_partition_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/chemical_partition_v1.csv",
+      "sha256": "f99bda60a60654a86f7144850b4627ac84c8f3c79dddaafd68c0b5c315ea8548",
+      "rows": 154
+    },
+    {
+      "artifact_id": "class_conflicts_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/class_conflicts_v1.csv",
+      "sha256": "fd38515199c7e8910ad1754c252e30c853f35cc07d8e977efd9ca3c5653cc8dc",
+      "rows": 5
+    },
+    {
+      "artifact_id": "class_census_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/class_census_v1.csv",
+      "sha256": "cda46708811b39b51956cbcd155345aa83ba74a8fe828d0fa1bfcfe5949bcb78",
+      "rows": 16
+    },
+    {
+      "artifact_id": "alias_leakage_report_v1.json",
+      "path": "results/v7_rebuild/phase00/manifests/alias_leakage_report_v1.json",
+      "sha256": "ce4a492b7d8316968a24fe49b99d3000028a112623988b3545bfc1d7d6d0b3bf"
+    },
+    {
+      "artifact_id": "partition_rationale_v1.json",
+      "path": "results/v7_rebuild/phase00/manifests/partition_rationale_v1.json",
+      "sha256": "5bdcef1c0550bdb545e2762ca53e4cc4cf571e3c9111f32e988440c810dc1ae2"
+    },
+    {
+      "artifact_id": "replicate_group_key_comparison_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/replicate_group_key_comparison_v1.csv",
+      "sha256": "707bb0d61078e366903795ad363e26280fd139e7a3769b9a32258182b73e348a",
+      "rows": 2
+    },
+    {
+      "artifact_id": "replicate_groups_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/replicate_groups_v1.csv",
+      "sha256": "71e834a4fa41b5186496a6f2793ce21f8d22d4567f5dab6b4e3f6985cdb122be",
+      "rows": 231
+    },
+    {
+      "artifact_id": "spectrum_quality_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/spectrum_quality_v1.csv",
+      "sha256": "dff099fbf95be42e23023727b1cd3da25bcbdc081f14b04ac2a6c177a65479d2",
+      "rows": 375
+    },
+    {
+      "artifact_id": "quality_summary_v1.json",
+      "path": "results/v7_rebuild/phase00/manifests/quality_summary_v1.json",
+      "sha256": "8d0dc35d641919b83233f59df8da2a2d991b0cf4513dded8c58d72b0af4eaba6"
+    },
+    {
+      "artifact_id": "cv_folds_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/cv_folds_v1.csv",
+      "sha256": "c8b66ca743744da97f0404a749742aa8d7467c9c4ec2fdd7995a993c90a14b4b",
+      "rows": 154
+    },
+    {
+      "artifact_id": "cv_fold_summary_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/cv_fold_summary_v1.csv",
+      "sha256": "58d92c8d2e5b2dc7aab7916f59d030f604dd846632452e7645e61816d4763e75",
+      "rows": 5
+    },
+    {
+      "artifact_id": "cv_splits_v1.json",
+      "path": "results/v7_rebuild/phase00/manifests/cv_splits_v1.json",
+      "sha256": "7a96030e69552fd3b2afb31a57f30134ef4f5289bd67248002b50e9dc813f3aa"
+    },
+    {
+      "artifact_id": "benchmark_lock_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/benchmark_lock_v1.csv",
+      "sha256": "15a6f5efbc6fc151f821af66a22f361361e9bfa79540fbd334466775beff82b4",
+      "rows": 22
+    },
+    {
+      "artifact_id": "frozen_dependency_graph_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/frozen_dependency_graph_v1.csv",
+      "sha256": "3c03aa34e264b09ab86e2d64d24ef48ec01a9309464694aa14860863734ab3b0",
+      "rows": 14
+    },
+    {
+      "artifact_id": "phase00_baseline_metrics.csv",
+      "path": "results/v7_rebuild/phase00/tables/phase00_baseline_metrics.csv",
+      "sha256": "a0a8d34737a5420ed8e08ab8cb8c278c3750c926c3bbf549732f96ab94c88bc5",
+      "rows": 16
+    },
+    {
+      "artifact_id": "phase00_baseline_gain_v1.csv",
+      "path": "results/v7_rebuild/phase00/tables/phase00_baseline_gain_v1.csv",
+      "sha256": "2d2ddf86ba495a20cfa1dde1371eb9a87a0cbb02f1eee1637cc3fddb5626d094",
+      "rows": 4
+    },
+    {
+      "artifact_id": "phase00_component_baseline_v1.json",
+      "path": "results/v7_rebuild/phase00/manifests/phase00_component_baseline_v1.json",
+      "sha256": "a3e0f870de97d1337fb7fbd9f1633248a4236e7f857917b524fa9a26f1c73cdd"
+    }
+  ],
+  "gates": [
+    {
+      "gate": "no_alias_leakage",
+      "passed": true,
+      "evidence": "Every surface form maps to exactly one canonical ID and one fold."
+    },
+    {
+      "gate": "no_replicate_leakage",
+      "passed": true,
+      "evidence": "No canonical ID's replicates cross a fold boundary."
+    },
+    {
+      "gate": "cv_checks_all_false",
+      "passed": true,
+      "evidence": "All three cv_splits_v1.json leakage checks read false."
+    },
+    {
+      "gate": "baseline_reproduced",
+      "passed": true,
+      "evidence": "Corpus card reproduced; atlas fingerprint recomputed; all frozen file hashes match."
+    },
+    {
+      "gate": "atlas_rebuilt_bit_exact",
+      "passed": true,
+      "evidence": "NMF refitted from raw reproduces the frozen basis with max abs difference 0.0."
+    },
+    {
+      "gate": "inputs_versioned_and_hashed",
+      "passed": true,
+      "evidence": "Every input and output artefact carries a SHA-256 in the phase manifest."
+    },
+    {
+      "gate": "splits_deterministic",
+      "passed": true,
+      "evidence": "Fixed seed, sorted IDs, deterministic assignment — re-running gives identical folds."
+    },
+    {
+      "gate": "class_rationale_written",
+      "passed": true,
+      "evidence": "Every fine class has a written chemical rationale."
+    },
+    {
+      "gate": "unknown_class_resolved",
+      "passed": true,
+      "evidence": "The `unknown` bucket is dissolved; every analyte has a real chemical class."
+    },
+    {
+      "gate": "no_uncovered_analytes",
+      "passed": true,
+      "evidence": "Every canonical ID is covered by the frozen ontology."
+    },
+    {
+      "gate": "quality_score_frozen",
+      "passed": true,
+      "evidence": "The quality score q is computed and frozen before Phase 01."
+    },
+    {
+      "gate": "success_criteria_frozen",
+      "passed": true,
+      "evidence": "Provisional criteria carried into the Phase-00 report and marked frozen."
+    }
+  ],
+  "decisions": [
+    {
+      "decision": "Canonical identity is a metadata layer, not a corpus edit",
+      "rule_preregistered_in": "GAIRA_v7_rebuild/architecture/DATA_CONTRACTS.md C-00",
+      "chosen": "corpus stays 375 spectra / 167 surface analytes; 154 canonical IDs added as metadata; CV groups by canonical_id",
+      "alternatives": [
+        "collapse the corpus to 154 analytes before fitting"
+      ],
+      "rationale": "Collapsing the corpus would break bit-exact reproduction of the frozen atlas and change the fitting objective. Grouping CV by canonical_id removes the leakage without redefining the corpus."
+    },
+    {
+      "decision": "Replicate group key",
+      "rule_preregistered_in": "GAIRA_v7_rebuild/context/DATASET_AND_PROVENANCE_CONTEXT.md §4",
+      "chosen": "(canonical_id, excitation) — the V7 recommendation, ratified",
+      "alternatives": [
+        "(analyte, source, excitation) — the V5 key, 272 groups"
+      ],
+      "rationale": "Balancing applies at canonical_id level across groups either way, so the key only decides how within-analyte variation is bucketed. The V7 key merges the same molecule measured at one excitation in two libraries into one group, which is the scientifically correct bucket for a replicate."
+    },
+    {
+      "decision": "Chemical-family partition",
+      "rule_preregistered_in": "GAIRA_v7_rebuild/plan/GAIRA_V7_REBUILD_PLAN.md Phase 00 obj. 6",
+      "chosen": "adopt the V6.3 cleaned ontology (16 fine / 6 broad)",
+      "alternatives": [
+        "author a new V7 ontology",
+        "keep the 18-class old_family partition"
+      ],
+      "rationale": "V6.3 already dissolves `unknown`, separates fatty_acid/acylglycerol/phospholipid and keeps polysaccharide distinct — the three problems Phase 00 had to solve — and it is the ontology the V5 baseline was last measured under, keeping the Phase-07 comparison like-for-like."
+    },
+    {
+      "decision": "V6.3 revalidation tree: commit or re-derive",
+      "rule_preregistered_in": "GAIRA_v7_rebuild/context/REPOSITORY_BASELINE.md",
+      "chosen": "commit as a versioned Phase-00 input, hashed in the phase manifest",
+      "alternatives": [
+        "re-derive under a V7 manifest"
+      ],
+      "rationale": "Re-deriving would recompute a result that is already reproducible from committed code, at the cost of a second, divergent copy of the ontology. Hashing the input pins it as firmly."
+    },
+    {
+      "decision": "carotene vs β-carotene",
+      "rule_preregistered_in": "GAIRA_v7_rebuild/context/DATASET_AND_PROVENANCE_CONTEXT.md §3",
+      "chosen": "NOT MERGED — recorded as an unresolved near-miss",
+      "alternatives": [
+        "merge as the same molecule"
+      ],
+      "rationale": "The source spreadsheet does not state which carotene isomer it holds, and α-carotene is a real alternative. Merging on a guess would destroy a distinct reference; not merging risks one leaked spectrum. Flagged for resolution from the datasheet before Phase 02."
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schema": "gaira_v7_phase_state_v1",
+  "phase": "00",
+  "phase_name": "Benchmark lock and reproducibility baseline",
+  "status": "COMPLETE",
+  "completed_utc": "2026-08-06T04:25:06.528053+00:00",
+  "load_mode": "full",
+  "benchmark_lock_level": 3,
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "atlas_fingerprint_verified": true,
+  "atlas_rebuilt_bit_exact": true,
+  "corpus": {
+    "n_spectra": 375,
+    "n_analytes": 167,
+    "n_bins": 676
+  },
+  "canonical": {
+    "n_surface_forms": 167,
+    "n_canonical_ids": 154,
+    "n_merges": 13,
+    "n_cross_source_merges": 11
+  },
+  "partition": {
+    "n_fine_classes": 16,
+    "n_broad_classes": 6,
+    "unknown_class_present": false
+  },
+  "splits": {
+    "version": "v7_cv_v1",
+    "n_folds": 5,
+    "grouping": "canonical_id",
+    "leakage_checks": {
+      "canonical_id_across_folds": false,
+      "alias_collision": false,
+      "replicate_across_folds": false
+    },
+    "all_checks_false": true
+  },
+  "frozen": {
+    "preprocessing": {
+      "baseline": "asls",
+      "smooth": "savgol",
+      "norm": "l2"
+    },
+    "window_cm": [
+      450.0,
+      1800.0
+    ],
+    "grid_step_cm": 2.0,
+    "quality_score": "v7_q_v2",
+    "harness": "v7_harness_v1",
+    "success_criteria": "provisional -> frozen in PHASE_00_REPORT.md section 9"
+  },
+  "gates": [
+    {
+      "gate": "no_alias_leakage",
+      "passed": true,
+      "evidence": "Every surface form maps to exactly one canonical ID and one fold."
+    },
+    {
+      "gate": "no_replicate_leakage",
+      "passed": true,
+      "evidence": "No canonical ID's replicates cross a fold boundary."
+    },
+    {
+      "gate": "cv_checks_all_false",
+      "passed": true,
+      "evidence": "All three cv_splits_v1.json leakage checks read false."
+    },
+    {
+      "gate": "baseline_reproduced",
+      "passed": true,
+      "evidence": "Corpus card reproduced; atlas fingerprint recomputed; all frozen file hashes match."
+    },
+    {
+      "gate": "atlas_rebuilt_bit_exact",
+      "passed": true,
+      "evidence": "NMF refitted from raw reproduces the frozen basis with max abs difference 0.0."
+    },
+    {
+      "gate": "inputs_versioned_and_hashed",
+      "passed": true,
+      "evidence": "Every input and output artefact carries a SHA-256 in the phase manifest."
+    },
+    {
+      "gate": "splits_deterministic",
+      "passed": true,
+      "evidence": "Fixed seed, sorted IDs, deterministic assignment — re-running gives identical folds."
+    },
+    {
+      "gate": "class_rationale_written",
+      "passed": true,
+      "evidence": "Every fine class has a written chemical rationale."
+    },
+    {
+      "gate": "unknown_class_resolved",
+      "passed": true,
+      "evidence": "The `unknown` bucket is dissolved; every analyte has a real chemical class."
+    },
+    {
+      "gate": "no_uncovered_analytes",
+      "passed": true,
+      "evidence": "Every canonical ID is covered by the frozen ontology."
+    },
+    {
+      "gate": "quality_score_frozen",
+      "passed": true,
+      "evidence": "The quality score q is computed and frozen before Phase 01."
+    },
+    {
+      "gate": "success_criteria_frozen",
+      "passed": true,
+      "evidence": "Provisional criteria carried into the Phase-00 report and marked frozen."
+    }
+  ],
+  "next_phase": "01 — balanced reference construction (NOT STARTED, awaiting approval)",
+  "manifest": {
+    "artifact_id": "phase_00_manifest_v1.json",
+    "path": "results/v7_rebuild/phase00/manifests/phase_00_manifest_v1.json",
+    "sha256": "dc7fdad676a49802dfb95dd36c767ba9f2837e936c88615805a4e874455f7c15"
+  }
+}

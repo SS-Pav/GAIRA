@@ -1,0 +1,155 @@
+canonical_id,n_spectra,fine_class,broad_class,fold,split_version
+(+)-arabinose,1,mono_oligosaccharide,carbohydrate,0,v7_cv_v1
+(+)-fucose,1,mono_oligosaccharide,carbohydrate,1,v7_cv_v1
+(+)-galactosamine,1,mono_oligosaccharide,carbohydrate,0,v7_cv_v1
+(+)-galactose,4,mono_oligosaccharide,carbohydrate,3,v7_cv_v1
+(+)-glucose,6,mono_oligosaccharide,carbohydrate,0,v7_cv_v1
+(+)-lactose,2,mono_oligosaccharide,carbohydrate,2,v7_cv_v1
+(+)-maltose,1,mono_oligosaccharide,carbohydrate,1,v7_cv_v1
+(+)-mannose,4,mono_oligosaccharide,carbohydrate,4,v7_cv_v1
+(+)-raffinose pentahydrate,1,mono_oligosaccharide,carbohydrate,2,v7_cv_v1
+(+)-sucrose,1,mono_oligosaccharide,carbohydrate,4,v7_cv_v1
+(+)-trehalose,1,mono_oligosaccharide,carbohydrate,4,v7_cv_v1
+(+)-xylose,2,mono_oligosaccharide,carbohydrate,4,v7_cv_v1
+(-)-arabinose,1,mono_oligosaccharide,carbohydrate,0,v7_cv_v1
+(-)-fructose,5,mono_oligosaccharide,carbohydrate,2,v7_cv_v1
+(-)-ribose,1,mono_oligosaccharide,carbohydrate,1,v7_cv_v1
+12-methyltetradecanoic acid,1,fatty_acid,lipid,2,v7_cv_v1
+13-methylmyristicacid,1,fatty_acid,lipid,4,v7_cv_v1
+14-methylhexadecanoic acid,1,fatty_acid,lipid,2,v7_cv_v1
+14-methylpentadecanoic acid,1,fatty_acid,lipid,4,v7_cv_v1
+15-methylpalmiticacid,1,fatty_acid,lipid,0,v7_cv_v1
+2-deoxy-d-ribose,1,mono_oligosaccharide,carbohydrate,2,v7_cv_v1
+a-dna,1,nucleic_acid_polymer,nucleic,0,v7_cv_v1
+acetoacetate,4,carboxylic_acid_metabolite,energy_metabolism,3,v7_cv_v1
+acetyl-coa,4,sulfur_thiol_cofactor,redox_cofactor,0,v7_cv_v1
+adenine,4,purine,nucleic,0,v7_cv_v1
+alanine,5,free_amino_acid,protein_amino_acid,4,v7_cv_v1
+albumin,7,peptide_protein,protein_amino_acid,3,v7_cv_v1
+amylopectin,2,polysaccharide,carbohydrate,0,v7_cv_v1
+amylose,2,polysaccharide,carbohydrate,1,v7_cv_v1
+arachidic acid,1,fatty_acid,lipid,0,v7_cv_v1
+arachidonic acid,1,fatty_acid,lipid,1,v7_cv_v1
+arginine,5,free_amino_acid,protein_amino_acid,0,v7_cv_v1
+ascorbate,4,carboxylic_acid_metabolite,energy_metabolism,2,v7_cv_v1
+asparagine,1,free_amino_acid,protein_amino_acid,0,v7_cv_v1
+aspartate,2,free_amino_acid,protein_amino_acid,4,v7_cv_v1
+b-dna,1,nucleic_acid_polymer,nucleic,1,v7_cv_v1
+carbonic anhydrase,3,peptide_protein,protein_amino_acid,1,v7_cv_v1
+carotene,1,chromophore_pigment,redox_cofactor,0,v7_cv_v1
+cellulose,1,polysaccharide,carbohydrate,2,v7_cv_v1
+ceramide,2,phospholipid_sphingolipid,lipid,0,v7_cv_v1
+chitin,1,polysaccharide,carbohydrate,3,v7_cv_v1
+cholesterol,4,sterol_steroid,lipid,1,v7_cv_v1
+cholesteryl linoleate,1,sterol_steroid,lipid,3,v7_cv_v1
+cholesteryl oleate,1,sterol_steroid,lipid,2,v7_cv_v1
+cholesteryl palmitate,1,sterol_steroid,lipid,3,v7_cv_v1
+cholesteryl stearate,1,sterol_steroid,lipid,4,v7_cv_v1
+citrate,4,carboxylic_acid_metabolite,energy_metabolism,0,v7_cv_v1
+coenzyme a,4,sulfur_thiol_cofactor,redox_cofactor,1,v7_cv_v1
+collagen,3,peptide_protein,protein_amino_acid,2,v7_cv_v1
+creatinine,3,small_nitrogenous,energy_metabolism,4,v7_cv_v1
+cysteine,3,free_amino_acid,protein_amino_acid,0,v7_cv_v1
+cytochrome c,2,peptide_protein,protein_amino_acid,0,v7_cv_v1
+cytosine,1,pyrimidine,nucleic,1,v7_cv_v1
+diethylstilbestrol,1,sterol_steroid,lipid,0,v7_cv_v1
+elaidic acid,1,fatty_acid,lipid,2,v7_cv_v1
+elastase,3,peptide_protein,protein_amino_acid,4,v7_cv_v1
+elastin,1,peptide_protein,protein_amino_acid,2,v7_cv_v1
+ergothioneine,3,sulfur_thiol_cofactor,redox_cofactor,2,v7_cv_v1
+estradiol,1,sterol_steroid,lipid,0,v7_cv_v1
+estriol,1,sterol_steroid,lipid,1,v7_cv_v1
+estrone,1,sterol_steroid,lipid,2,v7_cv_v1
+ethinylestradiol,1,sterol_steroid,lipid,3,v7_cv_v1
+ferritin,3,peptide_protein,protein_amino_acid,0,v7_cv_v1
+fructose-6-phosphate,4,phosphate_metabolite,energy_metabolism,2,v7_cv_v1
+fumarate,1,carboxylic_acid_metabolite,energy_metabolism,4,v7_cv_v1
+glucosamine,1,mono_oligosaccharide,carbohydrate,3,v7_cv_v1
+glucose oxidase,2,peptide_protein,protein_amino_acid,1,v7_cv_v1
+glutamate,6,free_amino_acid,protein_amino_acid,3,v7_cv_v1
+glutathione,5,sulfur_thiol_cofactor,redox_cofactor,4,v7_cv_v1
+glutathione transferase,2,peptide_protein,protein_amino_acid,2,v7_cv_v1
+glycerol,4,mono_oligosaccharide,carbohydrate,1,v7_cv_v1
+glycine,5,free_amino_acid,protein_amino_acid,1,v7_cv_v1
+glycogen,4,polysaccharide,carbohydrate,4,v7_cv_v1
+guanine,4,purine,nucleic,2,v7_cv_v1
+hemoglobin,2,peptide_protein,protein_amino_acid,3,v7_cv_v1
+histidine,5,free_amino_acid,protein_amino_acid,2,v7_cv_v1
+horseradish peroxidase,2,peptide_protein,protein_amino_acid,0,v7_cv_v1
+hydroxyproline,3,free_amino_acid,protein_amino_acid,1,v7_cv_v1
+hypoxanthine,3,purine,nucleic,3,v7_cv_v1
+insulin,1,peptide_protein,protein_amino_acid,3,v7_cv_v1
+isoleucine,3,free_amino_acid,protein_amino_acid,1,v7_cv_v1
+keratin,1,peptide_protein,protein_amino_acid,3,v7_cv_v1
+lactalbumin,3,peptide_protein,protein_amino_acid,0,v7_cv_v1
+lactate,3,carboxylic_acid_metabolite,energy_metabolism,4,v7_cv_v1
+lauric acid,1,fatty_acid,lipid,3,v7_cv_v1
+lectin,3,peptide_protein,protein_amino_acid,1,v7_cv_v1
+leucine,4,free_amino_acid,protein_amino_acid,4,v7_cv_v1
+linoleic acid,1,fatty_acid,lipid,4,v7_cv_v1
+major proteinase,3,peptide_protein,protein_amino_acid,2,v7_cv_v1
+malic acid,2,carboxylic_acid_metabolite,energy_metabolism,3,v7_cv_v1
+melanin,4,chromophore_pigment,redox_cofactor,2,v7_cv_v1
+methionine,4,free_amino_acid,protein_amino_acid,2,v7_cv_v1
+myoglobin,2,peptide_protein,protein_amino_acid,1,v7_cv_v1
+myristic acid,2,fatty_acid,lipid,0,v7_cv_v1
+n-acetylglucosamine,4,mono_oligosaccharide,carbohydrate,3,v7_cv_v1
+oleate,5,fatty_acid,lipid,1,v7_cv_v1
+palmitic acid,2,fatty_acid,lipid,0,v7_cv_v1
+palmitoleic acid,1,fatty_acid,lipid,0,v7_cv_v1
+papain,3,peptide_protein,protein_amino_acid,4,v7_cv_v1
+pepsin,3,peptide_protein,protein_amino_acid,4,v7_cv_v1
+pepsinogen,3,peptide_protein,protein_amino_acid,0,v7_cv_v1
+phenylalanine,5,free_amino_acid,protein_amino_acid,4,v7_cv_v1
+phosphate,3,phosphate_metabolite,energy_metabolism,3,v7_cv_v1
+phosphatidylinositol,3,phospholipid_sphingolipid,lipid,4,v7_cv_v1
+phosphoenolpyruvate,4,phosphate_metabolite,energy_metabolism,1,v7_cv_v1
+proline,5,free_amino_acid,protein_amino_acid,2,v7_cv_v1
+pyruvate,4,carboxylic_acid_metabolite,energy_metabolism,1,v7_cv_v1
+riboflavin,4,chromophore_pigment,redox_cofactor,4,v7_cv_v1
+serine,5,free_amino_acid,protein_amino_acid,3,v7_cv_v1
+sphingomyelin,1,phospholipid_sphingolipid,lipid,0,v7_cv_v1
+stearate,5,fatty_acid,lipid,3,v7_cv_v1
+succinic acid,1,carboxylic_acid_metabolite,energy_metabolism,2,v7_cv_v1
+superoxide dismutases,3,peptide_protein,protein_amino_acid,1,v7_cv_v1
+t-rna,1,nucleic_acid_polymer,nucleic,2,v7_cv_v1
+thaumatin,3,peptide_protein,protein_amino_acid,2,v7_cv_v1
+thymine,4,pyrimidine,nucleic,3,v7_cv_v1
+tri-11-eicosenoin,1,acylglycerol,lipid,2,v7_cv_v1
+triarachidin,1,acylglycerol,lipid,3,v7_cv_v1
+tribehenin,1,acylglycerol,lipid,2,v7_cv_v1
+tricaprin,1,acylglycerol,lipid,3,v7_cv_v1
+tricaproin,1,acylglycerol,lipid,1,v7_cv_v1
+tricaprylin,1,acylglycerol,lipid,2,v7_cv_v1
+trielaidin,1,acylglycerol,lipid,3,v7_cv_v1
+trierucin,1,acylglycerol,lipid,0,v7_cv_v1
+trilaurin,1,acylglycerol,lipid,0,v7_cv_v1
+trilinolein,2,acylglycerol,lipid,0,v7_cv_v1
+trilinolenin,2,acylglycerol,lipid,1,v7_cv_v1
+trimyristin,1,acylglycerol,lipid,1,v7_cv_v1
+triolein,5,acylglycerol,lipid,4,v7_cv_v1
+triosephosphate isomerase,3,peptide_protein,protein_amino_acid,3,v7_cv_v1
+tripalmitin,1,acylglycerol,lipid,2,v7_cv_v1
+tripalmitolein,1,acylglycerol,lipid,3,v7_cv_v1
+tripetroselinin,1,acylglycerol,lipid,0,v7_cv_v1
+tristearin,1,acylglycerol,lipid,1,v7_cv_v1
+trypsin,3,peptide_protein,protein_amino_acid,4,v7_cv_v1
+trypsin inhibitor,3,peptide_protein,protein_amino_acid,0,v7_cv_v1
+trypsinogen,3,peptide_protein,protein_amino_acid,1,v7_cv_v1
+tryptophan,5,free_amino_acid,protein_amino_acid,0,v7_cv_v1
+tubulin,1,peptide_protein,protein_amino_acid,4,v7_cv_v1
+tyrosine,4,free_amino_acid,protein_amino_acid,3,v7_cv_v1
+ubiquitin,3,peptide_protein,protein_amino_acid,2,v7_cv_v1
+uracil,4,pyrimidine,nucleic,0,v7_cv_v1
+urate,3,purine,nucleic,1,v7_cv_v1
+urea,4,small_nitrogenous,energy_metabolism,2,v7_cv_v1
+vaccenic acid,1,fatty_acid,lipid,1,v7_cv_v1
+valine,5,free_amino_acid,protein_amino_acid,1,v7_cv_v1
+xanthine,3,purine,nucleic,4,v7_cv_v1
+xylanase,3,peptide_protein,protein_amino_acid,3,v7_cv_v1
+α-chymotrypsinogen a (type ii),3,peptide_protein,protein_amino_acid,4,v7_cv_v1
+α-linolenic acid,1,fatty_acid,lipid,2,v7_cv_v1
+α-phosphatidylcholine,1,phospholipid_sphingolipid,lipid,2,v7_cv_v1
+α-phosphatidylethanolamine,1,phospholipid_sphingolipid,lipid,3,v7_cv_v1
+β-carotene,1,chromophore_pigment,redox_cofactor,1,v7_cv_v1
+β-d-glucose,1,mono_oligosaccharide,carbohydrate,4,v7_cv_v1

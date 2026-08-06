@@ -1,0 +1,376 @@
+spectrum_id,analyte,source,excitation_nm,snr_estimate,snr_score,grid_coverage,n_nan_bins,contrast,n_peaks,peak_density,quality_score,qc_pass,q_version,canonical_id,weight_quality,weight_uniform
+ramanbiolib::1,12-methyltetradecanoic acid,RamanBioLib,785.0,410.394,0.9386,1.0,0,0.9659,26,0.8667,0.941496,True,v7_q_v2,12-methyltetradecanoic acid,1.0,1.0
+ramanbiolib::2,13-methylmyristicacid,RamanBioLib,785.0,531.327,1.0,1.0,0,0.971,27,0.9,0.966861,True,v7_q_v2,13-methylmyristicacid,1.0,1.0
+ramanbiolib::3,14-methylhexadecanoic acid,RamanBioLib,785.0,461.307,0.975,1.0,0,0.9672,21,0.7,0.901358,True,v7_q_v2,14-methylhexadecanoic acid,1.0,1.0
+ramanbiolib::4,14-methylpentadecanoic acid,RamanBioLib,785.0,563.389,1.0,1.0,0,0.9725,24,0.8,0.939161,True,v7_q_v2,14-methylpentadecanoic acid,1.0,1.0
+ramanbiolib::5,15-methylpalmiticacid,RamanBioLib,785.0,543.595,1.0,1.0,0,0.9737,21,0.7,0.908612,True,v7_q_v2,15-methylpalmiticacid,1.0,1.0
+ramanbiolib::6,acetoacetate,RamanBioLib,785.0,270.589,0.8092,1.0,0,0.9273,28,0.9333,0.914826,True,v7_q_v2,acetoacetate,0.25290711898930707,0.25
+ramanbiolib::7,acetyl coenzyme a,RamanBioLib,785.0,241.73,0.7742,1.0,0,0.8578,21,0.7,0.825732,True,v7_q_v2,acetyl-coa,0.2599846351477293,0.25
+ramanbiolib::8,adenine,RamanBioLib,785.0,316.921,0.8583,1.0,0,0.9741,18,0.6,0.841592,True,v7_q_v2,adenine,0.23785268085637953,0.25
+ramanbiolib::9,amylopectin,RamanBioLib,785.0,347.687,0.8871,1.0,0,0.9226,16,0.5333,0.812834,True,v7_q_v2,amylopectin,0.4875288873374346,0.5
+ramanbiolib::10,amylose,RamanBioLib,785.0,381.981,0.9164,1.0,0,0.9036,17,0.5667,0.827641,True,v7_q_v2,amylose,0.5003887554746203,0.5
+ramanbiolib::11,ascorbate,RamanBioLib,785.0,434.533,0.9564,1.0,0,0.9606,21,0.7,0.895504,True,v7_q_v2,ascorbate,0.24600210591146876,0.25
+ramanbiolib::12,cellulose,RamanBioLib,785.0,362.548,0.9001,1.0,0,0.9522,22,0.7333,0.890389,True,v7_q_v2,cellulose,1.0,1.0
+ramanbiolib::13,chitin,RamanBioLib,785.0,323.447,0.8647,1.0,0,0.9256,20,0.6667,0.854658,True,v7_q_v2,chitin,1.0,1.0
+ramanbiolib::14,citrate,RamanBioLib,785.0,344.559,0.8843,1.0,0,0.964,20,0.6667,0.868261,True,v7_q_v2,citrate,0.24868726579799316,0.25
+ramanbiolib::15,coenzyme a,RamanBioLib,785.0,231.129,0.7603,1.0,0,0.8904,20,0.6667,0.819629,True,v7_q_v2,coenzyme a,0.28303963312510144,0.25
+ramanbiolib::16,cytosine,RamanBioLib,785.0,630.749,1.0,1.0,0,0.977,18,0.6,0.87501,True,v7_q_v2,cytosine,1.0,1.0
+ramanbiolib::17,(+)-dextrose,RamanBioLib,785.0,375.65,0.9112,1.0,0,0.9664,20,0.6667,0.875315,True,v7_q_v2,(+)-glucose,0.16281976757704417,0.16666666666666666
+ramanbiolib::18,(+)-fucose,RamanBioLib,785.0,189.325,0.6983,1.0,0,0.9528,31,1.0,0.903141,True,v7_q_v2,(+)-fucose,1.0,1.0
+ramanbiolib::19,(+)-galactosamine,RamanBioLib,785.0,345.55,0.8852,1.0,0,0.9578,26,0.8667,0.925864,True,v7_q_v2,(+)-galactosamine,1.0,1.0
+ramanbiolib::20,(+)-mannose,RamanBioLib,785.0,184.636,0.6905,1.0,0,0.8987,36,1.0,0.887561,True,v7_q_v2,(+)-mannose,0.27080939441112234,0.25
+ramanbiolib::21,(+)-trehalose,RamanBioLib,785.0,265.495,0.8033,1.0,0,0.9469,28,0.9333,0.917938,True,v7_q_v2,(+)-trehalose,1.0,1.0
+ramanbiolib::22,(+)-xylose,RamanBioLib,785.0,476.4,0.985,1.0,0,0.9668,18,0.6,0.869419,True,v7_q_v2,(+)-xylose,0.5027002054931548,0.5
+ramanbiolib::23,(-)-arabinose,RamanBioLib,785.0,243.202,0.7761,1.0,0,0.9541,18,0.6,0.816425,True,v7_q_v2,(-)-arabinose,1.0,1.0
+ramanbiolib::24,(-)-fructose,RamanBioLib,785.0,333.833,0.8745,1.0,0,0.9649,20,0.6667,0.866047,True,v7_q_v2,(-)-fructose,0.1966807272885831,0.2
+ramanbiolib::25,fructose-6-phosphate,RamanBioLib,785.0,573.507,1.0,1.0,0,0.9571,12,0.4,0.786602,True,v7_q_v2,fructose-6-phosphate,0.24963551276704998,0.25
+ramanbiolib::26,fumarate,RamanBioLib,785.0,549.702,1.0,1.0,0,0.9791,9,0.3,0.736182,True,v7_q_v2,fumarate,1.0,1.0
+ramanbiolib::27,glutathione,RamanBioLib,785.0,172.896,0.6701,1.0,0,0.8882,32,1.0,0.87834,True,v7_q_v2,glutathione,0.21410764470621443,0.2
+ramanbiolib::28,glycerol,RamanBioLib,785.0,417.283,0.9438,1.0,0,0.935,14,0.4667,0.80108,True,v7_q_v2,glycerol,0.2527064651694226,0.25
+ramanbiolib::29,glycine,RamanBioLib,785.0,396.166,0.9277,1.0,0,0.9693,15,0.5,0.818854,True,v7_q_v2,glycine,0.1974464822218257,0.2
+ramanbiolib::30,guanine,RamanBioLib,785.0,217.65,0.7416,1.0,0,0.9537,22,0.7333,0.848637,True,v7_q_v2,guanine,0.24217703265309265,0.25
+ramanbiolib::31,alanine,RamanBioLib,785.0,381.453,0.9159,1.0,0,0.975,19,0.6333,0.867206,True,v7_q_v2,alanine,0.20400963675385084,0.2
+ramanbiolib::32,arginine,RamanBioLib,785.0,268.654,0.807,1.0,0,0.9378,25,0.8333,0.891154,True,v7_q_v2,arginine,0.20235922342002016,0.2
+ramanbiolib::33,glutamate,RamanBioLib,785.0,237.875,0.7692,1.0,0,0.931,33,1.0,0.919915,True,v7_q_v2,glutamate,0.1815380456018345,0.16666666666666666
+ramanbiolib::34,histidine,RamanBioLib,785.0,203.39,0.7206,1.0,0,0.9544,28,0.9333,0.895072,True,v7_q_v2,histidine,0.2002561730432127,0.2
+ramanbiolib::35,phenylalanine,RamanBioLib,785.0,179.758,0.6822,1.0,0,0.9528,22,0.7333,0.830915,True,v7_q_v2,phenylalanine,0.18740060944131087,0.2
+ramanbiolib::36,proline,RamanBioLib,785.0,173.369,0.6709,1.0,0,0.9072,31,1.0,0.883275,True,v7_q_v2,proline,0.20596679347286215,0.2
+ramanbiolib::37,serine,RamanBioLib,785.0,427.907,0.9516,1.0,0,0.9701,18,0.6,0.862708,True,v7_q_v2,serine,0.20583347708379116,0.2
+ramanbiolib::38,tryptophan,RamanBioLib,785.0,249.355,0.7839,1.0,0,0.951,34,1.0,0.929189,True,v7_q_v2,tryptophan,0.20515535093748408,0.2
+ramanbiolib::39,tyrosine,RamanBioLib,785.0,227.217,0.755,1.0,0,0.9525,26,0.8667,0.888522,True,v7_q_v2,tyrosine,0.24970673885172032,0.25
+ramanbiolib::40,valine,RamanBioLib,785.0,230.047,0.7588,1.0,0,0.9493,27,0.9,0.897318,True,v7_q_v2,valine,0.20739670011727515,0.2
+ramanbiolib::41,lactose,RamanBioLib,785.0,237.676,0.769,1.0,0,0.938,28,0.9333,0.905801,True,v7_q_v2,(+)-lactose,0.5129511819156877,0.5
+ramanbiolib::42,lauric acid,RamanBioLib,785.0,536.301,1.0,1.0,0,0.9739,20,0.6667,0.897649,True,v7_q_v2,lauric acid,1.0,1.0
+ramanbiolib::43,malic acid,RamanBioLib,785.0,342.141,0.8821,1.0,0,0.962,19,0.6333,0.856229,True,v7_q_v2,malic acid,0.5159619182141887,0.5
+ramanbiolib::44,myristic acid,RamanBioLib,785.0,640.967,1.0,1.0,0,0.9774,18,0.6,0.875102,True,v7_q_v2,myristic acid,0.5249514851396058,0.5
+ramanbiolib::45,n-acetyl- d-glucosamine,RamanBioLib,785.0,213.114,0.7351,1.0,0,0.9095,27,0.9,0.88074,True,v7_q_v2,n-acetylglucosamine,0.2625469504560901,0.25
+ramanbiolib::46,oleate,RamanBioLib,785.0,490.692,0.9942,1.0,0,0.9599,17,0.5667,0.857543,True,v7_q_v2,oleate,0.20785101792204003,0.2
+ramanbiolib::47,palmitic acid,RamanBioLib,785.0,587.142,1.0,1.0,0,0.976,20,0.6667,0.898134,True,v7_q_v2,palmitic acid,0.5318414780381648,0.5
+ramanbiolib::48,phosphoenolpyruvate,RamanBioLib,785.0,307.208,0.8487,1.0,0,0.964,23,0.7667,0.889932,True,v7_q_v2,phosphoenolpyruvate,0.2536970619920504,0.25
+ramanbiolib::49,pyruvate,RamanBioLib,785.0,496.71,0.9979,1.0,0,0.9767,12,0.4,0.790197,True,v7_q_v2,pyruvate,0.24096646765968893,0.25
+ramanbiolib::50,riboﬂavin,RamanBioLib,785.0,253.576,0.7891,1.0,0,0.9422,28,0.9333,0.912692,True,v7_q_v2,riboflavin,0.24932021606666663,0.25
+ramanbiolib::51,stearate,RamanBioLib,785.0,320.825,0.8622,1.0,0,0.9623,21,0.7,0.872969,True,v7_q_v2,stearate,0.1954429503485635,0.2
+ramanbiolib::52,succinic acid,RamanBioLib,785.0,348.142,0.8875,1.0,0,0.9727,10,0.3333,0.732423,True,v7_q_v2,succinic acid,1.0,1.0
+ramanbiolib::53,thymine,RamanBioLib,785.0,495.171,0.997,1.0,0,0.9763,18,0.6,0.874179,True,v7_q_v2,thymine,0.25248738688050726,0.25
+ramanbiolib::54,trilinolein,RamanBioLib,785.0,545.872,1.0,1.0,0,0.964,14,0.4667,0.818985,True,v7_q_v2,trilinolein,0.4996263409783461,0.5
+ramanbiolib::55,trilinolenin,RamanBioLib,785.0,560.592,1.0,1.0,0,0.9634,14,0.4667,0.81884,True,v7_q_v2,trilinolenin,0.49496206664978193,0.5
+ramanbiolib::56,triolein,RamanBioLib,785.0,502.756,1.0,1.0,0,0.9482,16,0.5333,0.843294,True,v7_q_v2,triolein,0.20420792888389513,0.2
+ramanbiolib::57,uracil,RamanBioLib,785.0,388.163,0.9213,1.0,0,0.9769,15,0.5,0.819042,True,v7_q_v2,uracil,0.24897504449554744,0.25
+ramanbiolib::58,vaccenic acid,RamanBioLib,785.0,512.956,1.0,1.0,0,0.9592,15,0.5,0.83218,True,v7_q_v2,vaccenic acid,1.0,1.0
+ramanbiolib::59,β-carotene,RamanBioLib,785.0,665.848,1.0,1.0,0,0.9783,10,0.3333,0.755689,True,v7_q_v2,β-carotene,1.0,1.0
+ramanbiolib::60,β-d-glucose,RamanBioLib,785.0,337.595,0.878,1.0,0,0.9584,21,0.7,0.876062,True,v7_q_v2,β-d-glucose,1.0,1.0
+ramanbiolib::61,arachidonic acid,RamanBioLib,532.0,2345.791,1.0,1.0,0,0.9763,8,0.2667,0.714304,True,v7_q_v2,arachidonic acid,1.0,1.0
+ramanbiolib::62,α-linolenic acid,RamanBioLib,532.0,1832.773,1.0,1.0,0,0.9764,9,0.3,0.735683,True,v7_q_v2,α-linolenic acid,1.0,1.0
+ramanbiolib::63,arachidic acid,RamanBioLib,532.0,1890.86,1.0,1.0,0,0.9778,13,0.4333,0.806806,True,v7_q_v2,arachidic acid,1.0,1.0
+ramanbiolib::64,cholesterol,RamanBioLib,532.0,369.095,0.9057,1.0,0,0.9288,25,0.8333,0.915022,True,v7_q_v2,cholesterol,0.27950313784366226,0.25
+ramanbiolib::65,cholesteryl linoleate,RamanBioLib,532.0,452.972,0.9693,1.0,0,0.9243,25,0.8333,0.929545,True,v7_q_v2,cholesteryl linoleate,1.0,1.0
+ramanbiolib::66,cholesteryl oleate,RamanBioLib,532.0,438.384,0.9591,1.0,0,0.9321,25,0.8333,0.929052,True,v7_q_v2,cholesteryl oleate,1.0,1.0
+ramanbiolib::67,cholesteryl palmitate,RamanBioLib,532.0,496.008,0.9975,1.0,0,0.9374,24,0.8,0.930004,True,v7_q_v2,cholesteryl palmitate,1.0,1.0
+ramanbiolib::68,cholesteryl stearate,RamanBioLib,532.0,557.381,1.0,1.0,0,0.9484,23,0.7667,0.923429,True,v7_q_v2,cholesteryl stearate,1.0,1.0
+ramanbiolib::69,elaidic acid,RamanBioLib,532.0,1336.361,1.0,1.0,0,0.9767,13,0.4333,0.806587,True,v7_q_v2,elaidic acid,1.0,1.0
+ramanbiolib::70,linoleic acid,RamanBioLib,532.0,1800.802,1.0,1.0,0,0.9743,10,0.3333,0.754908,True,v7_q_v2,linoleic acid,1.0,1.0
+ramanbiolib::71,myristic acid,RamanBioLib,532.0,2209.061,1.0,1.0,0,0.9832,12,0.4,0.791913,True,v7_q_v2,myristic acid,0.4750485148603941,0.5
+ramanbiolib::72,oleate,RamanBioLib,532.0,1319.516,1.0,1.0,0,0.97,12,0.4,0.789236,True,v7_q_v2,oleate,0.19129478752752826,0.2
+ramanbiolib::73,palmitic acid,RamanBioLib,532.0,2297.924,1.0,1.0,0,0.9767,12,0.4,0.790591,True,v7_q_v2,palmitic acid,0.4681585219618351,0.5
+ramanbiolib::74,α-phosphatidylcholine,RamanBioLib,532.0,1168.031,1.0,1.0,0,0.9589,14,0.4667,0.817899,True,v7_q_v2,α-phosphatidylcholine,1.0,1.0
+ramanbiolib::75,α-phosphatidylethanolamine,RamanBioLib,532.0,872.793,1.0,1.0,0,0.9599,10,0.3333,0.752102,True,v7_q_v2,α-phosphatidylethanolamine,1.0,1.0
+ramanbiolib::76,palmitoleic acid,RamanBioLib,532.0,1180.488,1.0,1.0,0,0.9684,14,0.4667,0.819898,True,v7_q_v2,palmitoleic acid,1.0,1.0
+ramanbiolib::77,stearate,RamanBioLib,532.0,2017.779,1.0,1.0,0,0.974,13,0.4333,0.806022,True,v7_q_v2,stearate,0.18045465271487285,0.2
+ramanbiolib::78,sphingomyelin,RamanBioLib,532.0,1475.597,1.0,1.0,0,0.9624,13,0.4333,0.803618,True,v7_q_v2,sphingomyelin,1.0,1.0
+ramanbiolib::79,triarachidin,RamanBioLib,1064.0,953.289,1.0,1.0,0,0.9743,15,0.5,0.835449,True,v7_q_v2,triarachidin,1.0,1.0
+ramanbiolib::80,tribehenin,RamanBioLib,1064.0,694.101,1.0,1.0,0,0.9724,19,0.6333,0.885861,True,v7_q_v2,tribehenin,1.0,1.0
+ramanbiolib::81,tricaproin,RamanBioLib,1064.0,641.376,1.0,1.0,0,0.9495,23,0.7667,0.923696,True,v7_q_v2,tricaproin,1.0,1.0
+ramanbiolib::82,tricaprin,RamanBioLib,1064.0,613.891,1.0,1.0,0,0.9641,24,0.8,0.937145,True,v7_q_v2,tricaprin,1.0,1.0
+ramanbiolib::83,tricaprylin,RamanBioLib,1064.0,641.837,1.0,1.0,0,0.9541,21,0.7,0.904018,True,v7_q_v2,tricaprylin,1.0,1.0
+ramanbiolib::84,trielaidin,RamanBioLib,1064.0,656.577,1.0,1.0,0,0.9641,20,0.6667,0.895382,True,v7_q_v2,trielaidin,1.0,1.0
+ramanbiolib::85,tri-11-eicosenoin,RamanBioLib,1064.0,452.253,0.9688,1.0,0,0.9454,28,0.9333,0.961564,True,v7_q_v2,tri-11-eicosenoin,1.0,1.0
+ramanbiolib::86,trierucin,RamanBioLib,1064.0,612.119,1.0,1.0,0,0.964,20,0.6667,0.895365,True,v7_q_v2,trierucin,1.0,1.0
+ramanbiolib::87,trilinolein,RamanBioLib,1064.0,1012.907,1.0,1.0,0,0.9698,14,0.4667,0.82021,True,v7_q_v2,trilinolein,0.500373659021654,0.5
+ramanbiolib::88,trilinolenin,RamanBioLib,1064.0,1160.181,1.0,1.0,0,0.9746,15,0.5,0.835509,True,v7_q_v2,trilinolenin,0.5050379333502182,0.5
+ramanbiolib::89,trilaurin,RamanBioLib,1064.0,688.94,1.0,1.0,0,0.9688,22,0.7333,0.918086,True,v7_q_v2,trilaurin,1.0,1.0
+ramanbiolib::90,trimyristin,RamanBioLib,1064.0,735.743,1.0,1.0,0,0.9704,19,0.6333,0.885412,True,v7_q_v2,trimyristin,1.0,1.0
+ramanbiolib::91,triolein,RamanBioLib,1064.0,944.44,1.0,1.0,0,0.9687,16,0.5333,0.84781,True,v7_q_v2,triolein,0.20530150124043942,0.2
+ramanbiolib::92,tripalmitin,RamanBioLib,1064.0,625.496,1.0,1.0,0,0.9649,23,0.7667,0.927399,True,v7_q_v2,tripalmitin,1.0,1.0
+ramanbiolib::93,tripetroselinin,RamanBioLib,1064.0,709.084,1.0,1.0,0,0.9673,16,0.5333,0.847501,True,v7_q_v2,tripetroselinin,1.0,1.0
+ramanbiolib::94,tripalmitolein,RamanBioLib,1064.0,907.298,1.0,1.0,0,0.9682,14,0.4667,0.819874,True,v7_q_v2,tripalmitolein,1.0,1.0
+ramanbiolib::95,tristearin,RamanBioLib,1064.0,662.73,1.0,1.0,0,0.9676,18,0.6,0.8729,True,v7_q_v2,tristearin,1.0,1.0
+ramanbiolib::96,lactalbumin,RamanBioLib,488.0,217.172,0.7409,1.0,0,0.8347,29,0.9667,0.879314,True,v7_q_v2,lactalbumin,0.328960851176859,0.3333333333333333
+ramanbiolib::97,lactalbumin,RamanBioLib,532.0,370.75,0.9071,1.0,0,0.8547,24,0.8,0.887428,True,v7_q_v2,lactalbumin,0.3319963860898128,0.3333333333333333
+ramanbiolib::98,lactalbumin,RamanBioLib,1064.0,277.507,0.8171,1.0,0,0.8845,28,0.9333,0.906263,True,v7_q_v2,lactalbumin,0.33904276273332823,0.3333333333333333
+ramanbiolib::99,albumin,RamanBioLib,488.0,173.003,0.6703,1.0,0,0.8781,38,1.0,0.875882,True,v7_q_v2,albumin,0.17089473495260352,0.14285714285714285
+ramanbiolib::100,albumin,RamanBioLib,532.0,376.598,0.9119,1.0,0,0.8679,23,0.7667,0.882593,True,v7_q_v2,albumin,0.17220412887355052,0.14285714285714285
+ramanbiolib::101,albumin,RamanBioLib,1064.0,432.555,0.955,1.0,0,0.894,26,0.8667,0.927452,True,v7_q_v2,albumin,0.18095663995979142,0.14285714285714285
+ramanbiolib::102,carbonic anhydrase,RamanBioLib,488.0,314.288,0.8558,1.0,0,0.8846,25,0.8333,0.891214,True,v7_q_v2,carbonic anhydrase,0.33483893268009707,0.3333333333333333
+ramanbiolib::103,carbonic anhydrase,RamanBioLib,532.0,401.974,0.9322,1.0,0,0.8707,21,0.7,0.868193,True,v7_q_v2,carbonic anhydrase,0.32618968898640677,0.3333333333333333
+ramanbiolib::104,carbonic anhydrase,RamanBioLib,1064.0,322.014,0.8633,1.0,0,0.8856,26,0.8667,0.902213,True,v7_q_v2,carbonic anhydrase,0.33897137833349616,0.3333333333333333
+ramanbiolib::105,collagen,RamanBioLib,488.0,205.552,0.7238,1.0,0,0.8652,36,1.0,0.889594,True,v7_q_v2,collagen,0.3363147951909987,0.3333333333333333
+ramanbiolib::106,collagen,RamanBioLib,532.0,490.162,0.9938,1.0,0,0.8798,19,0.6333,0.862643,True,v7_q_v2,collagen,0.3261258550169501,0.3333333333333333
+ramanbiolib::107,collagen,RamanBioLib,1064.0,294.094,0.8351,1.0,0,0.8782,26,0.8667,0.892886,True,v7_q_v2,collagen,0.33755934979205127,0.3333333333333333
+ramanbiolib::108,α-chymotrypsinogen a (type ii),RamanBioLib,488.0,544.893,1.0,1.0,0,0.8865,16,0.5333,0.829212,True,v7_q_v2,α-chymotrypsinogen a (type ii),0.3252778669110269,0.3333333333333333
+ramanbiolib::109,α-chymotrypsinogen a (type ii),RamanBioLib,532.0,470.719,0.9813,1.0,0,0.8795,16,0.5333,0.823675,True,v7_q_v2,α-chymotrypsinogen a (type ii),0.32310584871895254,0.3333333333333333
+ramanbiolib::110,α-chymotrypsinogen a (type ii),RamanBioLib,1064.0,451.079,0.968,1.0,0,0.9094,22,0.7333,0.896355,True,v7_q_v2,α-chymotrypsinogen a (type ii),0.35161628437002057,0.3333333333333333
+ramanbiolib::111,elastase,RamanBioLib,488.0,312.522,0.854,1.0,0,0.8567,26,0.8667,0.892344,True,v7_q_v2,elastase,0.3344295545743907,0.3333333333333333
+ramanbiolib::112,elastase,RamanBioLib,532.0,306.804,0.8483,1.0,0,0.8525,23,0.7667,0.862891,True,v7_q_v2,elastase,0.3233912625358052,0.3333333333333333
+ramanbiolib::113,elastase,RamanBioLib,1064.0,269.653,0.8082,1.0,0,0.8598,30,1.0,0.913022,True,v7_q_v2,elastase,0.3421791828898041,0.3333333333333333
+ramanbiolib::114,ferritin,RamanBioLib,488.0,183.501,0.6886,1.0,0,0.8714,39,1.0,0.880118,True,v7_q_v2,ferritin,0.3476546529903969,0.3333333333333333
+ramanbiolib::115,ferritin,RamanBioLib,532.0,93.115,0.4778,1.0,0,0.7605,45,1.0,0.776415,True,v7_q_v2,ferritin,0.30669102029675455,0.3333333333333333
+ramanbiolib::116,ferritin,RamanBioLib,1064.0,177.451,0.6782,1.0,0,0.8646,43,1.0,0.875054,True,v7_q_v2,ferritin,0.3456543267128485,0.3333333333333333
+ramanbiolib::117,glutathione transferase,RamanBioLib,488.0,270.491,0.8091,1.0,0,0.8473,29,0.9667,0.902252,True,v7_q_v2,glutathione transferase,0.5119901035327097,0.5
+ramanbiolib::118,glutathione transferase,RamanBioLib,532.0,286.829,0.8274,1.0,0,0.8623,23,0.7667,0.859993,True,v7_q_v2,glutathione transferase,0.4880098964672903,0.5
+ramanbiolib::119,horseradish peroxidase,RamanBioLib,488.0,281.196,0.8212,1.0,0,0.8802,27,0.9,0.898096,True,v7_q_v2,horseradish peroxidase,0.5170016648207036,0.5
+ramanbiolib::120,horseradish peroxidase,RamanBioLib,532.0,148.761,0.6234,1.0,0,0.795,38,1.0,0.839028,True,v7_q_v2,horseradish peroxidase,0.4829983351792963,0.5
+ramanbiolib::121,hemoglobin,RamanBioLib,488.0,453.738,0.9698,1.0,0,0.9325,27,0.9,0.949831,True,v7_q_v2,hemoglobin,0.5033371894055696,0.5
+ramanbiolib::122,hemoglobin,RamanBioLib,532.0,293.765,0.8348,1.0,0,0.9243,31,1.0,0.937236,True,v7_q_v2,hemoglobin,0.49666281059443035,0.5
+ramanbiolib::123,lectin,RamanBioLib,488.0,448.018,0.9659,1.0,0,0.884,19,0.6333,0.857544,True,v7_q_v2,lectin,0.32515193200483516,0.3333333333333333
+ramanbiolib::124,lectin,RamanBioLib,532.0,420.886,0.9465,1.0,0,0.8789,20,0.6667,0.862969,True,v7_q_v2,lectin,0.32720891010872977,0.3333333333333333
+ramanbiolib::125,lectin,RamanBioLib,1064.0,272.416,0.8113,1.0,0,0.871,34,1.0,0.916851,True,v7_q_v2,lectin,0.3476391578864351,0.3333333333333333
+ramanbiolib::126,myoglobin,RamanBioLib,488.0,352.589,0.8915,1.0,0,0.8809,31,1.0,0.941376,True,v7_q_v2,myoglobin,0.5044663072328509,0.5
+ramanbiolib::127,myoglobin,RamanBioLib,532.0,265.997,0.8039,1.0,0,0.9095,31,1.0,0.924707,True,v7_q_v2,myoglobin,0.49553369276714915,0.5
+ramanbiolib::128,papain,RamanBioLib,488.0,227.67,0.7556,1.0,0,0.8304,22,0.7333,0.823613,True,v7_q_v2,papain,0.31924630223185924,0.3333333333333333
+ramanbiolib::129,papain,RamanBioLib,532.0,187.69,0.6956,1.0,0,0.8429,28,0.9333,0.860078,True,v7_q_v2,papain,0.3333807517984454,0.3333333333333333
+ramanbiolib::130,papain,RamanBioLib,1064.0,211.112,0.7321,1.0,0,0.881,34,1.0,0.896176,True,v7_q_v2,papain,0.3473729459696953,0.3333333333333333
+ramanbiolib::131,pepsin,RamanBioLib,488.0,498.079,0.9988,1.0,0,0.8651,21,0.7,0.881896,True,v7_q_v2,pepsin,0.3358576405008296,0.3333333333333333
+ramanbiolib::132,pepsin,RamanBioLib,532.0,270.487,0.8091,1.0,0,0.8542,27,0.9,0.888098,True,v7_q_v2,pepsin,0.33821958463753754,0.3333333333333333
+ramanbiolib::133,pepsin,RamanBioLib,1064.0,164.079,0.6538,1.0,0,0.8204,36,1.0,0.855809,True,v7_q_v2,pepsin,0.3259227748616328,0.3333333333333333
+ramanbiolib::134,pepsinogen,RamanBioLib,488.0,383.626,0.9177,1.0,0,0.8398,21,0.7,0.857027,True,v7_q_v2,pepsinogen,0.3313658221421952,0.3333333333333333
+ramanbiolib::135,pepsinogen,RamanBioLib,532.0,466.361,0.9784,1.0,0,0.8983,18,0.6,0.852165,True,v7_q_v2,pepsinogen,0.32948595064776687,0.3333333333333333
+ramanbiolib::136,pepsinogen,RamanBioLib,1064.0,419.403,0.9454,1.0,0,0.8945,21,0.7,0.877155,True,v7_q_v2,pepsinogen,0.33914822721003796,0.3333333333333333
+ramanbiolib::137,major proteinase,RamanBioLib,488.0,458.134,0.9728,1.0,0,0.8946,21,0.7,0.883467,True,v7_q_v2,major proteinase,0.3306119974537996,0.3333333333333333
+ramanbiolib::138,major proteinase,RamanBioLib,532.0,336.516,0.877,1.0,0,0.8791,24,0.8,0.886187,True,v7_q_v2,major proteinase,0.3316298788608859,0.3333333333333333
+ramanbiolib::139,major proteinase,RamanBioLib,1064.0,418.776,0.9449,1.0,0,0.916,23,0.7667,0.902563,True,v7_q_v2,major proteinase,0.3377581236853145,0.3333333333333333
+ramanbiolib::140,superoxide dismutases,RamanBioLib,488.0,928.507,1.0,1.0,0,0.9157,15,0.5,0.822578,True,v7_q_v2,superoxide dismutases,0.3184576419876686,0.3333333333333333
+ramanbiolib::141,superoxide dismutases,RamanBioLib,532.0,794.141,1.0,1.0,0,0.9213,16,0.5333,0.83723,True,v7_q_v2,superoxide dismutases,0.32413010267881687,0.3333333333333333
+ramanbiolib::142,superoxide dismutases,RamanBioLib,1064.0,298.468,0.8397,1.0,0,0.8651,31,1.0,0.923198,True,v7_q_v2,superoxide dismutases,0.3574122553335145,0.3333333333333333
+ramanbiolib::143,trypsinogen,RamanBioLib,488.0,491.255,0.9945,1.0,0,0.885,19,0.6333,0.864069,True,v7_q_v2,trypsinogen,0.32969288355215715,0.3333333333333333
+ramanbiolib::144,trypsinogen,RamanBioLib,532.0,474.065,0.9835,1.0,0,0.8775,18,0.6,0.848286,True,v7_q_v2,trypsinogen,0.32367074552718034,0.3333333333333333
+ramanbiolib::145,trypsinogen,RamanBioLib,1064.0,243.752,0.7768,1.0,0,0.8769,36,1.0,0.908475,True,v7_q_v2,trypsinogen,0.3466363709206626,0.3333333333333333
+ramanbiolib::146,trypsin inhibitor,RamanBioLib,488.0,508.135,1.0,1.0,0,0.8811,22,0.7333,0.896558,True,v7_q_v2,trypsin inhibitor,0.3364778434385248,0.3333333333333333
+ramanbiolib::147,trypsin inhibitor,RamanBioLib,532.0,430.877,0.9538,1.0,0,0.8789,21,0.7,0.875227,True,v7_q_v2,trypsin inhibitor,0.32847232803585463,0.3333333333333333
+ramanbiolib::148,trypsin inhibitor,RamanBioLib,1064.0,378.802,0.9138,1.0,0,0.869,24,0.8,0.892753,True,v7_q_v2,trypsin inhibitor,0.3350498285256206,0.3333333333333333
+ramanbiolib::149,thaumatin,RamanBioLib,488.0,546.738,1.0,1.0,0,0.8737,20,0.6667,0.87361,True,v7_q_v2,thaumatin,0.3250339503302019,0.3333333333333333
+ramanbiolib::150,thaumatin,RamanBioLib,532.0,229.734,0.7584,1.0,0,0.8426,33,1.0,0.8941,True,v7_q_v2,thaumatin,0.33265742721607294,0.3333333333333333
+ramanbiolib::151,thaumatin,RamanBioLib,1064.0,388.23,0.9214,1.0,0,0.864,27,0.9,0.92004,True,v7_q_v2,thaumatin,0.34230862245372523,0.3333333333333333
+ramanbiolib::152,triosephosphate isomerase,RamanBioLib,488.0,125.178,0.5698,1.0,0,0.8295,41,1.0,0.82915,True,v7_q_v2,triosephosphate isomerase,0.3245662793974885,0.3333333333333333
+ramanbiolib::153,triosephosphate isomerase,RamanBioLib,532.0,268.103,0.8064,1.0,0,0.8437,24,0.8,0.858922,True,v7_q_v2,triosephosphate isomerase,0.3362203676447562,0.3333333333333333
+ramanbiolib::154,triosephosphate isomerase,RamanBioLib,1064.0,166.894,0.6591,1.0,0,0.8555,37,1.0,0.866568,True,v7_q_v2,triosephosphate isomerase,0.3392133529577553,0.3333333333333333
+ramanbiolib::155,trypsin,RamanBioLib,488.0,338.699,0.879,1.0,0,0.857,24,0.8,0.881074,True,v7_q_v2,trypsin,0.331864488623202,0.3333333333333333
+ramanbiolib::156,trypsin,RamanBioLib,532.0,456.646,0.9718,1.0,0,0.8699,19,0.6333,0.855408,True,v7_q_v2,trypsin,0.3221971576555385,0.3333333333333333
+ramanbiolib::157,trypsin,RamanBioLib,1064.0,302.374,0.8438,1.0,0,0.8724,29,0.9667,0.918439,True,v7_q_v2,trypsin,0.34593835372125953,0.3333333333333333
+ramanbiolib::158,ubiquitin,RamanBioLib,488.0,384.689,0.9186,1.0,0,0.8939,25,0.8333,0.909496,True,v7_q_v2,ubiquitin,0.3307771788564988,0.3333333333333333
+ramanbiolib::159,ubiquitin,RamanBioLib,532.0,452.224,0.9688,1.0,0,0.9004,25,0.8333,0.92336,True,v7_q_v2,ubiquitin,0.3358194163239165,0.3333333333333333
+ramanbiolib::160,ubiquitin,RamanBioLib,1064.0,545.643,1.0,1.0,0,0.9212,23,0.7667,0.916717,True,v7_q_v2,ubiquitin,0.33340340481958475,0.3333333333333333
+ramanbiolib::161,glucose oxidase,RamanBioLib,532.0,377.848,0.913,1.0,0,0.9382,25,0.8333,0.919165,True,v7_q_v2,glucose oxidase,0.4930486716359626,0.5
+ramanbiolib::162,glucose oxidase,RamanBioLib,1064.0,347.694,0.8871,1.0,0,0.8993,30,1.0,0.945083,True,v7_q_v2,glucose oxidase,0.5069513283640374,0.5
+ramanbiolib::163,xylanase,RamanBioLib,488.0,543.422,1.0,1.0,0,0.8436,16,0.5333,0.818997,True,v7_q_v2,xylanase,0.33153585458031215,0.3333333333333333
+ramanbiolib::164,xylanase,RamanBioLib,532.0,606.539,1.0,1.0,0,0.8855,16,0.5333,0.828991,True,v7_q_v2,xylanase,0.33558149739789955,0.3333333333333333
+ramanbiolib::165,xylanase,RamanBioLib,1064.0,455.218,0.9708,1.0,0,0.8312,17,0.5667,0.822324,True,v7_q_v2,xylanase,0.3328826480217884,0.3333333333333333
+ramanbiolib::166,cytochrome c,RamanBioLib,488.0,412.887,0.9405,1.0,0,0.9212,25,0.8333,0.921809,True,v7_q_v2,cytochrome c,0.498774988556099,0.5
+ramanbiolib::167,cytochrome c,RamanBioLib,532.0,327.962,0.869,1.0,0,0.9415,27,0.9,0.926337,True,v7_q_v2,cytochrome c,0.5012250114439011,0.5
+ramanbiolib::168,a-dna,RamanBioLib,514.5,199.388,0.7144,1.0,0,0.8594,24,0.8,0.837159,True,v7_q_v2,a-dna,1.0,1.0
+ramanbiolib::169,b-dna,RamanBioLib,514.5,202.934,0.7199,1.0,0,0.8486,28,0.9333,0.868947,True,v7_q_v2,b-dna,1.0,1.0
+ramanbiolib::170,t-rna,RamanBioLib,488.0,460.633,0.9745,1.0,0,0.9115,22,0.7333,0.898381,True,v7_q_v2,t-rna,1.0,1.0
+ramanbiolib::171,ceramide,RamanBioLib,1064.0,2489.678,1.0,1.0,0,0.9756,10,0.3333,0.755157,True,v7_q_v2,ceramide,0.5004499799861626,0.5
+ramanbiolib::172,melanin,RamanBioLib,785.0,10663.247,1.0,1.0,0,0.9594,3,0.1,0.556538,True,v7_q_v2,melanin,0.238079002609065,0.25
+ramanbiolib::173,melanin,RamanBioLib,632.8,7254.533,1.0,1.0,0,0.9637,3,0.1,0.557161,True,v7_q_v2,melanin,0.23834551310542906,0.25
+ramanbiolib::174,melanin,RamanBioLib,514.5,5830.649,1.0,1.0,0,0.943,5,0.1667,0.629632,True,v7_q_v2,melanin,0.2693475711824724,0.25
+ramanbiolib::175,melanin,RamanBioLib,457.9,5636.123,1.0,1.0,0,0.9355,4,0.1333,0.594288,True,v7_q_v2,melanin,0.2542279131030335,0.25
+ramanbiolib::176,2-deoxy-d-ribose,RamanBioLib,1064.0,350.67,0.8898,1.0,0,0.9526,22,0.7333,0.887931,True,v7_q_v2,2-deoxy-d-ribose,1.0,1.0
+ramanbiolib::177,amylopectin,RamanBioLib,1064.0,434.835,0.9566,1.0,0,0.8797,19,0.6333,0.854419,True,v7_q_v2,amylopectin,0.5124711126625653,0.5
+ramanbiolib::178,amylose,RamanBioLib,1064.0,490.956,0.9943,1.0,0,0.8793,16,0.5333,0.826355,True,v7_q_v2,amylose,0.4996112445253798,0.5
+ramanbiolib::179,(+)-galactose,RamanBioLib,1064.0,220.525,0.7457,1.0,0,0.9225,29,0.9667,0.903037,True,v7_q_v2,(+)-galactose,0.2544576160862472,0.25
+ramanbiolib::180,(+)-glucose,RamanBioLib,1064.0,374.879,0.9105,1.0,0,0.9493,24,0.8,0.911896,True,v7_q_v2,(+)-glucose,0.16962430070824364,0.16666666666666666
+ramanbiolib::181,(+)-lactose,RamanBioLib,1064.0,224.546,0.7513,1.0,0,0.9104,24,0.8,0.860061,True,v7_q_v2,(+)-lactose,0.4870488180843124,0.5
+ramanbiolib::182,(+)-maltose,RamanBioLib,1064.0,339.402,0.8796,1.0,0,0.9366,23,0.7667,0.891495,True,v7_q_v2,(+)-maltose,1.0,1.0
+ramanbiolib::183,(+)-raffinose pentahydrate,RamanBioLib,1064.0,218.307,0.7425,1.0,0,0.8967,27,0.9,0.879832,True,v7_q_v2,(+)-raffinose pentahydrate,1.0,1.0
+ramanbiolib::184,(+)-sucrose,RamanBioLib,1064.0,273.712,0.8128,1.0,0,0.9186,29,0.9667,0.921724,True,v7_q_v2,(+)-sucrose,1.0,1.0
+ramanbiolib::185,(+)-xylose,RamanBioLib,1064.0,580.137,1.0,1.0,0,0.9657,17,0.5667,0.860079,True,v7_q_v2,(+)-xylose,0.49729979450684536,0.5
+ramanbiolib::186,(-)-fructose,RamanBioLib,1064.0,327.273,0.8683,1.0,0,0.9527,22,0.7333,0.882544,True,v7_q_v2,(-)-fructose,0.20042722367743931,0.2
+ramanbiolib::187,(-)-ribose,RamanBioLib,1064.0,319.791,0.8611,1.0,0,0.895,24,0.8,0.88612,True,v7_q_v2,(-)-ribose,1.0,1.0
+ramanbiolib::188,glycogen,RamanBioLib,1064.0,274.523,0.8137,1.0,0,0.8351,19,0.6333,0.809952,True,v7_q_v2,glycogen,0.348615055381429,0.25
+ramanbiolib::189,(+)-arabinose,RamanBioLib,1064.0,375.716,0.9112,1.0,0,0.9583,19,0.6333,0.86237,True,v7_q_v2,(+)-arabinose,1.0,1.0
+ramanbiolib::190,ceramide,RamanBioLib,850.0,1740.576,1.0,1.0,0,0.9686,10,0.3333,0.753799,True,v7_q_v2,ceramide,0.4995500200138374,0.5
+ramanbiolib::191,elastin,RamanBioLib,1064.0,259.14,0.7958,1.0,0,0.9027,27,0.9,0.896698,True,v7_q_v2,elastin,1.0,1.0
+ramanbiolib::192,keratin,RamanBioLib,1064.0,897.257,1.0,1.0,0,0.8935,18,0.6,0.855673,True,v7_q_v2,keratin,1.0,1.0
+ramanbiolib::193,asparagine,RamanBioLib,488.0,418.192,0.9445,1.0,0,0.9657,20,0.6667,0.883048,True,v7_q_v2,asparagine,1.0,1.0
+ramanbiolib::194,aspartic acid,RamanBioLib,488.0,803.687,1.0,1.0,0,0.9672,20,0.6667,0.896111,True,v7_q_v2,aspartate,0.5410014410831245,0.5
+ramanbiolib::195,glucosamine,RamanBioLib,488.0,227.139,0.7549,1.0,0,0.9319,34,1.0,0.915815,True,v7_q_v2,glucosamine,1.0,1.0
+ramanbiolib::196,tubulin,RamanBioLib,532.0,988.884,1.0,1.0,0,0.9499,18,0.6,0.868885,True,v7_q_v2,tubulin,1.0,1.0
+ramanbiolib::197,insulin,RamanBioLib,633.0,215.56,0.7386,1.0,0,0.8147,22,0.7333,0.815044,True,v7_q_v2,insulin,1.0,1.0
+ramanbiolib::198,diethylstilbestrol,RamanBioLib,532.0,399.821,0.9305,1.0,0,0.9638,23,0.7667,0.910616,True,v7_q_v2,diethylstilbestrol,1.0,1.0
+ramanbiolib::199,estradiol,RamanBioLib,532.0,107.211,0.5216,1.0,0,0.8846,43,1.0,0.824185,True,v7_q_v2,estradiol,1.0,1.0
+ramanbiolib::200,estriol,RamanBioLib,532.0,104.209,0.5128,1.0,0,0.8916,40,1.0,0.822305,True,v7_q_v2,estriol,1.0,1.0
+ramanbiolib::201,estrone,RamanBioLib,532.0,185.241,0.6915,1.0,0,0.9081,30,1.0,0.890191,True,v7_q_v2,estrone,1.0,1.0
+ramanbiolib::202,ethinylestradiol,RamanBioLib,532.0,108.838,0.5263,1.0,0,0.8909,39,1.0,0.827509,True,v7_q_v2,ethinylestradiol,1.0,1.0
+gobbato_raman_metabolites::AcCoA::01,acetyl-coa,gobbato_raman_metabolites,785.0,102.965,0.5091,0.99704,2,0.7703,30,1.0,0.790743,True,v7_q_v2,acetyl-coa,0.2489682249817385,0.25
+gobbato_raman_metabolites::AcCoA::02,acetyl-coa,gobbato_raman_metabolites,785.0,97.643,0.4926,0.99704,2,0.769,36,1.0,0.783948,True,v7_q_v2,acetyl-coa,0.24682879524445228,0.25
+gobbato_raman_metabolites::AcCoA::03,acetyl-coa,gobbato_raman_metabolites,785.0,93.232,0.4782,0.99704,2,0.7592,33,1.0,0.775657,True,v7_q_v2,acetyl-coa,0.24421834462607997,0.25
+gobbato_raman_metabolites::Acetoacet::01,acetoacetate,gobbato_raman_metabolites,785.0,253.262,0.7887,0.99704,2,0.9114,28,0.9333,0.904366,True,v7_q_v2,acetoacetate,0.2500154122990423,0.25
+gobbato_raman_metabolites::Acetoacet::02,acetoacetate,gobbato_raman_metabolites,785.0,247.45,0.7815,0.99704,2,0.904,29,0.9667,0.908371,True,v7_q_v2,acetoacetate,0.2511226097459362,0.25
+gobbato_raman_metabolites::Acetoacet::03,acetoacetate,gobbato_raman_metabolites,785.0,258.856,0.7955,0.99704,2,0.9115,26,0.8667,0.889678,True,v7_q_v2,acetoacetate,0.24595485896571448,0.25
+gobbato_raman_metabolites::Ade::01,adenine,gobbato_raman_metabolites,785.0,581.622,1.0,0.99704,2,0.944,21,0.7,0.900949,True,v7_q_v2,adenine,0.254628293715808,0.25
+gobbato_raman_metabolites::Ade::02,adenine,gobbato_raman_metabolites,785.0,611.1,1.0,0.99704,2,0.9552,21,0.7,0.903589,True,v7_q_v2,adenine,0.2553744166322103,0.25
+gobbato_raman_metabolites::Ade::03,adenine,gobbato_raman_metabolites,785.0,650.358,1.0,0.99704,2,0.9531,20,0.6667,0.892161,True,v7_q_v2,adenine,0.2521446087956022,0.25
+gobbato_raman_metabolites::Ala::01,alanine,gobbato_raman_metabolites,785.0,267.471,0.8056,0.99704,2,0.9615,20,0.6667,0.847092,True,v7_q_v2,alanine,0.19927783158452894,0.2
+gobbato_raman_metabolites::Ala::02,alanine,gobbato_raman_metabolites,785.0,303.067,0.8445,0.99704,2,0.9608,20,0.6667,0.856962,True,v7_q_v2,alanine,0.20159974254312532,0.2
+gobbato_raman_metabolites::Ala::03,alanine,gobbato_raman_metabolites,785.0,295.75,0.8369,0.99704,2,0.9569,19,0.6333,0.843271,True,v7_q_v2,alanine,0.19837894386692037,0.2
+gobbato_raman_metabolites::Alb::01,albumin,gobbato_raman_metabolites,785.0,40.653,0.2204,0.99704,2,0.6705,71,1.0,0.619533,True,v7_q_v2,albumin,0.12087807242230267,0.14285714285714285
+gobbato_raman_metabolites::Alb::02,albumin,gobbato_raman_metabolites,785.0,30.12,0.1272,0.99704,2,0.6054,71,1.0,0.526402,True,v7_q_v2,albumin,0.10270713437257575,0.14285714285714285
+gobbato_raman_metabolites::Alb::03,albumin,gobbato_raman_metabolites,785.0,24.727,0.0659,0.99704,2,0.5935,79,1.0,0.444416,True,v7_q_v2,albumin,0.08671071506058606,0.14285714285714285
+gobbato_raman_metabolites::Arg::01,arginine,gobbato_raman_metabolites,785.0,412.97,0.9406,0.99704,2,0.9389,23,0.7667,0.906437,True,v7_q_v2,arginine,0.20582961800000094,0.2
+gobbato_raman_metabolites::Arg::02,arginine,gobbato_raman_metabolites,785.0,436.217,0.9576,0.99704,2,0.9395,23,0.7667,0.910658,True,v7_q_v2,arginine,0.20678810360636737,0.2
+gobbato_raman_metabolites::Arg::03,arginine,gobbato_raman_metabolites,785.0,387.307,0.9207,0.99704,2,0.9404,24,0.8,0.911598,True,v7_q_v2,arginine,0.20700155455874467,0.2
+gobbato_raman_metabolites::Asc::01,ascorbate,gobbato_raman_metabolites,785.0,538.726,1.0,0.99704,2,0.9568,22,0.7333,0.914559,True,v7_q_v2,ascorbate,0.25123666670421013,0.25
+gobbato_raman_metabolites::Asc::02,ascorbate,gobbato_raman_metabolites,785.0,573.059,1.0,0.99704,2,0.9603,21,0.7,0.904806,True,v7_q_v2,ascorbate,0.24855743965558214,0.25
+gobbato_raman_metabolites::Asc::03,ascorbate,gobbato_raman_metabolites,785.0,561.132,1.0,0.99704,2,0.9592,23,0.7667,0.92536,True,v7_q_v2,ascorbate,0.25420378772873903,0.25
+gobbato_raman_metabolites::Chol::01,cholesterol,gobbato_raman_metabolites,785.0,91.557,0.4726,0.99704,2,0.8481,47,1.0,0.795085,True,v7_q_v2,cholesterol,0.2428671139627552,0.25
+gobbato_raman_metabolites::Chol::02,cholesterol,gobbato_raman_metabolites,785.0,88.823,0.4632,0.99704,2,0.8537,45,1.0,0.792402,True,v7_q_v2,cholesterol,0.24204756326470145,0.25
+gobbato_raman_metabolites::Chol::03,cholesterol,gobbato_raman_metabolites,785.0,79.251,0.4278,0.99704,2,0.8295,49,1.0,0.771236,True,v7_q_v2,cholesterol,0.23558218492888117,0.25
+gobbato_raman_metabolites::Citric::01,citrate,gobbato_raman_metabolites,785.0,296.307,0.8375,0.99704,2,0.9355,23,0.7667,0.879699,True,v7_q_v2,citrate,0.2519633371016651,0.25
+gobbato_raman_metabolites::Citric::02,citrate,gobbato_raman_metabolites,785.0,309.139,0.8506,0.99704,2,0.941,22,0.7333,0.874663,True,v7_q_v2,citrate,0.2505209262706376,0.25
+gobbato_raman_metabolites::Citric::03,citrate,gobbato_raman_metabolites,785.0,290.698,0.8315,0.99704,2,0.9369,22,0.7333,0.868754,True,v7_q_v2,citrate,0.24882847082970416,0.25
+gobbato_raman_metabolites::CoA::01,coenzyme a,gobbato_raman_metabolites,785.0,60.82,0.3455,0.99704,2,0.735,46,1.0,0.709368,True,v7_q_v2,coenzyme a,0.24496358531809753,0.25
+gobbato_raman_metabolites::CoA::02,coenzyme a,gobbato_raman_metabolites,785.0,51.977,0.2967,0.99704,2,0.7196,47,1.0,0.679251,True,v7_q_v2,coenzyme a,0.23456338641002,0.25
+gobbato_raman_metabolites::CoA::03,coenzyme a,gobbato_raman_metabolites,785.0,52.749,0.3013,0.99704,2,0.744,52,1.0,0.687562,True,v7_q_v2,coenzyme a,0.23743339514678105,0.25
+gobbato_raman_metabolites::Creat::01,creatinine,gobbato_raman_metabolites,785.0,545.183,1.0,0.99704,2,0.968,19,0.6333,0.884215,True,v7_q_v2,creatinine,0.33068772680166963,0.3333333333333333
+gobbato_raman_metabolites::Creat::02,creatinine,gobbato_raman_metabolites,785.0,571.728,1.0,0.99704,2,0.9648,19,0.6333,0.883468,True,v7_q_v2,creatinine,0.33040835613738456,0.3333333333333333
+gobbato_raman_metabolites::Creat::03,creatinine,gobbato_raman_metabolites,785.0,604.336,1.0,0.99704,2,0.9662,21,0.7,0.906184,True,v7_q_v2,creatinine,0.3389039170609458,0.3333333333333333
+gobbato_raman_metabolites::Cys::01,cysteine,gobbato_raman_metabolites,785.0,548.888,1.0,0.99704,2,0.9564,21,0.7,0.903875,True,v7_q_v2,cysteine,0.3345576233056051,0.3333333333333333
+gobbato_raman_metabolites::Cys::02,cysteine,gobbato_raman_metabolites,785.0,560.639,1.0,0.99704,2,0.9592,20,0.6667,0.893575,True,v7_q_v2,cysteine,0.3307452117220922,0.3333333333333333
+gobbato_raman_metabolites::Cys::03,cysteine,gobbato_raman_metabolites,785.0,527.697,1.0,0.99704,2,0.958,21,0.7,0.904252,True,v7_q_v2,cysteine,0.3346971649723026,0.3333333333333333
+gobbato_raman_metabolites::Dfruct6P::01,fructose-6-phosphate,gobbato_raman_metabolites,785.0,257.64,0.794,0.99704,2,0.9092,14,0.4667,0.761289,True,v7_q_v2,fructose-6-phosphate,0.24160219511126935,0.25
+gobbato_raman_metabolites::Dfruct6P::02,fructose-6-phosphate,gobbato_raman_metabolites,785.0,289.158,0.8299,0.99704,2,0.9107,16,0.5333,0.796211,True,v7_q_v2,fructose-6-phosphate,0.252685018924139,0.25
+gobbato_raman_metabolites::Dfruct6P::03,fructose-6-phosphate,gobbato_raman_metabolites,785.0,245.514,0.779,0.99704,2,0.9096,18,0.6,0.8069,True,v7_q_v2,fructose-6-phosphate,0.2560772731975416,0.25
+gobbato_raman_metabolites::Ergo::01,ergothioneine,gobbato_raman_metabolites,785.0,352.316,0.8912,0.99704,2,0.9412,23,0.7667,0.894857,True,v7_q_v2,ergothioneine,0.33074338971160855,0.3333333333333333
+gobbato_raman_metabolites::Ergo::02,ergothioneine,gobbato_raman_metabolites,785.0,342.867,0.8828,0.99704,2,0.9394,24,0.8,0.901834,True,v7_q_v2,ergothioneine,0.3333221219895232,0.3333333333333333
+gobbato_raman_metabolites::Ergo::03,ergothioneine,gobbato_raman_metabolites,785.0,334.542,0.8752,0.99704,2,0.9385,25,0.8333,0.908902,True,v7_q_v2,ergothioneine,0.3359344882988683,0.3333333333333333
+gobbato_raman_metabolites::Fruct::01,fructose,gobbato_raman_metabolites,785.0,524.924,1.0,0.99704,2,0.953,20,0.6667,0.892131,True,v7_q_v2,(-)-fructose,0.20260444746842945,0.2
+gobbato_raman_metabolites::Fruct::02,fructose,gobbato_raman_metabolites,785.0,514.425,1.0,0.99704,2,0.9548,19,0.6333,0.881174,True,v7_q_v2,(-)-fructose,0.20011609437800712,0.2
+gobbato_raman_metabolites::Fruct::03,fructose,gobbato_raman_metabolites,785.0,513.999,1.0,0.99704,2,0.9558,19,0.6333,0.881418,True,v7_q_v2,(-)-fructose,0.20017150718754104,0.2
+gobbato_raman_metabolites::Galact::01,galactose,gobbato_raman_metabolites,785.0,184.492,0.6903,0.99704,2,0.9087,26,0.8667,0.858036,True,v7_q_v2,(+)-galactose,0.2417772417699155,0.25
+gobbato_raman_metabolites::Galact::02,galactose,gobbato_raman_metabolites,785.0,194.981,0.7074,0.99704,2,0.907,29,0.9667,0.886805,True,v7_q_v2,(+)-galactose,0.24988376581841543,0.25
+gobbato_raman_metabolites::Galact::03,galactose,gobbato_raman_metabolites,785.0,207.333,0.7265,0.99704,2,0.9097,30,1.0,0.900992,True,v7_q_v2,(+)-galactose,0.2538813763254219,0.25
+gobbato_raman_metabolites::Gluc::01,glucose,gobbato_raman_metabolites,785.0,226.46,0.7539,0.99704,2,0.9378,29,0.9667,0.908577,True,v7_q_v2,(+)-glucose,0.16900692432535494,0.16666666666666666
+gobbato_raman_metabolites::Gluc::02,glucose,gobbato_raman_metabolites,785.0,230.875,0.7599,0.99704,2,0.936,29,0.9667,0.909947,True,v7_q_v2,(+)-glucose,0.16926176181994895,0.16666666666666666
+gobbato_raman_metabolites::Gluc::03,glucose,gobbato_raman_metabolites,785.0,199.524,0.7146,0.99704,2,0.9378,31,1.0,0.904117,True,v7_q_v2,(+)-glucose,0.1681773073721511,0.16666666666666666
+gobbato_raman_metabolites::Glut::01,glutathione,gobbato_raman_metabolites,785.0,314.437,0.8559,0.99704,2,0.8807,18,0.6,0.819464,True,v7_q_v2,glutathione,0.19975579725565648,0.2
+gobbato_raman_metabolites::Glut::02,glutathione,gobbato_raman_metabolites,785.0,313.882,0.8554,0.99704,2,0.8727,17,0.5667,0.80587,True,v7_q_v2,glutathione,0.19644206985836582,0.2
+gobbato_raman_metabolites::Glut::03,glutathione,gobbato_raman_metabolites,785.0,325.727,0.8669,0.99704,2,0.8764,15,0.5,0.784484,True,v7_q_v2,glutathione,0.19122893361307686,0.2
+gobbato_raman_metabolites::Glutamic::01,glutamate,gobbato_raman_metabolites,785.0,141.289,0.6074,0.99704,2,0.9201,25,0.8333,0.825482,True,v7_q_v2,glutamate,0.16290243007179311,0.16666666666666666
+gobbato_raman_metabolites::Glutamic::02,glutamate,gobbato_raman_metabolites,785.0,151.136,0.6283,0.99704,2,0.9213,25,0.8333,0.832782,True,v7_q_v2,glutamate,0.16434302809758178,0.16666666666666666
+gobbato_raman_metabolites::Glutamic::03,glutamate,gobbato_raman_metabolites,785.0,138.423,0.601,0.99704,2,0.9145,24,0.8,0.813698,True,v7_q_v2,glutamate,0.1605769496422186,0.16666666666666666
+gobbato_raman_metabolites::Gly::01,glycine,gobbato_raman_metabolites,785.0,745.878,1.0,0.99704,2,0.9807,14,0.4667,0.82189,True,v7_q_v2,glycine,0.19817853887664508,0.2
+gobbato_raman_metabolites::Gly::02,glycine,gobbato_raman_metabolites,785.0,738.2,1.0,0.99704,2,0.9791,14,0.4667,0.821546,True,v7_q_v2,glycine,0.198095591745796,0.2
+gobbato_raman_metabolites::Gly::03,glycine,gobbato_raman_metabolites,785.0,1339.724,1.0,0.99704,2,0.9825,14,0.4667,0.82226,True,v7_q_v2,glycine,0.19826775526738394,0.2
+gobbato_raman_metabolites::Glycerol::01,glycerol,gobbato_raman_metabolites,785.0,540.321,1.0,0.99704,2,0.8989,13,0.4333,0.789428,True,v7_q_v2,glycerol,0.2490307577093011,0.25
+gobbato_raman_metabolites::Glycerol::02,glycerol,gobbato_raman_metabolites,785.0,536.887,1.0,0.99704,2,0.8995,13,0.4333,0.789555,True,v7_q_v2,glycerol,0.24907082077550738,0.25
+gobbato_raman_metabolites::Glycerol::03,glycerol,gobbato_raman_metabolites,785.0,582.557,1.0,0.99704,2,0.9012,13,0.4333,0.789939,True,v7_q_v2,glycerol,0.24919195634576882,0.25
+gobbato_raman_metabolites::Glycogen::01,glycogen,gobbato_raman_metabolites,785.0,29.353,0.1192,0.99704,2,0.6565,73,1.0,0.528505,True,v7_q_v2,glycogen,0.22747619592810703,0.25
+gobbato_raman_metabolites::Glycogen::02,glycogen,gobbato_raman_metabolites,785.0,28.449,0.1095,0.99704,2,0.6421,78,1.0,0.514524,True,v7_q_v2,glycogen,0.2214585713166637,0.25
+gobbato_raman_metabolites::Glycogen::03,glycogen,gobbato_raman_metabolites,785.0,25.552,0.0761,0.99704,2,0.645,86,1.0,0.470361,True,v7_q_v2,glycogen,0.20245017737380033,0.25
+gobbato_raman_metabolites::Gua::01,guanine,gobbato_raman_metabolites,785.0,773.869,1.0,0.99704,2,0.9719,19,0.6333,0.885097,True,v7_q_v2,guanine,0.2525816869523181,0.25
+gobbato_raman_metabolites::Gua::02,guanine,gobbato_raman_metabolites,785.0,775.283,1.0,0.99704,2,0.973,19,0.6333,0.88534,True,v7_q_v2,guanine,0.25265103228952907,0.25
+gobbato_raman_metabolites::Gua::03,guanine,gobbato_raman_metabolites,785.0,793.575,1.0,0.99704,2,0.972,19,0.6333,0.885127,True,v7_q_v2,guanine,0.2525902481050602,0.25
+gobbato_raman_metabolites::His::01,histidine,gobbato_raman_metabolites,785.0,253.717,0.7892,0.99704,2,0.9381,29,0.9667,0.919103,True,v7_q_v2,histidine,0.20563267470386284,0.2
+gobbato_raman_metabolites::His::02,histidine,gobbato_raman_metabolites,785.0,271.863,0.8107,0.99704,2,0.9368,29,0.9667,0.924967,True,v7_q_v2,histidine,0.2069446386561766,0.2
+gobbato_raman_metabolites::His::03,histidine,gobbato_raman_metabolites,785.0,266.707,0.8048,0.99704,2,0.9453,30,1.0,0.933224,True,v7_q_v2,histidine,0.20879199308220917,0.2
+gobbato_raman_metabolites::Hydroxypro::01,hydroxyproline,gobbato_raman_metabolites,785.0,615.281,1.0,0.99704,2,0.9522,21,0.7,0.902901,True,v7_q_v2,hydroxyproline,0.3333194281191487,0.3333333333333333
+gobbato_raman_metabolites::Hydroxypro::02,hydroxyproline,gobbato_raman_metabolites,785.0,554.352,1.0,0.99704,2,0.952,21,0.7,0.902833,True,v7_q_v2,hydroxyproline,0.3332943249006208,0.3333333333333333
+gobbato_raman_metabolites::Hydroxypro::03,hydroxyproline,gobbato_raman_metabolites,785.0,642.293,1.0,0.99704,2,0.953,21,0.7,0.903082,True,v7_q_v2,hydroxyproline,0.3333862469802305,0.3333333333333333
+gobbato_raman_metabolites::Hypox::01,hypoxanthine,gobbato_raman_metabolites,785.0,72.064,0.3982,0.99704,2,0.6656,36,1.0,0.717001,True,v7_q_v2,hypoxanthine,0.3360437071802645,0.3333333333333333
+gobbato_raman_metabolites::Hypox::02,hypoxanthine,gobbato_raman_metabolites,785.0,80.061,0.4309,0.99704,2,0.6888,38,1.0,0.737559,True,v7_q_v2,hypoxanthine,0.345678821402158,0.3333333333333333
+gobbato_raman_metabolites::Hypox::03,hypoxanthine,gobbato_raman_metabolites,785.0,58.127,0.3314,0.99704,2,0.6436,45,1.0,0.679094,True,v7_q_v2,hypoxanthine,0.31827747141757756,0.3333333333333333
+gobbato_raman_metabolites::Ile::01,isoleucine,gobbato_raman_metabolites,785.0,102.92,0.5089,0.99704,2,0.8772,42,1.0,0.81681,True,v7_q_v2,isoleucine,0.3385169838704931,0.3333333333333333
+gobbato_raman_metabolites::Ile::02,isoleucine,gobbato_raman_metabolites,785.0,81.618,0.4369,0.99704,2,0.8632,41,1.0,0.783076,True,v7_q_v2,isoleucine,0.32453633728941894,0.3333333333333333
+gobbato_raman_metabolites::Ile::03,isoleucine,gobbato_raman_metabolites,785.0,97.974,0.4936,0.99704,2,0.8877,41,1.0,0.813021,True,v7_q_v2,isoleucine,0.3369466788400879,0.3333333333333333
+gobbato_raman_metabolites::Lact::01,lactate,gobbato_raman_metabolites,785.0,275.401,0.8147,0.99704,2,0.914,25,0.8333,0.8869,True,v7_q_v2,lactate,0.3305238741914855,0.3333333333333333
+gobbato_raman_metabolites::Lact::02,lactate,gobbato_raman_metabolites,785.0,304.74,0.8462,0.99704,2,0.9155,26,0.8667,0.904535,True,v7_q_v2,lactate,0.3370959663341925,0.3333333333333333
+gobbato_raman_metabolites::Lact::03,lactate,gobbato_raman_metabolites,785.0,262.894,0.8003,0.99704,2,0.915,26,0.8667,0.891881,True,v7_q_v2,lactate,0.3323801594743221,0.3333333333333333
+gobbato_raman_metabolites::Leu::01,leucine,gobbato_raman_metabolites,785.0,149.511,0.6249,0.99704,2,0.9261,31,1.0,0.871579,True,v7_q_v2,leucine,0.2542578124316279,0.25
+gobbato_raman_metabolites::Leu::02,leucine,gobbato_raman_metabolites,785.0,152.337,0.6308,0.99704,2,0.9035,31,1.0,0.868213,True,v7_q_v2,leucine,0.2532758798739999,0.25
+gobbato_raman_metabolites::Leu::03,leucine,gobbato_raman_metabolites,785.0,133.028,0.5887,0.99704,2,0.9023,40,1.0,0.853069,True,v7_q_v2,leucine,0.24885805852738122,0.25
+gobbato_raman_metabolites::Mann::01,mannose,gobbato_raman_metabolites,785.0,90.744,0.4698,0.99704,2,0.8261,47,1.0,0.788716,True,v7_q_v2,(+)-mannose,0.24065016637995898,0.25
+gobbato_raman_metabolites::Mann::02,mannose,gobbato_raman_metabolites,785.0,95.92,0.4871,0.99704,2,0.8527,48,1.0,0.802172,True,v7_q_v2,(+)-mannose,0.24475581231437482,0.25
+gobbato_raman_metabolites::Mann::03,mannose,gobbato_raman_metabolites,785.0,93.066,0.4777,0.99704,2,0.8557,46,1.0,0.798989,True,v7_q_v2,(+)-mannose,0.24378462689454383,0.25
+gobbato_raman_metabolites::Methio::01,methionine,gobbato_raman_metabolites,785.0,82.655,0.4408,0.99704,2,0.8365,34,1.0,0.778684,True,v7_q_v2,methionine,0.24261764486864199,0.25
+gobbato_raman_metabolites::Methio::02,methionine,gobbato_raman_metabolites,785.0,80.74,0.4335,0.99704,2,0.8515,34,1.0,0.778891,True,v7_q_v2,methionine,0.24268214067501248,0.25
+gobbato_raman_metabolites::Methio::03,methionine,gobbato_raman_metabolites,785.0,76.374,0.4163,0.99704,2,0.8399,35,1.0,0.768382,True,v7_q_v2,methionine,0.23940781009942014,0.25
+gobbato_raman_metabolites::NacDgluc::01,n-acetylglucosamine,gobbato_raman_metabolites,785.0,114.036,0.5408,0.99704,2,0.8669,37,1.0,0.826847,True,v7_q_v2,n-acetylglucosamine,0.24648154772551123,0.25
+gobbato_raman_metabolites::NacDgluc::02,n-acetylglucosamine,gobbato_raman_metabolites,785.0,111.8,0.5347,0.99704,2,0.866,36,1.0,0.824282,True,v7_q_v2,n-acetylglucosamine,0.24571692601204315,0.25
+gobbato_raman_metabolites::NacDgluc::03,n-acetylglucosamine,gobbato_raman_metabolites,785.0,111.319,0.5333,0.99704,2,0.8617,36,1.0,0.822731,True,v7_q_v2,n-acetylglucosamine,0.24525457580635546,0.25
+gobbato_raman_metabolites::Oleic::01,oleate,gobbato_raman_metabolites,785.0,321.102,0.8624,0.99704,2,0.9311,18,0.6,0.832511,True,v7_q_v2,oleate,0.20178376918859514,0.2
+gobbato_raman_metabolites::Oleic::02,oleate,gobbato_raman_metabolites,785.0,297.944,0.8392,0.99704,2,0.9305,16,0.5333,0.802723,True,v7_q_v2,oleate,0.19456376258617203,0.2
+gobbato_raman_metabolites::Oleic::03,oleate,gobbato_raman_metabolites,785.0,283.604,0.8238,0.99704,2,0.9255,20,0.6667,0.843745,True,v7_q_v2,oleate,0.20450666277566448,0.2
+gobbato_raman_metabolites::PEP::01,phosphoenolpyruvate,gobbato_raman_metabolites,785.0,171.739,0.668,0.99704,2,0.9201,29,0.9667,0.877309,True,v7_q_v2,phosphoenolpyruvate,0.2500985645635664,0.25
+gobbato_raman_metabolites::PEP::02,phosphoenolpyruvate,gobbato_raman_metabolites,785.0,195.233,0.7078,0.99704,2,0.9286,26,0.8667,0.86812,True,v7_q_v2,phosphoenolpyruvate,0.24747901351624485,0.25
+gobbato_raman_metabolites::PEP::03,phosphoenolpyruvate,gobbato_raman_metabolites,785.0,160.322,0.6466,0.99704,2,0.8988,32,1.0,0.872492,True,v7_q_v2,phosphoenolpyruvate,0.2487253599281384,0.25
+gobbato_raman_metabolites::PhInositol::01,phosphatidylinositol,gobbato_raman_metabolites,785.0,33.24,0.1578,0.99704,2,0.5764,58,1.0,0.548787,True,v7_q_v2,phosphatidylinositol,0.3339751715710289,0.3333333333333333
+gobbato_raman_metabolites::PhInositol::02,phosphatidylinositol,gobbato_raman_metabolites,785.0,36.374,0.1858,0.99704,2,0.615,65,1.0,0.581004,True,v7_q_v2,phosphatidylinositol,0.3535814634520389,0.3333333333333333
+gobbato_raman_metabolites::PhInositol::03,phosphatidylinositol,gobbato_raman_metabolites,785.0,29.403,0.1197,0.99704,2,0.582,63,1.0,0.513406,True,v7_q_v2,phosphatidylinositol,0.3124433649769322,0.3333333333333333
+gobbato_raman_metabolites::Phe::01,phenylalanine,gobbato_raman_metabolites,785.0,503.266,1.0,0.99704,2,0.9659,23,0.7667,0.926956,True,v7_q_v2,phenylalanine,0.2090612389056399,0.2
+gobbato_raman_metabolites::Phe::02,phenylalanine,gobbato_raman_metabolites,785.0,493.526,0.996,0.99704,2,0.9654,23,0.7667,0.9259,True,v7_q_v2,phenylalanine,0.20882307369792305,0.2
+gobbato_raman_metabolites::Phe::03,phenylalanine,gobbato_raman_metabolites,785.0,474.302,0.9836,0.99704,2,0.9641,23,0.7667,0.92272,True,v7_q_v2,phenylalanine,0.20810587165195762,0.2
+gobbato_raman_metabolites::Phosph::01,phosphate,gobbato_raman_metabolites,785.0,322.376,0.8637,0.99704,2,0.9511,24,0.8,0.899693,True,v7_q_v2,phosphate,0.33246444280454807,0.3333333333333333
+gobbato_raman_metabolites::Phosph::02,phosphate,gobbato_raman_metabolites,785.0,191.904,0.7025,0.99704,2,0.93,32,1.0,0.898373,True,v7_q_v2,phosphate,0.3319766619009487,0.3333333333333333
+gobbato_raman_metabolites::Phosph::03,phosphate,gobbato_raman_metabolites,785.0,209.768,0.7302,0.99704,2,0.934,38,1.0,0.908067,True,v7_q_v2,phosphate,0.3355588952945033,0.3333333333333333
+gobbato_raman_metabolites::Pro::01,proline,gobbato_raman_metabolites,785.0,306.458,0.8479,0.99704,2,0.9276,22,0.7333,0.870825,True,v7_q_v2,proline,0.20306363581671072,0.2
+gobbato_raman_metabolites::Pro::02,proline,gobbato_raman_metabolites,785.0,307.286,0.8488,0.99704,2,0.9271,21,0.7,0.860854,True,v7_q_v2,proline,0.20073854465289662,0.2
+gobbato_raman_metabolites::Pro::03,proline,gobbato_raman_metabolites,785.0,316.766,0.8582,0.99704,2,0.925,21,0.7,0.862752,True,v7_q_v2,proline,0.2011811304546135,0.2
+gobbato_raman_metabolites::Pyr::01,pyruvate,gobbato_raman_metabolites,785.0,296.131,0.8373,0.99704,2,0.8849,19,0.6333,0.82705,True,v7_q_v2,pyruvate,0.25220459844563536,0.25
+gobbato_raman_metabolites::Pyr::02,pyruvate,gobbato_raman_metabolites,785.0,283.405,0.8236,0.99704,2,0.8712,21,0.7,0.84122,True,v7_q_v2,pyruvate,0.256525666289145,0.25
+gobbato_raman_metabolites::Pyr::03,pyruvate,gobbato_raman_metabolites,785.0,277.795,0.8174,0.99704,2,0.8794,19,0.6333,0.820815,True,v7_q_v2,pyruvate,0.25030326760553073,0.25
+gobbato_raman_metabolites::Ribo::01,riboflavin,gobbato_raman_metabolites,785.0,401.554,0.9319,0.99704,2,0.9327,23,0.7667,0.902828,True,v7_q_v2,riboflavin,0.24662566564737776,0.25
+gobbato_raman_metabolites::Ribo::02,riboflavin,gobbato_raman_metabolites,785.0,433.984,0.956,0.99704,2,0.9354,25,0.8333,0.928425,True,v7_q_v2,riboflavin,0.2536180021318199,0.25
+gobbato_raman_metabolites::Ribo::03,riboflavin,gobbato_raman_metabolites,785.0,417.105,0.9437,0.99704,2,0.9385,24,0.8,0.916777,True,v7_q_v2,riboflavin,0.2504361161541357,0.25
+gobbato_raman_metabolites::Ser::01,serine,gobbato_raman_metabolites,785.0,521.103,1.0,0.99704,2,0.9503,16,0.5333,0.843118,True,v7_q_v2,serine,0.20115949954321952,0.2
+gobbato_raman_metabolites::Ser::02,serine,gobbato_raman_metabolites,785.0,504.968,1.0,0.99704,2,0.9488,16,0.5333,0.842803,True,v7_q_v2,serine,0.20108434370221492,0.2
+gobbato_raman_metabolites::Ser::03,serine,gobbato_raman_metabolites,785.0,443.571,0.9628,0.99704,2,0.951,16,0.5333,0.835318,True,v7_q_v2,serine,0.1992984977659628,0.2
+gobbato_raman_metabolites::Stearic::01,stearate,gobbato_raman_metabolites,785.0,287.79,0.8284,0.99704,2,0.9573,30,1.0,0.942983,True,v7_q_v2,stearate,0.21111789725470143,0.2
+gobbato_raman_metabolites::Stearic::02,stearate,gobbato_raman_metabolites,785.0,293.281,0.8343,0.99704,2,0.9629,27,0.9,0.921422,True,v7_q_v2,stearate,0.20629075510822728,0.2
+gobbato_raman_metabolites::Stearic::03,stearate,gobbato_raman_metabolites,785.0,272.447,0.8114,0.99704,2,0.9622,28,0.9333,0.923222,True,v7_q_v2,stearate,0.20669374457363487,0.2
+gobbato_raman_metabolites::Thy::01,thymine,gobbato_raman_metabolites,785.0,1006.293,1.0,0.99704,2,0.9799,17,0.5667,0.862596,True,v7_q_v2,thymine,0.24914189196214737,0.25
+gobbato_raman_metabolites::Thy::02,thymine,gobbato_raman_metabolites,785.0,965.35,1.0,0.99704,2,0.9802,17,0.5667,0.862663,True,v7_q_v2,thymine,0.2491612434392716,0.25
+gobbato_raman_metabolites::Thy::03,thymine,gobbato_raman_metabolites,785.0,963.157,1.0,0.99704,2,0.981,17,0.5667,0.86283,True,v7_q_v2,thymine,0.2492094777180738,0.25
+gobbato_raman_metabolites::Triolein::01,triolein,gobbato_raman_metabolites,785.0,303.715,0.8451,0.99704,2,0.9215,19,0.6333,0.837416,True,v7_q_v2,triolein,0.2027845413037872,0.2
+gobbato_raman_metabolites::Triolein::02,triolein,gobbato_raman_metabolites,785.0,287.472,0.8281,0.99704,2,0.9235,18,0.6,0.822413,True,v7_q_v2,triolein,0.19915148858783632,0.2
+gobbato_raman_metabolites::Triolein::03,triolein,gobbato_raman_metabolites,785.0,266.927,0.805,0.99704,2,0.916,15,0.5,0.778652,True,v7_q_v2,triolein,0.188554539984042,0.2
+gobbato_raman_metabolites::Trp::01,tryptophan,gobbato_raman_metabolites,785.0,187.655,0.6955,0.99704,2,0.9329,35,1.0,0.896852,True,v7_q_v2,tryptophan,0.19801567474322712,0.2
+gobbato_raman_metabolites::Trp::02,tryptophan,gobbato_raman_metabolites,785.0,190.688,0.7005,0.99704,2,0.9377,37,1.0,0.899604,True,v7_q_v2,tryptophan,0.19862328796914772,0.2
+gobbato_raman_metabolites::Trp::03,tryptophan,gobbato_raman_metabolites,785.0,197.703,0.7117,0.99704,2,0.9379,36,1.0,0.903228,True,v7_q_v2,tryptophan,0.19942342980444439,0.2
+gobbato_raman_metabolites::Tyr::01,tyrosine,gobbato_raman_metabolites,785.0,228.248,0.7564,0.99704,2,0.9474,26,0.8667,0.887064,True,v7_q_v2,tyrosine,0.24929698824875737,0.25
+gobbato_raman_metabolites::Tyr::02,tyrosine,gobbato_raman_metabolites,785.0,226.302,0.7537,0.99704,2,0.9492,26,0.8667,0.886723,True,v7_q_v2,tyrosine,0.24920115494586964,0.25
+gobbato_raman_metabolites::Tyr::03,tyrosine,gobbato_raman_metabolites,785.0,249.749,0.7843,0.99704,2,0.9508,26,0.8667,0.895953,True,v7_q_v2,tyrosine,0.25179511795365267,0.25
+gobbato_raman_metabolites::UA::01,urate,gobbato_raman_metabolites,785.0,517.616,1.0,0.99704,2,0.9496,21,0.7,0.902279,True,v7_q_v2,urate,0.3334239926743311,0.3333333333333333
+gobbato_raman_metabolites::UA::02,urate,gobbato_raman_metabolites,785.0,526.342,1.0,0.99704,2,0.951,21,0.7,0.902604,True,v7_q_v2,urate,0.3335440916654626,0.3333333333333333
+gobbato_raman_metabolites::UA::03,urate,gobbato_raman_metabolites,785.0,494.984,0.9969,0.99704,2,0.9481,21,0.7,0.901218,True,v7_q_v2,urate,0.33303191566020635,0.3333333333333333
+gobbato_raman_metabolites::Ura::01,uracil,gobbato_raman_metabolites,785.0,1741.346,1.0,0.99704,2,0.9885,14,0.4667,0.82353,True,v7_q_v2,uracil,0.25033932129661013,0.25
+gobbato_raman_metabolites::Ura::02,uracil,gobbato_raman_metabolites,785.0,1830.293,1.0,0.99704,2,0.9886,14,0.4667,0.823534,True,v7_q_v2,uracil,0.25034053722958793,0.25
+gobbato_raman_metabolites::Ura::03,uracil,gobbato_raman_metabolites,785.0,1694.069,1.0,0.99704,2,0.9886,14,0.4667,0.823549,True,v7_q_v2,uracil,0.2503450969782546,0.25
+gobbato_raman_metabolites::Urea::01,urea,gobbato_raman_metabolites,785.0,1094.288,1.0,0.99704,2,0.9839,5,0.1667,0.63588,True,v7_q_v2,urea,0.24270803354888548,0.25
+gobbato_raman_metabolites::Urea::02,urea,gobbato_raman_metabolites,785.0,1013.888,1.0,0.99704,2,0.9822,5,0.1667,0.635607,True,v7_q_v2,urea,0.2426038326097793,0.25
+gobbato_raman_metabolites::Urea::03,urea,gobbato_raman_metabolites,785.0,986.478,1.0,0.99704,2,0.981,5,0.1667,0.635422,True,v7_q_v2,urea,0.24253322025177693,0.25
+gobbato_raman_metabolites::Val::01,valine,gobbato_raman_metabolites,785.0,210.896,0.7318,0.99704,2,0.9394,25,0.8333,0.869347,True,v7_q_v2,valine,0.20093177564347622,0.2
+gobbato_raman_metabolites::Val::02,valine,gobbato_raman_metabolites,785.0,212.629,0.7344,0.99704,2,0.9393,25,0.8333,0.870092,True,v7_q_v2,valine,0.20110396715371825,0.2
+gobbato_raman_metabolites::Val::03,valine,gobbato_raman_metabolites,785.0,187.282,0.6949,0.99704,2,0.9352,26,0.8667,0.865673,True,v7_q_v2,valine,0.2000826056990074,0.2
+gobbato_raman_metabolites::Xanth::01,xanthine,gobbato_raman_metabolites,785.0,1224.895,1.0,0.99704,2,0.9785,19,0.6333,0.886588,True,v7_q_v2,xanthine,0.33481736043580473,0.3333333333333333
+gobbato_raman_metabolites::Xanth::02,xanthine,gobbato_raman_metabolites,785.0,1159.676,1.0,0.99704,2,0.9784,19,0.6333,0.886576,True,v7_q_v2,xanthine,0.3348128286709655,0.3333333333333333
+gobbato_raman_metabolites::Xanth::03,xanthine,gobbato_raman_metabolites,785.0,1261.998,1.0,0.99704,2,0.979,18,0.6,0.874811,True,v7_q_v2,xanthine,0.3303698108932297,0.3333333333333333
+amino_acid_raman::valine,valine,amino_acid_raman_grounding,785.0,109.952,0.5295,1.0,0,0.8713,38,1.0,0.824148,True,v7_q_v2,valine,0.19048495138652305,0.2
+amino_acid_raman::glutamate#1,glutamate,amino_acid_raman_grounding,785.0,115.099,0.5437,1.0,0,0.8892,39,1.0,0.833854,True,v7_q_v2,glutamate,0.16455457893095787,0.16666666666666666
+amino_acid_raman::glutamate#2,glutamate,amino_acid_raman_grounding,785.0,126.959,0.5742,1.0,0,0.8738,32,1.0,0.841609,True,v7_q_v2,glutamate,0.1660849676556142,0.16666666666666666
+amino_acid_raman::leucine,leucine,amino_acid_raman_grounding,785.0,117.637,0.5505,1.0,0,0.8834,39,1.0,0.835073,True,v7_q_v2,leucine,0.24360824916699095,0.25
+amino_acid_raman::phenylalanine,phenylalanine,amino_acid_raman_grounding,785.0,286.92,0.8275,1.0,0,0.944,18,0.6,0.827406,True,v7_q_v2,phenylalanine,0.18660920630316852,0.2
+amino_acid_raman::proline,proline,amino_acid_raman_grounding,785.0,152.49,0.6311,1.0,0,0.8929,23,0.7667,0.810728,True,v7_q_v2,proline,0.18904989560291707,0.2
+amino_acid_raman::alanine,alanine,amino_acid_raman_grounding,785.0,137.39,0.5987,1.0,0,0.9427,26,0.8667,0.836278,True,v7_q_v2,alanine,0.19673384525157445,0.2
+amino_acid_raman::arginine,arginine,amino_acid_raman_grounding,785.0,85.874,0.4527,1.0,0,0.8345,42,1.0,0.783975,True,v7_q_v2,arginine,0.1780215004148669,0.2
+amino_acid_raman::aspartate,aspartate,amino_acid_raman_grounding,785.0,72.356,0.3995,1.0,0,0.8364,54,1.0,0.760282,True,v7_q_v2,aspartate,0.4589985589168754,0.5
+amino_acid_raman::glycine,glycine,amino_acid_raman_grounding,785.0,133.78,0.5904,1.0,0,0.938,34,1.0,0.86267,True,v7_q_v2,glycine,0.2080116318883493,0.2
+amino_acid_raman::histidine,histidine,amino_acid_raman_grounding,785.0,93.311,0.4785,1.0,0,0.8444,38,1.0,0.797269,True,v7_q_v2,histidine,0.17837452051453864,0.2
+amino_acid_raman::methionine,methionine,amino_acid_raman_grounding,785.0,170.722,0.6662,1.0,0,0.9148,32,1.0,0.883554,True,v7_q_v2,methionine,0.27529240435692537,0.25
+amino_acid_raman::serine,serine,amino_acid_raman_grounding,785.0,92.644,0.4763,1.0,0,0.8921,51,1.0,0.807344,True,v7_q_v2,serine,0.19262418190481168,0.2
+amino_acid_raman::gluth,gluth,amino_acid_raman_grounding,785.0,179.354,0.6815,1.0,0,0.8792,22,0.7333,0.814171,True,v7_q_v2,glutathione,0.19846555456668638,0.2
+amino_acid_raman::glucose,glucose,amino_acid_raman_grounding,785.0,167.486,0.6602,1.0,0,0.9133,28,0.9333,0.866123,True,v7_q_v2,(+)-glucose,0.16110993819725725,0.16666666666666666
+amino_acid_raman::ure,ure,amino_acid_raman_grounding,785.0,483.223,0.9894,1.0,0,0.9797,8,0.2667,0.713029,True,v7_q_v2,urea,0.2721549135895582,0.25
+amino_acid_raman::malic acid,malic acid,amino_acid_raman_grounding,785.0,809.422,1.0,1.0,0,0.9607,13,0.4333,0.803252,True,v7_q_v2,malic acid,0.4840380817858113,0.5
+amino_acid_raman::carotene,carotene,amino_acid_raman_grounding,785.0,1161.513,1.0,1.0,0,0.9784,11,0.3667,0.773916,True,v7_q_v2,carotene,1.0,1.0
+amino_acid_raman::alb,alb,amino_acid_raman_grounding,785.0,190.187,0.6997,1.0,0,0.8567,26,0.8667,0.848994,True,v7_q_v2,albumin,0.16564857435859015,0.14285714285714285
+amino_acid_raman::tryptophan,tryptophan,amino_acid_raman_grounding,785.0,369.016,0.9056,1.0,0,0.9463,23,0.7667,0.900324,True,v7_q_v2,tryptophan,0.19878225654569673,0.2

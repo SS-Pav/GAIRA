@@ -1,0 +1,155 @@
+canonical_id,source_forms,fine_class,broad_class,old_family,expected_theme,primary_motif,conflict
+(+)-arabinose,(+)-arabinose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+(+)-fucose,(+)-fucose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+(+)-galactosamine,(+)-galactosamine,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+(+)-galactose,(+)-galactose;galactose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+(+)-glucose,(+)-dextrose;(+)-glucose;glucose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+(+)-lactose,(+)-lactose;lactose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+(+)-maltose,(+)-maltose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+(+)-mannose,(+)-mannose;mannose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+(+)-raffinose pentahydrate,(+)-raffinose pentahydrate,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+(+)-sucrose,(+)-sucrose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+(+)-trehalose,(+)-trehalose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+(+)-xylose,(+)-xylose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+(-)-arabinose,(-)-arabinose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+(-)-fructose,(-)-fructose;fructose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,nucleic_backbone_phosphate,False
+(-)-ribose,(-)-ribose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+12-methyltetradecanoic acid,12-methyltetradecanoic acid,fatty_acid,lipid,fatty_acid,Lipid chemistry,fatty_acyl_chain,False
+13-methylmyristicacid,13-methylmyristicacid,fatty_acid,lipid,fatty_acid,Lipid chemistry,fatty_acyl_chain,False
+14-methylhexadecanoic acid,14-methylhexadecanoic acid,fatty_acid,lipid,fatty_acid,Lipid chemistry,fatty_acyl_chain,False
+14-methylpentadecanoic acid,14-methylpentadecanoic acid,fatty_acid,lipid,fatty_acid,Lipid chemistry,fatty_acyl_chain,False
+15-methylpalmiticacid,15-methylpalmiticacid,fatty_acid,lipid,fatty_acid,Lipid chemistry,fatty_acyl_chain,False
+2-deoxy-d-ribose,2-deoxy-d-ribose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+a-dna,a-dna,nucleic_acid_polymer,nucleic,nucleic_acid,Nucleic chemistry,purine_ring_breathing,False
+acetoacetate,acetoacetate,carboxylic_acid_metabolite,energy_metabolism,organic_acid,Energy metabolism,carboxylate_organic_acid,False
+acetyl-coa,acetyl coenzyme a;acetyl-coa,sulfur_thiol_cofactor,redox_cofactor,cofactor,Energy metabolism,sulfur_heterocycle_thione,True
+adenine,adenine,purine,nucleic,purine,Nucleic chemistry,purine_ring_breathing,False
+alanine,alanine,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,aromatic_ring_residue,False
+albumin,alb;albumin,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+amylopectin,amylopectin,polysaccharide,carbohydrate,polysaccharide,Carbohydrate chemistry,polysaccharide_glycosidic,False
+amylose,amylose,polysaccharide,carbohydrate,polysaccharide,Carbohydrate chemistry,polysaccharide_glycosidic,False
+arachidic acid,arachidic acid,fatty_acid,lipid,fatty_acid,Lipid chemistry,fatty_acyl_chain,False
+arachidonic acid,arachidonic acid,fatty_acid,lipid,fatty_acid,Lipid chemistry,fatty_acyl_chain,False
+arginine,arginine,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,amino_acid_zwitterion,False
+ascorbate,ascorbate,carboxylic_acid_metabolite,energy_metabolism,organic_acid,Energy metabolism,carboxylate_organic_acid,False
+asparagine,asparagine,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,amino_acid_zwitterion,False
+aspartate,aspartate;aspartic acid,free_amino_acid,protein_amino_acid,organic_acid,Energy metabolism,carboxylate_organic_acid,True
+b-dna,b-dna,nucleic_acid_polymer,nucleic,nucleic_acid,Nucleic chemistry,purine_ring_breathing,False
+carbonic anhydrase,carbonic anhydrase,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+carotene,carotene,chromophore_pigment,redox_cofactor,carotenoid,Protein chemistry,carotenoid_polyene,False
+cellulose,cellulose,polysaccharide,carbohydrate,polysaccharide,Carbohydrate chemistry,polysaccharide_glycosidic,False
+ceramide,ceramide,phospholipid_sphingolipid,lipid,phospholipid,,,False
+chitin,chitin,polysaccharide,carbohydrate,polysaccharide,Carbohydrate chemistry,polysaccharide_glycosidic,False
+cholesterol,cholesterol,sterol_steroid,lipid,lipid,Redox / pigments,sterol_ring_system,False
+cholesteryl linoleate,cholesteryl linoleate,sterol_steroid,lipid,sterol,Redox / pigments,sterol_ring_system,False
+cholesteryl oleate,cholesteryl oleate,sterol_steroid,lipid,sterol,Redox / pigments,sterol_ring_system,False
+cholesteryl palmitate,cholesteryl palmitate,sterol_steroid,lipid,sterol,Redox / pigments,sterol_ring_system,False
+cholesteryl stearate,cholesteryl stearate,sterol_steroid,lipid,sterol,Redox / pigments,sterol_ring_system,False
+citrate,citrate,carboxylic_acid_metabolite,energy_metabolism,organic_acid,Energy metabolism,carboxylate_organic_acid,False
+coenzyme a,coenzyme a,sulfur_thiol_cofactor,redox_cofactor,cofactor,Energy metabolism,sulfur_heterocycle_thione,False
+collagen,collagen,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+creatinine,creatinine,small_nitrogenous,energy_metabolism,small_nitrogenous,Nucleic chemistry,oxopurine_carbonyl,False
+cysteine,cysteine,free_amino_acid,protein_amino_acid,amino_acid,Energy metabolism,sulfur_heterocycle_thione,False
+cytochrome c,cytochrome c,peptide_protein,protein_amino_acid,protein,Redox / pigments,porphyrin_macrocycle,False
+cytosine,cytosine,pyrimidine,nucleic,pyrimidine,Nucleic chemistry,pyrimidine_ring,False
+diethylstilbestrol,diethylstilbestrol,sterol_steroid,lipid,sterol,Redox / pigments,sterol_ring_system,False
+elaidic acid,elaidic acid,fatty_acid,lipid,organic_acid,Lipid chemistry,fatty_acyl_chain,False
+elastase,elastase,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+elastin,elastin,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+ergothioneine,ergothioneine,sulfur_thiol_cofactor,redox_cofactor,cofactor,Energy metabolism,sulfur_heterocycle_thione,False
+estradiol,estradiol,sterol_steroid,lipid,sterol,Redox / pigments,sterol_ring_system,False
+estriol,estriol,sterol_steroid,lipid,sterol,Redox / pigments,sterol_ring_system,False
+estrone,estrone,sterol_steroid,lipid,sterol,Redox / pigments,sterol_ring_system,False
+ethinylestradiol,ethinylestradiol,sterol_steroid,lipid,sterol,Redox / pigments,sterol_ring_system,False
+ferritin,ferritin,peptide_protein,protein_amino_acid,protein,Redox / pigments,porphyrin_macrocycle,False
+fructose-6-phosphate,fructose-6-phosphate,phosphate_metabolite,energy_metabolism,saccharide,Carbohydrate chemistry,nucleic_backbone_phosphate,False
+fumarate,fumarate,carboxylic_acid_metabolite,energy_metabolism,organic_acid,Energy metabolism,carboxylate_organic_acid,False
+glucosamine,glucosamine,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+glucose oxidase,glucose oxidase,peptide_protein,protein_amino_acid,protein,Carbohydrate chemistry,glycan_co_network,False
+glutamate,glutamate,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,amino_acid_zwitterion,False
+glutathione,glutathione;gluth,sulfur_thiol_cofactor,redox_cofactor,cofactor,Energy metabolism,sulfur_heterocycle_thione,True
+glutathione transferase,glutathione transferase,peptide_protein,protein_amino_acid,protein,Energy metabolism,sulfur_heterocycle_thione,False
+glycerol,glycerol,mono_oligosaccharide,carbohydrate,polyol,Carbohydrate chemistry,glycan_co_network,False
+glycine,glycine,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,amino_acid_zwitterion,False
+glycogen,glycogen,polysaccharide,carbohydrate,polysaccharide,Carbohydrate chemistry,polysaccharide_glycosidic,False
+guanine,guanine,purine,nucleic,purine,Nucleic chemistry,oxopurine_carbonyl,False
+hemoglobin,hemoglobin,peptide_protein,protein_amino_acid,protein,Redox / pigments,porphyrin_macrocycle,False
+histidine,histidine,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,aromatic_ring_residue,False
+horseradish peroxidase,horseradish peroxidase,peptide_protein,protein_amino_acid,protein,Redox / pigments,porphyrin_macrocycle,False
+hydroxyproline,hydroxyproline,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,amino_acid_zwitterion,False
+hypoxanthine,hypoxanthine,purine,nucleic,purine,Nucleic chemistry,oxopurine_carbonyl,False
+insulin,insulin,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+isoleucine,isoleucine,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,amino_acid_zwitterion,False
+keratin,keratin,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+lactalbumin,lactalbumin,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+lactate,lactate,carboxylic_acid_metabolite,energy_metabolism,organic_acid,Energy metabolism,carboxylate_organic_acid,False
+lauric acid,lauric acid,fatty_acid,lipid,fatty_acid,Lipid chemistry,fatty_acyl_chain,False
+lectin,lectin,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+leucine,leucine,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,amino_acid_zwitterion,False
+linoleic acid,linoleic acid,fatty_acid,lipid,fatty_acid,Lipid chemistry,fatty_acyl_chain,False
+major proteinase,major proteinase,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+malic acid,malic acid,carboxylic_acid_metabolite,energy_metabolism,organic_acid,Energy metabolism,carboxylate_organic_acid,False
+melanin,melanin,chromophore_pigment,redox_cofactor,unknown,Redox / pigments,porphyrin_macrocycle,False
+methionine,methionine,free_amino_acid,protein_amino_acid,amino_acid,Energy metabolism,sulfur_heterocycle_thione,False
+myoglobin,myoglobin,peptide_protein,protein_amino_acid,protein,Redox / pigments,porphyrin_macrocycle,False
+myristic acid,myristic acid,fatty_acid,lipid,fatty_acid,Lipid chemistry,fatty_acyl_chain,False
+n-acetylglucosamine,n-acetyl- d-glucosamine;n-acetylglucosamine,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False
+oleate,oleate,fatty_acid,lipid,lipid,Redox / pigments,sterol_ring_system,False
+palmitic acid,palmitic acid,fatty_acid,lipid,fatty_acid,Lipid chemistry,fatty_acyl_chain,False
+palmitoleic acid,palmitoleic acid,fatty_acid,lipid,organic_acid,Lipid chemistry,fatty_acyl_chain,False
+papain,papain,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+pepsin,pepsin,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+pepsinogen,pepsinogen,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+phenylalanine,phenylalanine,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,aromatic_ring_residue,False
+phosphate,phosphate,phosphate_metabolite,energy_metabolism,organic_acid,Carbohydrate chemistry,nucleic_backbone_phosphate,False
+phosphatidylinositol,phosphatidylinositol,phospholipid_sphingolipid,lipid,lipid,Carbohydrate chemistry,nucleic_backbone_phosphate,False
+phosphoenolpyruvate,phosphoenolpyruvate,phosphate_metabolite,energy_metabolism,organic_acid,Carbohydrate chemistry,nucleic_backbone_phosphate,False
+proline,proline,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,amino_acid_zwitterion,False
+pyruvate,pyruvate,carboxylic_acid_metabolite,energy_metabolism,organic_acid,Carbohydrate chemistry,nucleic_backbone_phosphate,False
+riboflavin,riboflavin;riboﬂavin,chromophore_pigment,redox_cofactor,cofactor,Redox / pigments,flavin_redox_cofactor,False
+serine,serine,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,amino_acid_zwitterion,False
+sphingomyelin,sphingomyelin,phospholipid_sphingolipid,lipid,phospholipid,,,False
+stearate,stearate,fatty_acid,lipid,lipid,Redox / pigments,sterol_ring_system,False
+succinic acid,succinic acid,carboxylic_acid_metabolite,energy_metabolism,organic_acid,Energy metabolism,carboxylate_organic_acid,False
+superoxide dismutases,superoxide dismutases,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+t-rna,t-rna,nucleic_acid_polymer,nucleic,nucleic_acid,Nucleic chemistry,purine_ring_breathing,False
+thaumatin,thaumatin,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+thymine,thymine,pyrimidine,nucleic,pyrimidine,Nucleic chemistry,pyrimidine_ring,False
+tri-11-eicosenoin,tri-11-eicosenoin,acylglycerol,lipid,unknown,Lipid chemistry,triglyceride_ester,False
+triarachidin,triarachidin,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+tribehenin,tribehenin,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+tricaprin,tricaprin,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+tricaproin,tricaproin,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+tricaprylin,tricaprylin,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+trielaidin,trielaidin,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+trierucin,trierucin,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+trilaurin,trilaurin,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+trilinolein,trilinolein,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+trilinolenin,trilinolenin,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+trimyristin,trimyristin,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+triolein,triolein,acylglycerol,lipid,lipid,Lipid chemistry,triglyceride_ester,False
+triosephosphate isomerase,triosephosphate isomerase,peptide_protein,protein_amino_acid,protein,Carbohydrate chemistry,nucleic_backbone_phosphate,False
+tripalmitin,tripalmitin,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+tripalmitolein,tripalmitolein,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+tripetroselinin,tripetroselinin,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+tristearin,tristearin,acylglycerol,lipid,triglyceride,Lipid chemistry,triglyceride_ester,False
+trypsin,trypsin,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+trypsin inhibitor,trypsin inhibitor,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+trypsinogen,trypsinogen,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+tryptophan,tryptophan,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,aromatic_ring_residue,False
+tubulin,tubulin,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+tyrosine,tyrosine,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,aromatic_ring_residue,False
+ubiquitin,ubiquitin,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+uracil,uracil,pyrimidine,nucleic,pyrimidine,Nucleic chemistry,pyrimidine_ring,False
+urate,urate,purine,nucleic,purine,Nucleic chemistry,oxopurine_carbonyl,False
+urea,ure;urea,small_nitrogenous,energy_metabolism,small_nitrogenous,,,True
+vaccenic acid,vaccenic acid,fatty_acid,lipid,organic_acid,Lipid chemistry,fatty_acyl_chain,False
+valine,valine,free_amino_acid,protein_amino_acid,amino_acid,Protein chemistry,amino_acid_zwitterion,False
+xanthine,xanthine,purine,nucleic,purine,Nucleic chemistry,oxopurine_carbonyl,False
+xylanase,xylanase,peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+α-chymotrypsinogen a (type ii),α-chymotrypsinogen a (type ii),peptide_protein,protein_amino_acid,protein,Protein chemistry,protein_amide_backbone,False
+α-linolenic acid,α-linolenic acid,fatty_acid,lipid,fatty_acid,Lipid chemistry,fatty_acyl_chain,False
+α-phosphatidylcholine,α-phosphatidylcholine,phospholipid_sphingolipid,lipid,unknown,Carbohydrate chemistry,nucleic_backbone_phosphate,False
+α-phosphatidylethanolamine,α-phosphatidylethanolamine,phospholipid_sphingolipid,lipid,unknown,Carbohydrate chemistry,nucleic_backbone_phosphate,False
+β-carotene,β-carotene,chromophore_pigment,redox_cofactor,carotenoid,Protein chemistry,carotenoid_polyene,False
+β-d-glucose,β-d-glucose,mono_oligosaccharide,carbohydrate,saccharide,Carbohydrate chemistry,glycan_co_network,False

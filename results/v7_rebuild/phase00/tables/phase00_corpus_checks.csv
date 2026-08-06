@@ -1,0 +1,9 @@
+item,expected,got,status
+n_spectra,375,375,PASS
+n_analytes,167,167,PASS
+n_bins,676,676,PASS
+sources,"{'RamanBioLib': 202, 'gobbato_raman_metabolites': 153, 'amino_acid_raman_grounding': 20}","{'RamanBioLib': 202, 'gobbato_raman_metabolites': 153, 'amino_acid_raman_grounding': 20}",PASS
+excitations,"{'785.0': 234, '1064.0': 55, '532.0': 50, '488.0': 29, '514.5': 3, '632.8': 1, '457.9': 1, '850.0': 1, '633.0': 1}","{'785.0': 234, '1064.0': 55, '532.0': 50, '488.0': 29, '514.5': 3, '632.8': 1, '457.9': 1, '850.0': 1, '633.0': 1}",PASS
+n_analytes_multi_excitation,41,41,PASS
+analytes_with_replicates,87,87,PASS
+replicate_groups_v5.n,272,272,PASS

@@ -1,0 +1,17 @@
+fine_class,broad_class,n_canonical_analytes,n_spectra,k_c_ceiling,phase02_route,dominant_source,dominant_source_fraction,source_confounded,rationale
+peptide_protein,protein_amino_acid,30,80,15,local_decomposition,RamanBioLib,0.938,True,Polypeptides and proteins; amide I/II/III backbone modes dominate.
+mono_oligosaccharide,carbohydrate,20,43,10,local_decomposition,RamanBioLib,0.741,False,Mono- and oligosaccharides; C-O-C / C-O-H ring and glycosidic modes.
+free_amino_acid,protein_amino_acid,18,75,9,local_decomposition,gobbato_raman_metabolites,0.381,False,Free amino acids in zwitterionic form; COO-/NH3+ modes plus side-chain.
+acylglycerol,lipid,17,23,8,local_decomposition,RamanBioLib,0.944,True,Mono/di/triacylglycerols; acyl chain PLUS the ~1745 ester carbonyl and ~1160 C-O-C that separate them from free fatty acids.
+fatty_acid,lipid,17,27,8,local_decomposition,RamanBioLib,0.895,False,"Free fatty acids; long acyl chain C-C/CH2 modes, terminal carboxyl."
+sterol_steroid,lipid,10,13,5,local_decomposition,RamanBioLib,0.909,True,Fused-ring sterols and steroids; ring-breathing and methyl modes.
+carboxylic_acid_metabolite,energy_metabolism,8,23,4,local_decomposition,RamanBioLib,0.538,False,Small organic acids of central metabolism; carboxylate modes.
+phospholipid_sphingolipid,lipid,5,8,2,local_decomposition,RamanBioLib,0.8,False,Phospholipids and sphingolipids; phosphate head group plus acyl chain.
+polysaccharide,carbohydrate,5,10,2,local_decomposition,RamanBioLib,0.833,False,"Glycosidically polymerised sugars; distinguished from monosaccharides by glycosidic-linkage modes, and given a separate class because V6 found a distinct polysaccharide_glycosidic motif."
+purine,nucleic,5,17,2,local_decomposition,gobbato_raman_metabolites,0.714,False,Purine ring systems; ring-breathing near 720-730 cm-1.
+chromophore_pigment,redox_cofactor,4,10,2,local_decomposition,RamanBioLib,0.6,False,"Conjugated pigments (carotenoid polyene, flavin, porphyrin); strong resonance-enhanced conjugated-chain modes."
+sulfur_thiol_cofactor,redox_cofactor,4,16,2,local_decomposition,gobbato_raman_metabolites,0.5,False,Thiol / thioether / CoA-type cofactors; C-S and S-H modes.
+nucleic_acid_polymer,nucleic,3,3,1,local_decomposition,RamanBioLib,1.0,True,DNA/RNA polymers; backbone phosphate plus base modes.
+phosphate_metabolite,energy_metabolism,3,11,1,local_decomposition,gobbato_raman_metabolites,0.6,False,Phosphorylated small molecules and inorganic phosphate; symmetric PO stretch near 980 cm-1.
+pyrimidine,nucleic,3,9,1,local_decomposition,RamanBioLib,0.6,False,Pyrimidine ring systems; ring modes near 780-800 cm-1.
+small_nitrogenous,energy_metabolism,2,7,1,local_decomposition,gobbato_raman_metabolites,0.667,False,"Small nitrogen-containing metabolites (urea, creatinine)."

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="606.24pt" height="402.912pt" viewBox="0 0 606.24 402.912" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-05T21:25:20.708258</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 402.912 
+L 606.24 402.912 
+L 606.24 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 42.068851 103.45316 
+L 564.171149 103.45316 
+Q 564.287213 103.45316 564.287213 103.377761 
+L 564.287213 45.064639 
+Q 564.287213 44.98924 564.171149 44.98924 
+L 42.068851 44.98924 
+Q 41.952787 44.98924 41.952787 45.064639 
+L 41.952787 103.377761 
+Q 41.952787 103.45316 42.068851 103.45316 
+z
+" clip-path="url(#pcdb27a2382)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 42.068851 173.19668 
+L 564.171149 173.19668 
+Q 564.287213 173.19668 564.287213 173.121281 
+L 564.287213 114.808159 
+Q 564.287213 114.73276 564.171149 114.73276 
+L 42.068851 114.73276 
+Q 41.952787 114.73276 41.952787 114.808159 
+L 41.952787 173.121281 
+Q 41.952787 173.19668 42.068851 173.19668 
+z
+" clip-path="url(#pcdb27a2382)" style="fill: #dbeafe; stroke: #2563eb; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 42.068851 242.9402 
+L 564.171149 242.9402 
+Q 564.287213 242.9402 564.287213 242.864801 
+L 564.287213 184.551679 
+Q 564.287213 184.47628 564.171149 184.47628 
+L 42.068851 184.47628 
+Q 41.952787 184.47628 41.952787 184.551679 
+L 41.952787 242.864801 
+Q 41.952787 242.9402 42.068851 242.9402 
+z
+" clip-path="url(#pcdb27a2382)" style="fill: #dcfce7; stroke: #15803d; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 42.068851 367.34756 
+L 564.171149 367.34756 
+Q 564.287213 367.34756 564.287213 367.272161 
+L 564.287213 322.153759 
+Q 564.287213 322.07836 564.171149 322.07836 
+L 42.068851 322.07836 
+Q 41.952787 322.07836 41.952787 322.153759 
+L 41.952787 367.272161 
+Q 41.952787 367.34756 42.068851 367.34756 
+z
+" clip-path="url(#pcdb27a2382)" style="fill: #f9fafb; stroke: #9ca3af; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1a1a1a" x="12.96" y="25.848045" transform="rotate(-0 12.96 25.848045)">6 — Benchmark lock: three levels of verification</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="12.96" y="40.150302" transform="rotate(-0 12.96 40.150302)">Level 3 is the real lock — the basis is REFITTED from raw and compared element-wise.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4b5563" x="65.1888" y="59.707008" transform="rotate(-0 65.1888 59.707008)">LEVEL 1 — DECLARED</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1a1a1a" x="65.1888" y="74.786688" transform="rotate(-0 65.1888 74.786688)">the fingerprint recorded in MANIFEST.json / manifold.json</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #15803d" x="65.1888" y="89.866368" transform="rotate(-0 65.1888 89.866368)">7/7 checks PASS</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2563eb" x="65.1888" y="129.450528" transform="rotate(-0 65.1888 129.450528)">LEVEL 2 — RECOMPUTED</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 7.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1a1a1a" x="65.1888" y="144.530208" transform="rotate(-0 65.1888 144.530208)">fingerprint recomputed from the basis array; every frozen file re-hashed</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #15803d" x="65.1888" y="159.609888" transform="rotate(-0 65.1888 159.609888)">11/11 checks PASS</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #15803d" x="65.1888" y="199.194048" transform="rotate(-0 65.1888 199.194048)">LEVEL 3 — REBUILT</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1a1a1a" x="65.1888" y="214.273728" transform="rotate(-0 65.1888 214.273728)">NMF refitted from raw through canonical preprocessing, compared element-wise</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #15803d" x="65.1888" y="229.353408" transform="rotate(-0 65.1888 229.353408)">4/4 checks PASS</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #15803d" x="314.7264" y="229.353408" transform="rotate(-0 314.7264 229.353408)">max |H_rebuilt − H_frozen| = 0</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 7.4px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(188.764562 337.062805)">ATLAS FINGERPRINT   09ed804a40836f4a05a91ba10900cded</text>
+    <text style="font-size: 7.4px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(127.056078 346.754897)">unchanged before and after Phase 00 · recomputed from the array, not read from the manifest</text>
+    <text style="font-size: 7.4px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(120.436547 356.44699)">The V7 corpus loader, the canonical preprocessing chain and the frozen atlas are the same object.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pcdb27a2382">
+   <rect x="12.96" y="12.96" width="580.32" height="376.992"/>
+  </clipPath>
+ </defs>
+</svg>

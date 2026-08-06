@@ -1,0 +1,15 @@
+frozen_asset,what_it_is,phase00_dependency,access
+assets/foundation/manifold_components.npz,NMF basis H (24x676),atlas fingerprint; V5 control representation,READ
+assets/foundation/manifold.json,frozen metadata + corpus card,corpus card cross-check; preprocessing spec,READ
+assets/foundation/MANIFEST.json,fingerprint + per-file SHA-256,frozen-asset integrity check,READ
+assets/foundation/component_registry_v1.json,per-component provenance,baseline purity/stability statistics,READ
+assets/foundation/component_theme_weights_v1.json,component->theme weights,not used in Phase 00,READ
+assets/foundation/biochemical_ontology_v2.yaml,13 V5 themes,not used in Phase 00,READ
+assets/foundation/mss_motifs_v1.yaml,13 legacy MSS motifs,not used in Phase 00,READ
+assets/foundation/reference_normalization_v1.json,reference frame,not used in Phase 00,READ
+assets/foundation/reference_support.npz,OOD support,not used in Phase 00,READ
+results/v6_rebuild/semantic_validation/artifacts/sv_reps.npz,per-analyte representations at 5 levels,V5 control baseline under the V7 harness,READ
+results/v6_rebuild/v63_ontology_revalidation/tables/v63_analyte_audit.csv,V6.3 ontology + declared duplicates,frozen partition; alias audit,READ
+src/gaira/preprocessing/pipeline.py,canonical preprocessing primitives,corpus load; NMF rebuild,READ
+src/gaira/foundation/representation.py,"NMF fitter (seed 0, nndsvda, 1500 it)",NMF rebuild,READ
+src/gaira/data/*,RamanBioLib / Gobbato loaders + synonyms,corpus load,READ

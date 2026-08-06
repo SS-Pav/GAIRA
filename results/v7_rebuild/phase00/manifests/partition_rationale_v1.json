@@ -1,0 +1,45 @@
+{
+  "fine": {
+    "peptide_protein": "Polypeptides and proteins; amide I/II/III backbone modes dominate.",
+    "mono_oligosaccharide": "Mono- and oligosaccharides; C-O-C / C-O-H ring and glycosidic modes.",
+    "free_amino_acid": "Free amino acids in zwitterionic form; COO-/NH3+ modes plus side-chain.",
+    "fatty_acid": "Free fatty acids; long acyl chain C-C/CH2 modes, terminal carboxyl.",
+    "acylglycerol": "Mono/di/triacylglycerols; acyl chain PLUS the ~1745 ester carbonyl and ~1160 C-O-C that separate them from free fatty acids.",
+    "sterol_steroid": "Fused-ring sterols and steroids; ring-breathing and methyl modes.",
+    "carboxylic_acid_metabolite": "Small organic acids of central metabolism; carboxylate modes.",
+    "sulfur_thiol_cofactor": "Thiol / thioether / CoA-type cofactors; C-S and S-H modes.",
+    "purine": "Purine ring systems; ring-breathing near 720-730 cm-1.",
+    "pyrimidine": "Pyrimidine ring systems; ring modes near 780-800 cm-1.",
+    "polysaccharide": "Glycosidically polymerised sugars; distinguished from monosaccharides by glycosidic-linkage modes, and given a separate class because V6 found a distinct polysaccharide_glycosidic motif.",
+    "chromophore_pigment": "Conjugated pigments (carotenoid polyene, flavin, porphyrin); strong resonance-enhanced conjugated-chain modes.",
+    "phospholipid_sphingolipid": "Phospholipids and sphingolipids; phosphate head group plus acyl chain.",
+    "nucleic_acid_polymer": "DNA/RNA polymers; backbone phosphate plus base modes.",
+    "small_nitrogenous": "Small nitrogen-containing metabolites (urea, creatinine).",
+    "phosphate_metabolite": "Phosphorylated small molecules and inorganic phosphate; symmetric PO stretch near 980 cm-1."
+  },
+  "broad": {
+    "protein_amino_acid": "Peptide, protein and free amino-acid chemistry.",
+    "lipid": "Fatty acyl, acylglycerol, sterol and phospholipid chemistry.",
+    "carbohydrate": "Mono-, oligo- and polysaccharide chemistry.",
+    "energy_metabolism": "Carboxylic-acid and phosphate metabolites of central metabolism.",
+    "nucleic": "Purine, pyrimidine and nucleic-acid-polymer chemistry.",
+    "redox_cofactor": "Sulfur/thiol cofactors and conjugated redox pigments."
+  },
+  "partition_resolutions": [
+    {
+      "problem": "`unknown` (6 analytes) is not a chemistry",
+      "resolution": "Dissolved. The V6.3 fine ontology assigns every analyte to a real chemical class; no `unknown` class exists in the frozen partition.",
+      "status": "RESOLVED"
+    },
+    {
+      "problem": "`lipid` (5) overlaps `fatty_acid` (12) and `triglyceride` (15)",
+      "resolution": "Replaced by three chemically separated classes: fatty_acid (17), acylglycerol (17) and phospholipid_sphingolipid (5). The ester carbonyl (~1745) and C-O-C (~1160) are the spectroscopic basis for the split.",
+      "status": "RESOLVED"
+    },
+    {
+      "problem": "`polysaccharide` (5) vs `saccharide` (27)",
+      "resolution": "Kept separate: mono_oligosaccharide (27) and polysaccharide (5). Justification: glycosidic polymerisation is spectroscopically real and V6 derived distinct glycan_co_network and polysaccharide_glycosidic motifs.",
+      "status": "RESOLVED (kept separate, with rationale)"
+    }
+  ]
+}

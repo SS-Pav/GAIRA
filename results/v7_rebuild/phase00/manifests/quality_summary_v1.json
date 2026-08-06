@@ -1,0 +1,25 @@
+{
+  "q_version": "v7_q_v2",
+  "qc_floor": 0.35,
+  "n_spectra": 375,
+  "q_min": 0.4444,
+  "q_median": 0.8688,
+  "q_max": 0.9669,
+  "q_iqr": 0.0773,
+  "q_max_over_min": 2.176,
+  "n_below_qc_floor": 0,
+  "median_by_source": {
+    "RamanBioLib": 0.8753,
+    "amino_acid_raman_grounding": 0.8258,
+    "gobbato_raman_metabolites": 0.8657
+  },
+  "n_spectra_with_nan_bins": 153,
+  "total_nan_bins": 306,
+  "within_analyte_spread": {
+    "n_replicated_analytes": 87,
+    "median": 0.034,
+    "max": 0.483
+  },
+  "weights_sum_to_one": true,
+  "caveat": "This corpus is a curated reference library: acquisition artefacts were removed upstream, so q measures band structure and contrast rather than acquisition quality. Because within-analyte spread is small (median 0.03), Strategy B and the B-uniform arm are expected to be close in Phase 01; the arms are still run separately so that expectation is tested rather than assumed."
+}

@@ -1,0 +1,168 @@
+surface_form,canonical_id,is_alias,merge_kind,justification,n_spectra,sources
+(+)-arabinose,(+)-arabinose,False,canonical,Canonical form.,1,RamanBioLib
+(+)-dextrose,(+)-glucose,True,synonym,Dextrose is the common name for D-(+)-glucose.,1,RamanBioLib
+(+)-fucose,(+)-fucose,False,canonical,Canonical form.,1,RamanBioLib
+(+)-galactosamine,(+)-galactosamine,False,canonical,Canonical form.,1,RamanBioLib
+(+)-galactose,(+)-galactose,False,canonical,Canonical form.,1,RamanBioLib
+(+)-glucose,(+)-glucose,False,canonical,Canonical form.,1,RamanBioLib
+(+)-lactose,(+)-lactose,False,canonical,Canonical form.,1,RamanBioLib
+(+)-maltose,(+)-maltose,False,canonical,Canonical form.,1,RamanBioLib
+(+)-mannose,(+)-mannose,False,canonical,Canonical form.,1,RamanBioLib
+(+)-raffinose pentahydrate,(+)-raffinose pentahydrate,False,canonical,Canonical form.,1,RamanBioLib
+(+)-sucrose,(+)-sucrose,False,canonical,Canonical form.,1,RamanBioLib
+(+)-trehalose,(+)-trehalose,False,canonical,Canonical form.,1,RamanBioLib
+(+)-xylose,(+)-xylose,False,canonical,Canonical form.,2,RamanBioLib
+(-)-arabinose,(-)-arabinose,False,canonical,Canonical form.,1,RamanBioLib
+(-)-fructose,(-)-fructose,False,canonical,Canonical form.,2,RamanBioLib
+(-)-ribose,(-)-ribose,False,canonical,Canonical form.,1,RamanBioLib
+12-methyltetradecanoic acid,12-methyltetradecanoic acid,False,canonical,Canonical form.,1,RamanBioLib
+13-methylmyristicacid,13-methylmyristicacid,False,canonical,Canonical form.,1,RamanBioLib
+14-methylhexadecanoic acid,14-methylhexadecanoic acid,False,canonical,Canonical form.,1,RamanBioLib
+14-methylpentadecanoic acid,14-methylpentadecanoic acid,False,canonical,Canonical form.,1,RamanBioLib
+15-methylpalmiticacid,15-methylpalmiticacid,False,canonical,Canonical form.,1,RamanBioLib
+2-deoxy-d-ribose,2-deoxy-d-ribose,False,canonical,Canonical form.,1,RamanBioLib
+a-dna,a-dna,False,canonical,Canonical form.,1,RamanBioLib
+acetoacetate,acetoacetate,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+acetyl coenzyme a,acetyl-coa,True,orthographic,Same molecule written long-form vs hyphenated abbreviation. ALSO a class-assignment conflict: filed under 'protein' in one source and 'cofactor' in the other; the merge resolves it.,1,RamanBioLib
+acetyl-coa,acetyl-coa,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+adenine,adenine,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+alanine,alanine,False,canonical,Canonical form.,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+alb,albumin,True,truncation,Truncated spreadsheet header for albumin.,1,amino_acid_raman_grounding
+albumin,albumin,False,canonical,Canonical form.,6,RamanBioLib;gobbato_raman_metabolites
+amylopectin,amylopectin,False,canonical,Canonical form.,2,RamanBioLib
+amylose,amylose,False,canonical,Canonical form.,2,RamanBioLib
+arachidic acid,arachidic acid,False,canonical,Canonical form.,1,RamanBioLib
+arachidonic acid,arachidonic acid,False,canonical,Canonical form.,1,RamanBioLib
+arginine,arginine,False,canonical,Canonical form.,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+ascorbate,ascorbate,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+asparagine,asparagine,False,canonical,Canonical form.,1,RamanBioLib
+aspartate,aspartate,False,canonical,Canonical form.,1,amino_acid_raman_grounding
+aspartic acid,aspartate,True,protonation_state,Conjugate acid/base pair of one molecule; indistinguishable as a solid-state Raman reference at this resolution. ALSO a class conflict: 'organic_acid' vs 'amino_acid'.,1,RamanBioLib
+b-dna,b-dna,False,canonical,Canonical form.,1,RamanBioLib
+carbonic anhydrase,carbonic anhydrase,False,canonical,Canonical form.,3,RamanBioLib
+carotene,carotene,False,canonical,Canonical form.,1,amino_acid_raman_grounding
+cellulose,cellulose,False,canonical,Canonical form.,1,RamanBioLib
+ceramide,ceramide,False,canonical,Canonical form.,2,RamanBioLib
+chitin,chitin,False,canonical,Canonical form.,1,RamanBioLib
+cholesterol,cholesterol,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+cholesteryl linoleate,cholesteryl linoleate,False,canonical,Canonical form.,1,RamanBioLib
+cholesteryl oleate,cholesteryl oleate,False,canonical,Canonical form.,1,RamanBioLib
+cholesteryl palmitate,cholesteryl palmitate,False,canonical,Canonical form.,1,RamanBioLib
+cholesteryl stearate,cholesteryl stearate,False,canonical,Canonical form.,1,RamanBioLib
+citrate,citrate,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+coenzyme a,coenzyme a,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+collagen,collagen,False,canonical,Canonical form.,3,RamanBioLib
+creatinine,creatinine,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+cysteine,cysteine,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+cytochrome c,cytochrome c,False,canonical,Canonical form.,2,RamanBioLib
+cytosine,cytosine,False,canonical,Canonical form.,1,RamanBioLib
+diethylstilbestrol,diethylstilbestrol,False,canonical,Canonical form.,1,RamanBioLib
+elaidic acid,elaidic acid,False,canonical,Canonical form.,1,RamanBioLib
+elastase,elastase,False,canonical,Canonical form.,3,RamanBioLib
+elastin,elastin,False,canonical,Canonical form.,1,RamanBioLib
+ergothioneine,ergothioneine,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+estradiol,estradiol,False,canonical,Canonical form.,1,RamanBioLib
+estriol,estriol,False,canonical,Canonical form.,1,RamanBioLib
+estrone,estrone,False,canonical,Canonical form.,1,RamanBioLib
+ethinylestradiol,ethinylestradiol,False,canonical,Canonical form.,1,RamanBioLib
+ferritin,ferritin,False,canonical,Canonical form.,3,RamanBioLib
+fructose,(-)-fructose,True,stereo_prefix_generic,Unprefixed 'fructose' denotes the natural D-(−) form.,3,gobbato_raman_metabolites
+fructose-6-phosphate,fructose-6-phosphate,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+fumarate,fumarate,False,canonical,Canonical form.,1,RamanBioLib
+galactose,(+)-galactose,True,stereo_prefix_generic,Unprefixed 'galactose' denotes the natural D-(+) form.,3,gobbato_raman_metabolites
+glucosamine,glucosamine,False,canonical,Canonical form.,1,RamanBioLib
+glucose,(+)-glucose,True,stereo_prefix_generic,Unprefixed 'glucose' in these reference libraries denotes the natural D-(+) form. Merged; the distinct anomer β-D-glucose is NOT merged.,4,amino_acid_raman_grounding;gobbato_raman_metabolites
+glucose oxidase,glucose oxidase,False,canonical,Canonical form.,2,RamanBioLib
+glutamate,glutamate,False,canonical,Canonical form.,6,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+glutathione,glutathione,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+glutathione transferase,glutathione transferase,False,canonical,Canonical form.,2,RamanBioLib
+gluth,glutathione,True,truncation,Truncated spreadsheet header for glutathione.,1,amino_acid_raman_grounding
+glycerol,glycerol,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+glycine,glycine,False,canonical,Canonical form.,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+glycogen,glycogen,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+guanine,guanine,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+hemoglobin,hemoglobin,False,canonical,Canonical form.,2,RamanBioLib
+histidine,histidine,False,canonical,Canonical form.,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+horseradish peroxidase,horseradish peroxidase,False,canonical,Canonical form.,2,RamanBioLib
+hydroxyproline,hydroxyproline,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+hypoxanthine,hypoxanthine,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+insulin,insulin,False,canonical,Canonical form.,1,RamanBioLib
+isoleucine,isoleucine,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+keratin,keratin,False,canonical,Canonical form.,1,RamanBioLib
+lactalbumin,lactalbumin,False,canonical,Canonical form.,3,RamanBioLib
+lactate,lactate,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+lactose,(+)-lactose,True,stereo_prefix_generic,Unprefixed 'lactose' denotes the natural (+) form; both from the same source library at different excitations.,1,RamanBioLib
+lauric acid,lauric acid,False,canonical,Canonical form.,1,RamanBioLib
+lectin,lectin,False,canonical,Canonical form.,3,RamanBioLib
+leucine,leucine,False,canonical,Canonical form.,4,amino_acid_raman_grounding;gobbato_raman_metabolites
+linoleic acid,linoleic acid,False,canonical,Canonical form.,1,RamanBioLib
+major proteinase,major proteinase,False,canonical,Canonical form.,3,RamanBioLib
+malic acid,malic acid,False,canonical,Canonical form.,2,RamanBioLib;amino_acid_raman_grounding
+mannose,(+)-mannose,True,stereo_prefix_generic,Unprefixed 'mannose' denotes the natural D-(+) form.,3,gobbato_raman_metabolites
+melanin,melanin,False,canonical,Canonical form.,4,RamanBioLib
+methionine,methionine,False,canonical,Canonical form.,4,amino_acid_raman_grounding;gobbato_raman_metabolites
+myoglobin,myoglobin,False,canonical,Canonical form.,2,RamanBioLib
+myristic acid,myristic acid,False,canonical,Canonical form.,2,RamanBioLib
+n-acetyl- d-glucosamine,n-acetylglucosamine,True,orthographic,Stray space and D- prefix; same molecule.,1,RamanBioLib
+n-acetylglucosamine,n-acetylglucosamine,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+oleate,oleate,False,canonical,Canonical form.,5,RamanBioLib;gobbato_raman_metabolites
+palmitic acid,palmitic acid,False,canonical,Canonical form.,2,RamanBioLib
+palmitoleic acid,palmitoleic acid,False,canonical,Canonical form.,1,RamanBioLib
+papain,papain,False,canonical,Canonical form.,3,RamanBioLib
+pepsin,pepsin,False,canonical,Canonical form.,3,RamanBioLib
+pepsinogen,pepsinogen,False,canonical,Canonical form.,3,RamanBioLib
+phenylalanine,phenylalanine,False,canonical,Canonical form.,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+phosphate,phosphate,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+phosphatidylinositol,phosphatidylinositol,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+phosphoenolpyruvate,phosphoenolpyruvate,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+proline,proline,False,canonical,Canonical form.,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+pyruvate,pyruvate,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+riboflavin,riboflavin,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+riboﬂavin,riboflavin,True,unicode_ligature,U+FB02 'ﬂ' ligature; NFKC-identical to riboflavin. Same molecule.,1,RamanBioLib
+serine,serine,False,canonical,Canonical form.,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+sphingomyelin,sphingomyelin,False,canonical,Canonical form.,1,RamanBioLib
+stearate,stearate,False,canonical,Canonical form.,5,RamanBioLib;gobbato_raman_metabolites
+succinic acid,succinic acid,False,canonical,Canonical form.,1,RamanBioLib
+superoxide dismutases,superoxide dismutases,False,canonical,Canonical form.,3,RamanBioLib
+t-rna,t-rna,False,canonical,Canonical form.,1,RamanBioLib
+thaumatin,thaumatin,False,canonical,Canonical form.,3,RamanBioLib
+thymine,thymine,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+tri-11-eicosenoin,tri-11-eicosenoin,False,canonical,Canonical form.,1,RamanBioLib
+triarachidin,triarachidin,False,canonical,Canonical form.,1,RamanBioLib
+tribehenin,tribehenin,False,canonical,Canonical form.,1,RamanBioLib
+tricaprin,tricaprin,False,canonical,Canonical form.,1,RamanBioLib
+tricaproin,tricaproin,False,canonical,Canonical form.,1,RamanBioLib
+tricaprylin,tricaprylin,False,canonical,Canonical form.,1,RamanBioLib
+trielaidin,trielaidin,False,canonical,Canonical form.,1,RamanBioLib
+trierucin,trierucin,False,canonical,Canonical form.,1,RamanBioLib
+trilaurin,trilaurin,False,canonical,Canonical form.,1,RamanBioLib
+trilinolein,trilinolein,False,canonical,Canonical form.,2,RamanBioLib
+trilinolenin,trilinolenin,False,canonical,Canonical form.,2,RamanBioLib
+trimyristin,trimyristin,False,canonical,Canonical form.,1,RamanBioLib
+triolein,triolein,False,canonical,Canonical form.,5,RamanBioLib;gobbato_raman_metabolites
+triosephosphate isomerase,triosephosphate isomerase,False,canonical,Canonical form.,3,RamanBioLib
+tripalmitin,tripalmitin,False,canonical,Canonical form.,1,RamanBioLib
+tripalmitolein,tripalmitolein,False,canonical,Canonical form.,1,RamanBioLib
+tripetroselinin,tripetroselinin,False,canonical,Canonical form.,1,RamanBioLib
+tristearin,tristearin,False,canonical,Canonical form.,1,RamanBioLib
+trypsin,trypsin,False,canonical,Canonical form.,3,RamanBioLib
+trypsin inhibitor,trypsin inhibitor,False,canonical,Canonical form.,3,RamanBioLib
+trypsinogen,trypsinogen,False,canonical,Canonical form.,3,RamanBioLib
+tryptophan,tryptophan,False,canonical,Canonical form.,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+tubulin,tubulin,False,canonical,Canonical form.,1,RamanBioLib
+tyrosine,tyrosine,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+ubiquitin,ubiquitin,False,canonical,Canonical form.,3,RamanBioLib
+uracil,uracil,False,canonical,Canonical form.,4,RamanBioLib;gobbato_raman_metabolites
+urate,urate,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+ure,urea,True,truncation,Truncated spreadsheet header for urea.,1,amino_acid_raman_grounding
+urea,urea,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+vaccenic acid,vaccenic acid,False,canonical,Canonical form.,1,RamanBioLib
+valine,valine,False,canonical,Canonical form.,5,RamanBioLib;amino_acid_raman_grounding;gobbato_raman_metabolites
+xanthine,xanthine,False,canonical,Canonical form.,3,gobbato_raman_metabolites
+xylanase,xylanase,False,canonical,Canonical form.,3,RamanBioLib
+α-chymotrypsinogen a (type ii),α-chymotrypsinogen a (type ii),False,canonical,Canonical form.,3,RamanBioLib
+α-linolenic acid,α-linolenic acid,False,canonical,Canonical form.,1,RamanBioLib
+α-phosphatidylcholine,α-phosphatidylcholine,False,canonical,Canonical form.,1,RamanBioLib
+α-phosphatidylethanolamine,α-phosphatidylethanolamine,False,canonical,Canonical form.,1,RamanBioLib
+β-carotene,β-carotene,False,canonical,Canonical form.,1,RamanBioLib
+β-d-glucose,β-d-glucose,False,canonical,Canonical form.,1,RamanBioLib
