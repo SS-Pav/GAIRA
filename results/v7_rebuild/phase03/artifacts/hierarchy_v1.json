@@ -1,0 +1,64 @@
+{
+  "levels": [
+    {
+      "n_groups": 2,
+      "assignment": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "mean_within_correlation": 0.7262127381959226,
+      "level": 1
+    },
+    {
+      "n_groups": 3,
+      "assignment": [
+        1,
+        0,
+        2,
+        1,
+        0,
+        1
+      ],
+      "mean_within_correlation": 0.7432807163617391,
+      "level": 2
+    },
+    {
+      "n_groups": 4,
+      "assignment": [
+        1,
+        0,
+        3,
+        2,
+        0,
+        1
+      ],
+      "mean_within_correlation": 0.7488903329638172,
+      "level": 3
+    },
+    {
+      "n_groups": 5,
+      "assignment": [
+        2,
+        0,
+        4,
+        3,
+        1,
+        2
+      ],
+      "mean_within_correlation": 0.7547171882668173,
+      "level": 4
+    }
+  ],
+  "n_levels": 4,
+  "linkage_distances": [
+    0.24528281173318267,
+    0.25693652233918274,
+    0.2621116615394173,
+    0.32477395760060507,
+    0.41721017861468307
+  ]
+}

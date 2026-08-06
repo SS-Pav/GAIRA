@@ -1,0 +1,18 @@
+{
+  "ontology_agreement": {
+    "nmi": 0.4688816267031305,
+    "ami": 0.16137803208212265,
+    "null_mean": 0.36549728103574136,
+    "null_sd": 0.029781806787516775,
+    "p_empirical": 0.0
+  },
+  "value_over_csm_layer": {
+    "retrieval_csm_basis": 0.15510204081632653,
+    "retrieval_theme_coordinates": 0.1795918367346939,
+    "chance": 0.10120783007080383,
+    "delta": 0.024489795918367363,
+    "theme_layer_adds_value": true,
+    "verdict": "theme coordinates retrieve coarse chemistry better than raw CSM activations"
+  },
+  "revealed_after_K_selected": true
+}

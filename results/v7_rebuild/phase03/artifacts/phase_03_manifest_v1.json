@@ -1,0 +1,170 @@
+{
+  "schema": "gaira_v7_phase_manifest_v1",
+  "phase": "03",
+  "phase_name": "Emergent biochemical theme discovery",
+  "built_utc": "2026-08-06T15:25:09.012168+00:00",
+  "output_root": "/Users/surajpg/projects/GAIRA/results/v7_rebuild/phase03",
+  "redirectable_via": "GAIRA_V7_OUTPUT_ROOT",
+  "frozen_inputs": {
+    "atlas": "09ed804a40836f4a05a91ba10900cded",
+    "lsm_registry": "208482d6f7178b5b8f16cace91be55b0",
+    "csm_dictionary": "0b4aa550ccefed3edabdbde5bae11c8d"
+  },
+  "label_firewall": {
+    "labels_used_before_K_selection": false,
+    "revealed_at_step": 5
+  },
+  "selected_model": "archetypal",
+  "selected_K": 6,
+  "seed": 0,
+  "theme_fingerprint": "d3e91614d50f11e025458e7843de21ec",
+  "outputs": [
+    {
+      "artifact_id": "model_k_sweep_v1.csv",
+      "path": "results/v7_rebuild/phase03/tables/model_k_sweep_v1.csv",
+      "sha256": "3231c3d9c27e3fe42897143d73bb1f18a5ce0ea781d25cd2d855e68c0e14f1e8",
+      "rows": 70
+    },
+    {
+      "artifact_id": "model_comparison_v1.csv",
+      "path": "results/v7_rebuild/phase03/tables/model_comparison_v1.csv",
+      "sha256": "75f9d8b1b764d2cc31fe1429013cee361b74d174c45601bcd833c7a56561f339",
+      "rows": 5
+    },
+    {
+      "artifact_id": "k_selection_v1.json",
+      "path": "results/v7_rebuild/phase03/artifacts/k_selection_v1.json",
+      "sha256": "657acf1afb7f8c308169defec43f99504f52f8f97a77e56ca4c48de5448969aa"
+    },
+    {
+      "artifact_id": "robustness_v1.csv",
+      "path": "results/v7_rebuild/phase03/validation/robustness_v1.csv",
+      "sha256": "211a21e4306b409527f7671244ce7f1f47aed08f146858b5e2a19f7ae438b008",
+      "rows": 8
+    },
+    {
+      "artifact_id": "theme_gradients_v1.csv",
+      "path": "results/v7_rebuild/phase03/validation/theme_gradients_v1.csv",
+      "sha256": "32fc5ad1a95785278ffcc0984a8a993548ddd6ceb4e45e7a2e043ffa951dd89f",
+      "rows": 18
+    },
+    {
+      "artifact_id": "membership_roles_v1.csv",
+      "path": "results/v7_rebuild/phase03/tables/membership_roles_v1.csv",
+      "sha256": "f415b3c52f55376f93766a1b11234e7532e9f8e802ef429c2bcf327395a29368",
+      "rows": 49
+    },
+    {
+      "artifact_id": "hierarchy_v1.json",
+      "path": "results/v7_rebuild/phase03/artifacts/hierarchy_v1.json",
+      "sha256": "520774e4f5e55528f06769c348ec79bf0591c0af91990941e8363e2e014006df"
+    },
+    {
+      "artifact_id": "post_hoc_v1.json",
+      "path": "results/v7_rebuild/phase03/artifacts/post_hoc_v1.json",
+      "sha256": "e6c887abf11e85b82cd73612485287597bc801759fe4cf1525bdcbfc19d66195"
+    },
+    {
+      "artifact_id": "theme_invariants_v1.csv",
+      "path": "results/v7_rebuild/phase03/validation/theme_invariants_v1.csv",
+      "sha256": "0a66bc7e64d201c8c034e3e59882b0a8ac569c8a49031ad3fc9c09a83efa1c5f",
+      "rows": 10
+    },
+    {
+      "artifact_id": "theme_membership_v1.npz",
+      "path": "results/v7_rebuild/phase03/artifacts/theme_membership_v1.npz",
+      "sha256": "f179a5ddfe8fb4aad08d0e9b009eb618d915fd25453be973dbb561e76cfb516f"
+    },
+    {
+      "artifact_id": "theme_catalogue_v1.csv",
+      "path": "results/v7_rebuild/phase03/tables/theme_catalogue_v1.csv",
+      "sha256": "0c1e8dc3680efaf0f618ce4967aa42bb7cbd706fe0b68142c730fc7cfb62001a",
+      "rows": 6
+    },
+    {
+      "artifact_id": "theme_membership_v1.csv",
+      "path": "results/v7_rebuild/phase03/tables/theme_membership_v1.csv",
+      "sha256": "8dde863fdb819c98663c1020573ac19b78dc57879b1eadcf7cce2606f1792b06",
+      "rows": 49
+    },
+    {
+      "artifact_id": "theme_registry_v1.json",
+      "path": "results/v7_rebuild/phase03/artifacts/theme_registry_v1.json",
+      "sha256": "94ca24af70b8a0bb05b4a010e198fe48c249701ced581a55a241f36ec4a40a5e"
+    },
+    {
+      "artifact_id": "theme_registry_v1.yaml",
+      "path": "results/v7_rebuild/phase03/artifacts/theme_registry_v1.yaml",
+      "sha256": "c2cd4e01a209a70709b3a4588eb26221f3899c5064454a13ac019b3e366768f8"
+    },
+    {
+      "artifact_id": "phase03_gates_v1.csv",
+      "path": "results/v7_rebuild/phase03/validation/phase03_gates_v1.csv",
+      "sha256": "b15eb23a06cc8b638126e77bc49449bbf6111306b758a7b6ff23470ca6b2234d",
+      "rows": 11
+    }
+  ],
+  "gates": [
+    {
+      "gate": "frozen inputs verified",
+      "status": "PASS",
+      "detail": "atlas, LSM registry, CSM dictionary, geometry"
+    },
+    {
+      "gate": "themes derived from CSMs, not asserted over them",
+      "status": "PASS",
+      "detail": "membership fitted on the frozen CSM dictionary (L-05)"
+    },
+    {
+      "gate": "no chemistry label used before K was selected",
+      "status": "PASS",
+      "detail": "labels revealed at step 5, after selection and validation"
+    },
+    {
+      "gate": "K justified on a Pareto frontier",
+      "status": "PASS",
+      "detail": "2 of 13 K values are chemically admissible; the composite peaks at K=6 (0.3656); the contiguous admissible pla"
+    },
+    {
+      "gate": "every theme chemically admissible",
+      "status": "PASS",
+      "detail": "6/6"
+    },
+    {
+      "gate": "no disease/pathway/process/phenotype name (P-07)",
+      "status": "PASS",
+      "detail": "checked"
+    },
+    {
+      "gate": "soft membership retained; no forced single parent",
+      "status": "PASS",
+      "detail": "30 CSMs have split membership"
+    },
+    {
+      "gate": "C-08 invariants hold",
+      "status": "PASS",
+      "detail": "10 checked"
+    },
+    {
+      "gate": "bootstrap stability",
+      "status": "PASS",
+      "detail": "mean 0.777, min 0.623"
+    },
+    {
+      "gate": "theme layer value over CSM layer measured and reported",
+      "status": "PASS",
+      "detail": "theme coordinates retrieve coarse chemistry better than raw CSM activations"
+    },
+    {
+      "gate": "bridges and unassigned CSMs preserved, not forced",
+      "status": "PASS",
+      "detail": "11 bridges, 4 unassigned"
+    }
+  ],
+  "code_dirty": true,
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.4.3",
+    "pandas": "2.3.3"
+  }
+}

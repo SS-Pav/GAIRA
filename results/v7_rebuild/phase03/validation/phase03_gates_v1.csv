@@ -1,0 +1,12 @@
+gate,status,detail
+frozen inputs verified,PASS,"atlas, LSM registry, CSM dictionary, geometry"
+"themes derived from CSMs, not asserted over them",PASS,membership fitted on the frozen CSM dictionary (L-05)
+no chemistry label used before K was selected,PASS,"labels revealed at step 5, after selection and validation"
+K justified on a Pareto frontier,PASS,2 of 13 K values are chemically admissible; the composite peaks at K=6 (0.3656); the contiguous admissible pla
+every theme chemically admissible,PASS,6/6
+no disease/pathway/process/phenotype name (P-07),PASS,checked
+soft membership retained; no forced single parent,PASS,30 CSMs have split membership
+C-08 invariants hold,PASS,10 checked
+bootstrap stability,PASS,"mean 0.777, min 0.623"
+theme layer value over CSM layer measured and reported,PASS,theme coordinates retrieve coarse chemistry better than raw CSM activations
+"bridges and unassigned CSMs preserved, not forced",PASS,"11 bridges, 4 unassigned"

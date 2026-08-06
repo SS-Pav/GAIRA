@@ -1,0 +1,98 @@
+{
+  "selected_model": "archetypal",
+  "selected_K": 6,
+  "selection": {
+    "K": 6,
+    "peak_K": 6,
+    "plateau": [
+      6,
+      6
+    ],
+    "composite": 0.36556470068708957,
+    "status": "PASS",
+    "n_admissible": 2,
+    "n_swept": 13,
+    "rationale": "2 of 13 K values are chemically admissible; the composite peaks at K=6 (0.3656); the contiguous admissible plateau within 0.02 spans K=6\u20136; smallest selected"
+  },
+  "model_comparison": [
+    {
+      "model": "archetypal",
+      "K": 6,
+      "peak_K": 6,
+      "plateau": [
+        6,
+        6
+      ],
+      "composite": 0.36556470068708957,
+      "status": "PASS",
+      "n_admissible": 2,
+      "n_swept": 13,
+      "n_degenerate_K": 1,
+      "best_composite": 0.5067739482294376,
+      "rationale": "2 of 13 K values are chemically admissible; the composite peaks at K=6 (0.3656); the contiguous admissible plateau within 0.02 spans K=6\u20136; smallest selected"
+    },
+    {
+      "model": "sparse_nmf",
+      "K": null,
+      "status": "FAIL",
+      "n_degenerate_K": 14,
+      "best_composite": NaN,
+      "rationale": "every K for this model is degenerate \u2014 the fit retains no information about the CSM spectra"
+    },
+    {
+      "model": "fuzzy_cmeans",
+      "K": null,
+      "status": "FAIL",
+      "n_degenerate_K": 1,
+      "best_composite": NaN,
+      "rationale": "no K in the sweep is both chemically admissible and composed of distinguishable themes"
+    },
+    {
+      "model": "diffusion_gmm",
+      "K": null,
+      "status": "FAIL",
+      "n_degenerate_K": 1,
+      "best_composite": NaN,
+      "rationale": "no K in the sweep is both chemically admissible and composed of distinguishable themes"
+    },
+    {
+      "model": "graph_regularised_nmf",
+      "K": null,
+      "status": "FAIL",
+      "n_degenerate_K": 13,
+      "best_composite": NaN,
+      "rationale": "no K in the sweep is both chemically admissible and composed of distinguishable themes"
+    }
+  ],
+  "criteria": {
+    "information_retained": {
+      "weight": 0.24,
+      "direction": "max"
+    },
+    "heldout_reconstruction": {
+      "weight": 0.2,
+      "direction": "max"
+    },
+    "stability": {
+      "weight": 0.2,
+      "direction": "max"
+    },
+    "spectral_coherence": {
+      "weight": 0.14,
+      "direction": "max"
+    },
+    "compression": {
+      "weight": 0.1,
+      "direction": "max"
+    },
+    "calibration_ece": {
+      "weight": 0.06,
+      "direction": "min"
+    },
+    "membership_sparsity": {
+      "weight": 0.06,
+      "direction": "max"
+    }
+  },
+  "labels_used_in_selection": false
+}

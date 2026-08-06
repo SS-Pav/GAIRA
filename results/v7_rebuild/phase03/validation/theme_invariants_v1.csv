@@ -1,0 +1,11 @@
+invariant,status,detail
+S >= 0,PASS,
+S rows sum to 1,PASS,max deviation 1.00e-12
+"S shape is (M, K)",PASS,"(49, 6) vs (49, 6)"
+theme spectra non-negative,PASS,
+theme_id unique,PASS,
+membership is sparse,PASS,mean top-2 mass 0.843
+no CSM forced to a single parent,PASS,at least one CSM has genuinely split membership
+no theme name refers to disease/pathway/process/phenotype,PASS,
+every theme resolves to CSMs,PASS,
+every theme carries counter-evidence,PASS,an accepted theme with no recorded counter-evidence has not been examined
