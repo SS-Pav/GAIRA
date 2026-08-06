@@ -2,8 +2,8 @@
   "phase": "05",
   "name": "Canonical CSM inference engine",
   "status": "GATE_FAILED",
-  "started": "2026-08-06T20:08:11.497197+00:00",
-  "finished": "2026-08-06T20:09:03.520344+00:00",
+  "started": "2026-08-06T20:13:04.950452+00:00",
+  "finished": "2026-08-06T20:13:57.211492+00:00",
   "engine_fingerprint": "20d8bd99ce71f45a125c6a2b1d719e51",
   "seed": 0,
   "outputs": [
@@ -94,6 +94,12 @@
       "sha256": "dd2794ac702369604a54e769d1e375c0727b3eb2c11629e5d0e03be1fb4e9eeb"
     },
     {
+      "artifact_id": "evidence_axis_sensitivity_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/evidence_axis_sensitivity_v1.csv",
+      "sha256": "796407807c334a1c4672f707bb65e623286fce249cc0817823926aab56d3520e",
+      "rows": 7
+    },
+    {
       "artifact_id": "evidence_axis_secondary_tests_v1.csv",
       "path": "results/v7_rebuild/phase05/tables/evidence_axis_secondary_tests_v1.csv",
       "sha256": "d5e6365ab1eee332dbef84aa2cb868cc1e1835ac38158feb763362f7aa244f96",
@@ -175,13 +181,13 @@
     {
       "artifact_id": "phase05_gates_v1.csv",
       "path": "results/v7_rebuild/phase05/tables/phase05_gates_v1.csv",
-      "sha256": "e59ddeb26567b3d19095a647fc24b705f38be4885f1362ca960390624eecad8a",
-      "rows": 15
+      "sha256": "ce25fd664f8e48d4eb2f96ef5769f4e3e298bc53e9606dea136a0e904f7d992d",
+      "rows": 16
     },
     {
       "artifact_id": "phase05_summary_v1.json",
       "path": "results/v7_rebuild/phase05/artifacts/phase05_summary_v1.json",
-      "sha256": "b8c8441af2843ddec7b656809d5570c71c5acc51c2dec99fa8721927a41b22fc"
+      "sha256": "d8efe21cc2e9eca25322c1b11f7f332cff7009e3d6cb2e8c8d25775958c9edff"
     }
   ],
   "replaces": "Phase 04 Theme/BSV inference path",

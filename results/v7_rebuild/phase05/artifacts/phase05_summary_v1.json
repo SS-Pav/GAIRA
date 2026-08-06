@@ -169,6 +169,64 @@
         "auroc": 1.0,
         "verdict": "grounded"
       }
+    ],
+    "sensitivity": [
+      {
+        "parameter": "support_floor",
+        "value": 0.05,
+        "mean_supporting_csms": 25.727272727272727,
+        "mean_axes_per_csm": 5.775510204081633,
+        "n_grounded": 7,
+        "mean_auroc": 0.7581006931554591
+      },
+      {
+        "parameter": "support_floor",
+        "value": 0.1,
+        "mean_supporting_csms": 17.0,
+        "mean_axes_per_csm": 3.816326530612245,
+        "n_grounded": 7,
+        "mean_auroc": 0.7581006931554591
+      },
+      {
+        "parameter": "support_floor",
+        "value": 0.15,
+        "mean_supporting_csms": 12.090909090909092,
+        "mean_axes_per_csm": 2.7142857142857144,
+        "n_grounded": 7,
+        "mean_auroc": 0.7581006931554591
+      },
+      {
+        "parameter": "support_floor",
+        "value": 0.2,
+        "mean_supporting_csms": 9.090909090909092,
+        "mean_axes_per_csm": 2.0408163265306123,
+        "n_grounded": 7,
+        "mean_auroc": 0.7581006931554591
+      },
+      {
+        "parameter": "prominence_window_cm-1",
+        "value": 20.0,
+        "mean_supporting_csms": 16.818181818181817,
+        "mean_axes_per_csm": 3.7755102040816326,
+        "n_grounded": 6,
+        "mean_auroc": 0.720283910074113
+      },
+      {
+        "parameter": "prominence_window_cm-1",
+        "value": 40.0,
+        "mean_supporting_csms": 17.0,
+        "mean_axes_per_csm": 3.816326530612245,
+        "n_grounded": 7,
+        "mean_auroc": 0.7581006931554591
+      },
+      {
+        "parameter": "prominence_window_cm-1",
+        "value": 80.0,
+        "mean_supporting_csms": 17.272727272727273,
+        "mean_axes_per_csm": 3.877551020408163,
+        "n_grounded": 8,
+        "mean_auroc": 0.7742304534903799
+      }
     ]
   },
   "robustness": [
@@ -253,7 +311,7 @@
     "geometry_used_in_inference": false
   },
   "gates": {
-    "n": 15,
+    "n": 16,
     "failed": 1
   }
 }

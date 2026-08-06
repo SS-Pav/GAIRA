@@ -8,6 +8,7 @@ G6 calibration ECE <= 0.10 after selection,FAIL
 "G6b calibration is informative (discrimination >= 0.75, sharpness > 0.05)",PASS
 G7 open-set joint AUROC >= 0.80 on synthetic negatives,PASS
 G8 at least 6 evidence axes empirically grounded (AUROC >= 0.70),PASS
+G8b axis grounding stable across threshold choices,PASS
 G9 no broken provenance chains,PASS
 G10 CSM more robust than raw (class retention),PASS
 G11 CSM preserves discrimination on unseen molecules (>= raw),PASS

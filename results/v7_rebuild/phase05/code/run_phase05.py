@@ -447,6 +447,44 @@ def main() -> int:
                                ("weak" if au >= 0.60 else "not discriminative")})
         log(f"  [secondary] unsaturation, unsaturated vs saturated lipids only: AUROC {au:.3f} "
             f"({int(unsat.sum())} vs {int((lipid & ~unsat).sum())} spectra)")
+    # Threshold sensitivity. `SUPPORT_FLOOR` gates which CSMs *count as supporting* an axis
+    # (and hence specificity, the confidence weight and the provenance chains), while the
+    # prominence window sets how a band's strength is measured. Neither should be able to
+    # manufacture a grounded axis, and this is where that is checked rather than asserted.
+    sens = []
+    for floor in (0.05, 0.10, 0.15, 0.20):
+        old = EV.SUPPORT_FLOOR
+        EV.SUPPORT_FLOOR = floor
+        sp = EV.axis_specificity(M)
+        pr = EV.profile(A, M, sp, D["explained_variance"])
+        vv = EV.validate_axes(pr["magnitude"], cls, AXIS_CLASSES)
+        EV.SUPPORT_FLOOR = old
+        sens.append({"parameter": "support_floor", "value": floor,
+                     "mean_supporting_csms": float((M > floor).sum(axis=0).mean()),
+                     "mean_axes_per_csm": float((M > floor).sum(axis=1).mean()),
+                     "n_grounded": int((vv.verdict == "grounded").sum()),
+                     "mean_auroc": float(vv.auroc.mean(skipna=True))})
+    for win in (20.0, 40.0, 80.0):
+        Mw, uw = EV._prominence_profile, None
+        import functools
+        orig = EV._prominence_profile
+        EV._prominence_profile = functools.partial(orig, window=win)
+        Mv, _ = EV.build_axis_map(CSM, grid, recs)
+        EV._prominence_profile = orig
+        pv = EV.profile(A, Mv, EV.axis_specificity(Mv), D["explained_variance"])
+        vv = EV.validate_axes(pv["magnitude"], cls, AXIS_CLASSES)
+        sens.append({"parameter": "prominence_window_cm-1", "value": win,
+                     "mean_supporting_csms": float((Mv > EV.SUPPORT_FLOOR).sum(axis=0).mean()),
+                     "mean_axes_per_csm": float((Mv > EV.SUPPORT_FLOOR).sum(axis=1).mean()),
+                     "n_grounded": int((vv.verdict == "grounded").sum()),
+                     "mean_auroc": float(vv.auroc.mean(skipna=True))})
+    sens_tab = pd.DataFrame(sens)
+    outputs.append(wtab(sens_tab, "evidence_axis_sensitivity_v1.csv"))
+    for _, r in sens_tab.iterrows():
+        log(f"  [sensitivity] {r.parameter}={r.value:<5} supporting CSMs/axis "
+            f"{r.mean_supporting_csms:5.1f}  axes/CSM {r.mean_axes_per_csm:.2f}  "
+            f"grounded {int(r.n_grounded)}/11  mean AUROC {r.mean_auroc:.3f}")
+
     sec_tab = pd.DataFrame(sec)
     if len(sec_tab):
         outputs.append(wtab(sec_tab, "evidence_axis_secondary_tests_v1.csv"))
@@ -693,6 +731,8 @@ def main() -> int:
          disc_final >= 0.75 and sharp_final > 0.05),
         ("G7 open-set joint AUROC >= 0.80 on synthetic negatives", joint_auroc >= 0.80),
         ("G8 at least 6 evidence axes empirically grounded (AUROC >= 0.70)", n_grounded >= 6),
+        ("G8b axis grounding stable across threshold choices",
+         bool(sens_tab.n_grounded.min() >= 6)),
         ("G9 no broken provenance chains", broken == 0),
         ("G10 CSM more robust than raw (class retention)", csm_ret > raw_ret),
         ("G11 CSM preserves discrimination on unseen molecules (>= raw)", csm_clean >= raw_clean),
@@ -727,7 +767,8 @@ def main() -> int:
         "evidence": {"n_axes": len(EV.AXIS_NAMES), "n_grounded": n_grounded,
                      "mean_unassigned_mass": float(unassigned.mean()),
                      "validation": val.to_dict("records"),
-                     "secondary_tests": sec_tab.to_dict("records")},
+                     "secondary_tests": sec_tab.to_dict("records"),
+                     "sensitivity": sens_tab.to_dict("records")},
         "robustness": deg_tab.to_dict("records"),
         "provenance": {"n_chains": len(all_chains), "broken": broken},
         "engine": engine_cfg,
