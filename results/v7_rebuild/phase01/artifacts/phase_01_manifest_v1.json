@@ -2,8 +2,8 @@
   "schema": "gaira_v7_phase_manifest_v1",
   "phase": "01",
   "phase_name": "Balanced references and class-local Local Spectral Motifs",
-  "build_id": "v7-phase01-846fc6dfad75",
-  "built_utc": "2026-08-06T06:08:33.461908+00:00",
+  "build_id": "v7-phase01-1f83a9e331a9",
+  "built_utc": "2026-08-06T06:45:56.075910+00:00",
   "architecture": "balanced references → split by chemistry class → independent class-local NMF → Local Spectral Motifs",
   "frozen_atlas_role": "baseline control / comparator only (P-15) — NOT an input",
   "atlas_fingerprint_before": "09ed804a40836f4a05a91ba10900cded",
@@ -53,9 +53,9 @@
     "repeat_schedule": "0+1..12"
   },
   "code": {
-    "git_sha": "846fc6dfad75d9aff4abc3f5bbeb76c486fd8e85",
+    "git_sha": "1f83a9e331a986f132097d2cd24983e6eaf28f99",
     "branch": "gaira-v7-rebuild",
-    "dirty": true,
+    "dirty": false,
     "entry_point": "results/v7_rebuild/phase01/code/run_phase01.py",
     "package": "src/gaira/v7/lsm/"
   },
