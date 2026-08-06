@@ -1,0 +1,16 @@
+gate,status
+G1 frozen fingerprints verified,PASS
+G2 nothing upstream refitted,PASS
+G3 CSM projection explains the corpus (mean EV >= 0.80),PASS
+G4 Split A molecule top-1 >= 0.60,PASS
+G5 Split B class top-1 >= 0.60 on unseen molecules,PASS
+G6 calibration ECE <= 0.10 after selection,FAIL
+"G6b calibration is informative (discrimination >= 0.75, sharpness > 0.05)",PASS
+G7 open-set joint AUROC >= 0.80 on synthetic negatives,PASS
+G8 at least 6 evidence axes empirically grounded (AUROC >= 0.70),PASS
+G9 no broken provenance chains,PASS
+G10 CSM more robust than raw (class retention),PASS
+G11 CSM preserves discrimination on unseen molecules (>= raw),PASS
+G12 engine deterministic on repeat,PASS
+G13 no cross-modality experiment in this phase,PASS
+G14 geometry not used in inference,PASS

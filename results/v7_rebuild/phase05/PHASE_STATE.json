@@ -1,0 +1,189 @@
+{
+  "phase": "05",
+  "name": "Canonical CSM inference engine",
+  "status": "GATE_FAILED",
+  "started": "2026-08-06T20:08:11.497197+00:00",
+  "finished": "2026-08-06T20:09:03.520344+00:00",
+  "engine_fingerprint": "20d8bd99ce71f45a125c6a2b1d719e51",
+  "seed": 0,
+  "outputs": [
+    {
+      "artifact_id": "csm_projection_diagnostics_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/csm_projection_diagnostics_v1.csv",
+      "sha256": "108f012ebb7e53f6b9a1edadf6023b57b6d53a0d7508d89b113d02eaa99c7b26",
+      "rows": 375
+    },
+    {
+      "artifact_id": "csm_activations_v1.npz",
+      "path": "results/v7_rebuild/phase05/artifacts/csm_activations_v1.npz",
+      "sha256": "6aad61b7149043bc7098f071723110591bbd3e787a16abfad83514523c0573c9"
+    },
+    {
+      "artifact_id": "similarity_metric_benchmark_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/similarity_metric_benchmark_v1.csv",
+      "sha256": "389687f0867f5dc35f2534817c7f112746260998f6d2a2b14e08d2db4a97e6ac",
+      "rows": 7
+    },
+    {
+      "artifact_id": "calibration_benchmark_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/calibration_benchmark_v1.csv",
+      "sha256": "64e61e9500d8289ac3b594cb82fef73edb528c3ed7182b717bae7c7ad4771ffc",
+      "rows": 50
+    },
+    {
+      "artifact_id": "calibration_summary_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/calibration_summary_v1.csv",
+      "sha256": "0d0e75f757d62fedf5d1581a31c72c3078b2e0afc54657a846afd9a83c3fbed7",
+      "rows": 10
+    },
+    {
+      "artifact_id": "splitA_predictions_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/splitA_predictions_v1.csv",
+      "sha256": "117cdcfc3dd636f229b5269c21d539ad152440c44b6f1a88d4719cc4f4035a9f",
+      "rows": 375
+    },
+    {
+      "artifact_id": "splitA_topk_curve_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/splitA_topk_curve_v1.csv",
+      "sha256": "26de92429b1d4fbfc4e39df251cb17c121f68dd13cdb5809aac2057ada50562a",
+      "rows": 10
+    },
+    {
+      "artifact_id": "reliability_splitA_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/reliability_splitA_v1.csv",
+      "sha256": "54aae865abecc86530d6f88fb65fb7d682dfb145512f6dc2800eb71b9bb5787f",
+      "rows": 10
+    },
+    {
+      "artifact_id": "class_confusion_matrix_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/class_confusion_matrix_v1.csv",
+      "sha256": "e0a28a96e24c1243d5988738dfc82f70e25c7489099e8583b9810e43ccfadad5",
+      "rows": 16
+    },
+    {
+      "artifact_id": "splitB_predictions_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/splitB_predictions_v1.csv",
+      "sha256": "bf5149cc7826cc8e5b5868590254417fc5076ea66f2a8b5dca79e517e76ef07e",
+      "rows": 375
+    },
+    {
+      "artifact_id": "class_precision_recall_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/class_precision_recall_v1.csv",
+      "sha256": "e2a2f0797c6bd209905ee640e468c82d57e2289adba0eb386b66d72e1b535827",
+      "rows": 16
+    },
+    {
+      "artifact_id": "evidence_axis_grounding_v1.json",
+      "path": "results/v7_rebuild/phase05/artifacts/evidence_axis_grounding_v1.json",
+      "sha256": "622020210b6f16c82e7f060517aeca9b0233508718c26955f35fabc17985f274"
+    },
+    {
+      "artifact_id": "evidence_axis_map_v1.npz",
+      "path": "results/v7_rebuild/phase05/artifacts/evidence_axis_map_v1.npz",
+      "sha256": "75eb6a769b0a51882e35d0663c9e44a0d7a0a8b933b866d18c8a2ba12d147c03"
+    },
+    {
+      "artifact_id": "evidence_axis_summary_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/evidence_axis_summary_v1.csv",
+      "sha256": "a47a39cefa7d81696632b4848da38fead50cd93fef6f655046754d0eb536e1f2",
+      "rows": 11
+    },
+    {
+      "artifact_id": "evidence_profiles_v1.npz",
+      "path": "results/v7_rebuild/phase05/artifacts/evidence_profiles_v1.npz",
+      "sha256": "dd2794ac702369604a54e769d1e375c0727b3eb2c11629e5d0e03be1fb4e9eeb"
+    },
+    {
+      "artifact_id": "evidence_axis_secondary_tests_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/evidence_axis_secondary_tests_v1.csv",
+      "sha256": "d5e6365ab1eee332dbef84aa2cb868cc1e1835ac38158feb763362f7aa244f96",
+      "rows": 1
+    },
+    {
+      "artifact_id": "evidence_axis_validation_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/evidence_axis_validation_v1.csv",
+      "sha256": "287b4452676aac19df38547d14005f6aa194faf47d2623f7850da070460dc45b",
+      "rows": 11
+    },
+    {
+      "artifact_id": "evidence_axis_window_overlap_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/evidence_axis_window_overlap_v1.csv",
+      "sha256": "25229ee77d6410e5a623ebabbd0f471aabd48911e75a6d8b6e0d6aba11a4bd4f",
+      "rows": 28
+    },
+    {
+      "artifact_id": "openset_channel_auroc_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/openset_channel_auroc_v1.csv",
+      "sha256": "163ed0099d96a8ac531364ff5fe6dc6b27a6f4fe755f64e5a3863920102ef89d",
+      "rows": 9
+    },
+    {
+      "artifact_id": "openset_by_negative_kind_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/openset_by_negative_kind_v1.csv",
+      "sha256": "16b43d579a84c4074254821cfef455419de2d66da73c327eea2b7f3b43e17d00",
+      "rows": 6
+    },
+    {
+      "artifact_id": "openset_roc_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/openset_roc_v1.csv",
+      "sha256": "0bfbcaa3df20b059bfa4b3645eaa7ddc5ad558f4b2e3f2485b9da7a1c6986e44",
+      "rows": 200
+    },
+    {
+      "artifact_id": "openset_scores_v1.npz",
+      "path": "results/v7_rebuild/phase05/artifacts/openset_scores_v1.npz",
+      "sha256": "7c6032cb6dcb8b57b6c39ca1090d55d906a00beaf3d0f6e2ccd95d9a5cd630e2"
+    },
+    {
+      "artifact_id": "provenance_integrity_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/provenance_integrity_v1.csv",
+      "sha256": "0139f5f085a20e69151a2473d76cad6980d0354fdca435f90d6a0791378398cb",
+      "rows": 11
+    },
+    {
+      "artifact_id": "noise_robustness_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/noise_robustness_v1.csv",
+      "sha256": "ba45a528a2257f6fc955d2cba82125ecb7d7db99482de948f43edb28364dd3b1",
+      "rows": 140
+    },
+    {
+      "artifact_id": "robustness_summary_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/robustness_summary_v1.csv",
+      "sha256": "4af119032c935896cbce4166fb7aa8a911de26c87c2e14f2529e30023d107e36",
+      "rows": 4
+    },
+    {
+      "artifact_id": "representative_reports_v1.json",
+      "path": "results/v7_rebuild/phase05/artifacts/representative_reports_v1.json",
+      "sha256": "4cd34876f353310a80b9f70c2007446e50832a31c4e601a81a5a69f88239beb9"
+    },
+    {
+      "artifact_id": "rejected_examples_v1.json",
+      "path": "results/v7_rebuild/phase05/artifacts/rejected_examples_v1.json",
+      "sha256": "26fe3c9f1db602094d70d082d9bade1c73445423df04f6746e179cd35b709854"
+    },
+    {
+      "artifact_id": "canonical_engine_config_v1.json",
+      "path": "results/v7_rebuild/phase05/artifacts/canonical_engine_config_v1.json",
+      "sha256": "7f7b8a4ca9c0efc7e7a821825059c3e4b4f4781d9df87b91ce553a9cd7371a04"
+    },
+    {
+      "artifact_id": "reference_bank_v1.npz",
+      "path": "results/v7_rebuild/phase05/artifacts/reference_bank_v1.npz",
+      "sha256": "828ad44bcb8b9cb346cfc738268cede5a3d9bed0130b5dd8c9295c3d166bd23d"
+    },
+    {
+      "artifact_id": "phase05_gates_v1.csv",
+      "path": "results/v7_rebuild/phase05/tables/phase05_gates_v1.csv",
+      "sha256": "e59ddeb26567b3d19095a647fc24b705f38be4885f1362ca960390624eecad8a",
+      "rows": 15
+    },
+    {
+      "artifact_id": "phase05_summary_v1.json",
+      "path": "results/v7_rebuild/phase05/artifacts/phase05_summary_v1.json",
+      "sha256": "b8c8441af2843ddec7b656809d5570c71c5acc51c2dec99fa8721927a41b22fc"
+    }
+  ],
+  "replaces": "Phase 04 Theme/BSV inference path",
+  "scope": "Raman only; no SERS or cross-modality validation"
+}

@@ -1,0 +1,376 @@
+spectrum,truth_molecule,truth_class,pred_class,fold,correct,confidence
+0,(+)-arabinose,mono_oligosaccharide,mono_oligosaccharide,0,True,7.650921559755114e-07
+2,(+)-galactosamine,mono_oligosaccharide,mono_oligosaccharide,0,True,2.79808811425079e-06
+7,(+)-glucose,mono_oligosaccharide,mono_oligosaccharide,0,True,2.7518616575389154e-06
+8,(+)-glucose,mono_oligosaccharide,mono_oligosaccharide,0,True,2.5350503789132894e-06
+9,(+)-glucose,mono_oligosaccharide,mono_oligosaccharide,0,True,2.6733919882812453e-06
+10,(+)-glucose,mono_oligosaccharide,mono_oligosaccharide,0,True,2.651183553811679e-06
+11,(+)-glucose,mono_oligosaccharide,mono_oligosaccharide,0,True,2.6201212602115496e-06
+12,(+)-glucose,mono_oligosaccharide,mono_oligosaccharide,0,True,1.3797033577284724e-06
+25,(-)-arabinose,mono_oligosaccharide,mono_oligosaccharide,0,True,7.667238522474122e-07
+36,15-methylpalmiticacid,fatty_acid,fatty_acid,0,True,2.6865311909706183e-06
+38,a-dna,nucleic_acid_polymer,nucleic_acid_polymer,0,True,3.012964011766104e-06
+43,acetyl-coa,sulfur_thiol_cofactor,sulfur_thiol_cofactor,0,True,2.462507250026695e-06
+44,acetyl-coa,sulfur_thiol_cofactor,sulfur_thiol_cofactor,0,True,3.0764936693635778e-06
+45,acetyl-coa,sulfur_thiol_cofactor,sulfur_thiol_cofactor,0,True,3.1087252792005697e-06
+46,acetyl-coa,sulfur_thiol_cofactor,sulfur_thiol_cofactor,0,True,3.1132735126459964e-06
+47,adenine,purine,purine,0,True,1.967886986369272e-06
+48,adenine,purine,purine,0,True,2.3603115924294688e-06
+49,adenine,purine,purine,0,True,2.3861336985870946e-06
+50,adenine,purine,purine,0,True,2.3876687826798097e-06
+63,amylopectin,polysaccharide,polysaccharide,0,True,2.3767822289898086e-06
+64,amylopectin,polysaccharide,polysaccharide,0,True,2.6728366533602214e-06
+67,arachidic acid,fatty_acid,fatty_acid,0,True,2.3291859238618187e-06
+69,arginine,free_amino_acid,free_amino_acid,0,True,2.3228898242378953e-06
+70,arginine,free_amino_acid,free_amino_acid,0,True,2.2911729434600685e-06
+71,arginine,free_amino_acid,free_amino_acid,0,True,2.2915927209087627e-06
+72,arginine,free_amino_acid,free_amino_acid,0,True,2.295128948462109e-06
+73,arginine,free_amino_acid,free_amino_acid,0,True,8.207837752208409e-07
+78,asparagine,free_amino_acid,free_amino_acid,0,True,1.8568363902414434e-06
+85,carotene,chromophore_pigment,chromophore_pigment,0,True,3.2093698932597745e-06
+87,ceramide,phospholipid_sphingolipid,phospholipid_sphingolipid,0,True,2.050417809453608e-06
+88,ceramide,phospholipid_sphingolipid,phospholipid_sphingolipid,0,True,2.1381975165252278e-06
+98,citrate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,0,True,1.7573069911713805e-06
+99,citrate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,0,True,2.0560556974975287e-06
+100,citrate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,0,True,2.0440624726506563e-06
+101,citrate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,0,True,2.0414327461829685e-06
+112,cysteine,free_amino_acid,free_amino_acid,0,True,1.0178105079375491e-06
+113,cysteine,free_amino_acid,free_amino_acid,0,True,1.0182303467639812e-06
+114,cysteine,free_amino_acid,free_amino_acid,0,True,1.0181124870662987e-06
+115,cytochrome c,peptide_protein,peptide_protein,0,True,2.7477164552423984e-06
+116,cytochrome c,peptide_protein,peptide_protein,0,True,1.4863137412512307e-06
+118,diethylstilbestrol,sterol_steroid,sterol_steroid,0,True,1.939146303031678e-06
+127,estradiol,sterol_steroid,sterol_steroid,0,True,3.0334788804217977e-06
+131,ferritin,peptide_protein,peptide_protein,0,True,1.3012528599736503e-06
+132,ferritin,peptide_protein,peptide_protein,0,True,8.464111803566724e-07
+133,ferritin,peptide_protein,peptide_protein,0,True,1.5727583680832284e-06
+179,horseradish peroxidase,peptide_protein,peptide_protein,0,True,1.3315767190943777e-06
+180,horseradish peroxidase,peptide_protein,peptide_protein,0,True,1.3439553501112355e-06
+192,lactalbumin,peptide_protein,peptide_protein,0,True,1.7931263494980099e-06
+193,lactalbumin,peptide_protein,peptide_protein,0,True,1.4932900753567805e-06
+194,lactalbumin,peptide_protein,peptide_protein,0,True,1.9495426106014924e-06
+222,myristic acid,fatty_acid,fatty_acid,0,True,1.6203165665039013e-06
+223,myristic acid,fatty_acid,fatty_acid,0,True,1.5503723038943692e-06
+233,palmitic acid,fatty_acid,fatty_acid,0,True,1.8076198773217044e-06
+234,palmitic acid,fatty_acid,fatty_acid,0,True,1.782653170774262e-06
+235,palmitoleic acid,fatty_acid,fatty_acid,0,True,1.8499077091045537e-06
+242,pepsinogen,peptide_protein,peptide_protein,0,True,1.962470137313777e-06
+243,pepsinogen,peptide_protein,peptide_protein,0,True,2.2044729477702727e-06
+244,pepsinogen,peptide_protein,peptide_protein,0,True,1.6325899655319936e-06
+278,sphingomyelin,phospholipid_sphingolipid,phospholipid_sphingolipid,0,True,2.0229649207343286e-06
+303,trierucin,acylglycerol,acylglycerol,0,True,1.3196510343138557e-06
+304,trilaurin,acylglycerol,acylglycerol,0,True,2.398558640182666e-06
+305,trilinolein,acylglycerol,fatty_acid,0,False,2.1553841201804787e-06
+306,trilinolein,acylglycerol,fatty_acid,0,False,1.9533585569530343e-06
+320,tripetroselinin,acylglycerol,acylglycerol,0,True,9.846342119232047e-07
+325,trypsin inhibitor,peptide_protein,peptide_protein,0,True,1.6582392143300945e-06
+326,trypsin inhibitor,peptide_protein,peptide_protein,0,True,1.3933244180484131e-06
+327,trypsin inhibitor,peptide_protein,peptide_protein,0,True,1.9402624493588806e-06
+331,tryptophan,free_amino_acid,free_amino_acid,0,True,1.2891323509398658e-06
+332,tryptophan,free_amino_acid,free_amino_acid,0,True,7.923690802814794e-07
+333,tryptophan,free_amino_acid,free_amino_acid,0,True,8.283070215108229e-07
+334,tryptophan,free_amino_acid,free_amino_acid,0,True,8.283134705855783e-07
+335,tryptophan,free_amino_acid,peptide_protein,0,False,6.321854015302141e-07
+344,uracil,pyrimidine,pyrimidine,0,True,3.0870938917945195e-06
+345,uracil,pyrimidine,pyrimidine,0,True,3.0863576044424288e-06
+346,uracil,pyrimidine,pyrimidine,0,True,3.0868347599832094e-06
+347,uracil,pyrimidine,pyrimidine,0,True,3.086567682979965e-06
+1,(+)-fucose,mono_oligosaccharide,mono_oligosaccharide,1,True,0.00017056596173486413
+15,(+)-maltose,mono_oligosaccharide,mono_oligosaccharide,1,True,0.0001526304024964635
+31,(-)-ribose,mono_oligosaccharide,mono_oligosaccharide,1,True,9.618434739181484e-05
+65,amylose,polysaccharide,polysaccharide,1,True,0.00020187768207854297
+66,amylose,polysaccharide,polysaccharide,1,True,0.00018899338130829444
+68,arachidonic acid,fatty_acid,fatty_acid,1,True,0.00019069078707151151
+81,b-dna,nucleic_acid_polymer,nucleic_acid_polymer,1,True,0.00024130069011153135
+82,carbonic anhydrase,peptide_protein,peptide_protein,1,True,0.000170505318861836
+83,carbonic anhydrase,peptide_protein,peptide_protein,1,True,0.00017473239682419517
+84,carbonic anhydrase,peptide_protein,peptide_protein,1,True,0.0001378610054092866
+90,cholesterol,sterol_steroid,sterol_steroid,1,True,0.00022450933178229807
+91,cholesterol,sterol_steroid,sterol_steroid,1,True,0.00018706148146096545
+92,cholesterol,sterol_steroid,sterol_steroid,1,True,0.00019342679091809034
+93,cholesterol,sterol_steroid,sterol_steroid,1,True,0.00018588370841658144
+102,coenzyme a,sulfur_thiol_cofactor,sulfur_thiol_cofactor,1,True,0.0002519564198616064
+103,coenzyme a,sulfur_thiol_cofactor,sulfur_thiol_cofactor,1,True,0.0002487693542152833
+104,coenzyme a,sulfur_thiol_cofactor,sulfur_thiol_cofactor,1,True,0.00024361998051265052
+105,coenzyme a,sulfur_thiol_cofactor,sulfur_thiol_cofactor,1,True,0.00024030708832285832
+117,cytosine,pyrimidine,pyrimidine,1,True,0.0002546600894181979
+128,estriol,sterol_steroid,sterol_steroid,1,True,0.00024016936363638127
+140,glucose oxidase,peptide_protein,peptide_protein,1,True,2.3999997991867256e-05
+141,glucose oxidase,peptide_protein,peptide_protein,1,True,6.086079179203893e-05
+155,glycerol,mono_oligosaccharide,mono_oligosaccharide,1,True,4.711966002558951e-05
+156,glycerol,mono_oligosaccharide,mono_oligosaccharide,1,True,5.064424750474099e-05
+157,glycerol,mono_oligosaccharide,mono_oligosaccharide,1,True,5.0293379454327254e-05
+158,glycerol,mono_oligosaccharide,mono_oligosaccharide,1,True,4.992781711545876e-05
+159,glycine,free_amino_acid,free_amino_acid,1,True,0.00019922619278945025
+160,glycine,free_amino_acid,free_amino_acid,1,True,0.00019953547178708914
+161,glycine,free_amino_acid,free_amino_acid,1,True,0.00019922359851871248
+162,glycine,free_amino_acid,free_amino_acid,1,True,0.0001848180788750326
+163,glycine,free_amino_acid,free_amino_acid,1,True,0.00017110046754963474
+181,hydroxyproline,free_amino_acid,free_amino_acid,1,True,0.0002140043923372634
+182,hydroxyproline,free_amino_acid,free_amino_acid,1,True,0.00021427830982871714
+183,hydroxyproline,free_amino_acid,free_amino_acid,1,True,0.00021471244284448072
+188,isoleucine,free_amino_acid,free_amino_acid,1,True,6.632612833867297e-05
+189,isoleucine,free_amino_acid,free_amino_acid,1,True,5.5290834410384944e-05
+190,isoleucine,free_amino_acid,free_amino_acid,1,True,7.021176561778366e-05
+199,lectin,peptide_protein,peptide_protein,1,True,0.0001880216011977588
+200,lectin,peptide_protein,peptide_protein,1,True,0.00019270842989872606
+201,lectin,peptide_protein,peptide_protein,1,True,0.00016137090567976397
+220,myoglobin,peptide_protein,peptide_protein,1,True,0.0001839479156781877
+221,myoglobin,peptide_protein,peptide_protein,1,True,0.00021791661093197725
+228,oleate,fatty_acid,fatty_acid,1,True,0.00014080056216445093
+229,oleate,fatty_acid,fatty_acid,1,True,0.00016577443908748674
+230,oleate,fatty_acid,fatty_acid,1,True,0.00014288134102724773
+231,oleate,fatty_acid,fatty_acid,1,True,0.00014455561097953586
+232,oleate,fatty_acid,fatty_acid,1,True,0.00014026136315132466
+256,phosphoenolpyruvate,phosphate_metabolite,pyrimidine,1,False,0.00016136703300831926
+257,phosphoenolpyruvate,phosphate_metabolite,phosphate_metabolite,1,True,0.00012629855274456464
+258,phosphoenolpyruvate,phosphate_metabolite,phosphate_metabolite,1,True,0.00012618701851764251
+259,phosphoenolpyruvate,phosphate_metabolite,phosphate_metabolite,1,True,0.00012416388729291264
+265,pyruvate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,1,True,0.0001828223572427893
+266,pyruvate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,1,True,0.00011881959329492694
+267,pyruvate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,1,True,0.00011636611485237921
+268,pyruvate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,1,True,0.00011718491374550711
+285,superoxide dismutases,peptide_protein,peptide_protein,1,True,0.0001202422133441905
+286,superoxide dismutases,peptide_protein,peptide_protein,1,True,0.0001347701267875551
+287,superoxide dismutases,peptide_protein,peptide_protein,1,True,0.00012623376256770056
+300,tricaproin,acylglycerol,acylglycerol,1,True,0.00022517070661124536
+307,trilinolenin,acylglycerol,fatty_acid,1,False,0.00018749328617258227
+308,trilinolenin,acylglycerol,fatty_acid,1,False,0.000187154125721099
+309,trimyristin,acylglycerol,acylglycerol,1,True,0.00019246489880597357
+321,tristearin,acylglycerol,acylglycerol,1,True,0.0001958842680064905
+328,trypsinogen,peptide_protein,peptide_protein,1,True,0.0001400986414244844
+329,trypsinogen,peptide_protein,peptide_protein,1,True,0.00013475103252457828
+330,trypsinogen,peptide_protein,peptide_protein,1,True,0.00010459191211946264
+348,urate,purine,purine,1,True,0.0001782919711117318
+349,urate,purine,purine,1,True,0.00017792281770054644
+350,urate,purine,purine,1,True,0.00017803203087122006
+355,vaccenic acid,fatty_acid,fatty_acid,1,True,0.0001453269882734205
+356,valine,free_amino_acid,free_amino_acid,1,True,0.00012219668744131875
+357,valine,free_amino_acid,free_amino_acid,1,True,0.00011796593883833036
+358,valine,free_amino_acid,free_amino_acid,1,True,0.00011857186568050161
+359,valine,free_amino_acid,free_amino_acid,1,True,0.00011777166465113314
+360,valine,free_amino_acid,free_amino_acid,1,True,0.000146290947230369
+373,β-carotene,chromophore_pigment,chromophore_pigment,1,True,0.0002648016070190365
+13,(+)-lactose,mono_oligosaccharide,carboxylic_acid_metabolite,2,False,5.813154371066153e-06
+14,(+)-lactose,mono_oligosaccharide,carboxylic_acid_metabolite,2,False,8.611089682919727e-06
+20,(+)-raffinose pentahydrate,mono_oligosaccharide,mono_oligosaccharide,2,True,2.623946291570559e-06
+26,(-)-fructose,mono_oligosaccharide,mono_oligosaccharide,2,True,3.2725570755955544e-06
+27,(-)-fructose,mono_oligosaccharide,mono_oligosaccharide,2,True,4.005126663718602e-06
+28,(-)-fructose,mono_oligosaccharide,mono_oligosaccharide,2,True,3.179207093023356e-06
+29,(-)-fructose,mono_oligosaccharide,mono_oligosaccharide,2,True,3.174111415093105e-06
+30,(-)-fructose,mono_oligosaccharide,mono_oligosaccharide,2,True,3.2156478485744854e-06
+32,12-methyltetradecanoic acid,fatty_acid,fatty_acid,2,True,8.958584058313408e-06
+34,14-methylhexadecanoic acid,fatty_acid,fatty_acid,2,True,8.820778586754573e-06
+37,2-deoxy-d-ribose,mono_oligosaccharide,mono_oligosaccharide,2,True,2.6279282796710454e-06
+74,ascorbate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,2,True,4.958473887517606e-06
+75,ascorbate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,2,True,5.22688825749509e-06
+76,ascorbate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,2,True,5.192937423412137e-06
+77,ascorbate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,2,True,5.269392278601384e-06
+86,cellulose,polysaccharide,polysaccharide,2,True,1.1124858107812921e-05
+95,cholesteryl oleate,sterol_steroid,sterol_steroid,2,True,7.544644364397374e-06
+106,collagen,peptide_protein,peptide_protein,2,True,6.729041848154845e-06
+107,collagen,peptide_protein,peptide_protein,2,True,6.769513994574812e-06
+108,collagen,peptide_protein,peptide_protein,2,True,6.548743658141584e-06
+119,elaidic acid,fatty_acid,acylglycerol,2,False,3.6181710775944964e-06
+123,elastin,peptide_protein,peptide_protein,2,True,6.299240610037856e-06
+124,ergothioneine,sulfur_thiol_cofactor,purine,2,False,6.508654594682496e-07
+125,ergothioneine,sulfur_thiol_cofactor,purine,2,False,6.572716689737528e-07
+126,ergothioneine,sulfur_thiol_cofactor,purine,2,False,6.520267682405807e-07
+129,estrone,sterol_steroid,sterol_steroid,2,True,1.0838067377560227e-05
+134,fructose-6-phosphate,phosphate_metabolite,phosphate_metabolite,2,True,6.029530775320979e-06
+135,fructose-6-phosphate,phosphate_metabolite,phosphate_metabolite,2,True,6.073341563494983e-06
+136,fructose-6-phosphate,phosphate_metabolite,phosphate_metabolite,2,True,6.255957536850834e-06
+137,fructose-6-phosphate,phosphate_metabolite,phosphate_metabolite,2,True,6.415230973059096e-06
+153,glutathione transferase,peptide_protein,peptide_protein,2,True,4.392524097045037e-06
+154,glutathione transferase,peptide_protein,peptide_protein,2,True,5.138319241531525e-06
+168,guanine,purine,purine,2,True,1.093872652178371e-05
+169,guanine,purine,purine,2,True,1.1027376253439176e-05
+170,guanine,purine,purine,2,True,1.1032651881286065e-05
+171,guanine,purine,purine,2,True,1.1025947502429606e-05
+174,histidine,free_amino_acid,free_amino_acid,2,True,7.4223982198962505e-06
+175,histidine,free_amino_acid,free_amino_acid,2,True,7.902040397038499e-06
+176,histidine,free_amino_acid,free_amino_acid,2,True,8.053647654721934e-06
+177,histidine,free_amino_acid,free_amino_acid,2,True,8.088213805467648e-06
+178,histidine,free_amino_acid,free_amino_acid,2,True,4.9336526280012405e-06
+207,major proteinase,peptide_protein,peptide_protein,2,True,7.0748389799541755e-06
+208,major proteinase,peptide_protein,peptide_protein,2,True,4.9664920062728994e-06
+209,major proteinase,peptide_protein,peptide_protein,2,True,5.812012101843158e-06
+212,melanin,chromophore_pigment,peptide_protein,2,False,4.060525504184397e-06
+213,melanin,chromophore_pigment,peptide_protein,2,False,4.804290857619163e-06
+214,melanin,chromophore_pigment,peptide_protein,2,False,3.759961951763912e-06
+215,melanin,chromophore_pigment,peptide_protein,2,False,3.486064429504015e-06
+216,methionine,free_amino_acid,free_amino_acid,2,True,2.3518478619434697e-06
+217,methionine,free_amino_acid,free_amino_acid,2,True,2.393977353400806e-06
+218,methionine,free_amino_acid,free_amino_acid,2,True,2.0998516081410964e-06
+219,methionine,free_amino_acid,free_amino_acid,2,True,5.050441497003254e-06
+260,proline,free_amino_acid,free_amino_acid,2,True,3.4610567059766846e-06
+261,proline,free_amino_acid,free_amino_acid,2,True,8.9393093842535e-06
+262,proline,free_amino_acid,free_amino_acid,2,True,8.888332472220302e-06
+263,proline,free_amino_acid,free_amino_acid,2,True,8.915319304071395e-06
+264,proline,free_amino_acid,free_amino_acid,2,True,4.572912176519955e-06
+284,succinic acid,carboxylic_acid_metabolite,carboxylic_acid_metabolite,2,True,7.372937357573043e-06
+288,t-rna,nucleic_acid_polymer,nucleic_acid_polymer,2,True,1.1283797780666434e-05
+289,thaumatin,peptide_protein,peptide_protein,2,True,8.069902825928943e-06
+290,thaumatin,peptide_protein,peptide_protein,2,True,7.767340479556797e-06
+291,thaumatin,peptide_protein,peptide_protein,2,True,5.607212644423123e-06
+296,tri-11-eicosenoin,acylglycerol,acylglycerol,2,True,7.589560372493808e-06
+298,tribehenin,acylglycerol,acylglycerol,2,True,8.867969396055094e-06
+301,tricaprylin,acylglycerol,acylglycerol,2,True,1.0392327528579258e-05
+318,tripalmitin,acylglycerol,acylglycerol,2,True,8.774037878929249e-06
+341,ubiquitin,peptide_protein,peptide_protein,2,True,7.272501846156097e-06
+342,ubiquitin,peptide_protein,peptide_protein,2,True,6.001118395160003e-06
+343,ubiquitin,peptide_protein,peptide_protein,2,True,5.48693256881766e-06
+351,urea,small_nitrogenous,free_amino_acid,2,False,7.580732954420966e-06
+352,urea,small_nitrogenous,free_amino_acid,2,False,7.609906043360589e-06
+353,urea,small_nitrogenous,free_amino_acid,2,False,7.268074339955052e-06
+354,urea,small_nitrogenous,free_amino_acid,2,False,1.0203864358977881e-05
+370,α-linolenic acid,fatty_acid,acylglycerol,2,False,8.160856563737387e-06
+371,α-phosphatidylcholine,phospholipid_sphingolipid,phospholipid_sphingolipid,2,True,7.396484673842181e-06
+3,(+)-galactose,mono_oligosaccharide,mono_oligosaccharide,3,True,0.7451031935793022
+4,(+)-galactose,mono_oligosaccharide,mono_oligosaccharide,3,True,0.8833065307416745
+5,(+)-galactose,mono_oligosaccharide,mono_oligosaccharide,3,True,0.884320284649629
+6,(+)-galactose,mono_oligosaccharide,mono_oligosaccharide,3,True,0.88403011814997
+39,acetoacetate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,3,True,0.7837240069834456
+40,acetoacetate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,3,True,0.8026021311515731
+41,acetoacetate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,3,True,0.8068425297010964
+42,acetoacetate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,3,True,0.8043227982358071
+56,albumin,peptide_protein,peptide_protein,3,True,0.7981095381092155
+57,albumin,peptide_protein,peptide_protein,3,True,0.7978572349080976
+58,albumin,peptide_protein,peptide_protein,3,True,0.7813970894276661
+59,albumin,peptide_protein,phospholipid_sphingolipid,3,False,0.7489535273790829
+60,albumin,peptide_protein,phospholipid_sphingolipid,3,False,0.8277404028464274
+61,albumin,peptide_protein,phospholipid_sphingolipid,3,False,0.7951761909796123
+62,albumin,peptide_protein,peptide_protein,3,True,0.775060856472899
+89,chitin,polysaccharide,polysaccharide,3,True,0.9006831659790339
+94,cholesteryl linoleate,sterol_steroid,sterol_steroid,3,True,0.8376386520760096
+96,cholesteryl palmitate,sterol_steroid,sterol_steroid,3,True,0.879634922850756
+130,ethinylestradiol,sterol_steroid,sterol_steroid,3,True,0.8935761483715301
+139,glucosamine,mono_oligosaccharide,mono_oligosaccharide,3,True,0.6791867924243269
+142,glutamate,free_amino_acid,free_amino_acid,3,True,0.7554796639879263
+143,glutamate,free_amino_acid,free_amino_acid,3,True,0.7297325512790622
+144,glutamate,free_amino_acid,free_amino_acid,3,True,0.7293976217063157
+145,glutamate,free_amino_acid,free_amino_acid,3,True,0.7313018057854499
+146,glutamate,free_amino_acid,free_amino_acid,3,True,0.665972670178556
+147,glutamate,free_amino_acid,free_amino_acid,3,True,0.7019957483434899
+172,hemoglobin,peptide_protein,peptide_protein,3,True,0.8701188303475204
+173,hemoglobin,peptide_protein,peptide_protein,3,True,0.8863945189895669
+184,hypoxanthine,purine,purine,3,True,0.7990508659007006
+185,hypoxanthine,purine,purine,3,True,0.79916583302246
+186,hypoxanthine,purine,phospholipid_sphingolipid,3,False,0.7660789162749145
+187,insulin,peptide_protein,peptide_protein,3,True,0.7969046257039007
+191,keratin,peptide_protein,peptide_protein,3,True,0.7332600117110366
+198,lauric acid,fatty_acid,acylglycerol,3,False,0.7830196766282982
+210,malic acid,carboxylic_acid_metabolite,phosphate_metabolite,3,False,0.7578936075878285
+211,malic acid,carboxylic_acid_metabolite,phospholipid_sphingolipid,3,False,0.6423875516002385
+224,n-acetylglucosamine,mono_oligosaccharide,mono_oligosaccharide,3,True,0.6209939402363985
+225,n-acetylglucosamine,mono_oligosaccharide,free_amino_acid,3,False,0.647733876369134
+226,n-acetylglucosamine,mono_oligosaccharide,free_amino_acid,3,False,0.6517399356373397
+227,n-acetylglucosamine,mono_oligosaccharide,free_amino_acid,3,False,0.6489960603567748
+250,phosphate,phosphate_metabolite,phosphate_metabolite,3,True,0.8307092810972381
+251,phosphate,phosphate_metabolite,phosphate_metabolite,3,True,0.8282518269875141
+252,phosphate,phosphate_metabolite,phosphate_metabolite,3,True,0.8328504312230003
+273,serine,free_amino_acid,free_amino_acid,3,True,0.8446584721403703
+274,serine,free_amino_acid,free_amino_acid,3,True,0.8631271272908763
+275,serine,free_amino_acid,free_amino_acid,3,True,0.8640728283144524
+276,serine,free_amino_acid,free_amino_acid,3,True,0.8635708661561654
+277,serine,free_amino_acid,free_amino_acid,3,True,0.8144138919402143
+279,stearate,fatty_acid,fatty_acid,3,True,0.75172460895371
+280,stearate,fatty_acid,acylglycerol,3,False,0.7237322057067389
+281,stearate,fatty_acid,fatty_acid,3,True,0.857539276311458
+282,stearate,fatty_acid,fatty_acid,3,True,0.8580670336405122
+283,stearate,fatty_acid,fatty_acid,3,True,0.8583622815799702
+292,thymine,pyrimidine,peptide_protein,3,False,0.6766816552224786
+293,thymine,pyrimidine,peptide_protein,3,False,0.6450595075567658
+294,thymine,pyrimidine,peptide_protein,3,False,0.647581142974291
+295,thymine,pyrimidine,peptide_protein,3,False,0.6435128201444299
+297,triarachidin,acylglycerol,acylglycerol,3,True,0.8473603229626866
+299,tricaprin,acylglycerol,acylglycerol,3,True,0.8257608823524059
+302,trielaidin,acylglycerol,acylglycerol,3,True,0.7677496053551133
+315,triosephosphate isomerase,peptide_protein,peptide_protein,3,True,0.7838150987802645
+316,triosephosphate isomerase,peptide_protein,peptide_protein,3,True,0.7826503761799971
+317,triosephosphate isomerase,peptide_protein,peptide_protein,3,True,0.7538829827909163
+319,tripalmitolein,acylglycerol,acylglycerol,3,True,0.8081705715585771
+337,tyrosine,free_amino_acid,mono_oligosaccharide,3,False,0.6573211454037502
+338,tyrosine,free_amino_acid,mono_oligosaccharide,3,False,0.655008461471584
+339,tyrosine,free_amino_acid,mono_oligosaccharide,3,False,0.6553147055372713
+340,tyrosine,free_amino_acid,mono_oligosaccharide,3,False,0.6551675213609377
+364,xylanase,peptide_protein,mono_oligosaccharide,3,False,0.6797975930222672
+365,xylanase,peptide_protein,mono_oligosaccharide,3,False,0.6941727127674158
+366,xylanase,peptide_protein,polysaccharide,3,False,0.8566353885712567
+372,α-phosphatidylethanolamine,phospholipid_sphingolipid,phospholipid_sphingolipid,3,True,0.8008073126448251
+16,(+)-mannose,mono_oligosaccharide,mono_oligosaccharide,4,True,0.6308304498039331
+17,(+)-mannose,mono_oligosaccharide,mono_oligosaccharide,4,True,0.5718147380119051
+18,(+)-mannose,mono_oligosaccharide,mono_oligosaccharide,4,True,0.6007333421818843
+19,(+)-mannose,mono_oligosaccharide,mono_oligosaccharide,4,True,0.5909764596155509
+21,(+)-sucrose,mono_oligosaccharide,mono_oligosaccharide,4,True,0.7242710909144251
+22,(+)-trehalose,mono_oligosaccharide,mono_oligosaccharide,4,True,0.7624278670650949
+23,(+)-xylose,mono_oligosaccharide,mono_oligosaccharide,4,True,0.48866468712374383
+24,(+)-xylose,mono_oligosaccharide,mono_oligosaccharide,4,True,0.4845061874634325
+33,13-methylmyristicacid,fatty_acid,fatty_acid,4,True,0.8810321452876977
+35,14-methylpentadecanoic acid,fatty_acid,fatty_acid,4,True,0.8834299574883167
+51,alanine,free_amino_acid,free_amino_acid,4,True,0.8742244783767992
+52,alanine,free_amino_acid,free_amino_acid,4,True,0.8791197943737622
+53,alanine,free_amino_acid,free_amino_acid,4,True,0.8790151735937066
+54,alanine,free_amino_acid,free_amino_acid,4,True,0.87922256896617
+55,alanine,free_amino_acid,free_amino_acid,4,True,0.8550696559399553
+79,aspartate,free_amino_acid,free_amino_acid,4,True,0.8133180967639436
+80,aspartate,free_amino_acid,free_amino_acid,4,True,0.7048463100304075
+97,cholesteryl stearate,sterol_steroid,sterol_steroid,4,True,0.8653459204697447
+109,creatinine,small_nitrogenous,small_nitrogenous,4,True,0.4847914265370125
+110,creatinine,small_nitrogenous,small_nitrogenous,4,True,0.4847698151047971
+111,creatinine,small_nitrogenous,small_nitrogenous,4,True,0.4835604526975207
+120,elastase,peptide_protein,peptide_protein,4,True,0.7796044811127071
+121,elastase,peptide_protein,peptide_protein,4,True,0.8130492856372961
+122,elastase,peptide_protein,peptide_protein,4,True,0.7600412612815227
+138,fumarate,carboxylic_acid_metabolite,carboxylic_acid_metabolite,4,True,0.7339528060462768
+148,glutathione,sulfur_thiol_cofactor,mono_oligosaccharide,4,False,0.5836814505479995
+149,glutathione,sulfur_thiol_cofactor,sulfur_thiol_cofactor,4,True,0.6775007310142774
+150,glutathione,sulfur_thiol_cofactor,sulfur_thiol_cofactor,4,True,0.6867232341845613
+151,glutathione,sulfur_thiol_cofactor,sulfur_thiol_cofactor,4,True,0.6774715649273506
+152,glutathione,sulfur_thiol_cofactor,free_amino_acid,4,False,0.7057116851655825
+164,glycogen,polysaccharide,peptide_protein,4,False,0.8866200206707409
+165,glycogen,polysaccharide,polysaccharide,4,True,0.7763041727807538
+166,glycogen,polysaccharide,polysaccharide,4,True,0.7273699127768077
+167,glycogen,polysaccharide,polysaccharide,4,True,0.7561039349515254
+195,lactate,carboxylic_acid_metabolite,mono_oligosaccharide,4,False,0.8804802667430562
+196,lactate,carboxylic_acid_metabolite,mono_oligosaccharide,4,False,0.8804816668703745
+197,lactate,carboxylic_acid_metabolite,mono_oligosaccharide,4,False,0.8792384025180441
+202,leucine,free_amino_acid,free_amino_acid,4,True,0.7365112873202228
+203,leucine,free_amino_acid,free_amino_acid,4,True,0.7374022153122772
+204,leucine,free_amino_acid,free_amino_acid,4,True,0.731074505726509
+205,leucine,free_amino_acid,free_amino_acid,4,True,0.7727006444067366
+206,linoleic acid,fatty_acid,acylglycerol,4,False,0.8121324214295893
+236,papain,peptide_protein,peptide_protein,4,True,0.7665765860359974
+237,papain,peptide_protein,peptide_protein,4,True,0.7585944886195337
+238,papain,peptide_protein,peptide_protein,4,True,0.7407988169935211
+239,pepsin,peptide_protein,peptide_protein,4,True,0.7800323893212926
+240,pepsin,peptide_protein,peptide_protein,4,True,0.7733822159636669
+241,pepsin,peptide_protein,peptide_protein,4,True,0.6556771994334394
+245,phenylalanine,free_amino_acid,small_nitrogenous,4,False,0.8858782601794478
+246,phenylalanine,free_amino_acid,small_nitrogenous,4,False,0.8789992078225015
+247,phenylalanine,free_amino_acid,small_nitrogenous,4,False,0.8789976251650945
+248,phenylalanine,free_amino_acid,small_nitrogenous,4,False,0.8789888174519601
+249,phenylalanine,free_amino_acid,small_nitrogenous,4,False,0.8869327443639987
+253,phosphatidylinositol,phospholipid_sphingolipid,purine,4,False,0.7560972107022248
+254,phosphatidylinositol,phospholipid_sphingolipid,purine,4,False,0.7536015059607326
+255,phosphatidylinositol,phospholipid_sphingolipid,purine,4,False,0.7685147572795584
+269,riboflavin,chromophore_pigment,chromophore_pigment,4,True,0.7169869991631278
+270,riboflavin,chromophore_pigment,chromophore_pigment,4,True,0.711846190727205
+271,riboflavin,chromophore_pigment,chromophore_pigment,4,True,0.710561659147251
+272,riboflavin,chromophore_pigment,chromophore_pigment,4,True,0.7136737660095994
+310,triolein,acylglycerol,acylglycerol,4,True,0.8077403677345671
+311,triolein,acylglycerol,acylglycerol,4,True,0.8145638424303937
+312,triolein,acylglycerol,acylglycerol,4,True,0.8029185125052385
+313,triolein,acylglycerol,acylglycerol,4,True,0.8036821300526409
+314,triolein,acylglycerol,acylglycerol,4,True,0.8016624714003522
+322,trypsin,peptide_protein,peptide_protein,4,True,0.7997377883394124
+323,trypsin,peptide_protein,peptide_protein,4,True,0.8007191268776118
+324,trypsin,peptide_protein,peptide_protein,4,True,0.769714517783841
+336,tubulin,peptide_protein,peptide_protein,4,True,0.5044237542684129
+361,xanthine,purine,purine,4,True,0.9033936870944025
+362,xanthine,purine,purine,4,True,0.903599037806046
+363,xanthine,purine,purine,4,True,0.9034898637935805
+367,α-chymotrypsinogen a (type ii),peptide_protein,peptide_protein,4,True,0.8111316544760426
+368,α-chymotrypsinogen a (type ii),peptide_protein,peptide_protein,4,True,0.8219250962230207
+369,α-chymotrypsinogen a (type ii),peptide_protein,peptide_protein,4,True,0.8105904850376207
+374,β-d-glucose,mono_oligosaccharide,mono_oligosaccharide,4,True,0.8841154592057384

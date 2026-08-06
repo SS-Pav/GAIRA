@@ -1,0 +1,7 @@
+negative_kind,n,joint_auroc
+extreme_band_broadening,125,0.974336
+extreme_gaussian_noise,125,0.9968853333333333
+extreme_peak_dropout,125,0.6882133333333333
+extreme_spectral_stretch,125,0.8812586666666666
+fluorescence_only,125,0.9915946666666666
+white_noise,125,0.995584

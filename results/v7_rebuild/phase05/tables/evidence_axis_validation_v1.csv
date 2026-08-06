@@ -1,0 +1,12 @@
+axis,expected_classes,n_positive,auroc,verdict
+aliphatic_chain,fatty_acid;acylglycerol,50,0.9089846153846154,grounded
+unsaturation,fatty_acid;acylglycerol,50,0.5339076923076923,not discriminative
+carbonyl_ester,acylglycerol;phospholipid_sphingolipid;carboxylic_acid_metabolite,54,0.6264566747432792,weak
+amide_protein,peptide_protein,80,0.6625847457627119,weak
+carbohydrate_skeletal,mono_oligosaccharide;polysaccharide,53,0.7482714168522208,grounded
+heterocyclic_ring,purine;pyrimidine;nucleic_acid_polymer,29,0.8484153876818816,grounded
+purine,purine,17,0.9344396976667763,grounded
+sulfur_thiol,sulfur_thiol_cofactor,16,0.6629526462395543,weak
+phosphate_nucleic,phosphate_metabolite;nucleic_acid_polymer;phospholipid_sphingolipid,22,0.7348699459181045,grounded
+aromatic_residue,free_amino_acid;peptide_protein,155,0.7842521994134898,grounded
+chromophore_conjugated,chromophore_pigment,10,0.893972602739726,grounded

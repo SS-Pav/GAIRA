@@ -1,0 +1,259 @@
+{
+  "projection": {
+    "mean_ev": 0.8211681921841122,
+    "min_ev": 0.20623088731230155,
+    "mean_active_csms": 9.557333333333334,
+    "mean_sparsity": 0.8764460758962571
+  },
+  "metric": {
+    "selected": "cosine",
+    "nested_choices": {
+      "0": "cosine",
+      "1": "pearson",
+      "2": "cosine",
+      "3": "cosine",
+      "4": "mahalanobis"
+    }
+  },
+  "split_a": {
+    "molecule_top1": 0.6053333333333333,
+    "molecule_top3": 0.7626666666666667,
+    "molecule_top5": 0.7946666666666666,
+    "class_top1": 0.9413333333333334,
+    "ece": 0.1295548700039556,
+    "calibration": "dirichlet",
+    "discrimination": 0.8912612668064795,
+    "sharpness": 0.2748119924537246,
+    "mean_confidence": 0.6053403561567131
+  },
+  "split_b": {
+    "class_top1": 0.8453333333333334,
+    "class_top3": 0.9706666666666667,
+    "macro_f1": 0.8067832265276851,
+    "balanced_accuracy": 0.79661202673088,
+    "molecule_top1": null,
+    "molecule_top1_note": "undefined by construction: the molecule is absent from the reference bank"
+  },
+  "openset": {
+    "joint_auroc": 0.921312,
+    "operating_point": {
+      "threshold": 0.6179246044694509,
+      "in_domain_accept": 0.9493333333333334,
+      "ood_reject": 0.7986666666666666,
+      "target_in_domain_accept": 0.95
+    },
+    "best_channel": "nearest_reference_distance",
+    "best_channel_auroc": 0.9528888888888889,
+    "by_kind": [
+      {
+        "negative_kind": "extreme_band_broadening",
+        "n": 125,
+        "joint_auroc": 0.974336
+      },
+      {
+        "negative_kind": "extreme_gaussian_noise",
+        "n": 125,
+        "joint_auroc": 0.9968853333333333
+      },
+      {
+        "negative_kind": "extreme_peak_dropout",
+        "n": 125,
+        "joint_auroc": 0.6882133333333333
+      },
+      {
+        "negative_kind": "extreme_spectral_stretch",
+        "n": 125,
+        "joint_auroc": 0.8812586666666666
+      },
+      {
+        "negative_kind": "fluorescence_only",
+        "n": 125,
+        "joint_auroc": 0.9915946666666666
+      },
+      {
+        "negative_kind": "white_noise",
+        "n": 125,
+        "joint_auroc": 0.995584
+      }
+    ]
+  },
+  "evidence": {
+    "n_axes": 11,
+    "n_grounded": 7,
+    "mean_unassigned_mass": 0.08297879991576783,
+    "validation": [
+      {
+        "axis": "aliphatic_chain",
+        "expected_classes": "fatty_acid;acylglycerol",
+        "n_positive": 50,
+        "auroc": 0.9089846153846154,
+        "verdict": "grounded"
+      },
+      {
+        "axis": "unsaturation",
+        "expected_classes": "fatty_acid;acylglycerol",
+        "n_positive": 50,
+        "auroc": 0.5339076923076923,
+        "verdict": "not discriminative"
+      },
+      {
+        "axis": "carbonyl_ester",
+        "expected_classes": "acylglycerol;phospholipid_sphingolipid;carboxylic_acid_metabolite",
+        "n_positive": 54,
+        "auroc": 0.6264566747432792,
+        "verdict": "weak"
+      },
+      {
+        "axis": "amide_protein",
+        "expected_classes": "peptide_protein",
+        "n_positive": 80,
+        "auroc": 0.6625847457627119,
+        "verdict": "weak"
+      },
+      {
+        "axis": "carbohydrate_skeletal",
+        "expected_classes": "mono_oligosaccharide;polysaccharide",
+        "n_positive": 53,
+        "auroc": 0.7482714168522208,
+        "verdict": "grounded"
+      },
+      {
+        "axis": "heterocyclic_ring",
+        "expected_classes": "purine;pyrimidine;nucleic_acid_polymer",
+        "n_positive": 29,
+        "auroc": 0.8484153876818816,
+        "verdict": "grounded"
+      },
+      {
+        "axis": "purine",
+        "expected_classes": "purine",
+        "n_positive": 17,
+        "auroc": 0.9344396976667763,
+        "verdict": "grounded"
+      },
+      {
+        "axis": "sulfur_thiol",
+        "expected_classes": "sulfur_thiol_cofactor",
+        "n_positive": 16,
+        "auroc": 0.6629526462395543,
+        "verdict": "weak"
+      },
+      {
+        "axis": "phosphate_nucleic",
+        "expected_classes": "phosphate_metabolite;nucleic_acid_polymer;phospholipid_sphingolipid",
+        "n_positive": 22,
+        "auroc": 0.7348699459181045,
+        "verdict": "grounded"
+      },
+      {
+        "axis": "aromatic_residue",
+        "expected_classes": "free_amino_acid;peptide_protein",
+        "n_positive": 155,
+        "auroc": 0.7842521994134898,
+        "verdict": "grounded"
+      },
+      {
+        "axis": "chromophore_conjugated",
+        "expected_classes": "chromophore_pigment",
+        "n_positive": 10,
+        "auroc": 0.893972602739726,
+        "verdict": "grounded"
+      }
+    ],
+    "secondary_tests": [
+      {
+        "axis": "unsaturation",
+        "test": "unsaturated vs saturated within lipids",
+        "n_positive": 25,
+        "n_negative": 25,
+        "auroc": 1.0,
+        "verdict": "grounded"
+      }
+    ]
+  },
+  "robustness": [
+    {
+      "representation": "raw",
+      "clean_molecule_top1": 0.9653333333333334,
+      "clean_class_top1": 0.992,
+      "clean_class_top1_grouped": 0.592,
+      "mean_class_top1_grouped_perturbed": 0.5296000000000002,
+      "class_retention_grouped": 0.8945945945930839,
+      "mean_molecule_top1_perturbed": 0.8882285714285714,
+      "mean_class_top1_perturbed": 0.935847619047619,
+      "molecule_retention": 0.9201262825562685,
+      "class_retention": 0.943394777264794,
+      "mean_ece_perturbed": 0.8772328305807224
+    },
+    {
+      "representation": "lsm",
+      "clean_molecule_top1": 0.8933333333333333,
+      "clean_class_top1": 0.9706666666666667,
+      "clean_class_top1_grouped": 0.848,
+      "mean_class_top1_grouped_perturbed": 0.7824761904761905,
+      "class_retention_grouped": 0.9227313566925328,
+      "mean_molecule_top1_perturbed": 0.8008380952380952,
+      "mean_class_top1_perturbed": 0.917409523809524,
+      "molecule_retention": 0.8964605543699987,
+      "class_retention": 0.9451334379896074,
+      "mean_ece_perturbed": 0.785685384573084
+    },
+    {
+      "representation": "csm",
+      "clean_molecule_top1": 0.8986666666666666,
+      "clean_class_top1": 0.9733333333333334,
+      "clean_class_top1_grouped": 0.8453333333333334,
+      "mean_class_top1_grouped_perturbed": 0.7900952380952382,
+      "class_retention_grouped": 0.9346552501115578,
+      "mean_molecule_top1_perturbed": 0.8116571428571429,
+      "mean_class_top1_perturbed": 0.9292190476190476,
+      "molecule_retention": 0.9031793132673291,
+      "class_retention": 0.9546771037172187,
+      "mean_ece_perturbed": 0.7964577075712591
+    },
+    {
+      "representation": "evidence",
+      "clean_molecule_top1": 0.8693333333333333,
+      "clean_class_top1": 0.968,
+      "clean_class_top1_grouped": 0.664,
+      "mean_class_top1_grouped_perturbed": 0.6117333333333334,
+      "class_retention_grouped": 0.9212851405608615,
+      "mean_molecule_top1_perturbed": 0.7076571428571428,
+      "mean_class_top1_perturbed": 0.8759619047619047,
+      "molecule_retention": 0.8140227870279856,
+      "class_retention": 0.9049193231002065,
+      "mean_ece_perturbed": 0.6993857821818974
+    }
+  ],
+  "provenance": {
+    "n_chains": 3133,
+    "broken": 0
+  },
+  "engine": {
+    "metric": "cosine",
+    "calibration": "dirichlet",
+    "reject_threshold": 0.6179246044694509,
+    "fingerprint": "20d8bd99ce71f45a125c6a2b1d719e51",
+    "csm_fingerprint": "0b4aa550ccefed3edabdbde5bae11c8d",
+    "lsm_fingerprint": "208482d6f7178b5b8f16cace91be55b0",
+    "axes": [
+      "aliphatic_chain",
+      "unsaturation",
+      "carbonyl_ester",
+      "amide_protein",
+      "carbohydrate_skeletal",
+      "heterocyclic_ring",
+      "purine",
+      "sulfur_thiol",
+      "phosphate_nucleic",
+      "aromatic_residue",
+      "chromophore_conjugated"
+    ],
+    "n_references": 154,
+    "geometry_used_in_inference": false
+  },
+  "gates": {
+    "n": 15,
+    "failed": 1
+  }
+}

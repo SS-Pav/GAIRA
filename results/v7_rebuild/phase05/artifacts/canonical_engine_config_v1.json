@@ -1,0 +1,23 @@
+{
+  "metric": "cosine",
+  "calibration": "dirichlet",
+  "reject_threshold": 0.6179246044694509,
+  "fingerprint": "20d8bd99ce71f45a125c6a2b1d719e51",
+  "csm_fingerprint": "0b4aa550ccefed3edabdbde5bae11c8d",
+  "lsm_fingerprint": "208482d6f7178b5b8f16cace91be55b0",
+  "axes": [
+    "aliphatic_chain",
+    "unsaturation",
+    "carbonyl_ester",
+    "amide_protein",
+    "carbohydrate_skeletal",
+    "heterocyclic_ring",
+    "purine",
+    "sulfur_thiol",
+    "phosphate_nucleic",
+    "aromatic_residue",
+    "chromophore_conjugated"
+  ],
+  "n_references": 154,
+  "geometry_used_in_inference": false
+}
