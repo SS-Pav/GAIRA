@@ -1,0 +1,7 @@
+invariant,status,detail
+batch independence,PASS,output identical alone and inside a batch
+determinism (bit-identical),PASS,"same input, same atlas, same bytes"
+BSV non-negative and absolute,PASS,contract C-09
+elevation is signed and never named bsv,PASS,"SpectrumState.bsv_elevation, separate field"
+every ACTIVATED theme resolves to CSMs → LSMs → molecules,PASS,"a theme with zero activation has zero support, which is correct — the invariant is that every theme the engine DOES activate is explainable"
+no fitting in the inference path,PASS,static check in tests/test_v7_phase04.py

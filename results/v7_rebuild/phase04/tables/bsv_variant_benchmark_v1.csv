@@ -1,0 +1,5 @@
+variant,dim,axes,within_molecule_cosine,between_molecule_cosine,separation_ratio,class_retrieval_top1,participation_ratio,entropy_rank,n_axes_90pct,nominal_K
+theme_only,4,theme_0;theme_1;theme_2;theme_3,0.9790694061973956,0.517469844950362,7.2585461703229806,1.0,2.401148707815027,2.840288313214282,3,4
+theme_plus_residual,5,theme_0;theme_1;theme_2;theme_3;residual_unexplained,0.9779473775577968,0.4950899296807587,6.220418235950262,1.0,2.773273272957976,3.4425389155975106,4,5
+theme_plus_uncertainty,5,theme_0;theme_1;theme_2;theme_3;rejected_theme_mass,0.9781090042579014,0.49200276679895266,7.170014782498272,1.0,2.8370544457290077,3.3902899887774773,4,5
+full_state,7,theme_0;theme_1;theme_2;theme_3;residual_unexplained;rejected_theme_mass;bridge_mass,0.9751415011868058,0.5519751640295719,5.101251295726344,1.0,3.886954494965329,4.769913168886019,5,7

@@ -1,0 +1,5 @@
+theme_mode,replicate_consistency,mean_active_themes,zero_evidence_leakage,admissible,class_retrieval_top1,rejected_mass
+soft_membership,0.97810639471727,3.856,0.0,True,1.0,0.17505328934683118
+sparse_topk,0.9335144675528668,1.4666666666666666,0.0,True,0.504,0.20033171250849663
+probabilistic,0.9932732171369655,4.0,0.029649969684980956,False,1.0,0.19792120473550942
+confidence_weighted,0.9790694061973956,3.856,0.0,True,1.0,0.15785256083517393

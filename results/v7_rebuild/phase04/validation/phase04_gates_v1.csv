@@ -1,0 +1,12 @@
+gate,status,detail
+frozen fingerprints verified,PASS,"atlas, LSM, CSM, theme"
+no fitting during inference,PASS,static check; engine calls no fit method
+batch independence,PASS,identical alone vs in a batch
+determinism,PASS,bit-identical on re-run
+BSV non-negative and absolute,PASS,contract C-09
+effective rank reported alongside K,PASS,participation ratio 2.40 of K = 4
+held-out evaluation is molecule-grouped,PASS,frozen Phase 00 folds; every spectrum of a molecule withheld together
+"dictionary-level leakage measured, not assumed",PASS,frozen vs fold-honest top1 gap +0.055
+uncertainty propagates to every level,PASS,"CSM disagreement, theme entropy, rejected-theme mass, geometric locality"
+explanation chain resolvable,PASS,theme → CSM → LSM → molecule → spectrum
+OOD detection separates in from out,FAIL,"AUROC 0.548 on the REAL Ag-SERS probe (0.946 on the synthetic band-shift probe). A failure here is reported, not compensated: the atlas cannot tell SERS from Raman."

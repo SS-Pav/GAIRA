@@ -1,0 +1,87 @@
+{
+  "schema": "gaira_v7_phase_state_v1",
+  "phase": "04",
+  "phase_name": "Frozen projection engine and hierarchical inference",
+  "status": "GATE_FAILED",
+  "completed_utc": "2026-08-06T16:33:31.150162+00:00",
+  "frozen_inputs": {
+    "atlas": "09ed804a40836f4a05a91ba10900cded",
+    "lsm": "208482d6f7178b5b8f16cace91be55b0",
+    "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+    "theme": "f54d4835ffdf8aa2d50a4a203da0e8f4"
+  },
+  "engine_config": {
+    "projection_method": "elastic_net",
+    "aggregation_method": "direct_csm_projection",
+    "theme_mode": "confidence_weighted",
+    "bsv_variant": "theme_only",
+    "geometry_extension": "landmark_barycentric",
+    "knn": 5
+  },
+  "engine_version": "v7_engine_v1",
+  "bsv_dimension": 4,
+  "bsv_effective_rank": {
+    "participation_ratio": 2.401148707815027,
+    "entropy_rank": 2.840288313214282,
+    "n_axes_90pct": 3,
+    "nominal_K": 4
+  },
+  "retrieval": {
+    "L1_spectrum_raw": {
+      "A_molecule_top1": 0.7896440129449838,
+      "B_class_top1": 0.6076549707602339
+    },
+    "L2_lsm": {
+      "A_molecule_top1": 0.8058252427184466,
+      "B_class_top1": 0.8500233918128656
+    },
+    "L3_csm": {
+      "A_molecule_top1": 0.7993527508090615,
+      "B_class_top1": 0.855140350877193
+    },
+    "L4_theme": {
+      "A_molecule_top1": 0.5533980582524272,
+      "B_class_top1": 0.4050000000000001
+    },
+    "L5_bsv": {
+      "A_molecule_top1": 0.5533980582524272,
+      "B_class_top1": 0.4050000000000001
+    },
+    "L6_geometry": {
+      "A_molecule_top1": 0.49514563106796117,
+      "B_class_top1": 0.5413157894736841
+    }
+  },
+  "leakage_inflation_top1": 0.05458782082916891,
+  "ood_auroc": 0.5484333333333333,
+  "calibration_ece": 0.48555409754765233,
+  "bsv_within_molecule_cosine": 0.9790694061973956,
+  "bsv_separation_ratio": 7.2585461703229806,
+  "abstraction": {
+    "molecule_identity_peaks_at": "L2_lsm",
+    "class_identity_peaks_at": "L3_csm",
+    "replicate_consistency_peaks_at": "theme",
+    "split_A_molecule_top1_by_level": {
+      "L1_spectrum_raw": 0.7896,
+      "L2_lsm": 0.8058,
+      "L3_csm": 0.7994,
+      "L4_theme": 0.5534,
+      "L5_bsv": 0.5534,
+      "L6_geometry": 0.4951
+    },
+    "split_B_class_top1_by_level": {
+      "L1_spectrum_raw": 0.6077,
+      "L2_lsm": 0.85,
+      "L3_csm": 0.8551,
+      "L4_theme": 0.405,
+      "L5_bsv": 0.405,
+      "L6_geometry": 0.5413
+    },
+    "note": "split A = leave-one-spectrum-out, molecule present; split B = molecule-grouped, molecule absent. Molecule top-k is undefined under B.",
+    "hypothesis_abstraction_improves_robustness": true,
+    "hypothesis_abstraction_improves_molecule_id": false,
+    "hypothesis_abstraction_improves_class_id": true
+  },
+  "gates_passed": 10,
+  "gates_total": 11
+}

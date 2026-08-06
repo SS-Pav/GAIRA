@@ -1,0 +1,26 @@
+{
+  "schema": "gaira_v7_engine_config_v1",
+  "engine_version": "v7_engine_v1",
+  "config": {
+    "projection_method": "elastic_net",
+    "aggregation_method": "direct_csm_projection",
+    "theme_mode": "confidence_weighted",
+    "bsv_variant": "theme_only",
+    "geometry_extension": "landmark_barycentric",
+    "knn": 5
+  },
+  "reference_residual_median": 0.10849611139217571,
+  "fingerprints": {
+    "atlas": "09ed804a40836f4a05a91ba10900cded",
+    "lsm": "208482d6f7178b5b8f16cace91be55b0",
+    "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+    "theme": "f54d4835ffdf8aa2d50a4a203da0e8f4"
+  },
+  "selection_rules": {
+    "projection": "zero negative mass (hard), then maximise replicate consistency x noise stability",
+    "aggregation": "maximise EV x replicate consistency",
+    "theme_mode": "maximise replicate consistency x class retrieval",
+    "bsv": "maximise within-molecule cosine x separation ratio",
+    "geometry": "maximise leave-one-out neighbour preservation"
+  }
+}

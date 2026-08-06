@@ -1,0 +1,388 @@
+{
+  "example_state": {
+    "spectrum_id": "x",
+    "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+    "lsm_fingerprint": "208482d6f7178b5b8f16cace91be55b0",
+    "csm_fingerprint": "0b4aa550ccefed3edabdbde5bae11c8d",
+    "theme_fingerprint": "f54d4835ffdf8aa2d50a4a203da0e8f4",
+    "preprocessing_config_hash": "ba17fb297f078c09",
+    "engine_version": "v7_engine_v1",
+    "qc": {
+      "grid_coverage": 1.0,
+      "snr": 565.4070984903328,
+      "quality": 1.0,
+      "n_negative_bins": 86,
+      "saturated": false
+    },
+    "lsm_activations": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.107715,
+      0.576108,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "csm_activations": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.156196,
+      0.864499,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "csm_uncertainty": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "theme_activations_all": [
+      0.0,
+      0.0,
+      0.0,
+      0.810431,
+      0.0
+    ],
+    "theme_activations": [
+      0.0,
+      0.0,
+      0.810431,
+      0.0
+    ],
+    "bsv": [
+      0.0,
+      0.0,
+      0.810431,
+      0.0
+    ],
+    "bsv_axis_names": [
+      "theme_0",
+      "theme_1",
+      "theme_2",
+      "theme_3"
+    ],
+    "bsv_elevation": [
+      -0.763278,
+      -0.878229,
+      2.587292,
+      -0.841741
+    ],
+    "geometry_coords": [
+      0.126389,
+      -0.028178,
+      -0.001161,
+      0.024004,
+      -0.01368
+    ],
+    "nearest_csms": [
+      {
+        "id": "csm20",
+        "distance": 0.006547305203975495
+      },
+      {
+        "id": "csm23",
+        "distance": 0.024953136705154328
+      },
+      {
+        "id": "csm18",
+        "distance": 0.025411812098135016
+      },
+      {
+        "id": "csm28",
+        "distance": 0.02943000998642457
+      },
+      {
+        "id": "csm21",
+        "distance": 0.036308331713739414
+      }
+    ],
+    "nearest_molecules": [
+      {
+        "canonical_id": "(+)-glucose",
+        "score": 0.08624113913814516,
+        "share": 0.08449264209579288
+      },
+      {
+        "canonical_id": "(+)-lactose",
+        "score": 0.08624113913814516,
+        "share": 0.08449264209579288
+      },
+      {
+        "canonical_id": "(+)-mannose",
+        "score": 0.08624113913814516,
+        "share": 0.08449264209579288
+      },
+      {
+        "canonical_id": "(+)-raffinose pentahydrate",
+        "score": 0.08624113913814516,
+        "share": 0.08449264209579288
+      },
+      {
+        "canonical_id": "(+)-sucrose",
+        "score": 0.08624113913814516,
+        "share": 0.08449264209579288
+      }
+    ],
+    "nearest_reference_spectra": [],
+    "bridge_memberships": {
+      "bridge_proximity": 0.2,
+      "bridge_csms_in_neighbourhood": [
+        "csm21"
+      ]
+    },
+    "ood": {
+      "ood_score": 1.2989039485767735,
+      "ood_residual": 1.2989039485767735,
+      "ood_geometric": 0.6247085256271574,
+      "local_density": 40.76621047747039,
+      "distance_to_support": 0.006547305203975495,
+      "local_confidence": 0.5083394056462655
+    },
+    "residual": {
+      "explained_variance": 0.8590739725061786,
+      "ev_lsm_basis": 0.85737210927797,
+      "unexplained_fraction": 0.14092602749382144,
+      "residual_norm": 0.37540115542438374
+    },
+    "uncertainty": {
+      "theme_entropy": 1.2339018695676378e-12,
+      "theme_entropy_normalised": 8.900720540837838e-13,
+      "rejected_theme_mass": 0.0,
+      "mean_csm_disagreement": 0.0,
+      "geometry_local_confidence": 0.5083394056462655,
+      "method": "entropy of accepted-theme activations; CSM-internal disagreement; rejected-theme mass; geometric locality"
+    },
+    "confidence": 0.6371155806317856,
+    "confidence_tier": "high",
+    "evidence": {
+      "top_csms": [
+        {
+          "csm_id": "csm20",
+          "activation": 0.8644985294741888
+        },
+        {
+          "csm_id": "csm19",
+          "activation": 0.156195545168257
+        },
+        {
+          "csm_id": "csm00",
+          "activation": 0.0
+        },
+        {
+          "csm_id": "csm27",
+          "activation": 0.0
+        },
+        {
+          "csm_id": "csm28",
+          "activation": 0.0
+        }
+      ],
+      "top_themes": [
+        {
+          "theme_id": "Theme-04",
+          "name": "aliphatic chain + polar skeletal backbone",
+          "activation": 0.8104310952652917
+        },
+        {
+          "theme_id": "Theme-01",
+          "name": "carboxyl / ester carbonyl + amide backbone",
+          "activation": 0.0
+        },
+        {
+          "theme_id": "Theme-02",
+          "name": "aliphatic chain + unsaturated chain",
+          "activation": 0.0
+        }
+      ]
+    },
+    "provenance": {
+      "true_canonical_id": null,
+      "chain": "spectrum \u2192 LSM \u2192 CSM \u2192 theme \u2192 BSV \u2192 geometry",
+      "engine": "v7_engine_v1"
+    },
+    "flags": [],
+    "schema": "gaira_v7_inference_v1"
+  },
+  "example_explanation": {
+    "theme_index": 2,
+    "membership_column": 3,
+    "theme_id": "Theme-04",
+    "theme_name": "aliphatic chain + polar skeletal backbone",
+    "activation": 0.8104310952652917,
+    "supporting_csms": [
+      {
+        "csm_id": "csm20",
+        "contribution": 0.8644985294733243,
+        "csm_activation": 0.8644985294741888,
+        "membership_in_theme": 0.0,
+        "lsms": [
+          "mono_oligosaccharide.m02"
+        ],
+        "canonical_molecules": [
+          "(+)-fucose",
+          "(+)-glucose",
+          "(+)-lactose",
+          "(+)-maltose",
+          "(+)-mannose",
+          "(+)-raffinose pentahydrate",
+          "(+)-sucrose",
+          "(+)-trehalose"
+        ],
+        "n_canonical_molecules": 12
+      },
+      {
+        "csm_id": "csm19",
+        "contribution": 0.15619554516810083,
+        "csm_activation": 0.156195545168257,
+        "membership_in_theme": 0.0,
+        "lsms": [
+          "mono_oligosaccharide.m01"
+        ],
+        "canonical_molecules": [
+          "(+)-arabinose",
+          "(+)-galactose",
+          "(+)-glucose",
+          "(+)-lactose",
+          "(+)-mannose",
+          "(+)-raffinose pentahydrate",
+          "(+)-sucrose",
+          "(+)-trehalose"
+        ],
+        "n_canonical_molecules": 11
+      }
+    ],
+    "chain": "theme \u2192 CSM \u2192 LSM \u2192 canonical molecule \u2192 source spectrum"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "schema": "gaira_v7_phase_manifest_v1",
+  "phase": "04",
+  "phase_name": "Frozen projection engine and hierarchical inference",
+  "built_utc": "2026-08-06T16:33:01.592781+00:00",
+  "output_root": "/Users/surajpg/projects/GAIRA/results/v7_rebuild/phase04",
+  "redirectable_via": "GAIRA_V7_OUTPUT_ROOT",
+  "frozen_inputs": {
+    "atlas": "09ed804a40836f4a05a91ba10900cded",
+    "lsm": "208482d6f7178b5b8f16cace91be55b0",
+    "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+    "theme": "f54d4835ffdf8aa2d50a4a203da0e8f4"
+  },
+  "engine_config": {
+    "projection_method": "elastic_net",
+    "aggregation_method": "direct_csm_projection",
+    "theme_mode": "confidence_weighted",
+    "bsv_variant": "theme_only",
+    "geometry_extension": "landmark_barycentric",
+    "knn": 5
+  },
+  "seed": 0,
+  "outputs": [
+    {
+      "artifact_id": "projection_benchmark_v1.csv",
+      "path": "results/v7_rebuild/phase04/tables/projection_benchmark_v1.csv",
+      "sha256": "adf7076c83a438a4aff95641baccd5c31e87f834e1c147cbca393ddbf601e526",
+      "rows": 6
+    },
+    {
+      "artifact_id": "aggregation_benchmark_v1.csv",
+      "path": "results/v7_rebuild/phase04/tables/aggregation_benchmark_v1.csv",
+      "sha256": "a6ea9794645c43925e881d3ad0211dfe0e5b19746ee4a3b3735487bc64cb4e58",
+      "rows": 5
+    },
+    {
+      "artifact_id": "theme_mode_benchmark_v1.csv",
+      "path": "results/v7_rebuild/phase04/tables/theme_mode_benchmark_v1.csv",
+      "sha256": "8954a21c1c471891f7c19bfcda76e9f7385e07205cedd75a607f570906d66d81",
+      "rows": 4
+    },
+    {
+      "artifact_id": "bsv_variant_benchmark_v1.csv",
+      "path": "results/v7_rebuild/phase04/tables/bsv_variant_benchmark_v1.csv",
+      "sha256": "8af59bc226e899aa46c690408bd36b4c3f3ebfd18f267cd8fc4ff62bb212b7dd",
+      "rows": 4
+    },
+    {
+      "artifact_id": "geometry_extension_benchmark_v1.csv",
+      "path": "results/v7_rebuild/phase04/tables/geometry_extension_benchmark_v1.csv",
+      "sha256": "328b96f67902f501d66ef3371546432ff37f9ef199b62d3b36d6530ea69baae5",
+      "rows": 4
+    },
+    {
+      "artifact_id": "bsv_reference_v1.json",
+      "path": "results/v7_rebuild/phase04/artifacts/bsv_reference_v1.json",
+      "sha256": "7f7cdc13d6a2574659647be87d706529ed094682d13b982903a8a44332a4a57d"
+    },
+    {
+      "artifact_id": "engine_config_v1.json",
+      "path": "results/v7_rebuild/phase04/artifacts/engine_config_v1.json",
+      "sha256": "696554d8f35b081e0cf56fe9c7554c4b66b356426cfbcaaecc1c4381aac3aa4a"
+    },
+    {
+      "artifact_id": "hierarchy_retrieval_v1.csv",
+      "path": "results/v7_rebuild/phase04/tables/hierarchy_retrieval_v1.csv",
+      "sha256": "0c54ab4d2c0767185eeb1b4de75e555047f6feb0d6d87dbe1deaeee1db281f6b",
+      "rows": 6
+    },
+    {
+      "artifact_id": "hierarchy_retrieval_per_fold_v1.csv",
+      "path": "results/v7_rebuild/phase04/validation/hierarchy_retrieval_per_fold_v1.csv",
+      "sha256": "a550955902a428d395f9983b1becea85c3f8245b7a7c430bcf15739ad9404ac0",
+      "rows": 30
+    },
+    {
+      "artifact_id": "per_class_retrieval_v1.csv",
+      "path": "results/v7_rebuild/phase04/validation/per_class_retrieval_v1.csv",
+      "sha256": "d92b0915a8b09c3b026007a3917fff893e4fe5f490733503070ab39bd4bc8e17",
+      "rows": 16
+    },
+    {
+      "artifact_id": "activation_recovery_v1.csv",
+      "path": "results/v7_rebuild/phase04/validation/activation_recovery_v1.csv",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "rows": 0
+    },
+    {
+      "artifact_id": "bsv_noise_robustness_v1.csv",
+      "path": "results/v7_rebuild/phase04/validation/bsv_noise_robustness_v1.csv",
+      "sha256": "126da9c9cce1c415751cb6a322070232568808cb2b4ddff577063909714b9926",
+      "rows": 4
+    },
+    {
+      "artifact_id": "ood_probes_v1.json",
+      "path": "results/v7_rebuild/phase04/artifacts/ood_probes_v1.json",
+      "sha256": "7716422736cfad3c851975acc0d17285b849eac7cc5eeaf57fa3769198ff099e"
+    },
+    {
+      "artifact_id": "leakage_control_v1.csv",
+      "path": "results/v7_rebuild/phase04/validation/leakage_control_v1.csv",
+      "sha256": "cb3591bd59f5308653eed703d4b797cee280d8e731ee0cdea0b5a3570ac339be",
+      "rows": 10
+    },
+    {
+      "artifact_id": "information_flow_v1.csv",
+      "path": "results/v7_rebuild/phase04/tables/information_flow_v1.csv",
+      "sha256": "c850088a2a4b6b0bd7277fcf1d29b8e7c76e099c0cb119c9852edd3d2b0d82f5",
+      "rows": 6
+    },
+    {
+      "artifact_id": "abstraction_analysis_v1.json",
+      "path": "results/v7_rebuild/phase04/artifacts/abstraction_analysis_v1.json",
+      "sha256": "9a5700c3fbabef9903da7322bd678482150a72033193f43382faf8a509eb878f"
+    },
+    {
+      "artifact_id": "engine_invariants_v1.csv",
+      "path": "results/v7_rebuild/phase04/validation/engine_invariants_v1.csv",
+      "sha256": "834288dac833bf6b5560de990c5fd041cbe56c0db7c416d88d763dee907ddae6",
+      "rows": 6
+    },
+    {
+      "artifact_id": "worked_example_v1.json",
+      "path": "results/v7_rebuild/phase04/artifacts/worked_example_v1.json",
+      "sha256": "b7114cdb00cf25562197ebc710cb007dc75fc0f11158a832f4e1d34850ab1587"
+    },
+    {
+      "artifact_id": "inference_v1.npz",
+      "path": "results/v7_rebuild/phase04/artifacts/inference_v1.npz",
+      "sha256": "b0a007dc7bca74f62f8a30e89e37581a83b1e4174ac6f834f37cb7833c797524"
+    },
+    {
+      "artifact_id": "phase04_gates_v1.csv",
+      "path": "results/v7_rebuild/phase04/validation/phase04_gates_v1.csv",
+      "sha256": "6b429ab8f03a5bcfaa2bad3a6f0dbf5d6b7a2d6394f2a92b7e9ca10955818dc2",
+      "rows": 11
+    }
+  ],
+  "gates": [
+    {
+      "gate": "frozen fingerprints verified",
+      "status": "PASS",
+      "detail": "atlas, LSM, CSM, theme"
+    },
+    {
+      "gate": "no fitting during inference",
+      "status": "PASS",
+      "detail": "static check; engine calls no fit method"
+    },
+    {
+      "gate": "batch independence",
+      "status": "PASS",
+      "detail": "identical alone vs in a batch"
+    },
+    {
+      "gate": "determinism",
+      "status": "PASS",
+      "detail": "bit-identical on re-run"
+    },
+    {
+      "gate": "BSV non-negative and absolute",
+      "status": "PASS",
+      "detail": "contract C-09"
+    },
+    {
+      "gate": "effective rank reported alongside K",
+      "status": "PASS",
+      "detail": "participation ratio 2.40 of K = 4"
+    },
+    {
+      "gate": "held-out evaluation is molecule-grouped",
+      "status": "PASS",
+      "detail": "frozen Phase 00 folds; every spectrum of a molecule withheld together"
+    },
+    {
+      "gate": "dictionary-level leakage measured, not assumed",
+      "status": "PASS",
+      "detail": "frozen vs fold-honest top1 gap +0.055"
+    },
+    {
+      "gate": "uncertainty propagates to every level",
+      "status": "PASS",
+      "detail": "CSM disagreement, theme entropy, rejected-theme mass, geometric locality"
+    },
+    {
+      "gate": "explanation chain resolvable",
+      "status": "PASS",
+      "detail": "theme \u2192 CSM \u2192 LSM \u2192 molecule \u2192 spectrum"
+    },
+    {
+      "gate": "OOD detection separates in from out",
+      "status": "FAIL",
+      "detail": "AUROC 0.548 on the REAL Ag-SERS probe (0.946 on the synthetic band-shift probe). A failure here is reported, not compensated: the atlas cannot tell SERS from Raman."
+    }
+  ],
+  "code_dirty": true,
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.4.3",
+    "pandas": "2.3.3"
+  }
+}

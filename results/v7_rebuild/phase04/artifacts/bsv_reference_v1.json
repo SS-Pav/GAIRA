@@ -1,0 +1,64 @@
+{
+  "schema": "bsv_reference_v1",
+  "K": 4,
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "axes": [
+    {
+      "theme_id": "Theme-01",
+      "index": 0,
+      "name": "carboxyl / ester carbonyl + amide backbone",
+      "reference_mean": 0.11831965229981246,
+      "reference_spread": 0.15501524959497828,
+      "confidence": 0.755,
+      "uncertainty_inflation": 1.3245033112582782
+    },
+    {
+      "theme_id": "Theme-02",
+      "index": 1,
+      "name": "aliphatic chain + unsaturated chain",
+      "reference_mean": 0.2659208097113357,
+      "reference_spread": 0.30279197457996904,
+      "confidence": 0.9,
+      "uncertainty_inflation": 1.1111111111111112
+    },
+    {
+      "theme_id": "Theme-04",
+      "index": 2,
+      "name": "aliphatic chain + polar skeletal backbone",
+      "reference_mean": 0.20811401029329238,
+      "reference_spread": 0.23279829890638015,
+      "confidence": 0.794,
+      "uncertainty_inflation": 1.2594458438287153
+    },
+    {
+      "theme_id": "Theme-05",
+      "index": 3,
+      "name": "heterocyclic / conjugated ring + sulfur / thiol",
+      "reference_mean": 0.1341739060124929,
+      "reference_spread": 0.1594003767988461,
+      "confidence": 0.706,
+      "uncertainty_inflation": 1.41643059490085
+    }
+  ],
+  "effective_rank": {
+    "participation_ratio": 2.401148707815027,
+    "entropy_rank": 2.840288313214282,
+    "n_axes_90pct": 3,
+    "nominal_K": 4
+  },
+  "explained_variance_ratio": [
+    0.5755951416906702,
+    0.25115687332755143,
+    0.1460813692209173,
+    0.027166615755754863
+  ],
+  "axis_names": [
+    "theme_0",
+    "theme_1",
+    "theme_2",
+    "theme_3"
+  ],
+  "visualisation": {
+    "note": "no frozen visualisation transform is shipped in Phase 04; a PCA for plotting would be VISUALISATION ONLY and is not the canonical BSV"
+  }
+}

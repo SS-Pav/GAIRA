@@ -1,0 +1,120 @@
+{
+  "calibration": {
+    "ece": 0.48555409754765233,
+    "curve": [
+      {
+        "bin_lo": 0.00024202939995832202,
+        "bin_hi": 0.12441761647392788,
+        "n": 107,
+        "mean_confidence": 0.04901632500077351,
+        "accuracy": 0.8785046728971962
+      },
+      {
+        "bin_lo": 0.12441761647392788,
+        "bin_hi": 0.24859320354789743,
+        "n": 45,
+        "mean_confidence": 0.17216416909036256,
+        "accuracy": 0.8666666666666667
+      },
+      {
+        "bin_lo": 0.24859320354789743,
+        "bin_hi": 0.37276879062186696,
+        "n": 20,
+        "mean_confidence": 0.3238597705625698,
+        "accuracy": 0.95
+      },
+      {
+        "bin_lo": 0.37276879062186696,
+        "bin_hi": 0.49694437769583655,
+        "n": 14,
+        "mean_confidence": 0.4234500713160486,
+        "accuracy": 0.7857142857142857
+      },
+      {
+        "bin_lo": 0.49694437769583655,
+        "bin_hi": 0.6211199647698061,
+        "n": 40,
+        "mean_confidence": 0.5712241263210778,
+        "accuracy": 0.675
+      },
+      {
+        "bin_lo": 0.6211199647698061,
+        "bin_hi": 0.7452955518437756,
+        "n": 34,
+        "mean_confidence": 0.6742250280079193,
+        "accuracy": 0.6764705882352942
+      },
+      {
+        "bin_lo": 0.7452955518437756,
+        "bin_hi": 0.8694711389177452,
+        "n": 27,
+        "mean_confidence": 0.816855409588724,
+        "accuracy": 0.8148148148148148
+      },
+      {
+        "bin_lo": 0.8694711389177452,
+        "bin_hi": 0.9936467259917148,
+        "n": 22,
+        "mean_confidence": 0.9159712219212062,
+        "accuracy": 0.5454545454545454
+      }
+    ]
+  },
+  "ood_separation": {
+    "auroc": 0.5484333333333333,
+    "n_in": 375,
+    "n_out": 80,
+    "mean_in": 1.6480788155626858,
+    "mean_out": 1.389781348291838
+  },
+  "bsv_reproducibility": {
+    "within_molecule_cosine": 0.9790694061973956,
+    "between_molecule_cosine": 0.517469844950362,
+    "separation_ratio": 7.2585461703229806,
+    "n_replicated_molecules": 88
+  },
+  "distance_preservation": {
+    "lsm": {
+      "distance_spearman": 0.6059060677295757,
+      "knn_preservation": 0.6176
+    },
+    "csm": {
+      "distance_spearman": 0.5560598888095907,
+      "knn_preservation": 0.6144000000000001
+    },
+    "theme": {
+      "distance_spearman": 0.6202219443620575,
+      "knn_preservation": 0.3525333333333333
+    },
+    "bsv": {
+      "distance_spearman": 0.6202219443620575,
+      "knn_preservation": 0.3525333333333333
+    },
+    "geometry": {
+      "distance_spearman": 0.2746331052266222,
+      "knn_preservation": 0.3386666666666667
+    }
+  },
+  "dictionary_conditioning": {
+    "max_coherence": 0.9701305987969403,
+    "mean_coherence": 0.349708952717637,
+    "condition_number": 55.41371673413773,
+    "effective_rank": 12.335527525616605
+  },
+  "geometry_neighbourhood_purity": 0.4822912280701755,
+  "geometry_lift_over_chance": 4.057689328769385,
+  "ood_synthetic": {
+    "auroc": 0.9463253333333334,
+    "n_in": 375,
+    "n_out": 125,
+    "mean_in": 1.6480788155626858,
+    "mean_out": 5.104921147714685
+  },
+  "ood_real_sers": {
+    "auroc": 0.5484333333333333,
+    "n_in": 375,
+    "n_out": 80,
+    "mean_in": 1.6480788155626858,
+    "mean_out": 1.389781348291838
+  }
+}
