@@ -1,35 +1,35 @@
 {
   "selected_model": "archetypal",
-  "selected_K": 6,
+  "selected_K": 5,
   "selection": {
-    "K": 6,
-    "peak_K": 6,
+    "K": 5,
+    "peak_K": 5,
     "plateau": [
-      6,
-      6
+      5,
+      5
     ],
-    "composite": 0.36556470068708957,
+    "composite": 0.3247210533607199,
     "status": "PASS",
     "n_admissible": 2,
     "n_swept": 13,
-    "rationale": "2 of 13 K values are chemically admissible; the composite peaks at K=6 (0.3656); the contiguous admissible plateau within 0.02 spans K=6\u20136; smallest selected"
+    "rationale": "2 of 13 K values are chemically admissible; the composite peaks at K=5 (0.3247); the contiguous admissible plateau within 0.02 spans K=5\u20135; smallest selected"
   },
   "model_comparison": [
     {
       "model": "archetypal",
-      "K": 6,
-      "peak_K": 6,
+      "K": 5,
+      "peak_K": 5,
       "plateau": [
-        6,
-        6
+        5,
+        5
       ],
-      "composite": 0.36556470068708957,
+      "composite": 0.3247210533607199,
       "status": "PASS",
       "n_admissible": 2,
       "n_swept": 13,
       "n_degenerate_K": 1,
       "best_composite": 0.5067739482294376,
-      "rationale": "2 of 13 K values are chemically admissible; the composite peaks at K=6 (0.3656); the contiguous admissible plateau within 0.02 spans K=6\u20136; smallest selected"
+      "rationale": "2 of 13 K values are chemically admissible; the composite peaks at K=5 (0.3247); the contiguous admissible plateau within 0.02 spans K=5\u20135; smallest selected"
     },
     {
       "model": "sparse_nmf",
@@ -49,19 +49,27 @@
     },
     {
       "model": "diffusion_gmm",
-      "K": null,
-      "status": "FAIL",
+      "K": 4,
+      "peak_K": 4,
+      "plateau": [
+        4,
+        4
+      ],
+      "composite": 0.4208888711849753,
+      "status": "PASS",
+      "n_admissible": 2,
+      "n_swept": 13,
       "n_degenerate_K": 1,
-      "best_composite": NaN,
-      "rationale": "no K in the sweep is both chemically admissible and composed of distinguishable themes"
+      "best_composite": 0.46618509739795855,
+      "rationale": "2 of 13 K values are chemically admissible; the composite peaks at K=4 (0.4209); the contiguous admissible plateau within 0.02 spans K=4\u20134; smallest selected"
     },
     {
       "model": "graph_regularised_nmf",
       "K": null,
       "status": "FAIL",
-      "n_degenerate_K": 13,
+      "n_degenerate_K": 14,
       "best_composite": NaN,
-      "rationale": "no K in the sweep is both chemically admissible and composed of distinguishable themes"
+      "rationale": "every K for this model is degenerate \u2014 the fit retains no information about the CSM spectra"
     }
   ],
   "criteria": {

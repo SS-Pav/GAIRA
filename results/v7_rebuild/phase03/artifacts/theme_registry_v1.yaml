@@ -1,98 +1,83 @@
 schema: theme_registry_v1
-K: 6
+K: 5
 model: archetypal
-fingerprint: d3e91614d50f11e025458e7843de21ec
+fingerprint: f54d4835ffdf8aa2d50a4a203da0e8f4
 K_selection:
   rationale: >-
-    2 of 13 K values are chemically admissible; the composite peaks at K=6 (0.3656); the contiguous admissible plateau within 0.02 spans K=6–6; smallest selected
+    2 of 13 K values are chemically admissible; the composite peaks at K=5 (0.3247); the contiguous admissible plateau within 0.02 spans K=5–5; smallest selected
 themes:
   - theme_id: Theme-01
-    name: polar skeletal backbone + sulfur / thiol
-    chemical_definition: C–O, C–C and C–N skeletal stretching, including glycosidic C–O–C; S–S and C–S stretching
-    chemically_admissible: true
-    n_supporting_csms: 16
-    membership_entropy: 2.6979
-    confidence: 0.830
-    dominant_bands_cm1: [526, 898, 1118, 1330, 1518]
-    top_csms:
-      - {csm_id: csm05, membership: 1.0000}
-      - {csm_id: csm23, membership: 1.0000}
-      - {csm_id: csm14, membership: 0.9140}
-      - {csm_id: csm18, membership: 0.7959}
-      - {csm_id: csm20, membership: 0.7615}
-      - {csm_id: csm39, membership: 0.7431}
-  - theme_id: Theme-02
-    name: amide backbone + phosphate
-    chemical_definition: amide I/II/III of the peptide linkage; PO4 and PO2⁻ stretching
-    chemically_admissible: true
-    n_supporting_csms: 15
-    membership_entropy: 2.8670
-    confidence: 0.756
-    dominant_bands_cm1: [856, 1004, 1258, 1446, 1658]
-    top_csms:
-      - {csm_id: csm00, membership: 1.0000}
-      - {csm_id: csm15, membership: 1.0000}
-      - {csm_id: csm31, membership: 0.7866}
-      - {csm_id: csm25, membership: 0.7034}
-      - {csm_id: csm30, membership: 0.4277}
-      - {csm_id: csm33, membership: 0.3746}
-  - theme_id: Theme-03
     name: carboxyl / ester carbonyl + amide backbone
     chemical_definition: C=O and COO⁻ stretching; amide I/II/III of the peptide linkage
     chemically_admissible: true
-    n_supporting_csms: 13
-    membership_entropy: 2.7079
-    confidence: 0.809
-    dominant_bands_cm1: [790, 1130, 1238, 1366, 1584]
+    n_supporting_csms: 16
+    membership_entropy: 2.7954
+    confidence: 0.755
+    dominant_bands_cm1: [790, 1156, 1236, 1366, 1584]
     top_csms:
-      - {csm_id: csm45, membership: 1.0000}
-      - {csm_id: csm34, membership: 1.0000}
+      - {csm_id: csm05, membership: 1.0000}
       - {csm_id: csm42, membership: 1.0000}
       - {csm_id: csm26, membership: 1.0000}
-      - {csm_id: csm06, membership: 0.9125}
-      - {csm_id: csm24, membership: 0.4895}
-  - theme_id: Theme-04
-    name: polar skeletal backbone + heterocyclic / conjugated ring
-    chemical_definition: C–O, C–C and C–N skeletal stretching, including glycosidic C–O–C; ring breathing and conjugated C=C
-    chemically_admissible: true
-    n_supporting_csms: 18
-    membership_entropy: 2.7918
-    confidence: 0.798
-    dominant_bands_cm1: [674, 848, 1046, 1206, 1472]
-    top_csms:
-      - {csm_id: csm48, membership: 1.0000}
-      - {csm_id: csm19, membership: 1.0000}
-      - {csm_id: csm16, membership: 1.0000}
-      - {csm_id: csm12, membership: 1.0000}
-      - {csm_id: csm27, membership: 1.0000}
-      - {csm_id: csm43, membership: 0.8017}
-  - theme_id: Theme-05
+      - {csm_id: csm34, membership: 1.0000}
+      - {csm_id: csm06, membership: 0.8301}
+      - {csm_id: csm45, membership: 0.5206}
+  - theme_id: Theme-02
     name: aliphatic chain + unsaturated chain
     chemical_definition: CH2/CH3 scissoring and twisting of saturated hydrocarbon chains; cis C=C and =C–H in-plane bending
     chemically_admissible: true
-    n_supporting_csms: 14
-    membership_entropy: 2.9241
-    confidence: 0.901
-    dominant_bands_cm1: [1064, 1130, 1298, 1442, 1666]
+    n_supporting_csms: 17
+    membership_entropy: 2.9345
+    confidence: 0.900
+    dominant_bands_cm1: [1064, 1130, 1298, 1442, 1658]
     top_csms:
+      - {csm_id: csm00, membership: 1.0000}
       - {csm_id: csm02, membership: 1.0000}
-      - {csm_id: csm10, membership: 1.0000}
       - {csm_id: csm07, membership: 1.0000}
-      - {csm_id: csm08, membership: 1.0000}
-      - {csm_id: csm09, membership: 0.7849}
-      - {csm_id: csm01, membership: 0.7801}
-  - theme_id: Theme-06
-    name: aliphatic chain + heterocyclic / conjugated ring
-    chemical_definition: CH2/CH3 scissoring and twisting of saturated hydrocarbon chains; ring breathing and conjugated C=C
+      - {csm_id: csm10, membership: 1.0000}
+      - {csm_id: csm09, membership: 0.9744}
+      - {csm_id: csm08, membership: 0.9687}
+  - theme_id: Theme-03
+    name: aliphatic chain + amide backbone
+    chemical_definition: CH2/CH3 scissoring and twisting of saturated hydrocarbon chains; amide I/II/III of the peptide linkage
     chemically_admissible: true
-    n_supporting_csms: 15
-    membership_entropy: 2.8546
-    confidence: 0.753
-    dominant_bands_cm1: [538, 650, 938, 1332, 1428]
+    n_supporting_csms: 23
+    membership_entropy: 3.0568
+    confidence: 0.689
+    dominant_bands_cm1: [650, 938, 1332, 1446, 1658]
     top_csms:
       - {csm_id: csm41, membership: 1.0000}
+      - {csm_id: csm03, membership: 0.6548}
+      - {csm_id: csm11, membership: 0.5236}
+      - {csm_id: csm25, membership: 0.5066}
+      - {csm_id: csm33, membership: 0.3866}
+      - {csm_id: csm31, membership: 0.3659}
+  - theme_id: Theme-04
+    name: aliphatic chain + polar skeletal backbone
+    chemical_definition: CH2/CH3 scissoring and twisting of saturated hydrocarbon chains; C–O, C–C and C–N skeletal stretching, including glycosidic C–O–C
+    chemically_admissible: true
+    n_supporting_csms: 19
+    membership_entropy: 2.9477
+    confidence: 0.794
+    dominant_bands_cm1: [526, 850, 1118, 1328, 1458]
+    top_csms:
+      - {csm_id: csm20, membership: 1.0000}
+      - {csm_id: csm19, membership: 1.0000}
+      - {csm_id: csm14, membership: 1.0000}
+      - {csm_id: csm12, membership: 1.0000}
+      - {csm_id: csm23, membership: 1.0000}
+      - {csm_id: csm18, membership: 1.0000}
+  - theme_id: Theme-05
+    name: heterocyclic / conjugated ring + sulfur / thiol
+    chemical_definition: ring breathing and conjugated C=C; S–S and C–S stretching
+    chemically_admissible: true
+    n_supporting_csms: 16
+    membership_entropy: 2.8474
+    confidence: 0.706
+    dominant_bands_cm1: [640, 674, 828, 1006, 1206]
+    top_csms:
+      - {csm_id: csm48, membership: 1.0000}
       - {csm_id: csm13, membership: 1.0000}
-      - {csm_id: csm03, membership: 0.6796}
-      - {csm_id: csm11, membership: 0.5027}
-      - {csm_id: csm46, membership: 0.4423}
-      - {csm_id: csm35, membership: 0.2445}
+      - {csm_id: csm15, membership: 1.0000}
+      - {csm_id: csm16, membership: 1.0000}
+      - {csm_id: csm43, membership: 1.0000}
+      - {csm_id: csm27, membership: 0.7590}

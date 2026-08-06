@@ -183,12 +183,14 @@ def main() -> int:
             adm = [CRIT.admissibility(t, grid, SPEC) for t in Th]
             dist = CRIT.theme_set_distinct(Th, adm)
             info = CRIT.information_retained(X, S, Th)
-            deg = CRIT.membership_degenerate(S)
+            deg = CRIT.membership_degenerate(S, X, Th)
             r = {
                 "model": model, "K": int(K),
                 "information_retained": info,
                 "max_theme_share": deg["max_theme_share"],
                 "effective_K": deg["effective_K"],
+                "max_theme_ubiquity": deg["max_theme_ubiquity"],
+                "unassigned_fraction": deg["unassigned_fraction"],
                 "degenerate": bool(info < CRIT.DEGENERATE_INFORMATION or deg["degenerate"]),
                 "themes_distinct": bool(dist["distinct"]),
                 "n_duplicate_theme_pairs": len(dist["duplicate_pairs"]),
@@ -300,7 +302,7 @@ def main() -> int:
         "csm_dictionary_fingerprint": CSM_FP,
         "geometry_metric": s025["primary_spectral_metric"],
         "geometry_fusion": s025["primary_geometry"]})
-    reg.unassigned_csms = roles_tab[roles_tab.role == "unassigned"].csm_id.tolist()
+    reg.unassigned_csms = roles_tab[roles_tab.role == "poorly_explained"].csm_id.tolist()
     reg.bridge_csms = roles_tab[roles_tab.role == "bridge"].csm_id.tolist()
 
     from scipy.stats import entropy as _ent
@@ -358,7 +360,7 @@ def main() -> int:
             ce.append(f"only {t.family_concentration:.2f} of band prominence sits in its two "
                       f"dominant mode families — partly a mixture")
         if not t.source_robust:
-            ce.append("does not survive leave-one-source-out at 0.60")
+            ce.append("does not survive a fair leave-one-source-out at 0.60")
         if t.gradient["n_gradient_coords"] == 0:
             ce.append("membership shows no significant gradient over the manifold")
         if not ce:
@@ -445,7 +447,7 @@ def main() -> int:
            f"mean {boot['mean']:.3f}, min {boot['min']:.3f}"),
         _g("theme layer value over CSM layer measured and reported", True, value["verdict"]),
         _g("bridges and unassigned CSMs preserved, not forced", True,
-           f"{len(reg.bridge_csms)} bridges, {len(reg.unassigned_csms)} unassigned"),
+           f"{len(reg.bridge_csms)} bridges, {len(reg.unassigned_csms)} poorly explained"),
     ]
     outputs.append(wtab(pd.DataFrame(gates), "phase03_gates_v1.csv", OUT.validation))
     all_pass = all(x["status"] == "PASS" for x in gates)

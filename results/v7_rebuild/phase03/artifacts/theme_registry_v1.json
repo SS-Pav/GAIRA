@@ -2,19 +2,19 @@
   "schema": "theme_registry_v1",
   "phase": "03",
   "model": "archetypal",
-  "K": 6,
+  "K": 5,
   "K_selection": {
-    "K": 6,
-    "peak_K": 6,
+    "K": 5,
+    "peak_K": 5,
     "plateau": [
-      6,
-      6
+      5,
+      5
     ],
-    "composite": 0.36556470068708957,
+    "composite": 0.3247210533607199,
     "status": "PASS",
     "n_admissible": 2,
     "n_swept": 13,
-    "rationale": "2 of 13 K values are chemically admissible; the composite peaks at K=6 (0.3656); the contiguous admissible plateau within 0.02 spans K=6\u20136; smallest selected"
+    "rationale": "2 of 13 K values are chemically admissible; the composite peaks at K=5 (0.3247); the contiguous admissible plateau within 0.02 spans K=5\u20135; smallest selected"
   },
   "provenance": {
     "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
@@ -23,139 +23,132 @@
     "geometry_metric": "wasserstein",
     "geometry_fusion": "weighted_similarity"
   },
-  "fingerprint": "d3e91614d50f11e025458e7843de21ec",
+  "fingerprint": "f54d4835ffdf8aa2d50a4a203da0e8f4",
   "summary": {
     "schema": "theme_registry_v1",
     "model": "archetypal",
-    "K": 6,
-    "n_accepted": 6,
-    "n_rejected": 0,
-    "n_unassigned_csms": 4,
-    "n_bridge_csms": 11,
-    "n_named": 6,
+    "K": 5,
+    "n_accepted": 4,
+    "n_rejected": 1,
+    "n_unassigned_csms": 9,
+    "n_bridge_csms": 15,
+    "n_named": 4,
     "n_unknown": 0,
-    "mean_confidence": 0.8079,
-    "fingerprint": "d3e91614d50f11e025458e7843de21ec"
+    "mean_confidence": 0.7887,
+    "fingerprint": "f54d4835ffdf8aa2d50a4a203da0e8f4"
   },
   "hierarchy": {
     "levels": [
       {
         "n_groups": 2,
         "assignment": [
-          1,
           0,
           1,
-          1,
           0,
-          1
+          0,
+          0
         ],
-        "mean_within_correlation": 0.7262127381959226,
+        "mean_within_correlation": 0.7384588699602603,
         "level": 1
       },
       {
         "n_groups": 3,
         "assignment": [
           1,
-          0,
           2,
-          1,
           0,
-          1
+          0,
+          0
         ],
-        "mean_within_correlation": 0.7432807163617391,
+        "mean_within_correlation": 0.7801885291172684,
         "level": 2
       },
       {
         "n_groups": 4,
         "assignment": [
-          1,
-          0,
-          3,
           2,
+          3,
+          0,
           0,
           1
         ],
-        "mean_within_correlation": 0.7488903329638172,
+        "mean_within_correlation": 0.8233425063391833,
         "level": 3
       },
       {
         "n_groups": 5,
         "assignment": [
-          2,
           0,
-          4,
-          3,
           1,
-          2
+          2,
+          3,
+          4
         ],
-        "mean_within_correlation": 0.7547171882668173,
+        "mean_within_correlation": 1.0,
         "level": 4
       }
     ],
     "n_levels": 4,
     "linkage_distances": [
-      0.24528281173318267,
-      0.25693652233918274,
-      0.2621116615394173,
-      0.32477395760060507,
-      0.41721017861468307
+      0.17665749366081673,
+      0.2413884594936891,
+      0.30327078919674766,
+      0.42930452014888787
     ]
   },
   "validation": {
     "bootstrap": {
-      "mean": 0.7773091722148129,
-      "min": 0.622911187227835,
+      "mean": 0.7266573987634791,
+      "min": 0.6253217329354914,
       "per_theme": [
-        0.8051755562426338,
-        0.6739946045054886,
-        0.7932616954298685,
-        0.7410692066204436,
-        0.9481914437269691,
-        0.7021625267634732
+        0.689154168055168,
+        0.9616902851227357,
+        0.5899308315926424,
+        0.7744850918613799,
+        0.6180266171854693
       ]
     },
     "leave_one_out": {
       "per_theme": [
-        0.8744760047474576,
-        0.7590021767931677,
-        0.8062997616062533,
-        0.8340722650727589,
-        0.9583363833732425,
-        0.7085501861350192
+        0.7352062081639428,
+        0.9334385887251532,
+        0.6098334502789753,
+        0.7718936860318489,
+        0.6380121558633904
       ],
-      "mean": 0.8234561296213166,
-      "most_influential_csm_index": 2,
-      "min": 0.7018440710683779
+      "mean": 0.7376768178126621,
+      "most_influential_csm_index": 36,
+      "min": 0.6563871107412476
     },
     "neighbour_consistency": {
-      "knn_agreement": 0.4857142857142857,
-      "chance": 0.1745106205747605
+      "knn_agreement": 0.5346938775510205,
+      "chance": 0.21116201582673885
     },
     "modularity": {
-      "observed": 0.3387872293553131,
-      "null_mean": -0.02338794631422618,
-      "null_sd": 0.03176301144258264,
+      "observed": 0.33420587315227474,
+      "null_mean": -0.022142498723940095,
+      "null_sd": 0.030365851417671296,
       "p_empirical": 0.0
     },
     "reconstruction": {
       "ev_csm_basis": 1.0,
-      "ev_theme_basis": 0.5857510847233816,
-      "delta": -0.41424891527661845,
-      "compression": 8.166666666666666
+      "ev_theme_basis": 0.5488035309344621,
+      "delta": -0.4511964690655379,
+      "compression": 9.8
     },
     "value_over_csm_layer": {
       "retrieval_csm_basis": 0.15510204081632653,
-      "retrieval_theme_coordinates": 0.1795918367346939,
+      "retrieval_theme_coordinates": 0.23673469387755106,
       "chance": 0.10120783007080383,
-      "delta": 0.024489795918367363,
+      "delta": 0.08163265306122452,
       "theme_layer_adds_value": true,
       "verdict": "theme coordinates retrieve coarse chemistry better than raw CSM activations"
     },
     "ontology_agreement_post_hoc": {
-      "nmi": 0.4688816267031305,
-      "ami": 0.16137803208212265,
-      "null_mean": 0.36549728103574136,
-      "null_sd": 0.029781806787516775,
+      "nmi": 0.4321027651618577,
+      "ami": 0.15657771461115888,
+      "null_mean": 0.32578592646142507,
+      "null_sd": 0.030345839080600248,
       "p_empirical": 0.0
     }
   },
@@ -163,308 +156,22 @@
     {
       "theme_id": "Theme-01",
       "index": 0,
-      "name": "polar skeletal backbone + sulfur / thiol",
-      "chemical_definition": "C\u2013O, C\u2013C and C\u2013N skeletal stretching, including glycosidic C\u2013O\u2013C; S\u2013S and C\u2013S stretching",
-      "name_confidence": 0.65,
-      "confidence": 0.83,
-      "status": "accepted",
-      "rejection_reason": null,
-      "chemically_admissible": true,
-      "family_concentration": 0.703,
-      "dominant_families": [
-        "skeletal",
-        "sulfur"
-      ],
-      "dominant_bands_cm1": [
-        526.0,
-        898.0,
-        1118.0,
-        1330.0,
-        1518.0
-      ],
-      "band_assignments": [
-        "S\u2013S stretch",
-        "C\u2013C backbone / C\u2013O\u2013C ring",
-        "C\u2013C trans chain / PO2\u207b / glycosidic C\u2013O\u2013C",
-        "CH2 twist",
-        "conjugated C=C"
-      ],
-      "mode_families": [
-        "skeletal",
-        "sulfur",
-        "aliphatic",
-        "ring"
-      ],
-      "member_csms": [
-        {
-          "csm_id": "csm05",
-          "membership": 1.0
-        },
-        {
-          "csm_id": "csm23",
-          "membership": 1.0
-        },
-        {
-          "csm_id": "csm14",
-          "membership": 0.914
-        },
-        {
-          "csm_id": "csm18",
-          "membership": 0.7959
-        },
-        {
-          "csm_id": "csm20",
-          "membership": 0.7615
-        },
-        {
-          "csm_id": "csm39",
-          "membership": 0.7431
-        },
-        {
-          "csm_id": "csm28",
-          "membership": 0.4617
-        },
-        {
-          "csm_id": "csm38",
-          "membership": 0.3706
-        },
-        {
-          "csm_id": "csm21",
-          "membership": 0.3282
-        },
-        {
-          "csm_id": "csm04",
-          "membership": 0.2961
-        },
-        {
-          "csm_id": "csm37",
-          "membership": 0.2239
-        },
-        {
-          "csm_id": "csm35",
-          "membership": 0.219
-        },
-        {
-          "csm_id": "csm11",
-          "membership": 0.2006
-        },
-        {
-          "csm_id": "csm47",
-          "membership": 0.1957
-        },
-        {
-          "csm_id": "csm40",
-          "membership": 0.1876
-        },
-        {
-          "csm_id": "csm17",
-          "membership": 0.16
-        }
-      ],
-      "bridge_csms": [
-        "csm38",
-        "csm21",
-        "csm04",
-        "csm37",
-        "csm35",
-        "csm17"
-      ],
-      "n_supporting_csms": 16,
-      "membership_entropy": 2.6979,
-      "geometry_evidence": {
-        "mean_pairwise_distance": 0.0631,
-        "knn_agreement": 0.525,
-        "modularity_p": 0.0
-      },
-      "spectral_evidence": {
-        "n_dominant_bands": 5,
-        "family_concentration": 0.703,
-        "dominant_families": "skeletal,sulfur",
-        "all_mode_families": "skeletal,sulfur,aliphatic,ring"
-      },
-      "biochemical_evidence": {
-        "dominant_classes": "mono_oligosaccharide(2.89);free_amino_acid(1.27);polysaccharide(1.11)",
-        "ontology_ami_overall": 0.161,
-        "naming_confidence": 0.65
-      },
-      "counter_evidence": [
-        "none found by the nine checks; the theme survives every one"
-      ],
-      "alternative_explanations": [
-        "shared Raman physics rather than shared biochemistry \u2014 tested by the mode-family constraint and by band assignability"
-      ],
-      "bootstrap_stability": 0.8052,
-      "loo_stability": 0.8745,
-      "gradient": {
-        "n_gradient_coords": 1,
-        "strongest": "DC1 rho=0.34"
-      },
-      "source_robust": true,
-      "limitations": [
-        "6 of its CSMs are bridges shared with other themes"
-      ]
-    },
-    {
-      "theme_id": "Theme-02",
-      "index": 1,
-      "name": "amide backbone + phosphate",
-      "chemical_definition": "amide I/II/III of the peptide linkage; PO4 and PO2\u207b stretching",
-      "name_confidence": 0.65,
-      "confidence": 0.756,
-      "status": "accepted",
-      "rejection_reason": null,
-      "chemically_admissible": true,
-      "family_concentration": 0.646,
-      "dominant_families": [
-        "phosphate",
-        "amide"
-      ],
-      "dominant_bands_cm1": [
-        856.0,
-        1004.0,
-        1258.0,
-        1446.0,
-        1658.0
-      ],
-      "band_assignments": [
-        "C\u2013C skeletal",
-        "PO4 / phenyl ring breathing",
-        "=C\u2013H in-plane bend",
-        "CH2 / CH3 scissoring",
-        "amide I / cis C=C"
-      ],
-      "mode_families": [
-        "phosphate",
-        "amide",
-        "aliphatic",
-        "unsaturation",
-        "skeletal"
-      ],
-      "member_csms": [
-        {
-          "csm_id": "csm00",
-          "membership": 1.0
-        },
-        {
-          "csm_id": "csm15",
-          "membership": 1.0
-        },
-        {
-          "csm_id": "csm31",
-          "membership": 0.7866
-        },
-        {
-          "csm_id": "csm25",
-          "membership": 0.7034
-        },
-        {
-          "csm_id": "csm30",
-          "membership": 0.4277
-        },
-        {
-          "csm_id": "csm33",
-          "membership": 0.3746
-        },
-        {
-          "csm_id": "csm32",
-          "membership": 0.3023
-        },
-        {
-          "csm_id": "csm44",
-          "membership": 0.2986
-        },
-        {
-          "csm_id": "csm29",
-          "membership": 0.2975
-        },
-        {
-          "csm_id": "csm36",
-          "membership": 0.263
-        },
-        {
-          "csm_id": "csm03",
-          "membership": 0.2164
-        },
-        {
-          "csm_id": "csm09",
-          "membership": 0.2151
-        },
-        {
-          "csm_id": "csm04",
-          "membership": 0.2126
-        },
-        {
-          "csm_id": "csm43",
-          "membership": 0.1983
-        },
-        {
-          "csm_id": "csm40",
-          "membership": 0.1563
-        }
-      ],
-      "bridge_csms": [
-        "csm30",
-        "csm33",
-        "csm32",
-        "csm29",
-        "csm04"
-      ],
-      "n_supporting_csms": 15,
-      "membership_entropy": 2.867,
-      "geometry_evidence": {
-        "mean_pairwise_distance": 0.1102,
-        "knn_agreement": 0.4667,
-        "modularity_p": 0.0
-      },
-      "spectral_evidence": {
-        "n_dominant_bands": 5,
-        "family_concentration": 0.646,
-        "dominant_families": "phosphate,amide",
-        "all_mode_families": "phosphate,amide,aliphatic,unsaturation,skeletal"
-      },
-      "biochemical_evidence": {
-        "dominant_classes": "peptide_protein(2.92);free_amino_acid(1.11);multi(1.00)",
-        "ontology_ami_overall": 0.161,
-        "naming_confidence": 0.65
-      },
-      "counter_evidence": [
-        "bootstrap recovery only 0.67",
-        "leave-one-out recovery only 0.76",
-        "only 0.65 of band prominence sits in its two dominant mode families \u2014 partly a mixture"
-      ],
-      "alternative_explanations": [
-        "shared Raman physics rather than shared biochemistry \u2014 tested by the mode-family constraint and by band assignability"
-      ],
-      "bootstrap_stability": 0.674,
-      "loo_stability": 0.759,
-      "gradient": {
-        "n_gradient_coords": 1,
-        "strongest": "DC1 rho=-0.36"
-      },
-      "source_robust": true,
-      "limitations": [
-        "5 of its CSMs are bridges shared with other themes"
-      ]
-    },
-    {
-      "theme_id": "Theme-03",
-      "index": 2,
       "name": "carboxyl / ester carbonyl + amide backbone",
       "chemical_definition": "C=O and COO\u207b stretching; amide I/II/III of the peptide linkage",
       "name_confidence": 0.65,
-      "confidence": 0.809,
+      "confidence": 0.755,
       "status": "accepted",
       "rejection_reason": null,
       "chemically_admissible": true,
-      "family_concentration": 0.775,
+      "family_concentration": 0.755,
       "dominant_families": [
         "carboxyl",
         "amide"
       ],
       "dominant_bands_cm1": [
         790.0,
-        1130.0,
-        1238.0,
+        1156.0,
+        1236.0,
         1366.0,
         1584.0
       ],
@@ -482,11 +189,7 @@
       ],
       "member_csms": [
         {
-          "csm_id": "csm45",
-          "membership": 1.0
-        },
-        {
-          "csm_id": "csm34",
+          "csm_id": "csm05",
           "membership": 1.0
         },
         {
@@ -498,232 +201,98 @@
           "membership": 1.0
         },
         {
+          "csm_id": "csm34",
+          "membership": 1.0
+        },
+        {
           "csm_id": "csm06",
-          "membership": 0.9125
+          "membership": 0.8301
+        },
+        {
+          "csm_id": "csm45",
+          "membership": 0.5206
         },
         {
           "csm_id": "csm24",
-          "membership": 0.4895
-        },
-        {
-          "csm_id": "csm46",
-          "membership": 0.2655
-        },
-        {
-          "csm_id": "csm21",
-          "membership": 0.2116
+          "membership": 0.4808
         },
         {
           "csm_id": "csm11",
-          "membership": 0.2032
+          "membership": 0.2857
+        },
+        {
+          "csm_id": "csm46",
+          "membership": 0.2363
+        },
+        {
+          "csm_id": "csm21",
+          "membership": 0.2309
         },
         {
           "csm_id": "csm47",
+          "membership": 0.1967
+        },
+        {
+          "csm_id": "csm40",
+          "membership": 0.1804
+        },
+        {
+          "csm_id": "csm35",
+          "membership": 0.1802
+        },
+        {
+          "csm_id": "csm38",
           "membership": 0.1789
         },
         {
           "csm_id": "csm39",
-          "membership": 0.1704
+          "membership": 0.1717
         },
         {
-          "csm_id": "csm35",
-          "membership": 0.1663
-        },
-        {
-          "csm_id": "csm40",
-          "membership": 0.1608
+          "csm_id": "csm37",
+          "membership": 0.1647
         }
       ],
       "bridge_csms": [
+        "csm24",
         "csm46",
         "csm21",
-        "csm35"
+        "csm47",
+        "csm40",
+        "csm35",
+        "csm38",
+        "csm37"
       ],
-      "n_supporting_csms": 13,
-      "membership_entropy": 2.7079,
+      "n_supporting_csms": 16,
+      "membership_entropy": 2.7954,
       "geometry_evidence": {
-        "mean_pairwise_distance": 0.1094,
-        "knn_agreement": 0.3692,
+        "mean_pairwise_distance": 0.1058,
+        "knn_agreement": 0.425,
         "modularity_p": 0.0
       },
       "spectral_evidence": {
         "n_dominant_bands": 5,
-        "family_concentration": 0.775,
+        "family_concentration": 0.755,
         "dominant_families": "carboxyl,amide",
         "all_mode_families": "carboxyl,amide,ring"
       },
       "biochemical_evidence": {
-        "dominant_classes": "peptide_protein(2.55);sterol_steroid(1.27);pyrimidine(1.00)",
-        "ontology_ami_overall": 0.161,
+        "dominant_classes": "peptide_protein(2.57);chromophore_pigment(1.83);pyrimidine(1.00)",
+        "ontology_ami_overall": 0.157,
         "naming_confidence": 0.65
       },
       "counter_evidence": [
-        "none found by the nine checks; the theme survives every one"
+        "bootstrap recovery only 0.69",
+        "leave-one-out recovery only 0.74"
       ],
       "alternative_explanations": [
         "shared Raman physics rather than shared biochemistry \u2014 tested by the mode-family constraint and by band assignability"
       ],
-      "bootstrap_stability": 0.7933,
-      "loo_stability": 0.8063,
+      "bootstrap_stability": 0.6892,
+      "loo_stability": 0.7352,
       "gradient": {
         "n_gradient_coords": 1,
-        "strongest": "DC3 rho=-0.59"
-      },
-      "source_robust": true,
-      "limitations": [
-        "3 of its CSMs are bridges shared with other themes"
-      ]
-    },
-    {
-      "theme_id": "Theme-04",
-      "index": 3,
-      "name": "polar skeletal backbone + heterocyclic / conjugated ring",
-      "chemical_definition": "C\u2013O, C\u2013C and C\u2013N skeletal stretching, including glycosidic C\u2013O\u2013C; ring breathing and conjugated C=C",
-      "name_confidence": 0.65,
-      "confidence": 0.798,
-      "status": "accepted",
-      "rejection_reason": null,
-      "chemically_admissible": true,
-      "family_concentration": 0.694,
-      "dominant_families": [
-        "skeletal",
-        "ring"
-      ],
-      "dominant_bands_cm1": [
-        674.0,
-        848.0,
-        1046.0,
-        1206.0,
-        1472.0
-      ],
-      "band_assignments": [
-        "six-membered ring breathing",
-        "C\u2013C skeletal",
-        "C\u2013N / C\u2013O stretch",
-        "amide III / C\u2013O\u2013C asymmetric",
-        "CH2 / CH3 scissoring"
-      ],
-      "mode_families": [
-        "skeletal",
-        "ring",
-        "amide",
-        "aliphatic"
-      ],
-      "member_csms": [
-        {
-          "csm_id": "csm48",
-          "membership": 1.0
-        },
-        {
-          "csm_id": "csm19",
-          "membership": 1.0
-        },
-        {
-          "csm_id": "csm16",
-          "membership": 1.0
-        },
-        {
-          "csm_id": "csm12",
-          "membership": 1.0
-        },
-        {
-          "csm_id": "csm27",
-          "membership": 1.0
-        },
-        {
-          "csm_id": "csm43",
-          "membership": 0.8017
-        },
-        {
-          "csm_id": "csm22",
-          "membership": 0.7227
-        },
-        {
-          "csm_id": "csm29",
-          "membership": 0.2373
-        },
-        {
-          "csm_id": "csm32",
-          "membership": 0.2193
-        },
-        {
-          "csm_id": "csm35",
-          "membership": 0.2175
-        },
-        {
-          "csm_id": "csm37",
-          "membership": 0.215
-        },
-        {
-          "csm_id": "csm21",
-          "membership": 0.2062
-        },
-        {
-          "csm_id": "csm38",
-          "membership": 0.2004
-        },
-        {
-          "csm_id": "csm24",
-          "membership": 0.193
-        },
-        {
-          "csm_id": "csm28",
-          "membership": 0.1898
-        },
-        {
-          "csm_id": "csm04",
-          "membership": 0.1598
-        },
-        {
-          "csm_id": "csm17",
-          "membership": 0.1591
-        },
-        {
-          "csm_id": "csm40",
-          "membership": 0.1573
-        }
-      ],
-      "bridge_csms": [
-        "csm29",
-        "csm32",
-        "csm35",
-        "csm37",
-        "csm21",
-        "csm38",
-        "csm04",
-        "csm17"
-      ],
-      "n_supporting_csms": 18,
-      "membership_entropy": 2.7918,
-      "geometry_evidence": {
-        "mean_pairwise_distance": 0.0854,
-        "knn_agreement": 0.3889,
-        "modularity_p": 0.0
-      },
-      "spectral_evidence": {
-        "n_dominant_bands": 5,
-        "family_concentration": 0.694,
-        "dominant_families": "skeletal,ring",
-        "all_mode_families": "skeletal,ring,amide,aliphatic"
-      },
-      "biochemical_evidence": {
-        "dominant_classes": "free_amino_acid(2.16);mono_oligosaccharide(1.99);peptide_protein(1.76)",
-        "ontology_ami_overall": 0.161,
-        "naming_confidence": 0.65
-      },
-      "counter_evidence": [
-        "bootstrap recovery only 0.74",
-        "only 0.69 of band prominence sits in its two dominant mode families \u2014 partly a mixture"
-      ],
-      "alternative_explanations": [
-        "shared Raman physics rather than shared biochemistry \u2014 tested by the mode-family constraint and by band assignability",
-        "aromatic and heterocyclic ring modes are shared by purines, pyrimidines, aromatic amino acids and pigments alike"
-      ],
-      "bootstrap_stability": 0.7411,
-      "loo_stability": 0.8341,
-      "gradient": {
-        "n_gradient_coords": 1,
-        "strongest": "DC1 rho=0.41"
+        "strongest": "DC3 rho=-0.51"
       },
       "source_robust": true,
       "limitations": [
@@ -731,26 +300,26 @@
       ]
     },
     {
-      "theme_id": "Theme-05",
-      "index": 4,
+      "theme_id": "Theme-02",
+      "index": 1,
       "name": "aliphatic chain + unsaturated chain",
       "chemical_definition": "CH2/CH3 scissoring and twisting of saturated hydrocarbon chains; cis C=C and =C\u2013H in-plane bending",
       "name_confidence": 0.65,
-      "confidence": 0.901,
+      "confidence": 0.9,
       "status": "accepted",
       "rejection_reason": null,
       "chemically_admissible": true,
-      "family_concentration": 0.683,
+      "family_concentration": 0.657,
       "dominant_families": [
-        "unsaturation",
-        "aliphatic"
+        "aliphatic",
+        "unsaturation"
       ],
       "dominant_bands_cm1": [
         1064.0,
         1130.0,
         1298.0,
         1442.0,
-        1666.0
+        1658.0
       ],
       "band_assignments": [
         "C\u2013N / C\u2013O stretch",
@@ -760,19 +329,19 @@
         "amide I / cis C=C"
       ],
       "mode_families": [
-        "unsaturation",
         "aliphatic",
-        "skeletal",
+        "unsaturation",
         "amide",
+        "skeletal",
         "ring"
       ],
       "member_csms": [
         {
-          "csm_id": "csm02",
+          "csm_id": "csm00",
           "membership": 1.0
         },
         {
-          "csm_id": "csm10",
+          "csm_id": "csm02",
           "membership": 1.0
         },
         {
@@ -780,125 +349,139 @@
           "membership": 1.0
         },
         {
-          "csm_id": "csm08",
+          "csm_id": "csm10",
           "membership": 1.0
         },
         {
           "csm_id": "csm09",
-          "membership": 0.7849
+          "membership": 0.9744
+        },
+        {
+          "csm_id": "csm08",
+          "membership": 0.9687
         },
         {
           "csm_id": "csm01",
-          "membership": 0.7801
+          "membership": 0.8678
         },
         {
           "csm_id": "csm36",
-          "membership": 0.663
+          "membership": 0.8032
         },
         {
           "csm_id": "csm44",
-          "membership": 0.4947
+          "membership": 0.6066
         },
         {
           "csm_id": "csm29",
-          "membership": 0.3803
-        },
-        {
-          "csm_id": "csm17",
-          "membership": 0.2877
-        },
-        {
-          "csm_id": "csm22",
-          "membership": 0.2756
-        },
-        {
-          "csm_id": "csm30",
-          "membership": 0.2724
+          "membership": 0.5137
         },
         {
           "csm_id": "csm25",
-          "membership": 0.254
+          "membership": 0.4934
+        },
+        {
+          "csm_id": "csm30",
+          "membership": 0.4079
         },
         {
           "csm_id": "csm33",
-          "membership": 0.2524
+          "membership": 0.3707
+        },
+        {
+          "csm_id": "csm31",
+          "membership": 0.3308
+        },
+        {
+          "csm_id": "csm17",
+          "membership": 0.2843
+        },
+        {
+          "csm_id": "csm22",
+          "membership": 0.2577
+        },
+        {
+          "csm_id": "csm32",
+          "membership": 0.2141
         }
       ],
       "bridge_csms": [
         "csm29",
-        "csm17",
         "csm30",
-        "csm33"
+        "csm33",
+        "csm31",
+        "csm17",
+        "csm32"
       ],
-      "n_supporting_csms": 14,
-      "membership_entropy": 2.9241,
+      "n_supporting_csms": 17,
+      "membership_entropy": 2.9345,
       "geometry_evidence": {
-        "mean_pairwise_distance": 0.0834,
-        "knn_agreement": 0.6857,
+        "mean_pairwise_distance": 0.0845,
+        "knn_agreement": 0.5647,
         "modularity_p": 0.0
       },
       "spectral_evidence": {
         "n_dominant_bands": 5,
-        "family_concentration": 0.683,
-        "dominant_families": "unsaturation,aliphatic",
-        "all_mode_families": "unsaturation,aliphatic,skeletal,amide,ring"
+        "family_concentration": 0.657,
+        "dominant_families": "aliphatic,unsaturation",
+        "all_mode_families": "aliphatic,unsaturation,amide,skeletal,ring"
       },
       "biochemical_evidence": {
-        "dominant_classes": "fatty_acid(3.78);acylglycerol(1.78);peptide_protein(1.45)",
-        "ontology_ami_overall": 0.161,
+        "dominant_classes": "fatty_acid(3.94);peptide_protein(2.34);acylglycerol(1.87)",
+        "ontology_ami_overall": 0.157,
         "naming_confidence": 0.65
       },
       "counter_evidence": [
-        "only 0.68 of band prominence sits in its two dominant mode families \u2014 partly a mixture"
+        "only 0.66 of band prominence sits in its two dominant mode families \u2014 partly a mixture"
       ],
       "alternative_explanations": [
         "shared Raman physics rather than shared biochemistry \u2014 tested by the mode-family constraint and by band assignability",
         "CH2/CH3 scissoring is the most common band in biological Raman; aliphatic membership alone is weak evidence of lipid biology"
       ],
-      "bootstrap_stability": 0.9482,
-      "loo_stability": 0.9583,
+      "bootstrap_stability": 0.9617,
+      "loo_stability": 0.9334,
       "gradient": {
-        "n_gradient_coords": 2,
-        "strongest": "DC1 rho=-0.42"
+        "n_gradient_coords": 1,
+        "strongest": "DC1 rho=-0.58"
       },
       "source_robust": true,
       "limitations": [
-        "4 of its CSMs are bridges shared with other themes"
+        "6 of its CSMs are bridges shared with other themes"
       ]
     },
     {
-      "theme_id": "Theme-06",
-      "index": 5,
-      "name": "aliphatic chain + heterocyclic / conjugated ring",
-      "chemical_definition": "CH2/CH3 scissoring and twisting of saturated hydrocarbon chains; ring breathing and conjugated C=C",
+      "theme_id": "Theme-03",
+      "index": 2,
+      "name": "aliphatic chain + amide backbone",
+      "chemical_definition": "CH2/CH3 scissoring and twisting of saturated hydrocarbon chains; amide I/II/III of the peptide linkage",
       "name_confidence": 0.65,
-      "confidence": 0.753,
-      "status": "accepted",
-      "rejection_reason": null,
+      "confidence": 0.689,
+      "status": "rejected",
+      "rejection_reason": "bootstrap recovery 0.59 < 0.60",
       "chemically_admissible": true,
-      "family_concentration": 0.63,
+      "family_concentration": 0.715,
       "dominant_families": [
         "aliphatic",
-        "ring"
+        "amide"
       ],
       "dominant_bands_cm1": [
-        538.0,
         650.0,
         938.0,
         1332.0,
-        1428.0
+        1446.0,
+        1658.0
       ],
       "band_assignments": [
-        "S\u2013S stretch",
         "six-membered ring breathing",
         "C\u2013C backbone / C\u2013O\u2013C ring",
         "CH2 twist",
-        "CH2 / CH3 scissoring"
+        "CH2 / CH3 scissoring",
+        "amide I / cis C=C"
       ],
       "mode_families": [
         "aliphatic",
+        "amide",
         "ring",
-        "sulfur",
         "skeletal"
       ],
       "member_csms": [
@@ -907,104 +490,448 @@
           "membership": 1.0
         },
         {
-          "csm_id": "csm13",
-          "membership": 1.0
-        },
-        {
           "csm_id": "csm03",
-          "membership": 0.6796
+          "membership": 0.6548
         },
         {
           "csm_id": "csm11",
-          "membership": 0.5027
+          "membership": 0.5236
         },
         {
-          "csm_id": "csm46",
-          "membership": 0.4423
-        },
-        {
-          "csm_id": "csm35",
-          "membership": 0.2445
-        },
-        {
-          "csm_id": "csm47",
-          "membership": 0.2429
-        },
-        {
-          "csm_id": "csm40",
-          "membership": 0.2373
-        },
-        {
-          "csm_id": "csm37",
-          "membership": 0.2164
-        },
-        {
-          "csm_id": "csm17",
-          "membership": 0.2144
+          "csm_id": "csm25",
+          "membership": 0.5066
         },
         {
           "csm_id": "csm33",
-          "membership": 0.2099
+          "membership": 0.3866
         },
         {
-          "csm_id": "csm18",
-          "membership": 0.2041
+          "csm_id": "csm31",
+          "membership": 0.3659
         },
         {
-          "csm_id": "csm38",
-          "membership": 0.1976
+          "csm_id": "csm46",
+          "membership": 0.3229
+        },
+        {
+          "csm_id": "csm30",
+          "membership": 0.3211
         },
         {
           "csm_id": "csm32",
-          "membership": 0.191
+          "membership": 0.2859
+        },
+        {
+          "csm_id": "csm44",
+          "membership": 0.2615
+        },
+        {
+          "csm_id": "csm40",
+          "membership": 0.2589
+        },
+        {
+          "csm_id": "csm04",
+          "membership": 0.2563
+        },
+        {
+          "csm_id": "csm35",
+          "membership": 0.2532
         },
         {
           "csm_id": "csm28",
-          "membership": 0.1771
+          "membership": 0.2501
+        },
+        {
+          "csm_id": "csm47",
+          "membership": 0.2487
+        },
+        {
+          "csm_id": "csm38",
+          "membership": 0.2422
+        },
+        {
+          "csm_id": "csm17",
+          "membership": 0.2339
+        },
+        {
+          "csm_id": "csm37",
+          "membership": 0.2239
+        },
+        {
+          "csm_id": "csm29",
+          "membership": 0.2164
+        },
+        {
+          "csm_id": "csm24",
+          "membership": 0.2045
+        },
+        {
+          "csm_id": "csm21",
+          "membership": 0.201
+        },
+        {
+          "csm_id": "csm36",
+          "membership": 0.1968
+        },
+        {
+          "csm_id": "csm06",
+          "membership": 0.1699
         }
       ],
       "bridge_csms": [
-        "csm46",
-        "csm35",
-        "csm37",
-        "csm17",
         "csm33",
+        "csm31",
+        "csm46",
+        "csm30",
+        "csm32",
+        "csm40",
+        "csm04",
+        "csm35",
+        "csm47",
         "csm38",
-        "csm32"
+        "csm17",
+        "csm37",
+        "csm29",
+        "csm24",
+        "csm21"
       ],
-      "n_supporting_csms": 15,
-      "membership_entropy": 2.8546,
+      "n_supporting_csms": 23,
+      "membership_entropy": 3.0568,
       "geometry_evidence": {
-        "mean_pairwise_distance": 0.0841,
-        "knn_agreement": 0.44,
+        "mean_pairwise_distance": 0.1069,
+        "knn_agreement": 0.4783,
         "modularity_p": 0.0
       },
       "spectral_evidence": {
         "n_dominant_bands": 5,
-        "family_concentration": 0.63,
-        "dominant_families": "aliphatic,ring",
-        "all_mode_families": "aliphatic,ring,sulfur,skeletal"
+        "family_concentration": 0.715,
+        "dominant_families": "aliphatic,amide",
+        "all_mode_families": "aliphatic,amide,ring,skeletal"
       },
       "biochemical_evidence": {
-        "dominant_classes": "free_amino_acid(1.72);purine(1.24);carboxylic_acid_metabolite(0.80)",
-        "ontology_ami_overall": 0.161,
+        "dominant_classes": "peptide_protein(2.33);purine(1.26);carboxylic_acid_metabolite(0.91)",
+        "ontology_ami_overall": 0.157,
         "naming_confidence": 0.65
       },
       "counter_evidence": [
-        "bootstrap recovery only 0.70",
-        "leave-one-out recovery only 0.71",
-        "only 0.63 of band prominence sits in its two dominant mode families \u2014 partly a mixture"
+        "bootstrap recovery only 0.59",
+        "leave-one-out recovery only 0.61"
       ],
       "alternative_explanations": [
         "shared Raman physics rather than shared biochemistry \u2014 tested by the mode-family constraint and by band assignability",
-        "CH2/CH3 scissoring is the most common band in biological Raman; aliphatic membership alone is weak evidence of lipid biology",
-        "aromatic and heterocyclic ring modes are shared by purines, pyrimidines, aromatic amino acids and pigments alike"
+        "CH2/CH3 scissoring is the most common band in biological Raman; aliphatic membership alone is weak evidence of lipid biology"
       ],
-      "bootstrap_stability": 0.7022,
-      "loo_stability": 0.7086,
+      "bootstrap_stability": 0.5899,
+      "loo_stability": 0.6098,
       "gradient": {
         "n_gradient_coords": 1,
-        "strongest": "DC3 rho=-0.43"
+        "strongest": "DC3 rho=-0.44"
+      },
+      "source_robust": true,
+      "limitations": [
+        "15 of its CSMs are bridges shared with other themes"
+      ]
+    },
+    {
+      "theme_id": "Theme-04",
+      "index": 3,
+      "name": "aliphatic chain + polar skeletal backbone",
+      "chemical_definition": "CH2/CH3 scissoring and twisting of saturated hydrocarbon chains; C\u2013O, C\u2013C and C\u2013N skeletal stretching, including glycosidic C\u2013O\u2013C",
+      "name_confidence": 0.65,
+      "confidence": 0.794,
+      "status": "accepted",
+      "rejection_reason": null,
+      "chemically_admissible": true,
+      "family_concentration": 0.747,
+      "dominant_families": [
+        "skeletal",
+        "aliphatic"
+      ],
+      "dominant_bands_cm1": [
+        526.0,
+        850.0,
+        1118.0,
+        1328.0,
+        1458.0
+      ],
+      "band_assignments": [
+        "S\u2013S stretch",
+        "C\u2013C skeletal",
+        "C\u2013C trans chain / PO2\u207b / glycosidic C\u2013O\u2013C",
+        "CH2 twist",
+        "CH2 / CH3 scissoring"
+      ],
+      "mode_families": [
+        "skeletal",
+        "aliphatic",
+        "sulfur"
+      ],
+      "member_csms": [
+        {
+          "csm_id": "csm20",
+          "membership": 1.0
+        },
+        {
+          "csm_id": "csm19",
+          "membership": 1.0
+        },
+        {
+          "csm_id": "csm14",
+          "membership": 1.0
+        },
+        {
+          "csm_id": "csm12",
+          "membership": 1.0
+        },
+        {
+          "csm_id": "csm23",
+          "membership": 1.0
+        },
+        {
+          "csm_id": "csm18",
+          "membership": 1.0
+        },
+        {
+          "csm_id": "csm39",
+          "membership": 0.7915
+        },
+        {
+          "csm_id": "csm28",
+          "membership": 0.6501
+        },
+        {
+          "csm_id": "csm38",
+          "membership": 0.4947
+        },
+        {
+          "csm_id": "csm21",
+          "membership": 0.4517
+        },
+        {
+          "csm_id": "csm04",
+          "membership": 0.3946
+        },
+        {
+          "csm_id": "csm35",
+          "membership": 0.3108
+        },
+        {
+          "csm_id": "csm22",
+          "membership": 0.2918
+        },
+        {
+          "csm_id": "csm37",
+          "membership": 0.2828
+        },
+        {
+          "csm_id": "csm17",
+          "membership": 0.2574
+        },
+        {
+          "csm_id": "csm27",
+          "membership": 0.241
+        },
+        {
+          "csm_id": "csm47",
+          "membership": 0.2338
+        },
+        {
+          "csm_id": "csm40",
+          "membership": 0.2233
+        },
+        {
+          "csm_id": "csm11",
+          "membership": 0.1907
+        }
+      ],
+      "bridge_csms": [
+        "csm38",
+        "csm21",
+        "csm04",
+        "csm35",
+        "csm37",
+        "csm17",
+        "csm47",
+        "csm40"
+      ],
+      "n_supporting_csms": 19,
+      "membership_entropy": 2.9477,
+      "geometry_evidence": {
+        "mean_pairwise_distance": 0.0604,
+        "knn_agreement": 0.6105,
+        "modularity_p": 0.0
+      },
+      "spectral_evidence": {
+        "n_dominant_bands": 5,
+        "family_concentration": 0.747,
+        "dominant_families": "skeletal,aliphatic",
+        "all_mode_families": "skeletal,aliphatic,sulfur"
+      },
+      "biochemical_evidence": {
+        "dominant_classes": "mono_oligosaccharide(4.74);free_amino_acid(2.45);polysaccharide(1.29)",
+        "ontology_ami_overall": 0.157,
+        "naming_confidence": 0.65
+      },
+      "counter_evidence": [
+        "leave-one-out recovery only 0.77"
+      ],
+      "alternative_explanations": [
+        "shared Raman physics rather than shared biochemistry \u2014 tested by the mode-family constraint and by band assignability",
+        "CH2/CH3 scissoring is the most common band in biological Raman; aliphatic membership alone is weak evidence of lipid biology"
+      ],
+      "bootstrap_stability": 0.7745,
+      "loo_stability": 0.7719,
+      "gradient": {
+        "n_gradient_coords": 1,
+        "strongest": "DC1 rho=0.57"
+      },
+      "source_robust": true,
+      "limitations": [
+        "8 of its CSMs are bridges shared with other themes"
+      ]
+    },
+    {
+      "theme_id": "Theme-05",
+      "index": 4,
+      "name": "heterocyclic / conjugated ring + sulfur / thiol",
+      "chemical_definition": "ring breathing and conjugated C=C; S\u2013S and C\u2013S stretching",
+      "name_confidence": 0.65,
+      "confidence": 0.706,
+      "status": "accepted",
+      "rejection_reason": null,
+      "chemically_admissible": true,
+      "family_concentration": 0.617,
+      "dominant_families": [
+        "ring",
+        "sulfur"
+      ],
+      "dominant_bands_cm1": [
+        640.0,
+        674.0,
+        828.0,
+        1006.0,
+        1206.0
+      ],
+      "band_assignments": [
+        "C\u2013S stretch",
+        "six-membered ring breathing",
+        "C\u2013C skeletal",
+        "phenyl ring breathing",
+        "amide III / C\u2013O\u2013C asymmetric"
+      ],
+      "mode_families": [
+        "ring",
+        "sulfur",
+        "amide",
+        "skeletal"
+      ],
+      "member_csms": [
+        {
+          "csm_id": "csm48",
+          "membership": 1.0
+        },
+        {
+          "csm_id": "csm13",
+          "membership": 1.0
+        },
+        {
+          "csm_id": "csm15",
+          "membership": 1.0
+        },
+        {
+          "csm_id": "csm16",
+          "membership": 1.0
+        },
+        {
+          "csm_id": "csm43",
+          "membership": 1.0
+        },
+        {
+          "csm_id": "csm27",
+          "membership": 0.759
+        },
+        {
+          "csm_id": "csm45",
+          "membership": 0.4647
+        },
+        {
+          "csm_id": "csm22",
+          "membership": 0.4504
+        },
+        {
+          "csm_id": "csm46",
+          "membership": 0.3356
+        },
+        {
+          "csm_id": "csm32",
+          "membership": 0.2775
+        },
+        {
+          "csm_id": "csm31",
+          "membership": 0.2492
+        },
+        {
+          "csm_id": "csm03",
+          "membership": 0.244
+        },
+        {
+          "csm_id": "csm37",
+          "membership": 0.2368
+        },
+        {
+          "csm_id": "csm40",
+          "membership": 0.2139
+        },
+        {
+          "csm_id": "csm35",
+          "membership": 0.1936
+        },
+        {
+          "csm_id": "csm47",
+          "membership": 0.1893
+        }
+      ],
+      "bridge_csms": [
+        "csm46",
+        "csm32",
+        "csm31",
+        "csm37",
+        "csm40",
+        "csm35",
+        "csm47"
+      ],
+      "n_supporting_csms": 16,
+      "membership_entropy": 2.8474,
+      "geometry_evidence": {
+        "mean_pairwise_distance": 0.0971,
+        "knn_agreement": 0.425,
+        "modularity_p": 0.0
+      },
+      "spectral_evidence": {
+        "n_dominant_bands": 5,
+        "family_concentration": 0.617,
+        "dominant_families": "ring,sulfur",
+        "all_mode_families": "ring,sulfur,amide,skeletal"
+      },
+      "biochemical_evidence": {
+        "dominant_classes": "free_amino_acid(3.11);peptide_protein(1.57);sulfur_thiol_cofactor(1.19)",
+        "ontology_ami_overall": 0.157,
+        "naming_confidence": 0.65
+      },
+      "counter_evidence": [
+        "bootstrap recovery only 0.62",
+        "leave-one-out recovery only 0.64",
+        "only 0.62 of band prominence sits in its two dominant mode families \u2014 partly a mixture"
+      ],
+      "alternative_explanations": [
+        "shared Raman physics rather than shared biochemistry \u2014 tested by the mode-family constraint and by band assignability",
+        "aromatic and heterocyclic ring modes are shared by purines, pyrimidines, aromatic amino acids and pigments alike"
+      ],
+      "bootstrap_stability": 0.618,
+      "loo_stability": 0.638,
+      "gradient": {
+        "n_gradient_coords": 1,
+        "strongest": "DC1 rho=0.33"
       },
       "source_robust": true,
       "limitations": [
@@ -1018,557 +945,493 @@
       "Theme-02": 1.0,
       "Theme-03": 0.0,
       "Theme-04": 0.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
+      "Theme-05": 0.0
     },
     "csm01": {
       "Theme-01": 0.0,
-      "Theme-02": 0.138,
-      "Theme-03": 0.0,
-      "Theme-04": 0.0297,
-      "Theme-05": 0.7801,
-      "Theme-06": 0.0523
+      "Theme-02": 0.8678,
+      "Theme-03": 0.1036,
+      "Theme-04": 0.0253,
+      "Theme-05": 0.0033
     },
     "csm02": {
       "Theme-01": 0.0,
-      "Theme-02": 0.0,
+      "Theme-02": 1.0,
       "Theme-03": 0.0,
       "Theme-04": 0.0,
-      "Theme-05": 1.0,
-      "Theme-06": 0.0
+      "Theme-05": 0.0
     },
     "csm03": {
       "Theme-01": 0.0,
-      "Theme-02": 0.2164,
-      "Theme-03": 0.0,
+      "Theme-02": 0.1012,
+      "Theme-03": 0.6548,
       "Theme-04": 0.0,
-      "Theme-05": 0.1041,
-      "Theme-06": 0.6796
+      "Theme-05": 0.244
     },
     "csm04": {
-      "Theme-01": 0.2961,
-      "Theme-02": 0.2126,
-      "Theme-03": 0.1432,
-      "Theme-04": 0.1598,
-      "Theme-05": 0.0636,
-      "Theme-06": 0.1247
+      "Theme-01": 0.1414,
+      "Theme-02": 0.1093,
+      "Theme-03": 0.2563,
+      "Theme-04": 0.3946,
+      "Theme-05": 0.0984
     },
     "csm05": {
       "Theme-01": 1.0,
       "Theme-02": 0.0,
       "Theme-03": 0.0,
       "Theme-04": 0.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
+      "Theme-05": 0.0
     },
     "csm06": {
-      "Theme-01": 0.0,
-      "Theme-02": 0.0109,
-      "Theme-03": 0.9125,
+      "Theme-01": 0.8301,
+      "Theme-02": 0.0,
+      "Theme-03": 0.1699,
       "Theme-04": 0.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0767
+      "Theme-05": 0.0
     },
     "csm07": {
       "Theme-01": 0.0,
-      "Theme-02": 0.0,
+      "Theme-02": 1.0,
       "Theme-03": 0.0,
       "Theme-04": 0.0,
-      "Theme-05": 1.0,
-      "Theme-06": 0.0
+      "Theme-05": 0.0
     },
     "csm08": {
       "Theme-01": 0.0,
-      "Theme-02": 0.0,
+      "Theme-02": 0.9687,
       "Theme-03": 0.0,
-      "Theme-04": 0.0,
-      "Theme-05": 1.0,
-      "Theme-06": 0.0
+      "Theme-04": 0.0313,
+      "Theme-05": 0.0
     },
     "csm09": {
       "Theme-01": 0.0,
-      "Theme-02": 0.2151,
-      "Theme-03": 0.0,
+      "Theme-02": 0.9744,
+      "Theme-03": 0.0256,
       "Theme-04": 0.0,
-      "Theme-05": 0.7849,
-      "Theme-06": 0.0
+      "Theme-05": 0.0
     },
     "csm10": {
       "Theme-01": 0.0,
-      "Theme-02": 0.0,
+      "Theme-02": 1.0,
       "Theme-03": 0.0,
       "Theme-04": 0.0,
-      "Theme-05": 1.0,
-      "Theme-06": 0.0
+      "Theme-05": 0.0
     },
     "csm11": {
-      "Theme-01": 0.2006,
-      "Theme-02": 0.0495,
-      "Theme-03": 0.2032,
-      "Theme-04": 0.0,
-      "Theme-05": 0.0439,
-      "Theme-06": 0.5027
+      "Theme-01": 0.2857,
+      "Theme-02": 0.0,
+      "Theme-03": 0.5236,
+      "Theme-04": 0.1907,
+      "Theme-05": 0.0
     },
     "csm12": {
       "Theme-01": 0.0,
       "Theme-02": 0.0,
       "Theme-03": 0.0,
       "Theme-04": 1.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
+      "Theme-05": 0.0
     },
     "csm13": {
       "Theme-01": 0.0,
       "Theme-02": 0.0,
       "Theme-03": 0.0,
       "Theme-04": 0.0,
-      "Theme-05": 0.0,
-      "Theme-06": 1.0
+      "Theme-05": 1.0
     },
     "csm14": {
-      "Theme-01": 0.914,
+      "Theme-01": 0.0,
       "Theme-02": 0.0,
       "Theme-03": 0.0,
-      "Theme-04": 0.0,
-      "Theme-05": 0.086,
-      "Theme-06": 0.0
+      "Theme-04": 1.0,
+      "Theme-05": 0.0
     },
     "csm15": {
       "Theme-01": 0.0,
-      "Theme-02": 1.0,
+      "Theme-02": 0.0,
       "Theme-03": 0.0,
       "Theme-04": 0.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
+      "Theme-05": 1.0
     },
     "csm16": {
       "Theme-01": 0.0,
       "Theme-02": 0.0,
       "Theme-03": 0.0,
-      "Theme-04": 1.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
+      "Theme-04": 0.0,
+      "Theme-05": 1.0
     },
     "csm17": {
-      "Theme-01": 0.16,
-      "Theme-02": 0.0559,
-      "Theme-03": 0.1228,
-      "Theme-04": 0.1591,
-      "Theme-05": 0.2877,
-      "Theme-06": 0.2144
+      "Theme-01": 0.1159,
+      "Theme-02": 0.2843,
+      "Theme-03": 0.2339,
+      "Theme-04": 0.2574,
+      "Theme-05": 0.1085
     },
     "csm18": {
-      "Theme-01": 0.7959,
+      "Theme-01": 0.0,
       "Theme-02": 0.0,
       "Theme-03": 0.0,
-      "Theme-04": 0.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.2041
+      "Theme-04": 1.0,
+      "Theme-05": 0.0
     },
     "csm19": {
       "Theme-01": 0.0,
       "Theme-02": 0.0,
       "Theme-03": 0.0,
       "Theme-04": 1.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
+      "Theme-05": 0.0
     },
     "csm20": {
-      "Theme-01": 0.7615,
+      "Theme-01": 0.0,
       "Theme-02": 0.0,
       "Theme-03": 0.0,
-      "Theme-04": 0.0563,
-      "Theme-05": 0.1075,
-      "Theme-06": 0.0747
+      "Theme-04": 1.0,
+      "Theme-05": 0.0
     },
     "csm21": {
-      "Theme-01": 0.3282,
-      "Theme-02": 0.0751,
-      "Theme-03": 0.2116,
-      "Theme-04": 0.2062,
-      "Theme-05": 0.0393,
-      "Theme-06": 0.1395
+      "Theme-01": 0.2309,
+      "Theme-02": 0.0235,
+      "Theme-03": 0.201,
+      "Theme-04": 0.4517,
+      "Theme-05": 0.0929
     },
     "csm22": {
       "Theme-01": 0.0,
-      "Theme-02": 0.0,
-      "Theme-03": 0.0016,
-      "Theme-04": 0.7227,
-      "Theme-05": 0.2756,
-      "Theme-06": 0.0
+      "Theme-02": 0.2577,
+      "Theme-03": 0.0,
+      "Theme-04": 0.2918,
+      "Theme-05": 0.4504
     },
     "csm23": {
+      "Theme-01": 0.0,
+      "Theme-02": 0.0,
+      "Theme-03": 0.0,
+      "Theme-04": 1.0,
+      "Theme-05": 0.0
+    },
+    "csm24": {
+      "Theme-01": 0.4808,
+      "Theme-02": 0.0557,
+      "Theme-03": 0.2045,
+      "Theme-04": 0.1391,
+      "Theme-05": 0.1198
+    },
+    "csm25": {
+      "Theme-01": 0.0,
+      "Theme-02": 0.4934,
+      "Theme-03": 0.5066,
+      "Theme-04": 0.0,
+      "Theme-05": 0.0
+    },
+    "csm26": {
       "Theme-01": 1.0,
       "Theme-02": 0.0,
       "Theme-03": 0.0,
       "Theme-04": 0.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
-    },
-    "csm24": {
-      "Theme-01": 0.0816,
-      "Theme-02": 0.0525,
-      "Theme-03": 0.4895,
-      "Theme-04": 0.193,
-      "Theme-05": 0.0547,
-      "Theme-06": 0.1287
-    },
-    "csm25": {
-      "Theme-01": 0.0,
-      "Theme-02": 0.7034,
-      "Theme-03": 0.0183,
-      "Theme-04": 0.0,
-      "Theme-05": 0.254,
-      "Theme-06": 0.0244
-    },
-    "csm26": {
-      "Theme-01": 0.0,
-      "Theme-02": 0.0,
-      "Theme-03": 1.0,
-      "Theme-04": 0.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
+      "Theme-05": 0.0
     },
     "csm27": {
       "Theme-01": 0.0,
       "Theme-02": 0.0,
       "Theme-03": 0.0,
-      "Theme-04": 1.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
+      "Theme-04": 0.241,
+      "Theme-05": 0.759
     },
     "csm28": {
-      "Theme-01": 0.4617,
-      "Theme-02": 0.0306,
-      "Theme-03": 0.0786,
-      "Theme-04": 0.1898,
-      "Theme-05": 0.0622,
-      "Theme-06": 0.1771
+      "Theme-01": 0.0951,
+      "Theme-02": 0.0048,
+      "Theme-03": 0.2501,
+      "Theme-04": 0.6501,
+      "Theme-05": 0.0
     },
     "csm29": {
-      "Theme-01": 0.0187,
-      "Theme-02": 0.2975,
-      "Theme-03": 0.0662,
-      "Theme-04": 0.2373,
-      "Theme-05": 0.3803,
-      "Theme-06": 0.0
+      "Theme-01": 0.0736,
+      "Theme-02": 0.5137,
+      "Theme-03": 0.2164,
+      "Theme-04": 0.1169,
+      "Theme-05": 0.0794
     },
     "csm30": {
-      "Theme-01": 0.0649,
-      "Theme-02": 0.4277,
-      "Theme-03": 0.0861,
-      "Theme-04": 0.0338,
-      "Theme-05": 0.2724,
-      "Theme-06": 0.1151
+      "Theme-01": 0.0912,
+      "Theme-02": 0.4079,
+      "Theme-03": 0.3211,
+      "Theme-04": 0.0501,
+      "Theme-05": 0.1297
     },
     "csm31": {
-      "Theme-01": 0.0,
-      "Theme-02": 0.7866,
-      "Theme-03": 0.0534,
-      "Theme-04": 0.0625,
-      "Theme-05": 0.0975,
-      "Theme-06": 0.0
+      "Theme-01": 0.0541,
+      "Theme-02": 0.3308,
+      "Theme-03": 0.3659,
+      "Theme-04": 0.0,
+      "Theme-05": 0.2492
     },
     "csm32": {
-      "Theme-01": 0.0349,
-      "Theme-02": 0.3023,
-      "Theme-03": 0.1209,
-      "Theme-04": 0.2193,
-      "Theme-05": 0.1317,
-      "Theme-06": 0.191
+      "Theme-01": 0.1136,
+      "Theme-02": 0.2141,
+      "Theme-03": 0.2859,
+      "Theme-04": 0.1089,
+      "Theme-05": 0.2775
     },
     "csm33": {
-      "Theme-01": 0.0196,
-      "Theme-02": 0.3746,
-      "Theme-03": 0.1302,
-      "Theme-04": 0.0132,
-      "Theme-05": 0.2524,
-      "Theme-06": 0.2099
+      "Theme-01": 0.1455,
+      "Theme-02": 0.3707,
+      "Theme-03": 0.3866,
+      "Theme-04": 0.0174,
+      "Theme-05": 0.0799
     },
     "csm34": {
-      "Theme-01": 0.0,
+      "Theme-01": 1.0,
       "Theme-02": 0.0,
-      "Theme-03": 1.0,
+      "Theme-03": 0.0,
       "Theme-04": 0.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
+      "Theme-05": 0.0
     },
     "csm35": {
-      "Theme-01": 0.219,
-      "Theme-02": 0.0823,
-      "Theme-03": 0.1663,
-      "Theme-04": 0.2175,
-      "Theme-05": 0.0704,
-      "Theme-06": 0.2445
+      "Theme-01": 0.1802,
+      "Theme-02": 0.0621,
+      "Theme-03": 0.2532,
+      "Theme-04": 0.3108,
+      "Theme-05": 0.1936
     },
     "csm36": {
       "Theme-01": 0.0,
-      "Theme-02": 0.263,
-      "Theme-03": 0.0,
+      "Theme-02": 0.8032,
+      "Theme-03": 0.1968,
       "Theme-04": 0.0,
-      "Theme-05": 0.663,
-      "Theme-06": 0.0741
+      "Theme-05": 0.0
     },
     "csm37": {
-      "Theme-01": 0.2239,
-      "Theme-02": 0.1237,
-      "Theme-03": 0.1437,
-      "Theme-04": 0.215,
-      "Theme-05": 0.0772,
-      "Theme-06": 0.2164
+      "Theme-01": 0.1647,
+      "Theme-02": 0.0917,
+      "Theme-03": 0.2239,
+      "Theme-04": 0.2828,
+      "Theme-05": 0.2368
     },
     "csm38": {
-      "Theme-01": 0.3706,
-      "Theme-02": 0.0435,
-      "Theme-03": 0.137,
-      "Theme-04": 0.2004,
-      "Theme-05": 0.0509,
-      "Theme-06": 0.1976
+      "Theme-01": 0.1789,
+      "Theme-02": 0.0175,
+      "Theme-03": 0.2422,
+      "Theme-04": 0.4947,
+      "Theme-05": 0.0667
     },
     "csm39": {
-      "Theme-01": 0.7431,
-      "Theme-02": 0.0,
-      "Theme-03": 0.1704,
-      "Theme-04": 0.0,
-      "Theme-05": 0.0865,
-      "Theme-06": 0.0
+      "Theme-01": 0.1717,
+      "Theme-02": 0.0368,
+      "Theme-03": 0.0,
+      "Theme-04": 0.7915,
+      "Theme-05": 0.0
     },
     "csm40": {
-      "Theme-01": 0.1876,
-      "Theme-02": 0.1563,
-      "Theme-03": 0.1608,
-      "Theme-04": 0.1573,
-      "Theme-05": 0.1007,
-      "Theme-06": 0.2373
+      "Theme-01": 0.1804,
+      "Theme-02": 0.1235,
+      "Theme-03": 0.2589,
+      "Theme-04": 0.2233,
+      "Theme-05": 0.2139
     },
     "csm41": {
       "Theme-01": 0.0,
       "Theme-02": 0.0,
-      "Theme-03": 0.0,
-      "Theme-04": 0.0,
-      "Theme-05": 0.0,
-      "Theme-06": 1.0
-    },
-    "csm42": {
-      "Theme-01": 0.0,
-      "Theme-02": 0.0,
       "Theme-03": 1.0,
       "Theme-04": 0.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
+      "Theme-05": 0.0
+    },
+    "csm42": {
+      "Theme-01": 1.0,
+      "Theme-02": 0.0,
+      "Theme-03": 0.0,
+      "Theme-04": 0.0,
+      "Theme-05": 0.0
     },
     "csm43": {
       "Theme-01": 0.0,
-      "Theme-02": 0.1983,
+      "Theme-02": 0.0,
       "Theme-03": 0.0,
-      "Theme-04": 0.8017,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
+      "Theme-04": 0.0,
+      "Theme-05": 1.0
     },
     "csm44": {
-      "Theme-01": 0.0141,
-      "Theme-02": 0.2986,
-      "Theme-03": 0.0,
-      "Theme-04": 0.0755,
-      "Theme-05": 0.4947,
-      "Theme-06": 0.1171
+      "Theme-01": 0.0,
+      "Theme-02": 0.6066,
+      "Theme-03": 0.2615,
+      "Theme-04": 0.0416,
+      "Theme-05": 0.0903
     },
     "csm45": {
-      "Theme-01": 0.0,
-      "Theme-02": 0.0,
-      "Theme-03": 1.0,
+      "Theme-01": 0.5206,
+      "Theme-02": 0.0146,
+      "Theme-03": 0.0,
       "Theme-04": 0.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
+      "Theme-05": 0.4647
     },
     "csm46": {
-      "Theme-01": 0.0392,
-      "Theme-02": 0.1127,
-      "Theme-03": 0.2655,
-      "Theme-04": 0.1402,
-      "Theme-05": 0.0,
-      "Theme-06": 0.4423
+      "Theme-01": 0.2363,
+      "Theme-02": 0.0131,
+      "Theme-03": 0.3229,
+      "Theme-04": 0.0921,
+      "Theme-05": 0.3356
     },
     "csm47": {
-      "Theme-01": 0.1957,
-      "Theme-02": 0.1356,
-      "Theme-03": 0.1789,
-      "Theme-04": 0.1342,
-      "Theme-05": 0.1127,
-      "Theme-06": 0.2429
+      "Theme-01": 0.1967,
+      "Theme-02": 0.1315,
+      "Theme-03": 0.2487,
+      "Theme-04": 0.2338,
+      "Theme-05": 0.1893
     },
     "csm48": {
       "Theme-01": 0.0,
       "Theme-02": 0.0,
       "Theme-03": 0.0,
-      "Theme-04": 1.0,
-      "Theme-05": 0.0,
-      "Theme-06": 0.0
+      "Theme-04": 0.0,
+      "Theme-05": 1.0
     }
   },
   "bridge_csms": [
     "csm04",
     "csm17",
     "csm21",
+    "csm24",
     "csm29",
     "csm30",
+    "csm31",
     "csm32",
     "csm33",
     "csm35",
     "csm37",
     "csm38",
-    "csm46"
+    "csm40",
+    "csm46",
+    "csm47"
   ],
   "unassigned_csms": [
+    "csm00",
     "csm05",
+    "csm13",
     "csm15",
+    "csm22",
+    "csm41",
     "csm42",
+    "csm45",
     "csm48"
   ],
   "continuous_gradients": [
     {
       "theme": 0,
       "diffusion_coord": 1,
-      "spearman": 0.34012890119863504,
-      "abs_spearman": 0.34012890119863504,
-      "p_empirical": 0.03,
-      "is_gradient": true
-    },
-    {
-      "theme": 0,
-      "diffusion_coord": 2,
-      "spearman": 0.054650732539315565,
-      "abs_spearman": 0.054650732539315565,
-      "p_empirical": 0.7366666666666667,
+      "spearman": -0.1523152539955475,
+      "abs_spearman": 0.1523152539955475,
+      "p_empirical": 0.3466666666666667,
       "is_gradient": false
     },
     {
       "theme": 0,
-      "diffusion_coord": 3,
-      "spearman": -0.24283068405627056,
-      "abs_spearman": 0.24283068405627056,
-      "p_empirical": 0.07,
+      "diffusion_coord": 2,
+      "spearman": 0.1902296985153025,
+      "abs_spearman": 0.1902296985153025,
+      "p_empirical": 0.16666666666666666,
       "is_gradient": false
+    },
+    {
+      "theme": 0,
+      "diffusion_coord": 3,
+      "spearman": -0.5050510832125744,
+      "abs_spearman": 0.5050510832125744,
+      "p_empirical": 0.0,
+      "is_gradient": true
     },
     {
       "theme": 1,
       "diffusion_coord": 1,
-      "spearman": -0.3550524135874848,
-      "abs_spearman": 0.3550524135874848,
-      "p_empirical": 0.02666666666666667,
+      "spearman": -0.5755585966139025,
+      "abs_spearman": 0.5755585966139025,
+      "p_empirical": 0.0,
       "is_gradient": true
     },
     {
       "theme": 1,
       "diffusion_coord": 2,
-      "spearman": -0.013213491962650105,
-      "abs_spearman": 0.013213491962650105,
-      "p_empirical": 0.9466666666666667,
+      "spearman": 0.2738701846656194,
+      "abs_spearman": 0.2738701846656194,
+      "p_empirical": 0.07333333333333333,
       "is_gradient": false
     },
     {
       "theme": 1,
       "diffusion_coord": 3,
-      "spearman": -0.19392270592958147,
-      "abs_spearman": 0.19392270592958147,
-      "p_empirical": 0.14666666666666667,
+      "spearman": 0.20398280459253798,
+      "abs_spearman": 0.20398280459253798,
+      "p_empirical": 0.19333333333333333,
       "is_gradient": false
     },
     {
       "theme": 2,
       "diffusion_coord": 1,
-      "spearman": -0.13534654188962533,
-      "abs_spearman": 0.13534654188962533,
-      "p_empirical": 0.37,
+      "spearman": -0.24253120888503607,
+      "abs_spearman": 0.24253120888503607,
+      "p_empirical": 0.09666666666666666,
       "is_gradient": false
     },
     {
       "theme": 2,
       "diffusion_coord": 2,
-      "spearman": 0.0761460079170364,
-      "abs_spearman": 0.0761460079170364,
-      "p_empirical": 0.5966666666666667,
+      "spearman": 0.21195685362254718,
+      "abs_spearman": 0.21195685362254718,
+      "p_empirical": 0.11666666666666667,
       "is_gradient": false
     },
     {
       "theme": 2,
       "diffusion_coord": 3,
-      "spearman": -0.5933631501381047,
-      "abs_spearman": 0.5933631501381047,
+      "spearman": -0.439662487042824,
+      "abs_spearman": 0.439662487042824,
       "p_empirical": 0.0,
       "is_gradient": true
     },
     {
       "theme": 3,
       "diffusion_coord": 1,
-      "spearman": 0.40689511575215653,
-      "abs_spearman": 0.40689511575215653,
+      "spearman": 0.5692697480818063,
+      "abs_spearman": 0.5692697480818063,
       "p_empirical": 0.0,
       "is_gradient": true
     },
     {
       "theme": 3,
       "diffusion_coord": 2,
-      "spearman": -0.06079174709515664,
-      "abs_spearman": 0.06079174709515664,
-      "p_empirical": 0.6833333333333333,
-      "is_gradient": false
-    },
-    {
-      "theme": 3,
-      "diffusion_coord": 3,
-      "spearman": 0.012557160525861253,
-      "abs_spearman": 0.012557160525861253,
-      "p_empirical": 0.9166666666666666,
-      "is_gradient": false
-    },
-    {
-      "theme": 4,
-      "diffusion_coord": 1,
-      "spearman": -0.41906134823354857,
-      "abs_spearman": 0.41906134823354857,
-      "p_empirical": 0.0,
-      "is_gradient": true
-    },
-    {
-      "theme": 4,
-      "diffusion_coord": 2,
-      "spearman": 0.3222497103745998,
-      "abs_spearman": 0.3222497103745998,
-      "p_empirical": 0.02666666666666667,
-      "is_gradient": true
-    },
-    {
-      "theme": 4,
-      "diffusion_coord": 3,
-      "spearman": 0.26703394733717656,
-      "abs_spearman": 0.26703394733717656,
-      "p_empirical": 0.06333333333333334,
-      "is_gradient": false
-    },
-    {
-      "theme": 5,
-      "diffusion_coord": 1,
-      "spearman": 0.16580142899209396,
-      "abs_spearman": 0.16580142899209396,
+      "spearman": -0.15333041252072574,
+      "abs_spearman": 0.15333041252072574,
       "p_empirical": 0.29,
       "is_gradient": false
     },
     {
-      "theme": 5,
-      "diffusion_coord": 2,
-      "spearman": 0.08955340858433113,
-      "abs_spearman": 0.08955340858433113,
-      "p_empirical": 0.5766666666666667,
+      "theme": 3,
+      "diffusion_coord": 3,
+      "spearman": -0.12720784744519614,
+      "abs_spearman": 0.12720784744519614,
+      "p_empirical": 0.3466666666666667,
       "is_gradient": false
     },
     {
-      "theme": 5,
-      "diffusion_coord": 3,
-      "spearman": -0.42973688424973455,
-      "abs_spearman": 0.42973688424973455,
-      "p_empirical": 0.006666666666666667,
+      "theme": 4,
+      "diffusion_coord": 1,
+      "spearman": 0.3312287922400999,
+      "abs_spearman": 0.3312287922400999,
+      "p_empirical": 0.016666666666666666,
       "is_gradient": true
+    },
+    {
+      "theme": 4,
+      "diffusion_coord": 2,
+      "spearman": 0.02042559587683011,
+      "abs_spearman": 0.02042559587683011,
+      "p_empirical": 0.8933333333333333,
+      "is_gradient": false
+    },
+    {
+      "theme": 4,
+      "diffusion_coord": 3,
+      "spearman": 0.0017245885700753654,
+      "abs_spearman": 0.0017245885700753654,
+      "p_empirical": 0.9966666666666667,
+      "is_gradient": false
     }
   ],
   "downstream_note": "Phase 04 consumes S (M\u00d7K), the theme basis, and the theme registry. BSV dimension = K."

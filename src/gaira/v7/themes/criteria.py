@@ -38,6 +38,9 @@ SPARSITY_TARGET = 0.60                # of the mass in a CSM's top two themes
 DEGENERATE_INFORMATION = 0.05         # below this a model has not fitted anything
 DEGENERATE_MAX_THEME_SHARE = 0.60     # one theme may not own this much of the membership mass
 DEGENERATE_MIN_EFFECTIVE_K = 2.0      # effective number of themes actually used
+DEGENERATE_MIN_DOMINANT_FRAC = 0.60   # of themes must be the top theme for some CSM
+DEGENERATE_MAX_UBIQUITY = 0.80        # a theme claiming this share of all CSMs is a background
+DEGENERATE_MAX_UNASSIGNED = 0.50      # a theme set that explains fewer CSMs than this is none
 DISTINCTNESS_MAX_COSINE = 0.90        # two themes sharing a chemistry must not also
                                       # be near-duplicate spectra
 
@@ -47,7 +50,13 @@ WINDOWS = [
     (450, 550, "S–S stretch"), (550, 650, "C–S stretch"),
     (650, 730, "six-membered ring breathing"), (730, 800, "five-membered ring / O–P–O"),
     (800, 880, "C–C skeletal"), (880, 960, "C–C backbone / C–O–C ring"),
-    (960, 1010, "PO4 / phenyl ring breathing"), (1010, 1070, "C–N / C–O stretch"),
+    # 960–1010 was one window labelled "PO4 / phenyl ring breathing" and mapped to the
+    # phosphate family, which made the protein theme come out named "phosphate" on the strength
+    # of its 1004 cm-1 band. 1004 in a protein is the phenylalanine ring-breathing mode; PO4
+    # sits near 980. Two windows, two families — the same context-free assignment error the
+    # Phase 01 investigation caught at 702 cm-1.
+    (960, 995, "PO4 symmetric stretch"), (995, 1010, "phenyl ring breathing"),
+    (1010, 1070, "C–N / C–O stretch"),
     (1070, 1130, "C–C trans chain / PO2⁻ / glycosidic C–O–C"),
     (1130, 1180, "C–C gauche / conjugated C–C"), (1180, 1250, "amide III / C–O–C asymmetric"),
     (1250, 1300, "=C–H in-plane bend"), (1300, 1360, "CH2 twist"),
@@ -64,7 +73,7 @@ FAMILY = {
     "C–C gauche / conjugated C–C": "ring",
     "C–C skeletal": "skeletal", "C–C backbone / C–O–C ring": "skeletal",
     "C–N / C–O stretch": "skeletal", "C–C trans chain / PO2⁻ / glycosidic C–O–C": "skeletal",
-    "PO4 / phenyl ring breathing": "phosphate",
+    "PO4 symmetric stretch": "phosphate", "phenyl ring breathing": "ring",
     "amide III / C–O–C asymmetric": "amide", "amide II / COO⁻ asymmetric": "amide",
     "amide I / cis C=C": "amide",
     "CH2 twist": "aliphatic", "CH2 / CH3 scissoring": "aliphatic",
@@ -245,7 +254,9 @@ def compression(M: int, K: int) -> float:
     return float(K / max(M, 1))       # normalised outside; smaller K = more compression
 
 
-def membership_degenerate(S: np.ndarray) -> dict:
+def membership_degenerate(S: np.ndarray, X: np.ndarray | None = None,
+                          themes: np.ndarray | None = None,
+                          min_fit: float = 0.35) -> dict:
     """Is the membership matrix actually using its themes?
 
     Reconstruction quality does not detect this. A run where one theme is the top theme for
@@ -259,10 +270,29 @@ def membership_degenerate(S: np.ndarray) -> dict:
     eff = float(np.exp(-(share[share > 0] * np.log(share[share > 0])).sum()))
     top = S.argmax(axis=1)
     used = len(set(top.tolist()))
+    K = S.shape[1]
+    ubiquity = float(((S >= 0.15).mean(axis=0)).max())
+
+    # The criterion that matters most: does the theme set actually explain the CSMs? A run
+    # passed every other check with two themes claiming all 49 CSMs at flat membership, and
+    # 47 of 49 CSMs whose best theme reconstructed less than a third of them. Themes that
+    # explain nothing are not themes, however stable their memberships look.
+    unassigned = 0.0
+    if X is not None and themes is not None:
+        fits = []
+        for i, x in enumerate(X):
+            th = themes[top[i]]
+            cc = float(np.dot(x, th) / (np.dot(th, th) + EPS))
+            fits.append(max(0.0, 1.0 - ((x - cc * th) ** 2).sum() / ((x ** 2).sum() + EPS)))
+        unassigned = float(np.mean(np.array(fits) < min_fit))
+
     bad = (share.max() > DEGENERATE_MAX_THEME_SHARE or eff < DEGENERATE_MIN_EFFECTIVE_K
-           or used < max(2, S.shape[1] // 2))
+           or used < max(2, int(np.ceil(DEGENERATE_MIN_DOMINANT_FRAC * K)))
+           or ubiquity > DEGENERATE_MAX_UBIQUITY
+           or unassigned > DEGENERATE_MAX_UNASSIGNED)
     return {"max_theme_share": float(share.max()), "effective_K": eff,
-            "n_themes_ever_dominant": int(used), "degenerate": bool(bad)}
+            "n_themes_ever_dominant": int(used), "max_theme_ubiquity": ubiquity,
+            "unassigned_fraction": unassigned, "degenerate": bool(bad)}
 
 
 def family_specificity(all_adms: list[list[dict]]) -> dict[str, float]:

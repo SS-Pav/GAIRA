@@ -3,62 +3,57 @@
     {
       "n_groups": 2,
       "assignment": [
-        1,
         0,
         1,
-        1,
         0,
-        1
+        0,
+        0
       ],
-      "mean_within_correlation": 0.7262127381959226,
+      "mean_within_correlation": 0.7384588699602603,
       "level": 1
     },
     {
       "n_groups": 3,
       "assignment": [
         1,
-        0,
         2,
-        1,
         0,
-        1
+        0,
+        0
       ],
-      "mean_within_correlation": 0.7432807163617391,
+      "mean_within_correlation": 0.7801885291172684,
       "level": 2
     },
     {
       "n_groups": 4,
       "assignment": [
-        1,
-        0,
-        3,
         2,
+        3,
+        0,
         0,
         1
       ],
-      "mean_within_correlation": 0.7488903329638172,
+      "mean_within_correlation": 0.8233425063391833,
       "level": 3
     },
     {
       "n_groups": 5,
       "assignment": [
-        2,
         0,
-        4,
-        3,
         1,
-        2
+        2,
+        3,
+        4
       ],
-      "mean_within_correlation": 0.7547171882668173,
+      "mean_within_correlation": 1.0,
       "level": 4
     }
   ],
   "n_levels": 4,
   "linkage_distances": [
-    0.24528281173318267,
-    0.25693652233918274,
-    0.2621116615394173,
-    0.32477395760060507,
-    0.41721017861468307
+    0.17665749366081673,
+    0.2413884594936891,
+    0.30327078919674766,
+    0.42930452014888787
   ]
 }

@@ -88,9 +88,10 @@ Consensus Spectral Motifs (CSMs)                                 ── PHASE 02
    optional anchored atoms for rare chemistry (Strategy F)
         │
         ▼
-CSM → theme soft mapping                                         ── PHASE 03
-   S ∈ ℝ₊^{M×K}, sparse, non-negative, row-normalised
-   K selected on a pre-registered Pareto frontier
+CSM → theme soft mapping                                         ── PHASE 03 ✔ COMPLETE
+   S ∈ ℝ₊^{49×5}, sparse, non-negative, row-normalised
+   K = 5 by archetypal analysis; 4 themes accepted, 1 rejected
+   15 bridge CSMs keep split membership; 9 poorly-explained CSMs left unplaced
         │
         ▼
 continuous BSV reference space                                   ── PHASE 04

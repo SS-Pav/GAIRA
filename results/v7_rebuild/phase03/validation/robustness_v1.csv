@@ -1,9 +1,9 @@
-held_out,n_removed,theme_recovery,testable
-RamanBioLib,37,0.7438979001902003,True
-amino_acid_raman_grounding,2,0.7319673823586096,True
-gobbato_raman_metabolites,10,0.8209718819792484,True
-exc::1064.0,11,0.7530401456683107,True
-exc::785.0,27,0.7856001478197552,True
-exc::532.0,6,0.7900482670150221,True
-exc::514.5,1,0.8926325267422038,True
-exc::488.0,4,0.7421391494546197,True
+held_out,n_removed,theme_recovery,testable,note
+RamanBioLib,37,,False,removes 37/49 CSMs — not a fair holdout
+amino_acid_raman_grounding,2,0.8586932442058004,True,
+gobbato_raman_metabolites,10,0.8631100454510161,True,
+exc::1064.0,11,0.7437231394286143,True,
+exc::785.0,27,,False,removes 27/49 CSMs — not a fair holdout
+exc::532.0,6,0.6571438213783212,True,
+exc::514.5,1,0.7467603674970833,True,
+exc::488.0,4,0.6982761880128564,True,

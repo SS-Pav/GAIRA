@@ -1,84 +1,45 @@
-# Phase 04 — Biochemical theme construction
+# Phase 03 — Biochemical theme construction
 
-**Status:** Not started — blocked by Phase 03
-
----
-
-## Purpose
-
-Derive soft, sparse, non-negative biochemical themes from the CSMs and select the theme count `K`.
-
-## Why this phase exists
-
-Themes are derived *from* CSMs rather than asserted *over* them — the direct response to limitation L-05, where a cleaned ontology imposed on a fixed representation produced one significant improvement out of four levels.
-
-## Inputs
-
-- `csm_dictionary_v1.npz` and `csm_registry_v1.json` from Phase 03
-- frozen CV splits
-
-## Outputs
-
-- `theme_registry_v1.yaml`, `theme_membership_v1.npz` (C-08)
-- membership entropy per CSM
-- theme graph
-- `K` sweep with the Pareto frontier
-- theme-layer value analysis vs the CSM layer
-- `reports/PHASE_04_REPORT.md`
-
-## Gate — all must pass before the next phase begins
-
-- [ ] Themes represent coherent chemistry
-- [ ] **No disease, pathway, process, or phenotype labels** (P-07)
-- [ ] No hard one-parent requirement; soft membership retained
-- [ ] `K` justified on a Pareto frontier by the pre-registered rule
-- [ ] Theme layer's value over the CSM layer measured and reported either way
-
-## Primary risks
-
-- R-11 themes decorative
-- R-12 BSV axes correlated
-
-### The mapping
-
-`t = Sᵀc` with `S ∈ ℝ₊^{M×K}` sparse, non-negative, row-normalised. A CSM may belong to
-several themes — shared biochemical structure genuinely does, and forcing one parent destroys
-information.
-
-### Precedent to heed
-
-The V6.2 Pareto study (`results/v6_rebuild/tables/v62_pareto.csv`) found chemical
-admissibility first satisfied at `K = 13`, while information retained already reached 0.796
-at `K = 6`, and recoverability *fell* monotonically with `K` (0.969 at K=2 → 0.503 at K=12).
-Compression and admissibility pull hard in opposite directions in this data. Expect the same
-tension; resolve it by the pre-registered rule, not by whichever number looks nicer.
-
-### The decorative-layer test
-
-At V6.2, `theme_raw` and `theme_posterior` were numerically identical at every metric on
-every ontology — the posterior machinery changed no decisions. Phase 04 must show the theme
-layer adds value over the CSM layer, or record that it does not and consider shipping a
-CSM-level BSV with `K = M`.
-
-### Naming discipline
-
-"lipid chemistry" ✓ · "membrane remodelling" ✗ · "inflammation" ✗ · "tumour metabolism" ✗
+**Status:** COMPLETE — `K = 5`, archetypal analysis. 4 themes accepted, 1 rejected.
+Outputs at `results/v7_rebuild/phase03/`.
 
 ---
 
-## What belongs in this directory
+## What was produced
 
-Phase-04 code, configs, notebooks, per-phase tables, and the phase report. Artefacts that
-later phases consume belong in `../../results/` (tables, figures, manifests, checkpoints,
-phase_outputs) so the provenance chain stays in one place.
+| theme | name | CSMs | bootstrap | confidence |
+|---|---|---:|---:|---:|
+| Theme-01 | carboxyl / ester carbonyl + amide backbone | 16 | 0.69 | 0.76 |
+| Theme-02 | aliphatic chain + unsaturated chain | 17 | 0.96 | 0.90 |
+| Theme-03 | *(rejected — bootstrap 0.59 < floor 0.60)* | 23 | 0.59 | — |
+| Theme-04 | aliphatic chain + polar skeletal backbone | 19 | 0.77 | 0.79 |
+| Theme-05 | heterocyclic / conjugated ring + sulfur / thiol | 16 | 0.62 | 0.71 |
 
-**Do not store here:** raw spectra · large regenerable intermediates · anything with a
-hard-coded absolute path · outputs from other phases.
+25 member CSMs · **15 bridges, left as bridges** · **9 poorly explained, left unplaced**.
+
+## Gate — all passed
+
+- [x] Themes derived FROM the CSMs, never asserted over them (L-05)
+- [x] No disease, pathway, process or phenotype name (P-07) — enforced by a registry invariant
+- [x] Soft membership retained; no CSM forced to a single parent
+- [x] `K` justified on a Pareto frontier with band-based admissibility as a hard veto
+- [x] Theme layer's value over the CSM layer measured and reported (+0.082 retrieval, small)
+- [x] No chemistry label visible during discovery; revealed once, after `K` was fixed
+
+## What Phase 04 consumes
+
+- `artifacts/theme_membership_v1.npz` — `S` (49 × 5) and the 5 × 676 theme basis
+- `artifacts/theme_registry_v1.json` / `.yaml` — names, confidences, counter-evidence,
+  gradients, bridge annotations, poorly-explained list
+- `artifacts/hierarchy_v1.json` — four inferred levels; the top one is the hydrophobic/polar
+  split that Phase 02.5 and PCA also found
+
+**BSV dimension = K = 5.** Four constraints Phase 04 must carry rather than discard are listed
+in `results/v7_rebuild/phase03/reports/PHASE_03_REPORT.md` §8.
 
 ## Reference documents
 
-- `../../context/GAIRA_V7_CONTEXT.md` — canonical scientific context
-- `../../plan/GAIRA_V7_REBUILD_PLAN.md` — Phase 04 in the full sequence
-- `../../plan/VALIDATION_AND_DECISION_RULES.md` — pre-registered selection rules
-- `../../plan/RISK_REGISTER.md` — full risk detail
-- `../../architecture/DATA_CONTRACTS.md` — artefact schemas
+- `../../../results/v7_rebuild/phase03/reports/PHASE_03_REPORT.md` — the report
+- `../../../results/v7_rebuild/phase03/reports/PHASE_03_SCIENTIFIC_AUDIT.md` — reviewer-style
+  audit; **not ready for external submission** without four named experiments
+- `../../../results/v7_rebuild/phase03/reports/PHASE_03_FIGURES.pdf` — 13 figures with captions

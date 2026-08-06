@@ -1,6 +1,6 @@
 model,K,peak_K,plateau,composite,status,n_admissible,n_swept,n_degenerate_K,best_composite,rationale
-archetypal,6.0,6.0,"[6, 6]",0.36556470068708957,PASS,2.0,13.0,1,0.5067739482294376,2 of 13 K values are chemically admissible; the composite peaks at K=6 (0.3656); the contiguous admissible plateau within 0.02 spans K=6–6; smallest selected
+archetypal,5.0,5.0,"[5, 5]",0.3247210533607199,PASS,2.0,13.0,1,0.5067739482294376,2 of 13 K values are chemically admissible; the composite peaks at K=5 (0.3247); the contiguous admissible plateau within 0.02 spans K=5–5; smallest selected
 sparse_nmf,,,,,FAIL,,,14,,every K for this model is degenerate — the fit retains no information about the CSM spectra
 fuzzy_cmeans,,,,,FAIL,,,1,,no K in the sweep is both chemically admissible and composed of distinguishable themes
-diffusion_gmm,,,,,FAIL,,,1,,no K in the sweep is both chemically admissible and composed of distinguishable themes
-graph_regularised_nmf,,,,,FAIL,,,13,,no K in the sweep is both chemically admissible and composed of distinguishable themes
+diffusion_gmm,4.0,4.0,"[4, 4]",0.4208888711849753,PASS,2.0,13.0,1,0.46618509739795855,2 of 13 K values are chemically admissible; the composite peaks at K=4 (0.4209); the contiguous admissible plateau within 0.02 spans K=4–4; smallest selected
+graph_regularised_nmf,,,,,FAIL,,,14,,every K for this model is degenerate — the fit retains no information about the CSM spectra
