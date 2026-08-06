@@ -28,6 +28,31 @@ Companions: `PHASE_DEPENDENCY_MAP.md` (what blocks what),
 >
 > See `context/ARCHITECTURE_COMPLIANCE_AUDIT.md` §5.
 
+> ## ⚠ PHASE 05 REDEFINED — adopted 2026-08-06
+>
+> This plan's Phase 05 ("engine", contract C-10) was implemented inside Phase 04, which merged
+> the BSV and engine work. Phase 05 has been **redefined** as the *canonical CSM inference
+> engine* and it **replaces** the Theme/BSV inference path rather than extending it.
+>
+> The reason is measured, not stylistic. Phase 04 found chemistry-class generalisation to unseen
+> molecules ran 0.608 (raw) → 0.855 (CSM) → 0.405 (theme); Phase 04.5 then found a second-order
+> factorisation of the CSM activations retained 0.185 of the CSM layer's information. The
+> abstraction stack pays until the CSM layer and not after it.
+>
+> | | before | after |
+> |---|---|---|
+> | canonical representation | BSV (theme coordinates) | 49-d frozen CSM activation vector |
+> | interpretable layer | themes discovered by NMF, named afterwards | 11 axes declared from Raman band assignments |
+> | geometry | inference extension (Nyström) | visualisation only |
+> | modality scope | included a SERS out-of-domain probe | **Raman only**; that probe is out of scope |
+>
+> The theme layer and BSV are **not deleted** — Phases 03 and 04 remain frozen and their outputs
+> stand. They are no longer the inference path. Phase 04's `GATE_FAILED` status came from the
+> SERS out-of-domain gate, which the redefinition removes from scope; the failure is recorded in
+> that phase's report and is not carried forward as an open item.
+>
+> See `results/v7_rebuild/phase05/reports/PHASE_05_CANONICAL_INFERENCE_ENGINE.md` §0.
+
 ## Rules that apply to every phase
 
 1. **Gates are binding.** A failed gate stops the phase. It does not get waived because the
@@ -482,14 +507,25 @@ nucleic_acid 3 (100% uncovered), sphingolipid **absent entirely**.
 
 ```
 00 Benchmark lock ──▶ 01 Balanced references + LSMs ──▶ 02 CSMs ──▶ 03 Themes
-                                                                       │
-                                                                       ▼
-                                   06 Raman validation ◀── 05 Engine ◀── 04 BSV
-                                            │
-                                ┌───────────┴───────────┐
-                                ▼                       ▼
-                    07 Chemistry-aware learning   08 Corpus expansion
-                          (deferred)                  (deferred)
+                                                                │           │
+                                                                │           ▼
+                                                                │        04 BSV
+                                                                │           │
+                                                                │           ▼
+                                                                │      04.5 Meta components
+                                                                │      (tested, DISCARDED)
+                                                                ▼
+                                            05 Canonical CSM inference engine
+                                            (Raman only; replaces the 03/04
+                                             Theme/BSV path — see the ⚠ block)
+                                                                │
+                                                                ▼
+                                                     06 Raman validation
+                                                                │
+                                                    ┌───────────┴───────────┐
+                                                    ▼                       ▼
+                                        07 Chemistry-aware learning   08 Corpus expansion
+                                              (deferred)                  (deferred)
 ```
 
 Numbering is the one adopted 2026-08-06 (see the ⚠ block at the top of this document). The
