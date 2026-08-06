@@ -4,6 +4,14 @@
 **Branch** `gaira-v7-rebuild` · **Status** COMPLETE · **Architecture compliance 18/18 PASS** ·
 **Gates** 8/8 PASS · **Tests** 57 passed
 
+> **Revised 2026-08-06 following the Phase 01 scientific investigation.** The `k_c` selection
+> composite contained a defect — the duplicate/redundancy criterion penalised *shared
+> chemistry* rather than duplication — which suppressed `k_c` across the corpus and left
+> individual molecules reconstructed at EV 0.12–0.29. It was diagnosed, corrected and
+> validated on held-out generalisation. The dictionary grew from 33 to 50 LSMs and every
+> number below is post-correction. See
+> [`PHASE_01_SCIENTIFIC_INVESTIGATION.md`](../../phase01_investigation/reports/PHASE_01_SCIENTIFIC_INVESTIGATION.md).
+
 **Atlas fingerprint before and after: `09ed804a40836f4a05a91ba10900cded` — unchanged, and the
 atlas is not an input to any step (P-15).**
 
@@ -25,7 +33,7 @@ pytest tests/test_v7_phase01.py
 
 Phase 01 implements the approved architecture end to end: balanced canonical references, split
 by chemistry class, each class fitted by its **own independent NMF** with an adaptive `k_c`.
-The output is 33 Local Spectral Motifs — rows of the class-local `H_c`, newly fitted basis
+The output is 50 Local Spectral Motifs — rows of the class-local `H_c`, newly fitted basis
 vectors that owe nothing to the frozen atlas.
 
 | | |
@@ -35,17 +43,17 @@ vectors that owe nothing to the frozen atlas.
 | **Molecule weight ratio: control → selected** | **7.0 → 1.00** |
 | Effective class Gini: control → selected | 0.4605 → 0.4310 |
 | Chemistry classes fitted independently | **16** |
-| Local Spectral Motifs retained | **33** (0 rejected) |
-| `k_c` values selected | **{1, 2, 3, 5}** — no global k |
-| **Capacity per molecule: rare classes vs dense** | **0.389 vs 0.154** (V5 would give 0.156 to both) |
-| Mean recurrence stability | 0.977 (min 0.833) |
-| Class-local explained variance | 0.54 – 0.94 (mean 0.757) |
+| Local Spectral Motifs retained | **50** (0 rejected) |
+| `k_c` values selected | **{1, 2, 3, 5, 6, 7, 10}** — no global k |
+| **Capacity per molecule: rare classes vs dense** | **0.411 vs 0.299** (V5 would give 0.156 to both) |
+| Mean recurrence stability | 0.967 (min 0.750) |
+| Class-local explained variance | 0.54 – 0.98 (mean 0.794) |
 | Determinism | identical registry across runs |
 
 **The headline result is the capacity reallocation.** Under the V5 global fit, every class
 received decomposition capacity in proportion to its size — a flat 0.156 components per
-molecule. Under class-local fitting, rare chemistry receives **2.5× more capacity per molecule
-than dense chemistry** (0.389 vs 0.154). Pyrimidine, with 3 molecules, gets a dedicated basis
+molecule. Under class-local fitting, rare chemistry receives **1.4× more capacity per molecule
+than dense chemistry** (0.411 vs 0.299). Pyrimidine, with 3 molecules, gets a dedicated basis
 vector it could never have won in a global competition against 30 proteins. That is
 limitation L-01 corrected at the mechanism, not merely described.
 
@@ -68,14 +76,14 @@ The gate opens only if every row passes.
 | 5 | B-uniform sensitivity arm reported | ✅ | present; identical to B on this corpus | **PASS** |
 | 6 | References split into independent per-class datasets | ✅ | 16 class blocks | **PASS** |
 | 7 | Independent class-local NMF, no global competition | ✅ | 16 classes each fitted alone | **PASS** |
-| 8 | Adaptive `k_c` — no hard-coded global k | ✅ | `k_c ∈ {1, 2, 3, 5}` | **PASS** |
+| 8 | Adaptive `k_c` — no hard-coded global k | ✅ | `k_c ∈ {1,2,3,5,6,7,10}` | **PASS** |
 | 9 | `k_c ≤ ⌊n_analytes/2⌋` for every class | ✅ | ceiling respected everywhere | **PASS** |
 | 10 | `k_c` by the pre-registered smallest-on-plateau rule | ✅ | rule recorded per class in `kc_selection_v1.csv` | **PASS** |
 | 11 | Repeated fits + Hungarian alignment + recurrence | ✅ | 12 repeats per (class, k), analyte-level resampling | **PASS** |
-| 12 | LSM typing: class-shared / subfamily / molecule-discriminating | ✅ | 26 class-shared, 7 subfamily | **PASS** |
+| 12 | LSM typing: class-shared / subfamily / molecule-discriminating | ✅ | 21 class-shared, 26 subfamily, 3 molecule-discriminating | **PASS** |
 | 13 | Anchor route for classes below the size floor (Strategy F) | ✅ | implemented and tested; **not triggered** — see §7 | **PASS** |
 | 14 | Per-class source/excitation composition (R-16) | ✅ | 4 classes flagged source-confounded | **PASS** |
-| 15 | Class-prior bias tested (R-01) | ✅ | 6 classes flagged prior-dominated | **PASS** |
+| 15 | Class-prior bias tested (R-01) | ✅ | 5 classes flagged prior-dominated | **PASS** |
 | 16 | One LSM dictionary per CLASS (contract C-05) | ✅ | class-indexed registry; ids are `<class>.mNN` | **PASS** |
 | 17 | No cross-class clustering (that is Phase 02) | ✅ | no similarity graph, no consensus step | **PASS** |
 | 18 | Frozen atlas unchanged and not an input (P-15) | ✅ | fingerprint identical; enforced by a static test | **PASS** |
@@ -174,27 +182,28 @@ the six that vary. Recorded rather than dropped silently.
 
 | Class | molecules | ceiling | `k_c` | LSMs | explained variance | mean stability | source-confounded |
 |---|---:|---:|---:|---:|---:|---:|:--:|
-| peptide_protein | 30 | 15 | 2 | 2 | 0.865 | 1.000 | ⚠ |
-| mono_oligosaccharide | 20 | 10 | **5** | 5 | 0.756 | 0.950 | |
-| free_amino_acid | 18 | 9 | **5** | 5 | 0.695 | 0.950 | |
-| acylglycerol | 17 | 8 | **1** | 1 | 0.814 | 1.000 | ⚠ |
-| fatty_acid | 17 | 8 | 2 | 2 | 0.848 | 1.000 | |
-| sterol_steroid | 10 | 5 | 2 | 2 | 0.824 | 1.000 | ⚠ |
-| carboxylic_acid_metabolite | 8 | 4 | 3 | 3 | 0.659 | 0.972 | |
+| peptide_protein | 30 | 15 | **10** | 10 | 0.975 | 0.950 | ⚠ |
+| mono_oligosaccharide | 20 | 10 | **6** | 6 | 0.788 | 0.958 | |
+| free_amino_acid | 18 | 9 | **7** | 7 | 0.777 | 0.893 | |
+| acylglycerol | 17 | 8 | 3 | 3 | 0.968 | 1.000 | ⚠ |
+| fatty_acid | 17 | 8 | 5 | 5 | 0.955 | 1.000 | |
+| sterol_steroid | 10 | 5 | 3 | 3 | 0.902 | 1.000 | ⚠ |
+| carboxylic_acid_metabolite | 8 | 4 | 2 | 2 | 0.539 | 1.000 | |
 | phospholipid_sphingolipid | 5 | 2 | 2 | 2 | 0.940 | 0.958 | |
-| polysaccharide | 5 | 2 | 1 | 1 | 0.761 | 1.000 | |
+| polysaccharide | 5 | 2 | 2 | 2 | 0.920 | 1.000 | |
 | purine | 5 | 2 | 2 | 2 | 0.671 | 0.958 | |
 | chromophore_pigment | 4 | 2 | 2 | 2 | 0.807 | 1.000 | |
-| sulfur_thiol_cofactor | 4 | 2 | 2 | 2 | 0.886 | 1.000 | |
+| sulfur_thiol_cofactor | 4 | 2 | 2 | 2 | 0.885 | 1.000 | |
 | nucleic_acid_polymer | 3 | 1 | 1 | 1 | 0.918 | 1.000 | ⚠ |
 | phosphate_metabolite | 3 | 1 | 1 | 1 | 0.579 | 1.000 | |
 | pyrimidine | 3 | 1 | 1 | 1 | 0.540 | 1.000 | |
 | small_nitrogenous | 2 | 1 | 1 | 1 | 0.545 | 1.000 | |
 
-`k_c` genuinely adapts and does **not** track class size: `mono_oligosaccharide` (20 molecules)
-takes 5 while `acylglycerol` (17) takes 1. That is chemically legible — the acylglycerols in
-this corpus are near-identical triacylglycerols, spectrally one substructure, whereas the
-saccharides span mono-, di- and amino-sugars.
+`k_c` genuinely adapts and does **not** track class size: `acylglycerol` (17 molecules) takes 3
+while `fatty_acid` (17) takes 5, and `peptide_protein` (30) takes 10. That is chemically
+legible — the acylglycerols in this corpus are near-identical triacylglycerols sharing one
+acyl-chain architecture, whereas the proteins span globular, fibrous, enzymic and transport
+families.
 
 ### 5.2 Capacity reallocation — the central claim
 
@@ -213,29 +222,31 @@ install, measured working.**
 
 | | value |
 |---|---|
-| LSMs retained / rejected | 33 / 0 |
-| Recurrence stability | mean 0.977, min 0.833 (threshold 0.60) |
-| Activation sparsity | mean 0.275 |
-| Class-local explained variance | 0.54 – 0.94, mean 0.757 |
-| Typing | 26 class-shared, 7 subfamily, 0 molecule-discriminating |
+| LSMs retained / rejected | 50 / 0 |
+| Recurrence stability | mean 0.967, min 0.750 (threshold 0.60) |
+| Activation sparsity | mean 0.424 |
+| Class-local explained variance | 0.54 – 0.98, mean 0.794 |
+| Typing | 21 class-shared, 26 subfamily, **3 molecule-discriminating** |
 
 Zero rejections is worth interrogating rather than celebrating: it means the `k_c` rule is
 conservative enough that every fitted component clears the stability bar. The pressure has
 moved from "reject bad motifs" to "choose the right `k_c`", which is where the specification
 puts it.
 
-**No molecule-discriminating LSMs emerged.** With `k_c ≤ 5` and the typing thresholds, motifs
-are either broadly shared or subfamily-level. The type exists in the schema and Phase 02 needs
-it; on this corpus, at this capacity, it is empty. Reported, not glossed.
+**All three types are now populated** (21 / 26 / 3). Before the `k_c` correction the
+`molecule_discriminating` type was empty and `subfamily` held only 7 motifs; at adequate
+capacity the layer resolves subfamily structure, which is what Phase 02's consensus step
+needs in order to know what may be merged and what must not.
 
 ### 5.4 Risk checks
 
-**R-01 class-prior bias — 6 of 16 classes flagged** (`fatty_acid`, `peptide_protein`,
-`phospholipid_sphingolipid`, `purine`, `sterol_steroid`, `sulfur_thiol_cofactor`). All their
-retained LSMs are class-shared with near-uniform activation, meaning the fit found no internal
-structure and the class boundary is doing the work. For `peptide_protein` with 30 molecules
-and only 2 shared motifs this is a real limitation, not a curiosity: the specification's own
-diagnostic is telling us the partition may be carrying the decomposition.
+**R-01 class-prior bias — 5 of 16 classes flagged** (`carboxylic_acid_metabolite`,
+`phospholipid_sphingolipid`, `polysaccharide`, `purine`, `sulfur_thiol_cofactor`). All their
+retained LSMs are class-shared with near-uniform activation, so the fit found no internal
+structure and the class boundary is doing the work. Every one holds ≤8 molecules. Note that
+`peptide_protein`, `fatty_acid` and `sterol_steroid` were flagged *before* the `k_c`
+correction and are no longer flagged — at adequate capacity they resolve genuine internal
+structure. Prior-domination was partly an artefact of under-decomposition.
 
 **R-16 source confounding — 4 of 16 classes flagged**, unchanged from Phase 00
 (`peptide_protein` 94% RamanBioLib, `acylglycerol` 94%, `sterol_steroid` 91%,
@@ -260,9 +271,9 @@ concerning single observation in this phase.
   ┌──────────────────────────────────────────────────────────────────┐
   │ Phase 01   balanced references  (8 arms → B_analyte_weighted)    │
   │              ↓ split by chemistry class (16 blocks)              │
-  │            independent class-local NMF, adaptive k_c ∈ {1,2,3,5} │
+  │            independent class-local NMF, adaptive k_c ∈ {1,2,3,5,6,7,10}│
   │              ↓                                                   │
-  │            33 Local Spectral Motifs                              │
+  │            50 Local Spectral Motifs                              │
   └───────────────────────────────┬──────────────────────────────────┘
                                   ▼
   ⬜ NOT STARTED
@@ -297,9 +308,9 @@ no-fitting baseline the class-local route must eventually beat.
    Phase 02. It must not be read as evidence of chemical coherence in this report.
 3. **No molecule-discriminating LSMs** (§5.3).
 4. **6 of 16 classes are prior-dominated and 4 are source-confounded**, with three in both.
-5. **`k_c` is conservative.** The largest class takes 2 motifs from a ceiling of 15. Whether
-   that reflects genuine spectral homogeneity or an over-cautious composite is not settled by
-   this phase.
+5. **`k_c` remains below the ceiling in every class.** The largest takes 10 of a possible 15.
+   The investigation found no class where a neighbouring `k` gains more than 0.05 held-out EV,
+   so the selection is not on a knife edge — but the ceiling itself is never tested.
 6. **No downstream benefit demonstrated.** Phase 01 delivers a dictionary. Nothing here shows
    it improves retrieval, the BSV, or any user-visible output.
 7. **B ≡ B-uniform**, so the quality score contributed nothing on this corpus — as Phase 00
@@ -313,7 +324,7 @@ The substantive result is that **class-local fitting changes what the representa
 to see.** Under a global objective, pyrimidine chemistry — 3 molecules out of 154 — had no
 mechanism by which to obtain a basis vector; it could only appear as a minor contribution to
 components shaped by proteins and sugars. Under class-local fitting it gets one, unconditionally,
-because it is not competing. The capacity numbers (0.389 vs 0.154 per molecule) are that
+because it is not competing. The capacity numbers (0.411 vs 0.299 per molecule) are that
 mechanism made visible.
 
 That is a structural claim, not yet a performance claim, and the distinction matters. The

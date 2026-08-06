@@ -1,0 +1,17 @@
+chemical_class,n_molecules,k_c,k_ceiling,ceiling_bound,worst_molecule_ev,mean_ev,limitation,resolvable_by
+small_nitrogenous,2,1,1,True,0.1231,0.5169,CORPUS: too few molecules; k_c ceiling binds,Phase 08 corpus expansion only
+pyrimidine,3,1,1,True,0.1303,0.54,CORPUS: too few molecules; k_c ceiling binds,Phase 08 corpus expansion only
+carboxylic_acid_metabolite,8,2,4,False,0.3065,0.5268,CORPUS: chemical heterogeneity exceeds available molecules,Phase 02 consensus may pool related chemistry; else corpus
+phosphate_metabolite,3,1,1,True,0.4908,0.5733,CORPUS: too few molecules; k_c ceiling binds,Phase 08 corpus expansion only
+purine,5,2,2,True,0.4949,0.6712,CORPUS: too few molecules; k_c ceiling binds,Phase 08 corpus expansion only
+mono_oligosaccharide,20,6,10,False,0.6144,0.7897,CORPUS: chemical heterogeneity exceeds available molecules,Phase 02 consensus may pool related chemistry; else corpus
+sulfur_thiol_cofactor,4,2,2,True,0.6168,0.8715,CORPUS: too few molecules; k_c ceiling binds,Phase 08 corpus expansion only
+chromophore_pigment,4,2,2,True,0.6254,0.8053,CORPUS: too few molecules; k_c ceiling binds,Phase 08 corpus expansion only
+free_amino_acid,18,7,9,False,0.6333,0.7744,CORPUS: chemical heterogeneity exceeds available molecules,Phase 02 consensus may pool related chemistry; else corpus
+sterol_steroid,10,3,5,False,0.8156,0.9016,adequate,—
+polysaccharide,5,2,2,True,0.8688,0.9199,adequate,—
+acylglycerol,17,3,8,False,0.8719,0.9678,adequate,—
+nucleic_acid_polymer,3,1,1,True,0.8968,0.9176,adequate,—
+fatty_acid,17,5,8,False,0.9023,0.9553,adequate,—
+phospholipid_sphingolipid,5,2,2,True,0.91,0.9405,adequate,—
+peptide_protein,30,10,15,False,0.938,0.9751,adequate,—

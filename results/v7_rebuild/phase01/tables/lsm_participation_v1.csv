@@ -1,7 +1,5 @@
 chemical_class,motif_id,canonical_id,lsm_type
 acylglycerol,acylglycerol.m00,tri-11-eicosenoin,class_shared
-acylglycerol,acylglycerol.m00,triarachidin,class_shared
-acylglycerol,acylglycerol.m00,tribehenin,class_shared
 acylglycerol,acylglycerol.m00,tricaprin,class_shared
 acylglycerol,acylglycerol.m00,tricaproin,class_shared
 acylglycerol,acylglycerol.m00,tricaprylin,class_shared
@@ -9,110 +7,140 @@ acylglycerol,acylglycerol.m00,trielaidin,class_shared
 acylglycerol,acylglycerol.m00,trierucin,class_shared
 acylglycerol,acylglycerol.m00,trilaurin,class_shared
 acylglycerol,acylglycerol.m00,trilinolein,class_shared
-acylglycerol,acylglycerol.m00,trilinolenin,class_shared
 acylglycerol,acylglycerol.m00,trimyristin,class_shared
 acylglycerol,acylglycerol.m00,triolein,class_shared
-acylglycerol,acylglycerol.m00,tripalmitin,class_shared
 acylglycerol,acylglycerol.m00,tripalmitolein,class_shared
 acylglycerol,acylglycerol.m00,tripetroselinin,class_shared
-acylglycerol,acylglycerol.m00,tristearin,class_shared
+acylglycerol,acylglycerol.m01,tri-11-eicosenoin,subfamily
+acylglycerol,acylglycerol.m01,trielaidin,subfamily
+acylglycerol,acylglycerol.m01,trierucin,subfamily
+acylglycerol,acylglycerol.m01,trilinolein,subfamily
+acylglycerol,acylglycerol.m01,trilinolenin,subfamily
+acylglycerol,acylglycerol.m01,triolein,subfamily
+acylglycerol,acylglycerol.m01,tripalmitolein,subfamily
+acylglycerol,acylglycerol.m01,tripetroselinin,subfamily
+acylglycerol,acylglycerol.m02,triarachidin,subfamily
+acylglycerol,acylglycerol.m02,tribehenin,subfamily
+acylglycerol,acylglycerol.m02,tricaprin,subfamily
+acylglycerol,acylglycerol.m02,trielaidin,subfamily
+acylglycerol,acylglycerol.m02,trierucin,subfamily
+acylglycerol,acylglycerol.m02,trilaurin,subfamily
+acylglycerol,acylglycerol.m02,trimyristin,subfamily
+acylglycerol,acylglycerol.m02,tripalmitin,subfamily
+acylglycerol,acylglycerol.m02,tripetroselinin,subfamily
+acylglycerol,acylglycerol.m02,tristearin,subfamily
 carboxylic_acid_metabolite,carboxylic_acid_metabolite.m00,acetoacetate,class_shared
 carboxylic_acid_metabolite,carboxylic_acid_metabolite.m00,citrate,class_shared
-carboxylic_acid_metabolite,carboxylic_acid_metabolite.m00,lactate,class_shared
+carboxylic_acid_metabolite,carboxylic_acid_metabolite.m00,fumarate,class_shared
 carboxylic_acid_metabolite,carboxylic_acid_metabolite.m00,malic acid,class_shared
 carboxylic_acid_metabolite,carboxylic_acid_metabolite.m00,pyruvate,class_shared
 carboxylic_acid_metabolite,carboxylic_acid_metabolite.m00,succinic acid,class_shared
-carboxylic_acid_metabolite,carboxylic_acid_metabolite.m01,ascorbate,subfamily
-carboxylic_acid_metabolite,carboxylic_acid_metabolite.m01,lactate,subfamily
-carboxylic_acid_metabolite,carboxylic_acid_metabolite.m01,malic acid,subfamily
-carboxylic_acid_metabolite,carboxylic_acid_metabolite.m01,pyruvate,subfamily
-carboxylic_acid_metabolite,carboxylic_acid_metabolite.m02,acetoacetate,class_shared
-carboxylic_acid_metabolite,carboxylic_acid_metabolite.m02,ascorbate,class_shared
-carboxylic_acid_metabolite,carboxylic_acid_metabolite.m02,fumarate,class_shared
-carboxylic_acid_metabolite,carboxylic_acid_metabolite.m02,malic acid,class_shared
-carboxylic_acid_metabolite,carboxylic_acid_metabolite.m02,pyruvate,class_shared
-carboxylic_acid_metabolite,carboxylic_acid_metabolite.m02,succinic acid,class_shared
+carboxylic_acid_metabolite,carboxylic_acid_metabolite.m01,acetoacetate,class_shared
+carboxylic_acid_metabolite,carboxylic_acid_metabolite.m01,ascorbate,class_shared
+carboxylic_acid_metabolite,carboxylic_acid_metabolite.m01,citrate,class_shared
+carboxylic_acid_metabolite,carboxylic_acid_metabolite.m01,fumarate,class_shared
+carboxylic_acid_metabolite,carboxylic_acid_metabolite.m01,lactate,class_shared
+carboxylic_acid_metabolite,carboxylic_acid_metabolite.m01,malic acid,class_shared
+carboxylic_acid_metabolite,carboxylic_acid_metabolite.m01,pyruvate,class_shared
 chromophore_pigment,chromophore_pigment.m00,carotene,class_shared
 chromophore_pigment,chromophore_pigment.m00,riboflavin,class_shared
 chromophore_pigment,chromophore_pigment.m00,β-carotene,class_shared
 chromophore_pigment,chromophore_pigment.m01,melanin,subfamily
 chromophore_pigment,chromophore_pigment.m01,riboflavin,subfamily
-fatty_acid,fatty_acid.m00,12-methyltetradecanoic acid,class_shared
-fatty_acid,fatty_acid.m00,13-methylmyristicacid,class_shared
-fatty_acid,fatty_acid.m00,14-methylhexadecanoic acid,class_shared
-fatty_acid,fatty_acid.m00,14-methylpentadecanoic acid,class_shared
-fatty_acid,fatty_acid.m00,15-methylpalmiticacid,class_shared
-fatty_acid,fatty_acid.m00,arachidic acid,class_shared
-fatty_acid,fatty_acid.m00,elaidic acid,class_shared
-fatty_acid,fatty_acid.m00,lauric acid,class_shared
-fatty_acid,fatty_acid.m00,linoleic acid,class_shared
-fatty_acid,fatty_acid.m00,myristic acid,class_shared
-fatty_acid,fatty_acid.m00,oleate,class_shared
-fatty_acid,fatty_acid.m00,palmitic acid,class_shared
-fatty_acid,fatty_acid.m00,palmitoleic acid,class_shared
-fatty_acid,fatty_acid.m00,stearate,class_shared
-fatty_acid,fatty_acid.m00,vaccenic acid,class_shared
-fatty_acid,fatty_acid.m01,12-methyltetradecanoic acid,class_shared
-fatty_acid,fatty_acid.m01,13-methylmyristicacid,class_shared
-fatty_acid,fatty_acid.m01,14-methylhexadecanoic acid,class_shared
-fatty_acid,fatty_acid.m01,arachidonic acid,class_shared
-fatty_acid,fatty_acid.m01,elaidic acid,class_shared
-fatty_acid,fatty_acid.m01,linoleic acid,class_shared
-fatty_acid,fatty_acid.m01,oleate,class_shared
-fatty_acid,fatty_acid.m01,palmitoleic acid,class_shared
-fatty_acid,fatty_acid.m01,stearate,class_shared
-fatty_acid,fatty_acid.m01,vaccenic acid,class_shared
-fatty_acid,fatty_acid.m01,α-linolenic acid,class_shared
-free_amino_acid,free_amino_acid.m00,alanine,class_shared
-free_amino_acid,free_amino_acid.m00,arginine,class_shared
-free_amino_acid,free_amino_acid.m00,asparagine,class_shared
-free_amino_acid,free_amino_acid.m00,aspartate,class_shared
-free_amino_acid,free_amino_acid.m00,cysteine,class_shared
-free_amino_acid,free_amino_acid.m00,glutamate,class_shared
-free_amino_acid,free_amino_acid.m00,histidine,class_shared
-free_amino_acid,free_amino_acid.m00,isoleucine,class_shared
-free_amino_acid,free_amino_acid.m00,leucine,class_shared
-free_amino_acid,free_amino_acid.m00,methionine,class_shared
-free_amino_acid,free_amino_acid.m00,tryptophan,class_shared
-free_amino_acid,free_amino_acid.m00,valine,class_shared
-free_amino_acid,free_amino_acid.m01,alanine,class_shared
-free_amino_acid,free_amino_acid.m01,arginine,class_shared
-free_amino_acid,free_amino_acid.m01,glutamate,class_shared
-free_amino_acid,free_amino_acid.m01,histidine,class_shared
-free_amino_acid,free_amino_acid.m01,hydroxyproline,class_shared
-free_amino_acid,free_amino_acid.m01,isoleucine,class_shared
-free_amino_acid,free_amino_acid.m01,leucine,class_shared
-free_amino_acid,free_amino_acid.m01,proline,class_shared
-free_amino_acid,free_amino_acid.m01,serine,class_shared
-free_amino_acid,free_amino_acid.m01,tryptophan,class_shared
-free_amino_acid,free_amino_acid.m01,tyrosine,class_shared
-free_amino_acid,free_amino_acid.m01,valine,class_shared
-free_amino_acid,free_amino_acid.m02,aspartate,subfamily
-free_amino_acid,free_amino_acid.m02,cysteine,subfamily
-free_amino_acid,free_amino_acid.m02,histidine,subfamily
-free_amino_acid,free_amino_acid.m02,isoleucine,subfamily
-free_amino_acid,free_amino_acid.m02,leucine,subfamily
-free_amino_acid,free_amino_acid.m02,methionine,subfamily
-free_amino_acid,free_amino_acid.m02,proline,subfamily
-free_amino_acid,free_amino_acid.m02,tyrosine,subfamily
-free_amino_acid,free_amino_acid.m02,valine,subfamily
-free_amino_acid,free_amino_acid.m03,arginine,class_shared
-free_amino_acid,free_amino_acid.m03,aspartate,class_shared
-free_amino_acid,free_amino_acid.m03,glutamate,class_shared
-free_amino_acid,free_amino_acid.m03,glycine,class_shared
-free_amino_acid,free_amino_acid.m03,histidine,class_shared
-free_amino_acid,free_amino_acid.m03,isoleucine,class_shared
-free_amino_acid,free_amino_acid.m03,leucine,class_shared
-free_amino_acid,free_amino_acid.m03,methionine,class_shared
-free_amino_acid,free_amino_acid.m03,proline,class_shared
-free_amino_acid,free_amino_acid.m03,serine,class_shared
-free_amino_acid,free_amino_acid.m03,tyrosine,class_shared
-free_amino_acid,free_amino_acid.m03,valine,class_shared
-free_amino_acid,free_amino_acid.m04,isoleucine,subfamily
-free_amino_acid,free_amino_acid.m04,phenylalanine,subfamily
-free_amino_acid,free_amino_acid.m04,serine,subfamily
-free_amino_acid,free_amino_acid.m04,tryptophan,subfamily
-free_amino_acid,free_amino_acid.m04,tyrosine,subfamily
+fatty_acid,fatty_acid.m00,14-methylhexadecanoic acid,subfamily
+fatty_acid,fatty_acid.m00,14-methylpentadecanoic acid,subfamily
+fatty_acid,fatty_acid.m00,15-methylpalmiticacid,subfamily
+fatty_acid,fatty_acid.m00,arachidic acid,subfamily
+fatty_acid,fatty_acid.m00,lauric acid,subfamily
+fatty_acid,fatty_acid.m00,myristic acid,subfamily
+fatty_acid,fatty_acid.m00,oleate,subfamily
+fatty_acid,fatty_acid.m00,palmitic acid,subfamily
+fatty_acid,fatty_acid.m00,stearate,subfamily
+fatty_acid,fatty_acid.m00,vaccenic acid,subfamily
+fatty_acid,fatty_acid.m01,arachidonic acid,subfamily
+fatty_acid,fatty_acid.m01,linoleic acid,subfamily
+fatty_acid,fatty_acid.m01,oleate,subfamily
+fatty_acid,fatty_acid.m01,palmitoleic acid,subfamily
+fatty_acid,fatty_acid.m01,vaccenic acid,subfamily
+fatty_acid,fatty_acid.m01,α-linolenic acid,subfamily
+fatty_acid,fatty_acid.m02,13-methylmyristicacid,subfamily
+fatty_acid,fatty_acid.m02,14-methylhexadecanoic acid,subfamily
+fatty_acid,fatty_acid.m02,arachidic acid,subfamily
+fatty_acid,fatty_acid.m02,lauric acid,subfamily
+fatty_acid,fatty_acid.m02,oleate,subfamily
+fatty_acid,fatty_acid.m02,palmitic acid,subfamily
+fatty_acid,fatty_acid.m02,palmitoleic acid,subfamily
+fatty_acid,fatty_acid.m02,stearate,subfamily
+fatty_acid,fatty_acid.m02,vaccenic acid,subfamily
+fatty_acid,fatty_acid.m03,12-methyltetradecanoic acid,class_shared
+fatty_acid,fatty_acid.m03,arachidic acid,class_shared
+fatty_acid,fatty_acid.m03,elaidic acid,class_shared
+fatty_acid,fatty_acid.m03,lauric acid,class_shared
+fatty_acid,fatty_acid.m03,linoleic acid,class_shared
+fatty_acid,fatty_acid.m03,oleate,class_shared
+fatty_acid,fatty_acid.m03,palmitic acid,class_shared
+fatty_acid,fatty_acid.m03,palmitoleic acid,class_shared
+fatty_acid,fatty_acid.m03,stearate,class_shared
+fatty_acid,fatty_acid.m03,vaccenic acid,class_shared
+fatty_acid,fatty_acid.m03,α-linolenic acid,class_shared
+fatty_acid,fatty_acid.m04,12-methyltetradecanoic acid,subfamily
+fatty_acid,fatty_acid.m04,13-methylmyristicacid,subfamily
+fatty_acid,fatty_acid.m04,14-methylpentadecanoic acid,subfamily
+fatty_acid,fatty_acid.m04,15-methylpalmiticacid,subfamily
+fatty_acid,fatty_acid.m04,arachidic acid,subfamily
+fatty_acid,fatty_acid.m04,lauric acid,subfamily
+fatty_acid,fatty_acid.m04,palmitic acid,subfamily
+fatty_acid,fatty_acid.m04,stearate,subfamily
+free_amino_acid,free_amino_acid.m00,alanine,subfamily
+free_amino_acid,free_amino_acid.m00,asparagine,subfamily
+free_amino_acid,free_amino_acid.m00,aspartate,subfamily
+free_amino_acid,free_amino_acid.m00,glutamate,subfamily
+free_amino_acid,free_amino_acid.m00,isoleucine,subfamily
+free_amino_acid,free_amino_acid.m00,leucine,subfamily
+free_amino_acid,free_amino_acid.m00,methionine,subfamily
+free_amino_acid,free_amino_acid.m00,tryptophan,subfamily
+free_amino_acid,free_amino_acid.m00,valine,subfamily
+free_amino_acid,free_amino_acid.m01,alanine,subfamily
+free_amino_acid,free_amino_acid.m01,glutamate,subfamily
+free_amino_acid,free_amino_acid.m01,histidine,subfamily
+free_amino_acid,free_amino_acid.m01,hydroxyproline,subfamily
+free_amino_acid,free_amino_acid.m01,isoleucine,subfamily
+free_amino_acid,free_amino_acid.m01,leucine,subfamily
+free_amino_acid,free_amino_acid.m01,proline,subfamily
+free_amino_acid,free_amino_acid.m01,serine,subfamily
+free_amino_acid,free_amino_acid.m01,tryptophan,subfamily
+free_amino_acid,free_amino_acid.m01,valine,subfamily
+free_amino_acid,free_amino_acid.m02,cysteine,molecule_discriminating
+free_amino_acid,free_amino_acid.m02,glutamate,molecule_discriminating
+free_amino_acid,free_amino_acid.m02,methionine,molecule_discriminating
+free_amino_acid,free_amino_acid.m03,aspartate,subfamily
+free_amino_acid,free_amino_acid.m03,glutamate,subfamily
+free_amino_acid,free_amino_acid.m03,glycine,subfamily
+free_amino_acid,free_amino_acid.m03,isoleucine,subfamily
+free_amino_acid,free_amino_acid.m03,leucine,subfamily
+free_amino_acid,free_amino_acid.m03,methionine,subfamily
+free_amino_acid,free_amino_acid.m03,proline,subfamily
+free_amino_acid,free_amino_acid.m03,serine,subfamily
+free_amino_acid,free_amino_acid.m03,valine,subfamily
+free_amino_acid,free_amino_acid.m04,isoleucine,molecule_discriminating
+free_amino_acid,free_amino_acid.m04,phenylalanine,molecule_discriminating
+free_amino_acid,free_amino_acid.m04,serine,molecule_discriminating
+free_amino_acid,free_amino_acid.m04,tryptophan,molecule_discriminating
+free_amino_acid,free_amino_acid.m05,aspartate,subfamily
+free_amino_acid,free_amino_acid.m05,isoleucine,subfamily
+free_amino_acid,free_amino_acid.m05,leucine,subfamily
+free_amino_acid,free_amino_acid.m05,phenylalanine,subfamily
+free_amino_acid,free_amino_acid.m05,proline,subfamily
+free_amino_acid,free_amino_acid.m05,tyrosine,subfamily
+free_amino_acid,free_amino_acid.m05,valine,subfamily
+free_amino_acid,free_amino_acid.m06,arginine,subfamily
+free_amino_acid,free_amino_acid.m06,aspartate,subfamily
+free_amino_acid,free_amino_acid.m06,glutamate,subfamily
+free_amino_acid,free_amino_acid.m06,histidine,subfamily
+free_amino_acid,free_amino_acid.m06,hydroxyproline,subfamily
+free_amino_acid,free_amino_acid.m06,isoleucine,subfamily
+free_amino_acid,free_amino_acid.m06,methionine,subfamily
+free_amino_acid,free_amino_acid.m06,serine,subfamily
 mono_oligosaccharide,mono_oligosaccharide.m00,(+)-fucose,subfamily
 mono_oligosaccharide,mono_oligosaccharide.m00,(+)-galactosamine,subfamily
 mono_oligosaccharide,mono_oligosaccharide.m00,(+)-galactose,subfamily
@@ -120,19 +148,17 @@ mono_oligosaccharide,mono_oligosaccharide.m00,(+)-mannose,subfamily
 mono_oligosaccharide,mono_oligosaccharide.m00,(+)-raffinose pentahydrate,subfamily
 mono_oligosaccharide,mono_oligosaccharide.m00,(-)-fructose,subfamily
 mono_oligosaccharide,mono_oligosaccharide.m00,(-)-ribose,subfamily
-mono_oligosaccharide,mono_oligosaccharide.m01,(+)-arabinose,class_shared
-mono_oligosaccharide,mono_oligosaccharide.m01,(+)-galactose,class_shared
-mono_oligosaccharide,mono_oligosaccharide.m01,(+)-glucose,class_shared
-mono_oligosaccharide,mono_oligosaccharide.m01,(+)-lactose,class_shared
-mono_oligosaccharide,mono_oligosaccharide.m01,(+)-mannose,class_shared
-mono_oligosaccharide,mono_oligosaccharide.m01,(+)-raffinose pentahydrate,class_shared
-mono_oligosaccharide,mono_oligosaccharide.m01,(+)-sucrose,class_shared
-mono_oligosaccharide,mono_oligosaccharide.m01,(+)-trehalose,class_shared
-mono_oligosaccharide,mono_oligosaccharide.m01,(-)-arabinose,class_shared
-mono_oligosaccharide,mono_oligosaccharide.m01,glucosamine,class_shared
-mono_oligosaccharide,mono_oligosaccharide.m01,glycerol,class_shared
-mono_oligosaccharide,mono_oligosaccharide.m01,n-acetylglucosamine,class_shared
-mono_oligosaccharide,mono_oligosaccharide.m01,β-d-glucose,class_shared
+mono_oligosaccharide,mono_oligosaccharide.m01,(+)-arabinose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m01,(+)-galactose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m01,(+)-glucose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m01,(+)-lactose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m01,(+)-mannose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m01,(+)-raffinose pentahydrate,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m01,(+)-sucrose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m01,(+)-trehalose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m01,(-)-arabinose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m01,glycerol,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m01,β-d-glucose,subfamily
 mono_oligosaccharide,mono_oligosaccharide.m02,(+)-fucose,class_shared
 mono_oligosaccharide,mono_oligosaccharide.m02,(+)-glucose,class_shared
 mono_oligosaccharide,mono_oligosaccharide.m02,(+)-lactose,class_shared
@@ -141,7 +167,6 @@ mono_oligosaccharide,mono_oligosaccharide.m02,(+)-mannose,class_shared
 mono_oligosaccharide,mono_oligosaccharide.m02,(+)-raffinose pentahydrate,class_shared
 mono_oligosaccharide,mono_oligosaccharide.m02,(+)-sucrose,class_shared
 mono_oligosaccharide,mono_oligosaccharide.m02,(+)-trehalose,class_shared
-mono_oligosaccharide,mono_oligosaccharide.m02,(+)-xylose,class_shared
 mono_oligosaccharide,mono_oligosaccharide.m02,(-)-ribose,class_shared
 mono_oligosaccharide,mono_oligosaccharide.m02,2-deoxy-d-ribose,class_shared
 mono_oligosaccharide,mono_oligosaccharide.m02,glycerol,class_shared
@@ -154,36 +179,37 @@ mono_oligosaccharide,mono_oligosaccharide.m03,(+)-maltose,subfamily
 mono_oligosaccharide,mono_oligosaccharide.m03,(+)-mannose,subfamily
 mono_oligosaccharide,mono_oligosaccharide.m03,(+)-sucrose,subfamily
 mono_oligosaccharide,mono_oligosaccharide.m03,(+)-trehalose,subfamily
-mono_oligosaccharide,mono_oligosaccharide.m03,(+)-xylose,subfamily
 mono_oligosaccharide,mono_oligosaccharide.m03,glucosamine,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m03,glycerol,subfamily
 mono_oligosaccharide,mono_oligosaccharide.m03,n-acetylglucosamine,subfamily
-mono_oligosaccharide,mono_oligosaccharide.m04,(+)-fucose,subfamily
-mono_oligosaccharide,mono_oligosaccharide.m04,(+)-galactose,subfamily
-mono_oligosaccharide,mono_oligosaccharide.m04,(+)-lactose,subfamily
-mono_oligosaccharide,mono_oligosaccharide.m04,(+)-mannose,subfamily
-mono_oligosaccharide,mono_oligosaccharide.m04,(+)-raffinose pentahydrate,subfamily
-mono_oligosaccharide,mono_oligosaccharide.m04,(+)-sucrose,subfamily
-mono_oligosaccharide,mono_oligosaccharide.m04,(-)-fructose,subfamily
-mono_oligosaccharide,mono_oligosaccharide.m04,(-)-ribose,subfamily
-mono_oligosaccharide,mono_oligosaccharide.m04,2-deoxy-d-ribose,subfamily
-mono_oligosaccharide,mono_oligosaccharide.m04,glycerol,subfamily
-mono_oligosaccharide,mono_oligosaccharide.m04,n-acetylglucosamine,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m04,(+)-fucose,class_shared
+mono_oligosaccharide,mono_oligosaccharide.m04,(+)-galactose,class_shared
+mono_oligosaccharide,mono_oligosaccharide.m04,(+)-lactose,class_shared
+mono_oligosaccharide,mono_oligosaccharide.m04,(+)-mannose,class_shared
+mono_oligosaccharide,mono_oligosaccharide.m04,(+)-raffinose pentahydrate,class_shared
+mono_oligosaccharide,mono_oligosaccharide.m04,(+)-sucrose,class_shared
+mono_oligosaccharide,mono_oligosaccharide.m04,(+)-xylose,class_shared
+mono_oligosaccharide,mono_oligosaccharide.m04,(-)-fructose,class_shared
+mono_oligosaccharide,mono_oligosaccharide.m04,(-)-ribose,class_shared
+mono_oligosaccharide,mono_oligosaccharide.m04,2-deoxy-d-ribose,class_shared
+mono_oligosaccharide,mono_oligosaccharide.m04,glycerol,class_shared
+mono_oligosaccharide,mono_oligosaccharide.m04,n-acetylglucosamine,class_shared
+mono_oligosaccharide,mono_oligosaccharide.m05,(+)-galactose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m05,(+)-lactose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m05,(+)-maltose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m05,(+)-mannose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m05,(+)-trehalose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m05,(+)-xylose,subfamily
+mono_oligosaccharide,mono_oligosaccharide.m05,glucosamine,subfamily
 nucleic_acid_polymer,nucleic_acid_polymer.m00,a-dna,class_shared
 nucleic_acid_polymer,nucleic_acid_polymer.m00,b-dna,class_shared
 nucleic_acid_polymer,nucleic_acid_polymer.m00,t-rna,class_shared
-peptide_protein,peptide_protein.m00,albumin,class_shared
-peptide_protein,peptide_protein.m00,carbonic anhydrase,class_shared
 peptide_protein,peptide_protein.m00,collagen,class_shared
 peptide_protein,peptide_protein.m00,elastase,class_shared
 peptide_protein,peptide_protein.m00,elastin,class_shared
 peptide_protein,peptide_protein.m00,ferritin,class_shared
-peptide_protein,peptide_protein.m00,glucose oxidase,class_shared
 peptide_protein,peptide_protein.m00,glutathione transferase,class_shared
-peptide_protein,peptide_protein.m00,horseradish peroxidase,class_shared
-peptide_protein,peptide_protein.m00,insulin,class_shared
 peptide_protein,peptide_protein.m00,keratin,class_shared
-peptide_protein,peptide_protein.m00,lactalbumin,class_shared
-peptide_protein,peptide_protein.m00,lectin,class_shared
 peptide_protein,peptide_protein.m00,major proteinase,class_shared
 peptide_protein,peptide_protein.m00,papain,class_shared
 peptide_protein,peptide_protein.m00,pepsin,class_shared
@@ -194,32 +220,113 @@ peptide_protein,peptide_protein.m00,triosephosphate isomerase,class_shared
 peptide_protein,peptide_protein.m00,trypsin,class_shared
 peptide_protein,peptide_protein.m00,trypsin inhibitor,class_shared
 peptide_protein,peptide_protein.m00,trypsinogen,class_shared
-peptide_protein,peptide_protein.m00,tubulin,class_shared
 peptide_protein,peptide_protein.m00,ubiquitin,class_shared
-peptide_protein,peptide_protein.m00,xylanase,class_shared
 peptide_protein,peptide_protein.m00,α-chymotrypsinogen a (type ii),class_shared
-peptide_protein,peptide_protein.m01,albumin,class_shared
-peptide_protein,peptide_protein.m01,carbonic anhydrase,class_shared
-peptide_protein,peptide_protein.m01,cytochrome c,class_shared
-peptide_protein,peptide_protein.m01,elastase,class_shared
-peptide_protein,peptide_protein.m01,ferritin,class_shared
-peptide_protein,peptide_protein.m01,glucose oxidase,class_shared
-peptide_protein,peptide_protein.m01,glutathione transferase,class_shared
-peptide_protein,peptide_protein.m01,hemoglobin,class_shared
-peptide_protein,peptide_protein.m01,horseradish peroxidase,class_shared
-peptide_protein,peptide_protein.m01,insulin,class_shared
-peptide_protein,peptide_protein.m01,lactalbumin,class_shared
-peptide_protein,peptide_protein.m01,lectin,class_shared
-peptide_protein,peptide_protein.m01,myoglobin,class_shared
-peptide_protein,peptide_protein.m01,papain,class_shared
-peptide_protein,peptide_protein.m01,pepsin,class_shared
-peptide_protein,peptide_protein.m01,pepsinogen,class_shared
-peptide_protein,peptide_protein.m01,thaumatin,class_shared
-peptide_protein,peptide_protein.m01,triosephosphate isomerase,class_shared
-peptide_protein,peptide_protein.m01,trypsinogen,class_shared
-peptide_protein,peptide_protein.m01,tubulin,class_shared
-peptide_protein,peptide_protein.m01,xylanase,class_shared
-peptide_protein,peptide_protein.m01,α-chymotrypsinogen a (type ii),class_shared
+peptide_protein,peptide_protein.m01,cytochrome c,molecule_discriminating
+peptide_protein,peptide_protein.m01,hemoglobin,molecule_discriminating
+peptide_protein,peptide_protein.m01,myoglobin,molecule_discriminating
+peptide_protein,peptide_protein.m01,α-chymotrypsinogen a (type ii),molecule_discriminating
+peptide_protein,peptide_protein.m02,albumin,subfamily
+peptide_protein,peptide_protein.m02,collagen,subfamily
+peptide_protein,peptide_protein.m02,elastase,subfamily
+peptide_protein,peptide_protein.m02,elastin,subfamily
+peptide_protein,peptide_protein.m02,ferritin,subfamily
+peptide_protein,peptide_protein.m02,insulin,subfamily
+peptide_protein,peptide_protein.m02,pepsin,subfamily
+peptide_protein,peptide_protein.m02,trypsin inhibitor,subfamily
+peptide_protein,peptide_protein.m02,tubulin,subfamily
+peptide_protein,peptide_protein.m03,albumin,subfamily
+peptide_protein,peptide_protein.m03,collagen,subfamily
+peptide_protein,peptide_protein.m03,ferritin,subfamily
+peptide_protein,peptide_protein.m03,glutathione transferase,subfamily
+peptide_protein,peptide_protein.m03,lactalbumin,subfamily
+peptide_protein,peptide_protein.m03,papain,subfamily
+peptide_protein,peptide_protein.m03,pepsin,subfamily
+peptide_protein,peptide_protein.m03,triosephosphate isomerase,subfamily
+peptide_protein,peptide_protein.m03,trypsin inhibitor,subfamily
+peptide_protein,peptide_protein.m03,xylanase,subfamily
+peptide_protein,peptide_protein.m04,collagen,subfamily
+peptide_protein,peptide_protein.m04,elastase,subfamily
+peptide_protein,peptide_protein.m04,elastin,subfamily
+peptide_protein,peptide_protein.m04,glucose oxidase,subfamily
+peptide_protein,peptide_protein.m04,glutathione transferase,subfamily
+peptide_protein,peptide_protein.m04,major proteinase,subfamily
+peptide_protein,peptide_protein.m04,pepsin,subfamily
+peptide_protein,peptide_protein.m04,pepsinogen,subfamily
+peptide_protein,peptide_protein.m04,superoxide dismutases,subfamily
+peptide_protein,peptide_protein.m04,trypsinogen,subfamily
+peptide_protein,peptide_protein.m04,ubiquitin,subfamily
+peptide_protein,peptide_protein.m05,albumin,subfamily
+peptide_protein,peptide_protein.m05,carbonic anhydrase,subfamily
+peptide_protein,peptide_protein.m05,elastin,subfamily
+peptide_protein,peptide_protein.m05,ferritin,subfamily
+peptide_protein,peptide_protein.m05,glucose oxidase,subfamily
+peptide_protein,peptide_protein.m05,glutathione transferase,subfamily
+peptide_protein,peptide_protein.m05,horseradish peroxidase,subfamily
+peptide_protein,peptide_protein.m05,insulin,subfamily
+peptide_protein,peptide_protein.m05,keratin,subfamily
+peptide_protein,peptide_protein.m05,lactalbumin,subfamily
+peptide_protein,peptide_protein.m05,major proteinase,subfamily
+peptide_protein,peptide_protein.m05,superoxide dismutases,subfamily
+peptide_protein,peptide_protein.m05,triosephosphate isomerase,subfamily
+peptide_protein,peptide_protein.m05,trypsin inhibitor,subfamily
+peptide_protein,peptide_protein.m05,ubiquitin,subfamily
+peptide_protein,peptide_protein.m05,α-chymotrypsinogen a (type ii),subfamily
+peptide_protein,peptide_protein.m06,carbonic anhydrase,subfamily
+peptide_protein,peptide_protein.m06,elastase,subfamily
+peptide_protein,peptide_protein.m06,insulin,subfamily
+peptide_protein,peptide_protein.m06,lactalbumin,subfamily
+peptide_protein,peptide_protein.m06,lectin,subfamily
+peptide_protein,peptide_protein.m06,pepsin,subfamily
+peptide_protein,peptide_protein.m06,pepsinogen,subfamily
+peptide_protein,peptide_protein.m06,superoxide dismutases,subfamily
+peptide_protein,peptide_protein.m06,thaumatin,subfamily
+peptide_protein,peptide_protein.m06,trypsin,subfamily
+peptide_protein,peptide_protein.m06,trypsin inhibitor,subfamily
+peptide_protein,peptide_protein.m06,trypsinogen,subfamily
+peptide_protein,peptide_protein.m06,ubiquitin,subfamily
+peptide_protein,peptide_protein.m06,α-chymotrypsinogen a (type ii),subfamily
+peptide_protein,peptide_protein.m07,albumin,subfamily
+peptide_protein,peptide_protein.m07,elastase,subfamily
+peptide_protein,peptide_protein.m07,ferritin,subfamily
+peptide_protein,peptide_protein.m07,glutathione transferase,subfamily
+peptide_protein,peptide_protein.m07,insulin,subfamily
+peptide_protein,peptide_protein.m07,keratin,subfamily
+peptide_protein,peptide_protein.m07,lactalbumin,subfamily
+peptide_protein,peptide_protein.m07,major proteinase,subfamily
+peptide_protein,peptide_protein.m07,papain,subfamily
+peptide_protein,peptide_protein.m07,pepsinogen,subfamily
+peptide_protein,peptide_protein.m07,thaumatin,subfamily
+peptide_protein,peptide_protein.m07,trypsin,subfamily
+peptide_protein,peptide_protein.m07,trypsin inhibitor,subfamily
+peptide_protein,peptide_protein.m07,trypsinogen,subfamily
+peptide_protein,peptide_protein.m08,carbonic anhydrase,subfamily
+peptide_protein,peptide_protein.m08,elastase,subfamily
+peptide_protein,peptide_protein.m08,ferritin,subfamily
+peptide_protein,peptide_protein.m08,glutathione transferase,subfamily
+peptide_protein,peptide_protein.m08,horseradish peroxidase,subfamily
+peptide_protein,peptide_protein.m08,keratin,subfamily
+peptide_protein,peptide_protein.m08,lactalbumin,subfamily
+peptide_protein,peptide_protein.m08,lectin,subfamily
+peptide_protein,peptide_protein.m08,major proteinase,subfamily
+peptide_protein,peptide_protein.m08,papain,subfamily
+peptide_protein,peptide_protein.m08,pepsin,subfamily
+peptide_protein,peptide_protein.m08,pepsinogen,subfamily
+peptide_protein,peptide_protein.m08,thaumatin,subfamily
+peptide_protein,peptide_protein.m08,triosephosphate isomerase,subfamily
+peptide_protein,peptide_protein.m08,trypsin,subfamily
+peptide_protein,peptide_protein.m08,trypsinogen,subfamily
+peptide_protein,peptide_protein.m08,α-chymotrypsinogen a (type ii),subfamily
+peptide_protein,peptide_protein.m09,albumin,subfamily
+peptide_protein,peptide_protein.m09,carbonic anhydrase,subfamily
+peptide_protein,peptide_protein.m09,elastase,subfamily
+peptide_protein,peptide_protein.m09,ferritin,subfamily
+peptide_protein,peptide_protein.m09,hemoglobin,subfamily
+peptide_protein,peptide_protein.m09,horseradish peroxidase,subfamily
+peptide_protein,peptide_protein.m09,lectin,subfamily
+peptide_protein,peptide_protein.m09,myoglobin,subfamily
+peptide_protein,peptide_protein.m09,pepsin,subfamily
+peptide_protein,peptide_protein.m09,thaumatin,subfamily
 phosphate_metabolite,phosphate_metabolite.m00,fructose-6-phosphate,class_shared
 phosphate_metabolite,phosphate_metabolite.m00,phosphate,class_shared
 phosphate_metabolite,phosphate_metabolite.m00,phosphoenolpyruvate,class_shared
@@ -232,9 +339,12 @@ phospholipid_sphingolipid,phospholipid_sphingolipid.m01,α-phosphatidylcholine,c
 phospholipid_sphingolipid,phospholipid_sphingolipid.m01,α-phosphatidylethanolamine,class_shared
 polysaccharide,polysaccharide.m00,amylopectin,class_shared
 polysaccharide,polysaccharide.m00,amylose,class_shared
-polysaccharide,polysaccharide.m00,cellulose,class_shared
 polysaccharide,polysaccharide.m00,chitin,class_shared
 polysaccharide,polysaccharide.m00,glycogen,class_shared
+polysaccharide,polysaccharide.m01,amylose,class_shared
+polysaccharide,polysaccharide.m01,cellulose,class_shared
+polysaccharide,polysaccharide.m01,chitin,class_shared
+polysaccharide,polysaccharide.m01,glycogen,class_shared
 purine,purine.m00,adenine,class_shared
 purine,purine.m00,hypoxanthine,class_shared
 purine,purine.m00,urate,class_shared
@@ -253,16 +363,17 @@ sterol_steroid,sterol_steroid.m00,cholesteryl linoleate,class_shared
 sterol_steroid,sterol_steroid.m00,cholesteryl oleate,class_shared
 sterol_steroid,sterol_steroid.m00,cholesteryl palmitate,class_shared
 sterol_steroid,sterol_steroid.m00,cholesteryl stearate,class_shared
-sterol_steroid,sterol_steroid.m00,estradiol,class_shared
-sterol_steroid,sterol_steroid.m00,estriol,class_shared
-sterol_steroid,sterol_steroid.m00,estrone,class_shared
 sterol_steroid,sterol_steroid.m00,ethinylestradiol,class_shared
-sterol_steroid,sterol_steroid.m01,cholesterol,class_shared
-sterol_steroid,sterol_steroid.m01,diethylstilbestrol,class_shared
-sterol_steroid,sterol_steroid.m01,estradiol,class_shared
-sterol_steroid,sterol_steroid.m01,estriol,class_shared
-sterol_steroid,sterol_steroid.m01,estrone,class_shared
-sterol_steroid,sterol_steroid.m01,ethinylestradiol,class_shared
+sterol_steroid,sterol_steroid.m01,cholesterol,subfamily
+sterol_steroid,sterol_steroid.m01,cholesteryl oleate,subfamily
+sterol_steroid,sterol_steroid.m01,diethylstilbestrol,subfamily
+sterol_steroid,sterol_steroid.m01,estradiol,subfamily
+sterol_steroid,sterol_steroid.m01,estriol,subfamily
+sterol_steroid,sterol_steroid.m02,cholesterol,subfamily
+sterol_steroid,sterol_steroid.m02,estradiol,subfamily
+sterol_steroid,sterol_steroid.m02,estriol,subfamily
+sterol_steroid,sterol_steroid.m02,estrone,subfamily
+sterol_steroid,sterol_steroid.m02,ethinylestradiol,subfamily
 sulfur_thiol_cofactor,sulfur_thiol_cofactor.m00,acetyl-coa,class_shared
 sulfur_thiol_cofactor,sulfur_thiol_cofactor.m00,coenzyme a,class_shared
 sulfur_thiol_cofactor,sulfur_thiol_cofactor.m00,glutathione,class_shared

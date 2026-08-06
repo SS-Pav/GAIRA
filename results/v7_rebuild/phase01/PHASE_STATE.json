@@ -4,15 +4,15 @@
   "phase_name": "Balanced references and class-local Local Spectral Motifs",
   "status": "COMPLETE",
   "architecture_compliant": true,
-  "completed_utc": "2026-08-06T05:49:14.831158+00:00",
+  "completed_utc": "2026-08-06T06:10:09.606653+00:00",
   "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
   "atlas_unchanged": true,
   "frozen_atlas_role": "control/comparator only — never a foundation (P-15)",
-  "registry_fingerprint": "1e8bbeb17f4c07e378ca284f1c220c62",
+  "registry_fingerprint": "208482d6f7178b5b8f16cace91be55b0",
   "reference_arm": "B_analyte_weighted",
   "deterministic": true,
   "lsms": {
-    "n_lsms_retained": 33,
+    "n_lsms_retained": 50,
     "n_lsms_rejected": 0,
     "n_anchors": 0,
     "n_classes_decomposed": 16,
@@ -21,11 +21,15 @@
       1,
       2,
       3,
-      5
+      5,
+      6,
+      7,
+      10
     ],
     "type_counts": {
-      "class_shared": 26,
-      "subfamily": 7
+      "class_shared": 21,
+      "subfamily": 26,
+      "molecule_discriminating": 3
     }
   },
   "gates": [
@@ -37,7 +41,7 @@
     {
       "gate": "implementation_complete",
       "passed": true,
-      "evidence": "33 LSMs across 16 classes"
+      "evidence": "50 LSMs across 16 classes"
     },
     {
       "gate": "atlas_unchanged",
@@ -57,7 +61,7 @@
     {
       "gate": "adaptive_kc",
       "passed": true,
-      "evidence": "k_c varies across classes: [1, 2, 3, 5]"
+      "evidence": "k_c varies across classes: [1, 2, 3, 5, 6, 7, 10]"
     },
     {
       "gate": "stability_threshold_enforced",

@@ -1,0 +1,7 @@
+molecule,chemical_class,ev,n_class_molecules,k_c,k_ceiling,mean_quality,diagnosis
+fumarate,carboxylic_acid_metabolite,0.3877,8,2,4,0.736,true biochemical uniqueness or optimisation shortfall
+malic acid,carboxylic_acid_metabolite,0.3065,8,2,4,0.83,true biochemical uniqueness or optimisation shortfall
+phosphoenolpyruvate,phosphate_metabolite,0.4907,3,1,1,0.877,corpus: class too small for its diversity
+urate,purine,0.4949,5,2,2,0.902,corpus: class too small for its diversity
+thymine,pyrimidine,0.1303,3,1,1,0.866,corpus: class too small for its diversity
+urea,small_nitrogenous,0.1231,2,1,1,0.655,corpus: class too small for its diversity

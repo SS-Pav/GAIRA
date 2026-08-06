@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-08-06T06:15:41.003682+00:00",
+  "n_lsms": 50,
+  "n_classes": 16,
+  "I1_uniqueness": {
+    "max_within_class_cosine": 0.8406,
+    "duplicate_pairs": 0,
+    "pairs_ge_0.90": 0
+  },
+  "I2_reconstruction": {
+    "mean_ev": 0.8533,
+    "worst_ev": 0.1231,
+    "n_below_0.5": 6,
+    "n_below_0.7": 27
+  },
+  "I3_kc": {
+    "n_knife_edge": 0,
+    "n_classes": 16
+  },
+  "I4_source": {
+    "n_testable": 4,
+    "n_source_dependent": 1
+  },
+  "I5_interpretability": {
+    "n_annotated": 50
+  },
+  "I6_coverage": {
+    "n_orphans": 6,
+    "n_outliers": 4
+  },
+  "I7_cross_class": {
+    "n_pairs": 26,
+    "n_class_pairs": 14
+  },
+  "I8_sensitivity": {
+    "molecule_bootstrap": 0.9321,
+    "noise_1pct": 1.0,
+    "noise_5pct": 0.9988,
+    "seed": 1.0
+  },
+  "I9_limitations": {
+    "adequate": 7,
+    "CORPUS: too few molecules; k_c ceiling binds": 6,
+    "CORPUS: chemical heterogeneity exceeds available molecules": 3
+  }
+}

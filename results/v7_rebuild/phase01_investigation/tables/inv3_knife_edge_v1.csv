@@ -1,0 +1,17 @@
+chemical_class,k_selected,heldout_ev_at_k,max_neighbour_gain,knife_edge
+acylglycerol,3,0.8004,0.0067,False
+carboxylic_acid_metabolite,2,0.1328,0.0116,False
+chromophore_pigment,2,0.3357,-0.2601,False
+fatty_acid,5,0.6745,0.0028,False
+free_amino_acid,7,0.2809,0.0056,False
+mono_oligosaccharide,6,0.3462,0.0079,False
+nucleic_acid_polymer,1,0.58,-0.58,False
+peptide_protein,10,0.7176,0.0037,False
+phosphate_metabolite,1,0.1011,-0.1011,False
+phospholipid_sphingolipid,2,0.4922,0.0342,False
+polysaccharide,2,0.5599,0.0104,False
+purine,2,0.1416,0.0296,False
+pyrimidine,1,0.0797,-0.0797,False
+small_nitrogenous,1,0.0,0.0,False
+sterol_steroid,3,0.5854,0.011,False
+sulfur_thiol_cofactor,2,0.3601,-0.0535,False

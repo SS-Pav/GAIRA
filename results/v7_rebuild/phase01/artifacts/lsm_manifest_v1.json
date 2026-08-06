@@ -1,6 +1,6 @@
 {
   "schema": "v7_lsm_serialization_v1",
-  "registry_fingerprint": "1e8bbeb17f4c07e378ca284f1c220c62",
+  "registry_fingerprint": "208482d6f7178b5b8f16cace91be55b0",
   "discovery_version": "v7_lsm_classlocal_v1",
   "reference_arm": "B_analyte_weighted",
   "config": {
@@ -23,23 +23,27 @@
     "n_classes_decomposed": 16,
     "n_classes_anchor_route": 0,
     "n_classes_no_stable_lsm": 0,
-    "n_lsms_total": 33,
-    "n_lsms_retained": 33,
+    "n_lsms_total": 50,
+    "n_lsms_retained": 50,
     "n_lsms_rejected": 0,
     "n_anchors": 0,
     "k_c_min": 1,
-    "k_c_max": 5,
+    "k_c_max": 10,
     "k_c_distinct_values": [
       1,
       2,
       3,
-      5
+      5,
+      6,
+      7,
+      10
     ],
     "type_counts": {
-      "class_shared": 26,
-      "subfamily": 7
+      "class_shared": 21,
+      "subfamily": 26,
+      "molecule_discriminating": 3
     },
-    "mean_stability": 0.9773,
+    "mean_stability": 0.9667,
     "mean_purity": 1.0,
     "config": {
       "discovery_version": "v7_lsm_classlocal_v1",
@@ -55,9 +59,9 @@
     }
   },
   "files": {
-    "lsm_registry_v1.csv": "26039139e56de7e60bc8a00f44da74719e4d364bd569eba2ef9160c7581c30a8",
-    "lsm_classes_v1.csv": "04ee22e757bd6d0525a836d477d5ae8725fe8c07ff31eaa4815d2e706c4c07e4",
+    "lsm_registry_v1.csv": "7d3d5bef93e207629fc57b806e7c483ba862bdb2dad4c58aa48979cd9fec3f3a",
+    "lsm_classes_v1.csv": "d25efff7fe5a33e817529fbdd21ac0675c0b9475c84e5f84bc2ece19b2d01843",
     "lsm_rejections_v1.csv": "474871631b476077494668066e9516dfc6b68647079cb751477d238f1b701803",
-    "lsm_dictionary_v1.npz": "83b8321bb4103262cf22e70e6ef6ba4734292fc0741a8e0a0e23e7e9812de07f"
+    "lsm_dictionary_v1.npz": "df13f664480f10d470c795e15d45dedd749f0d72f7305e1cb036cadfa46e8c5f"
   }
 }

@@ -129,7 +129,7 @@ molecule identities (167 surface forms → 154 molecules), the chemical partitio
 harness, and the V5 control baseline measured under it.
 
 **Phase 01** — `src/gaira/v7/lsm/`: balanced reference construction (8 arms), independent
-class-local NMF with adaptive `k_c`, 33 Local Spectral Motifs, a class-indexed registry, LSM
+class-local NMF with adaptive `k_c`, 50 Local Spectral Motifs, a class-indexed registry, LSM
 typing, the Strategy-F anchor route, and R-01/R-16 risk checks. The frozen atlas is a control
 only and is never an input (P-15).
 
@@ -226,7 +226,7 @@ Report: [`PHASE_00_REPORT.md`](../results/v7_rebuild/phase00/reports/PHASE_00_RE
 
 **Phase 01 is complete and architecture-compliant (18/18)** — 8 balanced-reference arms
 compared, 16 chemistry classes fitted by independent class-local NMF with adaptive
-`k_c ∈ {1,2,3,5}`, yielding 33 Local Spectral Motifs. Rare chemistry now receives 2.5× the
+`k_c ∈ {1,2,3,5}`, yielding 50 Local Spectral Motifs. Rare chemistry now receives 2.5× the
 decomposition capacity per molecule that dense chemistry does; under V5 both received the same.
 Report: [`PHASE_01_REPORT.md`](../results/v7_rebuild/phase01/reports/PHASE_01_REPORT.md).
 

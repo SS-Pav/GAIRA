@@ -1,0 +1,17 @@
+chemical_class,n_sources,testable,n_motifs_differing,min_p,verdict,sources_compared,n_spectra,n_motifs,frac_motifs_differing
+acylglycerol,2,False,0,,single dominant source — not testable,,,,
+carboxylic_acid_metabolite,2,True,2,0.016422132198999583,source-dependent activation,RamanBioLib vs gobbato_raman_metabolites,23.0,2.0,1.0
+chromophore_pigment,3,False,0,,single dominant source — not testable,,,,
+fatty_acid,2,True,0,0.14951677630541446,indistinguishable across sources,RamanBioLib vs gobbato_raman_metabolites,27.0,5.0,0.0
+free_amino_acid,3,True,0,0.04204689926653395,indistinguishable across sources,RamanBioLib vs amino_acid_raman_grounding,75.0,7.0,0.0
+mono_oligosaccharide,2,True,0,0.16195995375991357,indistinguishable across sources,RamanBioLib vs gobbato_raman_metabolites,43.0,6.0,0.0
+nucleic_acid_polymer,1,False,0,,single dominant source — not testable,,,,
+peptide_protein,3,False,0,,single dominant source — not testable,,,,
+phosphate_metabolite,2,False,0,,single dominant source — not testable,,,,
+phospholipid_sphingolipid,2,False,0,,single dominant source — not testable,,,,
+polysaccharide,2,False,0,,single dominant source — not testable,,,,
+purine,2,False,0,,single dominant source — not testable,,,,
+pyrimidine,2,False,0,,single dominant source — not testable,,,,
+small_nitrogenous,2,False,0,,single dominant source — not testable,,,,
+sterol_steroid,2,False,0,,single dominant source — not testable,,,,
+sulfur_thiol_cofactor,3,False,0,,single dominant source — not testable,,,,

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="847.764pt" height="309.542953pt" viewBox="0 0 847.764 309.542953" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-05T23:18:54.300249</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 309.542953 
+L 847.764 309.542953 
+L 847.764 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 144.844 259.612 
+L 485.234 259.612 
+L 485.234 73.464 
+L 144.844 73.464 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 144.844 251.150727 
+L 469.024952 251.150727 
+L 469.024952 222.946485 
+L 144.844 222.946485 
+z
+" clip-path="url(#p28b641385e)" style="fill: #b91c1c"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 144.844 204.143657 
+L 144.844 204.143657 
+L 144.844 175.939414 
+L 144.844 175.939414 
+z
+" clip-path="url(#p28b641385e)" style="fill: #15803d"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 144.844 157.136586 
+L 144.844 157.136586 
+L 144.844 128.932343 
+L 144.844 128.932343 
+z
+" clip-path="url(#p28b641385e)" style="fill: #15803d"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 144.844 110.129515 
+L 144.844 110.129515 
+L 144.844 81.925273 
+L 144.844 81.925273 
+z
+" clip-path="url(#p28b641385e)" style="fill: #15803d"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mf0abfe3801" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mf0abfe3801" x="144.844" y="259.612" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="144.844" y="273.070672" transform="rotate(-0 144.844 273.070672)">0.0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mf0abfe3801" x="209.68019" y="259.612" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="209.68019" y="273.070672" transform="rotate(-0 209.68019 273.070672)">0.2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mf0abfe3801" x="274.516381" y="259.612" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="274.516381" y="273.070672" transform="rotate(-0 274.516381 273.070672)">0.4</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mf0abfe3801" x="339.352571" y="259.612" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="339.352571" y="273.070672" transform="rotate(-0 339.352571 273.070672)">0.6</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#mf0abfe3801" x="404.188762" y="259.612" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="404.188762" y="273.070672" transform="rotate(-0 404.188762 273.070672)">0.8</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mf0abfe3801" x="469.024952" y="259.612" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="469.024952" y="273.070672" transform="rotate(-0 469.024952 273.070672)">1.0</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(205.864469 285.297078)">fraction of motifs with source-dependent activation</text>
+     <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(233.825484 294.815219)">(Mann–Whitney, Bonferroni-corrected)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <defs>
+       <path id="m4286bc7fef" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m4286bc7fef" x="144.844" y="237.048606" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: end" x="137.844" y="239.708059" transform="rotate(-0 137.844 239.708059)">carboxylic acid metabolite (n=23)</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m4286bc7fef" x="144.844" y="190.041535" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: end" x="137.844" y="192.700988" transform="rotate(-0 137.844 192.700988)">fatty acid (n=27)</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m4286bc7fef" x="144.844" y="143.034465" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: end" x="137.844" y="145.693918" transform="rotate(-0 137.844 145.693918)">free amino acid (n=75)</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m4286bc7fef" x="144.844" y="96.027394" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: end" x="137.844" y="98.686847" transform="rotate(-0 137.844 98.686847)">mono oligosaccharide (n=43)</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_7">
+    <path d="M 144.844 259.612 
+L 144.844 73.464 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 144.844 259.612 
+L 485.234 259.612 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start" x="144.844" y="67.464" transform="rotate(-0 144.844 67.464)">4 testable classes</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #b45309" x="494.414" y="80.302594" transform="rotate(-0 494.414 80.302594)">NOT TESTABLE — single dominant source</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(494.414 92.269173)">12 of 16 classes cannot be tested for source</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(494.414 100.77951)">confounding, because one library supplies essentially all</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(494.414 109.289848)">their molecules.</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #b91c1c" x="501.2218" y="119.735466" transform="rotate(-0 501.2218 119.735466)">⚠ acylglycerol</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="501.2218" y="129.973606" transform="rotate(-0 501.2218 129.973606)">· chromophore pigment</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #b91c1c" x="501.2218" y="140.211746" transform="rotate(-0 501.2218 140.211746)">⚠ nucleic acid polymer</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #b91c1c" x="501.2218" y="150.449886" transform="rotate(-0 501.2218 150.449886)">⚠ peptide protein</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="501.2218" y="160.688026" transform="rotate(-0 501.2218 160.688026)">· phosphate metabolite</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="501.2218" y="170.926166" transform="rotate(-0 501.2218 170.926166)">· phospholipid sphingolipid</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="501.2218" y="181.164306" transform="rotate(-0 501.2218 181.164306)">· polysaccharide</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="501.2218" y="191.402446" transform="rotate(-0 501.2218 191.402446)">· purine</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="501.2218" y="201.640586" transform="rotate(-0 501.2218 201.640586)">· pyrimidine</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="501.2218" y="211.878726" transform="rotate(-0 501.2218 211.878726)">· small nitrogenous</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #b91c1c" x="501.2218" y="222.116866" transform="rotate(-0 501.2218 222.116866)">⚠ sterol steroid</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="501.2218" y="232.355006" transform="rotate(-0 501.2218 232.355006)">· sulfur thiol cofactor</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 7.4px; font-family: 'DejaVu Sans'; fill: #b91c1c" transform="translate(494.414 246.620044)">⚠ = flagged source-confounded in Phase 00/01.</text>
+    <text style="font-size: 7.4px; font-family: 'DejaVu Sans'; fill: #b91c1c" transform="translate(494.414 254.906425)">These are exactly the classes the test cannot reach:</text>
+    <text style="font-size: 7.4px; font-family: 'DejaVu Sans'; fill: #b91c1c" transform="translate(494.414 263.192806)">source confounding there is UNTESTED, not disproven.</text>
+   </g>
+  </g>
+  <g id="text_28">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1a1a1a" x="12.96" y="21.318281" transform="rotate(-0 12.96 21.318281)">7 — Source consistency of class-local activations</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p28b641385e">
+   <rect x="144.844" y="73.464" width="340.39" height="186.148"/>
+  </clipPath>
+ </defs>
+</svg>

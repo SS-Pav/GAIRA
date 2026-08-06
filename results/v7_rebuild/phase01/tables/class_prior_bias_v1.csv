@@ -1,17 +1,17 @@
 chemical_class,n_analytes,k_c,n_retained,frac_class_shared,frac_subfamily,frac_discriminating,mean_activation_sparsity,prior_dominated,note
-acylglycerol,17,1,1,1.0,0.0,0.0,0.0,False,
-carboxylic_acid_metabolite,8,3,3,0.6667,0.3333,0.0,0.3333,False,
+acylglycerol,17,3,3,0.3333,0.6667,0.0,0.4118,False,
+carboxylic_acid_metabolite,8,2,2,1.0,0.0,0.0,0.1875,True,"all motifs class-shared — the partition, not spectroscopy, may be driving this decomposition"
 chromophore_pigment,4,2,2,0.5,0.5,0.0,0.375,False,
-fatty_acid,17,2,2,1.0,0.0,0.0,0.2353,True,"all motifs class-shared — the partition, not spectroscopy, may be driving this decomposition"
-free_amino_acid,18,5,5,0.6,0.4,0.0,0.4444,False,
-mono_oligosaccharide,20,5,5,0.4,0.6,0.0,0.45,False,
+fatty_acid,17,5,5,0.2,0.8,0.0,0.4824,False,
+free_amino_acid,18,7,7,0.0,0.7143,0.2857,0.6032,False,
+mono_oligosaccharide,20,6,6,0.3333,0.6667,0.0,0.5,False,
 nucleic_acid_polymer,3,1,1,1.0,0.0,0.0,0.0,False,
-peptide_protein,30,2,2,1.0,0.0,0.0,0.1833,True,"all motifs class-shared — the partition, not spectroscopy, may be driving this decomposition"
+peptide_protein,30,10,10,0.1,0.8,0.1,0.59,False,
 phosphate_metabolite,3,1,1,1.0,0.0,0.0,0.0,False,
 phospholipid_sphingolipid,5,2,2,1.0,0.0,0.0,0.3,True,"all motifs class-shared — the partition, not spectroscopy, may be driving this decomposition"
-polysaccharide,5,1,1,1.0,0.0,0.0,0.0,False,
+polysaccharide,5,2,2,1.0,0.0,0.0,0.2,True,"all motifs class-shared — the partition, not spectroscopy, may be driving this decomposition"
 purine,5,2,2,1.0,0.0,0.0,0.2,True,"all motifs class-shared — the partition, not spectroscopy, may be driving this decomposition"
 pyrimidine,3,1,1,1.0,0.0,0.0,0.0,False,
 small_nitrogenous,2,1,1,1.0,0.0,0.0,0.0,False,
-sterol_steroid,10,2,2,1.0,0.0,0.0,0.25,True,"all motifs class-shared — the partition, not spectroscopy, may be driving this decomposition"
+sterol_steroid,10,3,3,0.3333,0.6667,0.0,0.4667,False,
 sulfur_thiol_cofactor,4,2,2,1.0,0.0,0.0,0.25,True,"all motifs class-shared — the partition, not spectroscopy, may be driving this decomposition"

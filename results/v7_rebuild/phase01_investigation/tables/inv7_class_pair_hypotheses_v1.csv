@@ -1,0 +1,15 @@
+class_a,class_b,max_cosine
+peptide_protein,polysaccharide,0.9701
+acylglycerol,fatty_acid,0.948
+acylglycerol,phospholipid_sphingolipid,0.8988
+fatty_acid,sterol_steroid,0.8959
+fatty_acid,phospholipid_sphingolipid,0.8915
+acylglycerol,sterol_steroid,0.8748
+phospholipid_sphingolipid,sterol_steroid,0.8603
+purine,sulfur_thiol_cofactor,0.8299
+chromophore_pigment,peptide_protein,0.818
+peptide_protein,sterol_steroid,0.7674
+phospholipid_sphingolipid,sulfur_thiol_cofactor,0.7645
+phospholipid_sphingolipid,purine,0.7527
+mono_oligosaccharide,polysaccharide,0.7214
+carboxylic_acid_metabolite,mono_oligosaccharide,0.7134

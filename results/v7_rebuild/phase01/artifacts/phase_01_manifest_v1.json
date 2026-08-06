@@ -2,13 +2,13 @@
   "schema": "gaira_v7_phase_manifest_v1",
   "phase": "01",
   "phase_name": "Balanced references and class-local Local Spectral Motifs",
-  "build_id": "v7-phase01-e43192072316",
-  "built_utc": "2026-08-06T05:47:31.688835+00:00",
+  "build_id": "v7-phase01-846fc6dfad75",
+  "built_utc": "2026-08-06T06:08:33.461908+00:00",
   "architecture": "balanced references → split by chemistry class → independent class-local NMF → Local Spectral Motifs",
   "frozen_atlas_role": "baseline control / comparator only (P-15) — NOT an input",
   "atlas_fingerprint_before": "09ed804a40836f4a05a91ba10900cded",
   "atlas_fingerprint_after": "09ed804a40836f4a05a91ba10900cded",
-  "registry_fingerprint": "1e8bbeb17f4c07e378ca284f1c220c62",
+  "registry_fingerprint": "208482d6f7178b5b8f16cace91be55b0",
   "inputs": [
     {
       "artifact_id": "p00_manifest",
@@ -53,9 +53,9 @@
     "repeat_schedule": "0+1..12"
   },
   "code": {
-    "git_sha": "e431920723168630a688218f12df4ffdc8aeb811",
+    "git_sha": "846fc6dfad75d9aff4abc3f5bbeb76c486fd8e85",
     "branch": "gaira-v7-rebuild",
-    "dirty": false,
+    "dirty": true,
     "entry_point": "results/v7_rebuild/phase01/code/run_phase01.py",
     "package": "src/gaira/v7/lsm/"
   },
@@ -102,12 +102,12 @@
     {
       "artifact_id": "lsm_registry_v1.csv",
       "path": "results/v7_rebuild/phase01/artifacts/lsm_registry_v1.csv",
-      "sha256": "26039139e56de7e60bc8a00f44da74719e4d364bd569eba2ef9160c7581c30a8"
+      "sha256": "7d3d5bef93e207629fc57b806e7c483ba862bdb2dad4c58aa48979cd9fec3f3a"
     },
     {
       "artifact_id": "lsm_classes_v1.csv",
       "path": "results/v7_rebuild/phase01/artifacts/lsm_classes_v1.csv",
-      "sha256": "04ee22e757bd6d0525a836d477d5ae8725fe8c07ff31eaa4815d2e706c4c07e4"
+      "sha256": "d25efff7fe5a33e817529fbdd21ac0675c0b9475c84e5f84bc2ece19b2d01843"
     },
     {
       "artifact_id": "lsm_rejections_v1.csv",
@@ -117,18 +117,18 @@
     {
       "artifact_id": "lsm_dictionary_v1.npz",
       "path": "results/v7_rebuild/phase01/artifacts/lsm_dictionary_v1.npz",
-      "sha256": "83b8321bb4103262cf22e70e6ef6ba4734292fc0741a8e0a0e23e7e9812de07f"
+      "sha256": "df13f664480f10d470c795e15d45dedd749f0d72f7305e1cb036cadfa46e8c5f"
     },
     {
       "artifact_id": "lsm_registry_v1.csv",
       "path": "results/v7_rebuild/phase01/tables/lsm_registry_v1.csv",
-      "sha256": "26039139e56de7e60bc8a00f44da74719e4d364bd569eba2ef9160c7581c30a8",
-      "rows": 33
+      "sha256": "7d3d5bef93e207629fc57b806e7c483ba862bdb2dad4c58aa48979cd9fec3f3a",
+      "rows": 50
     },
     {
       "artifact_id": "lsm_classes_v1.csv",
       "path": "results/v7_rebuild/phase01/tables/lsm_classes_v1.csv",
-      "sha256": "04ee22e757bd6d0525a836d477d5ae8725fe8c07ff31eaa4815d2e706c4c07e4",
+      "sha256": "d25efff7fe5a33e817529fbdd21ac0675c0b9475c84e5f84bc2ece19b2d01843",
       "rows": 16
     },
     {
@@ -140,37 +140,37 @@
     {
       "artifact_id": "kc_sweep_v1.csv",
       "path": "results/v7_rebuild/phase01/tables/kc_sweep_v1.csv",
-      "sha256": "577945878f575034a1b4af35781af0eb647bceda17d50d6af504bb67f3e437bb",
+      "sha256": "f9ecafa69d4a3df06f86e2c7bd4adf7da7d319a95baaaae97c2c462037f9d5b4",
       "rows": 73
     },
     {
       "artifact_id": "kc_selection_v1.csv",
       "path": "results/v7_rebuild/phase01/tables/kc_selection_v1.csv",
-      "sha256": "af2cfea6fb45f1a42ce34bc6085ca2373b7a5cfa2ed63ea03874694391bc5068",
+      "sha256": "953ee0d87c65b7237b44bd49fd0d64323abe44dd7137012767cb48e6d1e27d35",
       "rows": 16
     },
     {
       "artifact_id": "class_prior_bias_v1.csv",
       "path": "results/v7_rebuild/phase01/tables/class_prior_bias_v1.csv",
-      "sha256": "b7a160c05dc42a3e0fb9c495dc65d46fe5975707a87179987ef6890ea0d8a587",
+      "sha256": "dfee0d4e235657be337cb931902bb38ca500248cf3f44529d239a5afee12f5ed",
       "rows": 16
     },
     {
       "artifact_id": "lsm_participation_v1.csv",
       "path": "results/v7_rebuild/phase01/tables/lsm_participation_v1.csv",
-      "sha256": "3c665db59131f5d37982dd230b4e6eba0241700e956e1473fe7c1beb4ab6dbd6",
-      "rows": 270
+      "sha256": "3d2d0d51c6cc72258189d8d4a266c2ba33d1a8e9a9fc02d74d0ea4fa20883449",
+      "rows": 381
     },
     {
       "artifact_id": "capacity_allocation_v1.csv",
       "path": "results/v7_rebuild/phase01/tables/capacity_allocation_v1.csv",
-      "sha256": "e622a651b141b417d2618f0ee7310e7ff1e7110d6f318e22ef3fb30bf8635a8e",
+      "sha256": "1436bfb17fa021857907f24117bbe08caac027e49e07e58d880ee121a96b2f76",
       "rows": 16
     },
     {
       "artifact_id": "determinism_v1.json",
       "path": "results/v7_rebuild/phase01/artifacts/determinism_v1.json",
-      "sha256": "2d540ea47faab59989e9ad4e4428134564868f54604c855dfbd7363047549fda"
+      "sha256": "8087e96d1251cd73ef553d2d368906bcfb8e91a52694394353c110c225deefab"
     },
     {
       "artifact_id": "dataset_role_map_v7.csv",
@@ -187,7 +187,7 @@
     {
       "artifact_id": "architecture_compliance_v1.csv",
       "path": "results/v7_rebuild/phase01/tables/architecture_compliance_v1.csv",
-      "sha256": "0befa5ae7e8db173b6ac98a385a7bf89ecd3b61444505ae0eec8f043c7158b69",
+      "sha256": "2ba3f7569a67ff9e2b606b896c59d187335d01b6b09cdf54a2b948562434ba13",
       "rows": 18
     }
   ],
@@ -200,7 +200,7 @@
     {
       "gate": "implementation_complete",
       "passed": true,
-      "evidence": "33 LSMs across 16 classes"
+      "evidence": "50 LSMs across 16 classes"
     },
     {
       "gate": "atlas_unchanged",
@@ -220,7 +220,7 @@
     {
       "gate": "adaptive_kc",
       "passed": true,
-      "evidence": "k_c varies across classes: [1, 2, 3, 5]"
+      "evidence": "k_c varies across classes: [1, 2, 3, 5, 6, 7, 10]"
     },
     {
       "gate": "stability_threshold_enforced",
@@ -279,7 +279,7 @@
     {
       "specification_item": "Adaptive k_c — no hard-coded global k",
       "implemented": true,
-      "evidence": "k_c takes values [1, 2, 3, 5]",
+      "evidence": "k_c takes values [1, 2, 3, 5, 6, 7, 10]",
       "status": "PASS"
     },
     {
@@ -303,7 +303,7 @@
     {
       "specification_item": "LSM typing: class-shared / subfamily / molecule-discriminating",
       "implemented": true,
-      "evidence": "types present: {'class_shared': 26, 'subfamily': 7}",
+      "evidence": "types present: {'class_shared': 21, 'subfamily': 26, 'molecule_discriminating': 3}",
       "status": "PASS"
     },
     {
@@ -321,7 +321,7 @@
     {
       "specification_item": "Class-prior bias tested (R-01)",
       "implemented": true,
-      "evidence": "6 classes flagged as prior-dominated",
+      "evidence": "5 classes flagged as prior-dominated",
       "status": "PASS"
     },
     {

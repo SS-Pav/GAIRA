@@ -1,0 +1,155 @@
+chemical_class,molecule,ev,n_motifs_activated,dominant_motif_share,orphan,spectral_outlier
+acylglycerol,tri-11-eicosenoin,0.9743,2,0.6504,False,False
+acylglycerol,triarachidin,0.9901,1,1.0,False,False
+acylglycerol,tribehenin,0.9878,1,1.0,False,False
+acylglycerol,tricaprin,0.9665,2,0.5318,False,False
+acylglycerol,tricaproin,0.9667,1,1.0,False,False
+acylglycerol,tricaprylin,0.9857,1,1.0,False,False
+acylglycerol,trielaidin,0.8719,3,0.5858,False,False
+acylglycerol,trierucin,0.921,3,0.3938,False,False
+acylglycerol,trilaurin,0.9835,2,0.7512,False,False
+acylglycerol,trilinolein,0.9854,2,0.8226,False,False
+acylglycerol,trilinolenin,0.9599,1,1.0,False,False
+acylglycerol,trimyristin,0.9903,2,0.8297,False,False
+acylglycerol,triolein,0.9632,2,0.5697,False,False
+acylglycerol,tripalmitin,0.9915,2,0.9151,False,False
+acylglycerol,tripalmitolein,0.9799,2,0.54,False,False
+acylglycerol,tripetroselinin,0.9422,3,0.4171,False,False
+acylglycerol,tristearin,0.9922,1,0.9898,False,False
+carboxylic_acid_metabolite,acetoacetate,0.5462,2,0.9366,False,False
+carboxylic_acid_metabolite,ascorbate,0.6548,1,0.9831,False,False
+carboxylic_acid_metabolite,citrate,0.5144,2,0.9235,False,False
+carboxylic_acid_metabolite,fumarate,0.3877,2,0.9327,True,True
+carboxylic_acid_metabolite,lactate,0.6949,1,1.0,False,False
+carboxylic_acid_metabolite,malic acid,0.3065,2,0.6185,True,True
+carboxylic_acid_metabolite,pyruvate,0.5403,2,0.7533,False,False
+carboxylic_acid_metabolite,succinic acid,0.5695,1,1.0,False,False
+chromophore_pigment,carotene,0.9621,1,1.0,False,False
+chromophore_pigment,melanin,0.6706,1,1.0,False,False
+chromophore_pigment,riboflavin,0.6255,2,0.8931,False,False
+chromophore_pigment,β-carotene,0.9629,1,1.0,False,False
+fatty_acid,12-methyltetradecanoic acid,0.9201,2,0.6973,False,False
+fatty_acid,13-methylmyristicacid,0.9266,2,0.8046,False,False
+fatty_acid,14-methylhexadecanoic acid,0.9413,2,0.9105,False,False
+fatty_acid,14-methylpentadecanoic acid,0.9824,2,0.8647,False,False
+fatty_acid,15-methylpalmiticacid,0.9776,2,0.9198,False,False
+fatty_acid,arachidic acid,0.966,4,0.6183,False,False
+fatty_acid,arachidonic acid,0.9593,1,0.9976,False,False
+fatty_acid,elaidic acid,0.9425,1,1.0,False,False
+fatty_acid,lauric acid,0.9023,4,0.5551,False,False
+fatty_acid,linoleic acid,0.9903,2,0.6736,False,False
+fatty_acid,myristic acid,0.9704,1,0.9652,False,False
+fatty_acid,oleate,0.9492,4,0.4902,False,False
+fatty_acid,palmitic acid,0.9554,4,0.6965,False,False
+fatty_acid,palmitoleic acid,0.9762,3,0.4477,False,False
+fatty_acid,stearate,0.9437,4,0.423,False,False
+fatty_acid,vaccenic acid,0.9577,4,0.5359,False,False
+fatty_acid,α-linolenic acid,0.9798,2,0.8541,False,False
+free_amino_acid,alanine,0.7927,4,0.8386,False,False
+free_amino_acid,arginine,0.8367,1,0.9744,False,False
+free_amino_acid,asparagine,0.7605,1,1.0,False,False
+free_amino_acid,aspartate,0.7639,4,0.6381,False,False
+free_amino_acid,cysteine,0.948,1,0.9563,False,False
+free_amino_acid,glutamate,0.702,6,0.2982,False,False
+free_amino_acid,glycine,0.8328,1,0.9637,False,False
+free_amino_acid,histidine,0.6334,3,0.7049,False,False
+free_amino_acid,hydroxyproline,0.7791,2,0.8376,False,False
+free_amino_acid,isoleucine,0.6973,6,0.2583,False,False
+free_amino_acid,leucine,0.7443,4,0.3757,False,False
+free_amino_acid,methionine,0.6815,4,0.3634,False,False
+free_amino_acid,phenylalanine,0.9284,2,0.8621,False,False
+free_amino_acid,proline,0.7059,3,0.6441,False,False
+free_amino_acid,serine,0.8102,4,0.6666,False,False
+free_amino_acid,tryptophan,0.6556,3,0.4875,False,False
+free_amino_acid,tyrosine,0.9432,1,1.0,False,False
+free_amino_acid,valine,0.7237,4,0.5237,False,False
+mono_oligosaccharide,(+)-arabinose,0.9527,2,0.8667,False,False
+mono_oligosaccharide,(+)-fucose,0.6144,3,0.5554,False,False
+mono_oligosaccharide,(+)-galactosamine,0.9034,1,0.9537,False,False
+mono_oligosaccharide,(+)-galactose,0.8976,5,0.6469,False,False
+mono_oligosaccharide,(+)-glucose,0.9482,4,0.717,False,False
+mono_oligosaccharide,(+)-lactose,0.6389,6,0.5016,False,False
+mono_oligosaccharide,(+)-maltose,0.7344,4,0.5169,False,False
+mono_oligosaccharide,(+)-mannose,0.7245,6,0.3024,False,False
+mono_oligosaccharide,(+)-raffinose pentahydrate,0.655,4,0.3631,False,False
+mono_oligosaccharide,(+)-sucrose,0.6757,4,0.3857,False,False
+mono_oligosaccharide,(+)-trehalose,0.7843,5,0.4416,False,False
+mono_oligosaccharide,(+)-xylose,0.9318,2,0.9434,False,False
+mono_oligosaccharide,(-)-arabinose,0.9307,1,0.9724,False,False
+mono_oligosaccharide,(-)-fructose,0.6896,2,0.7352,False,False
+mono_oligosaccharide,(-)-ribose,0.7845,3,0.473,False,False
+mono_oligosaccharide,2-deoxy-d-ribose,0.7501,2,0.8139,False,False
+mono_oligosaccharide,glucosamine,0.7876,2,0.825,False,False
+mono_oligosaccharide,glycerol,0.7035,4,0.3672,False,False
+mono_oligosaccharide,n-acetylglucosamine,0.7474,2,0.8318,False,False
+mono_oligosaccharide,β-d-glucose,0.9401,2,0.8572,False,False
+nucleic_acid_polymer,a-dna,0.9456,1,1.0,False,False
+nucleic_acid_polymer,b-dna,0.8968,1,1.0,False,False
+nucleic_acid_polymer,t-rna,0.9103,1,1.0,False,False
+peptide_protein,albumin,0.9669,5,0.4444,False,False
+peptide_protein,carbonic anhydrase,0.985,4,0.5601,False,False
+peptide_protein,collagen,0.9632,5,0.6972,False,False
+peptide_protein,cytochrome c,0.9794,1,0.9697,False,False
+peptide_protein,elastase,0.9787,7,0.2684,False,False
+peptide_protein,elastin,0.9572,4,0.4996,False,False
+peptide_protein,ferritin,0.9567,9,0.2976,False,False
+peptide_protein,glucose oxidase,0.9974,2,0.8647,False,False
+peptide_protein,glutathione transferase,0.9763,7,0.2883,False,False
+peptide_protein,hemoglobin,0.9707,2,0.5144,False,False
+peptide_protein,horseradish peroxidase,0.9771,3,0.7661,False,False
+peptide_protein,insulin,0.9833,4,0.7459,False,False
+peptide_protein,keratin,0.938,4,0.4186,False,False
+peptide_protein,lactalbumin,0.9743,7,0.3809,False,False
+peptide_protein,lectin,0.9917,4,0.7068,False,False
+peptide_protein,major proteinase,0.9693,5,0.4051,False,False
+peptide_protein,myoglobin,0.9852,2,0.5718,False,False
+peptide_protein,papain,0.9497,5,0.448,False,False
+peptide_protein,pepsin,0.9601,8,0.3148,False,False
+peptide_protein,pepsinogen,0.9855,7,0.4963,False,False
+peptide_protein,superoxide dismutases,0.9832,6,0.4423,False,False
+peptide_protein,thaumatin,0.9848,6,0.4982,False,False
+peptide_protein,triosephosphate isomerase,0.9691,5,0.3117,False,False
+peptide_protein,trypsin,0.9869,6,0.4079,False,False
+peptide_protein,trypsin inhibitor,0.9532,6,0.5306,False,False
+peptide_protein,trypsinogen,0.9816,8,0.3164,False,False
+peptide_protein,tubulin,0.9981,1,0.9628,False,False
+peptide_protein,ubiquitin,0.9762,5,0.331,False,False
+peptide_protein,xylanase,0.9957,1,0.8891,False,False
+peptide_protein,α-chymotrypsinogen a (type ii),0.9802,6,0.3712,False,False
+phosphate_metabolite,fructose-6-phosphate,0.67,1,1.0,False,False
+phosphate_metabolite,phosphate,0.559,1,1.0,False,False
+phosphate_metabolite,phosphoenolpyruvate,0.4907,1,1.0,True,False
+phospholipid_sphingolipid,ceramide,0.91,1,1.0,False,False
+phospholipid_sphingolipid,phosphatidylinositol,0.9981,1,1.0,False,False
+phospholipid_sphingolipid,sphingomyelin,0.9434,1,1.0,False,False
+phospholipid_sphingolipid,α-phosphatidylcholine,0.9374,2,0.8811,False,False
+phospholipid_sphingolipid,α-phosphatidylethanolamine,0.9136,2,0.8612,False,False
+polysaccharide,amylopectin,0.9638,1,1.0,False,False
+polysaccharide,amylose,0.9823,2,0.9211,False,False
+polysaccharide,cellulose,0.8812,1,1.0,False,False
+polysaccharide,chitin,0.8688,2,0.9106,False,False
+polysaccharide,glycogen,0.9032,2,0.7522,False,False
+purine,adenine,0.582,2,0.8896,False,False
+purine,guanine,0.7679,1,1.0,False,False
+purine,hypoxanthine,0.7646,2,0.8479,False,False
+purine,urate,0.4949,1,1.0,True,False
+purine,xanthine,0.7464,2,0.8736,False,False
+pyrimidine,cytosine,0.7525,1,1.0,False,False
+pyrimidine,thymine,0.1303,1,1.0,True,True
+pyrimidine,uracil,0.7371,1,1.0,False,False
+small_nitrogenous,creatinine,0.9107,1,1.0,False,False
+small_nitrogenous,urea,0.1231,1,1.0,True,True
+sterol_steroid,cholesterol,0.8591,3,0.7187,False,False
+sterol_steroid,cholesteryl linoleate,0.8417,1,0.9392,False,False
+sterol_steroid,cholesteryl oleate,0.9494,2,0.9118,False,False
+sterol_steroid,cholesteryl palmitate,0.9517,1,0.9993,False,False
+sterol_steroid,cholesteryl stearate,0.9151,1,1.0,False,False
+sterol_steroid,diethylstilbestrol,0.9377,1,1.0,False,False
+sterol_steroid,estradiol,0.9534,2,0.6022,False,False
+sterol_steroid,estriol,0.9531,2,0.6022,False,False
+sterol_steroid,estrone,0.8392,1,1.0,False,False
+sterol_steroid,ethinylestradiol,0.8156,2,0.8925,False,False
+sulfur_thiol_cofactor,acetyl-coa,0.9264,1,1.0,False,False
+sulfur_thiol_cofactor,coenzyme a,0.9445,2,0.9411,False,False
+sulfur_thiol_cofactor,ergothioneine,0.9983,1,1.0,False,False
+sulfur_thiol_cofactor,glutathione,0.6168,2,0.8697,False,False
