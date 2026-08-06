@@ -100,6 +100,45 @@ V7 lives entirely under `GAIRA_v7_rebuild/`. The V5 atlas, the V5/V6/V6.2/V6.3 a
 existing engines, and the existing Streamlit apps are untouched until Phase 07 authorises a
 replacement — and even then, by a versioned addition, not an in-place edit.
 
+## P-15 The frozen atlas is a control, never a foundation
+
+The V5/V6 frozen atlas may be used ONLY as a **baseline control**, a **benchmark comparator**,
+or a **reproducibility reference**. It must **NOT** become the foundation of the V7 learning
+architecture unless the specification explicitly says so.
+
+This was implicit — `LEARNING_MODE_ARCHITECTURE.md` derives every LSM from `X_c`, the balanced
+reference blocks, and never from `H` — but it was never written as a single prohibition, and
+its absence is the proximate cause of the drift documented in
+`ARCHITECTURE_COMPLIANCE_AUDIT.md`. A layer built on the frozen atlas inherits the V5 global
+objective, which is Strategy A, which is the exact bias V7 exists to remove. It is also
+mathematically bounded by that atlas: it can only redistribute mass the atlas already placed.
+
+Enforced by `tests/test_v7_phase01.py::test_frozen_atlas_is_not_an_input_to_the_lsm_package`.
+
+## P-16 Architecture check before implementation
+
+Before implementing any phase, re-read every V7 architecture document and verify that the
+phase to be implemented matches the approved architecture. If any discrepancy exists between
+the implementation brief and the approved architecture, **stop immediately**, generate an
+Architecture Deviation Report, and do not proceed until the discrepancy is resolved.
+
+**A discrepancy noted in a docstring is not a resolution.** Implementation must not begin.
+Noting a divergence and building anyway is how a brief silently overrides an approved design —
+which is exactly what happened once, and is why this principle exists.
+
+## P-17 Redraw the pipeline at the end of every phase
+
+Every phase report ends with a **Current V7 Pipeline** section: completed stages, remaining
+stages, the next phase's inputs and its outputs — drawn, not described. Prose hides a
+substitution that a diagram exposes: `24 atlas components → motifs` and `class-local NMF →
+LSMs` are obviously different pictures and were not obviously different paragraphs.
+
+## Architecture compliance is a gate, not a report
+
+Every phase report ends with an **Architecture Compliance** table:
+*specification item · implemented? · evidence · PASS/FAIL*. The phase gate opens only if every
+row is PASS. Otherwise the phase repeats.
+
 ---
 
 # Part 2 — The coverage-imbalance strategy

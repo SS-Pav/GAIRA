@@ -1,0 +1,9 @@
+arm,n_rows,n_molecules,effective_class_gini,max_class_weight_share,min_class_weight_share,class_weight_ratio,molecule_weight_ratio,molecule_weight_equal,band_fidelity,band_fidelity_replicated_only,band_fidelity_multi_excitation,replicate_stability,is_control
+A_all_spectra,375,154,0.4605,0.2133,0.008,26.67,7.0,False,0.98615,0.98318,0.98218,0.945,True
+B_analyte_weighted,375,154,0.431,0.1948,0.013,15.0,1.0,True,0.98615,0.98318,0.98218,0.945,False
+B_uniform,375,154,0.431,0.1948,0.013,15.0,1.0,True,0.98615,0.98318,0.98218,0.945,False
+C_mean,154,154,0.431,0.1948,0.013,15.0,1.0,True,0.98615,0.98318,0.98218,1.0,False
+C_median,154,154,0.431,0.1948,0.013,15.0,1.0,True,0.97933,0.97491,0.97726,1.0,False
+C_trimmed,154,154,0.431,0.1948,0.013,15.0,1.0,True,0.98386,0.9804,0.98145,1.0,False
+C_medoid,154,154,0.431,0.1948,0.013,15.0,1.0,True,0.97334,0.96762,0.96693,1.0,False
+C_quality,154,154,0.431,0.1948,0.013,15.0,1.0,True,0.98585,0.98282,0.98161,1.0,False

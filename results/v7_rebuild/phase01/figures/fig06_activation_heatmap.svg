@@ -1,0 +1,2034 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="722.878281pt" height="611.987969pt" viewBox="0 0 722.878281 611.987969" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-05T22:39:02.953374</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 611.987969 
+L 722.878281 611.987969 
+L 722.878281 0 
+L -0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 84.958281 511.417813 
+L 709.918281 511.417813 
+L 709.918281 45.721813 
+L 84.958281 45.721813 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p1a30313f05)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAA2QAAAKHCAYAAADuT4tQAAARjUlEQVR4nO3dMZIiVxZA0WICY1x2Mg6rGpbDrlgMJgZGKjrGkSYUXVSJ+jfz5zkb+CVk3Xj98h0ez2X5AAAAWLnT+fIxm3/VfwAAAMBeCTIAAICIIAMAAIgc7JABAAA0+2omZAAAABFBBgAAEBFkAAAAkWP1MAAAwFe4QwYAAMDb+CeLAAAAEUEGAAAQEWQAAAARH/UAAAD4P/fb9WMEEzIAAICIIAMAAIgIMgAAgIgdMgAAmNRsh5Tvg/a6RjIhAwAAiAgyAACAiCADAACICDIAAICIIAMAAIgIMgAAgIggAwAAiAgyAACAiCADAACICDIAAICIIAMAAIgIMgAAgIggAwAAiAgyAACAiCADAACICDIAAIDIsXoYAAD4WffbdchPfDpfhrwzIxMyAACAiCADAACICDIAAICIHTIAAJjUqN2uUbtqMzIhAwAAiAgyAACAiCADAACICDIAAICIIAMAAIgIMgAAgIggAwAAiAgyAACAiCADAACICDIAAICIIAMAAIgIMgAAgIggAwAAiAgyAACAiCADAACICDIAAIDIsXoYAACYw+l8GfLO/Xb9mI0JGQAAQESQAQAARAQZAABAxA4ZAABMuG81687VbEzIAAAAIoIMAAAgIsgAAAAiggwAACAiyAAAACKCDAAAICLIAAAAIu6QAQDAwPtgboPxZyZkAAAAEUEGAAAQEWQAAAARQQYAABARZAAAABFBBgAAEBFkAAAAEUEGAAAQEWQAAAARQQYAABARZAAAABFBBgAAEDlWDwMAsF2n8+VjNvfbtf4T2CETMgAAgIggAwAAiAgyAACAiB0yAABWzW4XMzMhAwAAiAgyAACAiCADAACI2CEDAGDVRt08s6tGwYQMAAAgIsgAAAAiggwAACBihwwAgFXvW43aIYOCCRkAAEBEkAEAAEQEGQAAQESQAQAARHzUAwCAL/OhDXgPEzIAAICIIAMAAIgIMgAAgIgdMgCAiYza7Rp5GBpmZkIGAAAQEWQAAAARQQYAABARZAAAABFBBgAAEBFkAAAAEUEGAAAQEWQAAAARQQYAABARZAAAABFBBgAAEBFkAAAAEUEGAAAQEWQAAAARQQYAABARZAAAABFBBgAAEBFkAAAAEUEGAAAQEWQAAACRY/UwAMAanM6Xj5ncb9f6TwC+wIQMAAAgIsgAAAAiggwAACAiyAAAACKCDAAAICLIAAAAIoIMAAAg4g4ZAMAA7oMBf8eEDAAAICLIAAAAIoIMAAAgcng8l6V6HABgL07ny5B37KrBtpiQAQAARAQZAABARJABAABEBBkAAEDEYWgAYNd8bAMomZABAABEBBkAAEBEkAEAAETskAEAu93r+sUhZaBkQgYAABARZAAAABFBBgAAEBFkAAAAEUEGAAAQEWQAAAARQQYAABARZAAAABFBBgAAEBFkAAAAEUEGAAAQOVYPAwDvczpfpvo577dr/ScADGFCBgAAEBFkAAAAEUEGAAAQEWQAAAARQQYAABARZAAAABFBBgAAEBFkAAAAEYehAYCXOdgM8F4mZAAAABFBBgAAEBFkAAAAETtkAMDLTufLkF/LrhqwFyZkAAAAEUEGAAAQEWQAAAARQQYAABARZAAAABFBBgAAEBFkAAAAEXfIAICXuQ8G8F4mZAAAABFBBgAAEBFkAAAAEUEGAAAQEWQAAAARQQYAABARZAAAABFBBgAAEHEYGgB42el8GfJrOUAN7IUJGQAAQESQAQAARAQZAABARJABAABEBBkAAEBEkAEAAEQEGQAAQMQdMgDgZe6DAbyXCRkAAEBEkAEAAEQEGQAAQMQOGQDwstP5MuTXsqsG7IUJGQAAQESQAQAARAQZAABARJABAABEBBkAAEBEkAEAAEQEGQAAQESQAQAARAQZAABARJABAABEBBkAAEBEkAEAAESO1cMAwPvcb9chP+fpfBnyDsBemJABAABEBBkAAEBEkAEAAETskAHABEbtdo3aVQPYCxMyAACAiCADAACICDIAAICIHTIA4GV21QDey4QMAAAgIsgAAAAiggwAACAiyAAAACKCDAAAICLIAAAAIoIMAAAgIsgAAAAiDkMDAC+7365+LYA3MiEDAACICDIAAICIIAMAAIjYIQMAXnY6X4b8WnbVgL0wIQMAAIgIMgAAgIggAwAAiAgyAACAiCADAACICDIAAICIIAMAAIi4QwYAExh1t2vUHTKAvTAhAwAAiAgyAACAiCADAACICDIAAICIj3oAwAR8bANgm0zIAAAAIoIMAAAgIsgAAAAiggwAACAiyAAAACKCDAAAICLIAAAAIoIMAAAgIsgAAAAiggwAACAiyAAAACLH6mEAYHv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" id="image20111dd66c" transform="scale(1 -1) translate(0 -465.84)" x="84.958281" y="-45.577813" width="624.96" height="465.84"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m0c394f76a7" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m0c394f76a7" x="94.427372" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(95.80706 561.14125) rotate(-90)">acylglycerol.m00</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="113.365554" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(114.67571 599.027969) rotate(-90)">carboxylic_acid_metabolite.m00</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="132.303736" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(133.613892 599.027969) rotate(-90)">carboxylic_acid_metabolite.m01</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="151.241918" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(152.552074 599.027969) rotate(-90)">carboxylic_acid_metabolite.m02</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="170.180099" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(171.490256 587.824844) rotate(-90)">chromophore_pigment.m00</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="189.118281" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(190.428438 587.824844) rotate(-90)">chromophore_pigment.m01</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="208.056463" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(209.366619 555.820156) rotate(-90)">fatty_acid.m00</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="226.994645" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(228.304801 555.820156) rotate(-90)">fatty_acid.m01</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="245.932827" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(247.242983 572.024063) rotate(-90)">free_amino_acid.m00</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="264.871009" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(266.181165 572.024063) rotate(-90)">free_amino_acid.m01</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="283.80919" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(285.119347 572.024063) rotate(-90)">free_amino_acid.m02</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="302.747372" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(304.057528 572.024063) rotate(-90)">free_amino_acid.m03</text>
+     </g>
+    </g>
+    <g id="xtick_13">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="321.685554" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(322.99571 572.024063) rotate(-90)">free_amino_acid.m04</text>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="340.623736" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(341.933892 587.063906) rotate(-90)">mono_oligosaccharide.m00</text>
+     </g>
+    </g>
+    <g id="xtick_15">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="359.561918" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(360.872074 587.063906) rotate(-90)">mono_oligosaccharide.m01</text>
+     </g>
+    </g>
+    <g id="xtick_16">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="378.500099" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(379.810256 587.063906) rotate(-90)">mono_oligosaccharide.m02</text>
+     </g>
+    </g>
+    <g id="xtick_17">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="397.438281" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(398.748437 587.063906) rotate(-90)">mono_oligosaccharide.m03</text>
+     </g>
+    </g>
+    <g id="xtick_18">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="416.376463" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(417.686619 587.063906) rotate(-90)">mono_oligosaccharide.m04</text>
+     </g>
+    </g>
+    <g id="xtick_19">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="435.314645" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(436.624801 584.435) rotate(-90)">nucleic_acid_polymer.m00</text>
+     </g>
+    </g>
+    <g id="xtick_20">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="454.252827" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(455.562983 570.535781) rotate(-90)">peptide_protein.m00</text>
+     </g>
+    </g>
+    <g id="xtick_21">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="473.191009" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(474.501165 570.535781) rotate(-90)">peptide_protein.m01</text>
+     </g>
+    </g>
+    <g id="xtick_22">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="492.12919" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(493.439347 587.21) rotate(-90)">phosphate_metabolite.m00</text>
+     </g>
+    </g>
+    <g id="xtick_23">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="511.067372" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(512.377528 595.919375) rotate(-90)">phospholipid_sphingolipid.m00</text>
+     </g>
+    </g>
+    <g id="xtick_24">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="530.005554" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(531.31571 595.919375) rotate(-90)">phospholipid_sphingolipid.m01</text>
+     </g>
+    </g>
+    <g id="xtick_25">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="548.943736" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(550.323423 568.917031) rotate(-90)">polysaccharide.m00</text>
+     </g>
+    </g>
+    <g id="xtick_26">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="567.881918" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_26">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(569.261605 547.2725) rotate(-90)">purine.m00</text>
+     </g>
+    </g>
+    <g id="xtick_27">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="586.820099" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_27">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(588.199787 547.2725) rotate(-90)">purine.m01</text>
+     </g>
+    </g>
+    <g id="xtick_28">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="605.758281" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_28">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(607.137969 557.885781) rotate(-90)">pyrimidine.m00</text>
+     </g>
+    </g>
+    <g id="xtick_29">
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="624.696463" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_29">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(626.006619 576.829531) rotate(-90)">small_nitrogenous.m00</text>
+     </g>
+    </g>
+    <g id="xtick_30">
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="643.634645" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_30">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(644.944801 564.979531) rotate(-90)">sterol_steroid.m00</text>
+     </g>
+    </g>
+    <g id="xtick_31">
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="662.572827" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_31">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(663.882983 564.979531) rotate(-90)">sterol_steroid.m01</text>
+     </g>
+    </g>
+    <g id="xtick_32">
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="681.511009" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_32">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(682.821165 581.35375) rotate(-90)">sulfur_thiol_cofactor.m00</text>
+     </g>
+    </g>
+    <g id="xtick_33">
+     <g id="line2d_33">
+      <g>
+       <use xlink:href="#m0c394f76a7" x="700.44919" y="511.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_33">
+      <text style="font-size: 5px; font-family: 'DejaVu Sans'" transform="translate(701.759347 581.35375) rotate(-90)">sulfur_thiol_cofactor.m01</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_34">
+      <defs>
+       <path id="mc692870670" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="47.233812" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_34">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="48.829484" transform="rotate(-0 77.958281 48.829484)">tri-11-eicosenoin</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_35">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="50.257812" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_35">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="51.853484" transform="rotate(-0 77.958281 51.853484)">triarachidin</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="53.281813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_36">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="54.877484" transform="rotate(-0 77.958281 54.877484)">tribehenin</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_37">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="56.305813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_37">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="57.901484" transform="rotate(-0 77.958281 57.901484)">tricaprin</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="59.329813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_38">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="60.925484" transform="rotate(-0 77.958281 60.925484)">tricaproin</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_39">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="62.353813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_39">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="63.949484" transform="rotate(-0 77.958281 63.949484)">tricaprylin</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="65.377813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_40">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="66.973484" transform="rotate(-0 77.958281 66.973484)">trielaidin</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_41">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="68.401813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_41">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="69.997484" transform="rotate(-0 77.958281 69.997484)">trierucin</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="71.425813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_42">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="73.021484" transform="rotate(-0 77.958281 73.021484)">trilaurin</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_43">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="74.449813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_43">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="76.045484" transform="rotate(-0 77.958281 76.045484)">trilinolein</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_44">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="77.473813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_44">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="79.069484" transform="rotate(-0 77.958281 79.069484)">trilinolenin</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_45">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="80.497813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_45">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="82.093484" transform="rotate(-0 77.958281 82.093484)">trimyristin</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="83.521813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_46">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="85.117484" transform="rotate(-0 77.958281 85.117484)">triolein</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_47">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="86.545813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_47">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="88.141484" transform="rotate(-0 77.958281 88.141484)">tripalmitin</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_48">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="89.569813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_48">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="91.165484" transform="rotate(-0 77.958281 91.165484)">tripalmitolein</text>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_49">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="92.593813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_49">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="94.189484" transform="rotate(-0 77.958281 94.189484)">tripetroselinin</text>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_50">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="95.617813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_50">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="97.213484" transform="rotate(-0 77.958281 97.213484)">tristearin</text>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_51">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="98.641813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_51">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="100.237484" transform="rotate(-0 77.958281 100.237484)">acetoacetate</text>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_52">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="101.665813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_52">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="103.261484" transform="rotate(-0 77.958281 103.261484)">ascorbate</text>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_53">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="104.689813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_53">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="106.285484" transform="rotate(-0 77.958281 106.285484)">citrate</text>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_54">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="107.713813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_54">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="109.309484" transform="rotate(-0 77.958281 109.309484)">fumarate</text>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_55">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="110.737813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_55">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="112.333484" transform="rotate(-0 77.958281 112.333484)">lactate</text>
+     </g>
+    </g>
+    <g id="ytick_23">
+     <g id="line2d_56">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="113.761813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_56">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="115.357484" transform="rotate(-0 77.958281 115.357484)">malic acid</text>
+     </g>
+    </g>
+    <g id="ytick_24">
+     <g id="line2d_57">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="116.785813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_57">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="118.381484" transform="rotate(-0 77.958281 118.381484)">pyruvate</text>
+     </g>
+    </g>
+    <g id="ytick_25">
+     <g id="line2d_58">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="119.809813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_58">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="121.405484" transform="rotate(-0 77.958281 121.405484)">succinic acid</text>
+     </g>
+    </g>
+    <g id="ytick_26">
+     <g id="line2d_59">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="122.833813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_59">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="124.429484" transform="rotate(-0 77.958281 124.429484)">carotene</text>
+     </g>
+    </g>
+    <g id="ytick_27">
+     <g id="line2d_60">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="125.857813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_60">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="127.453484" transform="rotate(-0 77.958281 127.453484)">melanin</text>
+     </g>
+    </g>
+    <g id="ytick_28">
+     <g id="line2d_61">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="128.881813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_61">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="130.477484" transform="rotate(-0 77.958281 130.477484)">riboflavin</text>
+     </g>
+    </g>
+    <g id="ytick_29">
+     <g id="line2d_62">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="131.905813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_62">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="133.514609" transform="rotate(-0 77.958281 133.514609)">β-carotene</text>
+     </g>
+    </g>
+    <g id="ytick_30">
+     <g id="line2d_63">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="134.929813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_63">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="136.525484" transform="rotate(-0 77.958281 136.525484)">12-methyltetradecanoic acid</text>
+     </g>
+    </g>
+    <g id="ytick_31">
+     <g id="line2d_64">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="137.953813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_64">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="139.549484" transform="rotate(-0 77.958281 139.549484)">13-methylmyristicacid</text>
+     </g>
+    </g>
+    <g id="ytick_32">
+     <g id="line2d_65">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="140.977813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_65">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="142.573484" transform="rotate(-0 77.958281 142.573484)">14-methylhexadecanoic acid</text>
+     </g>
+    </g>
+    <g id="ytick_33">
+     <g id="line2d_66">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="144.001813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_66">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="145.597484" transform="rotate(-0 77.958281 145.597484)">14-methylpentadecanoic acid</text>
+     </g>
+    </g>
+    <g id="ytick_34">
+     <g id="line2d_67">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="147.025813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_67">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="148.621484" transform="rotate(-0 77.958281 148.621484)">15-methylpalmiticacid</text>
+     </g>
+    </g>
+    <g id="ytick_35">
+     <g id="line2d_68">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="150.049813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_68">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="151.645484" transform="rotate(-0 77.958281 151.645484)">arachidic acid</text>
+     </g>
+    </g>
+    <g id="ytick_36">
+     <g id="line2d_69">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="153.073813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_69">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="154.669484" transform="rotate(-0 77.958281 154.669484)">arachidonic acid</text>
+     </g>
+    </g>
+    <g id="ytick_37">
+     <g id="line2d_70">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="156.097813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_70">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="157.693484" transform="rotate(-0 77.958281 157.693484)">elaidic acid</text>
+     </g>
+    </g>
+    <g id="ytick_38">
+     <g id="line2d_71">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="159.121813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_71">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="160.717484" transform="rotate(-0 77.958281 160.717484)">lauric acid</text>
+     </g>
+    </g>
+    <g id="ytick_39">
+     <g id="line2d_72">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="162.145813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_72">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="163.741484" transform="rotate(-0 77.958281 163.741484)">linoleic acid</text>
+     </g>
+    </g>
+    <g id="ytick_40">
+     <g id="line2d_73">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="165.169813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_73">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="166.765484" transform="rotate(-0 77.958281 166.765484)">myristic acid</text>
+     </g>
+    </g>
+    <g id="ytick_41">
+     <g id="line2d_74">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="168.193813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_74">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="169.789484" transform="rotate(-0 77.958281 169.789484)">oleate</text>
+     </g>
+    </g>
+    <g id="ytick_42">
+     <g id="line2d_75">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="171.217813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_75">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="172.813484" transform="rotate(-0 77.958281 172.813484)">palmitic acid</text>
+     </g>
+    </g>
+    <g id="ytick_43">
+     <g id="line2d_76">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="174.241813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_76">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="175.837484" transform="rotate(-0 77.958281 175.837484)">palmitoleic acid</text>
+     </g>
+    </g>
+    <g id="ytick_44">
+     <g id="line2d_77">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="177.265813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_77">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="178.861484" transform="rotate(-0 77.958281 178.861484)">stearate</text>
+     </g>
+    </g>
+    <g id="ytick_45">
+     <g id="line2d_78">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="180.289813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_78">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="181.885484" transform="rotate(-0 77.958281 181.885484)">vaccenic acid</text>
+     </g>
+    </g>
+    <g id="ytick_46">
+     <g id="line2d_79">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="183.313813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_79">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="184.909484" transform="rotate(-0 77.958281 184.909484)">α-linolenic acid</text>
+     </g>
+    </g>
+    <g id="ytick_47">
+     <g id="line2d_80">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="186.337813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_80">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="187.933484" transform="rotate(-0 77.958281 187.933484)">alanine</text>
+     </g>
+    </g>
+    <g id="ytick_48">
+     <g id="line2d_81">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="189.361813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_81">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="190.957484" transform="rotate(-0 77.958281 190.957484)">arginine</text>
+     </g>
+    </g>
+    <g id="ytick_49">
+     <g id="line2d_82">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="192.385813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_82">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="193.981484" transform="rotate(-0 77.958281 193.981484)">asparagine</text>
+     </g>
+    </g>
+    <g id="ytick_50">
+     <g id="line2d_83">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="195.409813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_83">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="197.005484" transform="rotate(-0 77.958281 197.005484)">aspartate</text>
+     </g>
+    </g>
+    <g id="ytick_51">
+     <g id="line2d_84">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="198.433813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_84">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="200.029484" transform="rotate(-0 77.958281 200.029484)">cysteine</text>
+     </g>
+    </g>
+    <g id="ytick_52">
+     <g id="line2d_85">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="201.457813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_85">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="203.053484" transform="rotate(-0 77.958281 203.053484)">glutamate</text>
+     </g>
+    </g>
+    <g id="ytick_53">
+     <g id="line2d_86">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="204.481813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_86">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="206.077484" transform="rotate(-0 77.958281 206.077484)">glycine</text>
+     </g>
+    </g>
+    <g id="ytick_54">
+     <g id="line2d_87">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="207.505813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_87">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="209.101484" transform="rotate(-0 77.958281 209.101484)">histidine</text>
+     </g>
+    </g>
+    <g id="ytick_55">
+     <g id="line2d_88">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="210.529813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_88">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="212.125484" transform="rotate(-0 77.958281 212.125484)">hydroxyproline</text>
+     </g>
+    </g>
+    <g id="ytick_56">
+     <g id="line2d_89">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="213.553813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_89">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="215.149484" transform="rotate(-0 77.958281 215.149484)">isoleucine</text>
+     </g>
+    </g>
+    <g id="ytick_57">
+     <g id="line2d_90">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="216.577813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_90">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="218.173484" transform="rotate(-0 77.958281 218.173484)">leucine</text>
+     </g>
+    </g>
+    <g id="ytick_58">
+     <g id="line2d_91">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="219.601813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_91">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="221.197484" transform="rotate(-0 77.958281 221.197484)">methionine</text>
+     </g>
+    </g>
+    <g id="ytick_59">
+     <g id="line2d_92">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="222.625813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_92">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="224.221484" transform="rotate(-0 77.958281 224.221484)">phenylalanine</text>
+     </g>
+    </g>
+    <g id="ytick_60">
+     <g id="line2d_93">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="225.649813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_93">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="227.245484" transform="rotate(-0 77.958281 227.245484)">proline</text>
+     </g>
+    </g>
+    <g id="ytick_61">
+     <g id="line2d_94">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="228.673813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_94">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="230.269484" transform="rotate(-0 77.958281 230.269484)">serine</text>
+     </g>
+    </g>
+    <g id="ytick_62">
+     <g id="line2d_95">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="231.697813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_95">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="233.293484" transform="rotate(-0 77.958281 233.293484)">tryptophan</text>
+     </g>
+    </g>
+    <g id="ytick_63">
+     <g id="line2d_96">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="234.721813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_96">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="236.317484" transform="rotate(-0 77.958281 236.317484)">tyrosine</text>
+     </g>
+    </g>
+    <g id="ytick_64">
+     <g id="line2d_97">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="237.745813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_97">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="239.341484" transform="rotate(-0 77.958281 239.341484)">valine</text>
+     </g>
+    </g>
+    <g id="ytick_65">
+     <g id="line2d_98">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="240.769813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_98">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="242.365484" transform="rotate(-0 77.958281 242.365484)">(+)-arabinose</text>
+     </g>
+    </g>
+    <g id="ytick_66">
+     <g id="line2d_99">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="243.793813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_99">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="245.389484" transform="rotate(-0 77.958281 245.389484)">(+)-fucose</text>
+     </g>
+    </g>
+    <g id="ytick_67">
+     <g id="line2d_100">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="246.817813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_100">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="248.413484" transform="rotate(-0 77.958281 248.413484)">(+)-galactosamine</text>
+     </g>
+    </g>
+    <g id="ytick_68">
+     <g id="line2d_101">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="249.841813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_101">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="251.437484" transform="rotate(-0 77.958281 251.437484)">(+)-galactose</text>
+     </g>
+    </g>
+    <g id="ytick_69">
+     <g id="line2d_102">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="252.865813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_102">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="254.461484" transform="rotate(-0 77.958281 254.461484)">(+)-glucose</text>
+     </g>
+    </g>
+    <g id="ytick_70">
+     <g id="line2d_103">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="255.889813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_103">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="257.485484" transform="rotate(-0 77.958281 257.485484)">(+)-lactose</text>
+     </g>
+    </g>
+    <g id="ytick_71">
+     <g id="line2d_104">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="258.913813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_104">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="260.509484" transform="rotate(-0 77.958281 260.509484)">(+)-maltose</text>
+     </g>
+    </g>
+    <g id="ytick_72">
+     <g id="line2d_105">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="261.937813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_105">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="263.533484" transform="rotate(-0 77.958281 263.533484)">(+)-mannose</text>
+     </g>
+    </g>
+    <g id="ytick_73">
+     <g id="line2d_106">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="264.961813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_106">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="266.557484" transform="rotate(-0 77.958281 266.557484)">(+)-raffinose pentahydrate</text>
+     </g>
+    </g>
+    <g id="ytick_74">
+     <g id="line2d_107">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="267.985813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_107">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="269.581484" transform="rotate(-0 77.958281 269.581484)">(+)-sucrose</text>
+     </g>
+    </g>
+    <g id="ytick_75">
+     <g id="line2d_108">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="271.009813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_108">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="272.605484" transform="rotate(-0 77.958281 272.605484)">(+)-trehalose</text>
+     </g>
+    </g>
+    <g id="ytick_76">
+     <g id="line2d_109">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="274.033813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_109">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="275.629484" transform="rotate(-0 77.958281 275.629484)">(+)-xylose</text>
+     </g>
+    </g>
+    <g id="ytick_77">
+     <g id="line2d_110">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="277.057813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_110">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="278.653484" transform="rotate(-0 77.958281 278.653484)">(-)-arabinose</text>
+     </g>
+    </g>
+    <g id="ytick_78">
+     <g id="line2d_111">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="280.081813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_111">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="281.677484" transform="rotate(-0 77.958281 281.677484)">(-)-fructose</text>
+     </g>
+    </g>
+    <g id="ytick_79">
+     <g id="line2d_112">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="283.105813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_112">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="284.701484" transform="rotate(-0 77.958281 284.701484)">(-)-ribose</text>
+     </g>
+    </g>
+    <g id="ytick_80">
+     <g id="line2d_113">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="286.129813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_113">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="287.725484" transform="rotate(-0 77.958281 287.725484)">2-deoxy-d-ribose</text>
+     </g>
+    </g>
+    <g id="ytick_81">
+     <g id="line2d_114">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="289.153813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_114">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="290.749484" transform="rotate(-0 77.958281 290.749484)">glucosamine</text>
+     </g>
+    </g>
+    <g id="ytick_82">
+     <g id="line2d_115">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="292.177813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_115">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="293.773484" transform="rotate(-0 77.958281 293.773484)">glycerol</text>
+     </g>
+    </g>
+    <g id="ytick_83">
+     <g id="line2d_116">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="295.201813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_116">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="296.797484" transform="rotate(-0 77.958281 296.797484)">n-acetylglucosamine</text>
+     </g>
+    </g>
+    <g id="ytick_84">
+     <g id="line2d_117">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="298.225813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_117">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="299.834609" transform="rotate(-0 77.958281 299.834609)">β-d-glucose</text>
+     </g>
+    </g>
+    <g id="ytick_85">
+     <g id="line2d_118">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="301.249813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_118">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="302.845484" transform="rotate(-0 77.958281 302.845484)">a-dna</text>
+     </g>
+    </g>
+    <g id="ytick_86">
+     <g id="line2d_119">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="304.273813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_119">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="305.869484" transform="rotate(-0 77.958281 305.869484)">b-dna</text>
+     </g>
+    </g>
+    <g id="ytick_87">
+     <g id="line2d_120">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="307.297813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_120">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="308.893484" transform="rotate(-0 77.958281 308.893484)">t-rna</text>
+     </g>
+    </g>
+    <g id="ytick_88">
+     <g id="line2d_121">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="310.321813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_121">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="311.917484" transform="rotate(-0 77.958281 311.917484)">albumin</text>
+     </g>
+    </g>
+    <g id="ytick_89">
+     <g id="line2d_122">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="313.345813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_122">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="314.941484" transform="rotate(-0 77.958281 314.941484)">carbonic anhydrase</text>
+     </g>
+    </g>
+    <g id="ytick_90">
+     <g id="line2d_123">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="316.369813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_123">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="317.965484" transform="rotate(-0 77.958281 317.965484)">collagen</text>
+     </g>
+    </g>
+    <g id="ytick_91">
+     <g id="line2d_124">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="319.393813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_124">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="320.989484" transform="rotate(-0 77.958281 320.989484)">cytochrome c</text>
+     </g>
+    </g>
+    <g id="ytick_92">
+     <g id="line2d_125">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="322.417813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_125">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="324.013484" transform="rotate(-0 77.958281 324.013484)">elastase</text>
+     </g>
+    </g>
+    <g id="ytick_93">
+     <g id="line2d_126">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="325.441813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_126">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="327.037484" transform="rotate(-0 77.958281 327.037484)">elastin</text>
+     </g>
+    </g>
+    <g id="ytick_94">
+     <g id="line2d_127">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="328.465813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_127">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="330.061484" transform="rotate(-0 77.958281 330.061484)">ferritin</text>
+     </g>
+    </g>
+    <g id="ytick_95">
+     <g id="line2d_128">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="331.489813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_128">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="333.085484" transform="rotate(-0 77.958281 333.085484)">glucose oxidase</text>
+     </g>
+    </g>
+    <g id="ytick_96">
+     <g id="line2d_129">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="334.513813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_129">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="336.109484" transform="rotate(-0 77.958281 336.109484)">glutathione transferase</text>
+     </g>
+    </g>
+    <g id="ytick_97">
+     <g id="line2d_130">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="337.537813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_130">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="339.133484" transform="rotate(-0 77.958281 339.133484)">hemoglobin</text>
+     </g>
+    </g>
+    <g id="ytick_98">
+     <g id="line2d_131">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="340.561813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_131">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="342.157484" transform="rotate(-0 77.958281 342.157484)">horseradish peroxidase</text>
+     </g>
+    </g>
+    <g id="ytick_99">
+     <g id="line2d_132">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="343.585813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_132">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="345.181484" transform="rotate(-0 77.958281 345.181484)">insulin</text>
+     </g>
+    </g>
+    <g id="ytick_100">
+     <g id="line2d_133">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="346.609813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_133">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="348.205484" transform="rotate(-0 77.958281 348.205484)">keratin</text>
+     </g>
+    </g>
+    <g id="ytick_101">
+     <g id="line2d_134">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="349.633813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_134">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="351.229484" transform="rotate(-0 77.958281 351.229484)">lactalbumin</text>
+     </g>
+    </g>
+    <g id="ytick_102">
+     <g id="line2d_135">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="352.657813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_135">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="354.253484" transform="rotate(-0 77.958281 354.253484)">lectin</text>
+     </g>
+    </g>
+    <g id="ytick_103">
+     <g id="line2d_136">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="355.681813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_136">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="357.277484" transform="rotate(-0 77.958281 357.277484)">major proteinase</text>
+     </g>
+    </g>
+    <g id="ytick_104">
+     <g id="line2d_137">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="358.705813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_137">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="360.301484" transform="rotate(-0 77.958281 360.301484)">myoglobin</text>
+     </g>
+    </g>
+    <g id="ytick_105">
+     <g id="line2d_138">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="361.729813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_138">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="363.325484" transform="rotate(-0 77.958281 363.325484)">papain</text>
+     </g>
+    </g>
+    <g id="ytick_106">
+     <g id="line2d_139">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="364.753813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_139">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="366.349484" transform="rotate(-0 77.958281 366.349484)">pepsin</text>
+     </g>
+    </g>
+    <g id="ytick_107">
+     <g id="line2d_140">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="367.777813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_140">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="369.373484" transform="rotate(-0 77.958281 369.373484)">pepsinogen</text>
+     </g>
+    </g>
+    <g id="ytick_108">
+     <g id="line2d_141">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="370.801813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_141">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="372.397484" transform="rotate(-0 77.958281 372.397484)">superoxide dismutases</text>
+     </g>
+    </g>
+    <g id="ytick_109">
+     <g id="line2d_142">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="373.825813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_142">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="375.421484" transform="rotate(-0 77.958281 375.421484)">thaumatin</text>
+     </g>
+    </g>
+    <g id="ytick_110">
+     <g id="line2d_143">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="376.849813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_143">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="378.445484" transform="rotate(-0 77.958281 378.445484)">triosephosphate isomerase</text>
+     </g>
+    </g>
+    <g id="ytick_111">
+     <g id="line2d_144">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="379.873813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_144">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="381.469484" transform="rotate(-0 77.958281 381.469484)">trypsin</text>
+     </g>
+    </g>
+    <g id="ytick_112">
+     <g id="line2d_145">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="382.897813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_145">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="384.493484" transform="rotate(-0 77.958281 384.493484)">trypsin inhibitor</text>
+     </g>
+    </g>
+    <g id="ytick_113">
+     <g id="line2d_146">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="385.921813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_146">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="387.517484" transform="rotate(-0 77.958281 387.517484)">trypsinogen</text>
+     </g>
+    </g>
+    <g id="ytick_114">
+     <g id="line2d_147">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="388.945813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_147">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="390.541484" transform="rotate(-0 77.958281 390.541484)">tubulin</text>
+     </g>
+    </g>
+    <g id="ytick_115">
+     <g id="line2d_148">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="391.969813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_148">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="393.565484" transform="rotate(-0 77.958281 393.565484)">ubiquitin</text>
+     </g>
+    </g>
+    <g id="ytick_116">
+     <g id="line2d_149">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="394.993813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_149">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="396.589484" transform="rotate(-0 77.958281 396.589484)">xylanase</text>
+     </g>
+    </g>
+    <g id="ytick_117">
+     <g id="line2d_150">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="398.017813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_150">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="399.613484" transform="rotate(-0 77.958281 399.613484)">α-chymotrypsinogen a (type ii)</text>
+     </g>
+    </g>
+    <g id="ytick_118">
+     <g id="line2d_151">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="401.041813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_151">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="402.637484" transform="rotate(-0 77.958281 402.637484)">fructose-6-phosphate</text>
+     </g>
+    </g>
+    <g id="ytick_119">
+     <g id="line2d_152">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="404.065813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_152">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="405.661484" transform="rotate(-0 77.958281 405.661484)">phosphate</text>
+     </g>
+    </g>
+    <g id="ytick_120">
+     <g id="line2d_153">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="407.089813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_153">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="408.685484" transform="rotate(-0 77.958281 408.685484)">phosphoenolpyruvate</text>
+     </g>
+    </g>
+    <g id="ytick_121">
+     <g id="line2d_154">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="410.113813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_154">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="411.709484" transform="rotate(-0 77.958281 411.709484)">ceramide</text>
+     </g>
+    </g>
+    <g id="ytick_122">
+     <g id="line2d_155">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="413.137813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_155">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="414.733484" transform="rotate(-0 77.958281 414.733484)">phosphatidylinositol</text>
+     </g>
+    </g>
+    <g id="ytick_123">
+     <g id="line2d_156">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="416.161813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_156">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="417.757484" transform="rotate(-0 77.958281 417.757484)">sphingomyelin</text>
+     </g>
+    </g>
+    <g id="ytick_124">
+     <g id="line2d_157">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="419.185813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_157">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="420.781484" transform="rotate(-0 77.958281 420.781484)">α-phosphatidylcholine</text>
+     </g>
+    </g>
+    <g id="ytick_125">
+     <g id="line2d_158">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="422.209813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_158">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="423.805484" transform="rotate(-0 77.958281 423.805484)">α-phosphatidylethanolamine</text>
+     </g>
+    </g>
+    <g id="ytick_126">
+     <g id="line2d_159">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="425.233813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_159">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="426.829484" transform="rotate(-0 77.958281 426.829484)">amylopectin</text>
+     </g>
+    </g>
+    <g id="ytick_127">
+     <g id="line2d_160">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="428.257813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_160">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="429.853484" transform="rotate(-0 77.958281 429.853484)">amylose</text>
+     </g>
+    </g>
+    <g id="ytick_128">
+     <g id="line2d_161">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="431.281813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_161">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="432.877484" transform="rotate(-0 77.958281 432.877484)">cellulose</text>
+     </g>
+    </g>
+    <g id="ytick_129">
+     <g id="line2d_162">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="434.305813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_162">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="435.901484" transform="rotate(-0 77.958281 435.901484)">chitin</text>
+     </g>
+    </g>
+    <g id="ytick_130">
+     <g id="line2d_163">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="437.329813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_163">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="438.925484" transform="rotate(-0 77.958281 438.925484)">glycogen</text>
+     </g>
+    </g>
+    <g id="ytick_131">
+     <g id="line2d_164">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="440.353813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_164">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="441.949484" transform="rotate(-0 77.958281 441.949484)">adenine</text>
+     </g>
+    </g>
+    <g id="ytick_132">
+     <g id="line2d_165">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="443.377813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_165">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="444.973484" transform="rotate(-0 77.958281 444.973484)">guanine</text>
+     </g>
+    </g>
+    <g id="ytick_133">
+     <g id="line2d_166">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="446.401813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_166">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="447.997484" transform="rotate(-0 77.958281 447.997484)">hypoxanthine</text>
+     </g>
+    </g>
+    <g id="ytick_134">
+     <g id="line2d_167">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="449.425813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_167">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="451.021484" transform="rotate(-0 77.958281 451.021484)">urate</text>
+     </g>
+    </g>
+    <g id="ytick_135">
+     <g id="line2d_168">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="452.449813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_168">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="454.045484" transform="rotate(-0 77.958281 454.045484)">xanthine</text>
+     </g>
+    </g>
+    <g id="ytick_136">
+     <g id="line2d_169">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="455.473813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_169">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="457.069484" transform="rotate(-0 77.958281 457.069484)">cytosine</text>
+     </g>
+    </g>
+    <g id="ytick_137">
+     <g id="line2d_170">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="458.497813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_170">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="460.093484" transform="rotate(-0 77.958281 460.093484)">thymine</text>
+     </g>
+    </g>
+    <g id="ytick_138">
+     <g id="line2d_171">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="461.521813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_171">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="463.117484" transform="rotate(-0 77.958281 463.117484)">uracil</text>
+     </g>
+    </g>
+    <g id="ytick_139">
+     <g id="line2d_172">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="464.545813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_172">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="466.141484" transform="rotate(-0 77.958281 466.141484)">creatinine</text>
+     </g>
+    </g>
+    <g id="ytick_140">
+     <g id="line2d_173">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="467.569813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_173">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="469.165484" transform="rotate(-0 77.958281 469.165484)">urea</text>
+     </g>
+    </g>
+    <g id="ytick_141">
+     <g id="line2d_174">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="470.593813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_174">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="472.189484" transform="rotate(-0 77.958281 472.189484)">cholesterol</text>
+     </g>
+    </g>
+    <g id="ytick_142">
+     <g id="line2d_175">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="473.617813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_175">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="475.213484" transform="rotate(-0 77.958281 475.213484)">cholesteryl linoleate</text>
+     </g>
+    </g>
+    <g id="ytick_143">
+     <g id="line2d_176">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="476.641813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_176">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="478.237484" transform="rotate(-0 77.958281 478.237484)">cholesteryl oleate</text>
+     </g>
+    </g>
+    <g id="ytick_144">
+     <g id="line2d_177">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="479.665813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_177">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="481.261484" transform="rotate(-0 77.958281 481.261484)">cholesteryl palmitate</text>
+     </g>
+    </g>
+    <g id="ytick_145">
+     <g id="line2d_178">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="482.689813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_178">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="484.285484" transform="rotate(-0 77.958281 484.285484)">cholesteryl stearate</text>
+     </g>
+    </g>
+    <g id="ytick_146">
+     <g id="line2d_179">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="485.713813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_179">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="487.309484" transform="rotate(-0 77.958281 487.309484)">diethylstilbestrol</text>
+     </g>
+    </g>
+    <g id="ytick_147">
+     <g id="line2d_180">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="488.737813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_180">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="490.333484" transform="rotate(-0 77.958281 490.333484)">estradiol</text>
+     </g>
+    </g>
+    <g id="ytick_148">
+     <g id="line2d_181">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="491.761813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_181">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="493.357484" transform="rotate(-0 77.958281 493.357484)">estriol</text>
+     </g>
+    </g>
+    <g id="ytick_149">
+     <g id="line2d_182">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="494.785813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_182">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="496.381484" transform="rotate(-0 77.958281 496.381484)">estrone</text>
+     </g>
+    </g>
+    <g id="ytick_150">
+     <g id="line2d_183">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="497.809813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_183">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="499.405484" transform="rotate(-0 77.958281 499.405484)">ethinylestradiol</text>
+     </g>
+    </g>
+    <g id="ytick_151">
+     <g id="line2d_184">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="500.833813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_184">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="502.429484" transform="rotate(-0 77.958281 502.429484)">acetyl-coa</text>
+     </g>
+    </g>
+    <g id="ytick_152">
+     <g id="line2d_185">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="503.857813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_185">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="505.453484" transform="rotate(-0 77.958281 505.453484)">coenzyme a</text>
+     </g>
+    </g>
+    <g id="ytick_153">
+     <g id="line2d_186">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="506.881813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_186">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="508.477484" transform="rotate(-0 77.958281 508.477484)">ergothioneine</text>
+     </g>
+    </g>
+    <g id="ytick_154">
+     <g id="line2d_187">
+      <g>
+       <use xlink:href="#mc692870670" x="84.958281" y="509.905813" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_187">
+      <text style="font-size: 4.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="77.958281" y="511.501484" transform="rotate(-0 77.958281 511.501484)">glutathione</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_188">
+    <path d="M 103.896463 511.417813 
+L 103.896463 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_189">
+    <path d="M 160.711009 511.417813 
+L 160.711009 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_190">
+    <path d="M 198.587372 511.417813 
+L 198.587372 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_191">
+    <path d="M 236.463736 511.417813 
+L 236.463736 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_192">
+    <path d="M 331.154645 511.417813 
+L 331.154645 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_193">
+    <path d="M 425.845554 511.417813 
+L 425.845554 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_194">
+    <path d="M 444.783736 511.417813 
+L 444.783736 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_195">
+    <path d="M 482.660099 511.417813 
+L 482.660099 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_196">
+    <path d="M 501.598281 511.417813 
+L 501.598281 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_197">
+    <path d="M 539.474645 511.417813 
+L 539.474645 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_198">
+    <path d="M 558.412827 511.417813 
+L 558.412827 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_199">
+    <path d="M 596.28919 511.417813 
+L 596.28919 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_200">
+    <path d="M 615.227372 511.417813 
+L 615.227372 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_201">
+    <path d="M 634.165554 511.417813 
+L 634.165554 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_202">
+    <path d="M 672.041918 511.417813 
+L 672.041918 45.721813 
+" clip-path="url(#p1a30313f05)" style="fill: none; stroke: #b91c1c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 84.958281 511.417813 
+L 84.958281 45.721812 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 709.918281 511.417813 
+L 709.918281 45.721812 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 84.958281 511.417813 
+L 709.918281 511.417813 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 84.958281 45.721813 
+L 709.918281 45.721813 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_188">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(84.958281 21.318281)">6 — Molecule × LSM participation, blocked by chemistry class</text>
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(84.958281 33.721813)">red lines separate independent class-local fits — no motif spans a boundary</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1a30313f05">
+   <rect x="84.958281" y="45.721813" width="624.96" height="465.696"/>
+  </clipPath>
+ </defs>
+</svg>

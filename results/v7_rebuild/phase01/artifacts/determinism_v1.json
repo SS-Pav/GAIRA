@@ -1,9 +1,8 @@
 {
-  "n_runs": 3,
+  "note": "class-local NMF uses a FIXED seed schedule; the reference fit is seed 0",
   "signatures": [
-    "038165b1421d36729a36fab97322c2ee",
-    "038165b1421d36729a36fab97322c2ee",
-    "038165b1421d36729a36fab97322c2ee"
+    "1e8bbeb17f4c07e378ca284f1c220c62",
+    "1e8bbeb17f4c07e378ca284f1c220c62"
   ],
   "identical": true
 }

@@ -1,0 +1,155 @@
+canonical_id,fine_class,broad_class,old_family
+(+)-arabinose,mono_oligosaccharide,carbohydrate,saccharide
+(+)-fucose,mono_oligosaccharide,carbohydrate,saccharide
+(+)-galactosamine,mono_oligosaccharide,carbohydrate,saccharide
+(+)-galactose,mono_oligosaccharide,carbohydrate,saccharide
+(+)-glucose,mono_oligosaccharide,carbohydrate,saccharide
+(+)-lactose,mono_oligosaccharide,carbohydrate,saccharide
+(+)-maltose,mono_oligosaccharide,carbohydrate,saccharide
+(+)-mannose,mono_oligosaccharide,carbohydrate,saccharide
+(+)-raffinose pentahydrate,mono_oligosaccharide,carbohydrate,saccharide
+(+)-sucrose,mono_oligosaccharide,carbohydrate,saccharide
+(+)-trehalose,mono_oligosaccharide,carbohydrate,saccharide
+(+)-xylose,mono_oligosaccharide,carbohydrate,saccharide
+(-)-arabinose,mono_oligosaccharide,carbohydrate,saccharide
+(-)-fructose,mono_oligosaccharide,carbohydrate,saccharide
+(-)-ribose,mono_oligosaccharide,carbohydrate,saccharide
+12-methyltetradecanoic acid,fatty_acid,lipid,fatty_acid
+13-methylmyristicacid,fatty_acid,lipid,fatty_acid
+14-methylhexadecanoic acid,fatty_acid,lipid,fatty_acid
+14-methylpentadecanoic acid,fatty_acid,lipid,fatty_acid
+15-methylpalmiticacid,fatty_acid,lipid,fatty_acid
+2-deoxy-d-ribose,mono_oligosaccharide,carbohydrate,saccharide
+a-dna,nucleic_acid_polymer,nucleic,nucleic_acid
+acetoacetate,carboxylic_acid_metabolite,energy_metabolism,organic_acid
+acetyl-coa,sulfur_thiol_cofactor,redox_cofactor,cofactor
+adenine,purine,nucleic,purine
+alanine,free_amino_acid,protein_amino_acid,amino_acid
+albumin,peptide_protein,protein_amino_acid,protein
+amylopectin,polysaccharide,carbohydrate,polysaccharide
+amylose,polysaccharide,carbohydrate,polysaccharide
+arachidic acid,fatty_acid,lipid,fatty_acid
+arachidonic acid,fatty_acid,lipid,fatty_acid
+arginine,free_amino_acid,protein_amino_acid,amino_acid
+ascorbate,carboxylic_acid_metabolite,energy_metabolism,organic_acid
+asparagine,free_amino_acid,protein_amino_acid,amino_acid
+aspartate,free_amino_acid,protein_amino_acid,organic_acid
+b-dna,nucleic_acid_polymer,nucleic,nucleic_acid
+carbonic anhydrase,peptide_protein,protein_amino_acid,protein
+carotene,chromophore_pigment,redox_cofactor,carotenoid
+cellulose,polysaccharide,carbohydrate,polysaccharide
+ceramide,phospholipid_sphingolipid,lipid,phospholipid
+chitin,polysaccharide,carbohydrate,polysaccharide
+cholesterol,sterol_steroid,lipid,lipid
+cholesteryl linoleate,sterol_steroid,lipid,sterol
+cholesteryl oleate,sterol_steroid,lipid,sterol
+cholesteryl palmitate,sterol_steroid,lipid,sterol
+cholesteryl stearate,sterol_steroid,lipid,sterol
+citrate,carboxylic_acid_metabolite,energy_metabolism,organic_acid
+coenzyme a,sulfur_thiol_cofactor,redox_cofactor,cofactor
+collagen,peptide_protein,protein_amino_acid,protein
+creatinine,small_nitrogenous,energy_metabolism,small_nitrogenous
+cysteine,free_amino_acid,protein_amino_acid,amino_acid
+cytochrome c,peptide_protein,protein_amino_acid,protein
+cytosine,pyrimidine,nucleic,pyrimidine
+diethylstilbestrol,sterol_steroid,lipid,sterol
+elaidic acid,fatty_acid,lipid,organic_acid
+elastase,peptide_protein,protein_amino_acid,protein
+elastin,peptide_protein,protein_amino_acid,protein
+ergothioneine,sulfur_thiol_cofactor,redox_cofactor,cofactor
+estradiol,sterol_steroid,lipid,sterol
+estriol,sterol_steroid,lipid,sterol
+estrone,sterol_steroid,lipid,sterol
+ethinylestradiol,sterol_steroid,lipid,sterol
+ferritin,peptide_protein,protein_amino_acid,protein
+fructose-6-phosphate,phosphate_metabolite,energy_metabolism,saccharide
+fumarate,carboxylic_acid_metabolite,energy_metabolism,organic_acid
+glucosamine,mono_oligosaccharide,carbohydrate,saccharide
+glucose oxidase,peptide_protein,protein_amino_acid,protein
+glutamate,free_amino_acid,protein_amino_acid,amino_acid
+glutathione,sulfur_thiol_cofactor,redox_cofactor,cofactor
+glutathione transferase,peptide_protein,protein_amino_acid,protein
+glycerol,mono_oligosaccharide,carbohydrate,polyol
+glycine,free_amino_acid,protein_amino_acid,amino_acid
+glycogen,polysaccharide,carbohydrate,polysaccharide
+guanine,purine,nucleic,purine
+hemoglobin,peptide_protein,protein_amino_acid,protein
+histidine,free_amino_acid,protein_amino_acid,amino_acid
+horseradish peroxidase,peptide_protein,protein_amino_acid,protein
+hydroxyproline,free_amino_acid,protein_amino_acid,amino_acid
+hypoxanthine,purine,nucleic,purine
+insulin,peptide_protein,protein_amino_acid,protein
+isoleucine,free_amino_acid,protein_amino_acid,amino_acid
+keratin,peptide_protein,protein_amino_acid,protein
+lactalbumin,peptide_protein,protein_amino_acid,protein
+lactate,carboxylic_acid_metabolite,energy_metabolism,organic_acid
+lauric acid,fatty_acid,lipid,fatty_acid
+lectin,peptide_protein,protein_amino_acid,protein
+leucine,free_amino_acid,protein_amino_acid,amino_acid
+linoleic acid,fatty_acid,lipid,fatty_acid
+major proteinase,peptide_protein,protein_amino_acid,protein
+malic acid,carboxylic_acid_metabolite,energy_metabolism,organic_acid
+melanin,chromophore_pigment,redox_cofactor,unknown
+methionine,free_amino_acid,protein_amino_acid,amino_acid
+myoglobin,peptide_protein,protein_amino_acid,protein
+myristic acid,fatty_acid,lipid,fatty_acid
+n-acetylglucosamine,mono_oligosaccharide,carbohydrate,saccharide
+oleate,fatty_acid,lipid,lipid
+palmitic acid,fatty_acid,lipid,fatty_acid
+palmitoleic acid,fatty_acid,lipid,organic_acid
+papain,peptide_protein,protein_amino_acid,protein
+pepsin,peptide_protein,protein_amino_acid,protein
+pepsinogen,peptide_protein,protein_amino_acid,protein
+phenylalanine,free_amino_acid,protein_amino_acid,amino_acid
+phosphate,phosphate_metabolite,energy_metabolism,organic_acid
+phosphatidylinositol,phospholipid_sphingolipid,lipid,lipid
+phosphoenolpyruvate,phosphate_metabolite,energy_metabolism,organic_acid
+proline,free_amino_acid,protein_amino_acid,amino_acid
+pyruvate,carboxylic_acid_metabolite,energy_metabolism,organic_acid
+riboflavin,chromophore_pigment,redox_cofactor,cofactor
+serine,free_amino_acid,protein_amino_acid,amino_acid
+sphingomyelin,phospholipid_sphingolipid,lipid,phospholipid
+stearate,fatty_acid,lipid,lipid
+succinic acid,carboxylic_acid_metabolite,energy_metabolism,organic_acid
+superoxide dismutases,peptide_protein,protein_amino_acid,protein
+t-rna,nucleic_acid_polymer,nucleic,nucleic_acid
+thaumatin,peptide_protein,protein_amino_acid,protein
+thymine,pyrimidine,nucleic,pyrimidine
+tri-11-eicosenoin,acylglycerol,lipid,unknown
+triarachidin,acylglycerol,lipid,triglyceride
+tribehenin,acylglycerol,lipid,triglyceride
+tricaprin,acylglycerol,lipid,triglyceride
+tricaproin,acylglycerol,lipid,triglyceride
+tricaprylin,acylglycerol,lipid,triglyceride
+trielaidin,acylglycerol,lipid,triglyceride
+trierucin,acylglycerol,lipid,triglyceride
+trilaurin,acylglycerol,lipid,triglyceride
+trilinolein,acylglycerol,lipid,triglyceride
+trilinolenin,acylglycerol,lipid,triglyceride
+trimyristin,acylglycerol,lipid,triglyceride
+triolein,acylglycerol,lipid,lipid
+triosephosphate isomerase,peptide_protein,protein_amino_acid,protein
+tripalmitin,acylglycerol,lipid,triglyceride
+tripalmitolein,acylglycerol,lipid,triglyceride
+tripetroselinin,acylglycerol,lipid,triglyceride
+tristearin,acylglycerol,lipid,triglyceride
+trypsin,peptide_protein,protein_amino_acid,protein
+trypsin inhibitor,peptide_protein,protein_amino_acid,protein
+trypsinogen,peptide_protein,protein_amino_acid,protein
+tryptophan,free_amino_acid,protein_amino_acid,amino_acid
+tubulin,peptide_protein,protein_amino_acid,protein
+tyrosine,free_amino_acid,protein_amino_acid,amino_acid
+ubiquitin,peptide_protein,protein_amino_acid,protein
+uracil,pyrimidine,nucleic,pyrimidine
+urate,purine,nucleic,purine
+urea,small_nitrogenous,energy_metabolism,small_nitrogenous
+vaccenic acid,fatty_acid,lipid,organic_acid
+valine,free_amino_acid,protein_amino_acid,amino_acid
+xanthine,purine,nucleic,purine
+xylanase,peptide_protein,protein_amino_acid,protein
+α-chymotrypsinogen a (type ii),peptide_protein,protein_amino_acid,protein
+α-linolenic acid,fatty_acid,lipid,fatty_acid
+α-phosphatidylcholine,phospholipid_sphingolipid,lipid,unknown
+α-phosphatidylethanolamine,phospholipid_sphingolipid,lipid,unknown
+β-carotene,chromophore_pigment,redox_cofactor,carotenoid
+β-d-glucose,mono_oligosaccharide,carbohydrate,saccharide

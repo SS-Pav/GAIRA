@@ -1,12 +1,16 @@
-# GAIRA V7 — Phase 01 Report
-## Local Spectral Motif discovery (Strategy A)
+# GAIRA V7 — Phase 01 Report (CANONICAL)
+## Balanced references → class-local NMF → Local Spectral Motifs
 
-**Branch** `gaira-v7-rebuild` · **Status** COMPLETE · **Gates** 9/9 PASS · **Tests** 47 passed
+**Branch** `gaira-v7-rebuild` · **Status** COMPLETE · **Architecture compliance 18/18 PASS** ·
+**Gates** 8/8 PASS · **Tests** 57 passed
 
-**Atlas fingerprint before and after: `09ed804a40836f4a05a91ba10900cded` — unchanged, max
-element-wise difference 0.0.**
+**Atlas fingerprint before and after: `09ed804a40836f4a05a91ba10900cded` — unchanged, and the
+atlas is not an input to any step (P-15).**
 
-Reproduce:
+This report supersedes the phase previously numbered 01, which implemented a different
+architecture and is now preserved as
+[a control experiment](../../control_experiments/frozen_atlas_decomposition/reports/CONTROL_EXPERIMENT_frozen_atlas_decomposition.md).
+See [`ARCHITECTURE_COMPLIANCE_AUDIT.md`](../../../../GAIRA_v7_rebuild/context/ARCHITECTURE_COMPLIANCE_AUDIT.md).
 
 ```bash
 export GAIRA_DATA_ROOT=/path/to/GAIRA_DATA/raw
@@ -19,436 +23,337 @@ pytest tests/test_v7_phase01.py
 
 ## 1. Executive summary
 
-The frozen atlas projects spectra onto 24 broad latent components, and Phase 00 confirmed
-those components are stable but chemically impure — only 3 of 24 reach purity ≥ 0.5. Phase 01
-asks whether that impurity is *resolvable without touching the atlas*: can each component be
-decomposed, deterministically and without fitting anything, into reusable spectral
-substructures that carry distinguishable chemistry?
-
-**It largely can, but unevenly, and the exceptions matter.**
+Phase 01 implements the approved architecture end to end: balanced canonical references, split
+by chemistry class, each class fitted by its **own independent NMF** with an adaptive `k_c`.
+The output is 33 Local Spectral Motifs — rows of the class-local `H_c`, newly fitted basis
+vectors that owe nothing to the frozen atlas.
 
 | | |
 |---|---:|
-| Retained Local Spectral Motifs | **98** (of 128 candidates; 30 rejected with reasons) |
-| Components decomposed | **23 of 24** |
-| Components irreducible | 1 (c12) |
-| Components aligning with chemistry beyond a permutation null (p<0.05) | **23 of 23** |
-| Components whose purity beats a **size-matched random partition** | **22 of 23** |
-| Median purity gain beyond mechanical | **+0.145** |
-| Median raw purity gain over the whole component | +0.223 |
-| Molecule coverage | **100%** (154/154), 6.5 motifs per molecule |
-| Max off-diagonal motif cosine | 0.844 (no near-duplicates) |
-| Determinism | 3 independent runs → identical motif spectra |
-| Attribution conservation error | **2.2 × 10⁻¹⁶** (machine epsilon) |
+| Reference arms compared | **8** (control A included) |
+| Selected arm | `B_analyte_weighted` |
+| **Molecule weight ratio: control → selected** | **7.0 → 1.00** |
+| Effective class Gini: control → selected | 0.4605 → 0.4310 |
+| Chemistry classes fitted independently | **16** |
+| Local Spectral Motifs retained | **33** (0 rejected) |
+| `k_c` values selected | **{1, 2, 3, 5}** — no global k |
+| **Capacity per molecule: rare classes vs dense** | **0.389 vs 0.154** (V5 would give 0.156 to both) |
+| Mean recurrence stability | 0.977 (min 0.833) |
+| Class-local explained variance | 0.54 – 0.94 (mean 0.757) |
+| Determinism | identical registry across runs |
 
-**The honest qualifier.** The layer resolves protein, saccharide and sterol chemistry well —
-several motifs reach purity 1.00 with textbook band assignments. It **fails on the nucleic
-chemistry the brief explicitly named**: purines yield one motif at purity 0.33 and pyrimidines
-yield none at all. Acylglycerols (max purity 0.40) and organic acids (0.50) are also weak.
-See §5.
+**The headline result is the capacity reallocation.** Under the V5 global fit, every class
+received decomposition capacity in proportion to its size — a flat 0.156 components per
+molecule. Under class-local fitting, rare chemistry receives **2.5× more capacity per molecule
+than dense chemistry** (0.389 vs 0.154). Pyrimidine, with 3 molecules, gets a dedicated basis
+vector it could never have won in a global competition against 30 proteins. That is
+limitation L-01 corrected at the mechanism, not merely described.
+
+**What this phase does not show.** No downstream benefit is demonstrated. Phase 01 produces a
+dictionary; whether it improves retrieval, the BSV, or anything a user sees is a Phase 02+
+question and is not asserted here.
 
 ---
 
-## 2. Divergence from the architecture documents — read this first
+## 2. Architecture compliance
 
-The V7 architecture documents and this phase use the term "LSM" for **two different objects**,
-and conflating them would corrupt the plan.
+The gate opens only if every row passes.
 
-| | `LEARNING_MODE_ARCHITECTURE.md` (plan Phase 02) | This phase (Strategy A) |
-|---|---|---|
-| Construction | row of `H_c` from a **class-local NMF** over balanced references | **deterministic decomposition of a frozen atlas component** |
-| Fits anything? | yes — NMF per chemical class | **no** — motifs are masked restrictions of existing components |
-| Touches the atlas? | produces a replacement basis | **no** — atlas, projection and fingerprint unchanged |
-| Depends on Phase 01 balanced references? | yes | no |
+| # | Specification item | Implemented | Evidence | Status |
+|---:|---|:--:|---|:--:|
+| 1 | Input is balanced canonical references, NOT the frozen atlas | ✅ | arm `B_analyte_weighted` from an 8-arm comparison; atlas loaded for verification only | **PASS** |
+| 2 | All 8 reference-construction arms compared | ✅ | A, B, B-uniform, C-mean/median/trimmed/medoid/quality | **PASS** |
+| 3 | Control arm A included and reported honestly | ✅ | control present; `control_wins = false`, recorded | **PASS** |
+| 4 | Replicated-analyte and multi-excitation stratifications | ✅ | both fidelity columns in `reference_arm_comparison_v1.csv` | **PASS** |
+| 5 | B-uniform sensitivity arm reported | ✅ | present; identical to B on this corpus | **PASS** |
+| 6 | References split into independent per-class datasets | ✅ | 16 class blocks | **PASS** |
+| 7 | Independent class-local NMF, no global competition | ✅ | 16 classes each fitted alone | **PASS** |
+| 8 | Adaptive `k_c` — no hard-coded global k | ✅ | `k_c ∈ {1, 2, 3, 5}` | **PASS** |
+| 9 | `k_c ≤ ⌊n_analytes/2⌋` for every class | ✅ | ceiling respected everywhere | **PASS** |
+| 10 | `k_c` by the pre-registered smallest-on-plateau rule | ✅ | rule recorded per class in `kc_selection_v1.csv` | **PASS** |
+| 11 | Repeated fits + Hungarian alignment + recurrence | ✅ | 12 repeats per (class, k), analyte-level resampling | **PASS** |
+| 12 | LSM typing: class-shared / subfamily / molecule-discriminating | ✅ | 26 class-shared, 7 subfamily | **PASS** |
+| 13 | Anchor route for classes below the size floor (Strategy F) | ✅ | implemented and tested; **not triggered** — see §7 | **PASS** |
+| 14 | Per-class source/excitation composition (R-16) | ✅ | 4 classes flagged source-confounded | **PASS** |
+| 15 | Class-prior bias tested (R-01) | ✅ | 6 classes flagged prior-dominated | **PASS** |
+| 16 | One LSM dictionary per CLASS (contract C-05) | ✅ | class-indexed registry; ids are `<class>.mNN` | **PASS** |
+| 17 | No cross-class clustering (that is Phase 02) | ✅ | no similarity graph, no consensus step | **PASS** |
+| 18 | Frozen atlas unchanged and not an input (P-15) | ✅ | fingerprint identical; enforced by a static test | **PASS** |
 
-The brief for this phase is explicit and repeated — "LSMs are NOT new atlas components… they
-are deterministic decompositions of individual atlas components" — so that is what was built.
-It is a lower-risk, learning-free probe of the same underlying question (L-02: are the
-components chemically resolvable?) and it answers that question without spending the rebuild.
+**18 / 18 PASS.**
 
-**Two consequences that need a decision before Phase 02:**
-
-1. The plan's Phase 01 was *balanced reference construction*; that has **not** been done, and
-   the plan documents still describe it as the next step. The rebuild plan and the phase
-   numbering are now out of step with what exists on disk.
-2. If the class-local-NMF LSM is still wanted later, it needs a different name, or this
-   layer does — otherwise `lsm_registry_v1.csv` and the architecture's `H_c` rows will collide
-   in every downstream document.
-
-Recorded here rather than silently reconciled. Recommended resolution in §9.
+Item 18 is enforced mechanically:
+`test_frozen_atlas_is_not_an_input_to_the_lsm_package` parses each LSM module, strips
+docstrings, and fails if the executable code references the frozen basis at all.
+`test_lsms_are_not_bounded_by_the_frozen_atlas` checks the mathematical signature: an atlas
+decomposition satisfies `0 ≤ m ≤ h_k` pointwise, a class-local fit does not.
 
 ---
 
 ## 3. Methods
 
-### The idea
+### Stage 1 — balanced reference construction
 
-An atlas component `h_k` is a single vector, so on its own it cannot tell you whether it is
-chemically pure. The information lives in the **analytes that activate it**: if `h_k` carries
-one substructure, every analyte activating it should show all of its bands in the same
-proportions; if it is being asked to explain two chemistries, some analytes show one
-sub-pattern of its bands and others another.
+Eight arms, evaluated on class balance, band fidelity and replicate stability, with the two
+mandatory stratifications (88 replicated molecules, 45 multi-excitation molecules).
 
-### The pipeline (every step deterministic)
+| Arm | rows | class Gini | molecule weight ratio | band fidelity | replicate stability |
+|---|---:|---:|---:|---:|---:|
+| **A_all_spectra** (control = V5) | 375 | 0.4605 | **7.00** | 0.98615 | 0.945 |
+| **B_analyte_weighted** ← selected | 375 | **0.4310** | **1.00** | 0.98615 | 0.945 |
+| B_uniform | 375 | 0.4310 | 1.00 | 0.98615 | 0.945 |
+| C_mean | 154 | 0.4310 | 1.00 | 0.98615 | 1.000 |
+| C_median | 154 | 0.4310 | 1.00 | 0.97933 | 1.000 |
+| C_trimmed | 154 | 0.4310 | 1.00 | 0.98386 | 1.000 |
+| C_medoid | 154 | 0.4310 | 1.00 | 0.97334 | 1.000 |
+| C_quality | 154 | 0.4310 | 1.00 | 0.98585 | 1.000 |
 
-| Step | Operation | Parameter |
-|---|---|---|
-| 1 Bands | peaks of `h_k` | prominence ≥ 5% of max; window ±4 bins (±8 cm⁻¹) |
-| 2 Participants | canonical molecules whose share of their own total activation ≥ τ | τ = 0.03; ≥10 participants and ≥4 bands or the component is not analysable |
-| 3 Profile | observed mass of each molecule inside each band, normalised to unit sum | — |
-| 4 Cluster | hierarchical linkage; cut by silhouette on cosine distance | `n_motifs ∈ [2, min(9, n−1)]`; **1 is admissible** |
-| 5 Score | stability (jackknife), purity, coverage, band fidelity, redundancy | — |
-| 6 Reject | deterministic reasons | <3 molecules · <2 bands · stability <0.50 · cosine ≥0.98 |
+**Pre-registered rule:** maximise class balance subject to band fidelity within 0.02 of the
+control. All eight arms are admissible on fidelity; B wins on balance while retaining every
+measured spectrum.
 
-Motif spectra are **masked restrictions of the parent**: exactly zero outside the motif's
-bands, and never exceeding the parent anywhere. This is enforced by test, not by convention.
+Three honest observations:
 
-### No RNG on the discovery path
+- **B and B-uniform are identical** on this corpus. Phase 00 predicted exactly this: within-
+  molecule quality spread has median 0.034, so quality weighting has almost nothing to act on.
+  The prediction was recorded before the run and is confirmed.
+- **The C-family scores replicate stability 1.000 by construction** — one row per molecule
+  means there is nothing to disagree. That is not a merit and is not read as one. Their
+  discarded within-molecule variance is retained in `discarded_variance_v1.csv`.
+- **Balancing removes molecule dominance completely (7.0 → 1.00) but only dents class
+  dominance (0.4605 → 0.4310).** The residual is pure class-size imbalance — 30 protein
+  molecules against 2 small-nitrogenous — which no reweighting of rows can fix. Only Stage 2
+  can, and that is precisely why the architecture has both stages.
 
-Stability is a **jackknife** (leave-one-molecule-out re-clustering), not a bootstrap,
-specifically so discovery contains no random number generator at all. A test greps
-`discovery.py` and `clustering.py` for `np.random`, `default_rng` and `RandomState` and fails
-if any appears. The only randomness in Phase 01 is in the seeded evaluation permutation tests,
-which never feed back into discovery.
+### Stage 2 — independent class-local NMF
 
-### Three pre-registered selection rules, all published either way
+For each class: `X_c ≈ W_c H_c`, fitted alone. `k_c` swept over `[1, ⌊n_c/2⌋]`, scored on a
+six-criterion composite computed **without any chemical label**, then selected by the
+pre-registered **smallest-k on the contiguous Pareto plateau**.
 
-**Chemistry is used only in evaluation.** No class label touches band definition, profile
-construction, linkage choice or cut choice. If class labels had chosen the cut, "motifs align
-with chemistry" would be circular and unfalsifiable.
-
-| Choice | Candidates | Selected | Evidence |
-|---|---|---|---|
-| Profile | raw observed band mass · attribution-weighted | **raw** | mean AMI 0.324 vs 0.092; 23 vs 19 components decomposed |
-| Linkage | average · ward · complete | **ward** | balance-constrained silhouette rule (below) |
-| Motif spectrum | discriminative · representative | **discriminative** | 0 vs 25 motif pairs above cosine 0.9 |
-
-**The linkage rule**, fixed before the run: *lowest mean size Gini among linkages within 0.05
-mean silhouette of the best*. Silhouette differences of a few hundredths are not meaningful,
-whereas a motif set in which one motif absorbs most participating molecules has peeled off
-outliers rather than decomposed the component.
-
-| Linkage | mean silhouette | mean size Gini | mean max-motif share |
-|---|---:|---:|---:|
-| average | **0.4552** | 0.4274 | 0.6027 |
-| **ward** | 0.4262 | **0.2935** | **0.4512** |
-| complete | 0.4472 | 0.3576 | 0.4860 |
-
-Ward is within 0.03 of the best silhouette and is markedly more balanced. It also happens to
-have the highest AMI — reported as *corroboration*, never as the selection criterion.
+Stability: 12 repeated fits per `(class, k)` with analyte-level resampling (never replicate
+resampling — that leaks within-molecule structure), Hungarian-aligned on cosine, scored by
+recurrence. Retention threshold 0.60.
 
 ---
 
-## 4. Implementation
+## 4. Three method defects found and fixed during this phase
 
-`src/gaira/v7/lsm/` — a new subpackage. Nothing under `src/gaira/engine/`,
-`src/gaira/preprocessing/` or any V5/V6 module was touched.
+All three were found by inspecting the sweep output rather than by the pipeline failing, and
+all three would have silently produced the wrong answer.
 
-| Module | Responsibility |
-|---|---|
-| `motif.py` | the `LSM` and `Band` objects, structural invariants, motif-spectrum construction |
-| `clustering.py` | deterministic linkage, cut selection, jackknife stability, the pre-registered rules |
-| `discovery.py` | bands → participants → profiles → clusters → scores → rejection |
-| `registry.py` | queryable index; keeps **rejected** motifs with their reasons |
-| `matching.py` | interpretation path — splits an atlas activation across a component's motifs |
-| `serialization.py` | canonicalised save/load + registry fingerprint |
-| `validation.py` | chemical alignment, ambiguity resolution, nulls, redundancy, coverage, reproducibility, determinism |
-| `visualization.py` | plotting primitives |
+**1. `activation_sparsity` returned its maximum at k=1.** With one motif every molecule uses
+that motif — there is *no* selectivity — but the function returned 1.0, the best possible
+score. Combined with `redundancy = 0` (also free at k=1), two of six criteria were maximal by
+definition at k=1 and "do not decompose" won in every class. First run: 17 LSMs, `k_c ∈ {1,2}`.
+Fixed to return 0.0. **This is the difference between concluding "chemistry classes are
+spectrally homogeneous" and measuring that they are not.**
 
-### The interpretation path conserves atlas evidence exactly
+**2. `residual_structure` rose as the fit improved.** It counted peaks in the residual
+normalised by the residual's own maximum, so as the residual shrank toward noise its
+*relative* peakiness increased — penalising exactly the `k` values it should have rewarded.
+Replaced with absolute unexplained energy at each molecule's own diagnostic bands, which falls
+monotonically. Pinned by `test_residual_structure_falls_as_the_fit_improves`.
 
-```
-spectrum → canonical preprocessing → NNLS onto the FROZEN 24 components   [unchanged]
-                                              ↓  w_k
-                    motif attribution: which substructure of k is this w_k carrying?
-```
+**3. "Plateau" was read literally and was not contiguous.** For `mono_oligosaccharide` the
+composite peaked at k=9 while k=1 also fell within tolerance, and k=2–4 did not. The literal
+rule — "smallest k within tolerance of the maximum" — selected k=1 for a 20-molecule class.
+A plateau must be the *contiguous run containing the maximum*; clarified, documented in the
+function, and pinned by `test_select_k_uses_the_contiguous_plateau`.
 
-Attribution **redistributes** an activation the atlas already produced; summed over a
-component's motifs it equals `w_k`. Measured across all 375 spectra: max conservation error
-**2.2 × 10⁻¹⁶**, unattributed evidence **0.0%**. Activation that matches no motif is returned
-under a reserved `_unattributed` key rather than silently dropped.
+A fourth criterion, **within-class retrieval**, was implemented, measured, and then **removed**:
+a fine chemistry class is by construction homogeneous at broad level, so it returned its
+uninformative constant for every class at every `k`. Carrying an inert term would have diluted
+the six that vary. Recorded rather than dropped silently.
 
 ---
 
-## 5. Validation
+## 5. Results
 
-### 5.1 Does the motif layer resolve chemical ambiguity? — the central question
+### 5.1 Adaptive `k_c` and per-class decomposition
 
-Two nulls, because raw purity is not evidence on its own: **purity rises mechanically as a set
-is cut into more pieces.**
+| Class | molecules | ceiling | `k_c` | LSMs | explained variance | mean stability | source-confounded |
+|---|---:|---:|---:|---:|---:|---:|:--:|
+| peptide_protein | 30 | 15 | 2 | 2 | 0.865 | 1.000 | ⚠ |
+| mono_oligosaccharide | 20 | 10 | **5** | 5 | 0.756 | 0.950 | |
+| free_amino_acid | 18 | 9 | **5** | 5 | 0.695 | 0.950 | |
+| acylglycerol | 17 | 8 | **1** | 1 | 0.814 | 1.000 | ⚠ |
+| fatty_acid | 17 | 8 | 2 | 2 | 0.848 | 1.000 | |
+| sterol_steroid | 10 | 5 | 2 | 2 | 0.824 | 1.000 | ⚠ |
+| carboxylic_acid_metabolite | 8 | 4 | 3 | 3 | 0.659 | 0.972 | |
+| phospholipid_sphingolipid | 5 | 2 | 2 | 2 | 0.940 | 0.958 | |
+| polysaccharide | 5 | 2 | 1 | 1 | 0.761 | 1.000 | |
+| purine | 5 | 2 | 2 | 2 | 0.671 | 0.958 | |
+| chromophore_pigment | 4 | 2 | 2 | 2 | 0.807 | 1.000 | |
+| sulfur_thiol_cofactor | 4 | 2 | 2 | 2 | 0.886 | 1.000 | |
+| nucleic_acid_polymer | 3 | 1 | 1 | 1 | 0.918 | 1.000 | ⚠ |
+| phosphate_metabolite | 3 | 1 | 1 | 1 | 0.579 | 1.000 | |
+| pyrimidine | 3 | 1 | 1 | 1 | 0.540 | 1.000 | |
+| small_nitrogenous | 2 | 1 | 1 | 1 | 0.545 | 1.000 | |
 
-- **Chemical alignment** — adjusted mutual information between motif membership and chemical
-  class, against a 1000-draw label permutation. AMI is chance-corrected by construction.
-- **Purity beyond mechanical** — observed size-weighted purity against a 500-draw
-  **size-matched random partition**: the same motif size profile, membership shuffled. This is
-  the direct analogue of Phase 00's size-matched random ontologies.
+`k_c` genuinely adapts and does **not** track class size: `mono_oligosaccharide` (20 molecules)
+takes 5 while `acylglycerol` (17) takes 1. That is chemically legible — the acylglycerols in
+this corpus are near-identical triacylglycerols, spectrally one substructure, whereas the
+saccharides span mono-, di- and amino-sugars.
 
-| Result | Value |
+### 5.2 Capacity reallocation — the central claim
+
+| | rare classes (n ≤ 5) | dense classes (n ≥ 17) |
+|---|---:|---:|
+| **V7 class-local** capacity per molecule | **0.389** | **0.154** |
+| V5 global (expected) | 0.156 | 0.156 |
+
+Under V5 every class received the same capacity per molecule by construction, because 24
+components were allocated against the whole corpus. Under V7 the allocation inverts: chemistry
+that is rare in the corpus receives more decomposition capacity per molecule, because it is no
+longer competing with chemistry that is abundant. **This is the mechanism V7 exists to
+install, measured working.**
+
+### 5.3 Quality
+
+| | value |
 |---|---|
-| Components aligned with chemistry (p < 0.05) | **23 of 23** decomposed |
-| Components above the size-matched purity null (p < 0.05) | **22 of 23** |
-| Median gain beyond mechanical | **+0.145** |
-| AMI range | 0.128 (c06) → 0.631 (c02) |
+| LSMs retained / rejected | 33 / 0 |
+| Recurrence stability | mean 0.977, min 0.833 (threshold 0.60) |
+| Activation sparsity | mean 0.275 |
+| Class-local explained variance | 0.54 – 0.94, mean 0.757 |
+| Typing | 26 class-shared, 7 subfamily, 0 molecule-discriminating |
 
-The strongest decompositions:
+Zero rejections is worth interrogating rather than celebrating: it means the `k_c` rule is
+conservative enough that every fitted component clears the stability bar. The pressure has
+moved from "reject bad motifs" to "choose the right `k_c`", which is where the specification
+puts it.
 
-| Component | classes present | purity whole → motifs | gain beyond mechanical | AMI |
-|---:|---:|---|---:|---:|
-| c17 | 13 | 0.22 → 0.68 | **+0.319** | 0.523 |
-| c15 | 9 | 0.35 → 0.72 | +0.279 | 0.557 |
-| c05 | 9 | 0.26 → 0.64 | +0.245 | 0.457 |
-| c13 | 14 | 0.12 → 0.53 | +0.232 | 0.504 |
-| c00 | 7 | 0.47 → 0.82 | +0.229 | 0.552 |
+**No molecule-discriminating LSMs emerged.** With `k_c ≤ 5` and the typing thresholds, motifs
+are either broadly shared or subfamily-level. The type exists in the schema and Phase 02 needs
+it; on this corpus, at this capacity, it is empty. Reported, not glossed.
 
-The weakest, and the one that does not clear the null:
+### 5.4 Risk checks
 
-| Component | purity whole → motifs | gain beyond mechanical | verdict |
-|---:|---|---:|---|
-| c04 | 0.25 → 0.30 | +0.041 | **not significant** |
-| c06 | 0.50 → 0.54 | +0.037 | marginal |
-| c12 | 0.28 → 0.29 | — | **IRREDUCIBLE** — no admissible cut survived rejection |
+**R-01 class-prior bias — 6 of 16 classes flagged** (`fatty_acid`, `peptide_protein`,
+`phospholipid_sphingolipid`, `purine`, `sterol_steroid`, `sulfur_thiol_cofactor`). All their
+retained LSMs are class-shared with near-uniform activation, meaning the fit found no internal
+structure and the class boundary is doing the work. For `peptide_protein` with 30 molecules
+and only 2 shared motifs this is a real limitation, not a curiosity: the specification's own
+diagnostic is telling us the partition may be carrying the decomposition.
 
-### 5.2 The chemistries the brief named
+**R-16 source confounding — 4 of 16 classes flagged**, unchanged from Phase 00
+(`peptide_protein` 94% RamanBioLib, `acylglycerol` 94%, `sterol_steroid` 91%,
+`nucleic_acid_polymer` 100%). Class-local fitting *increases* the exposure, because it removes
+the diluting effect of the rest of the corpus. Every LSM from these four classes should be
+treated as potentially modelling instrument response until Phase 02 tests it across sources.
 
-| Chemistry | motifs | best purity | verdict |
-|---|---:|---:|---|
-| peptide_protein | 20 | **1.00** | **resolved** |
-| mono_oligosaccharide | 27 | **1.00** | **resolved** |
-| sterol_steroid | 10 | **1.00** | **resolved** |
-| free_amino_acid | 10 | 0.83 | mostly resolved |
-| fatty_acid | 5 | 0.75 | partly resolved |
-| carboxylic_acid_metabolite | 5 | 0.50 | **weak** |
-| acylglycerol | 3 | 0.40 | **weak** |
-| **purine** | 1 | **0.33** | **not resolved** |
-| **pyrimidine** | **0** | — | **not resolved** |
+Three of the four source-confounded classes are also prior-dominated. That overlap is the most
+concerning single observation in this phase.
 
-Exemplar motifs, with their bands — these are chemically real, not statistical artefacts:
+---
 
-| Motif | n | purity | bands (cm⁻¹) | reading |
-|---|---:|---:|---|---|
-| `c02.m01` | 27 | 0.93 | 1000, 1240, 1336, 1456, 1676 | phenylalanine ring breathing (1000) + amide III (1240) + CH deformation (1456) + amide I (1676) — textbook protein Raman |
-| `c00.m00` | 12 | 1.00 | 754, 1224, 1318, 1348, 1456 | amide III envelope + CH deformation |
-| `c15.m00` | 11 | 1.00 | 1208, 1230, 1264, 1330, 1428, 1682 | amide III + amide I |
-| `c17.m08` | 7 | 1.00 | 532, 556, 1036, 1102, 1236, 1280 | saccharide C–O / C–C skeletal modes |
-| `c13.m05` | 4 | 1.00 | 702, 806, 1672 | 702 is a classic sterol/cholesterol ring band |
+## 6. Current V7 pipeline (P-17)
 
-**Why purines and pyrimidines fail is structural, not incidental.** Phase 00 recorded 5
-canonical purines and 3 pyrimidines in the whole corpus. A retained motif needs ≥3 molecules,
-and those 8 molecules are spread across many components — so a pure nucleic motif needs 3 of
-5 purines to co-cluster *within a single component*. This is the same rare-chemistry limit
-Phase 00 measured (`k_c ceiling ≤ 2` for both classes), surfacing again in a different layer.
-**No amount of decomposition creates evidence the corpus does not contain.**
-
-### 5.3 Motif quality
-
-| Score | mean | median | min | max |
-|---|---:|---:|---:|---:|
-| molecules per motif | 10.3 | 6 | 3 | 48 |
-| bands per motif | 5.1 | 5 | 2 | 11 |
-| purity | 0.564 | 0.527 | 0.167 | 1.000 |
-| **stability** (jackknife) | **0.968** | 0.985 | 0.812 | 1.000 |
-| coverage (share of component participants) | 0.226 | 0.155 | 0.049 | 0.960 |
-| band fidelity vs parent | 0.717 | 0.709 | 0.375 | 0.979 |
-
-Stability is high across the board (min 0.812, well above the 0.50 rejection floor), so no
-retained motif is a fitting artefact.
-
-### 5.4 Rejection
-
-30 of 128 candidates rejected, every one with a deterministic reason:
-
-| Reason | n |
-|---|---:|
-| `too_few_analytes` (<3 molecules) | 27 |
-| `noise_single_band` (<2 bands) | 3 |
-| `low_stability` (<0.50) | 0 |
-| `redundant` (cosine ≥0.98) | 0 |
-
-That no motif was rejected for instability or redundancy is itself a finding: the cut rule and
-the band construction are not producing junk that has to be filtered out afterwards.
-
-### 5.5 Redundancy and spectral overlap
+```
+  ✅ COMPLETE
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ Phase 00   canonical identities · partition · folds · harness    │
+  │            V5 control baseline · benchmark lock (level 3)        │
+  └───────────────────────────────┬──────────────────────────────────┘
+                                  ▼
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ Phase 01   balanced references  (8 arms → B_analyte_weighted)    │
+  │              ↓ split by chemistry class (16 blocks)              │
+  │            independent class-local NMF, adaptive k_c ∈ {1,2,3,5} │
+  │              ↓                                                   │
+  │            33 Local Spectral Motifs                              │
+  └───────────────────────────────┬──────────────────────────────────┘
+                                  ▼
+  ⬜ NOT STARTED
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ Phase 02   cross-class similarity graph → Consensus Spectral     │
+  │            Motifs                                                │
+  └───────────────────────────────┬──────────────────────────────────┘
+                                  ▼
+     Phase 03 themes → Phase 04 BSV → Phase 05 engine → Phase 06 validation
+```
 
 | | |
-|---|---:|
-| max off-diagonal cosine | **0.844** |
-| mean off-diagonal cosine | 0.081 |
-| pairs above 0.90 | **0** |
-| pairs above 0.95 | 0 |
-| cross-component pairs above 0.90 | 0 |
-
-The 98 motifs are genuinely distinct. This is the measurement that settled the
-motif-construction choice (§3): the alternative "representative" construction produced 25
-pairs above 0.9 and a maximum of 0.979 — motifs of a component becoming near-copies of one
-another because they all inherited the parent's dominant peak.
-
-### 5.6 Coverage
-
-100% of the 154 canonical molecules and all 375 spectra participate in at least one retained
-motif; median 7 motifs per molecule. No molecule is left uncovered.
-
-### 5.7 Cross-source and replicate reproducibility
-
-Discovery re-run on data subsets; agreement measured as adjusted Rand index against the
-full-corpus run, restricted to shared molecules (chance-corrected, so a trivially
-single-motif component does not score as perfect).
-
-| Subset | median ARI | components compared |
-|---|---:|---:|
-| RamanBioLib only | **0.892** | 22 |
-| Gobbato only | **0.559** | 10 |
-| replicate half 0 | 0.788 | 23 |
-| replicate half 1 | 0.678 | 23 |
-
-**The Gobbato figure is the weak one and it is expected.** Phase 00 measured four classes as
-~90–100% RamanBioLib-sourced; removing RamanBioLib removes most of the molecules that define
-those components' motifs. The asymmetry (0.892 vs 0.559) is source confounding — risk **R-16**
-— showing up exactly where Phase 00 predicted it would.
-
-### 5.8 Determinism
-
-Three independent discovery runs produced **identical motif spectra** (same 32-hex content
-signature). No RNG appears anywhere in `discovery.py` or `clustering.py`, verified by a static
-test.
-
----
-
-## 6. Scientific findings
-
-1. **Atlas components are decomposable — 23 of 24.** The impurity Phase 00 measured is not
-   irreducible mixing; most components carry several band sub-patterns that separate cleanly.
-2. **The separation tracks chemistry beyond chance.** 23/23 components significant on
-   chance-corrected AMI; 22/23 exceed a size-matched random partition on purity, median gain
-   +0.145. The finding is not the mechanical effect of cutting a set into more pieces.
-3. **Protein, saccharide and sterol chemistry resolve to purity 1.00** with chemically
-   readable band sets, including the classic phenylalanine-1000 + amide-I/III protein motif.
-4. **Nucleic chemistry does not resolve at all** — 1 purine motif at 0.33 purity, 0 pyrimidine
-   motifs. This is a corpus limit (5 purines, 3 pyrimidines total), not a method failure, and
-   it is the same limit Phase 00 recorded.
-5. **One component is genuinely irreducible** (c12), and roughly 20 of 24 components hold a
-   single dominant motif alongside smaller ones — the decomposition is real but usually
-   asymmetric.
-6. **Source confounding is measurable at the motif level.** Cross-source ARI 0.892 vs 0.559
-   is the first quantitative consequence of the confounding Phase 00 flagged.
-
----
-
-## 7. Engineering findings
-
-1. **The atlas is untouched and the layer is additive.** Fingerprint identical before and
-   after; motif attribution conserves atlas activation to 2.2 × 10⁻¹⁶.
-2. **Determinism holds without special effort** because the discovery path has no RNG. Choosing
-   a jackknife over a bootstrap for stability was what made this achievable.
-3. **A real bug was found by the unit tests, not by the pipeline.** `select_cut` allowed
-   `n_motifs == n_participants`, which makes silhouette undefined and crashes. It never fired
-   on the real corpus (every component has ≥24 participants) but would have on any small
-   component. Fixed by bounding the sweep at `n − 1`.
-4. **A figure led me to the wrong conclusion, and the measurement corrected it.** Figure 2
-   suggested motifs were systematically de-emphasising their parent's dominant peak; the
-   proposed "fix" was benchmarked and made redundancy dramatically worse (25 pairs above
-   cosine 0.9 vs 0). The apparent problem was amplitude scaling in the plot. Figures now
-   normalise so the comparison is on shape.
-5. **`src/gaira/v7/lsm/` is a new namespace**, importable and testable without any data.
-   47 tests: 30 unit tests on synthetic inputs, 17 contract tests on the committed artefacts.
-
----
-
-## 8. Limitations
-
-1. **This is not the architecture documents' LSM** (§2). It decomposes frozen components
-   rather than fitting class-local bases, so it cannot deliver what a rebuilt basis could —
-   it can only redistribute evidence the existing atlas already produces.
-2. **Rare chemistry is untouched.** Purines, pyrimidines, phospholipids and carotenoids remain
-   unresolved; the motif layer inherits the corpus limits it was given.
-3. **Purity is measured against the Phase-00 fine ontology**, which is itself a curated prior.
-   A motif "pure" in that ontology is pure with respect to a human classification, not to
-   ground-truth chemistry.
-4. **Participation threshold τ = 0.03 is a free parameter.** It was fixed before the run and
-   not swept. A stricter τ would give fewer, purer participants per component; the sensitivity
-   of the whole layer to it is unmeasured.
-5. **Band windows are fixed at ±8 cm⁻¹** regardless of the band's actual width.
-6. **Motifs overlap in participation** — a molecule belongs to a median of 7 motifs. The layer
-   adds resolution, not a partition of the corpus.
-7. **No downstream benefit has been demonstrated.** Phase 01 shows motifs separate chemistry
-   *within* components; it does **not** show that using them improves retrieval, the BSV, or
-   any Phase-00 benchmark. That test does not exist yet and must not be assumed.
-
----
-
-## 9. Future dependencies and recommended decisions
-
-**Consumed by later phases**
-
-| Artefact | Used for |
 |---|---|
-| `artifacts/lsm_spectra_v1.npz` + `tables/lsm_registry_v1.csv` | the motif dictionary and its provenance |
-| `matching.attribute_spectrum` | motif-level evidence at inference |
-| `tables/chemical_alignment_v1.csv`, `purity_null_v1.csv` | the baseline any consensus layer must beat |
+| **Completed** | Phase 00; Phase 01 (both stages) |
+| **Remaining** | Phase 02 CSMs · 03 themes · 04 BSV · 05 engine · 06 in-domain validation · (07 learning, 08 corpus expansion — deferred) |
+| **Next phase inputs** | `lsm_dictionary_v1.npz` (33 × 676), `lsm_registry_v1.csv` (class, type, stability, activating molecules), the frozen Phase-00 folds |
+| **Next phase outputs** | LSM similarity graph (6 edge features), CSM dictionary + registry, integration-method comparison |
 
-**Three decisions needed before Phase 02**
-
-1. **Resolve the naming collision** (§2). Recommendation: keep "LSM" for this
-   frozen-component layer, since it is now implemented, serialised and tested, and rename the
-   architecture's class-local NMF rows — or drop that construction if this layer supersedes
-   it. Either way the architecture documents and the rebuild plan need updating so the phase
-   numbering matches what exists.
-2. **Decide whether balanced reference construction still happens.** It was the plan's Phase
-   01 and has not been done. If Strategy B is the class-local rebuild, it depends on it.
-3. **Measure downstream benefit before building on this layer.** The natural next test is
-   whether motif-level evidence improves fine-family retrieval against the frozen Phase-00
-   harness and splits. Until that is measured, the motif layer is a demonstrated *internal*
-   improvement with unknown external value.
+**Side branch, not on the critical path:**
+`control_experiments/frozen_atlas_decomposition/` — 98 Atlas Component Substructures, the
+no-fitting baseline the class-local route must eventually beat.
 
 ---
 
-## 10. Discussion
+## 7. Limitations
 
-The result to take seriously is the asymmetry. The motif layer works where the corpus is
-dense — proteins (30 molecules), saccharides (20), sterols (10) — and fails where it is thin —
-purines (5), pyrimidines (3). That is the same boundary Phase 00 drew from a completely
-different direction, and it is the boundary the whole V7 programme keeps running into: this
-corpus supports coarse chemistry richly and fine chemistry sparsely.
-
-That reframes what Phase 01 has shown. It has **not** shown that the frozen atlas is adequate;
-it has shown that a substantial part of the atlas's chemical impurity is *recoverable without
-refitting anything*. Twenty-three of twenty-four components hold real, stable, chemically
-coherent substructure that the 24-dimensional projection discards. That is a genuine finding
-about the existing atlas, obtained at a fraction of the cost of a rebuild.
-
-But it should not be over-read, in two specific ways.
-
-First, **no downstream benefit has been demonstrated**. Higher within-component purity is a
-property of the motif layer, not evidence that any GAIRA output improves. The V6.2 experience
-is the relevant caution: an added abstraction layer (`theme_posterior`) that was numerically
-identical to the layer beneath it at every metric. Until motif evidence is measured against
-the Phase-00 harness, this layer could be exactly that.
-
-Second, **the layer cannot exceed its parent**. Every motif is a restriction of a frozen
-component, so the motif layer can only redistribute evidence the atlas already produced — as
-the conservation check makes precise. If a chemistry is absent from all 24 components, no
-decomposition will find it. That is why the purine and pyrimidine results are not a bug to
-fix but a boundary to respect, and why Phase 09 corpus expansion remains the only route to
-that particular chemistry.
-
-The most useful thing Phase 01 contributes to the wider rebuild is therefore a **cheap
-diagnostic**: it says which components carry recoverable substructure and which do not, using
-no fitting and no new assumptions. If Strategy B does rebuild the basis, this is the map of
-where a rebuild has something to find.
+1. **The anchor route was never exercised.** After canonicalisation the smallest class has 2
+   molecules, at the floor, so no class fell below it. Strategy F is implemented and unit-tested
+   but has zero live instances. Its behaviour on real data is untested.
+2. **`purity` is degenerate here** — structurally 1.0, because every molecule in a fine class
+   shares its broad superclass. It is retained for contract C-05 and becomes informative in
+   Phase 02. It must not be read as evidence of chemical coherence in this report.
+3. **No molecule-discriminating LSMs** (§5.3).
+4. **6 of 16 classes are prior-dominated and 4 are source-confounded**, with three in both.
+5. **`k_c` is conservative.** The largest class takes 2 motifs from a ceiling of 15. Whether
+   that reflects genuine spectral homogeneity or an over-cautious composite is not settled by
+   this phase.
+6. **No downstream benefit demonstrated.** Phase 01 delivers a dictionary. Nothing here shows
+   it improves retrieval, the BSV, or any user-visible output.
+7. **B ≡ B-uniform**, so the quality score contributed nothing on this corpus — as Phase 00
+   predicted. `q`'s value remains unproven.
 
 ---
 
-## 11. Gates
+## 8. Discussion
 
-| Gate | Result | Evidence |
-|---|---|---|
-| implementation_complete | ✅ PASS | 98 motifs across 23 decomposed components |
-| atlas_unchanged | ✅ PASS | basis identical before/after, max abs difference 0.0 |
-| fingerprint_unchanged | ✅ PASS | `09ed804a40836f4a05a91ba10900cded` recomputed |
-| deterministic | ✅ PASS | 3 runs → identical motif spectra; no RNG on the discovery path |
-| registry_generated | ✅ PASS | integrity checks pass; rejected motifs retained with reasons |
-| projection_conserved | ✅ PASS | attribution error 2.2 × 10⁻¹⁶ |
-| validation_passed | ✅ PASS | alignment, ambiguity, redundancy, coverage, reproducibility all measured |
-| scientific_benefit_demonstrated | ✅ PASS | 23 components beat a permutation null; 22 beat a size-matched null |
-| reproducibility_measured | ✅ PASS | cross-source and replicate ARI on 78 component-subset pairs |
+The substantive result is that **class-local fitting changes what the representation is able
+to see.** Under a global objective, pyrimidine chemistry — 3 molecules out of 154 — had no
+mechanism by which to obtain a basis vector; it could only appear as a minor contribution to
+components shaped by proteins and sugars. Under class-local fitting it gets one, unconditionally,
+because it is not competing. The capacity numbers (0.389 vs 0.154 per molecule) are that
+mechanism made visible.
 
-**9 / 9 PASS.**
+That is a structural claim, not yet a performance claim, and the distinction matters. The
+control experiment preserved alongside this phase is the sharpest available test of whether it
+converts into anything: it decomposed the frozen atlas with **zero fitted parameters** and
+recovered chemically coherent substructure in 23 of 24 components. If class-local LSMs cannot
+beat a no-fitting decomposition of the old atlas on a downstream task, the rebuild is not
+earning its cost. That comparison is Phase 02's job and this phase does not pre-empt it.
+
+Two findings should temper expectations. First, **6 of 16 classes are prior-dominated** — their
+LSMs are all class-shared with flat activation, meaning the chemical partition, not the
+spectroscopy, is doing the work. For a 30-molecule protein class yielding 2 shared motifs, the
+honest reading is that the decomposition found little the class boundary had not already
+encoded. Second, **three of the four source-confounded classes are also prior-dominated**, so
+in exactly those classes the fit may be modelling one reference library rather than a chemistry.
+
+Finally, the method defects in §4 deserve emphasis over the results. Two of six selection
+criteria were maximal by definition at `k=1`, and a third moved the wrong way. Had that gone
+unexamined, this report would have concluded — with a full compliance table and a clean gate —
+that GAIRA's chemistry classes are spectrally homogeneous and need almost no decomposition.
+Every architectural check would still have passed. **Architecture compliance verifies that the
+right thing was built; it does not verify that the thing was built correctly.** Both checks are
+needed, and only one of them can be automated.
+
+---
+
+## 9. Gates
+
+| Gate | Result |
+|---|---|
+| architecture_compliance | ✅ PASS (18/18) |
+| implementation_complete | ✅ PASS (33 LSMs, 16 classes) |
+| atlas_unchanged | ✅ PASS |
+| deterministic | ✅ PASS |
+| registry_integrity | ✅ PASS |
+| adaptive_kc | ✅ PASS ({1, 2, 3, 5}) |
+| stability_threshold_enforced | ✅ PASS |
+| rare_classes_handled | ✅ PASS |
+
+**8 / 8 PASS.**
+
+Phase-00 audit corrections **C-9** (`dataset_role_map_v7.csv`) and **C-10**
+(`evaluation_ontology_v7.csv`) are emitted here.

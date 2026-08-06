@@ -106,8 +106,7 @@ GAIRA_v7_rebuild/
 | Phase | Name | Status | Output | Gate |
 |---|---|---|---|---|
 | 00 | Benchmark lock | ✅ **COMPLETE** | [`results/v7_rebuild/phase00/`](../results/v7_rebuild/phase00/) | 12/12 PASS |
-| 01 | **Local Spectral Motifs (Strategy A)** | ✅ **COMPLETE** | [`results/v7_rebuild/phase01/`](../results/v7_rebuild/phase01/) | 9/9 PASS |
-| — | Balanced references *(the plan's original Phase 01)* | Not done — superseded in numbering | — | — |
+| 01 | **Balanced references + class-local NMF → LSMs** | ✅ **COMPLETE** | [`results/v7_rebuild/phase01/`](../results/v7_rebuild/phase01/) | 8/8 · compliance 18/18 |
 | 02 | LSM construction | Not started | — | — |
 | 03 | CSM construction | Not started | — | — |
 | 04 | Themes | Not started | — | — |
@@ -129,9 +128,10 @@ molecule identities (167 surface forms → 154 molecules), the chemical partitio
 6 broad), frozen analyte-grouped CV splits, the frozen quality score, the frozen evaluation
 harness, and the V5 control baseline measured under it.
 
-**Phase 01 (Strategy A)** — `src/gaira/v7/lsm/`: 98 Local Spectral Motifs decomposing 23 of
-24 frozen atlas components deterministically, with a registry, an interpretation path that
-conserves atlas evidence exactly, and a validation suite. The atlas is unchanged.
+**Phase 01** — `src/gaira/v7/lsm/`: balanced reference construction (8 arms), independent
+class-local NMF with adaptive `k_c`, 33 Local Spectral Motifs, a class-indexed registry, LSM
+typing, the Strategy-F anchor route, and R-01/R-16 risk checks. The frozen atlas is a control
+only and is never an input (P-15).
 
 ## What is not yet implemented
 
@@ -224,14 +224,20 @@ molecule identities frozen (167 surface forms → 154 molecules), the chemical p
 cross-validation splits frozen, and the V5 control baseline measured under the frozen harness.
 Report: [`PHASE_00_REPORT.md`](../results/v7_rebuild/phase00/reports/PHASE_00_REPORT.md).
 
-**Phase 01 (Strategy A) is complete** — 98 Local Spectral Motifs decompose 23 of the 24 frozen
-atlas components, without refitting anything and with the atlas fingerprint unchanged.
+**Phase 01 is complete and architecture-compliant (18/18)** — 8 balanced-reference arms
+compared, 16 chemistry classes fitted by independent class-local NMF with adaptive
+`k_c ∈ {1,2,3,5}`, yielding 33 Local Spectral Motifs. Rare chemistry now receives 2.5× the
+decomposition capacity per molecule that dense chemistry does; under V5 both received the same.
 Report: [`PHASE_01_REPORT.md`](../results/v7_rebuild/phase01/reports/PHASE_01_REPORT.md).
 
-> ⚠ **The phase numbering has diverged from this plan.** The plan's Phase 01 was *balanced
-> reference construction*; the phase actually executed was Local Spectral Motif discovery over
-> the frozen components, which is a different construction of "LSM" from the one in
-> `architecture/LEARNING_MODE_ARCHITECTURE.md`. Both the naming collision and the skipped
-> balanced-reference step need resolving before Phase 02 — see PHASE_01_REPORT.md §2 and §9.
+> **Architecture note.** An earlier implementation of Phase 01 decomposed the *frozen atlas*
+> rather than fitting class-local NMF over balanced references. It was audited, found
+> non-compliant, and reclassified as a **control experiment** — preserved in full at
+> `results/v7_rebuild/control_experiments/frozen_atlas_decomposition/`, with its objects
+> renamed Atlas Component Substructures so the term LSM is reserved for the specification's
+> object. See [`ARCHITECTURE_COMPLIANCE_AUDIT.md`](context/ARCHITECTURE_COMPLIANCE_AUDIT.md).
+> Principles **P-15** (the frozen atlas is a control, never a foundation), **P-16**
+> (architecture check before implementation) and **P-17** (redraw the pipeline every phase)
+> were added as a result.
 
 **Next step: awaiting explicit approval. Phase 02 NOT STARTED.**

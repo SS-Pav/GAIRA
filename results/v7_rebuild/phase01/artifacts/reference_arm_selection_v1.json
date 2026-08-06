@@ -1,0 +1,16 @@
+{
+  "selected_arm": "B_analyte_weighted",
+  "rule": "maximise class balance (lowest effective_class_gini) subject to band fidelity within 0.02 of the control arm A (0.9861); 8 of 8 arms admissible",
+  "admissible": [
+    "A_all_spectra",
+    "B_analyte_weighted",
+    "B_uniform",
+    "C_mean",
+    "C_median",
+    "C_trimmed",
+    "C_medoid",
+    "C_quality"
+  ],
+  "control_arm": "A_all_spectra",
+  "control_wins": false
+}

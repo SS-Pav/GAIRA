@@ -11,6 +11,23 @@ Companions: `PHASE_DEPENDENCY_MAP.md` (what blocks what),
 
 ---
 
+> ## ⚠ PHASE RENUMBERING — adopted 2026-08-06
+>
+> The canonical architecture merges what this plan called **Phase 01** (balanced reference
+> construction) and **Phase 02** (Local Spectral Motif construction) into a single
+> **Phase 01**, because they are one pipeline: balanced references exist only to be split by
+> class and fitted. Every gate from both original phases is carried into the merged phase;
+> none is dropped.
+>
+> | This plan (original) | Canonical (adopted) |
+> |---|---|
+> | Phase 01 — balanced reference construction | **Phase 01, Stage 1** |
+> | Phase 02 — Local Spectral Motif construction | **Phase 01, Stage 2** |
+> | Phase 03 — Consensus Spectral Motifs | **Phase 02** |
+> | Phases 04–09 | shift down by one |
+>
+> See `context/ARCHITECTURE_COMPLIANCE_AUDIT.md` §5.
+
 ## Rules that apply to every phase
 
 1. **Gates are binding.** A failed gate stops the phase. It does not get waived because the
@@ -19,6 +36,9 @@ Companions: `PHASE_DEPENDENCY_MAP.md` (what blocks what),
    *before* the sweep that it governs runs (P-12).
 3. **Every phase ships a manifest** with inputs, config, seeds, code SHA, environment,
    outputs, gate results, and decisions. `code.dirty: true` invalidates the phase.
+3b. **Every phase begins with an architecture check (P-16) and ends with an Architecture
+   Compliance table (specification item · implemented? · evidence · PASS/FAIL) and a redrawn
+   pipeline (P-17).** The gate opens only if every compliance row is PASS.
 4. **Every phase ships a report** committed alongside the code that produced it.
 5. **Nothing outside `GAIRA_v7_rebuild/` is modified** — with the single exception of the V7
    scaffold test under `tests/`.
@@ -164,7 +184,7 @@ For each chemical class:
 6. select stable LSMs against the pre-registered threshold
 7. type each retained LSM: class-shared | subfamily | molecule-discriminating
 8. sweep sparse-NMF vs plain NMF per class — not assumed
-9. **report per-class source and excitation composition** (risk R-14: a class drawn
+9. **report per-class source and excitation composition** (risk R-16: a class drawn
    overwhelmingly from one source may be modelling instrument response, not chemistry)
 10. **test class-prior bias** (risk R-01): report every class whose local decomposition is
     driven by the partition rather than by spectroscopy

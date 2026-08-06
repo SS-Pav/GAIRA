@@ -5,16 +5,15 @@ Generated artefacts for the GAIRA V7 rebuild. One directory per phase.
 | Phase | Directory | Status |
 |---|---|---|
 | 00 Benchmark lock and canonical data foundation | `phase00/` | **COMPLETE** |
-| 01 Local Spectral Motif discovery (Strategy A) | `phase01/` | **COMPLETE** |
-| — Balanced reference construction (plan's original Phase 01) | — | **not done** — see PHASE_01_REPORT.md §2 |
-| 02 Local Spectral Motifs | — | not started |
-| 03 Consensus Spectral Motifs | — | not started |
-| 04 Biochemical themes | — | not started |
-| 05 Biochemical State Vector | — | not started |
-| 06 Engine integration | — | not started |
-| 07 In-domain Raman validation | — | not started |
-| 08 Chemistry-aware learning | — | deferred |
-| 09 Targeted corpus expansion | — | deferred |
+| 01 Balanced references + class-local NMF → LSMs | `phase01/` | **COMPLETE** — 18/18 architecture compliance |
+| 02 Consensus Spectral Motifs | — | not started |
+| 03 Biochemical themes | — | not started |
+| 04 Biochemical State Vector | — | not started |
+| 05 Engine integration | — | not started |
+| 06 In-domain Raman validation | — | not started |
+| 07 Chemistry-aware learning | — | deferred |
+| 08 Targeted corpus expansion | — | deferred |
+| — Control experiment: frozen-atlas decomposition | `control_experiments/frozen_atlas_decomposition/` | **COMPLETE — NOT canonical V7** |
 
 ## Per-phase layout
 

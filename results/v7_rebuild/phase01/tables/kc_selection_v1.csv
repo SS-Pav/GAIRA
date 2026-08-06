@@ -1,0 +1,17 @@
+chemical_class,k,rule,plateau_start,plateau_end,plateau,within_tolerance_anywhere,plateau_is_contiguous,best_k,best_composite,tolerance
+acylglycerol,1,"smallest k on the CONTIGUOUS plateau containing the maximum (0.5003 at k=2), tolerance 0.02",1,2,"[1, 2]","[1, 2]",True,2,0.500346,0.02
+carboxylic_acid_metabolite,3,"smallest k on the CONTIGUOUS plateau containing the maximum (0.3849 at k=4), tolerance 0.02",3,4,"[3, 4]","[3, 4]",True,4,0.384922,0.02
+chromophore_pigment,2,"smallest k on the CONTIGUOUS plateau containing the maximum (0.5189 at k=2), tolerance 0.02",2,2,[2],[2],True,2,0.518881,0.02
+fatty_acid,2,"smallest k on the CONTIGUOUS plateau containing the maximum (0.4920 at k=2), tolerance 0.02",2,2,[2],[2],True,2,0.491974,0.02
+free_amino_acid,5,"smallest k on the CONTIGUOUS plateau containing the maximum (0.3926 at k=8), tolerance 0.02",5,9,"[5, 6, 7, 8, 9]","[5, 6, 7, 8, 9]",True,8,0.392554,0.02
+mono_oligosaccharide,5,"smallest k on the CONTIGUOUS plateau containing the maximum (0.3894 at k=9), tolerance 0.02",5,10,"[5, 6, 7, 8, 9, 10]","[1, 5, 6, 7, 8, 9, 10]",False,9,0.389394,0.02
+nucleic_acid_polymer,1,"smallest k on the CONTIGUOUS plateau containing the maximum (0.5078 at k=1), tolerance 0.02",1,1,[1],[1],True,1,0.507783,0.02
+peptide_protein,2,"smallest k on the CONTIGUOUS plateau containing the maximum (0.4953 at k=2), tolerance 0.02",2,3,"[2, 3]","[2, 3]",True,2,0.495291,0.02
+phosphate_metabolite,1,"smallest k on the CONTIGUOUS plateau containing the maximum (0.3715 at k=1), tolerance 0.02",1,1,[1],[1],True,1,0.371506,0.02
+phospholipid_sphingolipid,2,"smallest k on the CONTIGUOUS plateau containing the maximum (0.4755 at k=2), tolerance 0.02",2,2,[2],[2],True,2,0.475473,0.02
+polysaccharide,1,"smallest k on the CONTIGUOUS plateau containing the maximum (0.4582 at k=2), tolerance 0.02",1,2,"[1, 2]","[1, 2]",True,2,0.458209,0.02
+purine,2,"smallest k on the CONTIGUOUS plateau containing the maximum (0.4018 at k=2), tolerance 0.02",2,2,[2],[2],True,2,0.401821,0.02
+pyrimidine,1,"smallest k on the CONTIGUOUS plateau containing the maximum (0.3644 at k=1), tolerance 0.02",1,1,[1],[1],True,1,0.364449,0.02
+small_nitrogenous,1,"smallest k on the CONTIGUOUS plateau containing the maximum (0.3532 at k=1), tolerance 0.02",1,1,[1],[1],True,1,0.35316,0.02
+sterol_steroid,2,"smallest k on the CONTIGUOUS plateau containing the maximum (0.4889 at k=3), tolerance 0.02",2,3,"[2, 3]","[2, 3]",True,3,0.488873,0.02
+sulfur_thiol_cofactor,2,"smallest k on the CONTIGUOUS plateau containing the maximum (0.4576 at k=2), tolerance 0.02",2,2,[2],[2],True,2,0.457645,0.02

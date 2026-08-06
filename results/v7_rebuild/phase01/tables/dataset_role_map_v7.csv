@@ -1,0 +1,6 @@
+dataset,role,modality,n_spectra,used_for_fitting
+RamanBioLib,grounding — fitting,Raman,202,True
+gobbato_raman_metabolites,grounding — fitting,Raman,153,True
+amino_acid_raman_grounding,grounding — fitting,Raman,20,True
+covid_serum_raman,external — projection only,Raman,477,False
+assets/foundation (V5 atlas),baseline control / comparator,n/a,0,False

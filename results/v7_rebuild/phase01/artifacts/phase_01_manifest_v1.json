@@ -1,27 +1,19 @@
 {
   "schema": "gaira_v7_phase_manifest_v1",
   "phase": "01",
-  "phase_name": "Local Spectral Motif discovery (Strategy A)",
-  "build_id": "v7-phase01-f14e05b6931f",
-  "built_utc": "2026-08-06T05:02:11.290311+00:00",
+  "phase_name": "Balanced references and class-local Local Spectral Motifs",
+  "build_id": "v7-phase01-0904d6678d12",
+  "built_utc": "2026-08-06T05:35:39.847316+00:00",
+  "architecture": "balanced references → split by chemistry class → independent class-local NMF → Local Spectral Motifs",
+  "frozen_atlas_role": "baseline control / comparator only (P-15) — NOT an input",
   "atlas_fingerprint_before": "09ed804a40836f4a05a91ba10900cded",
   "atlas_fingerprint_after": "09ed804a40836f4a05a91ba10900cded",
-  "registry_fingerprint": "25ac55f60b9e60782a7f8562294d69c8",
+  "registry_fingerprint": "1e8bbeb17f4c07e378ca284f1c220c62",
   "inputs": [
     {
-      "artifact_id": "frozen_basis",
-      "path": "assets/foundation/manifold_components.npz",
-      "sha256": "ca385847146c7a9b72bd5c7ecfae85105ecf8740e43abe4a83ce894587444b9f"
-    },
-    {
-      "artifact_id": "frozen_manifest",
-      "path": "assets/foundation/MANIFEST.json",
-      "sha256": "dda465c15057542ad687bcde3d82f1a6f36a628ce0b8552a9c9ec92cb3f9eba7"
-    },
-    {
-      "artifact_id": "p00_alias_table",
-      "path": "results/v7_rebuild/phase00/tables/alias_table_v1.csv",
-      "sha256": "df0c94be823d99235785c617411e2cde413f9058bcd62b482680af117f23ba8a"
+      "artifact_id": "p00_manifest",
+      "path": "results/v7_rebuild/phase00/manifests/phase_00_manifest_v1.json",
+      "sha256": "dc7fdad676a49802dfb95dd36c767ba9f2837e936c88615805a4e874455f7c15"
     },
     {
       "artifact_id": "p00_partition",
@@ -34,34 +26,36 @@
       "sha256": "43e0136dec23b501131eee8cebd495a9a725762d84646158c898d75655f68355"
     },
     {
-      "artifact_id": "p00_manifest",
-      "path": "results/v7_rebuild/phase00/manifests/phase_00_manifest_v1.json",
-      "sha256": "dc7fdad676a49802dfb95dd36c767ba9f2837e936c88615805a4e874455f7c15"
+      "artifact_id": "p00_quality",
+      "path": "results/v7_rebuild/phase00/tables/spectrum_quality_v1.csv",
+      "sha256": "dff099fbf95be42e23023727b1cd3da25bcbdc081f14b04ac2a6c177a65479d2"
+    },
+    {
+      "artifact_id": "p00_folds",
+      "path": "results/v7_rebuild/phase00/tables/cv_folds_v1.csv",
+      "sha256": "c8b66ca743744da97f0404a749742aa8d7467c9c4ec2fdd7995a993c90a14b4b"
     }
   ],
   "config": {
-    "discovery_version": "v7_lsm_v1",
-    "linkage": "ward",
-    "profile_mode": "raw",
-    "band_prominence": 0.05,
-    "band_half_width": 4,
-    "share_threshold": 0.03,
-    "min_participants": 10,
-    "min_bands": 4,
-    "min_motif_analytes": 3,
-    "min_stability": 0.5,
-    "min_motif_bands": 2,
-    "redundancy_cosine": 0.98,
-    "max_motifs": 9
+    "discovery_version": "v7_lsm_classlocal_v1",
+    "reference_arm": "B_analyte_weighted",
+    "n_repeats": 12,
+    "plateau_tolerance": 0.02,
+    "min_stability": 0.6,
+    "match_cosine": 0.7,
+    "redundancy_cosine": 0.95,
+    "min_activation": 0.05,
+    "bootstrap_fraction": 0.8,
+    "min_class_analytes": 2
   },
   "seeds": {
-    "discovery": "none — discovery is RNG-free",
-    "permutation_tests": 0
+    "nmf_reference_fit": 0,
+    "repeat_schedule": "0+1..12"
   },
   "code": {
-    "git_sha": "f14e05b6931fc9523debf74e40ee897c8ac681bd",
+    "git_sha": "0904d6678d126692bcfda862228d72244852516d",
     "branch": "gaira-v7-rebuild",
-    "dirty": false,
+    "dirty": true,
     "entry_point": "results/v7_rebuild/phase01/code/run_phase01.py",
     "package": "src/gaira/v7/lsm/"
   },
@@ -78,222 +72,275 @@
   },
   "outputs": [
     {
-      "artifact_id": "profile_mode_comparison_v1.csv",
-      "path": "results/v7_rebuild/phase01/tables/profile_mode_comparison_v1.csv",
-      "sha256": "9be8394e9a010a0202f187228966180ca2a7c91bb642a8cd7d253cae3eb02b22",
-      "rows": 2
+      "artifact_id": "reference_arm_comparison_v1.csv",
+      "path": "results/v7_rebuild/phase01/tables/reference_arm_comparison_v1.csv",
+      "sha256": "c3e05ff53378b2eec535285dfdfddd85d894d030c362f6cb52b990f1beffeca9",
+      "rows": 8
     },
     {
-      "artifact_id": "motif_construction_comparison_v1.csv",
-      "path": "results/v7_rebuild/phase01/tables/motif_construction_comparison_v1.csv",
-      "sha256": "464bf3f821cfee7912f1bd6012b1642e0a324cd37858f9ccefd47eb81606e6f8",
-      "rows": 2
+      "artifact_id": "reference_arm_selection_v1.json",
+      "path": "results/v7_rebuild/phase01/artifacts/reference_arm_selection_v1.json",
+      "sha256": "3b0cf437036f6160bdbbdc6c041ea9f9a2e6c11263ffcab888997db9fcaa194c"
     },
     {
-      "artifact_id": "linkage_comparison_v1.csv",
-      "path": "results/v7_rebuild/phase01/tables/linkage_comparison_v1.csv",
-      "sha256": "3c987538b11b2f8d230ae4629b77238051c49c9d2d3f146c17476b0d3dbee729",
-      "rows": 3
+      "artifact_id": "balanced_references_v1.npz",
+      "path": "results/v7_rebuild/phase01/artifacts/balanced_references_v1.npz",
+      "sha256": "7a3c3e24b73e9b79200bfbaf9951c4da71260c704969069df93e1d2ecec7880e"
     },
     {
-      "artifact_id": "linkage_selection_v1.json",
-      "path": "results/v7_rebuild/phase01/artifacts/linkage_selection_v1.json",
-      "sha256": "9da6215a3b6a939d39323666d9e6706fe3956c1bc0c0f44ff24671dfdc72857e"
+      "artifact_id": "balanced_references_v1.csv",
+      "path": "results/v7_rebuild/phase01/tables/balanced_references_v1.csv",
+      "sha256": "1c3d7b9b0cdfbbbdabe802184fdc6116797a2354b3fdc7df4384e3ebe5d7e55a",
+      "rows": 375
+    },
+    {
+      "artifact_id": "discarded_variance_v1.csv",
+      "path": "results/v7_rebuild/phase01/tables/discarded_variance_v1.csv",
+      "sha256": "c4cf36e1a7793027302cb437567d310820bf1699c1e3f04e2ac806e6cd7cd1e9",
+      "rows": 154
     },
     {
       "artifact_id": "lsm_registry_v1.csv",
       "path": "results/v7_rebuild/phase01/artifacts/lsm_registry_v1.csv",
-      "sha256": "a94e3bb19c72dbf794986e951e1bfe9808e95195b009309a516be09e801857a7"
+      "sha256": "26039139e56de7e60bc8a00f44da74719e4d364bd569eba2ef9160c7581c30a8"
     },
     {
-      "artifact_id": "lsm_components_v1.csv",
-      "path": "results/v7_rebuild/phase01/artifacts/lsm_components_v1.csv",
-      "sha256": "60e64927cc19fa722835dd4c9396135230d3170c3a093c8e4e7d00558122c602"
+      "artifact_id": "lsm_classes_v1.csv",
+      "path": "results/v7_rebuild/phase01/artifacts/lsm_classes_v1.csv",
+      "sha256": "04ee22e757bd6d0525a836d477d5ae8725fe8c07ff31eaa4815d2e706c4c07e4"
     },
     {
       "artifact_id": "lsm_rejections_v1.csv",
       "path": "results/v7_rebuild/phase01/artifacts/lsm_rejections_v1.csv",
-      "sha256": "ad7d4f02da6afa72a4bfe062291fe71f963c239b8979240401773f9fe3900911"
+      "sha256": "474871631b476077494668066e9516dfc6b68647079cb751477d238f1b701803"
     },
     {
-      "artifact_id": "lsm_spectra_v1.npz",
-      "path": "results/v7_rebuild/phase01/artifacts/lsm_spectra_v1.npz",
-      "sha256": "e11b4cd4ac3eef1c5e0057f97eadaabdaff18e3c8c3848b94498c39738abf7ee"
-    },
-    {
-      "artifact_id": "lsm_manifest_v1.json",
-      "path": "results/v7_rebuild/phase01/artifacts/lsm_manifest_v1.json",
-      "sha256": "51ba516a978ef2d0ea697b18ff93e6e953dd41c4ea2d80acd6518a75608d9866"
+      "artifact_id": "lsm_dictionary_v1.npz",
+      "path": "results/v7_rebuild/phase01/artifacts/lsm_dictionary_v1.npz",
+      "sha256": "83b8321bb4103262cf22e70e6ef6ba4734292fc0741a8e0a0e23e7e9812de07f"
     },
     {
       "artifact_id": "lsm_registry_v1.csv",
       "path": "results/v7_rebuild/phase01/tables/lsm_registry_v1.csv",
-      "sha256": "a94e3bb19c72dbf794986e951e1bfe9808e95195b009309a516be09e801857a7",
-      "rows": 128
+      "sha256": "26039139e56de7e60bc8a00f44da74719e4d364bd569eba2ef9160c7581c30a8",
+      "rows": 33
     },
     {
-      "artifact_id": "lsm_components_v1.csv",
-      "path": "results/v7_rebuild/phase01/tables/lsm_components_v1.csv",
-      "sha256": "60e64927cc19fa722835dd4c9396135230d3170c3a093c8e4e7d00558122c602",
-      "rows": 24
+      "artifact_id": "lsm_classes_v1.csv",
+      "path": "results/v7_rebuild/phase01/tables/lsm_classes_v1.csv",
+      "sha256": "04ee22e757bd6d0525a836d477d5ae8725fe8c07ff31eaa4815d2e706c4c07e4",
+      "rows": 16
     },
     {
       "artifact_id": "lsm_rejections_v1.csv",
       "path": "results/v7_rebuild/phase01/tables/lsm_rejections_v1.csv",
-      "sha256": "ad7d4f02da6afa72a4bfe062291fe71f963c239b8979240401773f9fe3900911",
-      "rows": 30
+      "sha256": "474871631b476077494668066e9516dfc6b68647079cb751477d238f1b701803",
+      "rows": 0
     },
     {
-      "artifact_id": "cut_selection_sweep_v1.csv",
-      "path": "results/v7_rebuild/phase01/tables/cut_selection_sweep_v1.csv",
-      "sha256": "a1c8c938b85adb095d765e11bcbc6e913375231205dd478c6b5c87513ed9e7ee",
-      "rows": 192
+      "artifact_id": "kc_sweep_v1.csv",
+      "path": "results/v7_rebuild/phase01/tables/kc_sweep_v1.csv",
+      "sha256": "577945878f575034a1b4af35781af0eb647bceda17d50d6af504bb67f3e437bb",
+      "rows": 73
     },
     {
-      "artifact_id": "chemical_alignment_v1.csv",
-      "path": "results/v7_rebuild/phase01/tables/chemical_alignment_v1.csv",
-      "sha256": "3ae51445932402d291021a839777906d0fe2bdd3df80f3b8e0af00eac4d778a6",
-      "rows": 24
+      "artifact_id": "kc_selection_v1.csv",
+      "path": "results/v7_rebuild/phase01/tables/kc_selection_v1.csv",
+      "sha256": "af2cfea6fb45f1a42ce34bc6085ca2373b7a5cfa2ed63ea03874694391bc5068",
+      "rows": 16
     },
     {
-      "artifact_id": "ambiguity_resolution_v1.csv",
-      "path": "results/v7_rebuild/phase01/tables/ambiguity_resolution_v1.csv",
-      "sha256": "46031e44b1571e8ee24f6986b26d7a53c080ffb2f2ad436373fe6a9c8a98c8a6",
-      "rows": 24
+      "artifact_id": "class_prior_bias_v1.csv",
+      "path": "results/v7_rebuild/phase01/tables/class_prior_bias_v1.csv",
+      "sha256": "b7a160c05dc42a3e0fb9c495dc65d46fe5975707a87179987ef6890ea0d8a587",
+      "rows": 16
     },
     {
-      "artifact_id": "purity_null_v1.csv",
-      "path": "results/v7_rebuild/phase01/tables/purity_null_v1.csv",
-      "sha256": "1512f4c9085e35914848b8ba04f35499f2356995db093ab697724ddb11728085",
-      "rows": 23
+      "artifact_id": "lsm_participation_v1.csv",
+      "path": "results/v7_rebuild/phase01/tables/lsm_participation_v1.csv",
+      "sha256": "3c665db59131f5d37982dd230b4e6eba0241700e956e1473fe7c1beb4ab6dbd6",
+      "rows": 270
     },
     {
-      "artifact_id": "motif_overlap_matrix_v1.csv",
-      "path": "results/v7_rebuild/phase01/tables/motif_overlap_matrix_v1.csv",
-      "sha256": "60fbdf41dfce2a9476cfd6b76c529e4fe992d6fc307f57e70db65b4afae690d8",
-      "rows": 98
-    },
-    {
-      "artifact_id": "redundancy_summary_v1.json",
-      "path": "results/v7_rebuild/phase01/artifacts/redundancy_summary_v1.json",
-      "sha256": "99e81d98542c986a068d1822304a20bcc507f622da4fe3102c8b2c624099a703"
-    },
-    {
-      "artifact_id": "coverage_report_v1.json",
-      "path": "results/v7_rebuild/phase01/artifacts/coverage_report_v1.json",
-      "sha256": "b53ef5ef28014c9976ab85f689d48cc9e29f6df50003ec5e7cbd5355f14ea1ee"
+      "artifact_id": "capacity_allocation_v1.csv",
+      "path": "results/v7_rebuild/phase01/tables/capacity_allocation_v1.csv",
+      "sha256": "e622a651b141b417d2618f0ee7310e7ff1e7110d6f318e22ef3fb30bf8635a8e",
+      "rows": 16
     },
     {
       "artifact_id": "determinism_v1.json",
       "path": "results/v7_rebuild/phase01/artifacts/determinism_v1.json",
-      "sha256": "0ea379a60e18a0f2d59c2b8192c6f51a018374eb6da8f421a6c271c6520263a8"
+      "sha256": "2d540ea47faab59989e9ad4e4428134564868f54604c855dfbd7363047549fda"
     },
     {
-      "artifact_id": "reproducibility_v1.csv",
-      "path": "results/v7_rebuild/phase01/tables/reproducibility_v1.csv",
-      "sha256": "d79faf3c0ffe02725bb686b0c8c4a3e86b5def2eec4f43c5e062a01ca65ca374",
-      "rows": 92
+      "artifact_id": "dataset_role_map_v7.csv",
+      "path": "results/v7_rebuild/phase01/tables/dataset_role_map_v7.csv",
+      "sha256": "cb3ed29bb0d8b0e3babf952d3138371d0b22f7a2e5e6a34f4e7a59709aa17dcc",
+      "rows": 5
     },
     {
-      "artifact_id": "attribution_conservation_v1.json",
-      "path": "results/v7_rebuild/phase01/artifacts/attribution_conservation_v1.json",
-      "sha256": "ccfc602d590e8f228a75e80d24a5fd965c14649f80b3e101bde6a206e0998a56"
+      "artifact_id": "evaluation_ontology_v7.csv",
+      "path": "results/v7_rebuild/phase01/tables/evaluation_ontology_v7.csv",
+      "sha256": "264b4a08b3c2f0bbabcc7a7808314c5ee27feae4748658638df99cbbe95c5ac6",
+      "rows": 154
+    },
+    {
+      "artifact_id": "architecture_compliance_v1.csv",
+      "path": "results/v7_rebuild/phase01/tables/architecture_compliance_v1.csv",
+      "sha256": "0befa5ae7e8db173b6ac98a385a7bf89ecd3b61444505ae0eec8f043c7158b69",
+      "rows": 18
     }
   ],
   "gates": [
     {
+      "gate": "architecture_compliance",
+      "passed": true,
+      "evidence": "18/18 specification items PASS"
+    },
+    {
       "gate": "implementation_complete",
       "passed": true,
-      "evidence": "98 motifs retained across 23 decomposed components"
+      "evidence": "33 LSMs across 16 classes"
     },
     {
       "gate": "atlas_unchanged",
       "passed": true,
-      "evidence": "basis array identical before and after; max abs difference 0.0"
-    },
-    {
-      "gate": "fingerprint_unchanged",
-      "passed": true,
-      "evidence": "recomputed 09ed804a40836f4a05a91ba10900cded"
+      "evidence": "frozen atlas is a control, never an input (P-15)"
     },
     {
       "gate": "deterministic",
       "passed": true,
-      "evidence": "3 independent runs produced identical motif spectra"
+      "evidence": "repeated discovery runs give an identical registry"
     },
     {
-      "gate": "registry_generated",
+      "gate": "registry_integrity",
       "passed": true,
-      "evidence": "registry integrity checks pass"
+      "evidence": "class-indexed registry passes all invariants"
     },
     {
-      "gate": "projection_conserved",
+      "gate": "adaptive_kc",
       "passed": true,
-      "evidence": "attributed evidence equals atlas activation (max error 2.22e-16)"
+      "evidence": "k_c varies across classes: [1, 2, 3, 5]"
     },
     {
-      "gate": "validation_passed",
+      "gate": "stability_threshold_enforced",
       "passed": true,
-      "evidence": "alignment, ambiguity, redundancy, coverage, reproducibility all measured"
+      "evidence": "every retained LSM has recurrence >= 0.6"
     },
     {
-      "gate": "scientific_benefit_demonstrated",
+      "gate": "rare_classes_handled",
       "passed": true,
-      "evidence": "23 components align with chemistry beyond a permutation null (p<0.05); 22 exceed a SIZE-MATCHED random partition on purity, so the gain is not the mechanical effect of cutting a set into more pieces"
-    },
-    {
-      "gate": "reproducibility_measured",
-      "passed": true,
-      "evidence": "cross-source and replicate agreement measured on 78 component-subset pairs"
+      "evidence": "0 classes routed to anchors, never duplicated (P-11)"
     }
   ],
-  "decisions": [
+  "architecture_compliance": [
     {
-      "decision": "LSMs decompose the FROZEN atlas components, not balanced references",
-      "rule_preregistered_in": "user Phase 01 brief (Strategy A)",
-      "chosen": "band-profile clustering of the analytes activating each frozen component",
-      "alternatives": [
-        "class-local NMF over balanced references (the architecture documents' Phase-02 definition)"
-      ],
-      "rationale": "The brief scopes Phase 01 to a learning-free interpretation layer that leaves the atlas, its projection and its fingerprint untouched. This diverges from LEARNING_MODE_ARCHITECTURE.md and is flagged in the report."
+      "specification_item": "Input is balanced canonical references, NOT the frozen atlas",
+      "implemented": true,
+      "evidence": "arm 'B_analyte_weighted' from an 8-arm comparison; atlas loaded for verification only",
+      "status": "PASS"
     },
     {
-      "decision": "Profile mode",
-      "rule_preregistered_in": "src/gaira/v7/lsm/discovery.py — band_profiles()",
-      "chosen": "raw observed band mass",
-      "alternatives": [
-        "attribution-weighted (observed mass x share explained by the component)"
-      ],
-      "rationale": "Both were run and the comparison is published. Attribution weighting divides by the reconstruction, amplifying noise where the reconstruction is small and partly cancelling the per-analyte variation the method exists to detect."
+      "specification_item": "All 8 reference-construction arms compared",
+      "implemented": true,
+      "evidence": "8 arms scored: A_all_spectra, B_analyte_weighted, B_uniform, C_mean, C_median, C_trimmed, C_medoid, C_quality",
+      "status": "PASS"
     },
     {
-      "decision": "Linkage",
-      "rule_preregistered_in": "src/gaira/v7/lsm/clustering.py — apply_linkage_rule()",
-      "chosen": "selected by the pre-registered balance-constrained silhouette rule",
-      "alternatives": [
-        "average",
-        "ward",
-        "complete"
-      ],
-      "rationale": "Silhouette differences of a few hundredths are not meaningful; a motif set in which one motif absorbs most analytes has peeled off outliers rather than decomposed the component."
+      "specification_item": "Control arm A included and reported honestly",
+      "implemented": true,
+      "evidence": "control present; control_wins=False",
+      "status": "PASS"
     },
     {
-      "decision": "Chemistry is evaluation only, never selection",
-      "rule_preregistered_in": "GAIRA_v7_rebuild/plan/VALIDATION_AND_DECISION_RULES.md P-12",
-      "chosen": "no class label enters bands, profiles, linkage or cut selection",
-      "alternatives": [
-        "select the cut by chemical purity"
-      ],
-      "rationale": "Selecting the cut with class labels would make 'motifs align with chemistry' circular and unfalsifiable."
+      "specification_item": "Replicated-analyte and multi-excitation stratifications reported",
+      "implemented": true,
+      "evidence": "both stratified fidelity columns present",
+      "status": "PASS"
     },
     {
-      "decision": "Stability by jackknife, not bootstrap",
-      "rule_preregistered_in": "src/gaira/v7/lsm/clustering.py — jackknife_stability()",
-      "chosen": "deterministic leave-one-analyte-out re-clustering",
-      "alternatives": [
-        "bootstrap resampling"
-      ],
-      "rationale": "The brief requires no stochastic behaviour on the discovery path. A jackknife gives a comparable stability estimate with no RNG."
+      "specification_item": "B-uniform sensitivity arm reported",
+      "implemented": true,
+      "evidence": "present in the arm comparison",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "References split into independent per-class datasets",
+      "implemented": true,
+      "evidence": "16 class blocks fitted independently",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Independent class-local NMF per class (no global competition)",
+      "implemented": true,
+      "evidence": "16 classes decomposed by their own NMF",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Adaptive k_c — no hard-coded global k",
+      "implemented": true,
+      "evidence": "k_c takes values [1, 2, 3, 5]",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "k_c <= floor(n_analytes/2) for every class",
+      "implemented": true,
+      "evidence": "ceiling respected in every decomposed class",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "k_c selected by the pre-registered smallest-on-Pareto-plateau rule",
+      "implemented": true,
+      "evidence": "rule recorded per class in kc_selection_v1.csv",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Repeated fits + Hungarian alignment + recurrence stability",
+      "implemented": true,
+      "evidence": "12 repeats per (class,k), analyte-level resampling",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "LSM typing: class-shared / subfamily / molecule-discriminating",
+      "implemented": true,
+      "evidence": "types present: {'class_shared': 26, 'subfamily': 7}",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Anchor route for classes below the size floor (Strategy F)",
+      "implemented": true,
+      "evidence": "0 classes routed, 0 anchors",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Per-class source/excitation composition reported (R-16)",
+      "implemented": true,
+      "evidence": "4 classes flagged as source-confounded",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Class-prior bias tested (R-01)",
+      "implemented": true,
+      "evidence": "6 classes flagged as prior-dominated",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "One LSM dictionary per CLASS (contract C-05)",
+      "implemented": true,
+      "evidence": "registry is class-indexed; motif ids are <class>.mNN",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "No cross-class clustering (that is Phase 02)",
+      "implemented": true,
+      "evidence": "no similarity graph, no consensus step in this phase",
+      "status": "PASS"
+    },
+    {
+      "specification_item": "Frozen atlas unchanged (P-15)",
+      "implemented": true,
+      "evidence": "fingerprint identical before and after; max abs difference 0.0",
+      "status": "PASS"
     }
   ]
 }

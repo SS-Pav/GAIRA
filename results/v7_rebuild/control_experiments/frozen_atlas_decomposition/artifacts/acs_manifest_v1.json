@@ -1,0 +1,60 @@
+{
+  "schema": "v7_acs_serialization_v1",
+  "registry_fingerprint": "e018570cab71c3fd8f73984013bbd1ff",
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "discovery_version": "v7_acs_v1",
+  "config": {
+    "discovery_version": "v7_acs_v1",
+    "linkage": "ward",
+    "profile_mode": "raw",
+    "band_prominence": 0.05,
+    "band_half_width": 4,
+    "share_threshold": 0.03,
+    "min_participants": 10,
+    "min_bands": 4,
+    "min_motif_analytes": 3,
+    "min_stability": 0.5,
+    "min_motif_bands": 2,
+    "redundancy_cosine": 0.98,
+    "max_motifs": 9
+  },
+  "summary": {
+    "schema": "gaira_v7_acs_registry_v1",
+    "discovery_version": "v7_acs_v1",
+    "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+    "n_components": 24,
+    "n_components_decomposed": 23,
+    "n_components_irreducible": 1,
+    "n_components_not_analysable": 0,
+    "n_motifs_total": 128,
+    "n_motifs_retained": 98,
+    "n_motifs_rejected": 30,
+    "motifs_per_component_mean": 4.083,
+    "motifs_per_component_max": 9,
+    "mean_purity": 0.5645,
+    "mean_stability": 0.9683,
+    "mean_coverage_analytes": 0.2261,
+    "max_redundancy": 0.8444,
+    "config": {
+      "discovery_version": "v7_acs_v1",
+      "linkage": "ward",
+      "profile_mode": "raw",
+      "band_prominence": 0.05,
+      "band_half_width": 4,
+      "share_threshold": 0.03,
+      "min_participants": 10,
+      "min_bands": 4,
+      "min_motif_analytes": 3,
+      "min_stability": 0.5,
+      "min_motif_bands": 2,
+      "redundancy_cosine": 0.98,
+      "max_motifs": 9
+    }
+  },
+  "files": {
+    "acs_registry_v1.csv": "a94e3bb19c72dbf794986e951e1bfe9808e95195b009309a516be09e801857a7",
+    "acs_components_v1.csv": "60e64927cc19fa722835dd4c9396135230d3170c3a093c8e4e7d00558122c602",
+    "acs_rejections_v1.csv": "ad7d4f02da6afa72a4bfe062291fe71f963c239b8979240401773f9fe3900911",
+    "acs_spectra_v1.npz": "e11b4cd4ac3eef1c5e0057f97eadaabdaff18e3c8c3848b94498c39738abf7ee"
+  }
+}

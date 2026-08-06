@@ -1,0 +1,19 @@
+specification_item,implemented,evidence,status
+"Input is balanced canonical references, NOT the frozen atlas",True,arm 'B_analyte_weighted' from an 8-arm comparison; atlas loaded for verification only,PASS
+All 8 reference-construction arms compared,True,"8 arms scored: A_all_spectra, B_analyte_weighted, B_uniform, C_mean, C_median, C_trimmed, C_medoid, C_quality",PASS
+Control arm A included and reported honestly,True,control present; control_wins=False,PASS
+Replicated-analyte and multi-excitation stratifications reported,True,both stratified fidelity columns present,PASS
+B-uniform sensitivity arm reported,True,present in the arm comparison,PASS
+References split into independent per-class datasets,True,16 class blocks fitted independently,PASS
+Independent class-local NMF per class (no global competition),True,16 classes decomposed by their own NMF,PASS
+Adaptive k_c — no hard-coded global k,True,"k_c takes values [1, 2, 3, 5]",PASS
+k_c <= floor(n_analytes/2) for every class,True,ceiling respected in every decomposed class,PASS
+k_c selected by the pre-registered smallest-on-Pareto-plateau rule,True,rule recorded per class in kc_selection_v1.csv,PASS
+Repeated fits + Hungarian alignment + recurrence stability,True,"12 repeats per (class,k), analyte-level resampling",PASS
+LSM typing: class-shared / subfamily / molecule-discriminating,True,"types present: {'class_shared': 26, 'subfamily': 7}",PASS
+Anchor route for classes below the size floor (Strategy F),True,"0 classes routed, 0 anchors",PASS
+Per-class source/excitation composition reported (R-16),True,4 classes flagged as source-confounded,PASS
+Class-prior bias tested (R-01),True,6 classes flagged as prior-dominated,PASS
+One LSM dictionary per CLASS (contract C-05),True,registry is class-indexed; motif ids are <class>.mNN,PASS
+No cross-class clustering (that is Phase 02),True,"no similarity graph, no consensus step in this phase",PASS
+Frozen atlas unchanged (P-15),True,fingerprint identical before and after; max abs difference 0.0,PASS

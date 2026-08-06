@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
-"""GAIRA V7 — Phase 01 figures (SVG vector + PNG preview).
-
-Reads the Phase-01 tables and the serialised motif registry; performs no science of its
-own. Deterministic: no RNG, no timestamps.
-
-    python results/v7_rebuild/phase01/code/make_figures.py
-"""
+"""GAIRA V7 — Phase 01 figures (SVG vector + PNG preview). Deterministic; no RNG."""
 from __future__ import annotations
 
 import json
@@ -17,281 +11,362 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from matplotlib.patches import Rectangle
+from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Rectangle
 
 HERE = Path(__file__).resolve().parent
-PHASE01 = HERE.parent
-REPO = PHASE01.parent.parent.parent
+P01 = HERE.parent
+REPO = P01.parents[2]
 sys.path.insert(0, str(REPO / "src"))
-
 from gaira.v7.lsm import serialization as SER          # noqa: E402
-from gaira.v7.lsm import visualization as VZ           # noqa: E402
 
-T, F, A = PHASE01 / "tables", PHASE01 / "figures", PHASE01 / "artifacts"
-INK, MUTED, LINE = VZ.INK, VZ.MUTED, VZ.LINE
-BLUE, GREEN, AMBER, RED, GREY = VZ.BLUE, VZ.GREEN, VZ.AMBER, VZ.RED, VZ.GREY
-VZ.apply_style()
+T, F, A = P01 / "tables", P01 / "figures", P01 / "artifacts"
+INK, MUTED, LINE = "#1a1a1a", "#6b7280", "#9ca3af"
+BLUE, GREEN, AMBER, RED, GREY = "#2563eb", "#15803d", "#b45309", "#b91c1c", "#4b5563"
+PAL = ["#2563eb", "#15803d", "#b45309", "#7c3aed", "#0891b2", "#be123c"]
+
+plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8.5,
+                     "figure.facecolor": "white", "savefig.facecolor": "white",
+                     "savefig.bbox": "tight", "savefig.pad_inches": 0.18,
+                     "svg.fonttype": "none"})
 
 
-def _save(fig, name):
-    VZ.save(fig, F, name)
+def save(fig, name):
+    F.mkdir(parents=True, exist_ok=True)
+    fig.savefig(F / f"{name}.svg", format="svg")
+    fig.savefig(F / f"{name}.png", dpi=200)
+    plt.close(fig)
     print(f"  {name}.svg + {name}.png")
 
 
-def load():
-    df, spectra, ids, man = SER.load_registry(A)
-    motifs = SER.motifs_from_table(df, spectra, ids)
-    return df, motifs, man
+def box(ax, x, y, w, h, t, fc="white", ec=GREY, fs=7.8, weight="normal"):
+    ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.004,rounding_size=0.02",
+                                facecolor=fc, edgecolor=ec, linewidth=1.1, zorder=2))
+    ax.text(x + w / 2, y + h / 2, t, ha="center", va="center", fontsize=fs, color=INK,
+            zorder=3, linespacing=1.45, weight=weight)
 
 
-def f01(comp):
-    fig, ax = plt.subplots(figsize=(9.2, 8.4))
-    VZ.component_motif_tree(comp, ax=ax)
-    n_dec = int((comp.status == "DECOMPOSED").sum())
-    n_irr = int((comp.status == "IRREDUCIBLE").sum())
-    ax.set_title("1 — Component → motif tree\n"
-                 f"{n_dec} of {len(comp)} frozen atlas components decompose; "
-                 f"{n_irr} remain a single substructure",
-                 fontsize=11, weight="bold", color=INK, loc="left", pad=14)
-    _save(fig, "fig01_component_motif_tree")
+def arrow(ax, p0, p1, color=BLUE):
+    ax.add_patch(FancyArrowPatch(p0, p1, arrowstyle="-|>", mutation_scale=8, color=color,
+                                 linewidth=1.3, shrinkA=2, shrinkB=2, zorder=1))
 
 
-def f02(motifs):
-    """Motif spectra for the four components that decompose most strongly."""
-    amb = pd.read_csv(T / "ambiguity_resolution_v1.csv")
-    top = amb.sort_values("purity_gain", ascending=False).head(4).component.tolist()
-    grid = np.asarray(np.load(REPO / "assets/foundation/manifold_components.npz")["grid"], float)
-    H = np.asarray(np.load(REPO / "assets/foundation/manifold_components.npz")["components"], float)
-    fig, axes = plt.subplots(len(top), 1, figsize=(9.4, 2.5 * len(top)), sharex=True)
-    for ax, k in zip(np.atleast_1d(axes), top):
-        ms = sorted([m for m in motifs if m.parent_component == k],
-                    key=lambda m: -m.n_analytes)
-        VZ.motif_spectra(ms, grid, parent=H[k], ax=ax)
-        r = amb[amb.component == k].iloc[0]
-        ax.set_title(f"component c{k:02d} — {int(r.n_retained_motifs)} motifs · purity "
-                     f"{r.component_dominant_share:.2f} → {r.weighted_motif_purity:.2f}",
-                     fontsize=8.6, loc="left", color=INK)
-        ax.set_xlabel("")
-    np.atleast_1d(axes)[-1].set_xlabel("Raman shift (cm$^{-1}$)")
-    fig.suptitle("2 — Motif spectra: substructures of the frozen components\n"
-                 "grey = parent atlas component (unchanged); coloured = its motifs",
-                 fontsize=11, weight="bold", color=INK, x=0.005, ha="left", y=0.995)
-    fig.tight_layout(rect=(0, 0, 1, 0.955))
-    _save(fig, "fig02_motif_spectra")
-
-
-def f03(motifs):
-    C = pd.read_csv(T / "motif_overlap_matrix_v1.csv", index_col=0)
-    red = json.loads((A / "redundancy_summary_v1.json").read_text())
-    fig, ax = plt.subplots(figsize=(8.2, 8.6))
-    VZ.overlap_graph(C, motifs, ax=ax, threshold=0.5)
-    ax.set_title("3 — Motif overlap graph (cosine ≥ 0.5)\n"
-                 f"max off-diagonal cosine {red['max_offdiag_cosine']} — "
-                 f"grey = same parent component, red = cross-component",
-                 fontsize=11, weight="bold", color=INK, loc="left", pad=12)
-    _save(fig, "fig03_motif_overlap_graph")
-
-
-def f04(df):
-    kept = df[df.retained]
-    fig, axes = plt.subplots(1, 3, figsize=(11.4, 3.2))
-    VZ.score_distribution(kept, "purity", ax=axes[0], color=BLUE, label="chemical purity")
-    VZ.score_distribution(kept, "stability", ax=axes[1], color=GREEN, threshold=0.50,
-                          label="jackknife stability")
-    VZ.score_distribution(kept, "coverage_analytes", ax=axes[2], color=AMBER,
-                          label="coverage (share of component participants)")
-    for ax, t in zip(axes, ("purity", "stability", "coverage")):
-        ax.set_title(t, fontsize=9, color=INK, loc="left")
-    fig.suptitle("4 — Motif quality scores across the retained layer",
-                 fontsize=11, weight="bold", color=INK, x=0.005, ha="left")
-    fig.tight_layout(rect=(0, 0, 1, 0.90))
-    _save(fig, "fig04_motif_quality")
-
-
-def f05():
-    amb = pd.read_csv(T / "ambiguity_resolution_v1.csv")
-    pn = pd.read_csv(T / "purity_null_v1.csv")
-    fig, axes = plt.subplots(2, 1, figsize=(10.2, 7.2))
-    VZ.ambiguity_waterfall(amb, ax=axes[0])
-    axes[0].set_title("whole component vs its motif layer", fontsize=9, loc="left", color=INK)
-
-    d = pn.sort_values("gain_beyond_mechanical", ascending=False)
-    x = np.arange(len(d))
-    cols = [GREEN if s else GREY for s in d.significant]
-    axes[1].bar(x, d.gain_beyond_mechanical, .72, color=cols)
-    axes[1].axhline(0, color=INK, lw=.8)
-    axes[1].set_xticks(x)
-    axes[1].set_xticklabels([f"c{int(c):02d}" for c in d.component], fontsize=6.4, rotation=90)
-    axes[1].set_ylabel("purity beyond a size-matched\nrandom partition")
-    axes[1].spines[["top", "right"]].set_visible(False)
-    axes[1].set_title(f"gain beyond mechanical — green = p < 0.05 "
-                      f"({int(d.significant.sum())} of {len(d)})",
-                      fontsize=9, loc="left", color=INK)
-    fig.suptitle("5 — Does the motif layer resolve chemical ambiguity?\n"
-                 "Top: raw purity. Bottom: the part that is NOT the mechanical effect of "
-                 "cutting a set into more pieces.",
-                 fontsize=11, weight="bold", color=INK, x=0.005, ha="left")
-    fig.tight_layout(rect=(0, 0, 1, 0.91))
-    _save(fig, "fig05_ambiguity_resolution")
-
-
-def f06(df):
-    """Coverage: motifs per component and per analyte."""
-    comp = pd.read_csv(T / "lsm_components_v1.csv")
-    cov = json.loads((A / "coverage_report_v1.json").read_text())
-    fig, axes = plt.subplots(1, 2, figsize=(10.6, 3.4))
-    d = comp.sort_values("n_retained_motifs", ascending=False)
-    cols = [BLUE if s == "DECOMPOSED" else GREY for s in d.status]
-    axes[0].bar(np.arange(len(d)), d.n_retained_motifs, .74, color=cols)
-    axes[0].set_xticks(np.arange(len(d)))
-    axes[0].set_xticklabels([f"c{int(c):02d}" for c in d.component], fontsize=6, rotation=90)
-    axes[0].set_ylabel("retained motifs")
-    axes[0].spines[["top", "right"]].set_visible(False)
-    axes[0].set_title("motifs per atlas component", fontsize=9, loc="left", color=INK)
-
-    kept = df[df.retained]
-    axes[1].hist(kept.n_analytes, bins=range(1, int(kept.n_analytes.max()) + 2),
-                 color=AMBER, edgecolor="white", linewidth=.5)
-    axes[1].axvline(3, color=RED, lw=1.1, ls="--")
-    axes[1].text(3, axes[1].get_ylim()[1] * .95, " reject < 3", fontsize=6.4, color=RED,
-                 va="top")
-    axes[1].set_xlabel("participating molecules per motif")
-    axes[1].set_ylabel("motifs")
-    axes[1].spines[["top", "right"]].set_visible(False)
-    axes[1].set_title(f"motif support — {cov['analyte_coverage']:.0%} of molecules covered, "
-                      f"{cov['motifs_per_analyte_mean']:.1f} motifs each",
-                      fontsize=9, loc="left", color=INK)
-    fig.suptitle("6 — Coverage of the motif layer", fontsize=11, weight="bold",
-                 color=INK, x=0.005, ha="left")
-    fig.tight_layout(rect=(0, 0, 1, 0.89))
-    _save(fig, "fig06_coverage")
-
-
-def f07(motifs):
-    part = pd.read_csv(REPO / "results/v7_rebuild/phase00/tables/chemical_partition_v1.csv")
-    class_of = dict(zip(part.canonical_id, part.fine_class))
-    ids = sorted(class_of)
-    M = pd.DataFrame(0, index=ids, columns=[m.motif_id for m in motifs])
-    for m in motifs:
-        for a in m.analytes:
-            if a in M.index:
-                M.loc[a, m.motif_id] = 1
-    fig, ax = plt.subplots(figsize=(11.5, 9))
-    VZ.participation_heatmap(M, class_of, ax=ax, max_analytes=90)
-    ax.set_title("7 — Analyte × motif participation, ordered by chemical class\n"
-                 "horizontal banding within a class = motifs that track chemistry",
-                 fontsize=11, weight="bold", color=INK, loc="left", pad=12)
-    _save(fig, "fig07_participation_heatmap")
-
-
-def f08(df):
-    """Representative analytes of the purest well-supported motifs."""
-    kept = df[df.retained & (df.n_analytes >= 4)].sort_values(
-        ["purity", "n_analytes"], ascending=[False, False]).head(12)
-    fig, ax = plt.subplots(figsize=(10.6, 5.4))
-    ax.axis("off")
-    y = len(kept)
-    for _, r in kept.iterrows():
-        ax.text(0, y, r.motif_id, fontsize=7.6, weight="bold", color=INK, va="center")
-        ax.text(7, y, r.dominant_class.replace("_", " "), fontsize=7.2, color=BLUE,
-                va="center")
-        ax.text(24, y, f"n={int(r.n_analytes)}  purity {r.purity:.2f}  "
-                       f"stability {r.stability:.2f}", fontsize=7.0, color=MUTED, va="center")
-        ax.text(45, y, str(r.band_centers_cm).replace(";", ", ") + " cm⁻¹",
-                fontsize=6.6, color=INK, va="center")
-        ex = [a for a in str(r.analytes).split(";")][:4]
-        ax.text(72, y, ", ".join(a[:16] for a in ex), fontsize=6.4, color=MUTED, va="center")
-        y -= 1
-    ax.set_xlim(-1, 100)
-    ax.set_ylim(0, len(kept) + 1.5)
-    ax.text(0, len(kept) + 1.1, "motif", fontsize=7, color=MUTED)
-    ax.text(7, len(kept) + 1.1, "dominant class", fontsize=7, color=MUTED)
-    ax.text(24, len(kept) + 1.1, "support", fontsize=7, color=MUTED)
-    ax.text(45, len(kept) + 1.1, "bands", fontsize=7, color=MUTED)
-    ax.text(72, len(kept) + 1.1, "representative molecules", fontsize=7, color=MUTED)
-    ax.set_title("8 — Representative motifs: the purest well-supported substructures",
-                 fontsize=11, weight="bold", color=INK, loc="left", pad=14)
-    _save(fig, "fig08_representative_motifs")
-
-
-def f09():
-    """Motif hierarchy: how the 24 components and their motifs map onto chemistry."""
-    comp = pd.read_csv(T / "lsm_components_v1.csv")
-    reg = pd.read_csv(T / "lsm_registry_v1.csv")
-    kept = reg[reg.retained]
-    fig, ax = plt.subplots(figsize=(10.6, 6.6))
-    ax.axis("off")
-    classes = (kept.groupby("dominant_class").size().sort_values(ascending=False))
-    ax.text(2, 96, "FROZEN ATLAS", fontsize=9.5, weight="bold", color=GREY)
-    ax.text(2, 92, f"{len(comp)} components — unchanged, fingerprint intact",
-            fontsize=7.4, color=MUTED)
-    ax.add_patch(Rectangle((2, 82), 96, 7, fc="#f3f4f6", ec=GREY, lw=1.1))
-    for i in range(24):
-        ax.add_patch(Rectangle((3 + i * 3.95, 83.2), 3.3, 4.6, fc="#d1d5db", ec="none"))
-        ax.text(4.65 + i * 3.95, 85.5, f"{i:02d}", fontsize=5.2, ha="center", color=INK)
-
-    ax.annotate("", xy=(50, 74), xytext=(50, 81),
-                arrowprops=dict(arrowstyle="-|>", color=BLUE, lw=1.4))
-    ax.text(52, 77.5, "deterministic decomposition (no fitting)", fontsize=7.2, color=BLUE)
-
-    ax.text(2, 71, "MOTIF LAYER", fontsize=9.5, weight="bold", color=BLUE)
-    ax.text(2, 67.5, f"{len(kept)} retained Local Spectral Motifs "
-                     f"({len(reg) - len(kept)} rejected, reasons recorded)",
-            fontsize=7.4, color=MUTED)
-    x = 2.0
-    for cls, n in classes.items():
-        w = 96 * n / classes.sum()
-        ax.add_patch(Rectangle((x, 56), max(w - 0.4, 0.6), 8, fc=BLUE, ec="white",
-                               lw=.6, alpha=.85))
-        if w > 5.5:
-            ax.text(x + w / 2, 60, f"{cls.replace('_', ' ')[:18]}\n{n}", fontsize=5.6,
-                    ha="center", va="center", color="white")
-        x += w
-    ax.text(2, 52, "motifs grouped by their dominant chemical class "
-                   "(class labels are EVALUATION ONLY — never used to build motifs)",
-            fontsize=6.8, color=MUTED)
-
-    dec = int((comp.status == "DECOMPOSED").sum())
-    irr = int((comp.status == "IRREDUCIBLE").sum())
-    al = pd.read_csv(T / "chemical_alignment_v1.csv")
-    pn = pd.read_csv(T / "purity_null_v1.csv")
-    ax.add_patch(Rectangle((2, 8), 96, 38, fc="#f9fafb", ec=LINE, lw=1.0))
-    lines = [
-        "WHAT THE LAYER DELIVERS",
-        "",
-        f"components decomposed              {dec} of {len(comp)}",
-        f"components irreducible             {irr}",
-        f"retained motifs                    {len(kept)}   "
-        f"(mean {len(kept)/len(comp):.1f} per component)",
-        f"aligned with chemistry (p<0.05)    {int(al.significant.sum())} components",
-        f"purity above a SIZE-MATCHED null   {int(pn.significant.sum())} of {len(pn)} components, "
-        f"median +{pn.gain_beyond_mechanical.median():.3f}",
-        "",
-        "The atlas, its projection and its fingerprint are unchanged. The motif layer only",
-        "redistributes an activation the frozen atlas already produced — attributed evidence",
-        "equals atlas activation to machine precision.",
+# ── 1 the complete pipeline ───────────────────────────────────────────────────
+def f01(cls_tab, summ):
+    fig, ax = plt.subplots(figsize=(10.4, 8.2))
+    ax.set_xlim(0, 100); ax.set_ylim(0, 100); ax.axis("off")
+    ax.text(0, 99, "1 — Canonical V7 Phase 01 pipeline", fontsize=12, weight="bold",
+            color=INK, va="top")
+    ax.text(0, 94.4, "Balanced references → split by chemistry class → independent "
+                     "class-local NMF → Local Spectral Motifs", fontsize=8, color=MUTED,
+            va="top")
+    steps = [
+        ("Raman grounding corpus\n375 spectra · 154 canonical molecules", "white", GREY, "Phase 00"),
+        ("BALANCED REFERENCE CONSTRUCTION\n8 arms compared · one molecule = one unit",
+         "#dbeafe", BLUE, "Stage 1"),
+        (f"split by chemistry class\n{len(cls_tab)} independent per-class datasets",
+         "#dbeafe", BLUE, ""),
+        ("INDEPENDENT CLASS-LOCAL NMF\nX_c ≈ W_c H_c · adaptive k_c · no global competition",
+         "#dbeafe", BLUE, "Stage 2"),
+        (f"LOCAL SPECTRAL MOTIFS\n{summ['n_lsms_retained']} retained · rows of H_c",
+         "#dcfce7", GREEN, ""),
     ]
-    for i, t in enumerate(lines):
-        ax.text(5, 42 - i * 3.1, t, fontsize=7.2 if i else 8.4,
-                weight="bold" if i == 0 else "normal", color=INK, family="DejaVu Sans")
-    ax.set_xlim(0, 100)
-    ax.set_ylim(0, 100)
-    ax.set_title("9 — Motif hierarchy: frozen atlas → interpretation layer",
+    y = 84
+    for i, (t, fc, ec, note) in enumerate(steps):
+        box(ax, 8, y, 66, 8.6, t, fc=fc, ec=ec, weight="bold" if i in (1, 3, 4) else "normal")
+        if note:
+            ax.text(76, y + 4.3, note, fontsize=7, color=MUTED, va="center")
+        if i < len(steps) - 1:
+            arrow(ax, (41, y), (41, y - 4.2))
+        y -= 12.8
+    box(ax, 8, 16, 66, 8.6, "Phase 02 — Consensus Spectral Motifs\nNOT STARTED",
+        fc="#f9fafb", ec=MUTED, fs=7.6)
+    ax.add_patch(FancyArrowPatch((41, 32.2), (41, 25), arrowstyle="-|>", mutation_scale=8,
+                                 color=MUTED, linewidth=1.1, linestyle=(0, (3, 2))))
+    box(ax, 8, 3, 90, 10,
+        "THE FROZEN V5 ATLAS IS NOT AN INPUT (principle P-15)\n"
+        "It is loaded only to verify its fingerprint and to serve as a baseline comparator.\n"
+        "Its 24 components appear nowhere in the construction of any LSM.",
+        fc="#fef3c7", ec=AMBER, fs=7.4)
+    save(fig, "fig01_pipeline")
+
+
+# ── 2 balanced reference arms ─────────────────────────────────────────────────
+def f02(arms, sel):
+    fig, axes = plt.subplots(1, 3, figsize=(11.6, 3.6))
+    d = arms.sort_values("effective_class_gini")
+    cols = [GREEN if a == sel["selected_arm"] else (AMBER if a == sel["control_arm"] else GREY)
+            for a in d.arm]
+    axes[0].barh(np.arange(len(d)), d.effective_class_gini, .7, color=cols)
+    axes[0].set_yticks(np.arange(len(d)))
+    axes[0].set_yticklabels(d.arm, fontsize=6.4)
+    axes[0].set_xlabel("effective class Gini  (lower = better balance)")
+    axes[0].invert_yaxis()
+
+    axes[1].barh(np.arange(len(d)), d.molecule_weight_ratio, .7, color=cols)
+    axes[1].axvline(1.0, color=GREEN, lw=1.0, ls="--")
+    axes[1].set_yticks([]); axes[1].set_xlabel("molecule weight ratio  (1.0 = perfectly balanced)")
+    axes[1].invert_yaxis()
+
+    axes[2].barh(np.arange(len(d)), d.band_fidelity, .7, color=cols)
+    ctrl = float(arms[arms.arm == sel["control_arm"]].band_fidelity.iloc[0])
+    axes[2].axvline(ctrl - 0.02, color=RED, lw=1.0, ls="--")
+    axes[2].set_yticks([]); axes[2].set_xlim(0.94, 1.0)
+    axes[2].set_xlabel("band fidelity  (red = tolerance floor)")
+    axes[2].invert_yaxis()
+    for a in axes:
+        a.spines[["top", "right"]].set_visible(False)
+    fig.suptitle(f"2 — Balanced reference construction: 8 arms\n"
+                 f"selected: {sel['selected_arm']}  ·  control (V5 behaviour) in amber",
+                 fontsize=11, weight="bold", color=INK, x=0.005, ha="left")
+    fig.tight_layout(rect=(0, 0, 1, 0.86))
+    save(fig, "fig02_reference_arms")
+
+
+# ── 3 class-wise NMF and capacity ─────────────────────────────────────────────
+def f03(cap):
+    fig, axes = plt.subplots(1, 2, figsize=(11.4, 4.2))
+    d = cap.sort_values("n_analytes", ascending=False)
+    x = np.arange(len(d))
+    axes[0].bar(x - .2, d.v5_capacity_per_molecule, .38, color=GREY,
+                label="V5 global fit (expected)")
+    axes[0].bar(x + .2, d.capacity_per_molecule, .38, color=BLUE, label="V7 class-local")
+    axes[0].set_xticks(x)
+    axes[0].set_xticklabels([c.replace("_", " ")[:18] for c in d.chemical_class],
+                            rotation=90, fontsize=6)
+    axes[0].set_ylabel("decomposition capacity per molecule")
+    axes[0].legend(fontsize=7, frameon=False)
+    axes[0].spines[["top", "right"]].set_visible(False)
+
+    axes[1].scatter(d.n_analytes, d.capacity_per_molecule, s=42, color=BLUE, zorder=3,
+                    label="V7 class-local")
+    axes[1].scatter(d.n_analytes, d.v5_capacity_per_molecule, s=28, color=GREY, zorder=2,
+                    label="V5 global (flat by construction)")
+    for _, r in d.iterrows():
+        if r.capacity_per_molecule > 0.3 or r.n_analytes >= 17:
+            axes[1].annotate(r.chemical_class.replace("_", " ")[:16],
+                             (r.n_analytes, r.capacity_per_molecule), fontsize=5.6,
+                             color=MUTED, xytext=(3, 3), textcoords="offset points")
+    axes[1].set_xlabel("molecules in the class")
+    axes[1].set_ylabel("capacity per molecule")
+    axes[1].legend(fontsize=7, frameon=False)
+    axes[1].spines[["top", "right"]].set_visible(False)
+    fig.suptitle("3 — Capacity reallocation: rare chemistry gets its own decomposition\n"
+                 "V5 allocated 24 components globally; V7 fits every class alone",
+                 fontsize=11, weight="bold", color=INK, x=0.005, ha="left")
+    fig.tight_layout(rect=(0, 0, 1, 0.87))
+    save(fig, "fig03_capacity_allocation")
+
+
+# ── 4 k_c optimisation curves ─────────────────────────────────────────────────
+def f04(sweep, ksel):
+    classes = ksel.sort_values("k", ascending=False).chemical_class.tolist()[:9]
+    fig, axes = plt.subplots(3, 3, figsize=(11.2, 8.2), sharex=False)
+    for ax, cls in zip(axes.ravel(), classes):
+        d = sweep[sweep.chemical_class == cls].sort_values("k")
+        s = ksel[ksel.chemical_class == cls].iloc[0]
+        ax.plot(d.k, d.composite, "-o", ms=3, color=BLUE, lw=1.2)
+        lo, hi = float(s.plateau_start), float(s.plateau_end)
+        ax.axvspan(lo - .3, hi + .3, color="#dbeafe", zorder=0, label="plateau")
+        ax.axvline(s.k, color=GREEN, lw=1.4)
+        ax.axvline(s.best_k, color=AMBER, lw=1.0, ls="--")
+        ax.set_title(f"{cls.replace('_', ' ')}  (n={int(s.get('n', 0)) or ''})\n"
+                     f"k_c = {int(s.k)}   argmax {int(s.best_k)}",
+                     fontsize=7.4, color=INK, loc="left")
+        ax.set_xlabel("k"); ax.tick_params(labelsize=6.5)
+        ax.spines[["top", "right"]].set_visible(False)
+    for ax in axes.ravel()[len(classes):]:
+        ax.axis("off")
+    axes[0, 0].set_ylabel("composite")
+    fig.suptitle("4 — Adaptive k_c: the composite sweep per class\n"
+                 "green = selected (smallest on the contiguous plateau) · amber dashed = argmax",
+                 fontsize=11, weight="bold", color=INK, x=0.005, ha="left")
+    fig.tight_layout(rect=(0, 0, 1, 0.93))
+    save(fig, "fig04_kc_optimisation")
+
+
+# ── 5 basis spectra ───────────────────────────────────────────────────────────
+def f05(lsms, grid):
+    by = {}
+    for m in lsms:
+        by.setdefault(m.chemical_class, []).append(m)
+    classes = sorted(by, key=lambda c: -len(by[c]))[:6]
+    fig, axes = plt.subplots(len(classes), 1, figsize=(9.6, 2.1 * len(classes)), sharex=True)
+    for ax, cls in zip(np.atleast_1d(axes), classes):
+        for j, m in enumerate(sorted(by[cls], key=lambda m: m.index_in_class)):
+            v = m.spectrum / (m.spectrum.max() + 1e-12)
+            ax.plot(grid, v, lw=1.1, color=PAL[j % len(PAL)],
+                    label=f"{m.motif_id} · {m.lsm_type} (n={m.n_analytes})")
+        ax.set_title(f"{cls.replace('_', ' ')}  —  k_c = {by[cls][0].k_c}",
+                     fontsize=8.4, loc="left", color=INK)
+        ax.set_ylabel("norm.")
+        ax.legend(fontsize=5.8, frameon=False, loc="upper right", ncol=2)
+        ax.spines[["top", "right"]].set_visible(False)
+    np.atleast_1d(axes)[-1].set_xlabel("Raman shift (cm$^{-1}$)")
+    fig.suptitle("5 — Local Spectral Motif basis spectra (rows of the class-local H_c)\n"
+                 "newly fitted basis vectors — not restrictions of any existing component",
+                 fontsize=11, weight="bold", color=INK, x=0.005, ha="left")
+    fig.tight_layout(rect=(0, 0, 1, 0.955))
+    save(fig, "fig05_basis_spectra")
+
+
+# ── 6 activation heatmap ──────────────────────────────────────────────────────
+def f06(part_tab, reg_tab):
+    kept = reg_tab[reg_tab.retained]
+    mol = sorted(part_tab.canonical_id.unique())
+    M = pd.DataFrame(0, index=mol, columns=kept.motif_id.tolist())
+    for _, r in part_tab.iterrows():
+        if r.motif_id in M.columns:
+            M.loc[r.canonical_id, r.motif_id] = 1
+    cls_of = dict(zip(reg_tab.motif_id, reg_tab.chemical_class))
+    order = sorted(M.index, key=lambda a: (part_tab[part_tab.canonical_id == a]
+                                           .chemical_class.iloc[0], a))
+    D = M.loc[order]
+    fig, ax = plt.subplots(figsize=(11.2, 8.4))
+    ax.imshow(D.values, aspect="auto", cmap="Blues", vmin=0, vmax=1, interpolation="nearest")
+    ax.set_yticks(range(len(order)))
+    ax.set_yticklabels(order, fontsize=4.2)
+    ax.set_xticks(range(D.shape[1]))
+    ax.set_xticklabels(D.columns, rotation=90, fontsize=5)
+    prev, bounds = None, []
+    for i, c in enumerate(D.columns):
+        if cls_of.get(c) != prev:
+            bounds.append(i - .5); prev = cls_of.get(c)
+    for b in bounds[1:]:
+        ax.axvline(b, color=RED, lw=.8)
+    ax.set_title("6 — Molecule × LSM participation, blocked by chemistry class\n"
+                 "red lines separate independent class-local fits — no motif spans a boundary",
                  fontsize=11, weight="bold", color=INK, loc="left", pad=12)
-    _save(fig, "fig09_motif_hierarchy")
+    save(fig, "fig06_activation_heatmap")
+
+
+# ── 7 stability and quality ───────────────────────────────────────────────────
+def f07(reg_tab, cls_tab):
+    kept = reg_tab[reg_tab.retained]
+    fig, axes = plt.subplots(1, 3, figsize=(11.4, 3.3))
+    axes[0].hist(kept.stability, bins=12, color=GREEN, edgecolor="white", lw=.5)
+    axes[0].axvline(0.60, color=RED, lw=1.1, ls="--")
+    axes[0].text(0.60, axes[0].get_ylim()[1] * .95, " reject < 0.60", fontsize=6.4,
+                 color=RED, va="top")
+    axes[0].set_xlabel("recurrence stability")
+    axes[0].set_ylabel("LSMs")
+
+    axes[1].hist(kept.activation_sparsity, bins=12, color=BLUE, edgecolor="white", lw=.5)
+    axes[1].set_xlabel("activation sparsity  (selectivity)")
+
+    d = cls_tab.sort_values("explained_variance")
+    axes[2].barh(np.arange(len(d)), d.explained_variance, .7, color=AMBER)
+    axes[2].set_yticks(np.arange(len(d)))
+    axes[2].set_yticklabels([c.replace("_", " ")[:18] for c in d.chemical_class], fontsize=5.6)
+    axes[2].set_xlabel("class-local explained variance")
+    for a in axes:
+        a.spines[["top", "right"]].set_visible(False)
+    fig.suptitle("7 — LSM stability, selectivity and per-class reconstruction",
+                 fontsize=11, weight="bold", color=INK, x=0.005, ha="left")
+    fig.tight_layout(rect=(0, 0, 1, 0.88))
+    save(fig, "fig07_stability_quality")
+
+
+# ── 8 LSM typing ──────────────────────────────────────────────────────────────
+def f08(cls_tab):
+    d = cls_tab.sort_values("n_analytes", ascending=False)
+    fig, ax = plt.subplots(figsize=(10.4, 4.4))
+    x = np.arange(len(d))
+    b = np.zeros(len(d))
+    for col, colr, lab in (("n_class_shared", BLUE, "class-shared"),
+                           ("n_subfamily", GREEN, "subfamily"),
+                           ("n_discriminating", AMBER, "molecule-discriminating")):
+        ax.bar(x, d[col], .72, bottom=b, color=colr, label=lab)
+        b = b + d[col].values
+    ax.set_xticks(x)
+    ax.set_xticklabels([f"{c.replace('_', ' ')[:20]}  (n={n}, k={k})"
+                        for c, n, k in zip(d.chemical_class, d.n_analytes, d.k_c)],
+                       rotation=90, fontsize=6)
+    ax.set_ylabel("retained LSMs")
+    ax.legend(fontsize=7, frameon=False)
+    ax.spines[["top", "right"]].set_visible(False)
+    ax.set_title("8 — LSM typing per class\n"
+                 "typing is required by Phase 02: class-shared motifs may be merged across "
+                 "classes, molecule-discriminating ones must not",
+                 fontsize=11, weight="bold", color=INK, loc="left", pad=12)
+    save(fig, "fig08_lsm_typing")
+
+
+# ── 9 reconstruction examples ─────────────────────────────────────────────────
+def f09(lsms, grid):
+    Z = np.load(A / "balanced_references_v1.npz", allow_pickle=True)
+    X = np.asarray(Z["X"], float)
+    cid = np.array([str(c) for c in Z["canonical_id"]])
+    from scipy.optimize import nnls
+    by = {}
+    for m in lsms:
+        by.setdefault(m.chemical_class, []).append(m)
+    picks = sorted(by, key=lambda c: -len(by[c]))[:4]
+    fig, axes = plt.subplots(len(picks), 1, figsize=(9.6, 2.3 * len(picks)), sharex=True)
+    for ax, cls in zip(np.atleast_1d(axes), picks):
+        H = np.vstack([m.spectrum for m in by[cls]])
+        mols = sorted({a for m in by[cls] for a in m.analytes})
+        if not mols:
+            continue
+        mol = mols[0]
+        rowsel = np.where(cid == mol)[0]
+        x = X[rowsel].mean(axis=0)
+        w, _ = nnls(H.T, np.maximum(x, 0))
+        r = w @ H
+        ax.plot(grid, x, lw=1.2, color=INK, label=f"{mol}  (balanced reference)")
+        ax.plot(grid, r, lw=1.1, color=BLUE, ls="--",
+                label=f"class-local reconstruction (k_c={len(by[cls])})")
+        ax.fill_between(grid, 0, np.abs(x - r), color=RED, alpha=.25, label="residual")
+        ax.set_title(cls.replace("_", " "), fontsize=8.4, loc="left", color=INK)
+        ax.legend(fontsize=6, frameon=False)
+        ax.spines[["top", "right"]].set_visible(False)
+    np.atleast_1d(axes)[-1].set_xlabel("Raman shift (cm$^{-1}$)")
+    fig.suptitle("9 — Reconstruction from the class-local basis alone",
+                 fontsize=11, weight="bold", color=INK, x=0.005, ha="left")
+    fig.tight_layout(rect=(0, 0, 1, 0.95))
+    save(fig, "fig09_reconstruction")
+
+
+# ── 10 architecture compliance ────────────────────────────────────────────────
+def f10(comp):
+    fig, ax = plt.subplots(figsize=(11.2, 6.6))
+    ax.set_xlim(0, 100); ax.set_ylim(0, 100); ax.axis("off")
+    ax.text(0, 99, "10 — Architecture compliance", fontsize=12, weight="bold", color=INK,
+            va="top")
+    n_pass = int((comp.status == "PASS").sum())
+    ax.text(0, 94.4, f"{n_pass} of {len(comp)} specification items PASS — the gate opens only "
+                     f"if every row passes", fontsize=8, color=MUTED, va="top")
+    y = 88
+    for _, r in comp.iterrows():
+        col = GREEN if r.status == "PASS" else RED
+        ax.text(1, y, "✓" if r.status == "PASS" else "✗", fontsize=9, color=col,
+                weight="bold", va="center")
+        ax.text(4, y, r.specification_item[:74], fontsize=7.0, color=INK, va="center")
+        ax.text(62, y, r.evidence[:60], fontsize=6.2, color=MUTED, va="center")
+        y -= 4.6
+    save(fig, "fig10_architecture_compliance")
 
 
 if __name__ == "__main__":
     print(f"writing Phase 01 figures to {F}")
-    df, motifs, man = load()
-    comp = pd.read_csv(T / "lsm_components_v1.csv")
-    f01(comp)
-    f02(motifs)
-    f03(motifs)
-    f04(df)
-    f05()
-    f06(df)
-    f07(motifs)
-    f08(df)
-    f09()
-    print("done — 9 figures (SVG vector + PNG preview)")
+    reg_tab, H, ids, man = SER.load_registry(A)
+    lsms = SER.lsms_from_table(reg_tab, H, ids)
+    grid = np.asarray(np.load(A / "balanced_references_v1.npz", allow_pickle=True)["grid"], float)
+    cls_tab = pd.read_csv(T / "lsm_classes_v1.csv")
+    arms = pd.read_csv(T / "reference_arm_comparison_v1.csv")
+    sel = json.loads((A / "reference_arm_selection_v1.json").read_text())
+    cap = pd.read_csv(T / "capacity_allocation_v1.csv")
+    sweep = pd.read_csv(T / "kc_sweep_v1.csv")
+    ksel = pd.read_csv(T / "kc_selection_v1.csv")
+    part_tab = pd.read_csv(T / "lsm_participation_v1.csv")
+    comp = pd.read_csv(T / "architecture_compliance_v1.csv")
+    f01(cls_tab, man["summary"])
+    f02(arms, sel)
+    f03(cap)
+    f04(sweep, ksel)
+    f05(lsms, grid)
+    f06(part_tab, reg_tab)
+    f07(reg_tab, cls_tab)
+    f08(cls_tab)
+    f09(lsms, grid)
+    f10(comp)
+    print("done — 10 figures (SVG vector + PNG preview)")

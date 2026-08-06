@@ -1,0 +1,79 @@
+{
+  "schema": "gaira_v7_control_experiment_state_v1",
+  "classification": "CONTROL EXPERIMENT — NOT CANONICAL V7",
+  "reclassified_by": "GAIRA_v7_rebuild/context/ARCHITECTURE_COMPLIANCE_AUDIT.md",
+  "reason": "Decomposes the FROZEN V5 atlas. The approved V7 architecture derives Local Spectral Motifs from an independent class-local NMF over balanced references — a different object entirely.",
+  "object_name": "Atlas Component Substructure (ACS)",
+  "role": "no-fitting baseline: how much chemical resolution is recoverable from the existing atlas with zero learned parameters. The canonical class-local Phase 01 must beat this.",
+  "results_retained": true,
+  "phase": "control",
+  "phase_name": "Frozen-atlas decomposition (CONTROL EXPERIMENT — not canonical V7)",
+  "status": "COMPLETE",
+  "completed_utc": "2026-08-06T05:20:26.047319+00:00",
+  "atlas_fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "atlas_unchanged": true,
+  "registry_fingerprint": "e018570cab71c3fd8f73984013bbd1ff",
+  "deterministic": true,
+  "motifs": {
+    "retained": 98,
+    "rejected": 30,
+    "decomposed_components": 23,
+    "irreducible_components": 1,
+    "not_analysable_components": 0
+  },
+  "science": {
+    "components_aligned_with_chemistry_p05": 23,
+    "components_purity_above_size_matched_null": 22,
+    "median_purity_gain_raw": 0.2226,
+    "median_purity_gain_beyond_mechanical": 0.1447,
+    "analyte_coverage": 1.0
+  },
+  "gates": [
+    {
+      "gate": "implementation_complete",
+      "passed": true,
+      "evidence": "98 motifs retained across 23 decomposed components"
+    },
+    {
+      "gate": "atlas_unchanged",
+      "passed": true,
+      "evidence": "basis array identical before and after; max abs difference 0.0"
+    },
+    {
+      "gate": "fingerprint_unchanged",
+      "passed": true,
+      "evidence": "recomputed 09ed804a40836f4a05a91ba10900cded"
+    },
+    {
+      "gate": "deterministic",
+      "passed": true,
+      "evidence": "3 independent runs produced identical motif spectra"
+    },
+    {
+      "gate": "registry_generated",
+      "passed": true,
+      "evidence": "registry integrity checks pass"
+    },
+    {
+      "gate": "projection_conserved",
+      "passed": true,
+      "evidence": "attributed evidence equals atlas activation (max error 2.22e-16)"
+    },
+    {
+      "gate": "validation_passed",
+      "passed": true,
+      "evidence": "alignment, ambiguity, redundancy, coverage, reproducibility all measured"
+    },
+    {
+      "gate": "scientific_benefit_demonstrated",
+      "passed": true,
+      "evidence": "23 components align with chemistry beyond a permutation null (p<0.05); 22 exceed a SIZE-MATCHED random partition on purity, so the gain is not the mechanical effect of cutting a set into more pieces"
+    },
+    {
+      "gate": "reproducibility_measured",
+      "passed": true,
+      "evidence": "cross-source and replicate agreement measured on 78 component-subset pairs"
+    }
+  ],
+  "supersedes_nothing": true
+}
