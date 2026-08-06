@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="617.4pt" height="391.824pt" viewBox="0 0 617.4 391.824" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-05T20:39:51.212141</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 391.824 
+L 617.4 391.824 
+L 617.4 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 60.2784 298.36512 
+L 320.5296 298.36512 
+L 320.5296 93.45888 
+L 60.2784 93.45888 
+z
+" clip-path="url(#pd9b8fe14cd)" style="fill: #f9fafb; stroke: #9ca3af; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 108.871168 260.986365 
+Q 122.38362 252.627231 134.374784 245.209204 
+" clip-path="url(#pd9b8fe14cd)" style="fill: none; stroke: #059669; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 130.81167 245.532024 
+L 134.374784 245.209204 
+L 132.495172 248.253388 
+z
+" clip-path="url(#pd9b8fe14cd)" style="fill: #059669; stroke: #059669; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 138.446612 242.690272 
+Q 154.916206 232.501777 169.864512 223.25439 
+" clip-path="url(#pd9b8fe14cd)" style="fill: none; stroke: #059669; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 166.301398 223.57721 
+L 169.864512 223.25439 
+L 167.9849 226.298574 
+z
+" clip-path="url(#pd9b8fe14cd)" style="fill: #059669; stroke: #059669; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 173.874762 220.648263 
+Q 190.403885 208.718723 205.482481 197.83607 
+" clip-path="url(#pd9b8fe14cd)" style="fill: none; stroke: #059669; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 201.951336 198.411407 
+L 205.482481 197.83607 
+L 203.824064 201.006188 
+z
+" clip-path="url(#pd9b8fe14cd)" style="fill: #059669; stroke: #059669; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 209.215187 194.856095 
+Q 222.934631 181.276601 235.382696 168.955517 
+" clip-path="url(#pd9b8fe14cd)" style="fill: none; stroke: #059669; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 231.982829 170.069473 
+L 235.382696 168.955517 
+L 234.233941 172.343785 
+z
+" clip-path="url(#pd9b8fe14cd)" style="fill: #059669; stroke: #059669; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 238.500017 165.356872 
+Q 246.59507 152.002745 253.762818 140.178359 
+" clip-path="url(#pd9b8fe14cd)" style="fill: none; stroke: #059669; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 250.735765 142.085437 
+L 253.762818 140.178359 
+L 253.472249 143.744249 
+z
+" clip-path="url(#pd9b8fe14cd)" style="fill: #059669; stroke: #059669; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 255.92745 135.942514 
+Q 258.423496 128.221938 260.369253 122.203473 
+" clip-path="url(#pd9b8fe14cd)" style="fill: none; stroke: #059669; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 257.862452 124.756109 
+L 260.369253 122.203473 
+L 260.907281 125.740496 
+z
+" clip-path="url(#pd9b8fe14cd)" style="fill: #059669; stroke: #059669; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 108.697341 260.753487 
+Q 184.490808 190.421948 260.284275 120.090408 
+" clip-path="url(#pd9b8fe14cd)" style="fill: none; stroke-dasharray: 4.8,2.4; stroke-dashoffset: 0; stroke: #b45309; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 350.198237 173.972396 
+L 580.686163 173.972396 
+Q 580.804459 173.972396 580.804459 173.899215 
+L 580.804459 93.517425 
+Q 580.804459 93.444244 580.686163 93.444244 
+L 350.198237 93.444244 
+Q 350.079941 93.444244 350.079941 93.517425 
+L 350.079941 173.899215 
+Q 350.079941 173.972396 350.198237 173.972396 
+z
+" clip-path="url(#pd9b8fe14cd)" style="fill: #dcfce7; stroke: #15803d; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 350.198237 258.130316 
+L 580.686163 258.130316 
+Q 580.804459 258.130316 580.804459 258.057135 
+L 580.804459 181.334385 
+Q 580.804459 181.261204 580.686163 181.261204 
+L 350.198237 181.261204 
+Q 350.079941 181.261204 350.079941 181.334385 
+L 350.079941 258.057135 
+Q 350.079941 258.130316 350.198237 258.130316 
+z
+" clip-path="url(#pd9b8fe14cd)" style="fill: #ffffff; stroke: #374151; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 350.198237 334.970156 
+L 580.686163 334.970156 
+Q 580.804459 334.970156 580.804459 334.896975 
+L 580.804459 265.492305 
+Q 580.804459 265.419124 580.686163 265.419124 
+L 350.198237 265.419124 
+Q 350.079941 265.419124 350.079941 265.492305 
+L 350.079941 334.896975 
+Q 350.079941 334.970156 350.198237 334.970156 
+z
+" clip-path="url(#pd9b8fe14cd)" style="fill: #fee2e2; stroke: #b91c1c; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1a1a1a" x="12.96" y="26.117087" transform="rotate(-0 12.96 26.117087)">10 — Future DART concept: BSV trajectories in a fixed coordinate system</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="12.96" y="40.413151" transform="rotate(-0 12.96 40.413151)">Conceptual schematic — no data. Illustrates why the BSV must be absolute, continuous, and non-negative.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6b7280" x="190.404" y="80.65224" transform="rotate(-0 190.404 80.65224)">fixed BSV coordinate system  (frozen atlas)</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7.4px; font-family: 'DejaVu Sans'; fill: #6b7280" transform="translate(50.387831 223.133594) rotate(-90)">theme axis  t_j</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 7.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6b7280" x="190.404" y="311.17176" transform="rotate(-0 190.404 311.17176)">theme axis  t_i</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="117.06048" y="268.360992" transform="rotate(-0 117.06048 268.360992)">t0</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="146.63448" y="250.065792" transform="rotate(-0 146.63448 250.065792)">t1</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="182.12328" y="228.111552" transform="rotate(-0 182.12328 228.111552)">t2</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="217.61208" y="202.498272" transform="rotate(-0 217.61208 202.498272)">t3</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="247.18608" y="173.225952" transform="rotate(-0 247.18608 173.225952)">t4</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="264.93048" y="143.953632" transform="rotate(-0 264.93048 143.953632)">t5</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="270.84528" y="125.658432" transform="rotate(-0 270.84528 125.658432)">t6</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; fill: #374151" transform="translate(84.483381 278.650585)">baseline</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; fill: #374151" transform="translate(82.308444 286.781792)">BSV(E, t₀)</text>
+   </g>
+   <g id="text_14">
+    <g id="patch_13">
+     <path d="M 161.028867 154.818504 
+L 219.779133 154.818504 
+Q 221.159133 154.818504 221.159133 153.438504 
+L 221.159133 138.247669 
+Q 221.159133 136.867669 219.779133 136.867669 
+L 161.028867 136.867669 
+Q 159.648867 136.867669 159.648867 138.247669 
+L 159.648867 153.438504 
+Q 159.648867 154.818504 161.028867 154.818504 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 6.9px; font-family: 'DejaVu Sans'; fill: #b45309" transform="translate(181.187109 143.490591)">ΔBSV</text>
+    <text style="font-size: 6.9px; font-family: 'DejaVu Sans'; fill: #b45309" transform="translate(161.028867 152.00352)">(derived, signed)</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(401.737903 106.308652)">EACH POINT IS AN ABSOLUTE BSV</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(465.4422 116.131718)"/>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(406.931653 125.954785)">BSV(E, t) = Sᵀ c(x(E,t)) ∈ ℝ₊^K</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(465.4422 135.777851)"/>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(379.09845 145.600918)">A trajectory is only meaningful because every</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(375.98595 155.423984)">point sits in the SAME fixed frame. The frame is</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(397.311145 165.24705)">frozen before the experiment starts.</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(395.770544 197.682639)">DERIVED QUANTITIES  (none is a BSV)</text>
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(465.4422 207.243756)"/>
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(387.73313 216.804874)">displacement   BSV(tᵢ) − BSV(t₀)      signed</text>
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(387.397786 226.365992)">velocity           d BSV / dt                  signed</text>
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(398.293036 235.97342)">path length     Σ ‖BSV(tᵢ₊₁) − BSV(tᵢ)‖</text>
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(392.981716 245.737569)">direction         normalised displacement</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(416.376505 273.52563)">WHAT DART MUST NOT DO</text>
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(465.4422 283.086748)"/>
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(411.472958 292.647866)">✗ trajectory-specific re-fitting</text>
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(387.813544 302.208984)">✗ per-run normalisation  (breaks cross-run</text>
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(395.169434 311.770102)">     comparability — the point of DART)</text>
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(401.052778 321.33122)">✗ hard classification per time point</text>
+    <text style="font-size: 7.3px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(385.729052 330.892338)">✗ cohort standardisation inside a trajectory</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="12.96" y="362.772059" transform="rotate(-0 12.96 362.772059)">Requirements this places on V7: absolute BSV · fixed frozen frame · continuous non-negative activations · per-point uncertainty · support-aware uncertainty inflation.</text>
+   </g>
+   <g id="line2d_1">
+    <defs>
+     <path id="m241c12771a" d="M 0 2.75 
+C 0.729309 2.75 1.428845 2.460243 1.944544 1.944544 
+C 2.460243 1.428845 2.75 0.729309 2.75 0 
+C 2.75 -0.729309 2.460243 -1.428845 1.944544 -1.944544 
+C 1.428845 -2.460243 0.729309 -2.75 0 -2.75 
+C -0.729309 -2.75 -1.428845 -2.460243 -1.944544 -1.944544 
+C -2.460243 -1.428845 -2.75 -0.729309 -2.75 0 
+C -2.75 0.729309 -2.460243 1.428845 -1.944544 1.944544 
+C -1.428845 2.460243 -0.729309 2.75 0 2.75 
+z
+" style="stroke: #059669"/>
+    </defs>
+    <g clip-path="url(#pd9b8fe14cd)">
+     <use xlink:href="#m241c12771a" x="107.5968" y="261.77472" style="fill: #059669; stroke: #059669"/>
+    </g>
+   </g>
+   <g id="line2d_2">
+    <g clip-path="url(#pd9b8fe14cd)">
+     <use xlink:href="#m241c12771a" x="137.1708" y="243.47952" style="fill: #059669; stroke: #059669"/>
+    </g>
+   </g>
+   <g id="line2d_3">
+    <g clip-path="url(#pd9b8fe14cd)">
+     <use xlink:href="#m241c12771a" x="172.6596" y="221.52528" style="fill: #059669; stroke: #059669"/>
+    </g>
+   </g>
+   <g id="line2d_4">
+    <g clip-path="url(#pd9b8fe14cd)">
+     <use xlink:href="#m241c12771a" x="208.1484" y="195.912" style="fill: #059669; stroke: #059669"/>
+    </g>
+   </g>
+   <g id="line2d_5">
+    <g clip-path="url(#pd9b8fe14cd)">
+     <use xlink:href="#m241c12771a" x="237.7224" y="166.63968" style="fill: #059669; stroke: #059669"/>
+    </g>
+   </g>
+   <g id="line2d_6">
+    <g clip-path="url(#pd9b8fe14cd)">
+     <use xlink:href="#m241c12771a" x="255.4668" y="137.36736" style="fill: #059669; stroke: #059669"/>
+    </g>
+   </g>
+   <g id="line2d_7">
+    <g clip-path="url(#pd9b8fe14cd)">
+     <use xlink:href="#m241c12771a" x="261.3816" y="119.07216" style="fill: #059669; stroke: #059669"/>
+    </g>
+   </g>
+   <g id="line2d_8">
+    <defs>
+     <path id="m60f265fd20" d="M 0 4 
+C 1.060812 4 2.078319 3.578535 2.828427 2.828427 
+C 3.578535 2.078319 4 1.060812 4 0 
+C 4 -1.060812 3.578535 -2.078319 2.828427 -2.828427 
+C 2.078319 -3.578535 1.060812 -4 0 -4 
+C -1.060812 -4 -2.078319 -3.578535 -2.828427 -2.828427 
+C -3.578535 -2.078319 -4 -1.060812 -4 0 
+C -4 1.060812 -3.578535 2.078319 -2.828427 2.828427 
+C -2.078319 3.578535 -1.060812 4 0 4 
+z
+" style="stroke: #374151"/>
+    </defs>
+    <g clip-path="url(#pd9b8fe14cd)">
+     <use xlink:href="#m60f265fd20" x="107.5968" y="261.77472" style="fill: #374151; stroke: #374151"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd9b8fe14cd">
+   <rect x="12.96" y="12.96" width="591.48" height="365.904"/>
+  </clipPath>
+ </defs>
+</svg>

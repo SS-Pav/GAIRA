@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="561.6pt" height="602.496pt" viewBox="0 0 561.6 602.496" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-05T20:39:49.728817</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 602.496 
+L 561.6 602.496 
+L 561.6 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 259.3728 95.181905 
+Q 259.3728 97.573125 259.3728 98.622703 
+" clip-path="url(#pcb3c689a0f)" style="fill: none; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 260.7728 95.822703 
+L 259.3728 98.622703 
+L 257.9728 95.822703 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #2563eb; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 259.3728 135.253937 
+Q 259.3728 137.645157 259.3728 138.694735 
+" clip-path="url(#pcb3c689a0f)" style="fill: none; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 260.7728 135.894735 
+L 259.3728 138.694735 
+L 257.9728 135.894735 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #2563eb; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 259.3728 175.325969 
+Q 259.3728 177.717189 259.3728 178.766767 
+" clip-path="url(#pcb3c689a0f)" style="fill: none; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 260.7728 175.966767 
+L 259.3728 178.766767 
+L 257.9728 175.966767 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #2563eb; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 259.3728 215.398001 
+Q 259.3728 217.789221 259.3728 218.838799 
+" clip-path="url(#pcb3c689a0f)" style="fill: none; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 260.7728 216.038799 
+L 259.3728 218.838799 
+L 257.9728 216.038799 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #2563eb; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 259.3728 255.470033 
+Q 259.3728 257.861253 259.3728 258.910831 
+" clip-path="url(#pcb3c689a0f)" style="fill: none; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 260.7728 256.110831 
+L 259.3728 258.910831 
+L 257.9728 256.110831 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #2563eb; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 259.3728 295.542065 
+Q 259.3728 297.933285 259.3728 298.982863 
+" clip-path="url(#pcb3c689a0f)" style="fill: none; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 260.7728 296.182863 
+L 259.3728 298.982863 
+L 257.9728 296.182863 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #2563eb; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 259.3728 335.614097 
+Q 259.3728 338.005317 259.3728 339.054895 
+" clip-path="url(#pcb3c689a0f)" style="fill: none; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 260.7728 336.254895 
+L 259.3728 339.054895 
+L 257.9728 336.254895 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #2563eb; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 259.3728 375.686129 
+Q 259.3728 378.077349 259.3728 379.126927 
+" clip-path="url(#pcb3c689a0f)" style="fill: none; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 260.7728 376.326927 
+L 259.3728 379.126927 
+L 257.9728 376.326927 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #2563eb; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 259.3728 415.758161 
+Q 259.3728 418.149381 259.3728 419.198959 
+" clip-path="url(#pcb3c689a0f)" style="fill: none; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 260.7728 416.398959 
+L 259.3728 419.198959 
+L 257.9728 416.398959 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #2563eb; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 259.3728 455.830193 
+Q 259.3728 458.221413 259.3728 459.270991 
+" clip-path="url(#pcb3c689a0f)" style="fill: none; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 260.7728 456.470991 
+L 259.3728 459.270991 
+L 257.9728 456.470991 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #2563eb; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 259.3728 495.902225 
+Q 259.3728 498.293445 259.3728 499.343023 
+" clip-path="url(#pcb3c689a0f)" style="fill: none; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 260.7728 496.543023 
+L 259.3728 499.343023 
+L 257.9728 496.543023 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #2563eb; stroke: #2563eb; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 55.900109 93.703703 
+L 462.845491 93.703703 
+Q 462.952627 93.703703 462.952627 93.588388 
+L 462.952627 61.484636 
+Q 462.952627 61.369321 462.845491 61.369321 
+L 55.900109 61.369321 
+Q 55.792973 61.369321 55.792973 61.484636 
+L 55.792973 93.588388 
+Q 55.792973 93.703703 55.900109 93.703703 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #ffffff; stroke: #374151; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 55.900109 133.775735 
+L 462.845491 133.775735 
+Q 462.952627 133.775735 462.952627 133.66042 
+L 462.952627 101.556668 
+Q 462.952627 101.441353 462.845491 101.441353 
+L 55.900109 101.441353 
+Q 55.792973 101.441353 55.792973 101.556668 
+L 55.792973 133.66042 
+Q 55.792973 133.775735 55.900109 133.775735 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #f3f4f6; stroke: #6b7280; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 55.900109 173.847767 
+L 462.845491 173.847767 
+Q 462.952627 173.847767 462.952627 173.732452 
+L 462.952627 141.6287 
+Q 462.952627 141.513385 462.845491 141.513385 
+L 55.900109 141.513385 
+Q 55.792973 141.513385 55.792973 141.6287 
+L 55.792973 173.732452 
+Q 55.792973 173.847767 55.900109 173.847767 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #dbeafe; stroke: #2563eb; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 55.900109 213.919799 
+L 462.845491 213.919799 
+Q 462.952627 213.919799 462.952627 213.804484 
+L 462.952627 181.700732 
+Q 462.952627 181.585417 462.845491 181.585417 
+L 55.900109 181.585417 
+Q 55.792973 181.585417 55.792973 181.700732 
+L 55.792973 213.804484 
+Q 55.792973 213.919799 55.900109 213.919799 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #dbeafe; stroke: #2563eb; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 55.900109 253.991831 
+L 462.845491 253.991831 
+Q 462.952627 253.991831 462.952627 253.876516 
+L 462.952627 221.772764 
+Q 462.952627 221.657449 462.845491 221.657449 
+L 55.900109 221.657449 
+Q 55.792973 221.657449 55.792973 221.772764 
+L 55.792973 253.876516 
+Q 55.792973 253.991831 55.900109 253.991831 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #dbeafe; stroke: #2563eb; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 55.900109 294.063863 
+L 462.845491 294.063863 
+Q 462.952627 294.063863 462.952627 293.948548 
+L 462.952627 261.844796 
+Q 462.952627 261.729481 462.845491 261.729481 
+L 55.900109 261.729481 
+Q 55.792973 261.729481 55.792973 261.844796 
+L 55.792973 293.948548 
+Q 55.792973 294.063863 55.900109 294.063863 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #dbeafe; stroke: #2563eb; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 55.900109 334.135895 
+L 462.845491 334.135895 
+Q 462.952627 334.135895 462.952627 334.02058 
+L 462.952627 301.916828 
+Q 462.952627 301.801513 462.845491 301.801513 
+L 55.900109 301.801513 
+Q 55.792973 301.801513 55.792973 301.916828 
+L 55.792973 334.02058 
+Q 55.792973 334.135895 55.900109 334.135895 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #dbeafe; stroke: #2563eb; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 55.900109 374.207927 
+L 462.845491 374.207927 
+Q 462.952627 374.207927 462.952627 374.092612 
+L 462.952627 341.98886 
+Q 462.952627 341.873545 462.845491 341.873545 
+L 55.900109 341.873545 
+Q 55.792973 341.873545 55.792973 341.98886 
+L 55.792973 374.092612 
+Q 55.792973 374.207927 55.900109 374.207927 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #dbeafe; stroke: #2563eb; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 55.900109 414.279959 
+L 462.845491 414.279959 
+Q 462.952627 414.279959 462.952627 414.164644 
+L 462.952627 382.060892 
+Q 462.952627 381.945577 462.845491 381.945577 
+L 55.900109 381.945577 
+Q 55.792973 381.945577 55.792973 382.060892 
+L 55.792973 414.164644 
+Q 55.792973 414.279959 55.900109 414.279959 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #dbeafe; stroke: #2563eb; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 55.900109 454.351991 
+L 462.845491 454.351991 
+Q 462.952627 454.351991 462.952627 454.236676 
+L 462.952627 422.132924 
+Q 462.952627 422.017609 462.845491 422.017609 
+L 55.900109 422.017609 
+Q 55.792973 422.017609 55.792973 422.132924 
+L 55.792973 454.236676 
+Q 55.792973 454.351991 55.900109 454.351991 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #dbeafe; stroke: #2563eb; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 55.900109 494.424023 
+L 462.845491 494.424023 
+Q 462.952627 494.424023 462.952627 494.308708 
+L 462.952627 462.204956 
+Q 462.952627 462.089641 462.845491 462.089641 
+L 55.900109 462.089641 
+Q 55.792973 462.089641 55.792973 462.204956 
+L 55.792973 494.308708 
+Q 55.792973 494.424023 55.900109 494.424023 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #dbeafe; stroke: #2563eb; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 55.900109 534.496055 
+L 462.845491 534.496055 
+Q 462.952627 534.496055 462.952627 534.38074 
+L 462.952627 502.276988 
+Q 462.952627 502.161673 462.845491 502.161673 
+L 55.900109 502.161673 
+Q 55.792973 502.161673 55.792973 502.276988 
+L 55.792973 534.38074 
+Q 55.792973 534.496055 55.900109 534.496055 
+z
+" clip-path="url(#pcb3c689a0f)" style="fill: #dcfce7; stroke: #15803d; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1a1a1a" x="12.96" y="28.223807" transform="rotate(-0 12.96 28.223807)">2 — V7 learning-mode pipeline (offline)</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="12.96" y="52.632127" transform="rotate(-0 12.96 52.632127)">Every arrow is a defined computational operation. All fitting happens here and nowhere else.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(199.338425 74.505043)">Raw Raman grounding corpus</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(167.83905 84.982981)">375 spectra · 167 analytes · pure Raman only</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(210.9503 114.577075)">canonical preprocessing</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(182.99155 125.055013)">crop → resample → asls → savgol → L2</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="476.3232" y="119.484919" transform="rotate(-0 476.3232 119.484919)">unchanged from V5</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(155.672175 154.649107)">canonical molecule IDs · replicate groups · quality q</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(194.02155 165.127045)">frozen analyte-grouped CV splits</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="476.3232" y="159.556951" transform="rotate(-0 476.3232 159.556951)">Phase 00</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(194.57155 194.721139)">balanced reference construction</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(161.533425 205.199077)">select from {A control, B weighted, C prototype}</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="476.3232" y="199.628983" transform="rotate(-0 476.3232 199.628983)">Phase 01</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1a1a1a" x="259.3728" y="239.92089" transform="rotate(-0 259.3728 239.92089)">chemical-family partition   X → {X_c}</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="476.3232" y="239.701015" transform="rotate(-0 476.3232 239.701015)">organisational prior</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(155.193425 274.753953)">class-specific repeated non-negative decomposition</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(157.3028 285.231891)">X_c ≈ W_c H_c   ·   adaptive k_c   ·   R repeated fits</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="476.3232" y="279.773047" transform="rotate(-0 476.3232 279.773047)">Phase 02</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(204.39155 314.937235)">stable Local Spectral Motifs</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(147.73905 325.415173)">Hungarian alignment → recurrence → stability threshold</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1a1a1a" x="259.3728" y="360.248236" transform="rotate(-0 259.3728 360.248236)">LSM similarity graph   ·   6 edge features</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="476.3232" y="359.917111" transform="rotate(-0 476.3232 359.917111)">Phase 03</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(206.6878 395.081299)">Consensus Spectral Motifs</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(169.6953 405.559237)">integration method SELECTED ON EVIDENCE</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(186.62655 435.153331)">CSM → theme soft mapping   t = Sᵀc</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(179.8303 445.631269)">S sparse, non-negative, row-normalised</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="476.3232" y="440.061175" transform="rotate(-0 476.3232 440.061175)">Phase 04</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(194.7803 475.225363)">continuous BSV reference space</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(172.6403 485.703301)">reference stats · OOD support · uncertainty</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="476.3232" y="480.133207" transform="rotate(-0 476.3232 480.133207)">Phase 05</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(203.040925 515.266145)">FROZEN GAIRA V7 ATLAS</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1a1a1a" transform="translate(178.31655 525.744083)">multi-layer fingerprint over 7 layers</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="476.3232" y="520.205239" transform="rotate(-0 476.3232 520.205239)">Phase 06</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #6b7280" transform="translate(12.96 563.446177)">Fitting operations: NMF (per class) · graph construction · consensus clustering /</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #6b7280" transform="translate(12.96 572.880318)">community detection · membership derivation · reference statistics · PCA (frozen view).</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #6b7280" transform="translate(12.96 582.314459)">None of these ever runs at inference time.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pcb3c689a0f">
+   <rect x="12.96" y="12.96" width="535.68" height="576.576"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,14 @@
+# GAIRA_v7_rebuild — scoped gitignore
+#
+# The root .gitignore ignores `checkpoints/` globally (it targets regenerable training
+# checkpoints). V7 atlas bundles live under results/checkpoints/ and ARE the scientific
+# product, so that directory is re-included here. Git cannot re-include a file whose parent
+# directory is excluded, so the directory itself must be un-ignored before its contents.
+
+!results/checkpoints
+!results/checkpoints/**
+
+# Bulk regenerable intermediates — never committed, regenerable from the phase manifests.
+results/phase_outputs/**/*.npy
+results/phase_outputs/**/sweep_*.npz
+results/phase_outputs/**/raw_fits_*.npz

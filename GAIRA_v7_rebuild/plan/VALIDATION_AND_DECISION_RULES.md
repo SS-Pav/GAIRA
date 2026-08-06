@@ -1,0 +1,233 @@
+# GAIRA V7 — Validation and Decision Rules
+
+**Pre-registered.** Every rule here is committed *before* the sweep it governs is run
+(principle P-12). A decision made under a rule not stated in advance is a post-hoc choice and
+must be labelled as one in the phase manifest.
+
+---
+
+## 0. The governing principle
+
+> **No single metric selects every layer.**
+
+Each layer answers a different question, so each needs a different composite. Reconstruction
+error is nearly meaningless for theme count. Retrieval accuracy is nearly meaningless for LSM
+count within a 2-analyte class. Using one number everywhere is how a project optimises the
+thing it can measure instead of the thing it wants.
+
+Every rule below follows the same shape:
+
+1. compute a **composite** of criteria that pull in different directions;
+2. identify the **Pareto plateau** — the region where further increase buys little;
+3. select the **smallest** value on the plateau;
+4. record the curve, the plateau boundary, and the choice in the phase manifest.
+
+**Smallest-on-plateau, not argmax.** Argmax on a noisy composite systematically over-selects:
+noise at large `k` is rewarded, and every extra component costs interpretability, stability,
+and live projection time. The plateau rule is defined concretely as: the smallest value whose
+composite score is within a **pre-declared tolerance τ** of the maximum observed score. `τ` is
+declared per layer *before* the sweep.
+
+---
+
+## 1. Reference-construction strategy — Phase 01
+
+**Choose among:** A (all spectra, control) · B (analyte-weighted) · B-uniform · C-mean ·
+C-median · C-trimmed · C-medoid · C-quality.
+
+| Criterion | Direction | Weight class |
+|---|---|---|
+| Held-out reconstruction (analyte-grouped) | ↑ | primary |
+| Diagnostic-band fidelity | ↑ | primary |
+| Class-balance achieved (effective class weight distribution) | ↑ | primary |
+| Replicate stability | ↑ | secondary |
+| Downstream control retrieval (V5-style global NMF per arm) | ↑ | secondary |
+| Information discarded | ↓ | secondary |
+
+**Rule.** Select the arm that maximally improves class balance **subject to** held-out
+reconstruction and diagnostic-band fidelity remaining within a pre-declared tolerance of the
+control arm A. Balance is the objective; fidelity is the constraint. An arm that improves
+balance by wrecking band fidelity has not solved the problem — it has moved it.
+
+**Mandatory stratified reporting** (a violation invalidates the selection):
+
+- corpus-wide **and** restricted to the 87 replicated analytes — 80 of 167 analytes are
+  singletons for which all arms coincide, so corpus-wide numbers are diluted toward zero and
+  make the arms look falsely equivalent;
+- single-excitation **and** multi-excitation analytes separately — 41 analytes span
+  excitations, where per-bin mean and median can distort band shape while the medoid cannot;
+- the `B-uniform` arm, isolating the balancing effect from the quality-weighting effect.
+
+**If control A wins**, that is the finding: the row-level balancing hypothesis is not supported
+at this corpus size. Report it, proceed with A, and note that Strategy D (class partitioning,
+Phase 02) is a separate and still-untested bet.
+
+---
+
+## 2. LSM count `k_c` — Phase 02
+
+**Per class**, independently. There is no global `k`.
+
+| Criterion | Direction | What it protects against |
+|---|---|---|
+| Held-out reconstruction (analyte-grouped) | ↑ | under-fitting |
+| Diagnostic-band fidelity | ↑ | explaining variance without explaining chemistry |
+| Stability across repeated fits | ↑ | fitting artefacts |
+| Redundancy with retained LSMs | ↓ | duplicate motifs |
+| Activation sparsity | ↑ | diffuse, non-selective mass |
+| Within-class retrieval | ↑ | motifs that do not discriminate |
+| Residual structure (band-shaped residual) | ↓ | unexplained chemistry |
+
+**Rule.** Select the smallest `k_c` on the Pareto plateau of the composite, subject to:
+
+- `1 ≤ k_c ≤ ⌊n_analytes(c) / 2⌋` — a class cannot have more motifs than half its analytes,
+  or the "motifs" are memorised molecules;
+- every retained LSM independently clears the stability threshold — so the effective `k_c` may
+  end below the swept value, and that is a legitimate outcome;
+- classes with `n_analytes < 2` get no local fit and route to the anchor mechanism.
+
+**Report per class**, whatever the outcome: the full sweep curve, the plateau boundary, the
+retained count, the discarded count with reasons, and the source/excitation composition.
+
+---
+
+## 3. Integration method and CSM count `M` — Phase 03
+
+### 3a. Method selection
+
+Candidates: hierarchical consensus clustering · Leiden/Louvain communities · spectral
+clustering · sparse non-negative meta-factorisation · hybrid graph + factorisation.
+
+| Criterion | Direction |
+|---|---|
+| Consensus stability across resamples | ↑ |
+| Within-CSM spectral cohesion | ↑ |
+| Between-CSM separation | ↑ |
+| Chemical coherence of resulting groups | ↑ |
+| Retained LSM information | ↑ |
+| Downstream held-out recovery | ↑ |
+| Sensitivity to hyperparameters (threshold, resolution) | ↓ |
+| Singleton fraction | ↓ |
+| Redundancy between CSMs | ↓ |
+
+**Rule.** Select the method maximising the composite. **Publish the full comparison table
+regardless of the winner** — the point of running five candidates is an auditable choice, and
+a table showing why the winner won is the deliverable, not a footnote.
+
+**No method is presumed.** In particular, **the plan does not presuppose that the second NMF
+wins.** The stated prior (in `../architecture/LEARNING_MODE_ARCHITECTURE.md` Stage 4) is that
+graph or hybrid routes look more promising, because meta-NMF sees only one of six edge
+features and its equal row weighting reintroduces the spectrum-count bias V7 exists to remove.
+That is a hypothesis to test, not a decision already made.
+
+**Additional requirement if meta-NMF is selected:** explicitly verify that
+molecule-discriminating LSMs survive into distinguishable CSMs. Compression can erase exactly
+the structure Phase 02 worked to isolate (risk R-06).
+
+### 3b. `M` selection
+
+Same composite, with two explicit penalties:
+
+- **singleton penalty** — a CSM built from one LSM is a local description no other
+  decomposition confirmed;
+- **redundancy penalty** — CSMs above a similarity threshold to one another are duplicates.
+  Precedent: the V5 motif layer carried `porphyrin ↔ flavin` at 0.699 support cosine and
+  `carboxylate ↔ colloid_matrix` at 0.687 — both should have been caught by a redundancy
+  penalty and were not.
+
+**Rule.** Smallest `M` on the Pareto plateau after applying both penalties.
+
+### 3c. Graph threshold
+
+**Rule.** Sweep the edge threshold across a pre-declared range. Report community stability at
+each. Select from a **stable region**, never a single cut. If no stable region exists, the
+graph construction is inadequate and must be revised — that is a finding, not a nuisance
+(risk R-07).
+
+---
+
+## 4. Theme count `K` — Phase 04
+
+| Criterion | Direction | Note |
+|---|---|---|
+| Useful information retained | ↑ | information *about chemistry*, not raw variance |
+| Held-out superclass retrieval | ↑ | does the abstraction preserve coarse chemistry? |
+| Stability | ↑ | across resamples |
+| Chemical coherence / admissibility | ↑ | a chemist can name each theme |
+| Interpretability | ↑ | |
+| Compression | ↑ | `M/K` |
+| Calibration (ECE) | ↓ | are confidences honest? |
+
+**Rule.** Select the smallest `K` on the Pareto frontier that is **chemically admissible** —
+every theme nameable as coherent chemistry. Admissibility is a hard constraint, not a
+weighted criterion: an inadmissible `K` is rejected regardless of its score.
+
+**Precedent worth heeding.** The V6.2 Pareto study
+(`results/v6_rebuild/tables/v62_pareto.csv`) found chemical admissibility first satisfied at
+`K = 13`, while information retained already reached 0.796 at `K = 6` and recoverability
+*fell* monotonically with `K` (0.969 at K=2 → 0.503 at K=12). Compression and admissibility
+pull hard in opposite directions in this data. V7 must expect the same tension and resolve it
+by the stated rule rather than by whichever number looks nicer.
+
+**Additional requirement.** Demonstrate that the theme layer adds value over the CSM layer, or
+record that it does not. At V6.2, `theme_raw` and `theme_posterior` were numerically identical
+at every metric on every ontology — added machinery that changed no decisions. A theme layer
+that merely relabels CSMs is decorative (risk R-11).
+
+---
+
+## 5. BSV dimension — Phase 05
+
+**Rule.** BSV dimension **= `K`**, the selected number of biochemical themes. There is no
+separate choice.
+
+**But measure the effective rank separately**, and report both:
+
+| Measure | Definition |
+|---|---|
+| participation ratio | `(Σλ)² / Σλ²` on the BSV covariance |
+| effective entropy rank | `exp(H(λ/Σλ))` |
+| axes for 90% variance | count |
+
+**Precedent.** The V5 24-component space had participation ratio **15.2** and 16 components
+for 90% of latent variance — a 38% gap between nominal and effective dimensionality, visible
+only because someone measured it. If V7's BSV shows a similar gap, `K` overstates the
+representation's actual resolution and downstream users must be told (risk R-12).
+
+---
+
+## 6. Explicit anti-patterns
+
+Each of these has a specific failure mode, and several have already occurred in this project's
+history.
+
+| ✗ Anti-pattern | Why it fails |
+|---|---|
+| **Select by reconstruction alone** | reconstruction rewards modelling the dense classes — precisely the L-01 bias. The V5 basis reconstructs at 0.712 explained variance while only 3 of 24 components are chemically pure. |
+| **Select by PCA appearance** | a 2-D projection of a K-dimensional space shows what the projection preserves, not what the space contains |
+| **Select by UMAP clusters** | UMAP cluster structure is strongly hyperparameter-dependent and has no stable out-of-sample transform; visually crisp clusters are not evidence of anything |
+| **Select by raw top-1 alone** | top-1 conflates representation quality with class-count difficulty. V6.3's twelve size-matched random ontologies exist precisely to separate the two — random 6-class grouping already scores 0.10, and coarsening 18→6 classes mechanically adds accuracy. |
+| **Select a lower class count because accuracy rises** | the same mechanical effect. Any accuracy gain from coarsening must be reported against a size-matched random control, and the `gain_beyond_mechanical` figure is the one that counts. |
+| **Let held-out analyte information into model selection** | inflates every downstream number invisibly. All sweeps, thresholds, and rules are fitted on training folds only. |
+| **Tune the quality score `q` against Phase-01 outcomes** | `q` becomes a hidden hyperparameter; freeze it in Phase 00 |
+| **Resample replicates for stability estimates** | leaks within-analyte structure and inflates apparent stability; bootstrap over canonical analytes only |
+| **Duplicate spectra to balance rare classes** | adds no information; inflates apparent support (P-11) |
+| **Choose the rule after seeing the curve** | the definition of post-hoc selection (P-12) |
+
+---
+
+## 7. Statistical procedures — frozen in Phase 00, used throughout
+
+| Procedure | Specification |
+|---|---|
+| Cross-validation | analyte-grouped; no canonical ID or replicate crosses a fold |
+| Permutation null | size-matched random ontologies (V6.3 used 12; V7 must use ≥ 12) |
+| Confidence intervals | bootstrap over canonical analytes, 95% |
+| Paired comparison | McNemar (exact) + permutation test, as in V6.3 |
+| Effect size | Cohen's g and odds ratio for paired accuracy comparisons |
+| Multiple comparisons | correction declared in Phase 00 and applied consistently |
+| Calibration | expected calibration error (ECE) with a declared binning scheme |
+
+**All of these are frozen before any V7 model is fitted.** The V6.3 revalidation is the
+template — it is the strongest piece of methodology the project has produced, and V7 adopts
+its harness wholesale rather than reinventing it.
