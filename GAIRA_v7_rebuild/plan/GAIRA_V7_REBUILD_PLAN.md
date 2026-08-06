@@ -39,9 +39,23 @@ Companions: `PHASE_DEPENDENCY_MAP.md` (what blocks what),
 3b. **Every phase begins with an architecture check (P-16) and ends with an Architecture
    Compliance table (specification item · implemented? · evidence · PASS/FAIL) and a redrawn
    pipeline (P-17).** The gate opens only if every compliance row is PASS.
-4. **Every phase ships a report** committed alongside the code that produced it.
-5. **Nothing outside `GAIRA_v7_rebuild/` is modified** — with the single exception of the V7
-   scaffold test under `tests/`.
+4. **Every phase ships a report** committed alongside the code that produced it, in two
+   forms: `reports/PHASE_NN_REPORT.md` as the committed source of record, and
+   **`reports/PHASE_NN_FIGURES.pdf` carrying every figure with its caption** — the artefact
+   that gets read away from the repository. `.gitignore` excludes `*.pdf` generally and
+   re-includes `results/v7_rebuild/*/reports/*.pdf` for exactly this reason. Adopted after
+   Phase 02.5.
+4b. **Figures are PNG only** (200 dpi). The paired SVG was dropped after Phase 02.5: the
+   figure PDF supersedes it, and maintaining two formats doubles the artefacts without
+   adding a reader. Phases 00–02 keep the SVGs they already shipped.
+5. **Every phase writes to `results/v7_rebuild/phaseNN/`** with the standard buckets
+   (`code/ artifacts/ tables/ validation/ figures/ reports/ logs/`, plus `interactive/` where
+   useful). This is the single results tree — no phase writes results inside
+   `GAIRA_v7_rebuild/`, which holds specification only. Phase 02.5 was briefly an exception
+   and was moved.
+5b. **Nothing in the specification tree is modified by a run** — `GAIRA_v7_rebuild/`
+   (context, plan, architecture, phases) is edited deliberately, never as a side effect, with
+   the single exception of the V7 scaffold test under `tests/`.
 6. **The V5 atlas is the control arm** in every comparison, at every phase where a comparison
    is meaningful.
 

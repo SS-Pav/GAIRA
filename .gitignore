@@ -85,6 +85,11 @@ checkpoints/
 *.docx
 *.pptx
 
+# ...except the per-phase V7 figure reports, which ARE a deliverable: each phase from 02.5
+# onward ships one PDF carrying all its figures with captions, and that is the artefact people
+# read away from the repository.
+!results/v7_rebuild/*/reports/*.pdf
+
 # NOTE ON SCIENTIFIC ASSETS
 # The following are DELIBERATELY tracked (do NOT add ignore rules for them):
 #   *.npz *.npy  (frozen NMF basis, reference support)

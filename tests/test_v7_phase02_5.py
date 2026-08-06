@@ -24,7 +24,7 @@ import pytest
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 
-PH = REPO / "GAIRA_v7_rebuild/results/phase_02_5_latent_geometry"
+PH = REPO / "results/v7_rebuild/phase02_5"
 T, A, V, F = PH / "tables", PH / "artifacts", PH / "validation", PH / "figures"
 P01 = REPO / "results/v7_rebuild/phase01"
 P02 = REPO / "results/v7_rebuild/phase02"
@@ -420,9 +420,16 @@ def test_pareto_weights_sum_to_one():
 @ran
 @pytest.mark.parametrize("n", range(1, 26))
 def test_figure_exists(n):
+    """PNG only from Phase 02.5 onward; the vector copies are superseded by the figure PDF."""
     hits = sorted(F.glob(f"fig{n:02d}_*.png"))
     assert hits, f"figure {n:02d} missing"
-    assert hits[0].with_suffix(".svg").is_file()
+
+
+@ran
+def test_the_figure_pdf_exists_and_carries_every_figure():
+    pdf = PH / "reports/PHASE_02_5_FIGURES.pdf"
+    assert pdf.is_file(), "every phase must ship a PDF report of its figures"
+    assert pdf.stat().st_size > 200_000
 
 
 @ran
