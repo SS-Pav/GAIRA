@@ -1,0 +1,8 @@
+gate,status
+D1 every surface agrees with the demo's exact call,PASS
+"D2 result digests identical across service, SDK, API and demo",PASS
+D3 the CLI subprocess agrees with the SDK,PASS
+D4 analysis under 200 ms after preprocessing,PASS
+D5 inference plus every figure under 1 s,PASS
+D6 the demo computes no scientific quantity,PASS
+D7 the engine is loaded once and cached,PASS

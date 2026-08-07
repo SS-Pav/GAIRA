@@ -1,0 +1,8 @@
+case,digest,all_surfaces_equal,predicted_class,top1_molecule,confidence
+cholesterol,5ea50dbff5ac01ac6de3f158858fdd0b,True,sterol_steroid,cholesteryl palmitate,0.845493
+cysteine,51981c591bd3c5d2a6f272132a462cbb,True,free_amino_acid,cysteine,0.948412
+(+)-glucose,73e0eccef0eb29364e69061bbdbc57b1,True,mono_oligosaccharide,β-d-glucose,0.859631
+palmitic acid,07f99bd0411483b03b51147c22eb6601,True,fatty_acid,myristic acid,0.95793
+adenine,0bfa5eb2bc8c9c2a9d5f25f67278e595,True,purine,adenine,0.494295
+albumin,b509fa61e0c538dc0e589ab47f9777d1,True,peptide_protein,albumin,0.849331
+pyruvate,d63d1eb429db6abe1be21794d641e2f0,True,carboxylic_acid_metabolite,acetoacetate,0.197452

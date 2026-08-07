@@ -1,0 +1,112 @@
+{
+ "parity": {
+  "n_comparisons": 36,
+  "n_divergent": 0,
+  "max_abs_diff": 0.0,
+  "tolerance": 1e-12,
+  "surfaces": [
+   "engine",
+   "runtime_service",
+   "python_sdk",
+   "fastapi",
+   "mcp",
+   "cli",
+   "streamlit_demo"
+  ]
+ },
+ "demo_options": {
+  "include_reconstruction": true,
+  "top_k_molecules": 10,
+  "already_preprocessed": true
+ },
+ "digests": [
+  {
+   "case": "cholesterol",
+   "digest": "5ea50dbff5ac01ac6de3f158858fdd0b",
+   "all_surfaces_equal": true,
+   "predicted_class": "sterol_steroid",
+   "top1_molecule": "cholesteryl palmitate",
+   "confidence": 0.845493
+  },
+  {
+   "case": "cysteine",
+   "digest": "51981c591bd3c5d2a6f272132a462cbb",
+   "all_surfaces_equal": true,
+   "predicted_class": "free_amino_acid",
+   "top1_molecule": "cysteine",
+   "confidence": 0.948412
+  },
+  {
+   "case": "(+)-glucose",
+   "digest": "73e0eccef0eb29364e69061bbdbc57b1",
+   "all_surfaces_equal": true,
+   "predicted_class": "mono_oligosaccharide",
+   "top1_molecule": "\u03b2-d-glucose",
+   "confidence": 0.859631
+  },
+  {
+   "case": "palmitic acid",
+   "digest": "07f99bd0411483b03b51147c22eb6601",
+   "all_surfaces_equal": true,
+   "predicted_class": "fatty_acid",
+   "top1_molecule": "myristic acid",
+   "confidence": 0.95793
+  },
+  {
+   "case": "adenine",
+   "digest": "0bfa5eb2bc8c9c2a9d5f25f67278e595",
+   "all_surfaces_equal": true,
+   "predicted_class": "purine",
+   "top1_molecule": "adenine",
+   "confidence": 0.494295
+  },
+  {
+   "case": "albumin",
+   "digest": "b509fa61e0c538dc0e589ab47f9777d1",
+   "all_surfaces_equal": true,
+   "predicted_class": "peptide_protein",
+   "top1_molecule": "albumin",
+   "confidence": 0.849331
+  },
+  {
+   "case": "pyruvate",
+   "digest": "d63d1eb429db6abe1be21794d641e2f0",
+   "all_surfaces_equal": true,
+   "predicted_class": "carboxylic_acid_metabolite",
+   "top1_molecule": "acetoacetate",
+   "confidence": 0.197452
+  }
+ ],
+ "cli": {
+  "ok": true,
+  "digest": "cd0140d61a6050e9181c0761c2d77d21"
+ },
+ "performance": {
+  "engine_load_seconds": 0.431,
+  "demo_inference_ms_median": 3.52,
+  "demo_inference_ms_p95": 4.24,
+  "demo_inference_ms_max": 4.6,
+  "figure_build_ms": {
+   "processed_spectrum": 39.83,
+   "chemistry_radar": 17.26,
+   "chemistry_bars": 13.62,
+   "retrieval_bars": 13.25,
+   "reconstruction": 29.9,
+   "provenance_sankey": 12.99
+  },
+  "figure_build_ms_total": 126.85,
+  "report_pdf_seconds": 2.162,
+  "report_json_seconds": 0.004
+ },
+ "inference_plus_figures_ms": 130.37,
+ "gates": {
+  "n": 7,
+  "failed": 0
+ },
+ "_provenance": {
+  "phase": "11",
+  "step": "validation",
+  "created_utc": "2026-08-07T09:09:58.471091+00:00",
+  "elapsed_seconds": 8.05
+ }
+}
