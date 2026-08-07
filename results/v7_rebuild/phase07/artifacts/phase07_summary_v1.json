@@ -1,0 +1,2716 @@
+{
+  "input": {
+    "shape": [
+      375,
+      16
+    ],
+    "effective_rank": 12.122881778672351,
+    "baseline_heldout_chemistry": {
+      "top1": 0.7546666666666667,
+      "top3": 0.9653333333333334
+    },
+    "baseline_mutual_information": 3.1914105496624363
+  },
+  "decision": {
+    "decision": "ADOPT",
+    "family": "semi_nmf",
+    "K": 9,
+    "objective_value": 0.8583764658992791,
+    "n_eligible": 38,
+    "n_within_tie_tolerance": 2,
+    "rule": "heldout_chemistry_retention * bootstrap_stability",
+    "floors": {
+      "information_retained_vs_chemistry_evidence": 0.5,
+      "heldout_chemistry_retention": 0.5,
+      "max_pairwise_overlap": 0.9,
+      "max_dominance": 0.6,
+      "non_negative_activations": true,
+      "max_K": 12,
+      "max_single_axis_share": 0.9
+    },
+    "tie_tolerance": 0.01,
+    "rationale": "semi_nmf at K=9: objective 0.8584 = held-out chemistry retention 0.883 x bootstrap stability 0.972; smallest K within 0.01 of the best of 38 eligible candidates"
+  },
+  "adopted": true,
+  "model": {
+    "family": "semi_nmf",
+    "K": 9
+  },
+  "p02_compliant_alternative": {
+    "family": "orthogonal_nmf",
+    "K": 6,
+    "objective": 0.8234115872320672,
+    "explained_variance": 0.6549084610478977,
+    "heldout_chemistry_retention": 0.8374558303875829,
+    "bootstrap_stability": 0.9832298699872735,
+    "max_pairwise_overlap": 0.21443723764891254,
+    "sparsity": 0.7169621091626553,
+    "objective_cost_vs_rule_winner": 0.034964878667211874
+  },
+  "reconstruction": {
+    "rmse": 0.07998682132775278,
+    "explained_variance": 0.8184068615221008,
+    "mean_cosine": 0.9285705211245918,
+    "relative_frobenius": 0.3599918630899283
+  },
+  "reconstruction_per_axis": [
+    {
+      "chemistry_axis": "acylglycerol",
+      "rmse": 0.07159265142834188,
+      "explained_variance": 0.8972776961700583,
+      "mean_evidence": 0.12619520241621712
+    },
+    {
+      "chemistry_axis": "carboxylic_acid_metabolite",
+      "rmse": 0.08449384680198647,
+      "explained_variance": 0.8202724181187627,
+      "mean_evidence": 0.16015561275282067
+    },
+    {
+      "chemistry_axis": "chromophore_pigment",
+      "rmse": 0.12428388155066306,
+      "explained_variance": 0.18219930614128588,
+      "mean_evidence": 0.06365478094066636
+    },
+    {
+      "chemistry_axis": "fatty_acid",
+      "rmse": 0.07295222959393248,
+      "explained_variance": 0.8986281567243646,
+      "mean_evidence": 0.14247625614365086
+    },
+    {
+      "chemistry_axis": "free_amino_acid",
+      "rmse": 0.03644589918488214,
+      "explained_variance": 0.9737195816219087,
+      "mean_evidence": 0.21007244962223798
+    },
+    {
+      "chemistry_axis": "mono_oligosaccharide",
+      "rmse": 0.06991647482292682,
+      "explained_variance": 0.8482917081945263,
+      "mean_evidence": 0.14045118650655047
+    },
+    {
+      "chemistry_axis": "nucleic_acid_polymer",
+      "rmse": 0.12054469369116283,
+      "explained_variance": 0.0636588428825603,
+      "mean_evidence": 0.034707968739914656
+    },
+    {
+      "chemistry_axis": "peptide_protein",
+      "rmse": 0.025422056977980147,
+      "explained_variance": 0.9878821102311058,
+      "mean_evidence": 0.19486065384838233
+    },
+    {
+      "chemistry_axis": "phosphate_metabolite",
+      "rmse": 0.0806077441595279,
+      "explained_variance": 0.8204579826746091,
+      "mean_evidence": 0.0907694688289878
+    },
+    {
+      "chemistry_axis": "phospholipid_sphingolipid",
+      "rmse": 0.11313292086662191,
+      "explained_variance": 0.6468570499287329,
+      "mean_evidence": 0.09964481394643664
+    },
+    {
+      "chemistry_axis": "polysaccharide",
+      "rmse": 0.10415336167300769,
+      "explained_variance": 0.5574060439009283,
+      "mean_evidence": 0.07977265954368994
+    },
+    {
+      "chemistry_axis": "purine",
+      "rmse": 0.031075744899663436,
+      "explained_variance": 0.971038843535132,
+      "mean_evidence": 0.081130903585473
+    },
+    {
+      "chemistry_axis": "pyrimidine",
+      "rmse": 0.026927921875257207,
+      "explained_variance": 0.9810866008506703,
+      "mean_evidence": 0.07911232057636636
+    },
+    {
+      "chemistry_axis": "small_nitrogenous",
+      "rmse": 0.11820725384036337,
+      "explained_variance": 0.19623713312710434,
+      "mean_evidence": 0.058821631122923594
+    },
+    {
+      "chemistry_axis": "sterol_steroid",
+      "rmse": 0.03382012145240878,
+      "explained_variance": 0.9601325947477056,
+      "mean_evidence": 0.0908430937939558
+    },
+    {
+      "chemistry_axis": "sulfur_thiol_cofactor",
+      "rmse": 0.03141585548033149,
+      "explained_variance": 0.9728763171883571,
+      "mean_evidence": 0.09023651766786248
+    }
+  ],
+  "stability": {
+    "bootstrap": 0.9716821593992716,
+    "bootstrap_min": 0.8946246558195953,
+    "seed": 0.9571767334196222,
+    "fold": 0.9790821978637523,
+    "n_programmes_below_0.7": 0,
+    "per_programme": [
+      0.9920711130217466,
+      0.9136484660318683,
+      0.9901193254370639,
+      0.9844962446321113,
+      0.9930870684860722,
+      0.9561233765742242,
+      0.9882810598464732,
+      0.9649381598532003,
+      0.9623746207106839
+    ]
+  },
+  "compression": [
+    {
+      "representation": "chemistry_evidence_16",
+      "dim": 16,
+      "compression_ratio": 1.0,
+      "heldout_chemistry_top1": 0.7546666666666667,
+      "heldout_chemistry_top3": 0.9653333333333334,
+      "mutual_information_norm": 3.1914105496624363,
+      "effective_rank": 12.122881778672351,
+      "replicate_consistency": 0.9467137535453293,
+      "non_negative": true
+    },
+    {
+      "representation": "BSV2_programmes",
+      "dim": 9,
+      "compression_ratio": 1.7777777777777777,
+      "heldout_chemistry_top1": 0.6666666666666666,
+      "heldout_chemistry_top3": 0.9333333333333333,
+      "mutual_information_norm": 2.075294589926301,
+      "effective_rank": 7.678180969203453,
+      "replicate_consistency": 0.9787703042827249,
+      "non_negative": true
+    },
+    {
+      "representation": "PCA_control",
+      "dim": 9,
+      "compression_ratio": 1.7777777777777777,
+      "heldout_chemistry_top1": 0.6613333333333333,
+      "heldout_chemistry_top3": 0.928,
+      "mutual_information_norm": 2.6488251236509046,
+      "effective_rank": 7.77804341445396,
+      "replicate_consistency": 0.9618745322035646,
+      "non_negative": false
+    }
+  ],
+  "information_retained": 0.8184068615221008,
+  "generalisation": [
+    {
+      "fold": 0,
+      "n_test": 76,
+      "explained_variance": 0.7441053978569634,
+      "mean_cosine": 0.8978589662681699,
+      "replicate_consistency": 0.9841526463822233,
+      "mean_activation_entropy": 0.7371330431301769,
+      "dominance": 0.2236842105263158
+    },
+    {
+      "fold": 1,
+      "n_test": 76,
+      "explained_variance": 0.7846735903737021,
+      "mean_cosine": 0.9501899471440683,
+      "replicate_consistency": 0.9920475221045982,
+      "mean_activation_entropy": 0.9564781124342969,
+      "dominance": 0.21052631578947367
+    },
+    {
+      "fold": 2,
+      "n_test": 75,
+      "explained_variance": 0.7822086321372255,
+      "mean_cosine": 0.9212275284607759,
+      "replicate_consistency": 0.983616994964705,
+      "mean_activation_entropy": 0.678925234026903,
+      "dominance": 0.25333333333333335
+    },
+    {
+      "fold": 3,
+      "n_test": 72,
+      "explained_variance": 0.760995862847661,
+      "mean_cosine": 0.9258656547977012,
+      "replicate_consistency": 0.9534869473123391,
+      "mean_activation_entropy": 0.8042920493549337,
+      "dominance": 0.25
+    },
+    {
+      "fold": 4,
+      "n_test": 76,
+      "explained_variance": 0.7534026968723985,
+      "mean_cosine": 0.8945306733367708,
+      "replicate_consistency": 0.9836386628557248,
+      "mean_activation_entropy": 0.8680454397284416,
+      "dominance": 0.35526315789473684
+    }
+  ],
+  "noise_robustness": {
+    "mean_programme_cosine": 0.9475410434808732,
+    "mean_argmax_stability": 0.8894933333333332,
+    "per_perturbation": [
+      {
+        "perturbation": "gaussian_noise",
+        "level": 0.01,
+        "programme_cosine": 0.9638893116946872,
+        "argmax_stability": 0.928,
+        "entropy_shift": -0.028977304637271772
+      },
+      {
+        "perturbation": "gaussian_noise",
+        "level": 0.02,
+        "programme_cosine": 0.9640359214594132,
+        "argmax_stability": 0.9253333333333333,
+        "entropy_shift": -0.026895669221762897
+      },
+      {
+        "perturbation": "gaussian_noise",
+        "level": 0.05,
+        "programme_cosine": 0.9643957698186917,
+        "argmax_stability": 0.9253333333333333,
+        "entropy_shift": -0.016411363829008874
+      },
+      {
+        "perturbation": "gaussian_noise",
+        "level": 0.1,
+        "programme_cosine": 0.9635279671499449,
+        "argmax_stability": 0.928,
+        "entropy_shift": 0.008106209213468718
+      },
+      {
+        "perturbation": "gaussian_noise",
+        "level": 0.2,
+        "programme_cosine": 0.9529558541489911,
+        "argmax_stability": 0.9093333333333333,
+        "entropy_shift": 0.05955361229445688
+      },
+      {
+        "perturbation": "baseline_drift",
+        "level": 0.05,
+        "programme_cosine": 0.9639072181087719,
+        "argmax_stability": 0.9306666666666666,
+        "entropy_shift": -0.02608596881773073
+      },
+      {
+        "perturbation": "baseline_drift",
+        "level": 0.1,
+        "programme_cosine": 0.9634701074082083,
+        "argmax_stability": 0.9306666666666666,
+        "entropy_shift": -0.019767749642805255
+      },
+      {
+        "perturbation": "baseline_drift",
+        "level": 0.2,
+        "programme_cosine": 0.9598092837162991,
+        "argmax_stability": 0.92,
+        "entropy_shift": -0.007671205789263724
+      },
+      {
+        "perturbation": "baseline_drift",
+        "level": 0.4,
+        "programme_cosine": 0.9459333312374087,
+        "argmax_stability": 0.888,
+        "entropy_shift": 0.009614844745699402
+      },
+      {
+        "perturbation": "baseline_drift",
+        "level": 0.8,
+        "programme_cosine": 0.9015296682561262,
+        "argmax_stability": 0.8,
+        "entropy_shift": 0.026352752814816638
+      },
+      {
+        "perturbation": "fluorescence",
+        "level": 0.05,
+        "programme_cosine": 0.9645055402834624,
+        "argmax_stability": 0.9253333333333333,
+        "entropy_shift": -6.612606244782437e-05
+      },
+      {
+        "perturbation": "fluorescence",
+        "level": 0.1,
+        "programme_cosine": 0.9608215253118833,
+        "argmax_stability": 0.912,
+        "entropy_shift": 0.03019974497537481
+      },
+      {
+        "perturbation": "fluorescence",
+        "level": 0.2,
+        "programme_cosine": 0.941676216517104,
+        "argmax_stability": 0.8853333333333333,
+        "entropy_shift": 0.07463034701483606
+      },
+      {
+        "perturbation": "fluorescence",
+        "level": 0.4,
+        "programme_cosine": 0.8837115109871456,
+        "argmax_stability": 0.7813333333333333,
+        "entropy_shift": 0.11826264775073247
+      },
+      {
+        "perturbation": "fluorescence",
+        "level": 0.8,
+        "programme_cosine": 0.785835195547667,
+        "argmax_stability": 0.4053333333333333,
+        "entropy_shift": 0.14028419480552778
+      },
+      {
+        "perturbation": "band_broadening",
+        "level": 1.0,
+        "programme_cosine": 0.963865204259098,
+        "argmax_stability": 0.928,
+        "entropy_shift": -0.029505919412071036
+      },
+      {
+        "perturbation": "band_broadening",
+        "level": 2.0,
+        "programme_cosine": 0.9641982337630718,
+        "argmax_stability": 0.928,
+        "entropy_shift": -0.02784801296925743
+      },
+      {
+        "perturbation": "band_broadening",
+        "level": 4.0,
+        "programme_cosine": 0.9651664324857527,
+        "argmax_stability": 0.928,
+        "entropy_shift": -0.020128617285515626
+      },
+      {
+        "perturbation": "band_broadening",
+        "level": 8.0,
+        "programme_cosine": 0.9654299089148799,
+        "argmax_stability": 0.936,
+        "entropy_shift": 0.0056795582382237475
+      },
+      {
+        "perturbation": "band_broadening",
+        "level": 16.0,
+        "programme_cosine": 0.9499987208030961,
+        "argmax_stability": 0.9013333333333333,
+        "entropy_shift": 0.055935495418444225
+      },
+      {
+        "perturbation": "peak_dropout",
+        "level": 0.05,
+        "programme_cosine": 0.9628375796574156,
+        "argmax_stability": 0.9253333333333333,
+        "entropy_shift": -0.025375374241080606
+      },
+      {
+        "perturbation": "peak_dropout",
+        "level": 0.1,
+        "programme_cosine": 0.9623866559718993,
+        "argmax_stability": 0.9253333333333333,
+        "entropy_shift": -0.023183166004306033
+      },
+      {
+        "perturbation": "peak_dropout",
+        "level": 0.2,
+        "programme_cosine": 0.9621233810468541,
+        "argmax_stability": 0.9306666666666666,
+        "entropy_shift": -0.020397280861207068
+      },
+      {
+        "perturbation": "peak_dropout",
+        "level": 0.4,
+        "programme_cosine": 0.9588284576658205,
+        "argmax_stability": 0.928,
+        "entropy_shift": -0.009831700331877746
+      },
+      {
+        "perturbation": "peak_dropout",
+        "level": 0.6,
+        "programme_cosine": 0.9536870908081385,
+        "argmax_stability": 0.912,
+        "entropy_shift": 0.003096921881915571
+      }
+    ]
+  },
+  "coherence": [
+    {
+      "programme": 0,
+      "n_top_spectra": 75,
+      "within_similarity": 0.7211367145887012,
+      "between_similarity": 0.549610350007152,
+      "separation": 0.17152636458154924,
+      "specificity": 0.13425589913363045,
+      "dominant_class": "carboxylic_acid_metabolite",
+      "max_overlap": 0.2650246507082772,
+      "usage_share": 0.058666666666666666
+    },
+    {
+      "programme": 1,
+      "n_top_spectra": 75,
+      "within_similarity": 0.7016016575415287,
+      "between_similarity": 0.5503664325903633,
+      "separation": 0.15123522495116537,
+      "specificity": 0.17904442887991667,
+      "dominant_class": "peptide_protein",
+      "max_overlap": 0.2548040290748327,
+      "usage_share": 0.037333333333333336
+    },
+    {
+      "programme": 2,
+      "n_top_spectra": 75,
+      "within_similarity": 0.7174207188445867,
+      "between_similarity": 0.5750632275529394,
+      "separation": 0.14235749129164732,
+      "specificity": 0.09867140443828881,
+      "dominant_class": "free_amino_acid",
+      "max_overlap": 0.2611621271962414,
+      "usage_share": 0.032
+    },
+    {
+      "programme": 3,
+      "n_top_spectra": 75,
+      "within_similarity": 0.8179222149742311,
+      "between_similarity": 0.45313275511401563,
+      "separation": 0.3647894598602155,
+      "specificity": 0.22919913163140848,
+      "dominant_class": "fatty_acid",
+      "max_overlap": 0.26833962863931937,
+      "usage_share": 0.16266666666666665
+    },
+    {
+      "programme": 4,
+      "n_top_spectra": 75,
+      "within_similarity": 0.8905853846726097,
+      "between_similarity": 0.5177708767247629,
+      "separation": 0.3728145079478469,
+      "specificity": 0.6571384269175832,
+      "dominant_class": "free_amino_acid",
+      "max_overlap": 0.4000875325852963,
+      "usage_share": 0.22133333333333333
+    },
+    {
+      "programme": 5,
+      "n_top_spectra": 75,
+      "within_similarity": 0.6948633343458783,
+      "between_similarity": 0.5667179218983962,
+      "separation": 0.12814541244748212,
+      "specificity": 0.12434352946236549,
+      "dominant_class": "peptide_protein",
+      "max_overlap": 0.2053449375624481,
+      "usage_share": 0.04
+    },
+    {
+      "programme": 6,
+      "n_top_spectra": 75,
+      "within_similarity": 0.9293281722501395,
+      "between_similarity": 0.4652755662344729,
+      "separation": 0.4640526060156666,
+      "specificity": 0.6999027694939868,
+      "dominant_class": "peptide_protein",
+      "max_overlap": 0.29820957604941656,
+      "usage_share": 0.216
+    },
+    {
+      "programme": 7,
+      "n_top_spectra": 75,
+      "within_similarity": 0.7375733164081227,
+      "between_similarity": 0.5824725079584049,
+      "separation": 0.15510080844971785,
+      "specificity": 0.1148196994560392,
+      "dominant_class": "purine",
+      "max_overlap": 0.29820957604941656,
+      "usage_share": 0.064
+    },
+    {
+      "programme": 8,
+      "n_top_spectra": 75,
+      "within_similarity": 0.8603114325703946,
+      "between_similarity": 0.5258193793683581,
+      "separation": 0.33449205320203645,
+      "specificity": 0.2723814652227038,
+      "dominant_class": "mono_oligosaccharide",
+      "max_overlap": 0.4000875325852963,
+      "usage_share": 0.168
+    }
+  ],
+  "overlap_matrix": [
+    [
+      0.9999999999979793,
+      0.2548040290748327,
+      0.13716726351132458,
+      0.239972951053183,
+      0.08226833296761488,
+      0.17275414529236643,
+      0.22467192103711742,
+      0.2650246507082772,
+      0.154225909305936
+    ],
+    [
+      0.2548040290748327,
+      0.9999999999974755,
+      0.09290394353244988,
+      0.15912131864095524,
+      0.17515988349913095,
+      0.1839187672521232,
+      0.19595993109097387,
+      0.17002049736250013,
+      0.22520120141193528
+    ],
+    [
+      0.13716726351132458,
+      0.09290394353244988,
+      0.9999999999977002,
+      0.0896297748586859,
+      0.240272249754794,
+      0.17193123415745423,
+      0.21343995094157855,
+      0.13543499788911528,
+      0.2611621271962414
+    ],
+    [
+      0.239972951053183,
+      0.15912131864095524,
+      0.0896297748586859,
+      0.9999999999979294,
+      0.14835811305242352,
+      0.12904846610073212,
+      0.14000749706904342,
+      0.26833962863931937,
+      0.17816061792575538
+    ],
+    [
+      0.08226833296761488,
+      0.17515988349913095,
+      0.240272249754794,
+      0.14835811305242352,
+      0.9999999999969958,
+      0.17311590365450244,
+      0.17885267541991318,
+      0.22910781852854334,
+      0.4000875325852963
+    ],
+    [
+      0.17275414529236643,
+      0.1839187672521232,
+      0.17193123415745423,
+      0.12904846610073212,
+      0.17311590365450244,
+      0.9999999999970577,
+      0.15554852377445805,
+      0.18490631615567593,
+      0.2053449375624481
+    ],
+    [
+      0.22467192103711742,
+      0.19595993109097387,
+      0.21343995094157855,
+      0.14000749706904342,
+      0.17885267541991318,
+      0.15554852377445805,
+      0.9999999999965272,
+      0.29820957604941656,
+      0.23895161086253833
+    ],
+    [
+      0.2650246507082772,
+      0.17002049736250013,
+      0.13543499788911528,
+      0.26833962863931937,
+      0.22910781852854334,
+      0.18490631615567593,
+      0.29820957604941656,
+      0.9999999999978423,
+      0.26084141211192
+    ],
+    [
+      0.154225909305936,
+      0.22520120141193528,
+      0.2611621271962414,
+      0.17816061792575538,
+      0.4000875325852963,
+      0.2053449375624481,
+      0.23895161086253833,
+      0.26084141211192,
+      0.9999999999965603
+    ]
+  ],
+  "programmes": [
+    {
+      "programme": 0,
+      "top_chemistry_axes": [
+        {
+          "chemistry_axis": "phosphate_metabolite",
+          "loading": 0.7098684705499727,
+          "share_of_programme": 0.3457114940088334
+        },
+        {
+          "chemistry_axis": "carboxylic_acid_metabolite",
+          "loading": 0.6567969257845945,
+          "share_of_programme": 0.3198652368620963
+        },
+        {
+          "chemistry_axis": "nucleic_acid_polymer",
+          "loading": 0.09801173588489594,
+          "share_of_programme": 0.04773248150733473
+        },
+        {
+          "chemistry_axis": "purine",
+          "loading": -0.08678933135282552,
+          "share_of_programme": 0.04226708277769719
+        },
+        {
+          "chemistry_axis": "fatty_acid",
+          "loading": -0.08038211682297805,
+          "share_of_programme": 0.03914671921818798
+        }
+      ],
+      "cumulative_share_top3": 0.7133092123782645,
+      "n_axes_above_5pct": 2,
+      "representative_molecules": [
+        {
+          "molecule": "phosphate",
+          "mean_activation": 1.190029388693196
+        },
+        {
+          "molecule": "fructose-6-phosphate",
+          "mean_activation": 1.0997921882283883
+        },
+        {
+          "molecule": "citrate",
+          "mean_activation": 1.088469254876458
+        },
+        {
+          "molecule": "phosphoenolpyruvate",
+          "mean_activation": 1.0358885112337588
+        },
+        {
+          "molecule": "succinic acid",
+          "mean_activation": 0.8921914627749606
+        },
+        {
+          "molecule": "pyruvate",
+          "mean_activation": 0.7630690274645923
+        },
+        {
+          "molecule": "acetoacetate",
+          "mean_activation": 0.7555947204208787
+        },
+        {
+          "molecule": "malic acid",
+          "mean_activation": 0.724278860683312
+        }
+      ],
+      "representative_classes": [
+        {
+          "class": "carboxylic_acid_metabolite",
+          "n_spectra": 20
+        },
+        {
+          "class": "phosphate_metabolite",
+          "n_spectra": 11
+        },
+        {
+          "class": "free_amino_acid",
+          "n_spectra": 10
+        },
+        {
+          "class": "fatty_acid",
+          "n_spectra": 7
+        },
+        {
+          "class": "mono_oligosaccharide",
+          "n_spectra": 7
+        }
+      ],
+      "usage_share": 0.058666666666666666,
+      "mean_activation": 0.24522916622673294,
+      "supporting_csms": [
+        {
+          "csm_id": "csm35",
+          "contribution": 0.7098684705492628,
+          "lsms": [
+            "phosphate_metabolite.m00"
+          ],
+          "dominant_bands": [
+            558.0,
+            784.0,
+            936.0,
+            972.0,
+            1066.0,
+            1132.0,
+            1378.0,
+            1460.0,
+            1628.0,
+            1702.0
+          ],
+          "band_assignment": "558: S\u2013S / skeletal deformation | 784: unassigned | 936: C\u2013C backbone stretch | 972: PO4 symmetric stretch [phosphate_metabolite] | 1066: C\u2013C skeletal (trans) / PO2- symmetric | 1132: C\u2013C skeletal (gauche) / C\u2013N stretch | 1378: unassigned | 1460: CH2 / CH3 scissoring | 1628: unassigned | 1702: C=O ester / carboxylic acid"
+        },
+        {
+          "csm_id": "csm03",
+          "contribution": 0.32839846289213304,
+          "lsms": [
+            "carboxylic_acid_metabolite.m00"
+          ],
+          "dominant_bands": [
+            640.0,
+            684.0,
+            784.0,
+            830.0,
+            938.0,
+            1168.0,
+            1294.0,
+            1430.0,
+            1658.0,
+            1704.0
+          ],
+          "band_assignment": "640: C\u2013S stretch / phenyl ring | 684: unassigned | 784: unassigned | 830: tyrosine Fermi doublet / C\u2013C skeletal | 938: C\u2013C backbone stretch | 1168: C\u2013C / C=C conjugated stretch | 1294: CH2 twist | 1430: CH2 / CH3 scissoring | 1658: amide I / C=C stretch | 1704: carboxylic acid C=O [carboxylic_acid_metabolite]"
+        },
+        {
+          "csm_id": "csm04",
+          "contribution": 0.32839846289213304,
+          "lsms": [
+            "carboxylic_acid_metabolite.m01"
+          ],
+          "dominant_bands": [
+            476.0,
+            566.0,
+            628.0,
+            822.0,
+            876.0,
+            1088.0,
+            1130.0,
+            1260.0,
+            1324.0,
+            1668.0
+          ],
+          "band_assignment": "476: unassigned | 566: unassigned | 628: C\u2013S stretch / phenyl ring | 822: tyrosine Fermi doublet / C\u2013C skeletal | 876: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1088: C\u2013C skeletal (trans) / PO2- symmetric | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1260: amide III / =C\u2013H in-plane bend | 1324: unassigned | 1668: amide I / C=C stretch"
+        },
+        {
+          "csm_id": "csm24",
+          "contribution": 0.09801173588479792,
+          "lsms": [
+            "nucleic_acid_polymer.m00"
+          ],
+          "dominant_bands": [
+            668.0,
+            728.0,
+            784.0,
+            1096.0,
+            1252.0,
+            1336.0,
+            1374.0,
+            1486.0,
+            1574.0,
+            1670.0
+          ],
+          "band_assignment": "668: unassigned | 728: ring breathing | 784: backbone O\u2013P\u2013O [nucleic_acid_polymer] | 1096: PO2- symmetric [nucleic_acid_polymer] | 1252: amide III / =C\u2013H in-plane bend | 1336: CH deformation / tryptophan | 1374: unassigned | 1486: unassigned | 1574: amide II / COO- asymmetric | 1670: amide I / C=C stretch"
+        },
+        {
+          "csm_id": "csm43",
+          "contribution": 0.04505724852582371,
+          "lsms": [
+            "small_nitrogenous.m00"
+          ],
+          "dominant_bands": [
+            578.0,
+            606.0,
+            674.0,
+            838.0,
+            904.0,
+            1010.0,
+            1246.0,
+            1416.0,
+            1658.0,
+            1712.0
+          ],
+          "band_assignment": "578: unassigned | 606: unassigned | 674: unassigned | 838: tyrosine Fermi doublet / C\u2013C skeletal | 904: unassigned | 1010: C\u2013N symmetric [small_nitrogenous] | 1246: amide III / =C\u2013H in-plane bend | 1416: COO- symmetric stretch | 1658: amide I / C=C stretch | 1712: C=O ester / carboxylic acid"
+        },
+        {
+          "csm_id": "csm38",
+          "contribution": 0.035440626697375015,
+          "lsms": [
+            "polysaccharide.m00"
+          ],
+          "dominant_bands": [
+            480.0,
+            580.0,
+            862.0,
+            940.0,
+            1046.0,
+            1082.0,
+            1130.0,
+            1252.0,
+            1338.0,
+            1462.0
+          ],
+          "band_assignment": "480: S\u2013S / skeletal deformation | 580: unassigned | 862: unassigned | 940: C\u2013O\u2013C ring [polysaccharide] | 1046: C\u2013N / C\u2013O stretch | 1082: C\u2013O\u2013C glycosidic [polysaccharide] | 1130: C\u2013O\u2013C glycosidic [polysaccharide] | 1252: amide III / =C\u2013H in-plane bend | 1338: CH deformation / tryptophan | 1462: CH2 / CH3 scissoring"
+        }
+      ],
+      "dominant_bands": [
+        476,
+        480,
+        558,
+        566,
+        578,
+        580,
+        606,
+        628,
+        640,
+        668,
+        674,
+        684
+      ],
+      "auto_description": "small-molecule energy metabolism programme",
+      "description_basis": "phosphate metabolite + carboxylic acid metabolite carry 67% of the loading; 1 broad superclass(es); usage share 0.06"
+    },
+    {
+      "programme": 1,
+      "top_chemistry_axes": [
+        {
+          "chemistry_axis": "pyrimidine",
+          "loading": 0.7590302026371314,
+          "share_of_programme": 0.5184018498447969
+        },
+        {
+          "chemistry_axis": "carboxylic_acid_metabolite",
+          "loading": 0.14634250383855477,
+          "share_of_programme": 0.09994888798528402
+        },
+        {
+          "chemistry_axis": "purine",
+          "loading": 0.08006312598012476,
+          "share_of_programme": 0.05468145070940724
+        },
+        {
+          "chemistry_axis": "phosphate_metabolite",
+          "loading": 0.06420220072171498,
+          "share_of_programme": 0.04384876847141133
+        },
+        {
+          "chemistry_axis": "phospholipid_sphingolipid",
+          "loading": -0.06268417033245931,
+          "share_of_programme": 0.042811985272038465
+        }
+      ],
+      "cumulative_share_top3": 0.6730321885394881,
+      "n_axes_above_5pct": 3,
+      "representative_molecules": [
+        {
+          "molecule": "cytosine",
+          "mean_activation": 1.675338962546583
+        },
+        {
+          "molecule": "uracil",
+          "mean_activation": 1.5806060442138479
+        },
+        {
+          "molecule": "superoxide dismutases",
+          "mean_activation": 1.0397119435094104
+        },
+        {
+          "molecule": "pyruvate",
+          "mean_activation": 0.977813717746649
+        },
+        {
+          "molecule": "myoglobin",
+          "mean_activation": 0.9007065339514544
+        },
+        {
+          "molecule": "trypsinogen",
+          "mean_activation": 0.8774095621901244
+        },
+        {
+          "molecule": "lectin",
+          "mean_activation": 0.8300875880880053
+        },
+        {
+          "molecule": "thymine",
+          "mean_activation": 0.8279516148108998
+        }
+      ],
+      "representative_classes": [
+        {
+          "class": "peptide_protein",
+          "n_spectra": 30
+        },
+        {
+          "class": "pyrimidine",
+          "n_spectra": 9
+        },
+        {
+          "class": "fatty_acid",
+          "n_spectra": 7
+        },
+        {
+          "class": "mono_oligosaccharide",
+          "n_spectra": 7
+        },
+        {
+          "class": "carboxylic_acid_metabolite",
+          "n_spectra": 5
+        }
+      ],
+      "usage_share": 0.037333333333333336,
+      "mean_activation": 0.2626720572443194,
+      "supporting_csms": [
+        {
+          "csm_id": "csm42",
+          "contribution": 0.7590302026363723,
+          "lsms": [
+            "pyrimidine.m00"
+          ],
+          "dominant_bands": [
+            552.0,
+            578.0,
+            600.0,
+            792.0,
+            986.0,
+            1102.0,
+            1236.0,
+            1276.0,
+            1368.0,
+            1672.0
+          ],
+          "band_assignment": "552: S\u2013S / skeletal deformation | 578: unassigned | 600: unassigned | 792: pyrimidine ring breathing [pyrimidine] | 986: unassigned | 1102: unassigned | 1236: amide III / C\u2013O\u2013C asymmetric | 1276: amide III / =C\u2013H in-plane bend | 1368: unassigned | 1672: C=O / C=N [pyrimidine]"
+        },
+        {
+          "csm_id": "csm03",
+          "contribution": 0.07317125191924079,
+          "lsms": [
+            "carboxylic_acid_metabolite.m00"
+          ],
+          "dominant_bands": [
+            640.0,
+            684.0,
+            784.0,
+            830.0,
+            938.0,
+            1168.0,
+            1294.0,
+            1430.0,
+            1658.0,
+            1704.0
+          ],
+          "band_assignment": "640: C\u2013S stretch / phenyl ring | 684: unassigned | 784: unassigned | 830: tyrosine Fermi doublet / C\u2013C skeletal | 938: C\u2013C backbone stretch | 1168: C\u2013C / C=C conjugated stretch | 1294: CH2 twist | 1430: CH2 / CH3 scissoring | 1658: amide I / C=C stretch | 1704: carboxylic acid C=O [carboxylic_acid_metabolite]"
+        },
+        {
+          "csm_id": "csm04",
+          "contribution": 0.07317125191924079,
+          "lsms": [
+            "carboxylic_acid_metabolite.m01"
+          ],
+          "dominant_bands": [
+            476.0,
+            566.0,
+            628.0,
+            822.0,
+            876.0,
+            1088.0,
+            1130.0,
+            1260.0,
+            1324.0,
+            1668.0
+          ],
+          "band_assignment": "476: unassigned | 566: unassigned | 628: C\u2013S stretch / phenyl ring | 822: tyrosine Fermi doublet / C\u2013C skeletal | 876: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1088: C\u2013C skeletal (trans) / PO2- symmetric | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1260: amide III / =C\u2013H in-plane bend | 1324: unassigned | 1668: amide I / C=C stretch"
+        },
+        {
+          "csm_id": "csm35",
+          "contribution": 0.06420220072165077,
+          "lsms": [
+            "phosphate_metabolite.m00"
+          ],
+          "dominant_bands": [
+            558.0,
+            784.0,
+            936.0,
+            972.0,
+            1066.0,
+            1132.0,
+            1378.0,
+            1460.0,
+            1628.0,
+            1702.0
+          ],
+          "band_assignment": "558: S\u2013S / skeletal deformation | 784: unassigned | 936: C\u2013C backbone stretch | 972: PO4 symmetric stretch [phosphate_metabolite] | 1066: C\u2013C skeletal (trans) / PO2- symmetric | 1132: C\u2013C skeletal (gauche) / C\u2013N stretch | 1378: unassigned | 1460: CH2 / CH3 scissoring | 1628: unassigned | 1702: C=O ester / carboxylic acid"
+        },
+        {
+          "csm_id": "csm43",
+          "contribution": 0.058923330433966,
+          "lsms": [
+            "small_nitrogenous.m00"
+          ],
+          "dominant_bands": [
+            578.0,
+            606.0,
+            674.0,
+            838.0,
+            904.0,
+            1010.0,
+            1246.0,
+            1416.0,
+            1658.0,
+            1712.0
+          ],
+          "band_assignment": "578: unassigned | 606: unassigned | 674: unassigned | 838: tyrosine Fermi doublet / C\u2013C skeletal | 904: unassigned | 1010: C\u2013N symmetric [small_nitrogenous] | 1246: amide III / =C\u2013H in-plane bend | 1416: COO- symmetric stretch | 1658: amide I / C=C stretch | 1712: C=O ester / carboxylic acid"
+        },
+        {
+          "csm_id": "csm24",
+          "contribution": 0.05111990670937619,
+          "lsms": [
+            "nucleic_acid_polymer.m00"
+          ],
+          "dominant_bands": [
+            668.0,
+            728.0,
+            784.0,
+            1096.0,
+            1252.0,
+            1336.0,
+            1374.0,
+            1486.0,
+            1574.0,
+            1670.0
+          ],
+          "band_assignment": "668: unassigned | 728: ring breathing | 784: backbone O\u2013P\u2013O [nucleic_acid_polymer] | 1096: PO2- symmetric [nucleic_acid_polymer] | 1252: amide III / =C\u2013H in-plane bend | 1336: CH deformation / tryptophan | 1374: unassigned | 1486: unassigned | 1574: amide II / COO- asymmetric | 1670: amide I / C=C stretch"
+        }
+      ],
+      "dominant_bands": [
+        476,
+        552,
+        558,
+        566,
+        578,
+        600,
+        606,
+        628,
+        640,
+        668,
+        674,
+        684
+      ],
+      "auto_description": "nucleic programme",
+      "description_basis": "pyrimidine carry 52% of the loading; 1 broad superclass(es); usage share 0.04"
+    },
+    {
+      "programme": 2,
+      "top_chemistry_axes": [
+        {
+          "chemistry_axis": "sulfur_thiol_cofactor",
+          "loading": 0.8404070163898155,
+          "share_of_programme": 0.5460799877940614
+        },
+        {
+          "chemistry_axis": "free_amino_acid",
+          "loading": 0.10442064845056441,
+          "share_of_programme": 0.0678504882982593
+        },
+        {
+          "chemistry_axis": "chromophore_pigment",
+          "loading": 0.10210156833297329,
+          "share_of_programme": 0.06634359554556933
+        },
+        {
+          "chemistry_axis": "polysaccharide",
+          "loading": 0.10012563824095758,
+          "share_of_programme": 0.06505967494580442
+        },
+        {
+          "chemistry_axis": "mono_oligosaccharide",
+          "loading": -0.07437438225103762,
+          "share_of_programme": 0.048327014125021134
+        }
+      ],
+      "cumulative_share_top3": 0.6802740716378901,
+      "n_axes_above_5pct": 4,
+      "representative_molecules": [
+        {
+          "molecule": "coenzyme a",
+          "mean_activation": 1.4115789985507772
+        },
+        {
+          "molecule": "acetyl-coa",
+          "mean_activation": 1.2635113576194281
+        },
+        {
+          "molecule": "glycine",
+          "mean_activation": 0.8741196934428329
+        },
+        {
+          "molecule": "pyruvate",
+          "mean_activation": 0.723437450907384
+        },
+        {
+          "molecule": "methionine",
+          "mean_activation": 0.6573736858899516
+        },
+        {
+          "molecule": "arachidonic acid",
+          "mean_activation": 0.5947769633114712
+        },
+        {
+          "molecule": "trilinolenin",
+          "mean_activation": 0.5888815957098656
+        },
+        {
+          "molecule": "oleate",
+          "mean_activation": 0.5551418552723091
+        }
+      ],
+      "representative_classes": [
+        {
+          "class": "free_amino_acid",
+          "n_spectra": 20
+        },
+        {
+          "class": "sulfur_thiol_cofactor",
+          "n_spectra": 11
+        },
+        {
+          "class": "carboxylic_acid_metabolite",
+          "n_spectra": 8
+        },
+        {
+          "class": "peptide_protein",
+          "n_spectra": 8
+        },
+        {
+          "class": "fatty_acid",
+          "n_spectra": 7
+        }
+      ],
+      "usage_share": 0.032,
+      "mean_activation": 0.2350271905698268,
+      "supporting_csms": [
+        {
+          "csm_id": "csm48",
+          "contribution": 0.42020350819469765,
+          "lsms": [
+            "sulfur_thiol_cofactor.m01"
+          ],
+          "dominant_bands": [
+            506.0,
+            716.0,
+            908.0,
+            962.0,
+            1008.0,
+            1086.0,
+            1206.0,
+            1450.0,
+            1496.0,
+            1638.0
+          ],
+          "band_assignment": "506: S\u2013S stretch [sulfur_thiol_cofactor] | 716: ring breathing | 908: unassigned | 962: unassigned | 1008: phenylalanine ring breathing | 1086: C\u2013C skeletal (trans) / PO2- symmetric | 1206: amide III / C\u2013O\u2013C asymmetric | 1450: CH2 / CH3 scissoring | 1496: unassigned | 1638: amide I / C=C stretch"
+        },
+        {
+          "csm_id": "csm47",
+          "contribution": 0.42020350819469765,
+          "lsms": [
+            "sulfur_thiol_cofactor.m00"
+          ],
+          "dominant_bands": [
+            526.0,
+            632.0,
+            724.0,
+            806.0,
+            886.0,
+            1036.0,
+            1334.0,
+            1410.0,
+            1510.0,
+            1668.0
+          ],
+          "band_assignment": "526: S\u2013S stretch [sulfur_thiol_cofactor] | 632: C\u2013S stretch [sulfur_thiol_cofactor] | 724: ring breathing | 806: unassigned | 886: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1036: C\u2013N / C\u2013O stretch | 1334: CH deformation / tryptophan | 1410: COO- symmetric stretch | 1510: conjugated C=C (carotenoid) | 1668: amide I / C=C stretch"
+        },
+        {
+          "csm_id": "csm06",
+          "contribution": 0.05105078416646112,
+          "lsms": [
+            "chromophore_pigment.m01"
+          ],
+          "dominant_bands": [
+            742.0,
+            788.0,
+            1060.0,
+            1180.0,
+            1224.0,
+            1346.0,
+            1402.0,
+            1464.0,
+            1498.0,
+            1622.0
+          ],
+          "band_assignment": "742: unassigned | 788: unassigned | 1060: C\u2013N / C\u2013O stretch | 1180: C\u2013C / C=C conjugated stretch | 1224: amide III / C\u2013O\u2013C asymmetric | 1346: CH deformation / tryptophan | 1402: COO- symmetric stretch | 1464: CH2 / CH3 scissoring | 1498: unassigned | 1622: unassigned"
+        },
+        {
+          "csm_id": "csm05",
+          "contribution": 0.05105078416646112,
+          "lsms": [
+            "chromophore_pigment.m00"
+          ],
+          "dominant_bands": [
+            1006.0,
+            1156.0,
+            1270.0,
+            1518.0
+          ],
+          "band_assignment": "1006: phenylalanine ring breathing | 1156: C\u2013C conjugated [chromophore_pigment] | 1270: amide III / =C\u2013H in-plane bend | 1518: C=C conjugated [chromophore_pigment]"
+        },
+        {
+          "csm_id": "csm39",
+          "contribution": 0.05006281912045375,
+          "lsms": [
+            "polysaccharide.m01"
+          ],
+          "dominant_bands": [
+            498.0,
+            896.0,
+            954.0,
+            1058.0,
+            1098.0,
+            1150.0,
+            1266.0,
+            1330.0,
+            1378.0,
+            1414.0
+          ],
+          "band_assignment": "498: S\u2013S / skeletal deformation | 896: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 954: C\u2013O\u2013C ring [polysaccharide] | 1058: C\u2013N / C\u2013O stretch | 1098: C\u2013O\u2013C glycosidic [polysaccharide] | 1150: C\u2013C / C=C conjugated stretch | 1266: amide III / =C\u2013H in-plane bend | 1330: CH deformation / tryptophan | 1378: unassigned | 1414: COO- symmetric stretch"
+        },
+        {
+          "csm_id": "csm38",
+          "contribution": 0.05006281912045375,
+          "lsms": [
+            "polysaccharide.m00"
+          ],
+          "dominant_bands": [
+            480.0,
+            580.0,
+            862.0,
+            940.0,
+            1046.0,
+            1082.0,
+            1130.0,
+            1252.0,
+            1338.0,
+            1462.0
+          ],
+          "band_assignment": "480: S\u2013S / skeletal deformation | 580: unassigned | 862: unassigned | 940: C\u2013O\u2013C ring [polysaccharide] | 1046: C\u2013N / C\u2013O stretch | 1082: C\u2013O\u2013C glycosidic [polysaccharide] | 1130: C\u2013O\u2013C glycosidic [polysaccharide] | 1252: amide III / =C\u2013H in-plane bend | 1338: CH deformation / tryptophan | 1462: CH2 / CH3 scissoring"
+        }
+      ],
+      "dominant_bands": [
+        480,
+        498,
+        506,
+        526,
+        580,
+        632,
+        716,
+        724,
+        742,
+        788,
+        806,
+        862
+      ],
+      "auto_description": "redox cofactor and pigment programme",
+      "description_basis": "sulfur thiol cofactor carry 55% of the loading; 1 broad superclass(es); usage share 0.03"
+    },
+    {
+      "programme": 3,
+      "top_chemistry_axes": [
+        {
+          "chemistry_axis": "fatty_acid",
+          "loading": 0.6347333262371803,
+          "share_of_programme": 0.30403778137921206
+        },
+        {
+          "chemistry_axis": "acylglycerol",
+          "loading": 0.6014966241037799,
+          "share_of_programme": 0.288117373927304
+        },
+        {
+          "chemistry_axis": "phospholipid_sphingolipid",
+          "loading": 0.37431361074357655,
+          "share_of_programme": 0.1792965250858648
+        },
+        {
+          "chemistry_axis": "phosphate_metabolite",
+          "loading": -0.10255871003939926,
+          "share_of_programme": 0.049125705824119945
+        },
+        {
+          "chemistry_axis": "purine",
+          "loading": -0.0686687163616486,
+          "share_of_programme": 0.032892371189208076
+        }
+      ],
+      "cumulative_share_top3": 0.7714516803923809,
+      "n_axes_above_5pct": 3,
+      "representative_molecules": [
+        {
+          "molecule": "linoleic acid",
+          "mean_activation": 1.4766187043037604
+        },
+        {
+          "molecule": "vaccenic acid",
+          "mean_activation": 1.4482458964021871
+        },
+        {
+          "molecule": "oleate",
+          "mean_activation": 1.435274651803876
+        },
+        {
+          "molecule": "trilinolenin",
+          "mean_activation": 1.4120746107920785
+        },
+        {
+          "molecule": "arachidonic acid",
+          "mean_activation": 1.4068293515094252
+        },
+        {
+          "molecule": "trilinolein",
+          "mean_activation": 1.3796395529007017
+        },
+        {
+          "molecule": "triolein",
+          "mean_activation": 1.372700145774823
+        },
+        {
+          "molecule": "palmitoleic acid",
+          "mean_activation": 1.3468161769257292
+        }
+      ],
+      "representative_classes": [
+        {
+          "class": "fatty_acid",
+          "n_spectra": 27
+        },
+        {
+          "class": "acylglycerol",
+          "n_spectra": 23
+        },
+        {
+          "class": "carboxylic_acid_metabolite",
+          "n_spectra": 6
+        },
+        {
+          "class": "peptide_protein",
+          "n_spectra": 5
+        },
+        {
+          "class": "phospholipid_sphingolipid",
+          "n_spectra": 5
+        }
+      ],
+      "usage_share": 0.16266666666666665,
+      "mean_activation": 0.3232594066229104,
+      "supporting_csms": [
+        {
+          "csm_id": "csm00",
+          "contribution": 0.3274455399486038,
+          "lsms": [
+            "acylglycerol.m01",
+            "fatty_acid.m01"
+          ],
+          "dominant_bands": [
+            866.0,
+            970.0,
+            1082.0,
+            1264.0,
+            1436.0,
+            1654.0
+          ],
+          "band_assignment": "866: glycerol C\u2013C [acylglycerol] | 970: unassigned | 1082: C\u2013C skeletal (trans) / PO2- symmetric | 1264: amide III / =C\u2013H in-plane bend | 1436: CH2 / CH3 scissoring | 1654: cis C=C [fatty_acid]"
+        },
+        {
+          "csm_id": "csm01",
+          "contribution": 0.20049887470119315,
+          "lsms": [
+            "acylglycerol.m00"
+          ],
+          "dominant_bands": [
+            848.0,
+            1068.0,
+            1118.0,
+            1304.0,
+            1440.0,
+            1676.0,
+            1744.0
+          ],
+          "band_assignment": "848: tyrosine Fermi doublet / C\u2013C skeletal | 1068: C\u2013C skeletal (trans) / PO2- symmetric | 1118: unassigned | 1304: CH2 twist | 1440: CH2 / CH3 scissoring | 1676: amide I / C=C stretch | 1744: ester C=O [acylglycerol]"
+        },
+        {
+          "csm_id": "csm02",
+          "contribution": 0.20049887470119315,
+          "lsms": [
+            "acylglycerol.m02"
+          ],
+          "dominant_bands": [
+            892.0,
+            1062.0,
+            1130.0,
+            1180.0,
+            1248.0,
+            1298.0,
+            1368.0,
+            1442.0,
+            1742.0
+          ],
+          "band_assignment": "892: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1062: C\u2013C skeletal (trans) / PO2- symmetric | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1180: C\u2013C / C=C conjugated stretch | 1248: amide III / =C\u2013H in-plane bend | 1298: CH2 twist | 1368: unassigned | 1442: CH2 / CH3 scissoring | 1742: ester C=O [acylglycerol]"
+        },
+        {
+          "csm_id": "csm36",
+          "contribution": 0.18715680537169468,
+          "lsms": [
+            "phospholipid_sphingolipid.m00"
+          ],
+          "dominant_bands": [
+            720.0,
+            880.0,
+            1062.0,
+            1128.0,
+            1296.0,
+            1438.0,
+            1658.0,
+            1742.0
+          ],
+          "band_assignment": "720: ring breathing | 880: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1062: C\u2013C skeletal (trans) / PO2- symmetric | 1128: C\u2013C skeletal (gauche) / C\u2013N stretch | 1296: CH2 twist | 1438: CH2 / CH3 scissoring | 1658: amide I / C=C stretch | 1742: ester C=O [phospholipid_sphingolipid]"
+        },
+        {
+          "csm_id": "csm37",
+          "contribution": 0.18715680537169468,
+          "lsms": [
+            "phospholipid_sphingolipid.m01"
+          ],
+          "dominant_bands": [
+            470.0,
+            530.0,
+            650.0,
+            862.0,
+            928.0,
+            1090.0,
+            1182.0,
+            1320.0,
+            1502.0,
+            1650.0
+          ],
+          "band_assignment": "470: unassigned | 530: S\u2013S / skeletal deformation | 650: C\u2013S stretch / phenyl ring | 862: unassigned | 928: unassigned | 1090: PO2- symmetric stretch [phospholipid_sphingolipid] | 1182: unassigned | 1320: CH2 twist | 1502: conjugated C=C (carotenoid) | 1650: amide I / C=C stretch"
+        },
+        {
+          "csm_id": "csm07",
+          "contribution": 0.12694666524741066,
+          "lsms": [
+            "fatty_acid.m00"
+          ],
+          "dominant_bands": [
+            892.0,
+            1064.0,
+            1128.0,
+            1176.0,
+            1296.0,
+            1422.0,
+            1438.0,
+            1464.0
+          ],
+          "band_assignment": "892: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1064: C\u2013C trans chain [fatty_acid] | 1128: C\u2013C skeletal (gauche) / C\u2013N stretch | 1176: C\u2013C / C=C conjugated stretch | 1296: CH2 twist | 1422: unassigned | 1438: CH2 / CH3 scissoring | 1464: CH2 / CH3 scissoring"
+        }
+      ],
+      "dominant_bands": [
+        470,
+        530,
+        650,
+        720,
+        848,
+        862,
+        866,
+        880,
+        892,
+        928,
+        970,
+        1062
+      ],
+      "auto_description": "membrane and storage lipid programme",
+      "description_basis": "fatty acid + acylglycerol + phospholipid sphingolipid carry 77% of the loading; 1 broad superclass(es); usage share 0.16"
+    },
+    {
+      "programme": 4,
+      "top_chemistry_axes": [
+        {
+          "chemistry_axis": "free_amino_acid",
+          "loading": 0.6253785770213842,
+          "share_of_programme": 0.4582768330755275
+        },
+        {
+          "chemistry_axis": "small_nitrogenous",
+          "loading": 0.1180463403179959,
+          "share_of_programme": 0.08650424716297452
+        },
+        {
+          "chemistry_axis": "polysaccharide",
+          "loading": -0.09926438282046182,
+          "share_of_programme": 0.07274084637312822
+        },
+        {
+          "chemistry_axis": "mono_oligosaccharide",
+          "loading": 0.0863295803279931,
+          "share_of_programme": 0.06326223527177079
+        },
+        {
+          "chemistry_axis": "phospholipid_sphingolipid",
+          "loading": -0.07297428509974749,
+          "share_of_programme": 0.05347548748910758
+        }
+      ],
+      "cumulative_share_top3": 0.6175219266116303,
+      "n_axes_above_5pct": 5,
+      "representative_molecules": [
+        {
+          "molecule": "hydroxyproline",
+          "mean_activation": 1.3683097481794604
+        },
+        {
+          "molecule": "alanine",
+          "mean_activation": 1.2988299202887226
+        },
+        {
+          "molecule": "serine",
+          "mean_activation": 1.2110395332124386
+        },
+        {
+          "molecule": "leucine",
+          "mean_activation": 1.178216340917036
+        },
+        {
+          "molecule": "aspartate",
+          "mean_activation": 1.1605814471746503
+        },
+        {
+          "molecule": "valine",
+          "mean_activation": 1.1442925048401205
+        },
+        {
+          "molecule": "glycine",
+          "mean_activation": 1.0550864732893397
+        },
+        {
+          "molecule": "(+)-sucrose",
+          "mean_activation": 1.0540400345279155
+        }
+      ],
+      "representative_classes": [
+        {
+          "class": "free_amino_acid",
+          "n_spectra": 65
+        },
+        {
+          "class": "mono_oligosaccharide",
+          "n_spectra": 4
+        },
+        {
+          "class": "small_nitrogenous",
+          "n_spectra": 4
+        },
+        {
+          "class": "carboxylic_acid_metabolite",
+          "n_spectra": 1
+        },
+        {
+          "class": "sulfur_thiol_cofactor",
+          "n_spectra": 1
+        }
+      ],
+      "usage_share": 0.22133333333333333,
+      "mean_activation": 0.39815996745158977,
+      "supporting_csms": [
+        {
+          "csm_id": "csm43",
+          "contribution": 0.11804634031787783,
+          "lsms": [
+            "small_nitrogenous.m00"
+          ],
+          "dominant_bands": [
+            578.0,
+            606.0,
+            674.0,
+            838.0,
+            904.0,
+            1010.0,
+            1246.0,
+            1416.0,
+            1658.0,
+            1712.0
+          ],
+          "band_assignment": "578: unassigned | 606: unassigned | 674: unassigned | 838: tyrosine Fermi doublet / C\u2013C skeletal | 904: unassigned | 1010: C\u2013N symmetric [small_nitrogenous] | 1246: amide III / =C\u2013H in-plane bend | 1416: COO- symmetric stretch | 1658: amide I / C=C stretch | 1712: C=O ester / carboxylic acid"
+        },
+        {
+          "csm_id": "csm17",
+          "contribution": 0.08933979671732784,
+          "lsms": [
+            "free_amino_acid.m06"
+          ],
+          "dominant_bands": [
+            552.0,
+            722.0,
+            924.0,
+            982.0,
+            1066.0,
+            1176.0,
+            1272.0,
+            1318.0,
+            1352.0,
+            1440.0
+          ],
+          "band_assignment": "552: S\u2013S / skeletal deformation | 722: ring breathing | 924: unassigned | 982: unassigned | 1066: C\u2013C skeletal (trans) / PO2- symmetric | 1176: C\u2013C / C=C conjugated stretch | 1272: amide III / =C\u2013H in-plane bend | 1318: CH2 twist | 1352: CH deformation / tryptophan | 1440: CH2 / CH3 scissoring"
+        },
+        {
+          "csm_id": "csm16",
+          "contribution": 0.08933979671732784,
+          "lsms": [
+            "free_amino_acid.m05"
+          ],
+          "dominant_bands": [
+            642.0,
+            796.0,
+            828.0,
+            846.0,
+            986.0,
+            1178.0,
+            1200.0,
+            1266.0,
+            1328.0,
+            1614.0
+          ],
+          "band_assignment": "642: C\u2013S stretch / phenyl ring | 796: unassigned | 828: tyrosine Fermi doublet / C\u2013C skeletal | 846: tyrosine Fermi doublet / C\u2013C skeletal | 986: unassigned | 1178: C\u2013C / C=C conjugated stretch | 1200: amide III / C\u2013O\u2013C asymmetric | 1266: amide III / =C\u2013H in-plane bend | 1328: unassigned | 1614: aromatic ring C=C"
+        },
+        {
+          "csm_id": "csm15",
+          "contribution": 0.08933979671732784,
+          "lsms": [
+            "free_amino_acid.m04"
+          ],
+          "dominant_bands": [
+            468.0,
+            622.0,
+            752.0,
+            818.0,
+            1004.0,
+            1034.0,
+            1212.0,
+            1358.0,
+            1556.0,
+            1606.0
+          ],
+          "band_assignment": "468: unassigned | 622: C\u2013S stretch / phenyl ring | 752: ring breathing (indole / pyrrole) | 818: unassigned | 1004: phenylalanine ring breathing | 1034: C\u2013N / C\u2013O stretch | 1212: amide III / C\u2013O\u2013C asymmetric | 1358: CH deformation / tryptophan | 1556: amide II / COO- asymmetric | 1606: aromatic ring C=C"
+        },
+        {
+          "csm_id": "csm14",
+          "contribution": 0.08933979671732784,
+          "lsms": [
+            "free_amino_acid.m03"
+          ],
+          "dominant_bands": [
+            504.0,
+            602.0,
+            840.0,
+            896.0,
+            1034.0,
+            1084.0,
+            1238.0,
+            1326.0,
+            1410.0,
+            1444.0
+          ],
+          "band_assignment": "504: S\u2013S / skeletal deformation | 602: unassigned | 840: tyrosine Fermi doublet / C\u2013C skeletal | 896: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1034: C\u2013N / C\u2013O stretch | 1084: C\u2013C skeletal (trans) / PO2- symmetric | 1238: amide III / C\u2013O\u2013C asymmetric | 1326: unassigned | 1410: COO- symmetric [free_amino_acid] | 1444: CH2 / CH3 scissoring"
+        },
+        {
+          "csm_id": "csm13",
+          "contribution": 0.08933979671732784,
+          "lsms": [
+            "free_amino_acid.m02"
+          ],
+          "dominant_bands": [
+            452.0,
+            538.0,
+            640.0,
+            692.0,
+            720.0,
+            772.0,
+            870.0,
+            1200.0,
+            1346.0,
+            1426.0
+          ],
+          "band_assignment": "452: unassigned | 538: S\u2013S / skeletal deformation | 640: C\u2013S stretch / phenyl ring | 692: unassigned | 720: ring breathing | 772: unassigned | 870: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1200: amide III / C\u2013O\u2013C asymmetric | 1346: CH deformation / tryptophan | 1426: unassigned"
+        }
+      ],
+      "dominant_bands": [
+        452,
+        468,
+        504,
+        538,
+        552,
+        578,
+        602,
+        606,
+        622,
+        640,
+        642,
+        674
+      ],
+      "auto_description": "protein and amino-acid programme",
+      "description_basis": "free amino acid carry 46% of the loading; 1 broad superclass(es); usage share 0.22"
+    },
+    {
+      "programme": 5,
+      "top_chemistry_axes": [
+        {
+          "chemistry_axis": "sterol_steroid",
+          "loading": 0.6406599907726112,
+          "share_of_programme": 0.4729508032796042
+        },
+        {
+          "chemistry_axis": "chromophore_pigment",
+          "loading": 0.1324240383596369,
+          "share_of_programme": 0.09775864923325392
+        },
+        {
+          "chemistry_axis": "pyrimidine",
+          "loading": -0.08184119457567157,
+          "share_of_programme": 0.06041716241597556
+        },
+        {
+          "chemistry_axis": "small_nitrogenous",
+          "loading": 0.06979464773857308,
+          "share_of_programme": 0.05152410824463542
+        },
+        {
+          "chemistry_axis": "sulfur_thiol_cofactor",
+          "loading": -0.06883919093450981,
+          "share_of_programme": 0.05081876676945491
+        }
+      ],
+      "cumulative_share_top3": 0.6311266149288337,
+      "n_axes_above_5pct": 5,
+      "representative_molecules": [
+        {
+          "molecule": "estriol",
+          "mean_activation": 1.5234312837250212
+        },
+        {
+          "molecule": "cholesterol",
+          "mean_activation": 1.4974175499059537
+        },
+        {
+          "molecule": "cholesteryl stearate",
+          "mean_activation": 1.4313324917140344
+        },
+        {
+          "molecule": "estradiol",
+          "mean_activation": 1.425468191164009
+        },
+        {
+          "molecule": "ethinylestradiol",
+          "mean_activation": 1.4244180438304175
+        },
+        {
+          "molecule": "cholesteryl palmitate",
+          "mean_activation": 1.3780221374376285
+        },
+        {
+          "molecule": "cholesteryl linoleate",
+          "mean_activation": 1.319537229335094
+        },
+        {
+          "molecule": "estrone",
+          "mean_activation": 1.3117419120745635
+        }
+      ],
+      "representative_classes": [
+        {
+          "class": "peptide_protein",
+          "n_spectra": 17
+        },
+        {
+          "class": "sterol_steroid",
+          "n_spectra": 13
+        },
+        {
+          "class": "free_amino_acid",
+          "n_spectra": 10
+        },
+        {
+          "class": "fatty_acid",
+          "n_spectra": 9
+        },
+        {
+          "class": "mono_oligosaccharide",
+          "n_spectra": 7
+        }
+      ],
+      "usage_share": 0.04,
+      "mean_activation": 0.246293912602341,
+      "supporting_csms": [
+        {
+          "csm_id": "csm46",
+          "contribution": 0.21355333025746587,
+          "lsms": [
+            "sterol_steroid.m02"
+          ],
+          "dominant_bands": [
+            500.0,
+            594.0,
+            730.0,
+            932.0,
+            968.0,
+            1008.0,
+            1258.0,
+            1340.0,
+            1436.0,
+            1616.0
+          ],
+          "band_assignment": "500: S\u2013S / skeletal deformation | 594: unassigned | 730: ring breathing | 932: C\u2013C backbone stretch | 968: unassigned | 1008: phenylalanine ring breathing | 1258: amide III / =C\u2013H in-plane bend | 1340: CH deformation / tryptophan | 1436: CH2 / CH3 scissoring | 1616: aromatic ring C=C"
+        },
+        {
+          "csm_id": "csm45",
+          "contribution": 0.21355333025746587,
+          "lsms": [
+            "sterol_steroid.m01"
+          ],
+          "dominant_bands": [
+            552.0,
+            738.0,
+            816.0,
+            1008.0,
+            1114.0,
+            1260.0,
+            1300.0,
+            1436.0,
+            1608.0,
+            1634.0
+          ],
+          "band_assignment": "552: S\u2013S / skeletal deformation | 738: unassigned | 816: unassigned | 1008: phenylalanine ring breathing | 1114: unassigned | 1260: amide III / =C\u2013H in-plane bend | 1300: CH2 twist | 1436: CH2 / CH3 scissoring | 1608: aromatic ring C=C | 1634: amide I / C=C stretch"
+        },
+        {
+          "csm_id": "csm44",
+          "contribution": 0.21355333025746587,
+          "lsms": [
+            "sterol_steroid.m00"
+          ],
+          "dominant_bands": [
+            610.0,
+            702.0,
+            882.0,
+            926.0,
+            1030.0,
+            1134.0,
+            1182.0,
+            1304.0,
+            1442.0,
+            1672.0
+          ],
+          "band_assignment": "610: unassigned | 702: sterol ring skeletal [sterol_steroid] | 882: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 926: unassigned | 1030: C\u2013N / C\u2013O stretch | 1134: C\u2013C skeletal (gauche) / C\u2013N stretch | 1182: unassigned | 1304: CH2 twist | 1442: CH2 / CH3 scissoring | 1672: C=C sterol [sterol_steroid]"
+        },
+        {
+          "csm_id": "csm43",
+          "contribution": 0.06979464773850327,
+          "lsms": [
+            "small_nitrogenous.m00"
+          ],
+          "dominant_bands": [
+            578.0,
+            606.0,
+            674.0,
+            838.0,
+            904.0,
+            1010.0,
+            1246.0,
+            1416.0,
+            1658.0,
+            1712.0
+          ],
+          "band_assignment": "578: unassigned | 606: unassigned | 674: unassigned | 838: tyrosine Fermi doublet / C\u2013C skeletal | 904: unassigned | 1010: C\u2013N symmetric [small_nitrogenous] | 1246: amide III / =C\u2013H in-plane bend | 1416: COO- symmetric stretch | 1658: amide I / C=C stretch | 1712: C=O ester / carboxylic acid"
+        },
+        {
+          "csm_id": "csm05",
+          "contribution": 0.06621201917978534,
+          "lsms": [
+            "chromophore_pigment.m00"
+          ],
+          "dominant_bands": [
+            1006.0,
+            1156.0,
+            1270.0,
+            1518.0
+          ],
+          "band_assignment": "1006: phenylalanine ring breathing | 1156: C\u2013C conjugated [chromophore_pigment] | 1270: amide III / =C\u2013H in-plane bend | 1518: C=C conjugated [chromophore_pigment]"
+        },
+        {
+          "csm_id": "csm06",
+          "contribution": 0.06621201917978534,
+          "lsms": [
+            "chromophore_pigment.m01"
+          ],
+          "dominant_bands": [
+            742.0,
+            788.0,
+            1060.0,
+            1180.0,
+            1224.0,
+            1346.0,
+            1402.0,
+            1464.0,
+            1498.0,
+            1622.0
+          ],
+          "band_assignment": "742: unassigned | 788: unassigned | 1060: C\u2013N / C\u2013O stretch | 1180: C\u2013C / C=C conjugated stretch | 1224: amide III / C\u2013O\u2013C asymmetric | 1346: CH deformation / tryptophan | 1402: COO- symmetric stretch | 1464: CH2 / CH3 scissoring | 1498: unassigned | 1622: unassigned"
+        }
+      ],
+      "dominant_bands": [
+        500,
+        552,
+        578,
+        594,
+        606,
+        610,
+        674,
+        702,
+        730,
+        738,
+        742,
+        788
+      ],
+      "auto_description": "membrane and storage lipid programme",
+      "description_basis": "sterol steroid carry 47% of the loading; 1 broad superclass(es); usage share 0.04"
+    },
+    {
+      "programme": 6,
+      "top_chemistry_axes": [
+        {
+          "chemistry_axis": "peptide_protein",
+          "loading": 0.5424432985175397,
+          "share_of_programme": 0.4468541488559847
+        },
+        {
+          "chemistry_axis": "sulfur_thiol_cofactor",
+          "loading": -0.08031572649545886,
+          "share_of_programme": 0.0661625200292116
+        },
+        {
+          "chemistry_axis": "carboxylic_acid_metabolite",
+          "loading": -0.07930954861595048,
+          "share_of_programme": 0.06533365042906315
+        },
+        {
+          "chemistry_axis": "purine",
+          "loading": -0.07282713509508586,
+          "share_of_programme": 0.059993565328343955
+        },
+        {
+          "chemistry_axis": "pyrimidine",
+          "loading": -0.06320426365809072,
+          "share_of_programme": 0.05206643259893115
+        }
+      ],
+      "cumulative_share_top3": 0.5783503193142594,
+      "n_axes_above_5pct": 5,
+      "representative_molecules": [
+        {
+          "molecule": "\u03b1-chymotrypsinogen a (type ii)",
+          "mean_activation": 1.6141158826354796
+        },
+        {
+          "molecule": "trypsin",
+          "mean_activation": 1.6047958394144421
+        },
+        {
+          "molecule": "elastase",
+          "mean_activation": 1.5071240689214334
+        },
+        {
+          "molecule": "pepsin",
+          "mean_activation": 1.4076789603793272
+        },
+        {
+          "molecule": "myoglobin",
+          "mean_activation": 1.370469909272027
+        },
+        {
+          "molecule": "papain",
+          "mean_activation": 1.2676921287074963
+        },
+        {
+          "molecule": "lectin",
+          "mean_activation": 1.2653119124724541
+        },
+        {
+          "molecule": "hemoglobin",
+          "mean_activation": 1.260962748105971
+        }
+      ],
+      "representative_classes": [
+        {
+          "class": "peptide_protein",
+          "n_spectra": 69
+        },
+        {
+          "class": "chromophore_pigment",
+          "n_spectra": 4
+        },
+        {
+          "class": "polysaccharide",
+          "n_spectra": 2
+        }
+      ],
+      "usage_share": 0.216,
+      "mean_activation": 0.42113469360586897,
+      "supporting_csms": [
+        {
+          "csm_id": "csm31",
+          "contribution": 0.05424432985174855,
+          "lsms": [
+            "peptide_protein.m06"
+          ],
+          "dominant_bands": [
+            624.0,
+            752.0,
+            834.0,
+            1006.0,
+            1126.0,
+            1238.0,
+            1346.0,
+            1452.0,
+            1606.0,
+            1674.0
+          ],
+          "band_assignment": "624: C\u2013S stretch / phenyl ring | 752: ring breathing (indole / pyrrole) | 834: tyrosine Fermi doublet / C\u2013C skeletal | 1006: phenylalanine [peptide_protein] | 1126: C\u2013C skeletal (gauche) / C\u2013N stretch | 1238: amide III [peptide_protein] | 1346: CH deformation / tryptophan | 1452: CH2 / CH3 scissoring | 1606: aromatic ring C=C | 1674: amide I [peptide_protein]"
+        },
+        {
+          "csm_id": "csm29",
+          "contribution": 0.05424432985174855,
+          "lsms": [
+            "peptide_protein.m04"
+          ],
+          "dominant_bands": [
+            848.0,
+            1006.0,
+            1140.0,
+            1234.0,
+            1280.0,
+            1342.0,
+            1476.0,
+            1556.0,
+            1622.0,
+            1672.0
+          ],
+          "band_assignment": "848: tyrosine Fermi doublet / C\u2013C skeletal | 1006: phenylalanine [peptide_protein] | 1140: C\u2013C skeletal (gauche) / C\u2013N stretch | 1234: amide III [peptide_protein] | 1280: amide III [peptide_protein] | 1342: CH deformation / tryptophan | 1476: unassigned | 1556: amide II / COO- asymmetric | 1622: unassigned | 1672: amide I [peptide_protein]"
+        },
+        {
+          "csm_id": "csm28",
+          "contribution": 0.05424432985174855,
+          "lsms": [
+            "peptide_protein.m03"
+          ],
+          "dominant_bands": [
+            482.0,
+            582.0,
+            864.0,
+            942.0,
+            1130.0,
+            1260.0,
+            1336.0,
+            1390.0,
+            1464.0,
+            1658.0
+          ],
+          "band_assignment": "482: S\u2013S / skeletal deformation | 582: unassigned | 864: unassigned | 942: C\u2013C backbone stretch | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1260: amide III [peptide_protein] | 1336: CH deformation / tryptophan | 1390: COO- symmetric stretch | 1464: CH2 / CH3 scissoring | 1658: amide I [peptide_protein]"
+        },
+        {
+          "csm_id": "csm27",
+          "contribution": 0.05424432985174855,
+          "lsms": [
+            "peptide_protein.m02"
+          ],
+          "dominant_bands": [
+            542.0,
+            676.0,
+            712.0,
+            832.0,
+            950.0,
+            1002.0,
+            1038.0,
+            1128.0,
+            1418.0,
+            1458.0
+          ],
+          "band_assignment": "542: S\u2013S / skeletal deformation | 676: unassigned | 712: ring breathing | 832: tyrosine Fermi doublet / C\u2013C skeletal | 950: C\u2013C backbone stretch | 1002: phenylalanine [peptide_protein] | 1038: C\u2013N / C\u2013O stretch | 1128: C\u2013C skeletal (gauche) / C\u2013N stretch | 1418: COO- symmetric stretch | 1458: CH2 / CH3 scissoring"
+        },
+        {
+          "csm_id": "csm26",
+          "contribution": 0.05424432985174855,
+          "lsms": [
+            "peptide_protein.m01"
+          ],
+          "dominant_bands": [
+            686.0,
+            750.0,
+            980.0,
+            1130.0,
+            1174.0,
+            1226.0,
+            1312.0,
+            1362.0,
+            1400.0,
+            1588.0
+          ],
+          "band_assignment": "686: unassigned | 750: ring breathing (indole / pyrrole) | 980: unassigned | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1174: C\u2013C / C=C conjugated stretch | 1226: amide III / C\u2013O\u2013C asymmetric | 1312: CH2 twist | 1362: unassigned | 1400: COO- symmetric stretch | 1588: unassigned"
+        },
+        {
+          "csm_id": "csm25",
+          "contribution": 0.05424432985174855,
+          "lsms": [
+            "peptide_protein.m00"
+          ],
+          "dominant_bands": [
+            520.0,
+            644.0,
+            856.0,
+            1000.0,
+            1030.0,
+            1102.0,
+            1170.0,
+            1246.0,
+            1452.0,
+            1676.0
+          ],
+          "band_assignment": "520: S\u2013S / skeletal deformation | 644: C\u2013S stretch / phenyl ring | 856: tyrosine Fermi doublet / C\u2013C skeletal | 1000: phenylalanine [peptide_protein] | 1030: C\u2013N / C\u2013O stretch | 1102: unassigned | 1170: C\u2013C / C=C conjugated stretch | 1246: amide III [peptide_protein] | 1452: CH2 / CH3 scissoring | 1676: amide I [peptide_protein]"
+        }
+      ],
+      "dominant_bands": [
+        482,
+        520,
+        542,
+        582,
+        624,
+        644,
+        676,
+        686,
+        712,
+        750,
+        752,
+        832
+      ],
+      "auto_description": "protein and amino-acid programme",
+      "description_basis": "peptide protein carry 45% of the loading; 1 broad superclass(es); usage share 0.22"
+    },
+    {
+      "programme": 7,
+      "top_chemistry_axes": [
+        {
+          "chemistry_axis": "purine",
+          "loading": 0.8753755454765745,
+          "share_of_programme": 0.4600481752231708
+        },
+        {
+          "chemistry_axis": "phospholipid_sphingolipid",
+          "loading": 0.13890066520616823,
+          "share_of_programme": 0.07299838097555388
+        },
+        {
+          "chemistry_axis": "mono_oligosaccharide",
+          "loading": -0.1111933385458399,
+          "share_of_programme": 0.05843696772124968
+        },
+        {
+          "chemistry_axis": "carboxylic_acid_metabolite",
+          "loading": -0.10916131906180586,
+          "share_of_programme": 0.057369052515623443
+        },
+        {
+          "chemistry_axis": "peptide_protein",
+          "loading": -0.10048260852193425,
+          "share_of_programme": 0.05280801015181791
+        }
+      ],
+      "cumulative_share_top3": 0.5914835239199743,
+      "n_axes_above_5pct": 5,
+      "representative_molecules": [
+        {
+          "molecule": "urate",
+          "mean_activation": 1.2545396394643122
+        },
+        {
+          "molecule": "guanine",
+          "mean_activation": 1.179720533608053
+        },
+        {
+          "molecule": "adenine",
+          "mean_activation": 1.1213813680312128
+        },
+        {
+          "molecule": "hypoxanthine",
+          "mean_activation": 1.1028197279421708
+        },
+        {
+          "molecule": "xanthine",
+          "mean_activation": 0.4776840979879448
+        },
+        {
+          "molecule": "oleate",
+          "mean_activation": 0.45639365706829854
+        },
+        {
+          "molecule": "vaccenic acid",
+          "mean_activation": 0.4485206100875436
+        },
+        {
+          "molecule": "ceramide",
+          "mean_activation": 0.43779702219707783
+        }
+      ],
+      "representative_classes": [
+        {
+          "class": "purine",
+          "n_spectra": 17
+        },
+        {
+          "class": "free_amino_acid",
+          "n_spectra": 12
+        },
+        {
+          "class": "fatty_acid",
+          "n_spectra": 8
+        },
+        {
+          "class": "peptide_protein",
+          "n_spectra": 7
+        },
+        {
+          "class": "mono_oligosaccharide",
+          "n_spectra": 6
+        }
+      ],
+      "usage_share": 0.064,
+      "mean_activation": 0.22122519658774445,
+      "supporting_csms": [
+        {
+          "csm_id": "csm40",
+          "contribution": 0.43768777273806836,
+          "lsms": [
+            "purine.m00"
+          ],
+          "dominant_bands": [
+            534.0,
+            624.0,
+            722.0,
+            944.0,
+            1038.0,
+            1124.0,
+            1248.0,
+            1334.0,
+            1488.0,
+            1650.0
+          ],
+          "band_assignment": "534: S\u2013S / skeletal deformation | 624: C\u2013S stretch / phenyl ring | 722: purine ring breathing [purine] | 944: C\u2013C backbone stretch | 1038: C\u2013N / C\u2013O stretch | 1124: C\u2013C skeletal (gauche) / C\u2013N stretch | 1248: amide III / =C\u2013H in-plane bend | 1334: purine N7\u2013C5 stretch [purine] | 1488: unassigned | 1650: amide I / C=C stretch"
+        },
+        {
+          "csm_id": "csm41",
+          "contribution": 0.43768777273806836,
+          "lsms": [
+            "purine.m01"
+          ],
+          "dominant_bands": [
+            544.0,
+            650.0,
+            938.0,
+            958.0,
+            1230.0,
+            1264.0,
+            1330.0,
+            1434.0,
+            1552.0,
+            1680.0
+          ],
+          "band_assignment": "544: S\u2013S / skeletal deformation | 650: C\u2013S stretch / phenyl ring | 938: C\u2013C backbone stretch | 958: C\u2013C backbone stretch | 1230: amide III / C\u2013O\u2013C asymmetric | 1264: amide III / =C\u2013H in-plane bend | 1330: purine N7\u2013C5 stretch [purine] | 1434: CH2 / CH3 scissoring | 1552: amide II / COO- asymmetric | 1680: amide I / C=C stretch"
+        },
+        {
+          "csm_id": "csm36",
+          "contribution": 0.06945033260304939,
+          "lsms": [
+            "phospholipid_sphingolipid.m00"
+          ],
+          "dominant_bands": [
+            720.0,
+            880.0,
+            1062.0,
+            1128.0,
+            1296.0,
+            1438.0,
+            1658.0,
+            1742.0
+          ],
+          "band_assignment": "720: ring breathing | 880: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1062: C\u2013C skeletal (trans) / PO2- symmetric | 1128: C\u2013C skeletal (gauche) / C\u2013N stretch | 1296: CH2 twist | 1438: CH2 / CH3 scissoring | 1658: amide I / C=C stretch | 1742: ester C=O [phospholipid_sphingolipid]"
+        },
+        {
+          "csm_id": "csm37",
+          "contribution": 0.06945033260304939,
+          "lsms": [
+            "phospholipid_sphingolipid.m01"
+          ],
+          "dominant_bands": [
+            470.0,
+            530.0,
+            650.0,
+            862.0,
+            928.0,
+            1090.0,
+            1182.0,
+            1320.0,
+            1502.0,
+            1650.0
+          ],
+          "band_assignment": "470: unassigned | 530: S\u2013S / skeletal deformation | 650: C\u2013S stretch / phenyl ring | 862: unassigned | 928: unassigned | 1090: PO2- symmetric stretch [phospholipid_sphingolipid] | 1182: unassigned | 1320: CH2 twist | 1502: conjugated C=C (carotenoid) | 1650: amide I / C=C stretch"
+        },
+        {
+          "csm_id": "csm43",
+          "contribution": 0.0605098853167353,
+          "lsms": [
+            "small_nitrogenous.m00"
+          ],
+          "dominant_bands": [
+            578.0,
+            606.0,
+            674.0,
+            838.0,
+            904.0,
+            1010.0,
+            1246.0,
+            1416.0,
+            1658.0,
+            1712.0
+          ],
+          "band_assignment": "578: unassigned | 606: unassigned | 674: unassigned | 838: tyrosine Fermi doublet / C\u2013C skeletal | 904: unassigned | 1010: C\u2013N symmetric [small_nitrogenous] | 1246: amide III / =C\u2013H in-plane bend | 1416: COO- symmetric stretch | 1658: amide I / C=C stretch | 1712: C=O ester / carboxylic acid"
+        },
+        {
+          "csm_id": "csm24",
+          "contribution": 0.04217217638110708,
+          "lsms": [
+            "nucleic_acid_polymer.m00"
+          ],
+          "dominant_bands": [
+            668.0,
+            728.0,
+            784.0,
+            1096.0,
+            1252.0,
+            1336.0,
+            1374.0,
+            1486.0,
+            1574.0,
+            1670.0
+          ],
+          "band_assignment": "668: unassigned | 728: ring breathing | 784: backbone O\u2013P\u2013O [nucleic_acid_polymer] | 1096: PO2- symmetric [nucleic_acid_polymer] | 1252: amide III / =C\u2013H in-plane bend | 1336: CH deformation / tryptophan | 1374: unassigned | 1486: unassigned | 1574: amide II / COO- asymmetric | 1670: amide I / C=C stretch"
+        }
+      ],
+      "dominant_bands": [
+        470,
+        530,
+        534,
+        544,
+        578,
+        606,
+        624,
+        650,
+        668,
+        674,
+        720,
+        722
+      ],
+      "auto_description": "nucleic programme",
+      "description_basis": "purine carry 46% of the loading; 1 broad superclass(es); usage share 0.06"
+    },
+    {
+      "programme": 8,
+      "top_chemistry_axes": [
+        {
+          "chemistry_axis": "mono_oligosaccharide",
+          "loading": 0.45099206122564434,
+          "share_of_programme": 0.32634466321575
+        },
+        {
+          "chemistry_axis": "polysaccharide",
+          "loading": 0.31593635383900204,
+          "share_of_programme": 0.2286163146885532
+        },
+        {
+          "chemistry_axis": "free_amino_acid",
+          "loading": -0.09033909681916155,
+          "share_of_programme": 0.06537073412454987
+        },
+        {
+          "chemistry_axis": "small_nitrogenous",
+          "loading": -0.08506511949929545,
+          "share_of_programme": 0.06155440452535084
+        },
+        {
+          "chemistry_axis": "purine",
+          "loading": -0.05787328178249612,
+          "share_of_programme": 0.04187798029342554
+        }
+      ],
+      "cumulative_share_top3": 0.6203317120288531,
+      "n_axes_above_5pct": 4,
+      "representative_molecules": [
+        {
+          "molecule": "amylose",
+          "mean_activation": 1.6039514725785398
+        },
+        {
+          "molecule": "chitin",
+          "mean_activation": 1.4420197222637514
+        },
+        {
+          "molecule": "amylopectin",
+          "mean_activation": 1.4057404791735908
+        },
+        {
+          "molecule": "cellulose",
+          "mean_activation": 1.3997132717543321
+        },
+        {
+          "molecule": "(+)-maltose",
+          "mean_activation": 1.3256100320008077
+        },
+        {
+          "molecule": "\u03b2-d-glucose",
+          "mean_activation": 1.2979517860642926
+        },
+        {
+          "molecule": "(+)-fucose",
+          "mean_activation": 1.2541930598903333
+        },
+        {
+          "molecule": "xylanase",
+          "mean_activation": 1.2332225384791224
+        }
+      ],
+      "representative_classes": [
+        {
+          "class": "mono_oligosaccharide",
+          "n_spectra": 40
+        },
+        {
+          "class": "free_amino_acid",
+          "n_spectra": 16
+        },
+        {
+          "class": "polysaccharide",
+          "n_spectra": 10
+        },
+        {
+          "class": "carboxylic_acid_metabolite",
+          "n_spectra": 4
+        },
+        {
+          "class": "peptide_protein",
+          "n_spectra": 4
+        }
+      ],
+      "usage_share": 0.168,
+      "mean_activation": 0.372207324999819,
+      "supporting_csms": [
+        {
+          "csm_id": "csm39",
+          "contribution": 0.15796817691942203,
+          "lsms": [
+            "polysaccharide.m01"
+          ],
+          "dominant_bands": [
+            498.0,
+            896.0,
+            954.0,
+            1058.0,
+            1098.0,
+            1150.0,
+            1266.0,
+            1330.0,
+            1378.0,
+            1414.0
+          ],
+          "band_assignment": "498: S\u2013S / skeletal deformation | 896: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 954: C\u2013O\u2013C ring [polysaccharide] | 1058: C\u2013N / C\u2013O stretch | 1098: C\u2013O\u2013C glycosidic [polysaccharide] | 1150: C\u2013C / C=C conjugated stretch | 1266: amide III / =C\u2013H in-plane bend | 1330: CH deformation / tryptophan | 1378: unassigned | 1414: COO- symmetric stretch"
+        },
+        {
+          "csm_id": "csm38",
+          "contribution": 0.15796817691942203,
+          "lsms": [
+            "polysaccharide.m00"
+          ],
+          "dominant_bands": [
+            480.0,
+            580.0,
+            862.0,
+            940.0,
+            1046.0,
+            1082.0,
+            1130.0,
+            1252.0,
+            1338.0,
+            1462.0
+          ],
+          "band_assignment": "480: S\u2013S / skeletal deformation | 580: unassigned | 862: unassigned | 940: C\u2013O\u2013C ring [polysaccharide] | 1046: C\u2013N / C\u2013O stretch | 1082: C\u2013O\u2013C glycosidic [polysaccharide] | 1130: C\u2013O\u2013C glycosidic [polysaccharide] | 1252: amide III / =C\u2013H in-plane bend | 1338: CH deformation / tryptophan | 1462: CH2 / CH3 scissoring"
+        },
+        {
+          "csm_id": "csm23",
+          "contribution": 0.07516534353759485,
+          "lsms": [
+            "mono_oligosaccharide.m05"
+          ],
+          "dominant_bands": [
+            524.0,
+            604.0,
+            832.0,
+            904.0,
+            932.0,
+            1016.0,
+            1084.0,
+            1116.0,
+            1148.0,
+            1398.0
+          ],
+          "band_assignment": "524: S\u2013S / skeletal deformation | 604: unassigned | 832: tyrosine Fermi doublet / C\u2013C skeletal | 904: unassigned | 932: C\u2013C backbone stretch | 1016: unassigned | 1084: C\u2013O\u2013C glycosidic [mono_oligosaccharide] | 1116: C\u2013O\u2013C glycosidic [mono_oligosaccharide] | 1148: unassigned | 1398: COO- symmetric stretch"
+        },
+        {
+          "csm_id": "csm22",
+          "contribution": 0.07516534353759485,
+          "lsms": [
+            "mono_oligosaccharide.m04"
+          ],
+          "dominant_bands": [
+            626.0,
+            674.0,
+            812.0,
+            876.0,
+            924.0,
+            978.0,
+            1046.0,
+            1084.0,
+            1276.0,
+            1470.0
+          ],
+          "band_assignment": "626: C\u2013S stretch / phenyl ring | 674: unassigned | 812: unassigned | 876: anomeric C\u2013H [mono_oligosaccharide] | 924: unassigned | 978: unassigned | 1046: C\u2013N / C\u2013O stretch | 1084: C\u2013O\u2013C glycosidic [mono_oligosaccharide] | 1276: amide III / =C\u2013H in-plane bend | 1470: unassigned"
+        },
+        {
+          "csm_id": "csm21",
+          "contribution": 0.07516534353759485,
+          "lsms": [
+            "mono_oligosaccharide.m03"
+          ],
+          "dominant_bands": [
+            478.0,
+            524.0,
+            576.0,
+            852.0,
+            972.0,
+            1038.0,
+            1132.0,
+            1258.0,
+            1330.0,
+            1380.0
+          ],
+          "band_assignment": "478: unassigned | 524: S\u2013S / skeletal deformation | 576: unassigned | 852: anomeric C\u2013H [mono_oligosaccharide] | 972: unassigned | 1038: C\u2013N / C\u2013O stretch | 1132: C\u2013C skeletal (gauche) / C\u2013N stretch | 1258: amide III / =C\u2013H in-plane bend | 1330: CH deformation / tryptophan | 1380: unassigned"
+        },
+        {
+          "csm_id": "csm20",
+          "contribution": 0.07516534353759485,
+          "lsms": [
+            "mono_oligosaccharide.m02"
+          ],
+          "dominant_bands": [
+            542.0,
+            648.0,
+            840.0,
+            914.0,
+            1074.0,
+            1120.0,
+            1150.0,
+            1274.0,
+            1344.0,
+            1460.0
+          ],
+          "band_assignment": "542: S\u2013S / skeletal deformation | 648: C\u2013S stretch / phenyl ring | 840: anomeric C\u2013H [mono_oligosaccharide] | 914: unassigned | 1074: C\u2013C skeletal (trans) / PO2- symmetric | 1120: C\u2013O\u2013C glycosidic [mono_oligosaccharide] | 1150: C\u2013C / C=C conjugated stretch | 1274: amide III / =C\u2013H in-plane bend | 1344: CH deformation / tryptophan | 1460: CH2 / CH3 scissoring"
+        }
+      ],
+      "dominant_bands": [
+        478,
+        480,
+        498,
+        524,
+        542,
+        576,
+        580,
+        604,
+        626,
+        648,
+        674,
+        812
+      ],
+      "auto_description": "carbohydrate programme",
+      "description_basis": "mono oligosaccharide + polysaccharide carry 55% of the loading; 1 broad superclass(es); usage share 0.17"
+    }
+  ],
+  "compositeness": {
+    "programme_top_axis_share": [
+      0.3457114940088334,
+      0.5184018498447969,
+      0.5460799877940614,
+      0.30403778137921206,
+      0.4582768330755275,
+      0.4729508032796042,
+      0.4468541488559847,
+      0.4600481752231708,
+      0.32634466321575
+    ],
+    "n_genuinely_composite": 7,
+    "n_near_single_class": 2,
+    "composite_definition": "top chemistry axis holds < 50% of the programme loading",
+    "mean_top_axis_share": 0.43096730407521566,
+    "mean_axes_above_5pct": 4.0
+  },
+  "scientific_answers": {
+    "how_many_programmes_emerge": "9 under the pre-registered rule",
+    "how_much_chemistry_reconstructed": "EV 0.818, mean cosine 0.929",
+    "how_stable": "bootstrap 0.972, seed 0.957, fold 0.979",
+    "are_programmes_reusable": "held-out EV 0.765 vs in-sample 0.818",
+    "are_programmes_genuine_compressions": "7 of 9 are multi-chemistry (top axis < 50%); 2 are near-single-class",
+    "do_programmes_correspond_to_meaningful_biochemistry": "9 of 9 programmes have a chemistry axis above 15% of their loading",
+    "is_there_redundancy": "max pairwise programme overlap 0.400, mean 0.195",
+    "does_one_programme_dominate": "top programme wins 0.221 of spectra",
+    "better_than_pca": "BSV2 held-out chemistry 0.667 vs PCA 0.661 at the same K"
+  },
+  "gates": {
+    "n": 17,
+    "failed": 0
+  },
+  "_provenance": {
+    "phase": "07",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "input": "phase06 chemistry_evidence_predictions_v1.npz :: E (375x16)",
+    "code_fingerprint": "83cf9efcdf3d40c9e9dff5775058fbdf",
+    "created_utc": "2026-08-07T03:50:05.983723+00:00",
+    "selection_rule": "heldout_chemistry_retention * bootstrap_stability",
+    "floors": {
+      "information_retained_vs_chemistry_evidence": 0.5,
+      "heldout_chemistry_retention": 0.5,
+      "max_pairwise_overlap": 0.9,
+      "max_dominance": 0.6,
+      "non_negative_activations": true,
+      "max_K": 12,
+      "max_single_axis_share": 0.9
+    },
+    "scope": "Raman only"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "phase": "07",
+  "name": "BSV2 biochemical programme layer",
+  "status": "COMPLETE",
+  "started": "2026-08-07T03:50:05.983723+00:00",
+  "finished": "2026-08-07T03:54:12.991400+00:00",
+  "seed": 0,
+  "bsv2_adopted": true,
+  "family": "semi_nmf",
+  "K": 9,
+  "input_fingerprints": {
+    "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+    "lsm": "208482d6f7178b5b8f16cace91be55b0",
+    "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+    "atlas": "09ed804a40836f4a05a91ba10900cded"
+  },
+  "input": "chemistry evidence only",
+  "scope": "Raman only",
+  "phase08_begun": false,
+  "outputs": [
+    {
+      "artifact_id": "programme_sweep_v1.csv",
+      "path": "results/v7_rebuild/phase07/tables/programme_sweep_v1.csv",
+      "sha256": "c3e94cf3414a407a084b2e820befb37b1d5456266cc1da5b908d78b9afed25fb",
+      "rows": 135
+    },
+    {
+      "artifact_id": "programme_selection_v1.csv",
+      "path": "results/v7_rebuild/phase07/tables/programme_selection_v1.csv",
+      "sha256": "f5bcd84dc1cb29bcaaa0017891ee73eb2578694cf1a19e45509f0015d2d2eede",
+      "rows": 135
+    },
+    {
+      "artifact_id": "programme_decision_v1.json",
+      "path": "results/v7_rebuild/phase07/artifacts/programme_decision_v1.json",
+      "sha256": "0b61287f35afe0c64175ad0a2374069b8aa8da048db58e6b5ee8038c8cb49dc7"
+    },
+    {
+      "artifact_id": "p02_compliant_alternative_v1.json",
+      "path": "results/v7_rebuild/phase07/artifacts/p02_compliant_alternative_v1.json",
+      "sha256": "64d3167013d3113a0eee9153fbef96f72458c5e0fd2a4b2ec899b71f70ef8e44"
+    },
+    {
+      "artifact_id": "reconstruction_per_axis_v1.csv",
+      "path": "results/v7_rebuild/phase07/tables/reconstruction_per_axis_v1.csv",
+      "sha256": "3bc286fd1713217f2e6ff991addc7fd76bbd44df62555b294c9be2522db8da8c",
+      "rows": 16
+    },
+    {
+      "artifact_id": "programme_stability_v1.csv",
+      "path": "results/v7_rebuild/phase07/tables/programme_stability_v1.csv",
+      "sha256": "47a22c01fc21db96b540c155d2b66799f714e18035b0f31046414749cc81ee81",
+      "rows": 9
+    },
+    {
+      "artifact_id": "layer_comparison_v1.csv",
+      "path": "results/v7_rebuild/phase07/tables/layer_comparison_v1.csv",
+      "sha256": "bbe9894ad8f10776bdfc13be70004735e0c631cb9cb783b02f881907cac5335f",
+      "rows": 3
+    },
+    {
+      "artifact_id": "programme_compositeness_v1.json",
+      "path": "results/v7_rebuild/phase07/artifacts/programme_compositeness_v1.json",
+      "sha256": "0f960ee564b4dcc5adb765b86269ad544efa37072f85934faa8389694e5c35c8"
+    },
+    {
+      "artifact_id": "programme_explanations_v1.json",
+      "path": "results/v7_rebuild/phase07/artifacts/programme_explanations_v1.json",
+      "sha256": "e19e3564653d96b35e44c510455aba7db1a14e36261a634a13cb4d984a91d5b5"
+    },
+    {
+      "artifact_id": "generalisation_v1.csv",
+      "path": "results/v7_rebuild/phase07/tables/generalisation_v1.csv",
+      "sha256": "9bf82884e43f68d91c38d595cba5100d4cf02579db6cd59011c5efb738610a71",
+      "rows": 5
+    },
+    {
+      "artifact_id": "noise_robustness_v1.csv",
+      "path": "results/v7_rebuild/phase07/tables/noise_robustness_v1.csv",
+      "sha256": "cd28a7213b02e4e1abfbf5f906157ab825965b6a45488d247d8d220202f8467b",
+      "rows": 25
+    },
+    {
+      "artifact_id": "programme_coherence_v1.csv",
+      "path": "results/v7_rebuild/phase07/tables/programme_coherence_v1.csv",
+      "sha256": "98178810398adb9cdea7455fd42135ceffa09898c0579790b4ef548e123a1b96",
+      "rows": 9
+    },
+    {
+      "artifact_id": "programme_overlap_v1.csv",
+      "path": "results/v7_rebuild/phase07/tables/programme_overlap_v1.csv",
+      "sha256": "71183a7f934befc4337c4009f4f1b68399b7359ddc9f98a2e931c35ddd76d788",
+      "rows": 9
+    },
+    {
+      "artifact_id": "phase07_gates_v1.csv",
+      "path": "results/v7_rebuild/phase07/tables/phase07_gates_v1.csv",
+      "sha256": "3ac7d30e0fb6a4f7d392788700feb666ffddf41351f3c3aad6a9bbbcccbac16e",
+      "rows": 17
+    },
+    {
+      "artifact_id": "bsv2_programmes_v1.npz",
+      "path": "results/v7_rebuild/phase07/artifacts/bsv2_programmes_v1.npz",
+      "sha256": "1e51077469f93fc69c59d119cfcb749b87fdb22e1995b3fbfdeefae93bf6f42e"
+    },
+    {
+      "artifact_id": "phase07_summary_v1.json",
+      "path": "results/v7_rebuild/phase07/artifacts/phase07_summary_v1.json",
+      "sha256": "60699b4725608436c66f114a0dede25dbffeb2ea1b5525093f459be92450c51b"
+    },
+    {
+      "artifact_id": "bsv2_manifest_v1.json",
+      "path": "results/v7_rebuild/phase07/manifests/bsv2_manifest_v1.json",
+      "sha256": "93a1e192ac2cf8292f3610b9aa2ce3d3cbc8fb5442739f68d243be89f071396e"
+    }
+  ]
+}

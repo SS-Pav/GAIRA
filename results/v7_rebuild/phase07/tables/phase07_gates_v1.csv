@@ -1,0 +1,18 @@
+gate,status
+G1 frozen fingerprints verified,PASS
+G2 no upstream artifact refitted,PASS
+G3 input is Chemistry Evidence only,PASS
+"G4 no geometry, cluster ids or coordinates used",PASS
+G5 Raman-only scope,PASS
+"G6 all 6 families x 15 K fitted, none silently dropped",PASS
+G7 selection rule pre-registered and applied unadjusted,PASS
+G8 K not chosen by hand,PASS
+"G9 programme naming automatic, none named by hand",PASS
+G10 soft membership — no programme is a single chemistry class,PASS
+G11 activations non-negative,PASS
+G12 generalisation measured on held-out molecules,PASS
+G13 noise robustness measured through the frozen chain,PASS
+G14 deterministic on rerun,PASS
+G15 PNG-only figure policy declared,PASS
+G16 Phase 08 not begun,PASS
+"G17 the P-02 loading-sign question is reported, not silently resolved",PASS

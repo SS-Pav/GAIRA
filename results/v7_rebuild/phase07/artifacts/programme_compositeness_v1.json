@@ -1,0 +1,42 @@
+{
+  "programme_top_axis_share": [
+    0.3457114940088334,
+    0.5184018498447969,
+    0.5460799877940614,
+    0.30403778137921206,
+    0.4582768330755275,
+    0.4729508032796042,
+    0.4468541488559847,
+    0.4600481752231708,
+    0.32634466321575
+  ],
+  "n_genuinely_composite": 7,
+  "n_near_single_class": 2,
+  "composite_definition": "top chemistry axis holds < 50% of the programme loading",
+  "mean_top_axis_share": 0.43096730407521566,
+  "mean_axes_above_5pct": 4.0,
+  "_provenance": {
+    "phase": "07",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "input": "phase06 chemistry_evidence_predictions_v1.npz :: E (375x16)",
+    "code_fingerprint": "83cf9efcdf3d40c9e9dff5775058fbdf",
+    "created_utc": "2026-08-07T03:50:05.983723+00:00",
+    "selection_rule": "heldout_chemistry_retention * bootstrap_stability",
+    "floors": {
+      "information_retained_vs_chemistry_evidence": 0.5,
+      "heldout_chemistry_retention": 0.5,
+      "max_pairwise_overlap": 0.9,
+      "max_dominance": 0.6,
+      "non_negative_activations": true,
+      "max_K": 12,
+      "max_single_axis_share": 0.9
+    },
+    "scope": "Raman only"
+  }
+}
