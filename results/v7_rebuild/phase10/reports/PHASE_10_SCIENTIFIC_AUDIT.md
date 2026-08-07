@@ -97,7 +97,15 @@ freezes the measured behaviour — white noise reconstructs at CSM EV 0.6083, ab
 schema-validated, which is necessary and not sufficient. What an agent would *say* about the
 results is the risk, and nothing in Phase 10 constrains that — see §F.
 
-**C6. Docker image reproducibility.** The Dockerfile pins no dependency versions beyond floors, so
+**C6. That the shipped code's own descriptions of DART and of atlas identity are correct.**
+Two strings inside the frozen runtime carry models that the Phase 10.1 documentation supersedes:
+`DARTAdapter.requires` describes a "mass-spectrometric to vibrational correspondence", and the
+field `atlas_fingerprint` carries the Frozen Runtime Content Hash rather than the Scientific Atlas
+Fingerprint. Neither affects a computed number — the adapter raises rather than running — but a
+reader of the source alone would be misled. Both are recorded in `PHASE_10_ARCHITECTURE.md` §9 and
+both require a post-freeze runtime change.
+
+**C7. Docker image reproducibility.** The Dockerfile pins no dependency versions beyond floors, so
 two builds a month apart may differ. It verifies the atlas at build time, which is the property
 that matters scientifically, but the image is not bit-reproducible.
 
@@ -135,6 +143,8 @@ operation that is *allowed* to fail, and let everything else surface.
 3. **Measure a bare API process's memory** (B2), isolated from the test harness.
 4. **Pin the Docker dependency versions** (C6) if image reproducibility is wanted.
 5. **Decide the security posture explicitly** (C2) before anything is exposed beyond loopback.
+6. **Clear the two frozen-interface divergences** (C6) in the first post-freeze interface version:
+   rename `atlas_fingerprint`, and move DART from the modality registry to the trajectory layer.
 
 None of these changes the decision. All five would make it easier to defend.
 

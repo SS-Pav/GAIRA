@@ -1,0 +1,621 @@
+{
+ "canonical": {
+  "Scientific Atlas Fingerprint": "09ed804a40836f4a05a91ba10900cded",
+  "Frozen Runtime Content Hash": "2e43ddcca7d3be41c5f9da016fb8277f",
+  "LSM registry": "208482d6f7178b5b8f16cace91be55b0",
+  "CSM registry": "0b4aa550ccefed3edabdbde5bae11c8d",
+  "Phase 05 engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+  "n_lsms": 50,
+  "n_csms": 49,
+  "n_molecules": 154,
+  "n_chemistry_axes": 16,
+  "single_inference_ms_median": 2.34,
+  "api_overhead_ms": 1.61,
+  "mcp_overhead_ms": 2.97,
+  "parity_comparisons": 60,
+  "parity_divergent": 0,
+  "parity_max_abs_diff": 0.0,
+  "gates_total": 17,
+  "gates_failed": 0
+ },
+ "n_documents": 11,
+ "n_checks": 97,
+ "n_failed": 0,
+ "documents": [
+  "PHASE_10_API_SPEC.md",
+  "PHASE_10_ARCHITECTURE.md",
+  "PHASE_10_CONTEXT.md",
+  "PHASE_10_DECISION_GATE.md",
+  "PHASE_10_DEPLOYMENT_GUIDE.md",
+  "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+  "PHASE_10_MCP_SPEC.md",
+  "PHASE_10_PLUGIN_ARCHITECTURE.md",
+  "PHASE_10_SCIENTIFIC_AUDIT.md",
+  "PHASE_10_STREAMLIT_SPEC.md",
+  "PHASE_10_VALIDATION_REPORT.md"
+ ],
+ "findings": [
+  {
+   "document": "PHASE_10_API_SPEC.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "2e43ddcca7d3\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_API_SPEC.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "09ed804a4083\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_API_SPEC.md",
+   "check": "dims.n_lsms",
+   "status": "PASS",
+   "detail": "found [50], canonical 50"
+  },
+  {
+   "document": "PHASE_10_API_SPEC.md",
+   "check": "dims.n_csms",
+   "status": "PASS",
+   "detail": "found [49], canonical 49"
+  },
+  {
+   "document": "PHASE_10_API_SPEC.md",
+   "check": "dims.n_molecules",
+   "status": "PASS",
+   "detail": "found [], canonical 154"
+  },
+  {
+   "document": "PHASE_10_API_SPEC.md",
+   "check": "dims.n_axes",
+   "status": "PASS",
+   "detail": "found [], canonical 16"
+  },
+  {
+   "document": "PHASE_10_API_SPEC.md",
+   "check": "identity.named",
+   "status": "PASS",
+   "detail": "quotes an atlas hash without naming which identity it is"
+  },
+  {
+   "document": "PHASE_10_API_SPEC.md",
+   "check": "tests.count",
+   "status": "PASS",
+   "detail": "quotes the superseded 1436-test count"
+  },
+  {
+   "document": "PHASE_10_ARCHITECTURE.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "2e43ddcca7d3\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ARCHITECTURE.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "208482d6f717\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ARCHITECTURE.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "20d8bd99ce71\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ARCHITECTURE.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "0b4aa550ccef\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ARCHITECTURE.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "09ed804a4083\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ARCHITECTURE.md",
+   "check": "dims.n_lsms",
+   "status": "PASS",
+   "detail": "found [], canonical 50"
+  },
+  {
+   "document": "PHASE_10_ARCHITECTURE.md",
+   "check": "dims.n_csms",
+   "status": "PASS",
+   "detail": "found [], canonical 49"
+  },
+  {
+   "document": "PHASE_10_ARCHITECTURE.md",
+   "check": "dims.n_molecules",
+   "status": "PASS",
+   "detail": "found [], canonical 154"
+  },
+  {
+   "document": "PHASE_10_ARCHITECTURE.md",
+   "check": "dims.n_axes",
+   "status": "PASS",
+   "detail": "found [], canonical 16"
+  },
+  {
+   "document": "PHASE_10_ARCHITECTURE.md",
+   "check": "identity.named",
+   "status": "PASS",
+   "detail": "quotes an atlas hash without naming which identity it is"
+  },
+  {
+   "document": "PHASE_10_ARCHITECTURE.md",
+   "check": "tests.count",
+   "status": "PASS",
+   "detail": "quotes the superseded 1436-test count"
+  },
+  {
+   "document": "PHASE_10_CONTEXT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "2e43ddcca7d3\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_CONTEXT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "208482d6f717\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_CONTEXT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "20d8bd99ce71\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_CONTEXT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "0b4aa550ccef\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_CONTEXT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "09ed804a4083\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_CONTEXT.md",
+   "check": "dims.n_lsms",
+   "status": "PASS",
+   "detail": "found [], canonical 50"
+  },
+  {
+   "document": "PHASE_10_CONTEXT.md",
+   "check": "dims.n_csms",
+   "status": "PASS",
+   "detail": "found [], canonical 49"
+  },
+  {
+   "document": "PHASE_10_CONTEXT.md",
+   "check": "dims.n_molecules",
+   "status": "PASS",
+   "detail": "found [154], canonical 154"
+  },
+  {
+   "document": "PHASE_10_CONTEXT.md",
+   "check": "dims.n_axes",
+   "status": "PASS",
+   "detail": "found [], canonical 16"
+  },
+  {
+   "document": "PHASE_10_CONTEXT.md",
+   "check": "identity.named",
+   "status": "PASS",
+   "detail": "quotes an atlas hash without naming which identity it is"
+  },
+  {
+   "document": "PHASE_10_CONTEXT.md",
+   "check": "tests.count",
+   "status": "PASS",
+   "detail": "quotes the superseded 1436-test count"
+  },
+  {
+   "document": "PHASE_10_DECISION_GATE.md",
+   "check": "dims.n_lsms",
+   "status": "PASS",
+   "detail": "found [], canonical 50"
+  },
+  {
+   "document": "PHASE_10_DECISION_GATE.md",
+   "check": "dims.n_csms",
+   "status": "PASS",
+   "detail": "found [], canonical 49"
+  },
+  {
+   "document": "PHASE_10_DECISION_GATE.md",
+   "check": "dims.n_molecules",
+   "status": "PASS",
+   "detail": "found [154], canonical 154"
+  },
+  {
+   "document": "PHASE_10_DECISION_GATE.md",
+   "check": "dims.n_axes",
+   "status": "PASS",
+   "detail": "found [], canonical 16"
+  },
+  {
+   "document": "PHASE_10_DECISION_GATE.md",
+   "check": "tests.count",
+   "status": "PASS",
+   "detail": "quotes the superseded 1436-test count"
+  },
+  {
+   "document": "PHASE_10_DEPLOYMENT_GUIDE.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "2e43ddcca7d3\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_DEPLOYMENT_GUIDE.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "09ed804a4083\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_DEPLOYMENT_GUIDE.md",
+   "check": "dims.n_lsms",
+   "status": "PASS",
+   "detail": "found [50], canonical 50"
+  },
+  {
+   "document": "PHASE_10_DEPLOYMENT_GUIDE.md",
+   "check": "dims.n_csms",
+   "status": "PASS",
+   "detail": "found [49], canonical 49"
+  },
+  {
+   "document": "PHASE_10_DEPLOYMENT_GUIDE.md",
+   "check": "dims.n_molecules",
+   "status": "PASS",
+   "detail": "found [], canonical 154"
+  },
+  {
+   "document": "PHASE_10_DEPLOYMENT_GUIDE.md",
+   "check": "dims.n_axes",
+   "status": "PASS",
+   "detail": "found [], canonical 16"
+  },
+  {
+   "document": "PHASE_10_DEPLOYMENT_GUIDE.md",
+   "check": "identity.named",
+   "status": "PASS",
+   "detail": "quotes an atlas hash without naming which identity it is"
+  },
+  {
+   "document": "PHASE_10_DEPLOYMENT_GUIDE.md",
+   "check": "tests.count",
+   "status": "PASS",
+   "detail": "quotes the superseded 1436-test count"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "06fb6b7f2f58\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "f75bce02c757\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "9d4bafe596e3\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "2e43ddcca7d3\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "3692ad772d66\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "c9c6e8068d61\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "395e9abb425e\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "208482d6f717\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "20d8bd99ce71\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "dabd2834db31\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "0b387f2b26a1\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "0b4aa550ccef\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "0285392b5a70\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "c66f7304b08a\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "09ed804a4083\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "dims.n_lsms",
+   "status": "PASS",
+   "detail": "found [50], canonical 50"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "dims.n_csms",
+   "status": "PASS",
+   "detail": "found [49], canonical 49"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "dims.n_molecules",
+   "status": "PASS",
+   "detail": "found [154], canonical 154"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "dims.n_axes",
+   "status": "PASS",
+   "detail": "found [16], canonical 16"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "identity.named",
+   "status": "PASS",
+   "detail": "quotes an atlas hash without naming which identity it is"
+  },
+  {
+   "document": "PHASE_10_ENGINE_FREEZE_AUDIT.md",
+   "check": "tests.count",
+   "status": "PASS",
+   "detail": "quotes the superseded 1436-test count"
+  },
+  {
+   "document": "PHASE_10_MCP_SPEC.md",
+   "check": "dims.n_lsms",
+   "status": "PASS",
+   "detail": "found [], canonical 50"
+  },
+  {
+   "document": "PHASE_10_MCP_SPEC.md",
+   "check": "dims.n_csms",
+   "status": "PASS",
+   "detail": "found [], canonical 49"
+  },
+  {
+   "document": "PHASE_10_MCP_SPEC.md",
+   "check": "dims.n_molecules",
+   "status": "PASS",
+   "detail": "found [], canonical 154"
+  },
+  {
+   "document": "PHASE_10_MCP_SPEC.md",
+   "check": "dims.n_axes",
+   "status": "PASS",
+   "detail": "found [], canonical 16"
+  },
+  {
+   "document": "PHASE_10_MCP_SPEC.md",
+   "check": "tests.count",
+   "status": "PASS",
+   "detail": "quotes the superseded 1436-test count"
+  },
+  {
+   "document": "PHASE_10_PLUGIN_ARCHITECTURE.md",
+   "check": "dims.n_lsms",
+   "status": "PASS",
+   "detail": "found [], canonical 50"
+  },
+  {
+   "document": "PHASE_10_PLUGIN_ARCHITECTURE.md",
+   "check": "dims.n_csms",
+   "status": "PASS",
+   "detail": "found [], canonical 49"
+  },
+  {
+   "document": "PHASE_10_PLUGIN_ARCHITECTURE.md",
+   "check": "dims.n_molecules",
+   "status": "PASS",
+   "detail": "found [], canonical 154"
+  },
+  {
+   "document": "PHASE_10_PLUGIN_ARCHITECTURE.md",
+   "check": "dims.n_axes",
+   "status": "PASS",
+   "detail": "found [], canonical 16"
+  },
+  {
+   "document": "PHASE_10_PLUGIN_ARCHITECTURE.md",
+   "check": "tests.count",
+   "status": "PASS",
+   "detail": "quotes the superseded 1436-test count"
+  },
+  {
+   "document": "PHASE_10_SCIENTIFIC_AUDIT.md",
+   "check": "dims.n_lsms",
+   "status": "PASS",
+   "detail": "found [], canonical 50"
+  },
+  {
+   "document": "PHASE_10_SCIENTIFIC_AUDIT.md",
+   "check": "dims.n_csms",
+   "status": "PASS",
+   "detail": "found [], canonical 49"
+  },
+  {
+   "document": "PHASE_10_SCIENTIFIC_AUDIT.md",
+   "check": "dims.n_molecules",
+   "status": "PASS",
+   "detail": "found [], canonical 154"
+  },
+  {
+   "document": "PHASE_10_SCIENTIFIC_AUDIT.md",
+   "check": "dims.n_axes",
+   "status": "PASS",
+   "detail": "found [], canonical 16"
+  },
+  {
+   "document": "PHASE_10_SCIENTIFIC_AUDIT.md",
+   "check": "tests.count",
+   "status": "PASS",
+   "detail": "quotes the superseded 1436-test count"
+  },
+  {
+   "document": "PHASE_10_STREAMLIT_SPEC.md",
+   "check": "dims.n_lsms",
+   "status": "PASS",
+   "detail": "found [], canonical 50"
+  },
+  {
+   "document": "PHASE_10_STREAMLIT_SPEC.md",
+   "check": "dims.n_csms",
+   "status": "PASS",
+   "detail": "found [], canonical 49"
+  },
+  {
+   "document": "PHASE_10_STREAMLIT_SPEC.md",
+   "check": "dims.n_molecules",
+   "status": "PASS",
+   "detail": "found [], canonical 154"
+  },
+  {
+   "document": "PHASE_10_STREAMLIT_SPEC.md",
+   "check": "dims.n_axes",
+   "status": "PASS",
+   "detail": "found [], canonical 16"
+  },
+  {
+   "document": "PHASE_10_STREAMLIT_SPEC.md",
+   "check": "tests.count",
+   "status": "PASS",
+   "detail": "quotes the superseded 1436-test count"
+  },
+  {
+   "document": "PHASE_10_VALIDATION_REPORT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "2e43ddcca7d3\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_VALIDATION_REPORT.md",
+   "check": "hash.known",
+   "status": "PASS",
+   "detail": "09ed804a4083\u2026 is not a committed value"
+  },
+  {
+   "document": "PHASE_10_VALIDATION_REPORT.md",
+   "check": "dims.n_lsms",
+   "status": "PASS",
+   "detail": "found [], canonical 50"
+  },
+  {
+   "document": "PHASE_10_VALIDATION_REPORT.md",
+   "check": "dims.n_csms",
+   "status": "PASS",
+   "detail": "found [], canonical 49"
+  },
+  {
+   "document": "PHASE_10_VALIDATION_REPORT.md",
+   "check": "dims.n_molecules",
+   "status": "PASS",
+   "detail": "found [], canonical 154"
+  },
+  {
+   "document": "PHASE_10_VALIDATION_REPORT.md",
+   "check": "dims.n_axes",
+   "status": "PASS",
+   "detail": "found [], canonical 16"
+  },
+  {
+   "document": "PHASE_10_VALIDATION_REPORT.md",
+   "check": "identity.named",
+   "status": "PASS",
+   "detail": "quotes an atlas hash without naming which identity it is"
+  },
+  {
+   "document": "PHASE_10_VALIDATION_REPORT.md",
+   "check": "tests.count",
+   "status": "PASS",
+   "detail": "quotes the superseded 1436-test count"
+  },
+  {
+   "document": "PHASE_10_ARCHITECTURE.md",
+   "check": "dart.corrected_model",
+   "status": "PASS",
+   "detail": "mentions DART without the dynamic-perturbation / trajectory model"
+  },
+  {
+   "document": "PHASE_10_DECISION_GATE.md",
+   "check": "dart.corrected_model",
+   "status": "PASS",
+   "detail": "mentions DART without the dynamic-perturbation / trajectory model"
+  },
+  {
+   "document": "PHASE_10_DEPLOYMENT_GUIDE.md",
+   "check": "dart.corrected_model",
+   "status": "PASS",
+   "detail": "mentions DART without the dynamic-perturbation / trajectory model"
+  },
+  {
+   "document": "PHASE_10_PLUGIN_ARCHITECTURE.md",
+   "check": "dart.corrected_model",
+   "status": "PASS",
+   "detail": "mentions DART without the dynamic-perturbation / trajectory model"
+  },
+  {
+   "document": "PHASE_10_SCIENTIFIC_AUDIT.md",
+   "check": "dart.corrected_model",
+   "status": "PASS",
+   "detail": "mentions DART without the dynamic-perturbation / trajectory model"
+  }
+ ]
+}

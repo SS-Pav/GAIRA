@@ -12,6 +12,8 @@ Full detail in `PHASE_10_ENGINE_FREEZE_AUDIT.md`.
 |---|---|
 | frozen assets pinned and verified | 10 / 10 |
 | declared fingerprints recomputed | 4 / 4 match |
+| Scientific Atlas Fingerprint | `09ed804a40836f4a05a91ba10900cded` |
+| Frozen Runtime Content Hash | `2e43ddcca7d3be41c5f9da016fb8277f` |
 | canonical ontology ordering | unchanged |
 | deterministic on repeat | yes |
 | golden fixtures | 6 cases stored |
@@ -92,7 +94,7 @@ validated ones, because those depend on frozen fold assignments the runtime does
 
 ## 7. Test suite (Step 16)
 
-**1436 passed, 1 skipped.** Phase 10 contributes 124 tests across three files.
+**1445 passed, 1 skipped, 0 failed.** Phase 10 contributes 124 tests across three files.
 
 | file | tests |
 |---|---|

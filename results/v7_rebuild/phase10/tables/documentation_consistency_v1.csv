@@ -1,0 +1,98 @@
+document,check,status,detail
+PHASE_10_API_SPEC.md,hash.known,PASS,2e43ddcca7d3… is not a committed value
+PHASE_10_API_SPEC.md,hash.known,PASS,09ed804a4083… is not a committed value
+PHASE_10_API_SPEC.md,dims.n_lsms,PASS,"found [50], canonical 50"
+PHASE_10_API_SPEC.md,dims.n_csms,PASS,"found [49], canonical 49"
+PHASE_10_API_SPEC.md,dims.n_molecules,PASS,"found [], canonical 154"
+PHASE_10_API_SPEC.md,dims.n_axes,PASS,"found [], canonical 16"
+PHASE_10_API_SPEC.md,identity.named,PASS,quotes an atlas hash without naming which identity it is
+PHASE_10_API_SPEC.md,tests.count,PASS,quotes the superseded 1436-test count
+PHASE_10_ARCHITECTURE.md,hash.known,PASS,2e43ddcca7d3… is not a committed value
+PHASE_10_ARCHITECTURE.md,hash.known,PASS,208482d6f717… is not a committed value
+PHASE_10_ARCHITECTURE.md,hash.known,PASS,20d8bd99ce71… is not a committed value
+PHASE_10_ARCHITECTURE.md,hash.known,PASS,0b4aa550ccef… is not a committed value
+PHASE_10_ARCHITECTURE.md,hash.known,PASS,09ed804a4083… is not a committed value
+PHASE_10_ARCHITECTURE.md,dims.n_lsms,PASS,"found [], canonical 50"
+PHASE_10_ARCHITECTURE.md,dims.n_csms,PASS,"found [], canonical 49"
+PHASE_10_ARCHITECTURE.md,dims.n_molecules,PASS,"found [], canonical 154"
+PHASE_10_ARCHITECTURE.md,dims.n_axes,PASS,"found [], canonical 16"
+PHASE_10_ARCHITECTURE.md,identity.named,PASS,quotes an atlas hash without naming which identity it is
+PHASE_10_ARCHITECTURE.md,tests.count,PASS,quotes the superseded 1436-test count
+PHASE_10_CONTEXT.md,hash.known,PASS,2e43ddcca7d3… is not a committed value
+PHASE_10_CONTEXT.md,hash.known,PASS,208482d6f717… is not a committed value
+PHASE_10_CONTEXT.md,hash.known,PASS,20d8bd99ce71… is not a committed value
+PHASE_10_CONTEXT.md,hash.known,PASS,0b4aa550ccef… is not a committed value
+PHASE_10_CONTEXT.md,hash.known,PASS,09ed804a4083… is not a committed value
+PHASE_10_CONTEXT.md,dims.n_lsms,PASS,"found [], canonical 50"
+PHASE_10_CONTEXT.md,dims.n_csms,PASS,"found [], canonical 49"
+PHASE_10_CONTEXT.md,dims.n_molecules,PASS,"found [154], canonical 154"
+PHASE_10_CONTEXT.md,dims.n_axes,PASS,"found [], canonical 16"
+PHASE_10_CONTEXT.md,identity.named,PASS,quotes an atlas hash without naming which identity it is
+PHASE_10_CONTEXT.md,tests.count,PASS,quotes the superseded 1436-test count
+PHASE_10_DECISION_GATE.md,dims.n_lsms,PASS,"found [], canonical 50"
+PHASE_10_DECISION_GATE.md,dims.n_csms,PASS,"found [], canonical 49"
+PHASE_10_DECISION_GATE.md,dims.n_molecules,PASS,"found [154], canonical 154"
+PHASE_10_DECISION_GATE.md,dims.n_axes,PASS,"found [], canonical 16"
+PHASE_10_DECISION_GATE.md,tests.count,PASS,quotes the superseded 1436-test count
+PHASE_10_DEPLOYMENT_GUIDE.md,hash.known,PASS,2e43ddcca7d3… is not a committed value
+PHASE_10_DEPLOYMENT_GUIDE.md,hash.known,PASS,09ed804a4083… is not a committed value
+PHASE_10_DEPLOYMENT_GUIDE.md,dims.n_lsms,PASS,"found [50], canonical 50"
+PHASE_10_DEPLOYMENT_GUIDE.md,dims.n_csms,PASS,"found [49], canonical 49"
+PHASE_10_DEPLOYMENT_GUIDE.md,dims.n_molecules,PASS,"found [], canonical 154"
+PHASE_10_DEPLOYMENT_GUIDE.md,dims.n_axes,PASS,"found [], canonical 16"
+PHASE_10_DEPLOYMENT_GUIDE.md,identity.named,PASS,quotes an atlas hash without naming which identity it is
+PHASE_10_DEPLOYMENT_GUIDE.md,tests.count,PASS,quotes the superseded 1436-test count
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,06fb6b7f2f58… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,f75bce02c757… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,9d4bafe596e3… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,2e43ddcca7d3… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,3692ad772d66… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,c9c6e8068d61… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,395e9abb425e… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,208482d6f717… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,20d8bd99ce71… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,dabd2834db31… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,0b387f2b26a1… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,0b4aa550ccef… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,0285392b5a70… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,c66f7304b08a… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,hash.known,PASS,09ed804a4083… is not a committed value
+PHASE_10_ENGINE_FREEZE_AUDIT.md,dims.n_lsms,PASS,"found [50], canonical 50"
+PHASE_10_ENGINE_FREEZE_AUDIT.md,dims.n_csms,PASS,"found [49], canonical 49"
+PHASE_10_ENGINE_FREEZE_AUDIT.md,dims.n_molecules,PASS,"found [154], canonical 154"
+PHASE_10_ENGINE_FREEZE_AUDIT.md,dims.n_axes,PASS,"found [16], canonical 16"
+PHASE_10_ENGINE_FREEZE_AUDIT.md,identity.named,PASS,quotes an atlas hash without naming which identity it is
+PHASE_10_ENGINE_FREEZE_AUDIT.md,tests.count,PASS,quotes the superseded 1436-test count
+PHASE_10_MCP_SPEC.md,dims.n_lsms,PASS,"found [], canonical 50"
+PHASE_10_MCP_SPEC.md,dims.n_csms,PASS,"found [], canonical 49"
+PHASE_10_MCP_SPEC.md,dims.n_molecules,PASS,"found [], canonical 154"
+PHASE_10_MCP_SPEC.md,dims.n_axes,PASS,"found [], canonical 16"
+PHASE_10_MCP_SPEC.md,tests.count,PASS,quotes the superseded 1436-test count
+PHASE_10_PLUGIN_ARCHITECTURE.md,dims.n_lsms,PASS,"found [], canonical 50"
+PHASE_10_PLUGIN_ARCHITECTURE.md,dims.n_csms,PASS,"found [], canonical 49"
+PHASE_10_PLUGIN_ARCHITECTURE.md,dims.n_molecules,PASS,"found [], canonical 154"
+PHASE_10_PLUGIN_ARCHITECTURE.md,dims.n_axes,PASS,"found [], canonical 16"
+PHASE_10_PLUGIN_ARCHITECTURE.md,tests.count,PASS,quotes the superseded 1436-test count
+PHASE_10_SCIENTIFIC_AUDIT.md,dims.n_lsms,PASS,"found [], canonical 50"
+PHASE_10_SCIENTIFIC_AUDIT.md,dims.n_csms,PASS,"found [], canonical 49"
+PHASE_10_SCIENTIFIC_AUDIT.md,dims.n_molecules,PASS,"found [], canonical 154"
+PHASE_10_SCIENTIFIC_AUDIT.md,dims.n_axes,PASS,"found [], canonical 16"
+PHASE_10_SCIENTIFIC_AUDIT.md,tests.count,PASS,quotes the superseded 1436-test count
+PHASE_10_STREAMLIT_SPEC.md,dims.n_lsms,PASS,"found [], canonical 50"
+PHASE_10_STREAMLIT_SPEC.md,dims.n_csms,PASS,"found [], canonical 49"
+PHASE_10_STREAMLIT_SPEC.md,dims.n_molecules,PASS,"found [], canonical 154"
+PHASE_10_STREAMLIT_SPEC.md,dims.n_axes,PASS,"found [], canonical 16"
+PHASE_10_STREAMLIT_SPEC.md,tests.count,PASS,quotes the superseded 1436-test count
+PHASE_10_VALIDATION_REPORT.md,hash.known,PASS,2e43ddcca7d3… is not a committed value
+PHASE_10_VALIDATION_REPORT.md,hash.known,PASS,09ed804a4083… is not a committed value
+PHASE_10_VALIDATION_REPORT.md,dims.n_lsms,PASS,"found [], canonical 50"
+PHASE_10_VALIDATION_REPORT.md,dims.n_csms,PASS,"found [], canonical 49"
+PHASE_10_VALIDATION_REPORT.md,dims.n_molecules,PASS,"found [], canonical 154"
+PHASE_10_VALIDATION_REPORT.md,dims.n_axes,PASS,"found [], canonical 16"
+PHASE_10_VALIDATION_REPORT.md,identity.named,PASS,quotes an atlas hash without naming which identity it is
+PHASE_10_VALIDATION_REPORT.md,tests.count,PASS,quotes the superseded 1436-test count
+PHASE_10_ARCHITECTURE.md,dart.corrected_model,PASS,mentions DART without the dynamic-perturbation / trajectory model
+PHASE_10_DECISION_GATE.md,dart.corrected_model,PASS,mentions DART without the dynamic-perturbation / trajectory model
+PHASE_10_DEPLOYMENT_GUIDE.md,dart.corrected_model,PASS,mentions DART without the dynamic-perturbation / trajectory model
+PHASE_10_PLUGIN_ARCHITECTURE.md,dart.corrected_model,PASS,mentions DART without the dynamic-perturbation / trajectory model
+PHASE_10_SCIENTIFIC_AUDIT.md,dart.corrected_model,PASS,mentions DART without the dynamic-perturbation / trajectory model

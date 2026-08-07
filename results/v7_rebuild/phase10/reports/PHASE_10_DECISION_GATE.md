@@ -8,7 +8,7 @@ GAIRA V7 PHASE 10 — RUNTIME PLATFORM DECISION GATE
 
 | criterion | verdict |
 |---|---|
-| Frozen Phase 09 engine verified | **PASS** — 9/9 freeze gates; 4 declared fingerprints recomputed and matched; 10 content digests pinned |
+| Frozen Phase 09 engine verified | **PASS** — 9/9 freeze gates; 4 declared fingerprints recomputed and matched (Scientific Atlas Fingerprint `09ed…`); 10 content digests pinned; Frozen Runtime Content Hash `2e43…` |
 | Scientific outputs unchanged | **PASS** — max deviation **0.0** across all 375 spectra |
 | Runtime service implemented | **PASS** — `gaira.v7.runtime.GAIRAService` |
 | Typed public schemas implemented | **PASS** — `gaira.v7.contracts`, pydantic v2, 27 models |
@@ -21,7 +21,7 @@ GAIRA V7 PHASE 10 — RUNTIME PLATFORM DECISION GATE
 | No duplicated scientific inference logic | **PASS** — AST-enforced across API, MCP, SDK, CLI, Streamlit |
 | No LLM/cloud dependency | **PASS** — statically verified across all Phase 10 packages |
 | Raman-only scientific scope preserved | **PASS** — non-Raman blocked on all five surfaces |
-| Future modality extension contracts defined | **PASS** — 1 implemented, 4 declared, all stubs raise |
+| Future modality extension contracts defined | **PASS** — 1 implemented, 3 declared SERS variants, all stubs raise. **DART is not a modality** — it attaches at the trajectory layer |
 | Future sample-context contracts defined | **PASS** — 1 implemented, 6 declared, all stubs raise |
 | Unsupported modalities cannot silently run as Raman | **PASS** — ERROR severity, not a warning |
 | Local clean-clone inference works | **PASS** — 10 committed files, ~10 MB, all git-tracked |
@@ -37,7 +37,7 @@ exactly ten files, every one inside the repository. A test asserts no frozen ass
 | MCP latency overhead | **2.97 ms** (median 5.30 ms) |
 | 100 sequential spectra | 0.218 s |
 | Report generation | PDF 1.42 s · JSON 0.002 s |
-| Full test suite | **1436 passed, 1 skipped, 0 failed** (Phase 10 contributes 124) |
+| Full test suite | **1445 passed, 1 skipped, 0 failed** (Phase 10 contributes 124) |
 
 | assessment | verdict |
 |---|---|
@@ -56,8 +56,8 @@ exactly ten files, every one inside the repository. A test asserts no frozen ass
 2. **Class-prior bias (R-01) remains open** — class sizes range from 3 to 80 spectra.
 3. **Molecule top-1 is capped at 0.819 by corpus structure** — 66 of 154 molecules have a single
    spectrum.
-4. **Every applied regime is unmeasured** — SERS, serum, plasma, EV, bacteria, tissue. Contracts
-   exist; validation does not.
+4. **Every applied regime is unmeasured** — SERS, serum, plasma, EV, bacteria, tissue, and
+   dynamic (DART) acquisition. Contracts exist; validation does not.
 5. **The 16 classes are a reporting convention**, not a discovered structure (Phase 06.5).
 
 ## Outstanding engineering risks
@@ -71,11 +71,17 @@ exactly ten files, every one inside the repository. A test asserts no frozen ass
    only on a fixed environment.
 5. **The Docker image is not bit-reproducible** — dependency floors, not pins. It does verify the
    atlas at build time and fails the build otherwise.
+6. **Two documentation-vs-code divergences in the frozen interface**, both recorded in
+   `PHASE_10_ARCHITECTURE.md` §9 and neither affecting any computed number: the field
+   `atlas_fingerprint` carries the Frozen Runtime Content Hash rather than the Scientific Atlas
+   Fingerprint, and `DARTAdapter` is still registered at the modality layer with a
+   mass-spectrometric rationale that the documentation now supersedes. Both require a runtime
+   change and are therefore post-freeze work.
 
 ## Required fixes
 
-**None.** All 17 gates pass and no defect remains open. The five engineering risks are scope
-limits, and each is stated where a user will meet it.
+**None.** All 17 gates pass and no defect remains open. The six engineering risks are scope
+limits or frozen-interface naming, and each is stated where a user will meet it.
 
 ---
 
@@ -108,18 +114,31 @@ All eight, in this order of trust:
 | `gaira_compare_spectra` | expose |
 | `gaira_generate_report` | expose |
 
+### The permitted chain
+
+```
+        LLM  →  MCP  →  Frozen Runtime  →  Frozen Engine
+```
+
+and never
+
+```
+        LLM  →  scientific computation
+```
+
 ### What the agent may do
 
-Choose which tools to call and in what order; request more evidence; rephrase the deterministic
-interpretation; compare results it obtained through the tools; and surface caveats verbatim.
+**Choose tools · explain · compare · narrate · summarise.** Concretely: decide which tools to
+call and in what order, request more evidence before answering, rephrase the deterministic
+interpretation, compare results it obtained through the tools, and surface caveats verbatim.
 
-### What the agent must never compute itself
+### What the agent is forbidden from doing
 
-A similarity, an activation, a chemistry axis, a confidence, a calibration, or a re-ranking. It
-must never assert a molecular identification, convert relative evidence into a concentration or
-abundance, treat low confidence as evidence of novelty, drop a scope warning, or infer a
-biological or clinical state. **Every number it states must be traceable to an `InferenceResult`
-field**, and every claim about a molecule must carry the word *analogue* or an equivalent.
+**Computing chemistry · computing similarity · estimating concentrations · re-ranking ·
+diagnosing disease · modifying inference.** It must additionally never assert a molecular
+identification, treat low confidence as evidence of novelty, or drop a scope warning. **Every
+number it states must be traceable to an `InferenceResult` field**, and every claim about a
+molecule must carry the word *analogue* or an equivalent.
 
 ### What must be validated before enabling agentic interpretation
 
