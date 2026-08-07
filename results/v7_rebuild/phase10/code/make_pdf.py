@@ -204,12 +204,13 @@ CAPTIONS = {
            "local engine or deployed API, identical numbers either way.",
     "F08": "The provenance chain. A cosine is an inner product, so every retrieval score "
            "decomposes exactly into per-motif contributions, verified below 1e-9.",
-    "F09": "Modality plugins: one implemented, four declared. Every stub raises, because a stub "
-           "that returns plausible numbers is worse than no stub at all.",
+    "F09": "Modality adapters sit BEFORE the frozen core; DART does not. DART-Met produces "
+           "I(wavenumber, potential, time) — still a vibrational measurement — so it attaches "
+           "AFTER the frozen representation, at the trajectory layer.",
     "F10": "Sample-context plugins. Context adapters frame a completed result; the protocol gives "
            "them no way to change a number.",
-    "F11": "Where a future agent connects — above the tool server, never inside the science. "
-           "Phase 10 ships no model; this is the boundary Phase 11 would respect.",
+    "F11": "The agent boundary. LLM → MCP → Frozen Runtime → Frozen Engine, one-directional, "
+           "and never LLM → scientific computation. Phase 10 ships no model.",
     "F12": "Cross-surface parity: 60 comparisons across six surfaces, zero divergent, maximum "
            "absolute difference 0.0, and every Phase 09 retrieval figure reproduced exactly.",
 }
@@ -356,23 +357,34 @@ EXPLAIN = {
             "inside state files; Phase 10 pins the content of all ten files the engine opens. The "
             "first answers 'did the producing phase claim this artefact', the second answers 'is "
             "the file still the one that phase wrote'."),
-    "F09": ("Extending to new measurement channels",
-            "Four modality adapters are declared and one is implemented. Every unimplemented "
-            "adapter raises, with a statement of what a working version would have to supply.",
+    "F09": ("Extending to new measurement channels — and where DART actually goes",
+            "Three modality adapters are declared and one is implemented. DART is deliberately "
+            "not among them, and the reason is worth reading carefully because it is the most "
+            "commonly misdescribed part of this architecture.",
             ["A modality adapter models the physics between the sample and the spectrum. It runs "
              "before the core and may correct, veto, or pass through — but it may never touch the "
              "dictionaries, the retrieval, or the chemistry model.",
-             "The reason this boundary is hard rather than advisory is a measurement. Phase 04 "
+             "The reason that boundary is hard rather than advisory is a measurement. Phase 04 "
              "tested whether the frozen Raman atlas could detect real Ag-SERS as out of domain "
              "and got AUROC 0.548 — chance. A non-negative Raman motif basis reconstructs SERS of "
              "the same metabolites comfortably, so a SERS spectrum run through the Raman core "
-             "produces confident numbers with no validated meaning.",
-             "So unsupported modalities are blocked rather than warned about. On the API that is "
-             "a 422; in the SDK an exception; in the UI a red block that prevents the run."],
-            "DART is the interesting case. It has no vibrational correspondence to Raman, so it "
-            "is not a spectral transform at all. It is better modelled as a trajectory over an "
-            "orthogonal measurement — downstream of the representation rather than upstream of "
-            "it — and the adapter says so instead of pretending otherwise."),
+             "produces confident numbers with no validated meaning. Unsupported modalities are "
+             "therefore blocked, not warned about.",
+             "DART is a different kind of thing entirely. It is NOT a new spectral modality — it "
+             "is a dynamic perturbation protocol built on Raman/SERS measurements. DART-Met "
+             "produces I(wavenumber, potential, time), which is still a VIBRATIONAL measurement, "
+             "and every slice through that volume is a spectrum the frozen engine already reads "
+             "correctly. There is no spectral transform to invent, because the measurement axis "
+             "has not changed. What has been added is perturbation and time.",
+             "So DART attaches at the TRAJECTORY layer, downstream of the frozen representation, "
+             "consuming a sequence of ordinary inference results with their potential and time "
+             "coordinates. Nothing upstream changes."],
+            "Downstream is correct rather than merely convenient. A trajectory of CSM "
+            "activations is interpretable only if every activation along it came from the same "
+            "frozen path — which is exactly what placing the dynamic layer downstream "
+            "guarantees. Placed upstream, a DART 'modality adapter' would have to collapse the "
+            "potential and time axes before the core ever saw them, discarding the very "
+            "information the protocol exists to produce."),
     "F10": ("Extending to new sample contexts",
             "Seven context adapters are declared and one is implemented. A context adapter frames "
             "a completed result; it runs after the core and cannot reach back into it.",
@@ -393,15 +405,18 @@ EXPLAIN = {
     "F11": ("Where an agent would sit",
             "Phase 10 ships no language model and requires no cloud account. This figure is the "
             "boundary a Phase 11 agent layer would have to respect.",
-            ["An agent sits above the tool server. It may choose which tools to call, ask for more "
-             "evidence, rephrase the deterministic interpretation, compare results it obtained "
-             "through the tools, and surface the caveats verbatim.",
-             "It may never compute a similarity, an activation, a chemistry axis or a confidence; "
-             "re-rank retrieval output; assert a molecular identification; convert relative "
-             "evidence into a concentration; treat low confidence as evidence of novelty; drop a "
-             "scope warning; or infer a biological or clinical state.",
-             "Every number an agent states must be traceable to a field of an InferenceResult, "
-             "and every claim about a molecule must carry the word analogue or an equivalent."],
+            ["There is exactly one permitted chain, and it runs in one direction: LLM → MCP → "
+             "Frozen Runtime → Frozen Engine. Nothing flows back up it, and the model never "
+             "reaches past the MCP layer. The forbidden shortcut — LLM → scientific computation "
+             "— is drawn crossed out because it is not a matter of policy but of architecture: "
+             "no tool exposes a primitive an agent could compute with.",
+             "An agent MAY choose tools, explain, compare, narrate and summarise. Concretely: "
+             "decide which tools to call and in what order, request more evidence before "
+             "answering, rephrase the deterministic interpretation, and surface caveats verbatim.",
+             "An agent is FORBIDDEN from computing chemistry, computing similarity, estimating "
+             "concentrations, re-ranking, diagnosing disease, and modifying inference. Every "
+             "number it states must trace to a field of an InferenceResult, and every claim "
+             "about a molecule must carry the word analogue or an equivalent."],
             "The honest assessment is that the engineering guardrails are in place and the "
             "linguistic one is not. Every failure mode this architecture prevents is a failure of "
             "language, and an agent is a language system. Phase 11 should open with an "
@@ -451,7 +466,9 @@ def main() -> int:
                 ("Status", "COMPLETE — packaging phase, science unchanged"),
                 ("Engine", f"{e['n_lsms']} LSMs · {e['n_csms']} CSMs · {e['n_molecules']} "
                            f"molecules · {e['n_chemistry_axes']} chemistry axes"),
-                ("Atlas fingerprint", e["atlas_fingerprint"]),
+                ("Scientific Atlas Fingerprint",
+                 frz["declared_fingerprints"]["recomputed"]["atlas"]),
+                ("Frozen Runtime Content Hash", e["atlas_fingerprint"]),
                 ("Frozen assets pinned", f"{len(frz['frozen_assets'])} content digests, all "
                                          f"verified"),
                 ("", ""),
@@ -474,7 +491,7 @@ def main() -> int:
                 ("", ""),
                 ("Gates", f"{len(fgates) + len(pgates)} of "
                           f"{len(fgates) + len(pgates)} PASS"),
-                ("Test suite", "1436 passed · 1 skipped · 0 failed"),
+                ("Test suite", "1445 passed · 1 skipped · 0 failed"),
                 ("Surfaces", "Python SDK · CLI · FastAPI · MCP · Streamlit"),
                 ("", ""),
                 ("Dependencies", "no LLM · no cloud account · no network · no external volume"),
@@ -567,6 +584,16 @@ def main() -> int:
                   ("Chemistry Evidence", "16 axes, model D:A_max_idf with λ = 0.5"),
                   ("calibration", "temperature scaling, T = 0.4538"),
                   ("confidence and warnings", "Phase 05 thresholds, untouched")], keyw=0.26)
+            b.h3("Two identities, two names")
+            b.kv([("Scientific Atlas Fingerprint",
+                   frz["declared_fingerprints"]["recomputed"]["atlas"]),
+                  ("", "the scientific atlas identity generated by the Phase 01 build"),
+                  ("Frozen Runtime Content Hash", frz["engine"]["atlas_fingerprint"]),
+                  ("", "the complete frozen runtime asset identity")], keyw=0.30)
+            b.p("These are different objects and this document never calls both \"the atlas "
+                "fingerprint\". Note that the API field NAMED `atlas_fingerprint` carries the "
+                "Frozen Runtime Content Hash — the runtime is frozen, so the name stands and the "
+                "distinction is documented rather than renamed.")
             b.h3("Two independent verification layers")
             b.p("Phase 09 verifies four DECLARED fingerprints — values recorded inside "
                 "PHASE_STATE.json and csm_registry_v1.json by the phases that produced them. "
@@ -764,6 +791,18 @@ def main() -> int:
                 "out of domain. It got AUROC 0.548 — chance. A non-negative Raman motif basis "
                 "reconstructs SERS of the same metabolites comfortably, so a SERS spectrum run "
                 "through the Raman core produces confident numbers with no validated meaning.")
+            b.h3("DART is not a modality")
+            b.p("DART is a DYNAMIC PERTURBATION PROTOCOL built on Raman/SERS measurements. "
+                "DART-Met produces I(wavenumber, potential, time), which is still a vibrational "
+                "measurement: every slice through that volume is a spectrum the frozen engine "
+                "already reads. There is no spectral transform to invent, because the "
+                "measurement axis has not changed — what has been added is perturbation and "
+                "time.")
+            b.p("So DART attaches at the TrajectoryAdapter layer, downstream of the frozen "
+                "representation, over a sequence of ordinary inference results. Nothing "
+                "upstream changes. Downstream is correct rather than convenient: a trajectory "
+                "of CSM activations is interpretable only if every activation along it came "
+                "from the same frozen path.")
             b.plain("scientific representation is not domain interpretation. Confusing the two "
                     "is how a spectral engine becomes a clinical claim without anyone deciding "
                     "that it should.")
@@ -772,14 +811,22 @@ def main() -> int:
         def p_agent(b):
             b.lead("Phase 10 ships no language model and requires no cloud account. This is the "
                    "boundary a Phase 11 agent layer would have to respect.")
-            b.h3("An agent MAY")
+            b.h3("The only permitted chain")
+            b.p("LLM  →  MCP  →  Frozen Runtime  →  Frozen Engine")
+            b.p("One-directional. Nothing flows back up it, and the model never reaches past the "
+                "MCP layer. The forbidden shortcut — LLM → scientific computation — is closed by "
+                "architecture rather than by policy: no tool exposes a primitive an agent could "
+                "compute with.")
+            b.h3("An agent MAY — choose tools · explain · compare · narrate · summarise")
             for t in ("choose which tools to call, and in what order",
                       "ask for more evidence before answering",
                       "rephrase the deterministic interpretation",
                       "compare results it obtained through the tools",
                       "surface the caveats verbatim"):
                 b.bullet(t)
-            b.h3("An agent MUST NEVER")
+            b.h3("An agent is FORBIDDEN from — computing chemistry · computing "
+                 "similarity · estimating concentrations · re-ranking · diagnosing disease · "
+                 "modifying inference")
             for t in ("compute a similarity, an activation, a chemistry axis or a confidence",
                       "re-rank retrieval output",
                       "assert a molecular identification",
@@ -854,7 +901,7 @@ def main() -> int:
                   ("Extension contracts defined", "PASS — 11 declared, 10 raise"),
                   ("Local clean-clone inference", "PASS — 10 committed files"),
                   ("SSD_Rad required?", "NO"),
-                  ("Full test suite", "1436 passed · 1 skipped · 0 failed")], keyw=0.34)
+                  ("Full test suite", "1445 passed · 1 skipped · 0 failed")], keyw=0.34)
             b.h3("Recommendation")
             b.p("FREEZE THE GAIRA V7 RUNTIME. Ready to design a Phase 11 agent layer, "
                 "conditional on the five linguistic validations in Part IV.")
@@ -879,8 +926,9 @@ def main() -> int:
                   ("this document", "results/v7_rebuild/phase10/code/make_pdf.py"),
                   ("tests", "tests/test_v7_phase10_{runtime,surfaces,parity}.py"),
                   ("", ""),
-                  ("atlas fingerprint", frz["engine"]["atlas_fingerprint"]),
-                  ("frozen atlas", frz["declared_fingerprints"]["recomputed"]["atlas"]),
+                  ("Frozen Runtime Content Hash", frz["engine"]["atlas_fingerprint"]),
+                  ("Scientific Atlas Fingerprint",
+                   frz["declared_fingerprints"]["recomputed"]["atlas"]),
                   ("frozen LSM registry", frz["declared_fingerprints"]["recomputed"]["lsm"]),
                   ("frozen CSM registry", frz["declared_fingerprints"]["recomputed"]["csm"]),
                   ("frozen Phase 05 engine",
