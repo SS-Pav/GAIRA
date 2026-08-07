@@ -3,7 +3,13 @@
 `gaira.v7.mcp` · stdio · `gaira mcp` or `python -m gaira.v7.mcp`
 
 **No language model runs in this server**, and it makes no network call. It is a tool provider;
-whatever consumes it lives entirely outside the process.
+whatever consumes it lives entirely outside the process. The permitted chain is strictly
+
+```
+        LLM  →  MCP  →  Frozen Runtime  →  Frozen Engine
+```
+
+and never `LLM → scientific computation`.
 
 Client configuration:
 ```json

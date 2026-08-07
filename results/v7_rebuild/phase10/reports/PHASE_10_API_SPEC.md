@@ -15,14 +15,27 @@ holds no mutable state and draws no random numbers, so concurrency needs no lock
 ### `GET /v1/health`
 ```json
 {"status": "ok", "engine_loaded": true, "frozen_assets_verified": true,
- "n_frozen_assets": 10, "detail": {"atlas_fingerprint": "2e43ddcc…"}}
+ "n_frozen_assets": 10, "detail": {"atlas_fingerprint": "2e43ddcc…"}}   // Frozen Runtime Content Hash
 ```
 `status` is `degraded` if any frozen asset fails verification.
 
 ### `GET /v1/engine`
-`EngineInfo`: versions, all four frozen fingerprints, atlas shape (50 LSMs / 49 CSMs / 154
+`EngineInfo`: versions, all four declared fingerprints, atlas shape (50 LSMs / 49 CSMs / 154
 molecules / 16 axes), grid, corpus, `validated_performance`, `supported_modalities`,
 `validated_sample_types`, `known_limitations`.
+
+**Atlas identity fields.** Two different hashes travel in this response and they have distinct
+names throughout the Phase 10 documentation (`PHASE_10_ARCHITECTURE.md` §4):
+
+| field | carries | value |
+|---|---|---|
+| `fingerprints.atlas` | **Scientific Atlas Fingerprint** | `09ed804a40836f4a05a91ba10900cded` |
+| `fingerprints.lsm` / `.csm` / `.engine` | the three artefact fingerprints | — |
+| `atlas_fingerprint` | **Frozen Runtime Content Hash** | `2e43ddcca7d3be41c5f9da016fb8277f` |
+
+The field *named* `atlas_fingerprint` carries the runtime hash, not the scientific atlas
+fingerprint. The runtime is frozen so the name stands; the distinction is documented rather than
+renamed.
 
 ### `POST /v1/validate-spectrum`
 ```json

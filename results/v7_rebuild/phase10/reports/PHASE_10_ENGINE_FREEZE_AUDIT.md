@@ -42,13 +42,18 @@ that *should* invalidate the freeze.
 
 ## 2. Declared fingerprints — recomputed and matched
 
-| | recomputed | expected | |
+| term | recomputed | expected | |
 |---|---|---|---|
-| atlas | `09ed804a40836f4a05a91ba10900cded` | same | ✓ |
+| **Scientific Atlas Fingerprint** | `09ed804a40836f4a05a91ba10900cded` | same | ✓ |
 | LSM registry | `208482d6f7178b5b8f16cace91be55b0` | same | ✓ |
 | CSM registry | `0b4aa550ccefed3edabdbde5bae11c8d` | same | ✓ |
 | Phase 05 engine | `20d8bd99ce71f45a125c6a2b1d719e51` | same | ✓ |
-| derived atlas content hash | `2e43ddcca7d3be41c5f9da016fb8277f` | — | recomputed at load |
+| **Frozen Runtime Content Hash** | `2e43ddcca7d3be41c5f9da016fb8277f` | — | recomputed at load |
+
+The first four are the *declared* fingerprints the engine verifies on load. The fifth is derived
+at load time from those four together with the reference-molecule set, the chemistry model
+configuration and the calibrator, so it identifies the runtime as a whole. Terminology is defined
+once in `PHASE_10_ARCHITECTURE.md` §4 and used identically in every Phase 10 document.
 
 ## 3. Engine version and shape
 
