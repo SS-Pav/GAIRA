@@ -1,0 +1,19 @@
+# GAIRA V7 — Streamlit base theme.
+#
+# The Phase 11 demo paints its own surfaces in CSS, but Streamlit's own components (expanders,
+# dataframes, selectboxes, sliders) take their colours from this file. Setting the base to dark
+# here is what makes those components match, rather than fighting each one in CSS.
+[theme]
+base = "dark"
+primaryColor = "#5b8cff"
+backgroundColor = "#0b0e14"
+secondaryBackgroundColor = "#121722"
+textColor = "#e8ecf4"
+font = "sans serif"
+
+[server]
+headless = true
+enableCORS = false
+
+[browser]
+gatherUsageStats = false
