@@ -34,7 +34,7 @@
     {
       "artifact_id": "cluster_composition_v1.json",
       "path": "results/v7_rebuild/phase06_5/artifacts/cluster_composition_v1.json",
-      "sha256": "3d9eeabe780b35405224be29345a6a8cf9aaf611e8aee8f5d587eb0190e1651b"
+      "sha256": "57be2eccdfd53bc6297e1b242921a90c7ecec31dcc768e1e1e5d669df3a0d3c5"
     },
     {
       "artifact_id": "cluster_composition_v1.csv",
@@ -57,7 +57,7 @@
     {
       "artifact_id": "confounding_verdict_v1.json",
       "path": "results/v7_rebuild/phase06_5/artifacts/confounding_verdict_v1.json",
-      "sha256": "74e2845f05bcac473e63c1d606753d45efc187838fdd86c4c27d405ff811cad1"
+      "sha256": "c94e484ecccb876397116b8f4355139aa82a993add3c91582747e6f390f354aa"
     },
     {
       "artifact_id": "dendrogram_branch_points_v1.csv",
@@ -68,23 +68,23 @@
     {
       "artifact_id": "hierarchical_structure_v1.json",
       "path": "results/v7_rebuild/phase06_5/artifacts/hierarchical_structure_v1.json",
-      "sha256": "0d7e7d4ca3ade320821e0b0bcdb3dce20f4c8bf39901b801c9b52154cc29ad74"
+      "sha256": "5f4b6f422bc0d055d434e1ca7fa3fc895b42bc2346fbf8d1fa0a3ef63052ede4"
     },
     {
       "artifact_id": "coordinate_kernel_sweep_v1.csv",
       "path": "results/v7_rebuild/phase06_5/tables/coordinate_kernel_sweep_v1.csv",
-      "sha256": "3ed09bf7a1777e20c3e0ea5129dfbdf582ce1f9f5a6072944c268ae3e489d9ce",
+      "sha256": "82718bc56311568c55af7490dde5d28dcfd5985bb184a93de9efecd1804820f4",
       "rows": 30
     },
     {
       "artifact_id": "continuous_coordinates_v1.json",
       "path": "results/v7_rebuild/phase06_5/artifacts/continuous_coordinates_v1.json",
-      "sha256": "1caa603fb2a3e19b66eadbfeb51fe96b3de3f255f37687396d2d3e46011b1817"
+      "sha256": "a1fd99d68d3bbe1364215a2c2c803c57b7a411eba7c21a56caa4fc34e8c19f6c"
     },
     {
       "artifact_id": "continuous_coordinates_v1.npz",
       "path": "results/v7_rebuild/phase06_5/artifacts/continuous_coordinates_v1.npz",
-      "sha256": "b3290ca91496677969ca96122a11cb6b82de5b142694df15985c0fa60a40c144"
+      "sha256": "f490246b456bea1a2e89172d6e08b5e54c60dd4ee8c1695bf52ed3b3b300d773"
     },
     {
       "artifact_id": "coordinate_robustness_v1.csv",
@@ -101,7 +101,7 @@
     {
       "artifact_id": "retrieval_significance_v1.json",
       "path": "results/v7_rebuild/phase06_5/artifacts/retrieval_significance_v1.json",
-      "sha256": "b7e82500eab5b6d19fc21eae0b21189139ea57c7bf3de0f5c6f1e94d7140d21c"
+      "sha256": "be2a3a49df86e0add2b8c8e779483c285de611dddf1320c1af3115f8718b5947"
     },
     {
       "artifact_id": "fusion_weight_sweep_v1.csv",
@@ -116,14 +116,20 @@
       "rows": 24
     },
     {
+      "artifact_id": "agreement_vs_k_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/agreement_vs_k_v1.csv",
+      "sha256": "21b4b391a2ad1082cfd2f491a7641a760dcf8d5ce2e18fb2ba2ca38db14a1c69",
+      "rows": 56
+    },
+    {
       "artifact_id": "geometry_chemistry_agreement_v1.json",
       "path": "results/v7_rebuild/phase06_5/artifacts/geometry_chemistry_agreement_v1.json",
-      "sha256": "cf33d478cf4f792124ce221860bc0fca3fd8d7335b256b8064867f2575902c84"
+      "sha256": "6e13036f668df5c4fe3430a2920edd40d749668965693dd2c9daa8b30c32cb31"
     },
     {
       "artifact_id": "embeddings_v1.npz",
       "path": "results/v7_rebuild/phase06_5/artifacts/embeddings_v1.npz",
-      "sha256": "1cf6c4d47d4f6624861dab47c2448f9583e5695cf74b483f5e58866d7c0e523a"
+      "sha256": "15c2de0b5e1361ad71cb1c24ea9725bf40e76dd902c95a1b052c3a386c379065"
     },
     {
       "artifact_id": "phase06_5_gates_v1.csv",
@@ -134,7 +140,7 @@
     {
       "artifact_id": "phase06_5_summary_v1.json",
       "path": "results/v7_rebuild/phase06_5/artifacts/phase06_5_summary_v1.json",
-      "sha256": "3fe1f70a70594c9587e68ce6e17e9c56dedecec7a3be93ff4f270cf62ccd6fa5"
+      "sha256": "21d3f062060c1508721af00a009105974ec2490d428af46716030341e1f3d86f"
     }
   ],
   "input_fingerprints": {
@@ -155,8 +161,8 @@
     },
     "unit_of_analysis": "canonical molecule (154)",
     "labels_used_in_construction": false,
-    "code_fingerprint": "6472717d5819a88e2c4c39b326009306",
-    "created_utc": "2026-08-07T02:35:33.072755+00:00",
+    "code_fingerprint": "e1728bedaaa1317896783aa81058db91",
+    "created_utc": "2026-08-07T02:44:17.246161+00:00",
     "scope": "Raman only"
   }
 }

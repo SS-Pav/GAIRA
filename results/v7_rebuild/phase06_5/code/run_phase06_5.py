@@ -614,7 +614,36 @@ def main() -> int:
         ascending=False) if len(dis_tab) else pd.Series(dtype=int)
     log(f"  chemistry classes split across the most clusters: "
         f"{split.head(4).to_dict() if len(split) else '—'}")
-    outputs.append(wjson({**agree, "n_disagreements": int(len(dis_tab))},
+    # Agreement is quoted at K = 16, which Section 1 shows is arbitrary. Reporting it at one K
+    # invites the conditional to be lost in citation, so the whole curve is published: if
+    # agreement peaks near 16 that is worth knowing, and if it does not, the headline number
+    # must be read as one point on a curve rather than as a property of the geometry.
+    curve = []
+    for K in CLU.K_GRID:
+        if K >= len(M):
+            continue
+        for algo in CLU.FIXED_K_ALGORITHMS:
+            try:
+                lk = CLU.fit(algo, M, K, SEED)
+            except Exception:                                          # pragma: no cover
+                continue
+            curve.append({"K": K, "algorithm": algo,
+                          "ARI": float(adjusted_rand_score(cls_m, lk)),
+                          "AMI": float(adjusted_mutual_info_score(cls_m, lk)),
+                          "homogeneity": float(homogeneity_score(cls_m, lk)),
+                          "completeness": float(completeness_score(cls_m, lk))})
+    curve_tab = pd.DataFrame(curve)
+    outputs.append(wtab(curve_tab, "agreement_vs_k_v1.csv"))
+    ck = curve_tab.groupby("K")[["ARI", "AMI"]].mean()
+    kbest_ami = int(ck.AMI.idxmax())
+    log(f"  agreement across K: AMI peaks at K={kbest_ami} ({ck.AMI.max():.3f}); "
+        f"at the reported K=16 it is {ck.loc[16, 'AMI']:.3f}")
+    log(f"  AMI by K: " + ", ".join(f"{int(k)}:{v:.2f}" for k, v in ck.AMI.items()))
+    outputs.append(wjson({**agree, "n_disagreements": int(len(dis_tab)),
+                          "ami_peaks_at_K": kbest_ami,
+                          "ami_at_reported_K16": float(ck.loc[16, "AMI"]),
+                          "ami_max": float(ck.AMI.max()),
+                          "agreement_is_conditional_on_K": True},
                          "geometry_chemistry_agreement_v1.json"))
 
     # ── SECTION 3 — embeddings for visualisation ─────────────────────────────
@@ -750,6 +779,7 @@ def main() -> int:
         "retrieval_significance": sig,
         "fusion_weight_sweep": wtab_.to_dict("records"),
         "agreement": agree,
+        "agreement_vs_k": curve_tab.groupby("K")[["ARI", "AMI"]].mean().reset_index().to_dict("records"),
         "section9_criteria": {k: {"pass": bool(v[0]), "evidence": v[1]}
                               for k, v in crit.items()},
         "recommendation": {"option": rec, "rationale": rationale,

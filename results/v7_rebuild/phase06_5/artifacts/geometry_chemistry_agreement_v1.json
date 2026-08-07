@@ -8,6 +8,10 @@
   "ARI_vs_broad": 0.5155049411063517,
   "AMI_vs_broad": 0.5963698036440952,
   "n_disagreements": 24,
+  "ami_peaks_at_K": 24,
+  "ami_at_reported_K16": 0.5777712769519288,
+  "ami_max": 0.6069760706530257,
+  "agreement_is_conditional_on_K": true,
   "_provenance": {
     "phase": "06_5",
     "seed": 0,
@@ -19,8 +23,8 @@
     },
     "unit_of_analysis": "canonical molecule (154)",
     "labels_used_in_construction": false,
-    "code_fingerprint": "6472717d5819a88e2c4c39b326009306",
-    "created_utc": "2026-08-07T02:35:33.072755+00:00",
+    "code_fingerprint": "e1728bedaaa1317896783aa81058db91",
+    "created_utc": "2026-08-07T02:44:17.246161+00:00",
     "scope": "Raman only"
   }
 }
