@@ -25,8 +25,16 @@ export PYTHONPATH=$PWD/src
 python -m gaira.v7.cli info
 ```
 
-Expect `frozen assets verified: True`, atlas `2e43ddcca7d3be41c5f9da016fb8277f`, and
-`50 LSMs · 49 CSMs · 154 molecules · 16 chemistry axes`.
+Expect `frozen assets verified: True` and `50 LSMs · 49 CSMs · 154 molecules · 16 chemistry
+axes`, with two identities printed:
+
+| term | value |
+|---|---|
+| **Scientific Atlas Fingerprint** (`frozen atlas`) | `09ed804a40836f4a05a91ba10900cded` |
+| **Frozen Runtime Content Hash** (`atlas fingerprint`) | `2e43ddcca7d3be41c5f9da016fb8277f` |
+
+The CLI label `atlas fingerprint` prints the Frozen Runtime Content Hash. The runtime is frozen so
+the label stands; see `PHASE_10_ARCHITECTURE.md` §4.
 
 **The frozen atlas is committed to the repository** — ten files, ~10 MB, all git-tracked under
 `results/v7_rebuild/`. `GAIRAEngine.load()` was instrumented to confirm it opens those ten and
@@ -103,6 +111,7 @@ result digest, never supplied by the caller. No route or tool accepts a filesyst
 | symptom | cause |
 |---|---|
 | `FrozenAssetError` | an artefact under `results/v7_rebuild/` changed. Restore from git; do not repin. |
+| a hash does not match the guide | check *which* hash: the Scientific Atlas Fingerprint (`09ed…`) and the Frozen Runtime Content Hash (`2e43…`) are different objects. |
 | `FrozenArtifactError` | a declared fingerprint changed — an upstream phase was re-run. |
 | `422 spectrum_rejected` | validation failed. `detail.validation.diagnostics` says exactly why. |
 | modality rejected | only `raman` is supported. This is deliberate; see the plugin architecture. |
@@ -111,5 +120,10 @@ result digest, never supplied by the caller. No route or tool accepts a filesyst
 ## 9. What this deployment does *not* do
 
 No LLM, no cloud service, no telemetry, no outbound network call, no database, no authentication
-(bind to loopback, which is the default), and no SERS, serum, EV, bacteria or tissue
-interpretation.
+(bind to loopback, which is the default), and no SERS, serum, EV, bacteria, tissue or dynamic
+(DART) interpretation.
+
+DART is **not** a modality: it is a dynamic perturbation protocol built on Raman/SERS
+measurements, producing `I(wavenumber, potential, time)` — still a vibrational measurement. It
+attaches at the trajectory layer, downstream of the frozen representation, and is an extension
+point rather than a capability. See `PHASE_10_PLUGIN_ARCHITECTURE.md`.
