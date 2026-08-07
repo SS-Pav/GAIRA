@@ -204,3 +204,60 @@ broad biochemical interpretation, not identity; **residual/null-adjusted theme m
 analyte-specific diagnostic; **perturbation** = functional validation (strongest evidence);
 **matrix recovery** = mixture visibility (separate property). "Detectable/recoverable" is never
 assigned from a raw cosine threshold.
+
+---
+
+## GAIRA V7 — the frozen runtime
+
+The V7 scientific architecture is **frozen after Phase 09**, and the runtime platform around it is
+frozen after Phase 10. V7 is a Raman-only biochemical inference engine: a spectrum is projected
+into a frozen motif atlas, matched against grounded reference evidence, and summarised as a
+16-axis Chemistry Evidence profile with calibrated confidence and complete provenance.
+
+**Run it from a clean clone — no external volume, no cloud account, no LLM:**
+
+```bash
+export PYTHONPATH=$PWD/src
+python -m gaira.v7.cli info                   # engine identity, performance, limitations
+python -m gaira.v7.cli infer spectrum.csv     # inference; --report out.pdf
+python -m gaira.v7.api                        # HTTP service   → :8000/docs
+python -m gaira.v7.mcp                        # MCP tool server (stdio)
+streamlit run streamlit_apps/gaira_v7_console.py
+```
+
+The frozen atlas is committed (ten files, ~10 MB, all git-tracked), so inference works
+immediately after cloning.
+
+### Atlas identity — two hashes, two names
+
+| term | value |
+|---|---|
+| **Scientific Atlas Fingerprint** | `09ed804a40836f4a05a91ba10900cded` |
+| **Frozen Runtime Content Hash** | `2e43ddcca7d3be41c5f9da016fb8277f` |
+
+Never call both "the atlas fingerprint". See
+`results/v7_rebuild/phase10/reports/PHASE_10_ARCHITECTURE.md` §4.
+
+### Validated performance
+
+Molecule retrieval top-1 **0.6053** · top-5 0.7947 · MRR 0.6870.
+Chemistry Evidence on **unseen molecules** top-1 **0.8507** · top-3 0.9760.
+Cross-surface parity: 60 comparisons over 6 surfaces, **max |Δ| = 0.0**.
+Single-spectrum inference 2.34 ms; API overhead 1.61 ms.
+
+### Scope — read before using any output
+
+- **Chemistry Evidence is RELATIVE.** Not a concentration, not an abundance, not a mixture
+  fraction. L2 normalisation removes absolute scale in the first preprocessing stage.
+- **Retrieved molecules are reference ANALOGUES**, not identifications.
+- **There is no validated open-set detection.** The engine cannot determine that the true
+  molecule is absent from its 154-molecule bank.
+- **Pure Raman reference spectra only.** SERS, serum, plasma, EV, bacteria and tissue are
+  extension points with defined contracts and no validation.
+- **DART is not a modality.** It is a dynamic perturbation protocol built on Raman/SERS
+  measurements — `I(wavenumber, potential, time)` is still a vibrational measurement — and it
+  attaches at the **trajectory layer**, downstream of the frozen representation. See
+  `PHASE_10_PLUGIN_ARCHITECTURE.md`.
+
+Full documentation: `results/v7_rebuild/phase10/reports/`, including
+`PHASE_10_GAIRA_RUNTIME_PLATFORM_REPORT.pdf`.
