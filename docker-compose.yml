@@ -1,0 +1,33 @@
+# GAIRA V7 — API and Streamlit together.
+#
+#   docker compose up --build
+#   API   http://localhost:8000/docs
+#   UI    http://localhost:8501
+#
+# Docker is OPTIONAL. Phase 10 runs from a clean clone without it; see
+# results/v7_rebuild/phase10/reports/PHASE_10_DEPLOYMENT_GUIDE.md.
+services:
+  api:
+    build: .
+    image: gaira-v7:latest
+    command: python -m gaira.v7.api --host 0.0.0.0 --port 8000
+    ports: ["8000:8000"]
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import httpx; assert httpx.get('http://localhost:8000/v1/health').json()['status']=='ok'"]
+      interval: 20s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+
+  streamlit:
+    image: gaira-v7:latest
+    depends_on:
+      api: {condition: service_healthy}
+    # Configuration only: the client talks to the API instead of loading its own engine.
+    environment:
+      GAIRA_API_URL: "http://api:8000"
+    command: >
+      python -m streamlit run /app/streamlit_apps/gaira_v7_console.py
+      --server.port 8501 --server.address 0.0.0.0 --server.headless true
+    ports: ["8501:8501"]

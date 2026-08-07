@@ -1,0 +1,178 @@
+{
+ "frozen_assets": {
+  "phase00/tables/canonical_analytes_v1.csv": {
+   "present": true,
+   "digest": "dabd2834db31804fa948f5d30ff0fd44",
+   "expected": "dabd2834db31804fa948f5d30ff0fd44",
+   "match": true,
+   "bytes": 20038,
+   "unpinned": false
+  },
+  "phase00/tables/chemical_partition_v1.csv": {
+   "present": true,
+   "digest": "0285392b5a70f55f4938344462486d45",
+   "expected": "0285392b5a70f55f4938344462486d45",
+   "match": true,
+   "bytes": 17206,
+   "unpinned": false
+  },
+  "phase01/PHASE_STATE.json": {
+   "present": true,
+   "digest": "c66f7304b08aa6dce8415ca09c8a600b",
+   "expected": "c66f7304b08aa6dce8415ca09c8a600b",
+   "match": true,
+   "bytes": 2168,
+   "unpinned": false
+  },
+  "phase01/artifacts/balanced_references_v1.npz": {
+   "present": true,
+   "digest": "06fb6b7f2f58746023c77473c54f04d0",
+   "expected": "06fb6b7f2f58746023c77473c54f04d0",
+   "match": true,
+   "bytes": 1936065,
+   "unpinned": false
+  },
+  "phase01/artifacts/lsm_dictionary_v1.npz": {
+   "present": true,
+   "digest": "9d4bafe596e390d1ed0cd4eeecb50b6b",
+   "expected": "9d4bafe596e390d1ed0cd4eeecb50b6b",
+   "match": true,
+   "bytes": 227221,
+   "unpinned": false
+  },
+  "phase02/artifacts/csm_dictionary_v1.npz": {
+   "present": true,
+   "digest": "3692ad772d661273c183fb23cf587c72",
+   "expected": "3692ad772d661273c183fb23cf587c72",
+   "match": true,
+   "bytes": 223544,
+   "unpinned": false
+  },
+  "phase02/artifacts/csm_registry_v1.json": {
+   "present": true,
+   "digest": "f75bce02c75747507034cd235ef2e9eb",
+   "expected": "f75bce02c75747507034cd235ef2e9eb",
+   "match": true,
+   "bytes": 117197,
+   "unpinned": false
+  },
+  "phase05/PHASE_STATE.json": {
+   "present": true,
+   "digest": "395e9abb425eab6118bdc8c89031827b",
+   "expected": "395e9abb425eab6118bdc8c89031827b",
+   "match": true,
+   "bytes": 8084,
+   "unpinned": false
+  },
+  "phase06/artifacts/chemistry_evidence_calibrator_v1.json": {
+   "present": true,
+   "digest": "c9c6e8068d6116cbd22306addea24ac2",
+   "expected": "c9c6e8068d6116cbd22306addea24ac2",
+   "match": true,
+   "bytes": 1156,
+   "unpinned": false
+  },
+  "phase06/artifacts/chemistry_evidence_model_v1.json": {
+   "present": true,
+   "digest": "0b387f2b26a16710e2436cb9e4d7865b",
+   "expected": "0b387f2b26a16710e2436cb9e4d7865b",
+   "match": true,
+   "bytes": 2051,
+   "unpinned": false
+  }
+ },
+ "declared_fingerprints": {
+  "recomputed": {
+   "atlas": "09ed804a40836f4a05a91ba10900cded",
+   "lsm": "208482d6f7178b5b8f16cace91be55b0",
+   "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+   "engine": "20d8bd99ce71f45a125c6a2b1d719e51"
+  },
+  "expected": {
+   "atlas": "09ed804a40836f4a05a91ba10900cded",
+   "lsm": "208482d6f7178b5b8f16cace91be55b0",
+   "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+   "engine": "20d8bd99ce71f45a125c6a2b1d719e51"
+  },
+  "match": true
+ },
+ "engine": {
+  "repr": "GAIRAEngine(atlas=2e43ddcca7d3\u2026, 50 LSMs, 49 CSMs, 154 molecules, 16 chemistry axes)",
+  "load_seconds": 0.8354,
+  "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f",
+  "n_lsms": 50,
+  "n_csms": 49,
+  "n_molecules": 154,
+  "n_chemistry_axes": 16,
+  "chemistry_axes": [
+   "acylglycerol",
+   "carboxylic_acid_metabolite",
+   "chromophore_pigment",
+   "fatty_acid",
+   "free_amino_acid",
+   "mono_oligosaccharide",
+   "nucleic_acid_polymer",
+   "peptide_protein",
+   "phosphate_metabolite",
+   "phospholipid_sphingolipid",
+   "polysaccharide",
+   "purine",
+   "pyrimidine",
+   "small_nitrogenous",
+   "sterol_steroid",
+   "sulfur_thiol_cofactor"
+  ]
+ },
+ "ontology_order_match": true,
+ "golden_cases": {
+  "high_confidence": "4f3e722278bc129c7e1192eaa35d41e1",
+  "molecule_wrong_chemistry_right": "f291528e95e1efb52a5408e61e62539c",
+  "low_explained_variance": "9bc5ea4f96b5f3fd04190811f70592c2",
+  "ambiguous_chemistry": "2c6841b8cb0ae385448ca2ea4acc9f17",
+  "large_class_exemplar": "acf4c856c186501778fce38d9012d49d",
+  "synthetic_noise_control": "88fdb9cbbb161d0b66e0932cf125b2aa"
+ },
+ "deterministic": true,
+ "phase09_reproduction": {
+  "retrieval": {
+   "top1": 0.6053333333333333,
+   "top3": 0.7626666666666667,
+   "top5": 0.7946666666666666,
+   "top10": 0.8106666666666666,
+   "mrr": 0.6870030418103813
+  },
+  "baseline": {
+   "top1": 0.6053333333333333,
+   "top3": 0.7626666666666667,
+   "top5": 0.7946666666666666,
+   "top10": 0.8106666666666666,
+   "mrr": 0.6870030418103813
+  },
+  "csm": {
+   "class_top1": 0.9546666666666667,
+   "mean_explained_variance": 0.8231960116865533
+  },
+  "deviations": {
+   "top1": 0.0,
+   "top3": 0.0,
+   "top5": 0.0,
+   "top10": 0.0,
+   "mrr": 0.0,
+   "class_top1_in_sample": 0.0,
+   "mean_explained_variance": 0.0
+  },
+  "max_deviation": 0.0,
+  "reproduces": true,
+  "mean_inference_ms": 1.836
+ },
+ "gates": {
+  "n": 9,
+  "failed": 0
+ },
+ "_provenance": {
+  "phase": "10",
+  "step": "engine_freeze_audit",
+  "created_utc": "2026-08-07T06:51:54.024929+00:00",
+  "elapsed_seconds": 1.96
+ }
+}

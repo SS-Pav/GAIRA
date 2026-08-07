@@ -1,0 +1,10 @@
+gate,status
+FA1 every frozen asset present and content-pinned,PASS
+FA2 declared fingerprints recomputed and match,PASS
+FA3 canonical ontology ordering unchanged,PASS
+FA4 engine deterministic on repeat,PASS
+FA5 golden fixtures stored for six representative cases,PASS
+FA6 Phase 09 retrieval reproduced within 1e-6,PASS
+FA7 Phase 09 chemistry reproduced within 1e-6,PASS
+FA8 no frozen artefact written or modified,PASS
+FA9 engine reads only committed repository assets,PASS

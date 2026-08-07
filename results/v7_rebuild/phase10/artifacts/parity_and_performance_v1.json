@@ -1,0 +1,251 @@
+{
+ "parity": {
+  "n_comparisons": 60,
+  "n_divergent": 0,
+  "max_abs_diff": 0.0,
+  "tolerance": 1e-12,
+  "surfaces": [
+   "engine",
+   "runtime_service",
+   "python_sdk",
+   "fastapi",
+   "mcp",
+   "streamlit_backend"
+  ]
+ },
+ "digests": [
+  {
+   "case": "high_confidence_correct",
+   "service": "215203f93615d7677f234ce24fd1d480",
+   "sdk": "215203f93615d7677f234ce24fd1d480",
+   "api": "215203f93615d7677f234ce24fd1d480",
+   "streamlit": "215203f93615d7677f234ce24fd1d480",
+   "all_equal": true,
+   "engine_ms": 81.113,
+   "service_ms": 2.138,
+   "sdk_ms": 2.016,
+   "api_ms": 6.632,
+   "mcp_ms": 6.176
+  },
+  {
+   "case": "chemistry_right_molecule_wrong",
+   "service": "0896c2152f5b979461e510e62cad2446",
+   "sdk": "0896c2152f5b979461e510e62cad2446",
+   "api": "0896c2152f5b979461e510e62cad2446",
+   "streamlit": "0896c2152f5b979461e510e62cad2446",
+   "all_equal": true,
+   "engine_ms": 2.481,
+   "service_ms": 2.897,
+   "sdk_ms": 2.975,
+   "api_ms": 5.068,
+   "mcp_ms": 6.294
+  },
+  {
+   "case": "low_explained_variance",
+   "service": "d63d1eb429db6abe1be21794d641e2f0",
+   "sdk": "d63d1eb429db6abe1be21794d641e2f0",
+   "api": "d63d1eb429db6abe1be21794d641e2f0",
+   "streamlit": "d63d1eb429db6abe1be21794d641e2f0",
+   "all_equal": true,
+   "engine_ms": 1.642,
+   "service_ms": 1.968,
+   "sdk_ms": 2.005,
+   "api_ms": 3.799,
+   "mcp_ms": 6.073
+  },
+  {
+   "case": "ambiguous_class",
+   "service": "046c9af8b98f08d1f61ceae10d41b993",
+   "sdk": "046c9af8b98f08d1f61ceae10d41b993",
+   "api": "046c9af8b98f08d1f61ceae10d41b993",
+   "streamlit": "046c9af8b98f08d1f61ceae10d41b993",
+   "all_equal": true,
+   "engine_ms": 2.327,
+   "service_ms": 2.832,
+   "sdk_ms": 2.745,
+   "api_ms": 4.474,
+   "mcp_ms": 6.355
+  },
+  {
+   "case": "class_sterol_steroid",
+   "service": "5ea50dbff5ac01ac6de3f158858fdd0b",
+   "sdk": "5ea50dbff5ac01ac6de3f158858fdd0b",
+   "api": "5ea50dbff5ac01ac6de3f158858fdd0b",
+   "streamlit": "5ea50dbff5ac01ac6de3f158858fdd0b",
+   "all_equal": true,
+   "engine_ms": 2.111,
+   "service_ms": 2.466,
+   "sdk_ms": 2.5,
+   "api_ms": 4.335,
+   "mcp_ms": 5.956
+  },
+  {
+   "case": "class_purine",
+   "service": "0bfa5eb2bc8c9c2a9d5f25f67278e595",
+   "sdk": "0bfa5eb2bc8c9c2a9d5f25f67278e595",
+   "api": "0bfa5eb2bc8c9c2a9d5f25f67278e595",
+   "streamlit": "0bfa5eb2bc8c9c2a9d5f25f67278e595",
+   "all_equal": true,
+   "engine_ms": 1.092,
+   "service_ms": 1.357,
+   "sdk_ms": 1.419,
+   "api_ms": 3.175,
+   "mcp_ms": 4.748
+  },
+  {
+   "case": "class_polysaccharide",
+   "service": "876832b430ba3d5ff65a168ab72446f4",
+   "sdk": "876832b430ba3d5ff65a168ab72446f4",
+   "api": "876832b430ba3d5ff65a168ab72446f4",
+   "streamlit": "876832b430ba3d5ff65a168ab72446f4",
+   "all_equal": true,
+   "engine_ms": 0.793,
+   "service_ms": 1.064,
+   "sdk_ms": 1.115,
+   "api_ms": 2.764,
+   "mcp_ms": 4.67
+  },
+  {
+   "case": "class_peptide_protein",
+   "service": "b509fa61e0c538dc0e589ab47f9777d1",
+   "sdk": "b509fa61e0c538dc0e589ab47f9777d1",
+   "api": "b509fa61e0c538dc0e589ab47f9777d1",
+   "streamlit": "b509fa61e0c538dc0e589ab47f9777d1",
+   "all_equal": true,
+   "engine_ms": 1.954,
+   "service_ms": 2.456,
+   "sdk_ms": 2.323,
+   "api_ms": 4.1,
+   "mcp_ms": 5.79
+  },
+  {
+   "case": "source_RamanBioLib",
+   "service": "8a8f37d94c3331474ae53a24b0a74c1b",
+   "sdk": "8a8f37d94c3331474ae53a24b0a74c1b",
+   "api": "8a8f37d94c3331474ae53a24b0a74c1b",
+   "streamlit": "8a8f37d94c3331474ae53a24b0a74c1b",
+   "all_equal": true,
+   "engine_ms": 2.141,
+   "service_ms": 2.561,
+   "sdk_ms": 2.54,
+   "api_ms": 4.364,
+   "mcp_ms": 5.932
+  },
+  {
+   "case": "source_amino_acid_raman_gro",
+   "service": "73e0eccef0eb29364e69061bbdbc57b1",
+   "sdk": "73e0eccef0eb29364e69061bbdbc57b1",
+   "api": "73e0eccef0eb29364e69061bbdbc57b1",
+   "streamlit": "73e0eccef0eb29364e69061bbdbc57b1",
+   "all_equal": true,
+   "engine_ms": 1.069,
+   "service_ms": 1.363,
+   "sdk_ms": 1.433,
+   "api_ms": 3.03,
+   "mcp_ms": 4.823
+  },
+  {
+   "case": "source_gobbato_raman_metabo",
+   "service": "651e51b732ca04f925175b68d25a5296",
+   "sdk": "651e51b732ca04f925175b68d25a5296",
+   "api": "651e51b732ca04f925175b68d25a5296",
+   "streamlit": "651e51b732ca04f925175b68d25a5296",
+   "all_equal": true,
+   "engine_ms": 2.515,
+   "service_ms": 3.048,
+   "sdk_ms": 2.928,
+   "api_ms": 4.692,
+   "mcp_ms": 6.598
+  },
+  {
+   "case": "synthetic_noise_control",
+   "service": "d29072e27f359f97f886a1f8c287edf7",
+   "sdk": "d29072e27f359f97f886a1f8c287edf7",
+   "api": "d29072e27f359f97f886a1f8c287edf7",
+   "streamlit": "d29072e27f359f97f886a1f8c287edf7",
+   "all_equal": true,
+   "engine_ms": 3.48,
+   "service_ms": 3.909,
+   "sdk_ms": 3.863,
+   "api_ms": 5.791,
+   "mcp_ms": 7.384
+  }
+ ],
+ "performance": {
+  "engine_load_seconds": 0.279,
+  "single_inference_ms_median": 2.34,
+  "single_inference_ms_p95": 3.11,
+  "ten_sequential_seconds": 0.021,
+  "hundred_sequential_seconds": 0.218,
+  "api_ms_median": 3.95,
+  "api_overhead_ms": 1.61,
+  "mcp_ms_median": 5.3,
+  "mcp_overhead_ms": 2.97,
+  "report_pdf_seconds": 1.417,
+  "report_json_seconds": 0.002,
+  "max_rss_mb": 595.5
+ },
+ "malformed_handling": [
+  {
+   "surface": "api",
+   "status": 422,
+   "rejected": true
+  },
+  {
+   "surface": "sdk",
+   "status": "SpectrumRejected",
+   "rejected": true
+  },
+  {
+   "surface": "mcp",
+   "status": "validated",
+   "rejected": true
+  }
+ ],
+ "unsupported_modality_blocked": {
+  "api": true,
+  "sdk": true,
+  "mcp": true
+ },
+ "concurrency_identical": true,
+ "scientific_validation": {
+  "measured": {
+   "molecule_top1": 0.6053333333333333,
+   "molecule_top3": 0.7626666666666667,
+   "molecule_top5": 0.7946666666666666,
+   "molecule_top10": 0.8106666666666666,
+   "molecule_mrr": 0.6870030418103813,
+   "chemistry_top1_in_sample": 0.9546666666666667,
+   "csm_mean_explained_variance": 0.8231960116865533
+  },
+  "phase09": {
+   "molecule_top1": 0.6053333333333333,
+   "molecule_top3": 0.7626666666666667,
+   "molecule_top5": 0.7946666666666666,
+   "molecule_top10": 0.8106666666666666,
+   "molecule_mrr": 0.6870030418103813,
+   "chemistry_top1_in_sample": 0.9546666666666667,
+   "csm_mean_explained_variance": 0.8231960116865533
+  },
+  "deviations": {
+   "molecule_top1": 0.0,
+   "molecule_top3": 0.0,
+   "molecule_top5": 0.0,
+   "molecule_top10": 0.0,
+   "molecule_mrr": 0.0,
+   "chemistry_top1_in_sample": 0.0,
+   "csm_mean_explained_variance": 0.0
+  },
+  "max_deviation": 0.0
+ },
+ "gates": {
+  "n": 8,
+  "failed": 0
+ },
+ "_provenance": {
+  "phase": "10",
+  "step": "parity_and_performance",
+  "created_utc": "2026-08-07T07:03:59.761153+00:00",
+  "elapsed_seconds": 5.31
+ }
+}

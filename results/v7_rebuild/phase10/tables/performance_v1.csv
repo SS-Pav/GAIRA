@@ -1,0 +1,2 @@
+engine_load_seconds,single_inference_ms_median,single_inference_ms_p95,ten_sequential_seconds,hundred_sequential_seconds,api_ms_median,api_overhead_ms,mcp_ms_median,mcp_overhead_ms,report_pdf_seconds,report_json_seconds,max_rss_mb
+0.279,2.34,3.11,0.021,0.218,3.95,1.61,5.3,2.97,1.417,0.002,595.5

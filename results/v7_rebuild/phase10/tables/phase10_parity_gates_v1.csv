@@ -1,0 +1,9 @@
+gate,status
+P1 six surfaces produce identical scientific output,PASS
+"P2 result digests agree across service, SDK, API and Streamlit paths",PASS
+P3 malformed input rejected on every surface,PASS
+P4 unsupported modality blocked on every surface,PASS
+P5 concurrent API requests reproduce serial results,PASS
+P6 Phase 09 science reproduced through the runtime path,PASS
+P7 single-spectrum inference is interactive (< 250 ms),PASS
+P8 API overhead under 100 ms,PASS
