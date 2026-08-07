@@ -27,6 +27,7 @@ DPI = 300
 INK, MUTED, RULE = "#1a1a1a", "#6b7280", "#d1d5db"
 FROZEN, RUNTIME, SURFACE, FUTURE, BAD, GOOD = (
     "#1d4ed8", "#0f766e", "#7c3aed", "#9ca3af", "#b91c1c", "#15803d")
+ACCENT_D = "#c2410c"          # the dynamic / trajectory lane
 plt.rcParams.update({"font.family": "DejaVu Sans", "savefig.dpi": DPI, "figure.dpi": 110})
 
 
@@ -332,36 +333,65 @@ def main() -> int:
             ha="center", fontsize=8.6, color=MUTED)
     save(fig, "F08_provenance_chain.png")
 
-    # ── F09 modality plugins ─────────────────────────────────────────────────
-    fig, ax = canvas(title="Figure 9 — Future modality plugin architecture",
-                     sub="Contracts defined, one implemented. A stub that returns plausible "
-                         "numbers is worse than no stub — every unimplemented adapter raises.")
-    box(ax, 0.30, 0.20, 0.40, 0.16, "GAIRA CORE",
-        "preprocessing · CSM projection · grounded retrieval\nchemistry evidence · confidence · "
-        "provenance", FROZEN, fs=11)
-    ax.text(0.50, 0.16, "Raman-only. Frozen after Phase 09.", ha="center", fontsize=8.6,
-            color=FROZEN, style="italic")
+    # ── F09 modality plugins + the dynamic trajectory lane ──────────────────
+    fig, ax = canvas(h=8.6, title="Figure 9 — Future modality plugins and the dynamic "
+                                  "trajectory lane",
+                     sub="Modality adapters sit BEFORE the frozen core. DART is not one of them: "
+                         "it is a dynamic perturbation protocol and attaches AFTER.")
+    ax.text(0.045, 0.860, "UPSTREAM — modality adapters (the physics between sample and spectrum)",
+            fontsize=9.2, weight="bold", color=MUTED, va="top")
     mods = [("PureRamanAdapter", "IMPLEMENTED", GOOD, "identity — the validated domain"),
             ("AgSERSAdapter", "contract only", FUTURE,
-             "needs a silver observation model,\na detection gate, a transfer function"),
+             "silver observation model,\ndetection gate, transfer function"),
             ("AuSERSAdapter", "contract only", FUTURE,
-             "gold chemisorption differs from silver;\nits own gate and corpus"),
-            ("DARTAdapter", "contract only", FUTURE,
-             "no vibrational correspondence exists;\nbetter modelled as a TRAJECTORY")]
+             "gold chemisorption differs;\nits own gate and corpus")]
     for i, (n, status, colour, note) in enumerate(mods):
-        x = 0.045 + i * 0.24
-        box(ax, x, 0.60, 0.21, 0.115, n, status, colour, fs=8.8,
+        x = 0.055 + i * 0.31
+        box(ax, x, 0.715, 0.27, 0.105, n, status, colour, fs=9.0,
             ls="-" if colour is GOOD else "--")
-        ax.text(x + 0.105, 0.565, note, ha="center", fontsize=7.6, color=MUTED, linespacing=1.4)
-        arrow(ax, x + 0.105, 0.60, 0.50, 0.365, colour, ls="-" if colour is GOOD else ":")
-    ax.text(0.5, 0.475, "A modality adapter runs BEFORE the core. It may correct, veto or pass "
-            "through.\nIt may never alter what the core computes.",
-            ha="center", fontsize=9.0, color=INK)
-    ax.text(0.5, 0.085, "Why this boundary exists: Phase 04 measured a Raman motif dictionary "
-            "reconstructing REAL Ag-SERS at AUROC 0.548.\n"
-            "A SERS spectrum run through the Raman core produces confident numbers with no "
-            "validated meaning. Unsupported modalities are blocked, not warned.",
-            ha="center", fontsize=8.8, color=BAD)
+        ax.text(x + 0.135, 0.703, note, ha="center", va="top", fontsize=7.6, color=MUTED,
+                linespacing=1.4)
+        arrow(ax, x + 0.135, 0.715, 0.50, 0.598, colour, ls="-" if colour is GOOD else ":")
+
+    box(ax, 0.235, 0.430, 0.53, 0.165, "FROZEN GAIRA CORE",
+        "canonical preprocessing → frozen LSM → frozen CSM\n→ frozen Chemistry Evidence · "
+        "confidence · provenance", FROZEN, fs=11.5)
+    ax.text(0.50, 0.418, "Raman-only. Frozen after Phase 09. Unchanged by anything on this page.",
+            ha="center", va="top", fontsize=8.6, color=FROZEN, style="italic")
+
+    box(ax, 0.030, 0.500, 0.180, 0.140, "Dynamic Raman /\nSERS acquisition", "", ACCENT_D,
+        fs=8.8)
+    ax.text(0.120, 0.545, "I(wavenumber, potential, time)", ha="center", va="top",
+            fontsize=7.0, color=MUTED)
+    arrow(ax, 0.210, 0.560, 0.235, 0.528, ACCENT_D, lw=1.6)
+    ax.text(0.120, 0.492, "each slice is an ordinary\nRaman/SERS spectrum", ha="center",
+            va="top", fontsize=7.6, color=ACCENT_D, linespacing=1.4)
+
+    box(ax, 0.790, 0.500, 0.180, 0.140, "TrajectoryAdapter", "", ACCENT_D, fs=8.8, ls="--")
+    ax.text(0.880, 0.556, "how the frozen\nrepresentation moves", ha="center", va="top",
+            fontsize=7.4, color=MUTED, linespacing=1.4)
+    arrow(ax, 0.765, 0.528, 0.790, 0.560, ACCENT_D, lw=1.6)
+    box(ax, 0.790, 0.350, 0.180, 0.100, "Dynamic biochemical", "trajectories", ACCENT_D,
+        fs=8.8, ls="--")
+    arrow(ax, 0.880, 0.500, 0.880, 0.452, ACCENT_D, ls="--")
+
+    ax.text(0.50, 0.330, "DOWNSTREAM — DART is a dynamic perturbation layer, not a modality",
+            ha="center", va="top", fontsize=9.8, weight="bold", color=ACCENT_D)
+    ax.text(0.50, 0.288, "DART-Met produces I(wavenumber, potential, time), which is still a "
+            "VIBRATIONAL measurement. Every slice is a spectrum the frozen\nengine already "
+            "reads, so no spectral transform is needed and nothing upstream changes. What is new "
+            "is perturbation and time,\nso DART attaches at the trajectory layer — over a "
+            "SEQUENCE of ordinary inference results.",
+            ha="center", va="top", fontsize=8.6, color=INK, linespacing=1.7)
+    ax.text(0.50, 0.178, "Why downstream is correct rather than merely convenient: a trajectory "
+            "of CSM activations is interpretable only if every activation\nalong it came from "
+            "the same frozen path. Placed upstream, a DART 'modality adapter' would have to "
+            "collapse the potential and\ntime axes before the core saw them — discarding "
+            "exactly what the protocol exists to produce.",
+            ha="center", va="top", fontsize=8.4, color=MUTED, linespacing=1.7)
+    ax.text(0.50, 0.058, "Every unimplemented adapter RAISES. A stub that returns plausible "
+            "numbers is worse than no stub at all.",
+            ha="center", va="top", fontsize=8.6, color=BAD, weight="bold")
     save(fig, "F09_modality_plugins.png")
 
     # ── F10 context plugins ──────────────────────────────────────────────────
@@ -400,34 +430,62 @@ def main() -> int:
     save(fig, "F10_context_plugins.png")
 
     # ── F11 agent boundary ───────────────────────────────────────────────────
-    fig, ax = canvas(title="Figure 11 — Where a future agent connects",
+    fig, ax = canvas(h=8.6, title="Figure 11 — The agent boundary",
                      sub="An LLM sits ABOVE the validated science, never inside it. Phase 10 "
-                         "ships no model; this is the boundary Phase 11 would respect.")
-    ax.add_patch(mp.Rectangle((0.04, 0.66), 0.92, 0.20, fc="#fef2f2", ec=BAD, lw=1.2,
-                              linestyle="--"))
-    ax.text(0.06, 0.835, "AGENT LAYER — not implemented in Phase 10", fontsize=10,
-            weight="bold", color=BAD)
-    for i, (n, s) in enumerate([("plan", "which tools, in what order"),
-                                ("call MCP tools", "read-only, validated"),
-                                ("narrate", "rephrase the engine's own numbers"),
-                                ("cite", "every claim → a result field")]):
-        box(ax, 0.07 + i * 0.225, 0.685, 0.19, 0.09, n, s, BAD, fs=8.6, ls="--")
-    ax.text(0.5, 0.615, "▼  MCP tool calls only  ▼", ha="center", fontsize=9.5, color=BAD,
-            weight="bold")
-    box(ax, 0.22, 0.44, 0.56, 0.13, "MCP TOOL SERVER — 8 read-only tools",
-        "the same runtime every other surface uses", SURFACE, fs=10.5)
-    box(ax, 0.22, 0.24, 0.56, 0.13, "FROZEN SCIENTIFIC ENGINE",
-        "computes every number an agent is allowed to state", FROZEN, fs=10.5)
-    arrow(ax, 0.50, 0.44, 0.50, 0.375, FROZEN, lw=1.8)
-    left = ("An agent MAY\n\n· choose which tools to call\n· ask for more evidence\n"
-            "· rephrase the deterministic text\n· compare results it obtained\n"
-            "· surface the caveats verbatim")
-    right = ("An agent MUST NEVER\n\n· compute a similarity or an activation\n"
-             "· estimate a chemistry axis\n· re-rank retrieval output\n"
-             "· assert a molecular identification\n· drop a scope warning\n"
-             "· infer a biological or clinical state")
-    ax.text(0.05, 0.19, left, fontsize=8.6, color=GOOD, va="top", linespacing=1.6)
-    ax.text(0.53, 0.19, right, fontsize=8.6, color=BAD, va="top", linespacing=1.6)
+                         "ships no model; this is the boundary Phase 11 must respect.")
+
+    # the permitted chain, drawn as a single one-directional spine
+    ax.text(0.50, 0.885, "THE ONLY PERMITTED CHAIN", ha="center", va="top", fontsize=9.4,
+            weight="bold", color=GOOD)
+    chain = [("LLM", "chooses tools · narrates", BAD),
+             ("MCP", "8 read-only tools", SURFACE),
+             ("FROZEN RUNTIME", "validate · orchestrate", RUNTIME),
+             ("FROZEN ENGINE", "computes every number", FROZEN)]
+    for i, (n, s, colour) in enumerate(chain):
+        x = 0.055 + i * 0.235
+        box(ax, x, 0.735, 0.195, 0.105, n, s, colour, fs=10.2,
+            ls="--" if colour is BAD else "-")
+        if i:
+            arrow(ax, x - 0.038, 0.788, x - 0.002, 0.788, GOOD, lw=2.0)
+    ax.text(0.50, 0.712, "one-directional — nothing flows back up, and the LLM never reaches "
+            "past the MCP layer", ha="center", va="top", fontsize=8.6, color=GOOD,
+            style="italic")
+
+    # the forbidden shortcut
+    ax.text(0.50, 0.650, "AND NEVER", ha="center", va="top", fontsize=9.4, weight="bold",
+            color=BAD)
+    box(ax, 0.245, 0.530, 0.195, 0.085, "LLM", "", BAD, fs=10.2, ls="--")
+    box(ax, 0.560, 0.530, 0.195, 0.085, "scientific computation", "", BAD, fs=9.4, ls="--")
+    arrow(ax, 0.445, 0.572, 0.556, 0.572, BAD, lw=2.0)
+    ax.plot([0.478, 0.522], [0.548, 0.596], color=BAD, lw=3.0, zorder=5)
+    ax.plot([0.478, 0.522], [0.596, 0.548], color=BAD, lw=3.0, zorder=5)
+
+    # may / must never
+    ax.add_patch(mp.FancyBboxPatch((0.045, 0.115), 0.42, 0.355,
+                                   boxstyle="round,pad=0.008,rounding_size=0.012",
+                                   fc="#f0fdf4", ec=GOOD, lw=1.2))
+    ax.text(0.065, 0.442, "AN AGENT MAY", fontsize=10.5, weight="bold", color=GOOD, va="top")
+    for i, s in enumerate(("choose tools", "explain", "compare", "narrate", "summarise")):
+        ax.text(0.075, 0.398 - i * 0.048, f"·  {s}", fontsize=9.6, color=INK, va="top")
+    ax.text(0.065, 0.152, "…and surface every caveat verbatim.", fontsize=8.4, color=MUTED,
+            va="top", style="italic")
+
+    ax.add_patch(mp.FancyBboxPatch((0.535, 0.115), 0.42, 0.355,
+                                   boxstyle="round,pad=0.008,rounding_size=0.012",
+                                   fc="#fef2f2", ec=BAD, lw=1.2))
+    ax.text(0.555, 0.442, "AN AGENT IS FORBIDDEN FROM", fontsize=10.5, weight="bold", color=BAD,
+            va="top")
+    for i, s in enumerate(("computing chemistry", "computing similarity",
+                           "estimating concentrations", "re-ranking",
+                           "diagnosing disease", "modifying inference")):
+        ax.text(0.565, 0.398 - i * 0.043, f"·  {s}", fontsize=9.6, color=INK, va="top")
+    ax.text(0.555, 0.138, "Every number it states must trace to an InferenceResult field.",
+            fontsize=8.4, color=MUTED, va="top", style="italic")
+
+    ax.text(0.50, 0.062, "Phase 10 ships no model, requires no cloud account, and makes no "
+            "network call. The MCP server is a provider;\nwhatever consumes it lives entirely "
+            "outside the process.", ha="center", va="top", fontsize=8.8, color=INK,
+            linespacing=1.6)
     save(fig, "F11_agent_boundary.png")
 
     # ── F12 parity validation ────────────────────────────────────────────────
