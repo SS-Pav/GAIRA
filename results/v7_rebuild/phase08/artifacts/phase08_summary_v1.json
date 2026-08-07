@@ -1,0 +1,584 @@
+{
+  "baselines_reproduced": true,
+  "split_a": {
+    "A_raw_spectrum": {
+      "top1": 0.6346666666666667,
+      "top3": 0.7333333333333333,
+      "top5": 0.7653333333333333,
+      "top10": 0.792,
+      "mrr": 0.6919241276188146,
+      "ndcg5": 0.7055768374090706,
+      "mean_reciprocal_rank": 0.6919241276188146,
+      "median_rank": 1.0,
+      "mean_rank": 29.445333333333334,
+      "unretrievable": 0
+    },
+    "B_csm": {
+      "top1": 0.6053333333333333,
+      "top3": 0.7626666666666667,
+      "top5": 0.7946666666666666,
+      "top10": 0.8106666666666666,
+      "mrr": 0.6870030418103813,
+      "ndcg5": 0.7111646175586396,
+      "mean_reciprocal_rank": 0.6870030418103813,
+      "median_rank": 1.0,
+      "mean_rank": 29.018666666666668,
+      "unretrievable": 0
+    },
+    "C_chemistry_rerank": {
+      "top1": 0.6053333333333333,
+      "top3": 0.7626666666666667,
+      "top5": 0.7946666666666666,
+      "top10": 0.8106666666666666,
+      "mrr": 0.6870030418103813,
+      "ndcg5": 0.7111646175586396,
+      "mean_reciprocal_rank": 0.6870030418103813,
+      "median_rank": 1.0,
+      "mean_rank": 29.018666666666668,
+      "unretrievable": 0
+    },
+    "D_probabilistic": {
+      "top1": 0.4026666666666667,
+      "top3": 0.56,
+      "top5": 0.6186666666666667,
+      "top10": 0.7146666666666667,
+      "mrr": 0.5135610496093544,
+      "ndcg5": 0.524869259243411,
+      "mean_reciprocal_rank": 0.5135610496093544,
+      "median_rank": 2.0,
+      "mean_rank": 31.450666666666667,
+      "unretrievable": 0
+    },
+    "E_bayesian_fusion": {
+      "top1": 0.616,
+      "top3": 0.7493333333333333,
+      "top5": 0.792,
+      "top10": 0.8106666666666666,
+      "mrr": 0.6910810973658194,
+      "ndcg5": 0.7130285834733269,
+      "mean_reciprocal_rank": 0.6910810973658194,
+      "median_rank": 1.0,
+      "mean_rank": 28.856,
+      "unretrievable": 0
+    }
+  },
+  "split_b": [
+    {
+      "model": "B_csm",
+      "chem_top1": 0.8453333333333334,
+      "chem_top3": 0.9706666666666667,
+      "chem_macro_f1": 0.805302383907059,
+      "chem_balanced_accuracy": 0.839405537257638,
+      "analogue_class_correct": 0.8453333333333334
+    },
+    {
+      "model": "C_chemistry_rerank",
+      "chem_top1": 0.8453333333333334,
+      "chem_top3": 0.9706666666666667,
+      "chem_macro_f1": 0.805302383907059,
+      "chem_balanced_accuracy": 0.839405537257638,
+      "analogue_class_correct": 0.8453333333333334
+    }
+  ],
+  "significance_vs_csm": {
+    "A_raw_spectrum": {
+      "top1": {
+        "delta": 0.029333333333333433,
+        "ci95": [
+          -0.011907443157443118,
+          0.07379353058470467
+        ],
+        "mcnemar_b01": 28,
+        "mcnemar_b10": 17,
+        "p_value": 0.1351564508456704,
+        "significant": false
+      },
+      "top5": {
+        "delta": -0.029333333333333322,
+        "ci95": [
+          -0.05555555555555558,
+          -0.005540166204986097
+        ],
+        "mcnemar_b01": 5,
+        "mcnemar_b10": 16,
+        "p_value": 0.02660369873046875,
+        "significant": false
+      },
+      "mrr": {
+        "delta": 0.004921085808433312,
+        "ci95": [
+          -0.0217955423030361,
+          0.03242946431640269
+        ],
+        "wilcoxon_p": 0.520030704289736,
+        "significant": false
+      }
+    },
+    "C_chemistry_rerank": {
+      "top1": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_b01": 0,
+        "mcnemar_b10": 0,
+        "p_value": 1.0,
+        "significant": false
+      },
+      "top5": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_b01": 0,
+        "mcnemar_b10": 0,
+        "p_value": 1.0,
+        "significant": false
+      },
+      "mrr": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "wilcoxon_p": NaN,
+        "significant": false
+      }
+    },
+    "D_probabilistic": {
+      "top1": {
+        "delta": -0.2026666666666666,
+        "ci95": [
+          -0.2857142857142857,
+          -0.11368646632690925
+        ],
+        "mcnemar_b01": 18,
+        "mcnemar_b10": 94,
+        "p_value": 1.3432499592767575e-13,
+        "significant": false
+      },
+      "top5": {
+        "delta": -0.17599999999999993,
+        "ci95": [
+          -0.24431995295851275,
+          -0.11537500000000009
+        ],
+        "mcnemar_b01": 3,
+        "mcnemar_b10": 69,
+        "p_value": 2.6371947296289014e-17,
+        "significant": false
+      },
+      "mrr": {
+        "delta": -0.17344199220102685,
+        "ci95": [
+          -0.23012442764608712,
+          -0.11737233513168444
+        ],
+        "wilcoxon_p": 3.5200628708514786e-17,
+        "significant": false
+      }
+    },
+    "E_bayesian_fusion": {
+      "top1": {
+        "delta": 0.010666666666666713,
+        "ci95": [
+          -0.02858465608465609,
+          0.04915808530766977
+        ],
+        "mcnemar_b01": 15,
+        "mcnemar_b10": 11,
+        "p_value": 0.557197093963623,
+        "significant": false
+      },
+      "top5": {
+        "delta": -0.002666666666666595,
+        "ci95": [
+          -0.008596606066594192,
+          0.0
+        ],
+        "mcnemar_b01": 0,
+        "mcnemar_b10": 1,
+        "p_value": 1.0,
+        "significant": false
+      },
+      "mrr": {
+        "delta": 0.004078055555438054,
+        "ci95": [
+          -0.01657672390769436,
+          0.02415120998043411
+        ],
+        "wilcoxon_p": 0.600590997235418,
+        "significant": false
+      }
+    }
+  },
+  "calibration": [
+    {
+      "model": "B_csm",
+      "ece": 0.12051566660903701,
+      "brier": 0.22599730858134634,
+      "log_loss": 0.6933755499776819,
+      "sharpness": 0.20624706396732426,
+      "discrimination": 0.69133230146446,
+      "accuracy": 0.6053333333333333
+    },
+    {
+      "model": "C_chemistry_rerank",
+      "ece": 0.12257293038644186,
+      "brier": 0.22626309191431937,
+      "log_loss": 0.6887086377681843,
+      "sharpness": 0.2004503527648284,
+      "discrimination": 0.6907965233956423,
+      "accuracy": 0.6053333333333333
+    }
+  ],
+  "noise_robustness": [
+    {
+      "model": "A_raw_spectrum",
+      "top1": 0.9260190476190475,
+      "top5": 0.9854476190476191,
+      "mrr": 0.952281558539229
+    },
+    {
+      "model": "B_csm",
+      "top1": 0.8279619047619047,
+      "top5": 0.975542857142857,
+      "mrr": 0.8931334022716572
+    },
+    {
+      "model": "C_chemistry_rerank",
+      "top1": 0.8279619047619047,
+      "top5": 0.975542857142857,
+      "mrr": 0.8931334022716572
+    }
+  ],
+  "failure_by_class": [
+    {
+      "true_class": "acylglycerol",
+      "n": 23,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.21739130434782608,
+      "top1_chem": 0.21739130434782608,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "carboxylic_acid_metabolite",
+      "n": 23,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.782608695652174,
+      "top1_chem": 0.782608695652174,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "chromophore_pigment",
+      "n": 10,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.8,
+      "top1_chem": 0.8,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "fatty_acid",
+      "n": 27,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.2222222222222222,
+      "top1_chem": 0.2222222222222222,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "free_amino_acid",
+      "n": 75,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.88,
+      "top1_chem": 0.88,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "mono_oligosaccharide",
+      "n": 43,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.4883720930232558,
+      "top1_chem": 0.4883720930232558,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "nucleic_acid_polymer",
+      "n": 3,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.0,
+      "top1_chem": 0.0,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "peptide_protein",
+      "n": 80,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.4625,
+      "top1_chem": 0.4625,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "phosphate_metabolite",
+      "n": 11,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.9090909090909091,
+      "top1_chem": 0.9090909090909091,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "phospholipid_sphingolipid",
+      "n": 8,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.375,
+      "top1_chem": 0.375,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "polysaccharide",
+      "n": 10,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.7,
+      "top1_chem": 0.7,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "purine",
+      "n": 17,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 1.0,
+      "top1_chem": 1.0,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "pyrimidine",
+      "n": 9,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.8888888888888888,
+      "top1_chem": 0.8888888888888888,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "small_nitrogenous",
+      "n": 7,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.8571428571428571,
+      "top1_chem": 0.8571428571428571,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "sterol_steroid",
+      "n": 13,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.23076923076923078,
+      "top1_chem": 0.23076923076923078,
+      "delta_top1": 0.0
+    },
+    {
+      "true_class": "sulfur_thiol_cofactor",
+      "n": 16,
+      "mean_move": 0.0,
+      "n_helped": 0,
+      "n_hurt": 0,
+      "top1_csm": 0.75,
+      "top1_chem": 0.75,
+      "delta_top1": 0.0
+    }
+  ],
+  "chemistry_axis_importance": [
+    {
+      "axis_index": 0,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "acylglycerol"
+    },
+    {
+      "axis_index": 1,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "carboxylic_acid_metabolite"
+    },
+    {
+      "axis_index": 2,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "chromophore_pigment"
+    },
+    {
+      "axis_index": 3,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "fatty_acid"
+    },
+    {
+      "axis_index": 4,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "free_amino_acid"
+    },
+    {
+      "axis_index": 5,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "mono_oligosaccharide"
+    },
+    {
+      "axis_index": 6,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "nucleic_acid_polymer"
+    },
+    {
+      "axis_index": 7,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "peptide_protein"
+    },
+    {
+      "axis_index": 8,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "phosphate_metabolite"
+    },
+    {
+      "axis_index": 9,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "phospholipid_sphingolipid"
+    },
+    {
+      "axis_index": 10,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "polysaccharide"
+    },
+    {
+      "axis_index": 11,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "purine"
+    },
+    {
+      "axis_index": 12,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "pyrimidine"
+    },
+    {
+      "axis_index": 13,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "small_nitrogenous"
+    },
+    {
+      "axis_index": 14,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "sterol_steroid"
+    },
+    {
+      "axis_index": 15,
+      "delta_mrr": 0.0,
+      "sd": 0.0,
+      "axis": "sulfur_thiol_cofactor"
+    }
+  ],
+  "weights_per_fold": {
+    "0": {
+      "alpha": 0.4,
+      "beta": 0.0,
+      "gamma": 0.0,
+      "delta": 0.0
+    },
+    "1": {
+      "alpha": 0.4,
+      "beta": 0.0,
+      "gamma": 0.0,
+      "delta": 0.0
+    },
+    "2": {
+      "alpha": 0.4,
+      "beta": 0.0,
+      "gamma": 0.0,
+      "delta": 0.0
+    },
+    "3": {
+      "alpha": 0.4,
+      "beta": 0.0,
+      "gamma": 0.0,
+      "delta": 0.0
+    },
+    "4": {
+      "alpha": 0.4,
+      "beta": 0.0,
+      "gamma": 0.0,
+      "delta": 0.0
+    }
+  },
+  "decision": {
+    "outcome": "A",
+    "action": "keep direct CSM retrieval",
+    "delta_top1": 0.0,
+    "delta_top1_ci": [
+      0.0,
+      0.0
+    ],
+    "delta_top1_p": 1.0,
+    "delta_top5": 0.0,
+    "delta_mrr": 0.0,
+    "any_significant": false
+  },
+  "explainability": {
+    "decompositions_checked": 120,
+    "non_reconciling": 0
+  },
+  "gates": {
+    "n": 18,
+    "failed": 0
+  },
+  "_provenance": {
+    "phase": "08",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "code_fingerprint": "857b7620f1fed81da3035c9d8cd204a7",
+    "created_utc": "2026-08-07T04:48:05.684102+00:00",
+    "bsv2_used": false,
+    "scope": "Raman only"
+  }
+}

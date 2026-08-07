@@ -1,0 +1,52 @@
+{
+  "reproduced": true,
+  "csm": {
+    "top1": 0.6053333333333333,
+    "top3": 0.7626666666666667,
+    "top5": 0.7946666666666666,
+    "top10": 0.8106666666666666,
+    "mrr": 0.6870030418103813,
+    "ndcg5": 0.7111646175586396,
+    "mean_reciprocal_rank": 0.6870030418103813,
+    "median_rank": 1.0,
+    "mean_rank": 29.018666666666668,
+    "unretrievable": 0
+  },
+  "raw": {
+    "top1": 0.6346666666666667,
+    "top3": 0.7333333333333333,
+    "top5": 0.7653333333333333,
+    "top10": 0.792,
+    "mrr": 0.6919241276188146,
+    "ndcg5": 0.7055768374090706,
+    "mean_reciprocal_rank": 0.6919241276188146,
+    "median_rank": 1.0,
+    "mean_rank": 29.445333333333334,
+    "unretrievable": 0
+  },
+  "phase05_reference": {
+    "molecule_top1": 0.6053333333333333,
+    "molecule_top3": 0.7626666666666667,
+    "molecule_top5": 0.7946666666666666,
+    "class_top1": 0.9413333333333334,
+    "ece": 0.1295548700039556,
+    "calibration": "dirichlet",
+    "discrimination": 0.8912612668064795,
+    "sharpness": 0.2748119924537246,
+    "mean_confidence": 0.6053403561567131
+  },
+  "_provenance": {
+    "phase": "08",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "code_fingerprint": "857b7620f1fed81da3035c9d8cd204a7",
+    "created_utc": "2026-08-07T04:48:05.684102+00:00",
+    "bsv2_used": false,
+    "scope": "Raman only"
+  }
+}

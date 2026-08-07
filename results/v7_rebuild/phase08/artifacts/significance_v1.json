@@ -1,0 +1,148 @@
+{
+  "A_raw_spectrum": {
+    "top1": {
+      "delta": 0.029333333333333433,
+      "ci95": [
+        -0.011907443157443118,
+        0.07379353058470467
+      ],
+      "mcnemar_b01": 28,
+      "mcnemar_b10": 17,
+      "p_value": 0.1351564508456704,
+      "significant": false
+    },
+    "top5": {
+      "delta": -0.029333333333333322,
+      "ci95": [
+        -0.05555555555555558,
+        -0.005540166204986097
+      ],
+      "mcnemar_b01": 5,
+      "mcnemar_b10": 16,
+      "p_value": 0.02660369873046875,
+      "significant": false
+    },
+    "mrr": {
+      "delta": 0.004921085808433312,
+      "ci95": [
+        -0.0217955423030361,
+        0.03242946431640269
+      ],
+      "wilcoxon_p": 0.520030704289736,
+      "significant": false
+    }
+  },
+  "C_chemistry_rerank": {
+    "top1": {
+      "delta": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mcnemar_b01": 0,
+      "mcnemar_b10": 0,
+      "p_value": 1.0,
+      "significant": false
+    },
+    "top5": {
+      "delta": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mcnemar_b01": 0,
+      "mcnemar_b10": 0,
+      "p_value": 1.0,
+      "significant": false
+    },
+    "mrr": {
+      "delta": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "wilcoxon_p": NaN,
+      "significant": false
+    }
+  },
+  "D_probabilistic": {
+    "top1": {
+      "delta": -0.2026666666666666,
+      "ci95": [
+        -0.2857142857142857,
+        -0.11368646632690925
+      ],
+      "mcnemar_b01": 18,
+      "mcnemar_b10": 94,
+      "p_value": 1.3432499592767575e-13,
+      "significant": false
+    },
+    "top5": {
+      "delta": -0.17599999999999993,
+      "ci95": [
+        -0.24431995295851275,
+        -0.11537500000000009
+      ],
+      "mcnemar_b01": 3,
+      "mcnemar_b10": 69,
+      "p_value": 2.6371947296289014e-17,
+      "significant": false
+    },
+    "mrr": {
+      "delta": -0.17344199220102685,
+      "ci95": [
+        -0.23012442764608712,
+        -0.11737233513168444
+      ],
+      "wilcoxon_p": 3.5200628708514786e-17,
+      "significant": false
+    }
+  },
+  "E_bayesian_fusion": {
+    "top1": {
+      "delta": 0.010666666666666713,
+      "ci95": [
+        -0.02858465608465609,
+        0.04915808530766977
+      ],
+      "mcnemar_b01": 15,
+      "mcnemar_b10": 11,
+      "p_value": 0.557197093963623,
+      "significant": false
+    },
+    "top5": {
+      "delta": -0.002666666666666595,
+      "ci95": [
+        -0.008596606066594192,
+        0.0
+      ],
+      "mcnemar_b01": 0,
+      "mcnemar_b10": 1,
+      "p_value": 1.0,
+      "significant": false
+    },
+    "mrr": {
+      "delta": 0.004078055555438054,
+      "ci95": [
+        -0.01657672390769436,
+        0.02415120998043411
+      ],
+      "wilcoxon_p": 0.600590997235418,
+      "significant": false
+    }
+  },
+  "_provenance": {
+    "phase": "08",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "code_fingerprint": "857b7620f1fed81da3035c9d8cd204a7",
+    "created_utc": "2026-08-07T04:48:05.684102+00:00",
+    "bsv2_used": false,
+    "scope": "Raman only"
+  }
+}

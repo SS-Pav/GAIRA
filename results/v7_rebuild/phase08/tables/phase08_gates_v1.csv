@@ -1,0 +1,19 @@
+gate,status
+G1 frozen fingerprints verified,PASS
+G2 baselines reproduced exactly before new work,PASS
+G3 BSV2 absent from the inference path,PASS
+G4 Raman-only scope,PASS
+G5 all five models benchmarked,PASS
+G6 Model C weights tuned in inner folds only,PASS
+G7 no hard filtering — chemistry is a soft prior,PASS
+G7b every model scored against an identical candidate bank,PASS
+"G7c confidence derived from the score margin, not from the rank",PASS
+G8 every score decomposition reconciles,PASS
+G9 Split B reports no molecule top-1,PASS
+"G10 improvement tested for significance, not asserted",PASS
+G11 calibration and risk–coverage reported,PASS
+G12 noise robustness across all three primary models,PASS
+G13 failure analysis identifies where chemistry hurts,PASS
+G14 chemistry-axis importance computed exactly,PASS
+G15 deterministic on rerun,PASS
+G16 decision follows the pre-declared A/B/C rule,PASS

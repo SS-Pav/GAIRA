@@ -1,0 +1,145 @@
+{
+  "phase": "08",
+  "name": "Hierarchical molecular retrieval",
+  "status": "COMPLETE",
+  "started": "2026-08-07T04:48:05.684102+00:00",
+  "finished": "2026-08-07T04:52:30.839026+00:00",
+  "seed": 0,
+  "decision_outcome": "A",
+  "action": "keep direct CSM retrieval",
+  "bsv2_used": false,
+  "input_fingerprints": {
+    "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+    "lsm": "208482d6f7178b5b8f16cace91be55b0",
+    "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+    "atlas": "09ed804a40836f4a05a91ba10900cded"
+  },
+  "scope": "Raman only",
+  "outputs": [
+    {
+      "artifact_id": "baseline_reproduction_v1.json",
+      "path": "results/v7_rebuild/phase08/artifacts/baseline_reproduction_v1.json",
+      "sha256": "f9d363bf34a2def87cf5662c811ec0166cb8d65fe696a10500b71659e92b03bf"
+    },
+    {
+      "artifact_id": "model_c_weights_v1.json",
+      "path": "results/v7_rebuild/phase08/artifacts/model_c_weights_v1.json",
+      "sha256": "c6e200275440406715f377894426eb935f422ce9dea3b15553a26a44826205a9"
+    },
+    {
+      "artifact_id": "split_a_metrics_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/split_a_metrics_v1.csv",
+      "sha256": "df5f05567ff5b43b8dd52d3729f637ef9765c7e4ee50e7dc57aaa65a6a70998c",
+      "rows": 5
+    },
+    {
+      "artifact_id": "rank_distribution_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/rank_distribution_v1.csv",
+      "sha256": "67d1b570941b86bb71644ca81ad29a94ac6fcca3fbefdb3c21f20ca7ae5d8139",
+      "rows": 45
+    },
+    {
+      "artifact_id": "significance_v1.json",
+      "path": "results/v7_rebuild/phase08/artifacts/significance_v1.json",
+      "sha256": "c674632a81e76fb6e352ee97fb222280e560034db727f57ae46033d47c41417f"
+    },
+    {
+      "artifact_id": "split_b_by_fold_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/split_b_by_fold_v1.csv",
+      "sha256": "f09174b7f5229315c310268ff053ac98e1412f98fe0083d8d8375776128ecfac",
+      "rows": 10
+    },
+    {
+      "artifact_id": "split_b_metrics_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/split_b_metrics_v1.csv",
+      "sha256": "e5093ce25229e4f46be29ee1a1cdbb53ccbdcf8ea64795b8a969df2dce46d903",
+      "rows": 2
+    },
+    {
+      "artifact_id": "reliability_B_csm_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/reliability_B_csm_v1.csv",
+      "sha256": "8b239fc4638d02921bf447811f0f0392d165514353bcb8d1a3d0471479100fe5",
+      "rows": 10
+    },
+    {
+      "artifact_id": "reliability_C_chemistry_rerank_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/reliability_C_chemistry_rerank_v1.csv",
+      "sha256": "695ed0e9db823dee1d1547539fdaf1e5c5f61a0f06ee66b7abacdda8424204c3",
+      "rows": 10
+    },
+    {
+      "artifact_id": "calibration_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/calibration_v1.csv",
+      "sha256": "71f83e6275454a75e8b51a39f34c9bf066b4dc4a41e4558004fdcbf4612c3a33",
+      "rows": 2
+    },
+    {
+      "artifact_id": "risk_coverage_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/risk_coverage_v1.csv",
+      "sha256": "27bc669dfa841f6944ba11e1e96f1837c980fde40d73063dd42da228014e4114",
+      "rows": 60
+    },
+    {
+      "artifact_id": "noise_robustness_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/noise_robustness_v1.csv",
+      "sha256": "ed58d74938c1ef87bf4bc23b31f12d2bbcd8f11c12e826900535777bbabe6158",
+      "rows": 105
+    },
+    {
+      "artifact_id": "noise_robustness_summary_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/noise_robustness_summary_v1.csv",
+      "sha256": "c7e6743179cad9210d4fbc163e84ba4975cc1f571d742127f9d5ef3303fdafeb",
+      "rows": 3
+    },
+    {
+      "artifact_id": "rank_changes_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/rank_changes_v1.csv",
+      "sha256": "fabdb5668149579b336a2f2924fa25c004fdd3d65dcf4399750bf65bbea1cb75",
+      "rows": 375
+    },
+    {
+      "artifact_id": "failure_by_class_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/failure_by_class_v1.csv",
+      "sha256": "bf5ddc45675a522711e11c035c461a4d7ca0b18e42c04d0659d65115a0b11e3b",
+      "rows": 16
+    },
+    {
+      "artifact_id": "chemistry_axis_importance_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/chemistry_axis_importance_v1.csv",
+      "sha256": "769af2c8165b7975b857b0c9e1245202c478bc4086ea0d918dba8be641307367",
+      "rows": 16
+    },
+    {
+      "artifact_id": "evidence_decomposition_v1.json",
+      "path": "results/v7_rebuild/phase08/artifacts/evidence_decomposition_v1.json",
+      "sha256": "f4004db3c762e8c0a8a4a49bd40a2c95fce027101dc2567b27886bdb5724e201"
+    },
+    {
+      "artifact_id": "rank_evolution_examples_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/rank_evolution_examples_v1.csv",
+      "sha256": "bfbee2265e39e54b3a04492dd9656296da53024013bbd866a617e8d16345f0d6",
+      "rows": 60
+    },
+    {
+      "artifact_id": "phase08_gates_v1.csv",
+      "path": "results/v7_rebuild/phase08/tables/phase08_gates_v1.csv",
+      "sha256": "981c09b7851610bfee45efa714af5fdafaa519a1ef26499dcd4b97373b52accd",
+      "rows": 18
+    },
+    {
+      "artifact_id": "retrieval_ranks_v1.npz",
+      "path": "results/v7_rebuild/phase08/artifacts/retrieval_ranks_v1.npz",
+      "sha256": "c3a0d4e218fe30a95503b89e62ef36214fe87da9d2fa00c133af0ab8784d67d8"
+    },
+    {
+      "artifact_id": "phase08_summary_v1.json",
+      "path": "results/v7_rebuild/phase08/artifacts/phase08_summary_v1.json",
+      "sha256": "803f122c7e74412e0286b4be873b082e054831fdc18e82cf1a59dbef4aec550c"
+    },
+    {
+      "artifact_id": "retrieval_manifest_v1.json",
+      "path": "results/v7_rebuild/phase08/manifests/retrieval_manifest_v1.json",
+      "sha256": "486661a63f8687ac0a00c45312b08eccbf3fe3d1fb21e8a439cc08917f4e0864"
+    }
+  ]
+}
