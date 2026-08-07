@@ -1,0 +1,49 @@
+family,kind,spectrum_index,molecule,rank,confidence,predicted_class,csm_ev
+acylglycerol,best,310,triolein,1,0.962114195466036,acylglycerol,0.967674837210567
+acylglycerol,median,297,triarachidin,154,0.9926232723984975,acylglycerol,0.9926232724007069
+acylglycerol,worst,303,trierucin,154,0.9244824237179404,acylglycerol,0.9244824237212682
+carboxylic_acid_metabolite,best,195,lactate,1,0.7892658053227242,carboxylic_acid_metabolite,0.7895922439289556
+carboxylic_acid_metabolite,median,101,citrate,1,0.5960634112724694,carboxylic_acid_metabolite,0.5974983315536793
+carboxylic_acid_metabolite,worst,138,fumarate,154,0.5338291369400254,carboxylic_acid_metabolite,0.5338291369420742
+chromophore_pigment,best,214,melanin,1,0.8064252059963903,chromophore_pigment,0.808266034452123
+chromophore_pigment,median,269,riboflavin,1,0.644085063816807,chromophore_pigment,0.648467138251241
+chromophore_pigment,worst,85,carotene,154,0.9630220548880853,chromophore_pigment,0.9630220548900582
+fatty_acid,best,222,myristic acid,1,0.9676559344092308,fatty_acid,0.970112072056623
+fatty_acid,median,280,stearate,18,0.7175492439802856,acylglycerol,0.9447369317928647
+fatty_acid,worst,198,lauric acid,154,0.9279875788628666,fatty_acid,0.9279875788656115
+free_amino_acid,best,114,cysteine,1,0.9496939765112035,free_amino_acid,0.9497061315320353
+free_amino_acid,median,161,glycine,1,0.7175418229846118,free_amino_acid,0.719059851488403
+free_amino_acid,worst,78,asparagine,154,0.7666428153997785,free_amino_acid,0.7666428154015932
+mono_oligosaccharide,best,24,(+)-xylose,1,0.9117084988278588,mono_oligosaccharide,0.9125334810708012
+mono_oligosaccharide,median,10,(+)-glucose,2,0.925520042962012,mono_oligosaccharide,0.9318109854784555
+mono_oligosaccharide,worst,1,(+)-fucose,154,0.6482979067121223,mono_oligosaccharide,0.6482979067143148
+nucleic_acid_polymer,best,38,a-dna,154,0.9517302081609988,nucleic_acid_polymer,0.9517302081630307
+nucleic_acid_polymer,median,81,b-dna,154,0.9176261240572761,nucleic_acid_polymer,0.9176261240594787
+nucleic_acid_polymer,worst,288,t-rna,154,0.9133198370392613,nucleic_acid_polymer,0.9133198370412272
+peptide_protein,best,364,xylanase,1,0.9723688548229472,peptide_protein,0.9904060806555895
+peptide_protein,median,328,trypsinogen,2,0.9531022430570478,peptide_protein,0.9781359397846866
+peptide_protein,worst,123,elastin,154,0.9607072487199857,peptide_protein,0.9607072487229495
+phosphate_metabolite,best,137,fructose-6-phosphate,1,0.7376479281718111,phosphate_metabolite,0.738829302195221
+phosphate_metabolite,median,134,fructose-6-phosphate,1,0.610419945003731,phosphate_metabolite,0.6143868096527618
+phosphate_metabolite,worst,256,phosphoenolpyruvate,6,0.3598074923806053,pyrimidine,0.4069374661049998
+phospholipid_sphingolipid,best,253,phosphatidylinositol,1,0.9810891776744243,phospholipid_sphingolipid,0.9817873051086159
+phospholipid_sphingolipid,median,87,ceramide,2,0.8908690116963212,phospholipid_sphingolipid,0.8934692650901737
+phospholipid_sphingolipid,worst,372,α-phosphatidylethanolamine,154,0.9629420167859155,phospholipid_sphingolipid,0.9629420167894152
+polysaccharide,best,66,amylose,1,0.9797139767744751,polysaccharide,0.9821003967445111
+polysaccharide,median,165,glycogen,1,0.8636917622003333,polysaccharide,0.949041277077208
+polysaccharide,worst,86,cellulose,154,0.8829511727123711,polysaccharide,0.8829511727142659
+purine,best,186,hypoxanthine,1,0.8815778605768311,purine,0.8879596559853984
+purine,median,361,xanthine,1,0.7619314652738789,purine,0.7619342019698879
+purine,worst,47,adenine,1,0.49429493786647866,purine,0.5077946599945367
+pyrimidine,best,344,uracil,1,0.7401968087967931,pyrimidine,0.7402092606726851
+pyrimidine,median,294,thymine,1,0.28547604703692964,pyrimidine,0.2860931399978721
+pyrimidine,worst,117,cytosine,154,0.7608674199777091,pyrimidine,0.7608674199795272
+small_nitrogenous,best,110,creatinine,1,0.91065620760364,small_nitrogenous,0.9107379045830067
+small_nitrogenous,median,352,urea,1,0.3548974337704257,small_nitrogenous,0.35712760818672495
+small_nitrogenous,worst,354,urea,2,0.6871461758863024,small_nitrogenous,0.7035802990574492
+sterol_steroid,best,93,cholesterol,1,0.889364232744192,sterol_steroid,0.8949940980196553
+sterol_steroid,median,96,cholesteryl palmitate,154,0.956704308620103,sterol_steroid,0.9567043086221829
+sterol_steroid,worst,130,ethinylestradiol,154,0.821404557173025,sterol_steroid,0.821404557175019
+sulfur_thiol_cofactor,best,125,ergothioneine,1,0.9982106047928166,sulfur_thiol_cofactor,0.9982151942968914
+sulfur_thiol_cofactor,median,102,coenzyme a,1,0.7357301196443564,sulfur_thiol_cofactor,0.740025881745187
+sulfur_thiol_cofactor,worst,148,glutathione,7,0.41898870574296104,sulfur_thiol_cofactor,0.5960829972698227

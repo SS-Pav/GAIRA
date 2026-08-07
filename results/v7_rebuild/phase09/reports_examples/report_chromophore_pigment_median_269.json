@@ -1,0 +1,1701 @@
+{
+  "preprocessing": {
+    "n_input_points": 676,
+    "input_range": [
+      450.0,
+      1800.0
+    ],
+    "resampled_to": "supplied on the canonical grid",
+    "baseline_method": "(skipped)",
+    "smoothing": "(skipped)",
+    "normalisation": "L2 (re-applied)",
+    "n_peaks": 27,
+    "signal_quality": 1.0,
+    "snr_estimate": 198.68667255549943,
+    "warnings": [
+      "preprocessing skipped: caller asserts the spectrum is canonical"
+    ]
+  },
+  "lsm": {
+    "activation": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.05944474584174992,
+      0.6520292675752297,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.038790544260233525,
+      0.005386129280233376,
+      0.026777597459845023,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.03588628922652362,
+      0.0,
+      0.0,
+      0.0,
+      0.041597031151122295,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.013400362869749376,
+      0.0,
+      0.0,
+      0.007534064410801351,
+      0.02256001745828324,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "reconstruction_error": 0.5929020675865513,
+    "explained_variance": 0.648467138251241,
+    "n_active": 10,
+    "top": [
+      {
+        "lsm_id": "chromophore_pigment.m01",
+        "weight": 0.6520292675752297,
+        "share": 0.7217455184310603
+      },
+      {
+        "lsm_id": "chromophore_pigment.m00",
+        "weight": 0.05944474584174992,
+        "share": 0.065800694906086
+      },
+      {
+        "lsm_id": "nucleic_acid_polymer.m00",
+        "weight": 0.041597031151122295,
+        "share": 0.046044667480966715
+      },
+      {
+        "lsm_id": "free_amino_acid.m00",
+        "weight": 0.038790544260233525,
+        "share": 0.04293810549554052
+      },
+      {
+        "lsm_id": "mono_oligosaccharide.m02",
+        "weight": 0.03588628922652362,
+        "share": 0.03972332180529901
+      },
+      {
+        "lsm_id": "free_amino_acid.m02",
+        "weight": 0.026777597459845023,
+        "share": 0.0296407108117493
+      },
+      {
+        "lsm_id": "pyrimidine.m00",
+        "weight": 0.02256001745828324,
+        "share": 0.024972178866746585
+      },
+      {
+        "lsm_id": "polysaccharide.m00",
+        "weight": 0.013400362869749376,
+        "share": 0.014833156006261176
+      }
+    ]
+  },
+  "csm": {
+    "activation": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.07350670789532847,
+      0.6717603995510011,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.06764648168619634,
+      0.007217021478021171,
+      0.0378005452800042,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.051955312462324585,
+      0.0,
+      0.0,
+      0.0,
+      0.05383548710469169,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.017790472230249644,
+      0.0,
+      0.0,
+      0.009480364762186418,
+      0.025476462257774165,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "explained_variance": 0.648467138251241,
+    "residual_fraction": 0.351532861748759,
+    "sparsity": 0.9193901532524404,
+    "entropy": 0.3381376084448637,
+    "n_active": 10,
+    "top": [
+      {
+        "csm_id": "csm06",
+        "weight": 0.6717603995510011,
+        "share": 0.6608762600925523,
+        "dominant_bands": [
+          742.0,
+          788.0,
+          1060.0,
+          1180.0,
+          1224.0,
+          1346.0,
+          1402.0,
+          1464.0,
+          1498.0,
+          1622.0
+        ],
+        "band_assignment": "742: unassigned | 788: unassigned | 1060: C\u2013N / C\u2013O stretch | 1180: C\u2013C / C=C conjugated stretch | 1224: amide III / C\u2013O\u2013C asymmetric | 1346: CH deformation / tryptophan | 1402: COO- symmetric stretch | 1464: CH2 / CH3 scissoring | 1498: unassigned | 1622: unassigned",
+        "lsms": [
+          "chromophore_pigment.m01"
+        ]
+      },
+      {
+        "csm_id": "csm05",
+        "weight": 0.07350670789532847,
+        "share": 0.07231572185268742,
+        "dominant_bands": [
+          1006.0,
+          1156.0,
+          1270.0,
+          1518.0
+        ],
+        "band_assignment": "1006: phenylalanine ring breathing | 1156: C\u2013C conjugated [chromophore_pigment] | 1270: amide III / =C\u2013H in-plane bend | 1518: C=C conjugated [chromophore_pigment]",
+        "lsms": [
+          "chromophore_pigment.m00"
+        ]
+      },
+      {
+        "csm_id": "csm11",
+        "weight": 0.06764648168619634,
+        "share": 0.06655044544911229,
+        "dominant_bands": [
+          542.0,
+          756.0,
+          870.0,
+          946.0,
+          1078.0,
+          1122.0,
+          1338.0,
+          1356.0,
+          1424.0,
+          1622.0
+        ],
+        "band_assignment": "542: S\u2013S / skeletal deformation | 756: ring breathing (indole / pyrrole) | 870: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 946: C\u2013C backbone stretch | 1078: C\u2013C skeletal (trans) / PO2- symmetric | 1122: C\u2013C skeletal (gauche) / C\u2013N stretch | 1338: CH deformation / tryptophan | 1356: CH deformation / tryptophan | 1424: unassigned | 1622: unassigned",
+        "lsms": [
+          "free_amino_acid.m00"
+        ]
+      },
+      {
+        "csm_id": "csm24",
+        "weight": 0.05383548710469169,
+        "share": 0.05296322230633109,
+        "dominant_bands": [
+          668.0,
+          728.0,
+          784.0,
+          1096.0,
+          1252.0,
+          1336.0,
+          1374.0,
+          1486.0,
+          1574.0,
+          1670.0
+        ],
+        "band_assignment": "668: unassigned | 728: ring breathing | 784: backbone O\u2013P\u2013O [nucleic_acid_polymer] | 1096: PO2- symmetric [nucleic_acid_polymer] | 1252: amide III / =C\u2013H in-plane bend | 1336: CH deformation / tryptophan | 1374: unassigned | 1486: unassigned | 1574: amide II / COO- asymmetric | 1670: amide I / C=C stretch",
+        "lsms": [
+          "nucleic_acid_polymer.m00"
+        ]
+      },
+      {
+        "csm_id": "csm20",
+        "weight": 0.051955312462324585,
+        "share": 0.051113511030109776,
+        "dominant_bands": [
+          542.0,
+          648.0,
+          840.0,
+          914.0,
+          1074.0,
+          1120.0,
+          1150.0,
+          1274.0,
+          1344.0,
+          1460.0
+        ],
+        "band_assignment": "542: S\u2013S / skeletal deformation | 648: C\u2013S stretch / phenyl ring | 840: anomeric C\u2013H [mono_oligosaccharide] | 914: unassigned | 1074: C\u2013C skeletal (trans) / PO2- symmetric | 1120: C\u2013O\u2013C glycosidic [mono_oligosaccharide] | 1150: C\u2013C / C=C conjugated stretch | 1274: amide III / =C\u2013H in-plane bend | 1344: CH deformation / tryptophan | 1460: CH2 / CH3 scissoring",
+        "lsms": [
+          "mono_oligosaccharide.m02"
+        ]
+      },
+      {
+        "csm_id": "csm13",
+        "weight": 0.0378005452800042,
+        "share": 0.03718808523218362,
+        "dominant_bands": [
+          452.0,
+          538.0,
+          640.0,
+          692.0,
+          720.0,
+          772.0,
+          870.0,
+          1200.0,
+          1346.0,
+          1426.0
+        ],
+        "band_assignment": "452: unassigned | 538: S\u2013S / skeletal deformation | 640: C\u2013S stretch / phenyl ring | 692: unassigned | 720: ring breathing | 772: unassigned | 870: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1200: amide III / C\u2013O\u2013C asymmetric | 1346: CH deformation / tryptophan | 1426: unassigned",
+        "lsms": [
+          "free_amino_acid.m02"
+        ]
+      },
+      {
+        "csm_id": "csm42",
+        "weight": 0.025476462257774165,
+        "share": 0.025063682093437508,
+        "dominant_bands": [
+          552.0,
+          578.0,
+          600.0,
+          792.0,
+          986.0,
+          1102.0,
+          1236.0,
+          1276.0,
+          1368.0,
+          1672.0
+        ],
+        "band_assignment": "552: S\u2013S / skeletal deformation | 578: unassigned | 600: unassigned | 792: pyrimidine ring breathing [pyrimidine] | 986: unassigned | 1102: unassigned | 1236: amide III / C\u2013O\u2013C asymmetric | 1276: amide III / =C\u2013H in-plane bend | 1368: unassigned | 1672: C=O / C=N [pyrimidine]",
+        "lsms": [
+          "pyrimidine.m00"
+        ]
+      },
+      {
+        "csm_id": "csm38",
+        "weight": 0.017790472230249644,
+        "share": 0.01750222365097179,
+        "dominant_bands": [
+          480.0,
+          580.0,
+          862.0,
+          940.0,
+          1046.0,
+          1082.0,
+          1130.0,
+          1252.0,
+          1338.0,
+          1462.0
+        ],
+        "band_assignment": "480: S\u2013S / skeletal deformation | 580: unassigned | 862: unassigned | 940: C\u2013O\u2013C ring [polysaccharide] | 1046: C\u2013N / C\u2013O stretch | 1082: C\u2013O\u2013C glycosidic [polysaccharide] | 1130: C\u2013O\u2013C glycosidic [polysaccharide] | 1252: amide III / =C\u2013H in-plane bend | 1338: CH deformation / tryptophan | 1462: CH2 / CH3 scissoring",
+        "lsms": [
+          "polysaccharide.m00"
+        ]
+      }
+    ]
+  },
+  "retrieval": {
+    "top": [
+      {
+        "rank": 1,
+        "molecule": "riboflavin",
+        "chemistry_class": "chromophore_pigment",
+        "similarity": 0.9932424109473744,
+        "supporting_csms": [
+          {
+            "csm_id": "csm06",
+            "contribution": 0.9592653449515682,
+            "share_of_similarity": 0.9657917688347963,
+            "lsms": [
+              "chromophore_pigment.m01"
+            ],
+            "diagnostic_bands": [
+              742.0,
+              788.0,
+              1060.0,
+              1180.0,
+              1224.0,
+              1346.0,
+              1402.0,
+              1464.0,
+              1498.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 0.011848286200554866,
+            "share_of_similarity": 0.011928896782852642,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          },
+          {
+            "csm_id": "csm20",
+            "contribution": 0.008876661736929917,
+            "share_of_similarity": 0.008937054679787832,
+            "lsms": [
+              "mono_oligosaccharide.m02"
+            ],
+            "diagnostic_bands": [
+              542.0,
+              648.0,
+              840.0,
+              914.0,
+              1074.0,
+              1120.0,
+              1150.0,
+              1274.0,
+              1344.0,
+              1460.0
+            ]
+          },
+          {
+            "csm_id": "csm11",
+            "contribution": 0.0071902585270926115,
+            "share_of_similarity": 0.007239177916524084,
+            "lsms": [
+              "free_amino_acid.m00"
+            ],
+            "diagnostic_bands": [
+              542.0,
+              756.0,
+              870.0,
+              946.0,
+              1078.0,
+              1122.0,
+              1338.0,
+              1356.0,
+              1424.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm13",
+            "contribution": 0.002629481791966745,
+            "share_of_similarity": 0.002647371641587521,
+            "lsms": [
+              "free_amino_acid.m02"
+            ],
+            "diagnostic_bands": [
+              452.0,
+              538.0,
+              640.0,
+              692.0,
+              720.0,
+              772.0,
+              870.0,
+              1200.0,
+              1346.0,
+              1426.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.9932424109473744,
+        "reconciles": true
+      },
+      {
+        "rank": 2,
+        "molecule": "melanin",
+        "chemistry_class": "chromophore_pigment",
+        "similarity": 0.5546895309932769,
+        "supporting_csms": [
+          {
+            "csm_id": "csm06",
+            "contribution": 0.5534615248783356,
+            "share_of_similarity": 0.997786137925228,
+            "lsms": [
+              "chromophore_pigment.m01"
+            ],
+            "diagnostic_bands": [
+              742.0,
+              788.0,
+              1060.0,
+              1180.0,
+              1224.0,
+              1346.0,
+              1402.0,
+              1464.0,
+              1498.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 0.0012280061149413004,
+            "share_of_similarity": 0.002213862072969195,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.5546895309932769,
+        "reconciles": true
+      },
+      {
+        "rank": 3,
+        "molecule": "glycogen",
+        "chemistry_class": "polysaccharide",
+        "similarity": 0.28713665768828894,
+        "supporting_csms": [
+          {
+            "csm_id": "csm06",
+            "contribution": 0.25800286265493916,
+            "share_of_similarity": 0.8985368316647486,
+            "lsms": [
+              "chromophore_pigment.m01"
+            ],
+            "diagnostic_bands": [
+              742.0,
+              788.0,
+              1060.0,
+              1180.0,
+              1224.0,
+              1346.0,
+              1402.0,
+              1464.0,
+              1498.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm38",
+            "contribution": 0.017525753137327557,
+            "share_of_similarity": 0.06103627895638531,
+            "lsms": [
+              "polysaccharide.m00"
+            ],
+            "diagnostic_bands": [
+              480.0,
+              580.0,
+              862.0,
+              940.0,
+              1046.0,
+              1082.0,
+              1130.0,
+              1252.0,
+              1338.0,
+              1462.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 0.004313352346454566,
+            "share_of_similarity": 0.015021949413098108,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          },
+          {
+            "csm_id": "csm20",
+            "contribution": 0.0029543762740921378,
+            "share_of_similarity": 0.010289094739303797,
+            "lsms": [
+              "mono_oligosaccharide.m02"
+            ],
+            "diagnostic_bands": [
+              542.0,
+              648.0,
+              840.0,
+              914.0,
+              1074.0,
+              1120.0,
+              1150.0,
+              1274.0,
+              1344.0,
+              1460.0
+            ]
+          },
+          {
+            "csm_id": "csm11",
+            "contribution": 0.002634375274512221,
+            "share_of_similarity": 0.009174639336238577,
+            "lsms": [
+              "free_amino_acid.m00"
+            ],
+            "diagnostic_bands": [
+              542.0,
+              756.0,
+              870.0,
+              946.0,
+              1078.0,
+              1122.0,
+              1338.0,
+              1356.0,
+              1424.0,
+              1622.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.28713665768828894,
+        "reconciles": true
+      },
+      {
+        "rank": 4,
+        "molecule": "leucine",
+        "chemistry_class": "free_amino_acid",
+        "similarity": 0.28018054009659826,
+        "supporting_csms": [
+          {
+            "csm_id": "csm06",
+            "contribution": 0.20403840130950765,
+            "share_of_similarity": 0.7282390177363239,
+            "lsms": [
+              "chromophore_pigment.m01"
+            ],
+            "diagnostic_bands": [
+              742.0,
+              788.0,
+              1060.0,
+              1180.0,
+              1224.0,
+              1346.0,
+              1402.0,
+              1464.0,
+              1498.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm11",
+            "contribution": 0.0481119578777103,
+            "share_of_similarity": 0.17171769981223875,
+            "lsms": [
+              "free_amino_acid.m00"
+            ],
+            "diagnostic_bands": [
+              542.0,
+              756.0,
+              870.0,
+              946.0,
+              1078.0,
+              1122.0,
+              1338.0,
+              1356.0,
+              1424.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm20",
+            "contribution": 0.021473240918107855,
+            "share_of_similarity": 0.0766407292620246,
+            "lsms": [
+              "mono_oligosaccharide.m02"
+            ],
+            "diagnostic_bands": [
+              542.0,
+              648.0,
+              840.0,
+              914.0,
+              1074.0,
+              1120.0,
+              1150.0,
+              1274.0,
+              1344.0,
+              1460.0
+            ]
+          },
+          {
+            "csm_id": "csm12",
+            "contribution": 0.006556939991272495,
+            "share_of_similarity": 0.02340255318584384,
+            "lsms": [
+              "free_amino_acid.m01"
+            ],
+            "diagnostic_bands": [
+              532.0,
+              612.0,
+              852.0,
+              920.0,
+              964.0,
+              1018.0,
+              1114.0,
+              1322.0,
+              1358.0,
+              1462.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.28018054009659826,
+        "reconciles": true
+      },
+      {
+        "rank": 5,
+        "molecule": "ferritin",
+        "chemistry_class": "peptide_protein",
+        "similarity": 0.19687894583323504,
+        "supporting_csms": [
+          {
+            "csm_id": "csm06",
+            "contribution": 0.18138989275548487,
+            "share_of_similarity": 0.9213270214693683,
+            "lsms": [
+              "chromophore_pigment.m01"
+            ],
+            "diagnostic_bands": [
+              742.0,
+              788.0,
+              1060.0,
+              1180.0,
+              1224.0,
+              1346.0,
+              1402.0,
+              1464.0,
+              1498.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm13",
+            "contribution": 0.005132190024864138,
+            "share_of_similarity": 0.02606774433455803,
+            "lsms": [
+              "free_amino_acid.m02"
+            ],
+            "diagnostic_bands": [
+              452.0,
+              538.0,
+              640.0,
+              692.0,
+              720.0,
+              772.0,
+              870.0,
+              1200.0,
+              1346.0,
+              1426.0
+            ]
+          },
+          {
+            "csm_id": "csm20",
+            "contribution": 0.003143217767380185,
+            "share_of_similarity": 0.015965230584009022,
+            "lsms": [
+              "mono_oligosaccharide.m02"
+            ],
+            "diagnostic_bands": [
+              542.0,
+              648.0,
+              840.0,
+              914.0,
+              1074.0,
+              1120.0,
+              1150.0,
+              1274.0,
+              1344.0,
+              1460.0
+            ]
+          },
+          {
+            "csm_id": "csm11",
+            "contribution": 0.0026383392250703213,
+            "share_of_similarity": 0.013400819543658607,
+            "lsms": [
+              "free_amino_acid.m00"
+            ],
+            "diagnostic_bands": [
+              542.0,
+              756.0,
+              870.0,
+              946.0,
+              1078.0,
+              1122.0,
+              1338.0,
+              1356.0,
+              1424.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 0.0018213277477876963,
+            "share_of_similarity": 0.00925100314850928,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.19687894583323504,
+        "reconciles": true
+      },
+      {
+        "rank": 6,
+        "molecule": "(+)-glucose",
+        "chemistry_class": "mono_oligosaccharide",
+        "similarity": 0.1664766902826964,
+        "supporting_csms": [
+          {
+            "csm_id": "csm06",
+            "contribution": 0.09025142049527599,
+            "share_of_similarity": 0.5421264703273272,
+            "lsms": [
+              "chromophore_pigment.m01"
+            ],
+            "diagnostic_bands": [
+              742.0,
+              788.0,
+              1060.0,
+              1180.0,
+              1224.0,
+              1346.0,
+              1402.0,
+              1464.0,
+              1498.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm20",
+            "contribution": 0.07396364720393316,
+            "share_of_similarity": 0.4442883089391683,
+            "lsms": [
+              "mono_oligosaccharide.m02"
+            ],
+            "diagnostic_bands": [
+              542.0,
+              648.0,
+              840.0,
+              914.0,
+              1074.0,
+              1120.0,
+              1150.0,
+              1274.0,
+              1344.0,
+              1460.0
+            ]
+          },
+          {
+            "csm_id": "csm11",
+            "contribution": 0.0020247116718693807,
+            "share_of_similarity": 0.01216213313959466,
+            "lsms": [
+              "free_amino_acid.m00"
+            ],
+            "diagnostic_bands": [
+              542.0,
+              756.0,
+              870.0,
+              946.0,
+              1078.0,
+              1122.0,
+              1338.0,
+              1356.0,
+              1424.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm12",
+            "contribution": 0.00015309291664519656,
+            "share_of_similarity": 0.0009196057200819389,
+            "lsms": [
+              "free_amino_acid.m01"
+            ],
+            "diagnostic_bands": [
+              532.0,
+              612.0,
+              852.0,
+              920.0,
+              964.0,
+              1018.0,
+              1114.0,
+              1322.0,
+              1358.0,
+              1462.0
+            ]
+          },
+          {
+            "csm_id": "csm13",
+            "contribution": 6.374691356165027e-05,
+            "share_of_similarity": 0.00038291795357667084,
+            "lsms": [
+              "free_amino_acid.m02"
+            ],
+            "diagnostic_bands": [
+              452.0,
+              538.0,
+              640.0,
+              692.0,
+              720.0,
+              772.0,
+              870.0,
+              1200.0,
+              1346.0,
+              1426.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.16647669028269643,
+        "reconciles": true
+      },
+      {
+        "rank": 7,
+        "molecule": "isoleucine",
+        "chemistry_class": "free_amino_acid",
+        "similarity": 0.16059861247783153,
+        "supporting_csms": [
+          {
+            "csm_id": "csm06",
+            "contribution": 0.09132067466099601,
+            "share_of_similarity": 0.5686267972771744,
+            "lsms": [
+              "chromophore_pigment.m01"
+            ],
+            "diagnostic_bands": [
+              742.0,
+              788.0,
+              1060.0,
+              1180.0,
+              1224.0,
+              1346.0,
+              1402.0,
+              1464.0,
+              1498.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm11",
+            "contribution": 0.05675719137544242,
+            "share_of_similarity": 0.3534102225380283,
+            "lsms": [
+              "free_amino_acid.m00"
+            ],
+            "diagnostic_bands": [
+              542.0,
+              756.0,
+              870.0,
+              946.0,
+              1078.0,
+              1122.0,
+              1338.0,
+              1356.0,
+              1424.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 0.010022356383912355,
+            "share_of_similarity": 0.062406245167487974,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          },
+          {
+            "csm_id": "csm12",
+            "contribution": 0.0024983900574807377,
+            "share_of_similarity": 0.015556735011082677,
+            "lsms": [
+              "free_amino_acid.m01"
+            ],
+            "diagnostic_bands": [
+              532.0,
+              612.0,
+              852.0,
+              920.0,
+              964.0,
+              1018.0,
+              1114.0,
+              1322.0,
+              1358.0,
+              1462.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.16059861247783153,
+        "reconciles": true
+      },
+      {
+        "rank": 8,
+        "molecule": "b-dna",
+        "chemistry_class": "nucleic_acid_polymer",
+        "similarity": 0.14722607068782145,
+        "supporting_csms": [
+          {
+            "csm_id": "csm24",
+            "contribution": 0.0779563656062007,
+            "share_of_similarity": 0.5295010947549506,
+            "lsms": [
+              "nucleic_acid_polymer.m00"
+            ],
+            "diagnostic_bands": [
+              668.0,
+              728.0,
+              784.0,
+              1096.0,
+              1252.0,
+              1336.0,
+              1374.0,
+              1486.0,
+              1574.0,
+              1670.0
+            ]
+          },
+          {
+            "csm_id": "csm06",
+            "contribution": 0.06661757921346147,
+            "share_of_similarity": 0.4524849362737193,
+            "lsms": [
+              "chromophore_pigment.m01"
+            ],
+            "diagnostic_bands": [
+              742.0,
+              788.0,
+              1060.0,
+              1180.0,
+              1224.0,
+              1346.0,
+              1402.0,
+              1464.0,
+              1498.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 0.0014903485717433764,
+            "share_of_similarity": 0.01012285775726089,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          },
+          {
+            "csm_id": "csm42",
+            "contribution": 0.0011617772964158948,
+            "share_of_similarity": 0.007891111207276863,
+            "lsms": [
+              "pyrimidine.m00"
+            ],
+            "diagnostic_bands": [
+              552.0,
+              578.0,
+              600.0,
+              792.0,
+              986.0,
+              1102.0,
+              1236.0,
+              1276.0,
+              1368.0,
+              1672.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.14722607068782145,
+        "reconciles": true
+      },
+      {
+        "rank": 9,
+        "molecule": "histidine",
+        "chemistry_class": "free_amino_acid",
+        "similarity": 0.1465723490905264,
+        "supporting_csms": [
+          {
+            "csm_id": "csm06",
+            "contribution": 0.12120003536914475,
+            "share_of_similarity": 0.8268956329100106,
+            "lsms": [
+              "chromophore_pigment.m01"
+            ],
+            "diagnostic_bands": [
+              742.0,
+              788.0,
+              1060.0,
+              1180.0,
+              1224.0,
+              1346.0,
+              1402.0,
+              1464.0,
+              1498.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm24",
+            "contribution": 0.012234794949898164,
+            "share_of_similarity": 0.08347273565396843,
+            "lsms": [
+              "nucleic_acid_polymer.m00"
+            ],
+            "diagnostic_bands": [
+              668.0,
+              728.0,
+              784.0,
+              1096.0,
+              1252.0,
+              1336.0,
+              1374.0,
+              1486.0,
+              1574.0,
+              1670.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 0.004503132335596566,
+            "share_of_similarity": 0.03072293214584837,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          },
+          {
+            "csm_id": "csm12",
+            "contribution": 0.003451239700042699,
+            "share_of_similarity": 0.023546321809221935,
+            "lsms": [
+              "free_amino_acid.m01"
+            ],
+            "diagnostic_bands": [
+              532.0,
+              612.0,
+              852.0,
+              920.0,
+              964.0,
+              1018.0,
+              1114.0,
+              1322.0,
+              1358.0,
+              1462.0
+            ]
+          },
+          {
+            "csm_id": "csm11",
+            "contribution": 0.002647808284914728,
+            "share_of_similarity": 0.01806485535181889,
+            "lsms": [
+              "free_amino_acid.m00"
+            ],
+            "diagnostic_bands": [
+              542.0,
+              756.0,
+              870.0,
+              946.0,
+              1078.0,
+              1122.0,
+              1338.0,
+              1356.0,
+              1424.0,
+              1622.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.1465723490905264,
+        "reconciles": true
+      },
+      {
+        "rank": 10,
+        "molecule": "glutamate",
+        "chemistry_class": "free_amino_acid",
+        "similarity": 0.13503247594342088,
+        "supporting_csms": [
+          {
+            "csm_id": "csm11",
+            "contribution": 0.06981066112597226,
+            "share_of_similarity": 0.516991639512751,
+            "lsms": [
+              "free_amino_acid.m00"
+            ],
+            "diagnostic_bands": [
+              542.0,
+              756.0,
+              870.0,
+              946.0,
+              1078.0,
+              1122.0,
+              1338.0,
+              1356.0,
+              1424.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm06",
+            "contribution": 0.04655943176709854,
+            "share_of_similarity": 0.34480173337162473,
+            "lsms": [
+              "chromophore_pigment.m01"
+            ],
+            "diagnostic_bands": [
+              742.0,
+              788.0,
+              1060.0,
+              1180.0,
+              1224.0,
+              1346.0,
+              1402.0,
+              1464.0,
+              1498.0,
+              1622.0
+            ]
+          },
+          {
+            "csm_id": "csm13",
+            "contribution": 0.009967684416122759,
+            "share_of_similarity": 0.07381694178684421,
+            "lsms": [
+              "free_amino_acid.m02"
+            ],
+            "diagnostic_bands": [
+              452.0,
+              538.0,
+              640.0,
+              692.0,
+              720.0,
+              772.0,
+              870.0,
+              1200.0,
+              1346.0,
+              1426.0
+            ]
+          },
+          {
+            "csm_id": "csm12",
+            "contribution": 0.004859415925912943,
+            "share_of_similarity": 0.0359870163968042,
+            "lsms": [
+              "free_amino_acid.m01"
+            ],
+            "diagnostic_bands": [
+              532.0,
+              612.0,
+              852.0,
+              920.0,
+              964.0,
+              1018.0,
+              1114.0,
+              1322.0,
+              1358.0,
+              1462.0
+            ]
+          },
+          {
+            "csm_id": "csm38",
+            "contribution": 0.003141578080192101,
+            "share_of_similarity": 0.023265351969737773,
+            "lsms": [
+              "polysaccharide.m00"
+            ],
+            "diagnostic_bands": [
+              480.0,
+              580.0,
+              862.0,
+              940.0,
+              1046.0,
+              1082.0,
+              1130.0,
+              1252.0,
+              1338.0,
+              1462.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.13503247594342088,
+        "reconciles": true
+      }
+    ],
+    "margin": 0.43855287995409753,
+    "n_candidates": 154
+  },
+  "chemistry": {
+    "axis_names": [
+      "acylglycerol",
+      "carboxylic_acid_metabolite",
+      "chromophore_pigment",
+      "fatty_acid",
+      "free_amino_acid",
+      "mono_oligosaccharide",
+      "nucleic_acid_polymer",
+      "peptide_protein",
+      "phosphate_metabolite",
+      "phospholipid_sphingolipid",
+      "polysaccharide",
+      "purine",
+      "pyrimidine",
+      "small_nitrogenous",
+      "sterol_steroid",
+      "sulfur_thiol_cofactor"
+    ],
+    "evidence": [
+      0.0007575848653230942,
+      0.026666497081079557,
+      1.1255161853194346,
+      0.003289676123407037,
+      0.10854702941358431,
+      0.058705791164275045,
+      0.08531845743827536,
+      0.06389184520965499,
+      0.028406867849865222,
+      0.00039377451739065533,
+      0.14741045238957212,
+      0.01042458106558039,
+      0.023759078489147004,
+      0.005270921449736351,
+      0.006311432137601411,
+      0.0955934117625514
+    ],
+    "calibrated_probability": [
+      4.828028477545018e-17,
+      4.355850694672018e-09,
+      0.9999598021732516,
+      9.208346646555864e-14,
+      5.957919757195013e-06,
+      2.523382172296169e-07,
+      1.7264974229597104e-06,
+      3.900298540877401e-07,
+      6.029932988607909e-09,
+      1.6670247673243994e-18,
+      2.8759365336902336e-05,
+      3.4738920312780704e-11,
+      2.4053250001986417e-09,
+      1.0406887188588669e-12,
+      2.6290016846625786e-12,
+      3.0988455506558688e-06
+    ],
+    "evidence_l1": [
+      0.0004231694545596783,
+      0.01489529099819742,
+      0.6286874144939388,
+      0.0018375373037929621,
+      0.060631870214870286,
+      0.03279170263767855,
+      0.04765692498705137,
+      0.0356885129650133,
+      0.01586742201964351,
+      0.00021995337469240297,
+      0.08234008305787242,
+      0.005822930849672464,
+      0.013271273946061543,
+      0.002944215304460421,
+      0.0035254206062051816,
+      0.05339627778573109
+    ],
+    "top": [
+      {
+        "axis": "chromophore_pigment",
+        "evidence": 1.1255161853194346,
+        "share": 0.6286874144939388,
+        "calibrated_probability": 0.9999598021732516,
+        "rank": 1
+      },
+      {
+        "axis": "polysaccharide",
+        "evidence": 0.14741045238957212,
+        "share": 0.08234008305787242,
+        "calibrated_probability": 2.8759365336902336e-05,
+        "rank": 2
+      },
+      {
+        "axis": "free_amino_acid",
+        "evidence": 0.10854702941358431,
+        "share": 0.060631870214870286,
+        "calibrated_probability": 5.957919757195013e-06,
+        "rank": 3
+      },
+      {
+        "axis": "sulfur_thiol_cofactor",
+        "evidence": 0.0955934117625514,
+        "share": 0.05339627778573109,
+        "calibrated_probability": 3.0988455506558688e-06,
+        "rank": 4
+      },
+      {
+        "axis": "nucleic_acid_polymer",
+        "evidence": 0.08531845743827536,
+        "share": 0.04765692498705137,
+        "calibrated_probability": 1.7264974229597104e-06,
+        "rank": 5
+      }
+    ],
+    "predicted_class": "chromophore_pigment",
+    "margin": 0.9781057329298626,
+    "entropy": 0.5299620289879529
+  },
+  "confidence": {
+    "overall": 0.644085063816807,
+    "evidence_coverage": 0.648467138251241,
+    "top1_confidence": 0.9932424109473744,
+    "top3_confidence": 0.6116895332096468,
+    "retrieval_margin": 0.43855287995409753,
+    "chemistry_confidence": 0.9999598021732516,
+    "reconstruction_explained_variance": 0.648467138251241,
+    "unknown_warning": false,
+    "outlier_warning": false,
+    "notes": [
+      "preprocessing skipped: caller asserts the spectrum is canonical"
+    ]
+  },
+  "provenance": {
+    "root": "spectrum",
+    "lsm_layer": [
+      {
+        "id": "chromophore_pigment.m01",
+        "weight": 0.6520292675752297
+      },
+      {
+        "id": "chromophore_pigment.m00",
+        "weight": 0.05944474584174992
+      },
+      {
+        "id": "nucleic_acid_polymer.m00",
+        "weight": 0.041597031151122295
+      },
+      {
+        "id": "free_amino_acid.m00",
+        "weight": 0.038790544260233525
+      },
+      {
+        "id": "mono_oligosaccharide.m02",
+        "weight": 0.03588628922652362
+      },
+      {
+        "id": "free_amino_acid.m02",
+        "weight": 0.026777597459845023
+      },
+      {
+        "id": "pyrimidine.m00",
+        "weight": 0.02256001745828324
+      },
+      {
+        "id": "polysaccharide.m00",
+        "weight": 0.013400362869749376
+      }
+    ],
+    "csm_layer": [
+      {
+        "id": "csm06",
+        "weight": 0.6717603995510011,
+        "lsms": [
+          "chromophore_pigment.m01"
+        ],
+        "bands": [
+          742.0,
+          788.0,
+          1060.0,
+          1180.0,
+          1224.0,
+          1346.0,
+          1402.0,
+          1464.0,
+          1498.0,
+          1622.0
+        ],
+        "assignment": "742: unassigned | 788: unassigned | 1060: C\u2013N / C\u2013O stretch | 1180: C\u2013C / C=C conjugated stretch | 1224: amide III / C\u2013O\u2013C asymmetric | 1346: CH deformation / tryptophan | 1402: COO- symmetric stretch | 1464: CH2 / CH3 scissoring | 1498: unassigned | 1622: unassigned"
+      },
+      {
+        "id": "csm05",
+        "weight": 0.07350670789532847,
+        "lsms": [
+          "chromophore_pigment.m00"
+        ],
+        "bands": [
+          1006.0,
+          1156.0,
+          1270.0,
+          1518.0
+        ],
+        "assignment": "1006: phenylalanine ring breathing | 1156: C\u2013C conjugated [chromophore_pigment] | 1270: amide III / =C\u2013H in-plane bend | 1518: C=C conjugated [chromophore_pigment]"
+      },
+      {
+        "id": "csm11",
+        "weight": 0.06764648168619634,
+        "lsms": [
+          "free_amino_acid.m00"
+        ],
+        "bands": [
+          542.0,
+          756.0,
+          870.0,
+          946.0,
+          1078.0,
+          1122.0,
+          1338.0,
+          1356.0,
+          1424.0,
+          1622.0
+        ],
+        "assignment": "542: S\u2013S / skeletal deformation | 756: ring breathing (indole / pyrrole) | 870: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 946: C\u2013C backbone stretch | 1078: C\u2013C skeletal (trans) / PO2- symmetric | 1122: C\u2013C skeletal (gauche) / C\u2013N stretch | 1338: CH deformation / tryptophan | 1356: CH deformation / tryptophan | 1424: unassigned | 1622: unassigned"
+      },
+      {
+        "id": "csm24",
+        "weight": 0.05383548710469169,
+        "lsms": [
+          "nucleic_acid_polymer.m00"
+        ],
+        "bands": [
+          668.0,
+          728.0,
+          784.0,
+          1096.0,
+          1252.0,
+          1336.0,
+          1374.0,
+          1486.0,
+          1574.0,
+          1670.0
+        ],
+        "assignment": "668: unassigned | 728: ring breathing | 784: backbone O\u2013P\u2013O [nucleic_acid_polymer] | 1096: PO2- symmetric [nucleic_acid_polymer] | 1252: amide III / =C\u2013H in-plane bend | 1336: CH deformation / tryptophan | 1374: unassigned | 1486: unassigned | 1574: amide II / COO- asymmetric | 1670: amide I / C=C stretch"
+      },
+      {
+        "id": "csm20",
+        "weight": 0.051955312462324585,
+        "lsms": [
+          "mono_oligosaccharide.m02"
+        ],
+        "bands": [
+          542.0,
+          648.0,
+          840.0,
+          914.0,
+          1074.0,
+          1120.0,
+          1150.0,
+          1274.0,
+          1344.0,
+          1460.0
+        ],
+        "assignment": "542: S\u2013S / skeletal deformation | 648: C\u2013S stretch / phenyl ring | 840: anomeric C\u2013H [mono_oligosaccharide] | 914: unassigned | 1074: C\u2013C skeletal (trans) / PO2- symmetric | 1120: C\u2013O\u2013C glycosidic [mono_oligosaccharide] | 1150: C\u2013C / C=C conjugated stretch | 1274: amide III / =C\u2013H in-plane bend | 1344: CH deformation / tryptophan | 1460: CH2 / CH3 scissoring"
+      },
+      {
+        "id": "csm13",
+        "weight": 0.0378005452800042,
+        "lsms": [
+          "free_amino_acid.m02"
+        ],
+        "bands": [
+          452.0,
+          538.0,
+          640.0,
+          692.0,
+          720.0,
+          772.0,
+          870.0,
+          1200.0,
+          1346.0,
+          1426.0
+        ],
+        "assignment": "452: unassigned | 538: S\u2013S / skeletal deformation | 640: C\u2013S stretch / phenyl ring | 692: unassigned | 720: ring breathing | 772: unassigned | 870: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1200: amide III / C\u2013O\u2013C asymmetric | 1346: CH deformation / tryptophan | 1426: unassigned"
+      },
+      {
+        "id": "csm42",
+        "weight": 0.025476462257774165,
+        "lsms": [
+          "pyrimidine.m00"
+        ],
+        "bands": [
+          552.0,
+          578.0,
+          600.0,
+          792.0,
+          986.0,
+          1102.0,
+          1236.0,
+          1276.0,
+          1368.0,
+          1672.0
+        ],
+        "assignment": "552: S\u2013S / skeletal deformation | 578: unassigned | 600: unassigned | 792: pyrimidine ring breathing [pyrimidine] | 986: unassigned | 1102: unassigned | 1236: amide III / C\u2013O\u2013C asymmetric | 1276: amide III / =C\u2013H in-plane bend | 1368: unassigned | 1672: C=O / C=N [pyrimidine]"
+      },
+      {
+        "id": "csm38",
+        "weight": 0.017790472230249644,
+        "lsms": [
+          "polysaccharide.m00"
+        ],
+        "bands": [
+          480.0,
+          580.0,
+          862.0,
+          940.0,
+          1046.0,
+          1082.0,
+          1130.0,
+          1252.0,
+          1338.0,
+          1462.0
+        ],
+        "assignment": "480: S\u2013S / skeletal deformation | 580: unassigned | 862: unassigned | 940: C\u2013O\u2013C ring [polysaccharide] | 1046: C\u2013N / C\u2013O stretch | 1082: C\u2013O\u2013C glycosidic [polysaccharide] | 1130: C\u2013O\u2013C glycosidic [polysaccharide] | 1252: amide III / =C\u2013H in-plane bend | 1338: CH deformation / tryptophan | 1462: CH2 / CH3 scissoring"
+      }
+    ],
+    "chemistry_layer": [
+      {
+        "axis": "chromophore_pigment",
+        "evidence": 1.1255161853194346
+      },
+      {
+        "axis": "polysaccharide",
+        "evidence": 0.14741045238957212
+      },
+      {
+        "axis": "free_amino_acid",
+        "evidence": 0.10854702941358431
+      },
+      {
+        "axis": "sulfur_thiol_cofactor",
+        "evidence": 0.0955934117625514
+      },
+      {
+        "axis": "nucleic_acid_polymer",
+        "evidence": 0.08531845743827536
+      }
+    ],
+    "molecule_layer": [
+      {
+        "molecule": "riboflavin",
+        "similarity": 0.9932424109473744,
+        "class": "chromophore_pigment",
+        "via_csms": [
+          "csm06",
+          "csm05",
+          "csm20",
+          "csm11",
+          "csm13"
+        ]
+      },
+      {
+        "molecule": "melanin",
+        "similarity": 0.5546895309932769,
+        "class": "chromophore_pigment",
+        "via_csms": [
+          "csm06",
+          "csm05"
+        ]
+      },
+      {
+        "molecule": "glycogen",
+        "similarity": 0.28713665768828894,
+        "class": "polysaccharide",
+        "via_csms": [
+          "csm06",
+          "csm38",
+          "csm05",
+          "csm20",
+          "csm11"
+        ]
+      },
+      {
+        "molecule": "leucine",
+        "similarity": 0.28018054009659826,
+        "class": "free_amino_acid",
+        "via_csms": [
+          "csm06",
+          "csm11",
+          "csm20",
+          "csm12"
+        ]
+      },
+      {
+        "molecule": "ferritin",
+        "similarity": 0.19687894583323504,
+        "class": "peptide_protein",
+        "via_csms": [
+          "csm06",
+          "csm13",
+          "csm20",
+          "csm11",
+          "csm05"
+        ]
+      }
+    ],
+    "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f"
+  },
+  "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f",
+  "_provenance": {
+    "phase": "09",
+    "seed": 0,
+    "fingerprints": {
+      "atlas": "09ed804a40836f4a05a91ba10900cded",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51"
+    },
+    "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f",
+    "code_fingerprint": "5e10e5c2eebb42c1427c2cdc0ebf4683",
+    "created_utc": "2026-08-07T05:31:50.945105+00:00",
+    "packaging_phase": true
+  }
+}

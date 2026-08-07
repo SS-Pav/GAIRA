@@ -1,0 +1,1131 @@
+{
+  "preprocessing": {
+    "n_input_points": 676,
+    "input_range": [
+      450.0,
+      1800.0
+    ],
+    "resampled_to": "supplied on the canonical grid",
+    "baseline_method": "(skipped)",
+    "smoothing": "(skipped)",
+    "normalisation": "L2 (re-applied)",
+    "n_peaks": 20,
+    "signal_quality": 1.0,
+    "snr_estimate": 147.7060781318042,
+    "warnings": [
+      "preprocessing skipped: caller asserts the spectrum is canonical"
+    ]
+  },
+  "lsm": {
+    "activation": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.04959727217922823,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.016368753428905692,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.03643648150914146,
+      0.6190585436060078,
+      0.019101534794016058
+    ],
+    "reconstruction_error": 0.5098765715882158,
+    "explained_variance": 0.740025881745187,
+    "n_active": 5,
+    "top": [
+      {
+        "lsm_id": "sulfur_thiol_cofactor.m00",
+        "weight": 0.6190585436060078,
+        "share": 0.8359300830364605
+      },
+      {
+        "lsm_id": "chromophore_pigment.m00",
+        "weight": 0.04959727217922823,
+        "share": 0.066972424949765
+      },
+      {
+        "lsm_id": "sterol_steroid.m02",
+        "weight": 0.03643648150914146,
+        "share": 0.04920108336777583
+      },
+      {
+        "lsm_id": "sulfur_thiol_cofactor.m01",
+        "weight": 0.019101534794016058,
+        "share": 0.02579327550101309
+      },
+      {
+        "lsm_id": "fatty_acid.m03",
+        "weight": 0.016368753428905692,
+        "share": 0.022103133143635195
+      }
+    ]
+  },
+  "csm": {
+    "activation": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.061329763410698554,
+      0.0,
+      0.0,
+      0.0,
+      0.017523868145933975,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.04414020762867591,
+      0.7986355081115983,
+      0.021838875909701464
+    ],
+    "explained_variance": 0.740025881745187,
+    "residual_fraction": 0.259974118254813,
+    "sparsity": 0.970769667273844,
+    "entropy": 0.16013627555726376,
+    "n_active": 5,
+    "top": [
+      {
+        "csm_id": "csm47",
+        "weight": 0.7986355081115983,
+        "share": 0.8464890374329653,
+        "dominant_bands": [
+          526.0,
+          632.0,
+          724.0,
+          806.0,
+          886.0,
+          1036.0,
+          1334.0,
+          1410.0,
+          1510.0,
+          1668.0
+        ],
+        "band_assignment": "526: S\u2013S stretch [sulfur_thiol_cofactor] | 632: C\u2013S stretch [sulfur_thiol_cofactor] | 724: ring breathing | 806: unassigned | 886: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1036: C\u2013N / C\u2013O stretch | 1334: CH deformation / tryptophan | 1410: COO- symmetric stretch | 1510: conjugated C=C (carotenoid) | 1668: amide I / C=C stretch",
+        "lsms": [
+          "sulfur_thiol_cofactor.m00"
+        ]
+      },
+      {
+        "csm_id": "csm05",
+        "weight": 0.061329763410698554,
+        "share": 0.06500458828617386,
+        "dominant_bands": [
+          1006.0,
+          1156.0,
+          1270.0,
+          1518.0
+        ],
+        "band_assignment": "1006: phenylalanine ring breathing | 1156: C\u2013C conjugated [chromophore_pigment] | 1270: amide III / =C\u2013H in-plane bend | 1518: C=C conjugated [chromophore_pigment]",
+        "lsms": [
+          "chromophore_pigment.m00"
+        ]
+      },
+      {
+        "csm_id": "csm46",
+        "weight": 0.04414020762867591,
+        "share": 0.04678504961047634,
+        "dominant_bands": [
+          500.0,
+          594.0,
+          730.0,
+          932.0,
+          968.0,
+          1008.0,
+          1258.0,
+          1340.0,
+          1436.0,
+          1616.0
+        ],
+        "band_assignment": "500: S\u2013S / skeletal deformation | 594: unassigned | 730: ring breathing | 932: C\u2013C backbone stretch | 968: unassigned | 1008: phenylalanine ring breathing | 1258: amide III / =C\u2013H in-plane bend | 1340: CH deformation / tryptophan | 1436: CH2 / CH3 scissoring | 1616: aromatic ring C=C",
+        "lsms": [
+          "sterol_steroid.m02"
+        ]
+      },
+      {
+        "csm_id": "csm48",
+        "weight": 0.021838875909701464,
+        "share": 0.023147441930215243,
+        "dominant_bands": [
+          506.0,
+          716.0,
+          908.0,
+          962.0,
+          1008.0,
+          1086.0,
+          1206.0,
+          1450.0,
+          1496.0,
+          1638.0
+        ],
+        "band_assignment": "506: S\u2013S stretch [sulfur_thiol_cofactor] | 716: ring breathing | 908: unassigned | 962: unassigned | 1008: phenylalanine ring breathing | 1086: C\u2013C skeletal (trans) / PO2- symmetric | 1206: amide III / C\u2013O\u2013C asymmetric | 1450: CH2 / CH3 scissoring | 1496: unassigned | 1638: amide I / C=C stretch",
+        "lsms": [
+          "sulfur_thiol_cofactor.m01"
+        ]
+      },
+      {
+        "csm_id": "csm09",
+        "weight": 0.017523868145933975,
+        "share": 0.018573882739109364,
+        "dominant_bands": [
+          906.0,
+          1096.0,
+          1120.0,
+          1302.0,
+          1440.0,
+          1668.0
+        ],
+        "band_assignment": "906: unassigned | 1096: C\u2013C skeletal (trans) / PO2- symmetric | 1120: C\u2013C skeletal (gauche) / C\u2013N stretch | 1302: CH2 twist | 1440: CH2 / CH3 scissoring | 1668: cis C=C [fatty_acid]",
+        "lsms": [
+          "fatty_acid.m03"
+        ]
+      }
+    ]
+  },
+  "retrieval": {
+    "top": [
+      {
+        "rank": 1,
+        "molecule": "coenzyme a",
+        "chemistry_class": "sulfur_thiol_cofactor",
+        "similarity": 0.9941951191075912,
+        "supporting_csms": [
+          {
+            "csm_id": "csm47",
+            "contribution": 0.9891187505333138,
+            "share_of_similarity": 0.9948939916544461,
+            "lsms": [
+              "sulfur_thiol_cofactor.m00"
+            ],
+            "diagnostic_bands": [
+              526.0,
+              632.0,
+              724.0,
+              806.0,
+              886.0,
+              1036.0,
+              1334.0,
+              1410.0,
+              1510.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 0.002149979803790031,
+            "share_of_similarity": 0.0021625330505723383,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          },
+          {
+            "csm_id": "csm46",
+            "contribution": 0.002148102394306099,
+            "share_of_similarity": 0.0021606446793181974,
+            "lsms": [
+              "sterol_steroid.m02"
+            ],
+            "diagnostic_bands": [
+              500.0,
+              594.0,
+              730.0,
+              932.0,
+              968.0,
+              1008.0,
+              1258.0,
+              1340.0,
+              1436.0,
+              1616.0
+            ]
+          },
+          {
+            "csm_id": "csm48",
+            "contribution": 0.0006546944119555142,
+            "share_of_similarity": 0.0006585170248497318,
+            "lsms": [
+              "sulfur_thiol_cofactor.m01"
+            ],
+            "diagnostic_bands": [
+              506.0,
+              716.0,
+              908.0,
+              962.0,
+              1008.0,
+              1086.0,
+              1206.0,
+              1450.0,
+              1496.0,
+              1638.0
+            ]
+          },
+          {
+            "csm_id": "csm09",
+            "contribution": 0.00012359196422581412,
+            "share_of_similarity": 0.00012431358980783205,
+            "lsms": [
+              "fatty_acid.m03"
+            ],
+            "diagnostic_bands": [
+              906.0,
+              1096.0,
+              1120.0,
+              1302.0,
+              1440.0,
+              1668.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.9941951191075913,
+        "reconciles": true
+      },
+      {
+        "rank": 2,
+        "molecule": "acetyl-coa",
+        "chemistry_class": "sulfur_thiol_cofactor",
+        "similarity": 0.9891813578390493,
+        "supporting_csms": [
+          {
+            "csm_id": "csm47",
+            "contribution": 0.9863488397189044,
+            "share_of_similarity": 0.9971365027265274,
+            "lsms": [
+              "sulfur_thiol_cofactor.m00"
+            ],
+            "diagnostic_bands": [
+              526.0,
+              632.0,
+              724.0,
+              806.0,
+              886.0,
+              1036.0,
+              1334.0,
+              1410.0,
+              1510.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm46",
+            "contribution": 0.002832518120144868,
+            "share_of_similarity": 0.0028634972724616253,
+            "lsms": [
+              "sterol_steroid.m02"
+            ],
+            "diagnostic_bands": [
+              500.0,
+              594.0,
+              730.0,
+              932.0,
+              968.0,
+              1008.0,
+              1258.0,
+              1340.0,
+              1436.0,
+              1616.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.9891813578390493,
+        "reconciles": true
+      },
+      {
+        "rank": 3,
+        "molecule": "glutathione",
+        "chemistry_class": "sulfur_thiol_cofactor",
+        "similarity": 0.43677453615765105,
+        "supporting_csms": [
+          {
+            "csm_id": "csm47",
+            "contribution": 0.4349918946734593,
+            "share_of_similarity": 0.9959186231393667,
+            "lsms": [
+              "sulfur_thiol_cofactor.m00"
+            ],
+            "diagnostic_bands": [
+              526.0,
+              632.0,
+              724.0,
+              806.0,
+              886.0,
+              1036.0,
+              1334.0,
+              1410.0,
+              1510.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm48",
+            "contribution": 0.0017826414841917867,
+            "share_of_similarity": 0.0040813768583438485,
+            "lsms": [
+              "sulfur_thiol_cofactor.m01"
+            ],
+            "diagnostic_bands": [
+              506.0,
+              716.0,
+              908.0,
+              962.0,
+              1008.0,
+              1086.0,
+              1206.0,
+              1450.0,
+              1496.0,
+              1638.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.43677453615765105,
+        "reconciles": true
+      },
+      {
+        "rank": 4,
+        "molecule": "methionine",
+        "chemistry_class": "free_amino_acid",
+        "similarity": 0.42809450745855526,
+        "supporting_csms": [
+          {
+            "csm_id": "csm47",
+            "contribution": 0.40799974968781283,
+            "share_of_similarity": 0.9530599962821507,
+            "lsms": [
+              "sulfur_thiol_cofactor.m00"
+            ],
+            "diagnostic_bands": [
+              526.0,
+              632.0,
+              724.0,
+              806.0,
+              886.0,
+              1036.0,
+              1334.0,
+              1410.0,
+              1510.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm46",
+            "contribution": 0.01997931231822586,
+            "share_of_similarity": 0.04667033089676684,
+            "lsms": [
+              "sterol_steroid.m02"
+            ],
+            "diagnostic_bands": [
+              500.0,
+              594.0,
+              730.0,
+              932.0,
+              968.0,
+              1008.0,
+              1258.0,
+              1340.0,
+              1436.0,
+              1616.0
+            ]
+          },
+          {
+            "csm_id": "csm09",
+            "contribution": 0.0001154454525166111,
+            "share_of_similarity": 0.00026967281874672953,
+            "lsms": [
+              "fatty_acid.m03"
+            ],
+            "diagnostic_bands": [
+              906.0,
+              1096.0,
+              1120.0,
+              1302.0,
+              1440.0,
+              1668.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.4280945074585553,
+        "reconciles": true
+      },
+      {
+        "rank": 5,
+        "molecule": "glycogen",
+        "chemistry_class": "polysaccharide",
+        "similarity": 0.08823141999288399,
+        "supporting_csms": [
+          {
+            "csm_id": "csm47",
+            "contribution": 0.08515977417159068,
+            "share_of_similarity": 0.9651864854662179,
+            "lsms": [
+              "sulfur_thiol_cofactor.m00"
+            ],
+            "diagnostic_bands": [
+              526.0,
+              632.0,
+              724.0,
+              806.0,
+              886.0,
+              1036.0,
+              1334.0,
+              1410.0,
+              1510.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 0.0030716458212933107,
+            "share_of_similarity": 0.03481351452244824,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.08823141999288399,
+        "reconciles": true
+      },
+      {
+        "rank": 6,
+        "molecule": "\u03b2-carotene",
+        "chemistry_class": "chromophore_pigment",
+        "similarity": 0.07657773209550965,
+        "supporting_csms": [
+          {
+            "csm_id": "csm05",
+            "contribution": 0.07640101551670746,
+            "share_of_similarity": 0.9976923241918488,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          },
+          {
+            "csm_id": "csm48",
+            "contribution": 0.00017671657880219621,
+            "share_of_similarity": 0.002307675795092537,
+            "lsms": [
+              "sulfur_thiol_cofactor.m01"
+            ],
+            "diagnostic_bands": [
+              506.0,
+              716.0,
+              908.0,
+              962.0,
+              1008.0,
+              1086.0,
+              1206.0,
+              1450.0,
+              1496.0,
+              1638.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.07657773209550965,
+        "reconciles": true
+      },
+      {
+        "rank": 7,
+        "molecule": "carotene",
+        "chemistry_class": "chromophore_pigment",
+        "similarity": 0.0763903666503725,
+        "supporting_csms": [
+          {
+            "csm_id": "csm05",
+            "contribution": 0.0763903666503725,
+            "share_of_similarity": 0.9999999999869092,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.0763903666503725,
+        "reconciles": true
+      },
+      {
+        "rank": 8,
+        "molecule": "ethinylestradiol",
+        "chemistry_class": "sterol_steroid",
+        "similarity": 0.0559187778587917,
+        "supporting_csms": [
+          {
+            "csm_id": "csm46",
+            "contribution": 0.0542027044267559,
+            "share_of_similarity": 0.9693113208350402,
+            "lsms": [
+              "sterol_steroid.m02"
+            ],
+            "diagnostic_bands": [
+              500.0,
+              594.0,
+              730.0,
+              932.0,
+              968.0,
+              1008.0,
+              1258.0,
+              1340.0,
+              1436.0,
+              1616.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 0.0017160734320357984,
+            "share_of_similarity": 0.030688679147076604,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.0559187778587917,
+        "reconciles": true
+      },
+      {
+        "rank": 9,
+        "molecule": "estrone",
+        "chemistry_class": "sterol_steroid",
+        "similarity": 0.05491011706247518,
+        "supporting_csms": [
+          {
+            "csm_id": "csm46",
+            "contribution": 0.05491011706247518,
+            "share_of_similarity": 0.9999999999817885,
+            "lsms": [
+              "sterol_steroid.m02"
+            ],
+            "diagnostic_bands": [
+              500.0,
+              594.0,
+              730.0,
+              932.0,
+              968.0,
+              1008.0,
+              1258.0,
+              1340.0,
+              1436.0,
+              1616.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.05491011706247518,
+        "reconciles": true
+      },
+      {
+        "rank": 10,
+        "molecule": "ferritin",
+        "chemistry_class": "peptide_protein",
+        "similarity": 0.033356776338803185,
+        "supporting_csms": [
+          {
+            "csm_id": "csm47",
+            "contribution": 0.025378951088450806,
+            "share_of_similarity": 0.7608334459516465,
+            "lsms": [
+              "sulfur_thiol_cofactor.m00"
+            ],
+            "diagnostic_bands": [
+              526.0,
+              632.0,
+              724.0,
+              806.0,
+              886.0,
+              1036.0,
+              1334.0,
+              1410.0,
+              1510.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm46",
+            "contribution": 0.005916512795818191,
+            "share_of_similarity": 0.17737064084212104,
+            "lsms": [
+              "sterol_steroid.m02"
+            ],
+            "diagnostic_bands": [
+              500.0,
+              594.0,
+              730.0,
+              932.0,
+              968.0,
+              1008.0,
+              1258.0,
+              1340.0,
+              1436.0,
+              1616.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 0.0012970129301623384,
+            "share_of_similarity": 0.03888304184282549,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          },
+          {
+            "csm_id": "csm09",
+            "contribution": 0.0007642995243718516,
+            "share_of_similarity": 0.022912871333428175,
+            "lsms": [
+              "fatty_acid.m03"
+            ],
+            "diagnostic_bands": [
+              906.0,
+              1096.0,
+              1120.0,
+              1302.0,
+              1440.0,
+              1668.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.03335677633880319,
+        "reconciles": true
+      }
+    ],
+    "margin": 0.005013761268541916,
+    "n_candidates": 154
+  },
+  "chemistry": {
+    "axis_names": [
+      "acylglycerol",
+      "carboxylic_acid_metabolite",
+      "chromophore_pigment",
+      "fatty_acid",
+      "free_amino_acid",
+      "mono_oligosaccharide",
+      "nucleic_acid_polymer",
+      "peptide_protein",
+      "phosphate_metabolite",
+      "phospholipid_sphingolipid",
+      "polysaccharide",
+      "purine",
+      "pyrimidine",
+      "small_nitrogenous",
+      "sterol_steroid",
+      "sulfur_thiol_cofactor"
+    ],
+    "evidence": [
+      0.001839739240144808,
+      0.0008953039728346699,
+      0.08677587259526884,
+      0.002836260577941711,
+      0.06269405482055436,
+      0.0006492261987985617,
+      0.00021852126357730525,
+      0.004092012554114276,
+      0.00022641133061981772,
+      0.001884101306795255,
+      0.010507364674992126,
+      0.0013688231702567763,
+      0.00024123682192935556,
+      0.000765119286800879,
+      0.008234466242157635,
+      1.1265957691580328
+    ],
+    "calibrated_probability": [
+      4.61039862325965e-15,
+      1.1344436662334729e-16,
+      1.874474466575961e-06,
+      4.273164801904924e-14,
+      3.521226987431047e-07,
+      2.1717921844990162e-17,
+      8.021035577352079e-20,
+      2.8159175434371686e-13,
+      9.626540543571099e-20,
+      5.211563157265808e-15,
+      3.600489055023777e-11,
+      1.007416102314113e-15,
+      1.3340211828464787e-19,
+      5.055364934026725e-17,
+      1.027616357137765e-11,
+      0.9999977733552182
+    ],
+    "evidence_l1": [
+      0.0014045695012066554,
+      0.0006835298324417697,
+      0.06625001056036371,
+      0.002165374863090992,
+      0.04786447741420006,
+      0.0004956590033623533,
+      0.0001668325029375712,
+      0.0031240927554555325,
+      0.000172856262875157,
+      0.0014384382172007819,
+      0.008021965090763883,
+      0.0010450433602407383,
+      0.00018417495004527037,
+      0.0005841388777144932,
+      0.006286695358816192,
+      0.8601121414485214
+    ],
+    "top": [
+      {
+        "axis": "sulfur_thiol_cofactor",
+        "evidence": 1.1265957691580328,
+        "share": 0.8601121414485214,
+        "calibrated_probability": 0.9999977733552182,
+        "rank": 1
+      },
+      {
+        "axis": "chromophore_pigment",
+        "evidence": 0.08677587259526884,
+        "share": 0.06625001056036371,
+        "calibrated_probability": 1.874474466575961e-06,
+        "rank": 2
+      },
+      {
+        "axis": "free_amino_acid",
+        "evidence": 0.06269405482055436,
+        "share": 0.04786447741420006,
+        "calibrated_probability": 3.521226987431047e-07,
+        "rank": 3
+      },
+      {
+        "axis": "polysaccharide",
+        "evidence": 0.010507364674992126,
+        "share": 0.008021965090763883,
+        "calibrated_probability": 3.600489055023777e-11,
+        "rank": 4
+      },
+      {
+        "axis": "sterol_steroid",
+        "evidence": 0.008234466242157635,
+        "share": 0.006286695358816192,
+        "calibrated_probability": 1.027616357137765e-11,
+        "rank": 5
+      }
+    ],
+    "predicted_class": "sulfur_thiol_cofactor",
+    "margin": 1.039819896562764,
+    "entropy": 0.21649358543763825
+  },
+  "confidence": {
+    "overall": 0.7357301196443564,
+    "evidence_coverage": 0.740025881745187,
+    "top1_confidence": 0.9941951191075912,
+    "top3_confidence": 0.8067170043680972,
+    "retrieval_margin": 0.005013761268541916,
+    "chemistry_confidence": 0.9999977733552182,
+    "reconstruction_explained_variance": 0.740025881745187,
+    "unknown_warning": true,
+    "outlier_warning": false,
+    "notes": [
+      "top-1 and top-2 differ by 0.0050; the identification is not decisive",
+      "preprocessing skipped: caller asserts the spectrum is canonical"
+    ]
+  },
+  "provenance": {
+    "root": "spectrum",
+    "lsm_layer": [
+      {
+        "id": "sulfur_thiol_cofactor.m00",
+        "weight": 0.6190585436060078
+      },
+      {
+        "id": "chromophore_pigment.m00",
+        "weight": 0.04959727217922823
+      },
+      {
+        "id": "sterol_steroid.m02",
+        "weight": 0.03643648150914146
+      },
+      {
+        "id": "sulfur_thiol_cofactor.m01",
+        "weight": 0.019101534794016058
+      },
+      {
+        "id": "fatty_acid.m03",
+        "weight": 0.016368753428905692
+      }
+    ],
+    "csm_layer": [
+      {
+        "id": "csm47",
+        "weight": 0.7986355081115983,
+        "lsms": [
+          "sulfur_thiol_cofactor.m00"
+        ],
+        "bands": [
+          526.0,
+          632.0,
+          724.0,
+          806.0,
+          886.0,
+          1036.0,
+          1334.0,
+          1410.0,
+          1510.0,
+          1668.0
+        ],
+        "assignment": "526: S\u2013S stretch [sulfur_thiol_cofactor] | 632: C\u2013S stretch [sulfur_thiol_cofactor] | 724: ring breathing | 806: unassigned | 886: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1036: C\u2013N / C\u2013O stretch | 1334: CH deformation / tryptophan | 1410: COO- symmetric stretch | 1510: conjugated C=C (carotenoid) | 1668: amide I / C=C stretch"
+      },
+      {
+        "id": "csm05",
+        "weight": 0.061329763410698554,
+        "lsms": [
+          "chromophore_pigment.m00"
+        ],
+        "bands": [
+          1006.0,
+          1156.0,
+          1270.0,
+          1518.0
+        ],
+        "assignment": "1006: phenylalanine ring breathing | 1156: C\u2013C conjugated [chromophore_pigment] | 1270: amide III / =C\u2013H in-plane bend | 1518: C=C conjugated [chromophore_pigment]"
+      },
+      {
+        "id": "csm46",
+        "weight": 0.04414020762867591,
+        "lsms": [
+          "sterol_steroid.m02"
+        ],
+        "bands": [
+          500.0,
+          594.0,
+          730.0,
+          932.0,
+          968.0,
+          1008.0,
+          1258.0,
+          1340.0,
+          1436.0,
+          1616.0
+        ],
+        "assignment": "500: S\u2013S / skeletal deformation | 594: unassigned | 730: ring breathing | 932: C\u2013C backbone stretch | 968: unassigned | 1008: phenylalanine ring breathing | 1258: amide III / =C\u2013H in-plane bend | 1340: CH deformation / tryptophan | 1436: CH2 / CH3 scissoring | 1616: aromatic ring C=C"
+      },
+      {
+        "id": "csm48",
+        "weight": 0.021838875909701464,
+        "lsms": [
+          "sulfur_thiol_cofactor.m01"
+        ],
+        "bands": [
+          506.0,
+          716.0,
+          908.0,
+          962.0,
+          1008.0,
+          1086.0,
+          1206.0,
+          1450.0,
+          1496.0,
+          1638.0
+        ],
+        "assignment": "506: S\u2013S stretch [sulfur_thiol_cofactor] | 716: ring breathing | 908: unassigned | 962: unassigned | 1008: phenylalanine ring breathing | 1086: C\u2013C skeletal (trans) / PO2- symmetric | 1206: amide III / C\u2013O\u2013C asymmetric | 1450: CH2 / CH3 scissoring | 1496: unassigned | 1638: amide I / C=C stretch"
+      },
+      {
+        "id": "csm09",
+        "weight": 0.017523868145933975,
+        "lsms": [
+          "fatty_acid.m03"
+        ],
+        "bands": [
+          906.0,
+          1096.0,
+          1120.0,
+          1302.0,
+          1440.0,
+          1668.0
+        ],
+        "assignment": "906: unassigned | 1096: C\u2013C skeletal (trans) / PO2- symmetric | 1120: C\u2013C skeletal (gauche) / C\u2013N stretch | 1302: CH2 twist | 1440: CH2 / CH3 scissoring | 1668: cis C=C [fatty_acid]"
+      }
+    ],
+    "chemistry_layer": [
+      {
+        "axis": "sulfur_thiol_cofactor",
+        "evidence": 1.1265957691580328
+      },
+      {
+        "axis": "chromophore_pigment",
+        "evidence": 0.08677587259526884
+      },
+      {
+        "axis": "free_amino_acid",
+        "evidence": 0.06269405482055436
+      },
+      {
+        "axis": "polysaccharide",
+        "evidence": 0.010507364674992126
+      },
+      {
+        "axis": "sterol_steroid",
+        "evidence": 0.008234466242157635
+      }
+    ],
+    "molecule_layer": [
+      {
+        "molecule": "coenzyme a",
+        "similarity": 0.9941951191075912,
+        "class": "sulfur_thiol_cofactor",
+        "via_csms": [
+          "csm47",
+          "csm05",
+          "csm46",
+          "csm48",
+          "csm09"
+        ]
+      },
+      {
+        "molecule": "acetyl-coa",
+        "similarity": 0.9891813578390493,
+        "class": "sulfur_thiol_cofactor",
+        "via_csms": [
+          "csm47",
+          "csm46"
+        ]
+      },
+      {
+        "molecule": "glutathione",
+        "similarity": 0.43677453615765105,
+        "class": "sulfur_thiol_cofactor",
+        "via_csms": [
+          "csm47",
+          "csm48"
+        ]
+      },
+      {
+        "molecule": "methionine",
+        "similarity": 0.42809450745855526,
+        "class": "free_amino_acid",
+        "via_csms": [
+          "csm47",
+          "csm46",
+          "csm09"
+        ]
+      },
+      {
+        "molecule": "glycogen",
+        "similarity": 0.08823141999288399,
+        "class": "polysaccharide",
+        "via_csms": [
+          "csm47",
+          "csm05"
+        ]
+      }
+    ],
+    "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f"
+  },
+  "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f",
+  "_provenance": {
+    "phase": "09",
+    "seed": 0,
+    "fingerprints": {
+      "atlas": "09ed804a40836f4a05a91ba10900cded",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51"
+    },
+    "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f",
+    "code_fingerprint": "5e10e5c2eebb42c1427c2cdc0ebf4683",
+    "created_utc": "2026-08-07T05:31:50.945105+00:00",
+    "packaging_phase": true
+  }
+}

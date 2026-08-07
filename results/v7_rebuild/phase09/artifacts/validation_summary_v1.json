@@ -1,0 +1,63 @@
+{
+  "lsm": {
+    "mean_explained_variance": 0.8237197579172706,
+    "min_explained_variance": 0.2086597823562737,
+    "mean_reconstruction_error": 0.37323606833008277,
+    "mean_active_components": 9.6,
+    "n_lsms": 50,
+    "mean_sparsity": 0.8723313216613412,
+    "replicate_consistency": 0.879893866356737
+  },
+  "csm": {
+    "class_top1": 0.8453333333333334,
+    "class_top3": 0.9706666666666667,
+    "macro_f1": 0.8067832265276851,
+    "balanced_accuracy": 0.79661202673088,
+    "mean_explained_variance": 0.8231960116865533,
+    "mean_active": 9.557333333333334,
+    "replicate_consistency": 0.8926802114816931
+  },
+  "retrieval": {
+    "top1": 0.6053333333333333,
+    "top3": 0.7626666666666667,
+    "top5": 0.7946666666666666,
+    "top10": 0.8106666666666666,
+    "mrr": 0.6870030418103813,
+    "ndcg5": 0.7111646175586396,
+    "mean_reciprocal_rank": 0.6870030418103813,
+    "median_rank": 1.0,
+    "mean_rank": 29.018666666666668,
+    "unretrievable": 0,
+    "ece": 0.1205175688975,
+    "brier": 0.22599855650635975,
+    "discrimination": 0.6913620669127277
+  },
+  "chemistry": {
+    "IN_SAMPLE_WARNING": "fine_top1_in_sample and macro_auc are computed with the chemistry model fitted on all 375 spectra. They are a sanity check on the engine, NOT a performance claim. Quote fine_top1_heldout.",
+    "fine_top1_heldout": 0.8506666666666667,
+    "fine_top3_heldout": 0.976,
+    "macro_f1_heldout": 0.8110022726012136,
+    "fine_top1_in_sample": 0.9546666666666667,
+    "fine_top3_in_sample": 1.0,
+    "macro_auc": 0.99897154599106,
+    "macro_average_precision": 0.9832792330124838,
+    "ece": 0.053382588526115056,
+    "brier": 0.05395642886210254,
+    "discrimination": 0.8529411764705882,
+    "radar_reproducibility": 0.9595970920166317
+  },
+  "_provenance": {
+    "phase": "09",
+    "seed": 0,
+    "fingerprints": {
+      "atlas": "09ed804a40836f4a05a91ba10900cded",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51"
+    },
+    "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f",
+    "code_fingerprint": "5e10e5c2eebb42c1427c2cdc0ebf4683",
+    "created_utc": "2026-08-07T05:31:50.945105+00:00",
+    "packaging_phase": true
+  }
+}

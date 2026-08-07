@@ -1,0 +1,1543 @@
+{
+  "preprocessing": {
+    "n_input_points": 676,
+    "input_range": [
+      450.0,
+      1800.0
+    ],
+    "resampled_to": "supplied on the canonical grid",
+    "baseline_method": "(skipped)",
+    "smoothing": "(skipped)",
+    "normalisation": "L2 (re-applied)",
+    "n_peaks": 15,
+    "signal_quality": 1.0,
+    "snr_estimate": 267.08144143420753,
+    "warnings": [
+      "preprocessing skipped: caller asserts the spectrum is canonical"
+    ]
+  },
+  "lsm": {
+    "activation": [
+      0.32086654092282024,
+      0.2210600330285183,
+      0.015496241966900009,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.011735824223732915,
+      0.06447122980401496,
+      0.0,
+      0.13482411353954793,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.026562058477783614,
+      0.00778251465596864,
+      0.023981415857383694,
+      0.0,
+      0.0,
+      0.026715720799762255,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "reconstruction_error": 0.17824901488831849,
+    "explained_variance": 0.9682272886913122,
+    "n_active": 10,
+    "top": [
+      {
+        "lsm_id": "acylglycerol.m00",
+        "weight": 0.32086654092282024,
+        "share": 0.3759439484582392
+      },
+      {
+        "lsm_id": "acylglycerol.m01",
+        "weight": 0.2210600330285183,
+        "share": 0.25900544638912637
+      },
+      {
+        "lsm_id": "fatty_acid.m03",
+        "weight": 0.13482411353954793,
+        "share": 0.15796695238358133
+      },
+      {
+        "lsm_id": "fatty_acid.m01",
+        "weight": 0.06447122980401496,
+        "share": 0.07553785017525366
+      },
+      {
+        "lsm_id": "mono_oligosaccharide.m04",
+        "weight": 0.026715720799762255,
+        "share": 0.031301529709158345
+      },
+      {
+        "lsm_id": "free_amino_acid.m06",
+        "weight": 0.026562058477783614,
+        "share": 0.031121490930768526
+      },
+      {
+        "lsm_id": "mono_oligosaccharide.m01",
+        "weight": 0.023981415857383694,
+        "share": 0.02809787564984048
+      },
+      {
+        "lsm_id": "acylglycerol.m02",
+        "weight": 0.015496241966900009,
+        "share": 0.018156204054638254
+      }
+    ]
+  },
+  "csm": {
+    "activation": [
+      0.387705642771327,
+      0.4910132038055032,
+      0.062422506419243656,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0077093826278345256,
+      0.0,
+      0.18549952785043372,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.027903715344771075,
+      0.01302378093473804,
+      0.027690464975200366,
+      0.0,
+      0.0,
+      0.031896157839411604,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "explained_variance": 0.967674837210567,
+    "residual_fraction": 0.032325162789432954,
+    "sparsity": 0.8537195859370637,
+    "entropy": 0.3882528977890355,
+    "n_active": 9,
+    "top": [
+      {
+        "csm_id": "csm01",
+        "weight": 0.4910132038055032,
+        "share": 0.3976252054365839,
+        "dominant_bands": [
+          848.0,
+          1068.0,
+          1118.0,
+          1304.0,
+          1440.0,
+          1676.0,
+          1744.0
+        ],
+        "band_assignment": "848: tyrosine Fermi doublet / C\u2013C skeletal | 1068: C\u2013C skeletal (trans) / PO2- symmetric | 1118: unassigned | 1304: CH2 twist | 1440: CH2 / CH3 scissoring | 1676: amide I / C=C stretch | 1744: ester C=O [acylglycerol]",
+        "lsms": [
+          "acylglycerol.m00"
+        ]
+      },
+      {
+        "csm_id": "csm00",
+        "weight": 0.387705642771327,
+        "share": 0.31396617170591845,
+        "dominant_bands": [
+          866.0,
+          970.0,
+          1082.0,
+          1264.0,
+          1436.0,
+          1654.0
+        ],
+        "band_assignment": "866: glycerol C\u2013C [acylglycerol] | 970: unassigned | 1082: C\u2013C skeletal (trans) / PO2- symmetric | 1264: amide III / =C\u2013H in-plane bend | 1436: CH2 / CH3 scissoring | 1654: cis C=C [fatty_acid]",
+        "lsms": [
+          "acylglycerol.m01",
+          "fatty_acid.m01"
+        ]
+      },
+      {
+        "csm_id": "csm09",
+        "weight": 0.18549952785043372,
+        "share": 0.1502185425936836,
+        "dominant_bands": [
+          906.0,
+          1096.0,
+          1120.0,
+          1302.0,
+          1440.0,
+          1668.0
+        ],
+        "band_assignment": "906: unassigned | 1096: C\u2013C skeletal (trans) / PO2- symmetric | 1120: C\u2013C skeletal (gauche) / C\u2013N stretch | 1302: CH2 twist | 1440: CH2 / CH3 scissoring | 1668: cis C=C [fatty_acid]",
+        "lsms": [
+          "fatty_acid.m03"
+        ]
+      },
+      {
+        "csm_id": "csm02",
+        "weight": 0.062422506419243656,
+        "share": 0.05055009060133151,
+        "dominant_bands": [
+          892.0,
+          1062.0,
+          1130.0,
+          1180.0,
+          1248.0,
+          1298.0,
+          1368.0,
+          1442.0,
+          1742.0
+        ],
+        "band_assignment": "892: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1062: C\u2013C skeletal (trans) / PO2- symmetric | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1180: C\u2013C / C=C conjugated stretch | 1248: amide III / =C\u2013H in-plane bend | 1298: CH2 twist | 1368: unassigned | 1442: CH2 / CH3 scissoring | 1742: ester C=O [acylglycerol]",
+        "lsms": [
+          "acylglycerol.m02"
+        ]
+      },
+      {
+        "csm_id": "csm22",
+        "weight": 0.031896157839411604,
+        "share": 0.025829684854172554,
+        "dominant_bands": [
+          626.0,
+          674.0,
+          812.0,
+          876.0,
+          924.0,
+          978.0,
+          1046.0,
+          1084.0,
+          1276.0,
+          1470.0
+        ],
+        "band_assignment": "626: C\u2013S stretch / phenyl ring | 674: unassigned | 812: unassigned | 876: anomeric C\u2013H [mono_oligosaccharide] | 924: unassigned | 978: unassigned | 1046: C\u2013N / C\u2013O stretch | 1084: C\u2013O\u2013C glycosidic [mono_oligosaccharide] | 1276: amide III / =C\u2013H in-plane bend | 1470: unassigned",
+        "lsms": [
+          "mono_oligosaccharide.m04"
+        ]
+      },
+      {
+        "csm_id": "csm17",
+        "weight": 0.027903715344771075,
+        "share": 0.022596582862573125,
+        "dominant_bands": [
+          552.0,
+          722.0,
+          924.0,
+          982.0,
+          1066.0,
+          1176.0,
+          1272.0,
+          1318.0,
+          1352.0,
+          1440.0
+        ],
+        "band_assignment": "552: S\u2013S / skeletal deformation | 722: ring breathing | 924: unassigned | 982: unassigned | 1066: C\u2013C skeletal (trans) / PO2- symmetric | 1176: C\u2013C / C=C conjugated stretch | 1272: amide III / =C\u2013H in-plane bend | 1318: CH2 twist | 1352: CH deformation / tryptophan | 1440: CH2 / CH3 scissoring",
+        "lsms": [
+          "free_amino_acid.m06"
+        ]
+      },
+      {
+        "csm_id": "csm19",
+        "weight": 0.027690464975200366,
+        "share": 0.02242389153502266,
+        "dominant_bands": [
+          510.0,
+          580.0,
+          698.0,
+          842.0,
+          936.0,
+          992.0,
+          1052.0,
+          1258.0,
+          1312.0,
+          1474.0
+        ],
+        "band_assignment": "510: S\u2013S / skeletal deformation | 580: unassigned | 698: unassigned | 842: anomeric C\u2013H [mono_oligosaccharide] | 936: C\u2013C backbone stretch | 992: unassigned | 1052: C\u2013N / C\u2013O stretch | 1258: amide III / =C\u2013H in-plane bend | 1312: CH2 twist | 1474: unassigned",
+        "lsms": [
+          "mono_oligosaccharide.m01"
+        ]
+      },
+      {
+        "csm_id": "csm18",
+        "weight": 0.01302378093473804,
+        "share": 0.010546729761237914,
+        "dominant_bands": [
+          530.0,
+          818.0,
+          874.0,
+          948.0,
+          998.0,
+          1062.0,
+          1156.0,
+          1270.0,
+          1332.0,
+          1452.0
+        ],
+        "band_assignment": "530: S\u2013S / skeletal deformation | 818: unassigned | 874: anomeric C\u2013H [mono_oligosaccharide] | 948: C\u2013C backbone stretch | 998: unassigned | 1062: C\u2013C skeletal (trans) / PO2- symmetric | 1156: C\u2013C / C=C conjugated stretch | 1270: amide III / =C\u2013H in-plane bend | 1332: CH deformation / tryptophan | 1452: CH2 / CH3 scissoring",
+        "lsms": [
+          "mono_oligosaccharide.m00"
+        ]
+      }
+    ]
+  },
+  "retrieval": {
+    "top": [
+      {
+        "rank": 1,
+        "molecule": "triolein",
+        "chemistry_class": "acylglycerol",
+        "similarity": 0.994253605105037,
+        "supporting_csms": [
+          {
+            "csm_id": "csm01",
+            "contribution": 0.5635526279335814,
+            "share_of_similarity": 0.5668097405324254,
+            "lsms": [
+              "acylglycerol.m00"
+            ],
+            "diagnostic_bands": [
+              848.0,
+              1068.0,
+              1118.0,
+              1304.0,
+              1440.0,
+              1676.0,
+              1744.0
+            ]
+          },
+          {
+            "csm_id": "csm00",
+            "contribution": 0.3462374275973238,
+            "share_of_similarity": 0.3482385437872238,
+            "lsms": [
+              "acylglycerol.m01",
+              "fatty_acid.m01"
+            ],
+            "diagnostic_bands": [
+              866.0,
+              970.0,
+              1082.0,
+              1264.0,
+              1436.0,
+              1654.0
+            ]
+          },
+          {
+            "csm_id": "csm09",
+            "contribution": 0.07317646355475807,
+            "share_of_similarity": 0.07359939474089593,
+            "lsms": [
+              "fatty_acid.m03"
+            ],
+            "diagnostic_bands": [
+              906.0,
+              1096.0,
+              1120.0,
+              1302.0,
+              1440.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm22",
+            "contribution": 0.0035246587162502557,
+            "share_of_similarity": 0.003545029857723625,
+            "lsms": [
+              "mono_oligosaccharide.m04"
+            ],
+            "diagnostic_bands": [
+              626.0,
+              674.0,
+              812.0,
+              876.0,
+              924.0,
+              978.0,
+              1046.0,
+              1084.0,
+              1276.0,
+              1470.0
+            ]
+          },
+          {
+            "csm_id": "csm02",
+            "contribution": 0.002150989520670755,
+            "share_of_similarity": 0.002163421394324592,
+            "lsms": [
+              "acylglycerol.m02"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1062.0,
+              1130.0,
+              1180.0,
+              1248.0,
+              1298.0,
+              1368.0,
+              1442.0,
+              1742.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.994253605105037,
+        "reconciles": true
+      },
+      {
+        "rank": 2,
+        "molecule": "tripalmitolein",
+        "chemistry_class": "acylglycerol",
+        "similarity": 0.988854657912104,
+        "supporting_csms": [
+          {
+            "csm_id": "csm01",
+            "contribution": 0.5193674757311564,
+            "share_of_similarity": 0.5252212461912639,
+            "lsms": [
+              "acylglycerol.m00"
+            ],
+            "diagnostic_bands": [
+              848.0,
+              1068.0,
+              1118.0,
+              1304.0,
+              1440.0,
+              1676.0,
+              1744.0
+            ]
+          },
+          {
+            "csm_id": "csm00",
+            "contribution": 0.37771761985662466,
+            "share_of_similarity": 0.38197486034375006,
+            "lsms": [
+              "acylglycerol.m01",
+              "fatty_acid.m01"
+            ],
+            "diagnostic_bands": [
+              866.0,
+              970.0,
+              1082.0,
+              1264.0,
+              1436.0,
+              1654.0
+            ]
+          },
+          {
+            "csm_id": "csm09",
+            "contribution": 0.09165308976290273,
+            "share_of_similarity": 0.09268610814488046,
+            "lsms": [
+              "fatty_acid.m03"
+            ],
+            "diagnostic_bands": [
+              906.0,
+              1096.0,
+              1120.0,
+              1302.0,
+              1440.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm02",
+            "contribution": 0.00011647256142019143,
+            "share_of_similarity": 0.00011778531909431174,
+            "lsms": [
+              "acylglycerol.m02"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1062.0,
+              1130.0,
+              1180.0,
+              1248.0,
+              1298.0,
+              1368.0,
+              1442.0,
+              1742.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.988854657912104,
+        "reconciles": true
+      },
+      {
+        "rank": 3,
+        "molecule": "tri-11-eicosenoin",
+        "chemistry_class": "acylglycerol",
+        "similarity": 0.9519495769880949,
+        "supporting_csms": [
+          {
+            "csm_id": "csm01",
+            "contribution": 0.6642428905836733,
+            "share_of_similarity": 0.6977710864524944,
+            "lsms": [
+              "acylglycerol.m00"
+            ],
+            "diagnostic_bands": [
+              848.0,
+              1068.0,
+              1118.0,
+              1304.0,
+              1440.0,
+              1676.0,
+              1744.0
+            ]
+          },
+          {
+            "csm_id": "csm00",
+            "contribution": 0.24903348460600216,
+            "share_of_similarity": 0.261603650682493,
+            "lsms": [
+              "acylglycerol.m01",
+              "fatty_acid.m01"
+            ],
+            "diagnostic_bands": [
+              866.0,
+              970.0,
+              1082.0,
+              1264.0,
+              1436.0,
+              1654.0
+            ]
+          },
+          {
+            "csm_id": "csm09",
+            "contribution": 0.03812223544165263,
+            "share_of_similarity": 0.04004648603577177,
+            "lsms": [
+              "fatty_acid.m03"
+            ],
+            "diagnostic_bands": [
+              906.0,
+              1096.0,
+              1120.0,
+              1302.0,
+              1440.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm17",
+            "contribution": 0.0005509663567669043,
+            "share_of_similarity": 0.000578776828190361,
+            "lsms": [
+              "free_amino_acid.m06"
+            ],
+            "diagnostic_bands": [
+              552.0,
+              722.0,
+              924.0,
+              982.0,
+              1066.0,
+              1176.0,
+              1272.0,
+              1318.0,
+              1352.0,
+              1440.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.9519495769880949,
+        "reconciles": true
+      },
+      {
+        "rank": 4,
+        "molecule": "vaccenic acid",
+        "chemistry_class": "fatty_acid",
+        "similarity": 0.8733865502789918,
+        "supporting_csms": [
+          {
+            "csm_id": "csm00",
+            "contribution": 0.3992891619006865,
+            "share_of_similarity": 0.45717347235617684,
+            "lsms": [
+              "acylglycerol.m01",
+              "fatty_acid.m01"
+            ],
+            "diagnostic_bands": [
+              866.0,
+              970.0,
+              1082.0,
+              1264.0,
+              1436.0,
+              1654.0
+            ]
+          },
+          {
+            "csm_id": "csm01",
+            "contribution": 0.30094827522274736,
+            "share_of_similarity": 0.3445762648008134,
+            "lsms": [
+              "acylglycerol.m00"
+            ],
+            "diagnostic_bands": [
+              848.0,
+              1068.0,
+              1118.0,
+              1304.0,
+              1440.0,
+              1676.0,
+              1744.0
+            ]
+          },
+          {
+            "csm_id": "csm09",
+            "contribution": 0.167338934347259,
+            "share_of_similarity": 0.19159779171503521,
+            "lsms": [
+              "fatty_acid.m03"
+            ],
+            "diagnostic_bands": [
+              906.0,
+              1096.0,
+              1120.0,
+              1302.0,
+              1440.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm02",
+            "contribution": 0.00314308434302801,
+            "share_of_similarity": 0.0035987322475030037,
+            "lsms": [
+              "acylglycerol.m02"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1062.0,
+              1130.0,
+              1180.0,
+              1248.0,
+              1298.0,
+              1368.0,
+              1442.0,
+              1742.0
+            ]
+          },
+          {
+            "csm_id": "csm17",
+            "contribution": 0.001670563973190654,
+            "share_of_similarity": 0.0019127429574626513,
+            "lsms": [
+              "free_amino_acid.m06"
+            ],
+            "diagnostic_bands": [
+              552.0,
+              722.0,
+              924.0,
+              982.0,
+              1066.0,
+              1176.0,
+              1272.0,
+              1318.0,
+              1352.0,
+              1440.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.8733865502789918,
+        "reconciles": true
+      },
+      {
+        "rank": 5,
+        "molecule": "oleate",
+        "chemistry_class": "fatty_acid",
+        "similarity": 0.8449080237943769,
+        "supporting_csms": [
+          {
+            "csm_id": "csm00",
+            "contribution": 0.4219543197795223,
+            "share_of_similarity": 0.49940858400666915,
+            "lsms": [
+              "acylglycerol.m01",
+              "fatty_acid.m01"
+            ],
+            "diagnostic_bands": [
+              866.0,
+              970.0,
+              1082.0,
+              1264.0,
+              1436.0,
+              1654.0
+            ]
+          },
+          {
+            "csm_id": "csm01",
+            "contribution": 0.2507846833375233,
+            "share_of_similarity": 0.2968189155205127,
+            "lsms": [
+              "acylglycerol.m00"
+            ],
+            "diagnostic_bands": [
+              848.0,
+              1068.0,
+              1118.0,
+              1304.0,
+              1440.0,
+              1676.0,
+              1744.0
+            ]
+          },
+          {
+            "csm_id": "csm09",
+            "contribution": 0.16312869934182572,
+            "share_of_similarity": 0.19307273069681827,
+            "lsms": [
+              "fatty_acid.m03"
+            ],
+            "diagnostic_bands": [
+              906.0,
+              1096.0,
+              1120.0,
+              1302.0,
+              1440.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm22",
+            "contribution": 0.0023473409803803236,
+            "share_of_similarity": 0.002778220722577505,
+            "lsms": [
+              "mono_oligosaccharide.m04"
+            ],
+            "diagnostic_bands": [
+              626.0,
+              674.0,
+              812.0,
+              876.0,
+              924.0,
+              978.0,
+              1046.0,
+              1084.0,
+              1276.0,
+              1470.0
+            ]
+          },
+          {
+            "csm_id": "csm17",
+            "contribution": 0.002175597410532819,
+            "share_of_similarity": 0.0025749517690220373,
+            "lsms": [
+              "free_amino_acid.m06"
+            ],
+            "diagnostic_bands": [
+              552.0,
+              722.0,
+              924.0,
+              982.0,
+              1066.0,
+              1176.0,
+              1272.0,
+              1318.0,
+              1352.0,
+              1440.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.8449080237943769,
+        "reconciles": true
+      },
+      {
+        "rank": 6,
+        "molecule": "palmitoleic acid",
+        "chemistry_class": "fatty_acid",
+        "similarity": 0.7802132118413528,
+        "supporting_csms": [
+          {
+            "csm_id": "csm00",
+            "contribution": 0.5018501220389303,
+            "share_of_similarity": 0.6432217686417907,
+            "lsms": [
+              "acylglycerol.m01",
+              "fatty_acid.m01"
+            ],
+            "diagnostic_bands": [
+              866.0,
+              970.0,
+              1082.0,
+              1264.0,
+              1436.0,
+              1654.0
+            ]
+          },
+          {
+            "csm_id": "csm01",
+            "contribution": 0.14812968134344362,
+            "share_of_similarity": 0.18985795048722423,
+            "lsms": [
+              "acylglycerol.m00"
+            ],
+            "diagnostic_bands": [
+              848.0,
+              1068.0,
+              1118.0,
+              1304.0,
+              1440.0,
+              1676.0,
+              1744.0
+            ]
+          },
+          {
+            "csm_id": "csm09",
+            "contribution": 0.13014986868788428,
+            "share_of_similarity": 0.16681320786731552,
+            "lsms": [
+              "fatty_acid.m03"
+            ],
+            "diagnostic_bands": [
+              906.0,
+              1096.0,
+              1120.0,
+              1302.0,
+              1440.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm07",
+            "contribution": 8.353977109459876e-05,
+            "share_of_similarity": 0.00010707300238781207,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.7802132118413528,
+        "reconciles": true
+      },
+      {
+        "rank": 7,
+        "molecule": "tricaprylin",
+        "chemistry_class": "acylglycerol",
+        "similarity": 0.7462500244337279,
+        "supporting_csms": [
+          {
+            "csm_id": "csm01",
+            "contribution": 0.7462500244337279,
+            "share_of_similarity": 0.99999999999866,
+            "lsms": [
+              "acylglycerol.m00"
+            ],
+            "diagnostic_bands": [
+              848.0,
+              1068.0,
+              1118.0,
+              1304.0,
+              1440.0,
+              1676.0,
+              1744.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.7462500244337279,
+        "reconciles": true
+      },
+      {
+        "rank": 8,
+        "molecule": "tricaproin",
+        "chemistry_class": "acylglycerol",
+        "similarity": 0.7443408098079531,
+        "supporting_csms": [
+          {
+            "csm_id": "csm01",
+            "contribution": 0.7439216351599031,
+            "share_of_similarity": 0.9994368511795589,
+            "lsms": [
+              "acylglycerol.m00"
+            ],
+            "diagnostic_bands": [
+              848.0,
+              1068.0,
+              1118.0,
+              1304.0,
+              1440.0,
+              1676.0,
+              1744.0
+            ]
+          },
+          {
+            "csm_id": "csm19",
+            "contribution": 0.0004191746480501,
+            "share_of_similarity": 0.0005631488190976494,
+            "lsms": [
+              "mono_oligosaccharide.m01"
+            ],
+            "diagnostic_bands": [
+              510.0,
+              580.0,
+              698.0,
+              842.0,
+              936.0,
+              992.0,
+              1052.0,
+              1258.0,
+              1312.0,
+              1474.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.7443408098079531,
+        "reconciles": true
+      },
+      {
+        "rank": 9,
+        "molecule": "linoleic acid",
+        "chemistry_class": "fatty_acid",
+        "similarity": 0.6889340750913946,
+        "supporting_csms": [
+          {
+            "csm_id": "csm00",
+            "contribution": 0.5827587948016355,
+            "share_of_similarity": 0.8458847019919582,
+            "lsms": [
+              "acylglycerol.m01",
+              "fatty_acid.m01"
+            ],
+            "diagnostic_bands": [
+              866.0,
+              970.0,
+              1082.0,
+              1264.0,
+              1436.0,
+              1654.0
+            ]
+          },
+          {
+            "csm_id": "csm01",
+            "contribution": 0.08135212268454345,
+            "share_of_similarity": 0.11808404552152994,
+            "lsms": [
+              "acylglycerol.m00"
+            ],
+            "diagnostic_bands": [
+              848.0,
+              1068.0,
+              1118.0,
+              1304.0,
+              1440.0,
+              1676.0,
+              1744.0
+            ]
+          },
+          {
+            "csm_id": "csm09",
+            "contribution": 0.02441877816549371,
+            "share_of_similarity": 0.03544428857321196,
+            "lsms": [
+              "fatty_acid.m03"
+            ],
+            "diagnostic_bands": [
+              906.0,
+              1096.0,
+              1120.0,
+              1302.0,
+              1440.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm19",
+            "contribution": 0.0003660362600414434,
+            "share_of_similarity": 0.0005313081080977935,
+            "lsms": [
+              "mono_oligosaccharide.m01"
+            ],
+            "diagnostic_bands": [
+              510.0,
+              580.0,
+              698.0,
+              842.0,
+              936.0,
+              992.0,
+              1052.0,
+              1258.0,
+              1312.0,
+              1474.0
+            ]
+          },
+          {
+            "csm_id": "csm07",
+            "contribution": 3.8343179680509636e-05,
+            "share_of_similarity": 5.5655803750696094e-05,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.6889340750913946,
+        "reconciles": true
+      },
+      {
+        "rank": 10,
+        "molecule": "trilinolein",
+        "chemistry_class": "acylglycerol",
+        "similarity": 0.6779034972587213,
+        "supporting_csms": [
+          {
+            "csm_id": "csm00",
+            "contribution": 0.5751946023253593,
+            "share_of_similarity": 0.8484903893407535,
+            "lsms": [
+              "acylglycerol.m01",
+              "fatty_acid.m01"
+            ],
+            "diagnostic_bands": [
+              866.0,
+              970.0,
+              1082.0,
+              1264.0,
+              1436.0,
+              1654.0
+            ]
+          },
+          {
+            "csm_id": "csm09",
+            "contribution": 0.054776926904534055,
+            "share_of_similarity": 0.08080342869738535,
+            "lsms": [
+              "fatty_acid.m03"
+            ],
+            "diagnostic_bands": [
+              906.0,
+              1096.0,
+              1120.0,
+              1302.0,
+              1440.0,
+              1668.0
+            ]
+          },
+          {
+            "csm_id": "csm01",
+            "contribution": 0.04694890667666323,
+            "share_of_similarity": 0.0692560325569112,
+            "lsms": [
+              "acylglycerol.m00"
+            ],
+            "diagnostic_bands": [
+              848.0,
+              1068.0,
+              1118.0,
+              1304.0,
+              1440.0,
+              1676.0,
+              1744.0
+            ]
+          },
+          {
+            "csm_id": "csm19",
+            "contribution": 0.0009830613521647393,
+            "share_of_similarity": 0.0014501494034749088,
+            "lsms": [
+              "mono_oligosaccharide.m01"
+            ],
+            "diagnostic_bands": [
+              510.0,
+              580.0,
+              698.0,
+              842.0,
+              936.0,
+              992.0,
+              1052.0,
+              1258.0,
+              1312.0,
+              1474.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.6779034972587213,
+        "reconciles": true
+      }
+    ],
+    "margin": 0.00539894719293299,
+    "n_candidates": 154
+  },
+  "chemistry": {
+    "axis_names": [
+      "acylglycerol",
+      "carboxylic_acid_metabolite",
+      "chromophore_pigment",
+      "fatty_acid",
+      "free_amino_acid",
+      "mono_oligosaccharide",
+      "nucleic_acid_polymer",
+      "peptide_protein",
+      "phosphate_metabolite",
+      "phospholipid_sphingolipid",
+      "polysaccharide",
+      "purine",
+      "pyrimidine",
+      "small_nitrogenous",
+      "sterol_steroid",
+      "sulfur_thiol_cofactor"
+    ],
+    "evidence": [
+      0.7761334490380343,
+      0.13514308983185533,
+      0.03736869687938534,
+      0.6817823059739895,
+      0.01728712211458403,
+      0.010732476324971192,
+      0.006311359024154866,
+      0.03793283328359015,
+      0.009107932437441185,
+      0.6546766679618382,
+      0.005682548819111151,
+      0.03308709215453527,
+      0.0009369155498407915,
+      0.0021549440401651097,
+      0.2503857335936351,
+      0.04784303365259001
+    ],
+    "calibrated_probability": [
+      0.5172851941242524,
+      6.437773666034629e-05,
+      8.648460315754348e-08,
+      0.26556657367128966,
+      1.6399056906329119e-09,
+      1.4122231534848207e-10,
+      9.200799908626978e-12,
+      9.341404903804522e-08,
+      6.07073921348298e-11,
+      0.21554740201308906,
+      5.36247962544976e-12,
+      4.624706357185327e-08,
+      5.040327054469597e-16,
+      3.657713832175119e-14,
+      0.0015359161755640978,
+      3.08276475464255e-07
+    ],
+    "evidence_l1": [
+      0.28675945515126544,
+      0.04993156635070143,
+      0.013806681273854243,
+      0.2518993645167505,
+      0.006387104852723051,
+      0.00396534779835494,
+      0.0023318694449696122,
+      0.014015113790325825,
+      0.0033651245756155797,
+      0.2418845945084152,
+      0.002099541780164826,
+      0.012224748888910836,
+      0.00034616391411566074,
+      0.0007961911441970736,
+      0.09251047823277377,
+      0.017676653776492565
+    ],
+    "top": [
+      {
+        "axis": "acylglycerol",
+        "evidence": 0.7761334490380343,
+        "share": 0.28675945515126544,
+        "calibrated_probability": 0.5172851941242524,
+        "rank": 1
+      },
+      {
+        "axis": "fatty_acid",
+        "evidence": 0.6817823059739895,
+        "share": 0.2518993645167505,
+        "calibrated_probability": 0.26556657367128966,
+        "rank": 2
+      },
+      {
+        "axis": "phospholipid_sphingolipid",
+        "evidence": 0.6546766679618382,
+        "share": 0.2418845945084152,
+        "calibrated_probability": 0.21554740201308906,
+        "rank": 3
+      },
+      {
+        "axis": "sterol_steroid",
+        "evidence": 0.2503857335936351,
+        "share": 0.09251047823277377,
+        "calibrated_probability": 0.0015359161755640978,
+        "rank": 4
+      },
+      {
+        "axis": "carboxylic_acid_metabolite",
+        "evidence": 0.13514308983185533,
+        "share": 0.04993156635070143,
+        "calibrated_probability": 6.437773666034629e-05,
+        "rank": 5
+      }
+    ],
+    "predicted_class": "acylglycerol",
+    "margin": 0.0943511430640448,
+    "entropy": 0.6389941382435581
+  },
+  "confidence": {
+    "overall": 0.962114195466036,
+    "evidence_coverage": 0.967674837210567,
+    "top1_confidence": 0.994253605105037,
+    "top3_confidence": 0.9783526133350787,
+    "retrieval_margin": 0.00539894719293299,
+    "chemistry_confidence": 0.5172851941242524,
+    "reconstruction_explained_variance": 0.967674837210567,
+    "unknown_warning": true,
+    "outlier_warning": false,
+    "notes": [
+      "top-1 and top-2 differ by 0.0054; the identification is not decisive",
+      "preprocessing skipped: caller asserts the spectrum is canonical"
+    ]
+  },
+  "provenance": {
+    "root": "spectrum",
+    "lsm_layer": [
+      {
+        "id": "acylglycerol.m00",
+        "weight": 0.32086654092282024
+      },
+      {
+        "id": "acylglycerol.m01",
+        "weight": 0.2210600330285183
+      },
+      {
+        "id": "fatty_acid.m03",
+        "weight": 0.13482411353954793
+      },
+      {
+        "id": "fatty_acid.m01",
+        "weight": 0.06447122980401496
+      },
+      {
+        "id": "mono_oligosaccharide.m04",
+        "weight": 0.026715720799762255
+      },
+      {
+        "id": "free_amino_acid.m06",
+        "weight": 0.026562058477783614
+      },
+      {
+        "id": "mono_oligosaccharide.m01",
+        "weight": 0.023981415857383694
+      },
+      {
+        "id": "acylglycerol.m02",
+        "weight": 0.015496241966900009
+      }
+    ],
+    "csm_layer": [
+      {
+        "id": "csm01",
+        "weight": 0.4910132038055032,
+        "lsms": [
+          "acylglycerol.m00"
+        ],
+        "bands": [
+          848.0,
+          1068.0,
+          1118.0,
+          1304.0,
+          1440.0,
+          1676.0,
+          1744.0
+        ],
+        "assignment": "848: tyrosine Fermi doublet / C\u2013C skeletal | 1068: C\u2013C skeletal (trans) / PO2- symmetric | 1118: unassigned | 1304: CH2 twist | 1440: CH2 / CH3 scissoring | 1676: amide I / C=C stretch | 1744: ester C=O [acylglycerol]"
+      },
+      {
+        "id": "csm00",
+        "weight": 0.387705642771327,
+        "lsms": [
+          "acylglycerol.m01",
+          "fatty_acid.m01"
+        ],
+        "bands": [
+          866.0,
+          970.0,
+          1082.0,
+          1264.0,
+          1436.0,
+          1654.0
+        ],
+        "assignment": "866: glycerol C\u2013C [acylglycerol] | 970: unassigned | 1082: C\u2013C skeletal (trans) / PO2- symmetric | 1264: amide III / =C\u2013H in-plane bend | 1436: CH2 / CH3 scissoring | 1654: cis C=C [fatty_acid]"
+      },
+      {
+        "id": "csm09",
+        "weight": 0.18549952785043372,
+        "lsms": [
+          "fatty_acid.m03"
+        ],
+        "bands": [
+          906.0,
+          1096.0,
+          1120.0,
+          1302.0,
+          1440.0,
+          1668.0
+        ],
+        "assignment": "906: unassigned | 1096: C\u2013C skeletal (trans) / PO2- symmetric | 1120: C\u2013C skeletal (gauche) / C\u2013N stretch | 1302: CH2 twist | 1440: CH2 / CH3 scissoring | 1668: cis C=C [fatty_acid]"
+      },
+      {
+        "id": "csm02",
+        "weight": 0.062422506419243656,
+        "lsms": [
+          "acylglycerol.m02"
+        ],
+        "bands": [
+          892.0,
+          1062.0,
+          1130.0,
+          1180.0,
+          1248.0,
+          1298.0,
+          1368.0,
+          1442.0,
+          1742.0
+        ],
+        "assignment": "892: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1062: C\u2013C skeletal (trans) / PO2- symmetric | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1180: C\u2013C / C=C conjugated stretch | 1248: amide III / =C\u2013H in-plane bend | 1298: CH2 twist | 1368: unassigned | 1442: CH2 / CH3 scissoring | 1742: ester C=O [acylglycerol]"
+      },
+      {
+        "id": "csm22",
+        "weight": 0.031896157839411604,
+        "lsms": [
+          "mono_oligosaccharide.m04"
+        ],
+        "bands": [
+          626.0,
+          674.0,
+          812.0,
+          876.0,
+          924.0,
+          978.0,
+          1046.0,
+          1084.0,
+          1276.0,
+          1470.0
+        ],
+        "assignment": "626: C\u2013S stretch / phenyl ring | 674: unassigned | 812: unassigned | 876: anomeric C\u2013H [mono_oligosaccharide] | 924: unassigned | 978: unassigned | 1046: C\u2013N / C\u2013O stretch | 1084: C\u2013O\u2013C glycosidic [mono_oligosaccharide] | 1276: amide III / =C\u2013H in-plane bend | 1470: unassigned"
+      },
+      {
+        "id": "csm17",
+        "weight": 0.027903715344771075,
+        "lsms": [
+          "free_amino_acid.m06"
+        ],
+        "bands": [
+          552.0,
+          722.0,
+          924.0,
+          982.0,
+          1066.0,
+          1176.0,
+          1272.0,
+          1318.0,
+          1352.0,
+          1440.0
+        ],
+        "assignment": "552: S\u2013S / skeletal deformation | 722: ring breathing | 924: unassigned | 982: unassigned | 1066: C\u2013C skeletal (trans) / PO2- symmetric | 1176: C\u2013C / C=C conjugated stretch | 1272: amide III / =C\u2013H in-plane bend | 1318: CH2 twist | 1352: CH deformation / tryptophan | 1440: CH2 / CH3 scissoring"
+      },
+      {
+        "id": "csm19",
+        "weight": 0.027690464975200366,
+        "lsms": [
+          "mono_oligosaccharide.m01"
+        ],
+        "bands": [
+          510.0,
+          580.0,
+          698.0,
+          842.0,
+          936.0,
+          992.0,
+          1052.0,
+          1258.0,
+          1312.0,
+          1474.0
+        ],
+        "assignment": "510: S\u2013S / skeletal deformation | 580: unassigned | 698: unassigned | 842: anomeric C\u2013H [mono_oligosaccharide] | 936: C\u2013C backbone stretch | 992: unassigned | 1052: C\u2013N / C\u2013O stretch | 1258: amide III / =C\u2013H in-plane bend | 1312: CH2 twist | 1474: unassigned"
+      },
+      {
+        "id": "csm18",
+        "weight": 0.01302378093473804,
+        "lsms": [
+          "mono_oligosaccharide.m00"
+        ],
+        "bands": [
+          530.0,
+          818.0,
+          874.0,
+          948.0,
+          998.0,
+          1062.0,
+          1156.0,
+          1270.0,
+          1332.0,
+          1452.0
+        ],
+        "assignment": "530: S\u2013S / skeletal deformation | 818: unassigned | 874: anomeric C\u2013H [mono_oligosaccharide] | 948: C\u2013C backbone stretch | 998: unassigned | 1062: C\u2013C skeletal (trans) / PO2- symmetric | 1156: C\u2013C / C=C conjugated stretch | 1270: amide III / =C\u2013H in-plane bend | 1332: CH deformation / tryptophan | 1452: CH2 / CH3 scissoring"
+      }
+    ],
+    "chemistry_layer": [
+      {
+        "axis": "acylglycerol",
+        "evidence": 0.7761334490380343
+      },
+      {
+        "axis": "fatty_acid",
+        "evidence": 0.6817823059739895
+      },
+      {
+        "axis": "phospholipid_sphingolipid",
+        "evidence": 0.6546766679618382
+      },
+      {
+        "axis": "sterol_steroid",
+        "evidence": 0.2503857335936351
+      },
+      {
+        "axis": "carboxylic_acid_metabolite",
+        "evidence": 0.13514308983185533
+      }
+    ],
+    "molecule_layer": [
+      {
+        "molecule": "triolein",
+        "similarity": 0.994253605105037,
+        "class": "acylglycerol",
+        "via_csms": [
+          "csm01",
+          "csm00",
+          "csm09",
+          "csm22",
+          "csm02"
+        ]
+      },
+      {
+        "molecule": "tripalmitolein",
+        "similarity": 0.988854657912104,
+        "class": "acylglycerol",
+        "via_csms": [
+          "csm01",
+          "csm00",
+          "csm09",
+          "csm02"
+        ]
+      },
+      {
+        "molecule": "tri-11-eicosenoin",
+        "similarity": 0.9519495769880949,
+        "class": "acylglycerol",
+        "via_csms": [
+          "csm01",
+          "csm00",
+          "csm09",
+          "csm17"
+        ]
+      },
+      {
+        "molecule": "vaccenic acid",
+        "similarity": 0.8733865502789918,
+        "class": "fatty_acid",
+        "via_csms": [
+          "csm00",
+          "csm01",
+          "csm09",
+          "csm02",
+          "csm17"
+        ]
+      },
+      {
+        "molecule": "oleate",
+        "similarity": 0.8449080237943769,
+        "class": "fatty_acid",
+        "via_csms": [
+          "csm00",
+          "csm01",
+          "csm09",
+          "csm22",
+          "csm17"
+        ]
+      }
+    ],
+    "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f"
+  },
+  "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f",
+  "_provenance": {
+    "phase": "09",
+    "seed": 0,
+    "fingerprints": {
+      "atlas": "09ed804a40836f4a05a91ba10900cded",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51"
+    },
+    "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f",
+    "code_fingerprint": "5e10e5c2eebb42c1427c2cdc0ebf4683",
+    "created_utc": "2026-08-07T05:31:50.945105+00:00",
+    "packaging_phase": true
+  }
+}

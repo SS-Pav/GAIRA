@@ -1,0 +1,1745 @@
+{
+  "preprocessing": {
+    "n_input_points": 676,
+    "input_range": [
+      450.0,
+      1800.0
+    ],
+    "resampled_to": "supplied on the canonical grid",
+    "baseline_method": "(skipped)",
+    "smoothing": "(skipped)",
+    "normalisation": "L2 (re-applied)",
+    "n_peaks": 62,
+    "signal_quality": 0.32143985339248005,
+    "snr_estimate": 32.143985339248005,
+    "warnings": [
+      "preprocessing skipped: caller asserts the spectrum is canonical"
+    ]
+  },
+  "lsm": {
+    "activation": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.009583283220282506,
+      0.0,
+      0.011794384895013985,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.025914025756223508,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0016030861952905245,
+      0.0,
+      0.0,
+      0.0,
+      0.003041787922358637,
+      0.0,
+      0.0032703457160798105,
+      0.0,
+      0.0,
+      0.0,
+      0.00909026398321727,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0065503477621427,
+      0.0,
+      0.0,
+      0.9816179474243928,
+      0.004614431862888932,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.005949888210747224,
+      0.0,
+      0.0,
+      0.0075580070840800895
+    ],
+    "reconstruction_error": 0.1349544178282651,
+    "explained_variance": 0.9817873051086158,
+    "n_active": 12,
+    "top": [
+      {
+        "lsm_id": "phospholipid_sphingolipid.m01",
+        "weight": 0.9816179474243928,
+        "share": 0.9168962577319457
+      },
+      {
+        "lsm_id": "free_amino_acid.m02",
+        "weight": 0.025914025756223508,
+        "share": 0.02420541851439681
+      },
+      {
+        "lsm_id": "fatty_acid.m00",
+        "weight": 0.011794384895013985,
+        "share": 0.01101673762268029
+      },
+      {
+        "lsm_id": "chromophore_pigment.m00",
+        "weight": 0.009583283220282506,
+        "share": 0.008951422031878825
+      },
+      {
+        "lsm_id": "peptide_protein.m03",
+        "weight": 0.00909026398321727,
+        "share": 0.008490909370470102
+      },
+      {
+        "lsm_id": "sulfur_thiol_cofactor.m01",
+        "weight": 0.0075580070840800895,
+        "share": 0.007059679816865137
+      },
+      {
+        "lsm_id": "peptide_protein.m09",
+        "weight": 0.0065503477621427,
+        "share": 0.006118459188434986
+      },
+      {
+        "lsm_id": "sterol_steroid.m01",
+        "weight": 0.005949888210747224,
+        "share": 0.005557590148663969
+      }
+    ]
+  },
+  "csm": {
+    "activation": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.011850258426990558,
+      0.0,
+      0.015981190266536393,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.036581485902693445,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0024588072145854786,
+      0.0,
+      0.0,
+      0.0,
+      0.0036557877097686486,
+      0.0,
+      0.004232529335717949,
+      0.0,
+      0.0,
+      0.0,
+      0.010417498981115467,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.007987543148297034,
+      0.0,
+      0.0,
+      0.937019480237663,
+      0.006126171560654228,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.007048637605342778,
+      0.0,
+      0.0,
+      0.0086411055767926
+    ],
+    "explained_variance": 0.9817873051086159,
+    "residual_fraction": 0.018212694891384162,
+    "sparsity": 0.9797724114011788,
+    "entropy": 0.14794294020444948,
+    "n_active": 12,
+    "top": [
+      {
+        "csm_id": "csm37",
+        "weight": 0.937019480237663,
+        "share": 0.8907025080593839,
+        "dominant_bands": [
+          470.0,
+          530.0,
+          650.0,
+          862.0,
+          928.0,
+          1090.0,
+          1182.0,
+          1320.0,
+          1502.0,
+          1650.0
+        ],
+        "band_assignment": "470: unassigned | 530: S\u2013S / skeletal deformation | 650: C\u2013S stretch / phenyl ring | 862: unassigned | 928: unassigned | 1090: PO2- symmetric stretch [phospholipid_sphingolipid] | 1182: unassigned | 1320: CH2 twist | 1502: conjugated C=C (carotenoid) | 1650: amide I / C=C stretch",
+        "lsms": [
+          "phospholipid_sphingolipid.m01"
+        ]
+      },
+      {
+        "csm_id": "csm13",
+        "weight": 0.036581485902693445,
+        "share": 0.03477325917899138,
+        "dominant_bands": [
+          452.0,
+          538.0,
+          640.0,
+          692.0,
+          720.0,
+          772.0,
+          870.0,
+          1200.0,
+          1346.0,
+          1426.0
+        ],
+        "band_assignment": "452: unassigned | 538: S\u2013S / skeletal deformation | 640: C\u2013S stretch / phenyl ring | 692: unassigned | 720: ring breathing | 772: unassigned | 870: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1200: amide III / C\u2013O\u2013C asymmetric | 1346: CH deformation / tryptophan | 1426: unassigned",
+        "lsms": [
+          "free_amino_acid.m02"
+        ]
+      },
+      {
+        "csm_id": "csm07",
+        "weight": 0.015981190266536393,
+        "share": 0.015191238338575185,
+        "dominant_bands": [
+          892.0,
+          1064.0,
+          1128.0,
+          1176.0,
+          1296.0,
+          1422.0,
+          1438.0,
+          1464.0
+        ],
+        "band_assignment": "892: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1064: C\u2013C trans chain [fatty_acid] | 1128: C\u2013C skeletal (gauche) / C\u2013N stretch | 1176: C\u2013C / C=C conjugated stretch | 1296: CH2 twist | 1422: unassigned | 1438: CH2 / CH3 scissoring | 1464: CH2 / CH3 scissoring",
+        "lsms": [
+          "fatty_acid.m00"
+        ]
+      },
+      {
+        "csm_id": "csm05",
+        "weight": 0.011850258426990558,
+        "share": 0.011264498897499104,
+        "dominant_bands": [
+          1006.0,
+          1156.0,
+          1270.0,
+          1518.0
+        ],
+        "band_assignment": "1006: phenylalanine ring breathing | 1156: C\u2013C conjugated [chromophore_pigment] | 1270: amide III / =C\u2013H in-plane bend | 1518: C=C conjugated [chromophore_pigment]",
+        "lsms": [
+          "chromophore_pigment.m00"
+        ]
+      },
+      {
+        "csm_id": "csm28",
+        "weight": 0.010417498981115467,
+        "share": 0.009902560902823654,
+        "dominant_bands": [
+          482.0,
+          582.0,
+          864.0,
+          942.0,
+          1130.0,
+          1260.0,
+          1336.0,
+          1390.0,
+          1464.0,
+          1658.0
+        ],
+        "band_assignment": "482: S\u2013S / skeletal deformation | 582: unassigned | 864: unassigned | 942: C\u2013C backbone stretch | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1260: amide III [peptide_protein] | 1336: CH deformation / tryptophan | 1390: COO- symmetric stretch | 1464: CH2 / CH3 scissoring | 1658: amide I [peptide_protein]",
+        "lsms": [
+          "peptide_protein.m03"
+        ]
+      },
+      {
+        "csm_id": "csm48",
+        "weight": 0.0086411055767926,
+        "share": 0.008213974812671918,
+        "dominant_bands": [
+          506.0,
+          716.0,
+          908.0,
+          962.0,
+          1008.0,
+          1086.0,
+          1206.0,
+          1450.0,
+          1496.0,
+          1638.0
+        ],
+        "band_assignment": "506: S\u2013S stretch [sulfur_thiol_cofactor] | 716: ring breathing | 908: unassigned | 962: unassigned | 1008: phenylalanine ring breathing | 1086: C\u2013C skeletal (trans) / PO2- symmetric | 1206: amide III / C\u2013O\u2013C asymmetric | 1450: CH2 / CH3 scissoring | 1496: unassigned | 1638: amide I / C=C stretch",
+        "lsms": [
+          "sulfur_thiol_cofactor.m01"
+        ]
+      },
+      {
+        "csm_id": "csm34",
+        "weight": 0.007987543148297034,
+        "share": 0.007592718044256889,
+        "dominant_bands": [
+          672.0,
+          754.0,
+          1006.0,
+          1134.0,
+          1172.0,
+          1226.0,
+          1304.0,
+          1372.0,
+          1430.0,
+          1580.0
+        ],
+        "band_assignment": "672: unassigned | 754: ring breathing (indole / pyrrole) | 1006: phenylalanine [peptide_protein] | 1134: C\u2013C skeletal (gauche) / C\u2013N stretch | 1172: C\u2013C / C=C conjugated stretch | 1226: amide III / C\u2013O\u2013C asymmetric | 1304: CH2 twist | 1372: unassigned | 1430: CH2 / CH3 scissoring | 1580: amide II / COO- asymmetric",
+        "lsms": [
+          "peptide_protein.m09"
+        ]
+      },
+      {
+        "csm_id": "csm45",
+        "weight": 0.007048637605342778,
+        "share": 0.006700222701760807,
+        "dominant_bands": [
+          552.0,
+          738.0,
+          816.0,
+          1008.0,
+          1114.0,
+          1260.0,
+          1300.0,
+          1436.0,
+          1608.0,
+          1634.0
+        ],
+        "band_assignment": "552: S\u2013S / skeletal deformation | 738: unassigned | 816: unassigned | 1008: phenylalanine ring breathing | 1114: unassigned | 1260: amide III / =C\u2013H in-plane bend | 1300: CH2 twist | 1436: CH2 / CH3 scissoring | 1608: aromatic ring C=C | 1634: amide I / C=C stretch",
+        "lsms": [
+          "sterol_steroid.m01"
+        ]
+      }
+    ]
+  },
+  "retrieval": {
+    "top": [
+      {
+        "rank": 1,
+        "molecule": "phosphatidylinositol",
+        "chemistry_class": "phospholipid_sphingolipid",
+        "similarity": 0.9992889219176506,
+        "supporting_csms": [
+          {
+            "csm_id": "csm37",
+            "contribution": 0.9982980695776729,
+            "share_of_similarity": 0.9990084425842776,
+            "lsms": [
+              "phospholipid_sphingolipid.m01"
+            ],
+            "diagnostic_bands": [
+              470.0,
+              530.0,
+              650.0,
+              862.0,
+              928.0,
+              1090.0,
+              1182.0,
+              1320.0,
+              1502.0,
+              1650.0
+            ]
+          },
+          {
+            "csm_id": "csm13",
+            "contribution": 0.0005095655586389006,
+            "share_of_similarity": 0.0005099281573746726,
+            "lsms": [
+              "free_amino_acid.m02"
+            ],
+            "diagnostic_bands": [
+              452.0,
+              538.0,
+              640.0,
+              692.0,
+              720.0,
+              772.0,
+              870.0,
+              1200.0,
+              1346.0,
+              1426.0
+            ]
+          },
+          {
+            "csm_id": "csm07",
+            "contribution": 0.00023779300002539085,
+            "share_of_similarity": 0.00023796220973692426,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 6.903915607038372e-05,
+            "share_of_similarity": 6.908828323426967e-05,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          },
+          {
+            "csm_id": "csm28",
+            "contribution": 5.762258707282018e-05,
+            "share_of_similarity": 5.766359038803702e-05,
+            "lsms": [
+              "peptide_protein.m03"
+            ],
+            "diagnostic_bands": [
+              482.0,
+              582.0,
+              864.0,
+              942.0,
+              1130.0,
+              1260.0,
+              1336.0,
+              1390.0,
+              1464.0,
+              1658.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.9992889219176507,
+        "reconciles": true
+      },
+      {
+        "rank": 2,
+        "molecule": "hypoxanthine",
+        "chemistry_class": "purine",
+        "similarity": 0.6134853273937216,
+        "supporting_csms": [
+          {
+            "csm_id": "csm37",
+            "contribution": 0.6062410203412214,
+            "share_of_similarity": 0.9881915561301776,
+            "lsms": [
+              "phospholipid_sphingolipid.m01"
+            ],
+            "diagnostic_bands": [
+              470.0,
+              530.0,
+              650.0,
+              862.0,
+              928.0,
+              1090.0,
+              1182.0,
+              1320.0,
+              1502.0,
+              1650.0
+            ]
+          },
+          {
+            "csm_id": "csm13",
+            "contribution": 0.004475930868892331,
+            "share_of_similarity": 0.007295905328168475,
+            "lsms": [
+              "free_amino_acid.m02"
+            ],
+            "diagnostic_bands": [
+              452.0,
+              538.0,
+              640.0,
+              692.0,
+              720.0,
+              772.0,
+              870.0,
+              1200.0,
+              1346.0,
+              1426.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 0.0011242586993194636,
+            "share_of_similarity": 0.0018325763455400558,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          },
+          {
+            "csm_id": "csm07",
+            "contribution": 0.000831318913366136,
+            "share_of_similarity": 0.0013550754618639126,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          },
+          {
+            "csm_id": "csm48",
+            "contribution": 0.0008127985709223222,
+            "share_of_similarity": 0.0013248867326200301,
+            "lsms": [
+              "sulfur_thiol_cofactor.m01"
+            ],
+            "diagnostic_bands": [
+              506.0,
+              716.0,
+              908.0,
+              962.0,
+              1008.0,
+              1086.0,
+              1206.0,
+              1450.0,
+              1496.0,
+              1638.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.6134853273937217,
+        "reconciles": true
+      },
+      {
+        "rank": 3,
+        "molecule": "glycogen",
+        "chemistry_class": "polysaccharide",
+        "similarity": 0.4646179262623559,
+        "supporting_csms": [
+          {
+            "csm_id": "csm37",
+            "contribution": 0.4551263138951958,
+            "share_of_similarity": 0.9795711447371491,
+            "lsms": [
+              "phospholipid_sphingolipid.m01"
+            ],
+            "diagnostic_bands": [
+              470.0,
+              530.0,
+              650.0,
+              862.0,
+              928.0,
+              1090.0,
+              1182.0,
+              1320.0,
+              1502.0,
+              1650.0
+            ]
+          },
+          {
+            "csm_id": "csm38",
+            "contribution": 0.0044072709911845654,
+            "share_of_similarity": 0.009485796268408347,
+            "lsms": [
+              "polysaccharide.m00"
+            ],
+            "diagnostic_bands": [
+              480.0,
+              580.0,
+              862.0,
+              940.0,
+              1046.0,
+              1082.0,
+              1130.0,
+              1252.0,
+              1338.0,
+              1462.0
+            ]
+          },
+          {
+            "csm_id": "csm28",
+            "contribution": 0.0041339779386095074,
+            "share_of_similarity": 0.008897585962419961,
+            "lsms": [
+              "peptide_protein.m03"
+            ],
+            "diagnostic_bands": [
+              482.0,
+              582.0,
+              864.0,
+              942.0,
+              1130.0,
+              1260.0,
+              1336.0,
+              1390.0,
+              1464.0,
+              1658.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 0.0005078169244384024,
+            "share_of_similarity": 0.0010929774675774355,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          },
+          {
+            "csm_id": "csm34",
+            "contribution": 0.0002953878535052772,
+            "share_of_similarity": 0.0006357650809578207,
+            "lsms": [
+              "peptide_protein.m09"
+            ],
+            "diagnostic_bands": [
+              672.0,
+              754.0,
+              1006.0,
+              1134.0,
+              1172.0,
+              1226.0,
+              1304.0,
+              1372.0,
+              1430.0,
+              1580.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.46461792626235593,
+        "reconciles": true
+      },
+      {
+        "rank": 4,
+        "molecule": "malic acid",
+        "chemistry_class": "carboxylic_acid_metabolite",
+        "similarity": 0.43482373803634056,
+        "supporting_csms": [
+          {
+            "csm_id": "csm37",
+            "contribution": 0.4334293965284558,
+            "share_of_similarity": 0.9967933178736323,
+            "lsms": [
+              "phospholipid_sphingolipid.m01"
+            ],
+            "diagnostic_bands": [
+              470.0,
+              530.0,
+              650.0,
+              862.0,
+              928.0,
+              1090.0,
+              1182.0,
+              1320.0,
+              1502.0,
+              1650.0
+            ]
+          },
+          {
+            "csm_id": "csm48",
+            "contribution": 0.0007803665635130897,
+            "share_of_similarity": 0.0017946733244956273,
+            "lsms": [
+              "sulfur_thiol_cofactor.m01"
+            ],
+            "diagnostic_bands": [
+              506.0,
+              716.0,
+              908.0,
+              962.0,
+              1008.0,
+              1086.0,
+              1206.0,
+              1450.0,
+              1496.0,
+              1638.0
+            ]
+          },
+          {
+            "csm_id": "csm18",
+            "contribution": 0.0006139749443716452,
+            "share_of_similarity": 0.0014120087995722994,
+            "lsms": [
+              "mono_oligosaccharide.m00"
+            ],
+            "diagnostic_bands": [
+              530.0,
+              818.0,
+              874.0,
+              948.0,
+              998.0,
+              1062.0,
+              1156.0,
+              1270.0,
+              1332.0,
+              1452.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.43482373803634056,
+        "reconciles": true
+      },
+      {
+        "rank": 5,
+        "molecule": "albumin",
+        "chemistry_class": "peptide_protein",
+        "similarity": 0.3344670742279546,
+        "supporting_csms": [
+          {
+            "csm_id": "csm37",
+            "contribution": 0.3322147467029647,
+            "share_of_similarity": 0.9932659215225231,
+            "lsms": [
+              "phospholipid_sphingolipid.m01"
+            ],
+            "diagnostic_bands": [
+              470.0,
+              530.0,
+              650.0,
+              862.0,
+              928.0,
+              1090.0,
+              1182.0,
+              1320.0,
+              1502.0,
+              1650.0
+            ]
+          },
+          {
+            "csm_id": "csm28",
+            "contribution": 0.000624679364639449,
+            "share_of_similarity": 0.001867685679014951,
+            "lsms": [
+              "peptide_protein.m03"
+            ],
+            "diagnostic_bands": [
+              482.0,
+              582.0,
+              864.0,
+              942.0,
+              1130.0,
+              1260.0,
+              1336.0,
+              1390.0,
+              1464.0,
+              1658.0
+            ]
+          },
+          {
+            "csm_id": "csm13",
+            "contribution": 0.0006010523266542509,
+            "share_of_similarity": 0.0017970448303165688,
+            "lsms": [
+              "free_amino_acid.m02"
+            ],
+            "diagnostic_bands": [
+              452.0,
+              538.0,
+              640.0,
+              692.0,
+              720.0,
+              772.0,
+              870.0,
+              1200.0,
+              1346.0,
+              1426.0
+            ]
+          },
+          {
+            "csm_id": "csm48",
+            "contribution": 0.00040592192196516947,
+            "share_of_similarity": 0.0012136379130918626,
+            "lsms": [
+              "sulfur_thiol_cofactor.m01"
+            ],
+            "diagnostic_bands": [
+              506.0,
+              716.0,
+              908.0,
+              962.0,
+              1008.0,
+              1086.0,
+              1206.0,
+              1450.0,
+              1496.0,
+              1638.0
+            ]
+          },
+          {
+            "csm_id": "csm07",
+            "contribution": 0.0002972260565283857,
+            "share_of_similarity": 0.0008886556538145932,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.3344670742279546,
+        "reconciles": true
+      },
+      {
+        "rank": 6,
+        "molecule": "(+)-galactose",
+        "chemistry_class": "mono_oligosaccharide",
+        "similarity": 0.11906296284297505,
+        "supporting_csms": [
+          {
+            "csm_id": "csm37",
+            "contribution": 0.11372600874132821,
+            "share_of_similarity": 0.9551753628906362,
+            "lsms": [
+              "phospholipid_sphingolipid.m01"
+            ],
+            "diagnostic_bands": [
+              470.0,
+              530.0,
+              650.0,
+              862.0,
+              928.0,
+              1090.0,
+              1182.0,
+              1320.0,
+              1502.0,
+              1650.0
+            ]
+          },
+          {
+            "csm_id": "csm18",
+            "contribution": 0.0025774134988578576,
+            "share_of_similarity": 0.021647483291973885,
+            "lsms": [
+              "mono_oligosaccharide.m00"
+            ],
+            "diagnostic_bands": [
+              530.0,
+              818.0,
+              874.0,
+              948.0,
+              998.0,
+              1062.0,
+              1156.0,
+              1270.0,
+              1332.0,
+              1452.0
+            ]
+          },
+          {
+            "csm_id": "csm13",
+            "contribution": 0.0012077927853674736,
+            "share_of_similarity": 0.010144151938753737,
+            "lsms": [
+              "free_amino_acid.m02"
+            ],
+            "diagnostic_bands": [
+              452.0,
+              538.0,
+              640.0,
+              692.0,
+              720.0,
+              772.0,
+              870.0,
+              1200.0,
+              1346.0,
+              1426.0
+            ]
+          },
+          {
+            "csm_id": "csm07",
+            "contribution": 0.0006564487388897611,
+            "share_of_similarity": 0.005513458788607489,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          },
+          {
+            "csm_id": "csm24",
+            "contribution": 0.00026953923323212926,
+            "share_of_similarity": 0.002263837777876773,
+            "lsms": [
+              "nucleic_acid_polymer.m00"
+            ],
+            "diagnostic_bands": [
+              668.0,
+              728.0,
+              784.0,
+              1096.0,
+              1252.0,
+              1336.0,
+              1374.0,
+              1486.0,
+              1574.0,
+              1670.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.11906296284297506,
+        "reconciles": true
+      },
+      {
+        "rank": 7,
+        "molecule": "cholesterol",
+        "chemistry_class": "sterol_steroid",
+        "similarity": 0.10164023810854536,
+        "supporting_csms": [
+          {
+            "csm_id": "csm37",
+            "contribution": 0.10066366061887,
+            "share_of_similarity": 0.9903918220889759,
+            "lsms": [
+              "phospholipid_sphingolipid.m01"
+            ],
+            "diagnostic_bands": [
+              470.0,
+              530.0,
+              650.0,
+              862.0,
+              928.0,
+              1090.0,
+              1182.0,
+              1320.0,
+              1502.0,
+              1650.0
+            ]
+          },
+          {
+            "csm_id": "csm13",
+            "contribution": 0.000658027019161396,
+            "share_of_similarity": 0.006474079866402817,
+            "lsms": [
+              "free_amino_acid.m02"
+            ],
+            "diagnostic_bands": [
+              452.0,
+              538.0,
+              640.0,
+              692.0,
+              720.0,
+              772.0,
+              870.0,
+              1200.0,
+              1346.0,
+              1426.0
+            ]
+          },
+          {
+            "csm_id": "csm22",
+            "contribution": 0.00014931117292995275,
+            "share_of_similarity": 0.001469016363076883,
+            "lsms": [
+              "mono_oligosaccharide.m04"
+            ],
+            "diagnostic_bands": [
+              626.0,
+              674.0,
+              812.0,
+              876.0,
+              924.0,
+              978.0,
+              1046.0,
+              1084.0,
+              1276.0,
+              1470.0
+            ]
+          },
+          {
+            "csm_id": "csm05",
+            "contribution": 9.738647609771491e-05,
+            "share_of_similarity": 0.0009581488385805841,
+            "lsms": [
+              "chromophore_pigment.m00"
+            ],
+            "diagnostic_bands": [
+              1006.0,
+              1156.0,
+              1270.0,
+              1518.0
+            ]
+          },
+          {
+            "csm_id": "csm45",
+            "contribution": 7.185282148631001e-05,
+            "share_of_similarity": 0.0007069328331252903,
+            "lsms": [
+              "sterol_steroid.m01"
+            ],
+            "diagnostic_bands": [
+              552.0,
+              738.0,
+              816.0,
+              1008.0,
+              1114.0,
+              1260.0,
+              1300.0,
+              1436.0,
+              1608.0,
+              1634.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.10164023810854536,
+        "reconciles": true
+      },
+      {
+        "rank": 8,
+        "molecule": "glutamate",
+        "chemistry_class": "free_amino_acid",
+        "similarity": 0.09983841001085003,
+        "supporting_csms": [
+          {
+            "csm_id": "csm37",
+            "contribution": 0.0901557103847822,
+            "share_of_similarity": 0.903016287760206,
+            "lsms": [
+              "phospholipid_sphingolipid.m01"
+            ],
+            "diagnostic_bands": [
+              470.0,
+              530.0,
+              650.0,
+              862.0,
+              928.0,
+              1090.0,
+              1182.0,
+              1320.0,
+              1502.0,
+              1650.0
+            ]
+          },
+          {
+            "csm_id": "csm13",
+            "contribution": 0.0070444800421731405,
+            "share_of_similarity": 0.07055881640479868,
+            "lsms": [
+              "free_amino_acid.m02"
+            ],
+            "diagnostic_bands": [
+              452.0,
+              538.0,
+              640.0,
+              692.0,
+              720.0,
+              772.0,
+              870.0,
+              1200.0,
+              1346.0,
+              1426.0
+            ]
+          },
+          {
+            "csm_id": "csm28",
+            "contribution": 0.0009180496437101266,
+            "share_of_similarity": 0.009195355210496255,
+            "lsms": [
+              "peptide_protein.m03"
+            ],
+            "diagnostic_bands": [
+              482.0,
+              582.0,
+              864.0,
+              942.0,
+              1130.0,
+              1260.0,
+              1336.0,
+              1390.0,
+              1464.0,
+              1658.0
+            ]
+          },
+          {
+            "csm_id": "csm38",
+            "contribution": 0.0007900251607380135,
+            "share_of_similarity": 0.00791303828500718,
+            "lsms": [
+              "polysaccharide.m00"
+            ],
+            "diagnostic_bands": [
+              480.0,
+              580.0,
+              862.0,
+              940.0,
+              1046.0,
+              1082.0,
+              1130.0,
+              1252.0,
+              1338.0,
+              1462.0
+            ]
+          },
+          {
+            "csm_id": "csm07",
+            "contribution": 0.0005109548164645017,
+            "share_of_similarity": 0.005117818046219439,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.09983841001085003,
+        "reconciles": true
+      },
+      {
+        "rank": 9,
+        "molecule": "(+)-mannose",
+        "chemistry_class": "mono_oligosaccharide",
+        "similarity": 0.08024535774837993,
+        "supporting_csms": [
+          {
+            "csm_id": "csm37",
+            "contribution": 0.07596610840035276,
+            "share_of_similarity": 0.9466729357429995,
+            "lsms": [
+              "phospholipid_sphingolipid.m01"
+            ],
+            "diagnostic_bands": [
+              470.0,
+              530.0,
+              650.0,
+              862.0,
+              928.0,
+              1090.0,
+              1182.0,
+              1320.0,
+              1502.0,
+              1650.0
+            ]
+          },
+          {
+            "csm_id": "csm28",
+            "contribution": 0.0017868354252757917,
+            "share_of_similarity": 0.0222671500930482,
+            "lsms": [
+              "peptide_protein.m03"
+            ],
+            "diagnostic_bands": [
+              482.0,
+              582.0,
+              864.0,
+              942.0,
+              1130.0,
+              1260.0,
+              1336.0,
+              1390.0,
+              1464.0,
+              1658.0
+            ]
+          },
+          {
+            "csm_id": "csm22",
+            "contribution": 0.0009267896191462685,
+            "share_of_similarity": 0.011549448405984954,
+            "lsms": [
+              "mono_oligosaccharide.m04"
+            ],
+            "diagnostic_bands": [
+              626.0,
+              674.0,
+              812.0,
+              876.0,
+              924.0,
+              978.0,
+              1046.0,
+              1084.0,
+              1276.0,
+              1470.0
+            ]
+          },
+          {
+            "csm_id": "csm18",
+            "contribution": 0.0009008611231320559,
+            "share_of_similarity": 0.011226333191081286,
+            "lsms": [
+              "mono_oligosaccharide.m00"
+            ],
+            "diagnostic_bands": [
+              530.0,
+              818.0,
+              874.0,
+              948.0,
+              998.0,
+              1062.0,
+              1156.0,
+              1270.0,
+              1332.0,
+              1452.0
+            ]
+          },
+          {
+            "csm_id": "csm48",
+            "contribution": 0.0004509345175608151,
+            "share_of_similarity": 0.005619446784313196,
+            "lsms": [
+              "sulfur_thiol_cofactor.m01"
+            ],
+            "diagnostic_bands": [
+              506.0,
+              716.0,
+              908.0,
+              962.0,
+              1008.0,
+              1086.0,
+              1206.0,
+              1450.0,
+              1496.0,
+              1638.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.08024535774837993,
+        "reconciles": true
+      },
+      {
+        "rank": 10,
+        "molecule": "cysteine",
+        "chemistry_class": "free_amino_acid",
+        "similarity": 0.039121215703384435,
+        "supporting_csms": [
+          {
+            "csm_id": "csm13",
+            "contribution": 0.03895877900753464,
+            "share_of_similarity": 0.995847861731158,
+            "lsms": [
+              "free_amino_acid.m02"
+            ],
+            "diagnostic_bands": [
+              452.0,
+              538.0,
+              640.0,
+              692.0,
+              720.0,
+              772.0,
+              870.0,
+              1200.0,
+              1346.0,
+              1426.0
+            ]
+          },
+          {
+            "csm_id": "csm28",
+            "contribution": 0.00010005677386699001,
+            "share_of_similarity": 0.0025576090125383386,
+            "lsms": [
+              "peptide_protein.m03"
+            ],
+            "diagnostic_bands": [
+              482.0,
+              582.0,
+              864.0,
+              942.0,
+              1130.0,
+              1260.0,
+              1336.0,
+              1390.0,
+              1464.0,
+              1658.0
+            ]
+          },
+          {
+            "csm_id": "csm07",
+            "contribution": 6.237992198280218e-05,
+            "share_of_similarity": 0.0015945292307419543,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.039121215703384435,
+        "reconciles": true
+      }
+    ],
+    "margin": 0.385803594523929,
+    "n_candidates": 154
+  },
+  "chemistry": {
+    "axis_names": [
+      "acylglycerol",
+      "carboxylic_acid_metabolite",
+      "chromophore_pigment",
+      "fatty_acid",
+      "free_amino_acid",
+      "mono_oligosaccharide",
+      "nucleic_acid_polymer",
+      "peptide_protein",
+      "phosphate_metabolite",
+      "phospholipid_sphingolipid",
+      "polysaccharide",
+      "purine",
+      "pyrimidine",
+      "small_nitrogenous",
+      "sterol_steroid",
+      "sulfur_thiol_cofactor"
+    ],
+    "evidence": [
+      0.02598202330190684,
+      0.24394312402973214,
+      0.007530289411864784,
+      0.024655581969294734,
+      0.044187527989692665,
+      0.06483090902936411,
+      0.006010244024986851,
+      0.12399997636204887,
+      0.0030094346145923896,
+      0.984923051592211,
+      0.3683100025307766,
+      0.6618297026633979,
+      0.0010496598918166135,
+      0.001128307861224199,
+      0.08449557154349484,
+      0.019969977931981353
+    ],
+    "calibrated_probability": [
+      6.6605993620898664e-09,
+      0.0006708157135831336,
+      1.139671158045636e-11,
+      5.086847290143919e-09,
+      1.0229316839088874e-07,
+      7.348935792482848e-07,
+      3.573434605434585e-12,
+      2.0652138242831836e-05,
+      1.0181343093948155e-13,
+      0.879881707196339,
+      0.005584506972807468,
+      0.11383859622530274,
+      4.516206261042139e-16,
+      6.549165366943261e-16,
+      2.871083360775654e-06,
+      1.7202165667997336e-09
+    ],
+    "evidence_l1": [
+      0.009746223838900918,
+      0.09150651060266159,
+      0.00282471789540553,
+      0.0092486569640433,
+      0.016575365731568627,
+      0.024318989469662773,
+      0.002254527405863716,
+      0.046514142166682454,
+      0.0011288814208784636,
+      0.3694585449858536,
+      0.138158282942794,
+      0.24826166732431956,
+      0.0003937422479184072,
+      0.00042324421184995,
+      0.03169548206810857,
+      0.007491020723113497
+    ],
+    "top": [
+      {
+        "axis": "phospholipid_sphingolipid",
+        "evidence": 0.984923051592211,
+        "share": 0.3694585449858536,
+        "calibrated_probability": 0.879881707196339,
+        "rank": 1
+      },
+      {
+        "axis": "purine",
+        "evidence": 0.6618297026633979,
+        "share": 0.24826166732431956,
+        "calibrated_probability": 0.11383859622530274,
+        "rank": 2
+      },
+      {
+        "axis": "polysaccharide",
+        "evidence": 0.3683100025307766,
+        "share": 0.138158282942794,
+        "calibrated_probability": 0.005584506972807468,
+        "rank": 3
+      },
+      {
+        "axis": "carboxylic_acid_metabolite",
+        "evidence": 0.24394312402973214,
+        "share": 0.09150651060266159,
+        "calibrated_probability": 0.0006708157135831336,
+        "rank": 4
+      },
+      {
+        "axis": "peptide_protein",
+        "evidence": 0.12399997636204887,
+        "share": 0.046514142166682454,
+        "calibrated_probability": 2.0652138242831836e-05,
+        "rank": 5
+      }
+    ],
+    "predicted_class": "phospholipid_sphingolipid",
+    "margin": 0.32309334892881314,
+    "entropy": 0.6441516157558045
+  },
+  "confidence": {
+    "overall": 0.9810891776744243,
+    "evidence_coverage": 0.9817873051086159,
+    "top1_confidence": 0.9992889219176506,
+    "top3_confidence": 0.692464058524576,
+    "retrieval_margin": 0.385803594523929,
+    "chemistry_confidence": 0.879881707196339,
+    "reconstruction_explained_variance": 0.9817873051086159,
+    "unknown_warning": false,
+    "outlier_warning": false,
+    "notes": [
+      "preprocessing skipped: caller asserts the spectrum is canonical"
+    ]
+  },
+  "provenance": {
+    "root": "spectrum",
+    "lsm_layer": [
+      {
+        "id": "phospholipid_sphingolipid.m01",
+        "weight": 0.9816179474243928
+      },
+      {
+        "id": "free_amino_acid.m02",
+        "weight": 0.025914025756223508
+      },
+      {
+        "id": "fatty_acid.m00",
+        "weight": 0.011794384895013985
+      },
+      {
+        "id": "chromophore_pigment.m00",
+        "weight": 0.009583283220282506
+      },
+      {
+        "id": "peptide_protein.m03",
+        "weight": 0.00909026398321727
+      },
+      {
+        "id": "sulfur_thiol_cofactor.m01",
+        "weight": 0.0075580070840800895
+      },
+      {
+        "id": "peptide_protein.m09",
+        "weight": 0.0065503477621427
+      },
+      {
+        "id": "sterol_steroid.m01",
+        "weight": 0.005949888210747224
+      }
+    ],
+    "csm_layer": [
+      {
+        "id": "csm37",
+        "weight": 0.937019480237663,
+        "lsms": [
+          "phospholipid_sphingolipid.m01"
+        ],
+        "bands": [
+          470.0,
+          530.0,
+          650.0,
+          862.0,
+          928.0,
+          1090.0,
+          1182.0,
+          1320.0,
+          1502.0,
+          1650.0
+        ],
+        "assignment": "470: unassigned | 530: S\u2013S / skeletal deformation | 650: C\u2013S stretch / phenyl ring | 862: unassigned | 928: unassigned | 1090: PO2- symmetric stretch [phospholipid_sphingolipid] | 1182: unassigned | 1320: CH2 twist | 1502: conjugated C=C (carotenoid) | 1650: amide I / C=C stretch"
+      },
+      {
+        "id": "csm13",
+        "weight": 0.036581485902693445,
+        "lsms": [
+          "free_amino_acid.m02"
+        ],
+        "bands": [
+          452.0,
+          538.0,
+          640.0,
+          692.0,
+          720.0,
+          772.0,
+          870.0,
+          1200.0,
+          1346.0,
+          1426.0
+        ],
+        "assignment": "452: unassigned | 538: S\u2013S / skeletal deformation | 640: C\u2013S stretch / phenyl ring | 692: unassigned | 720: ring breathing | 772: unassigned | 870: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1200: amide III / C\u2013O\u2013C asymmetric | 1346: CH deformation / tryptophan | 1426: unassigned"
+      },
+      {
+        "id": "csm07",
+        "weight": 0.015981190266536393,
+        "lsms": [
+          "fatty_acid.m00"
+        ],
+        "bands": [
+          892.0,
+          1064.0,
+          1128.0,
+          1176.0,
+          1296.0,
+          1422.0,
+          1438.0,
+          1464.0
+        ],
+        "assignment": "892: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1064: C\u2013C trans chain [fatty_acid] | 1128: C\u2013C skeletal (gauche) / C\u2013N stretch | 1176: C\u2013C / C=C conjugated stretch | 1296: CH2 twist | 1422: unassigned | 1438: CH2 / CH3 scissoring | 1464: CH2 / CH3 scissoring"
+      },
+      {
+        "id": "csm05",
+        "weight": 0.011850258426990558,
+        "lsms": [
+          "chromophore_pigment.m00"
+        ],
+        "bands": [
+          1006.0,
+          1156.0,
+          1270.0,
+          1518.0
+        ],
+        "assignment": "1006: phenylalanine ring breathing | 1156: C\u2013C conjugated [chromophore_pigment] | 1270: amide III / =C\u2013H in-plane bend | 1518: C=C conjugated [chromophore_pigment]"
+      },
+      {
+        "id": "csm28",
+        "weight": 0.010417498981115467,
+        "lsms": [
+          "peptide_protein.m03"
+        ],
+        "bands": [
+          482.0,
+          582.0,
+          864.0,
+          942.0,
+          1130.0,
+          1260.0,
+          1336.0,
+          1390.0,
+          1464.0,
+          1658.0
+        ],
+        "assignment": "482: S\u2013S / skeletal deformation | 582: unassigned | 864: unassigned | 942: C\u2013C backbone stretch | 1130: C\u2013C skeletal (gauche) / C\u2013N stretch | 1260: amide III [peptide_protein] | 1336: CH deformation / tryptophan | 1390: COO- symmetric stretch | 1464: CH2 / CH3 scissoring | 1658: amide I [peptide_protein]"
+      },
+      {
+        "id": "csm48",
+        "weight": 0.0086411055767926,
+        "lsms": [
+          "sulfur_thiol_cofactor.m01"
+        ],
+        "bands": [
+          506.0,
+          716.0,
+          908.0,
+          962.0,
+          1008.0,
+          1086.0,
+          1206.0,
+          1450.0,
+          1496.0,
+          1638.0
+        ],
+        "assignment": "506: S\u2013S stretch [sulfur_thiol_cofactor] | 716: ring breathing | 908: unassigned | 962: unassigned | 1008: phenylalanine ring breathing | 1086: C\u2013C skeletal (trans) / PO2- symmetric | 1206: amide III / C\u2013O\u2013C asymmetric | 1450: CH2 / CH3 scissoring | 1496: unassigned | 1638: amide I / C=C stretch"
+      },
+      {
+        "id": "csm34",
+        "weight": 0.007987543148297034,
+        "lsms": [
+          "peptide_protein.m09"
+        ],
+        "bands": [
+          672.0,
+          754.0,
+          1006.0,
+          1134.0,
+          1172.0,
+          1226.0,
+          1304.0,
+          1372.0,
+          1430.0,
+          1580.0
+        ],
+        "assignment": "672: unassigned | 754: ring breathing (indole / pyrrole) | 1006: phenylalanine [peptide_protein] | 1134: C\u2013C skeletal (gauche) / C\u2013N stretch | 1172: C\u2013C / C=C conjugated stretch | 1226: amide III / C\u2013O\u2013C asymmetric | 1304: CH2 twist | 1372: unassigned | 1430: CH2 / CH3 scissoring | 1580: amide II / COO- asymmetric"
+      },
+      {
+        "id": "csm45",
+        "weight": 0.007048637605342778,
+        "lsms": [
+          "sterol_steroid.m01"
+        ],
+        "bands": [
+          552.0,
+          738.0,
+          816.0,
+          1008.0,
+          1114.0,
+          1260.0,
+          1300.0,
+          1436.0,
+          1608.0,
+          1634.0
+        ],
+        "assignment": "552: S\u2013S / skeletal deformation | 738: unassigned | 816: unassigned | 1008: phenylalanine ring breathing | 1114: unassigned | 1260: amide III / =C\u2013H in-plane bend | 1300: CH2 twist | 1436: CH2 / CH3 scissoring | 1608: aromatic ring C=C | 1634: amide I / C=C stretch"
+      }
+    ],
+    "chemistry_layer": [
+      {
+        "axis": "phospholipid_sphingolipid",
+        "evidence": 0.984923051592211
+      },
+      {
+        "axis": "purine",
+        "evidence": 0.6618297026633979
+      },
+      {
+        "axis": "polysaccharide",
+        "evidence": 0.3683100025307766
+      },
+      {
+        "axis": "carboxylic_acid_metabolite",
+        "evidence": 0.24394312402973214
+      },
+      {
+        "axis": "peptide_protein",
+        "evidence": 0.12399997636204887
+      }
+    ],
+    "molecule_layer": [
+      {
+        "molecule": "phosphatidylinositol",
+        "similarity": 0.9992889219176506,
+        "class": "phospholipid_sphingolipid",
+        "via_csms": [
+          "csm37",
+          "csm13",
+          "csm07",
+          "csm05",
+          "csm28"
+        ]
+      },
+      {
+        "molecule": "hypoxanthine",
+        "similarity": 0.6134853273937216,
+        "class": "purine",
+        "via_csms": [
+          "csm37",
+          "csm13",
+          "csm05",
+          "csm07",
+          "csm48"
+        ]
+      },
+      {
+        "molecule": "glycogen",
+        "similarity": 0.4646179262623559,
+        "class": "polysaccharide",
+        "via_csms": [
+          "csm37",
+          "csm38",
+          "csm28",
+          "csm05",
+          "csm34"
+        ]
+      },
+      {
+        "molecule": "malic acid",
+        "similarity": 0.43482373803634056,
+        "class": "carboxylic_acid_metabolite",
+        "via_csms": [
+          "csm37",
+          "csm48",
+          "csm18"
+        ]
+      },
+      {
+        "molecule": "albumin",
+        "similarity": 0.3344670742279546,
+        "class": "peptide_protein",
+        "via_csms": [
+          "csm37",
+          "csm28",
+          "csm13",
+          "csm48",
+          "csm07"
+        ]
+      }
+    ],
+    "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f"
+  },
+  "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f",
+  "_provenance": {
+    "phase": "09",
+    "seed": 0,
+    "fingerprints": {
+      "atlas": "09ed804a40836f4a05a91ba10900cded",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51"
+    },
+    "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f",
+    "code_fingerprint": "5e10e5c2eebb42c1427c2cdc0ebf4683",
+    "created_utc": "2026-08-07T05:31:50.945105+00:00",
+    "packaging_phase": true
+  }
+}

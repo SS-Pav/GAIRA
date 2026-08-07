@@ -1,0 +1,1295 @@
+{
+  "preprocessing": {
+    "n_input_points": 676,
+    "input_range": [
+      450.0,
+      1800.0
+    ],
+    "resampled_to": "supplied on the canonical grid",
+    "baseline_method": "(skipped)",
+    "smoothing": "(skipped)",
+    "normalisation": "L2 (re-applied)",
+    "n_peaks": 17,
+    "signal_quality": 1.0,
+    "snr_estimate": 416.98477014150535,
+    "warnings": [
+      "preprocessing skipped: caller asserts the spectrum is canonical"
+    ]
+  },
+  "lsm": {
+    "activation": [
+      0.0,
+      0.0,
+      0.0,
+      0.0006956841427669511,
+      0.0,
+      0.0,
+      0.0,
+      0.7115740640355087,
+      0.004993857871642455,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0006606153232280986,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.03244736577006153,
+      0.0,
+      0.001468430913197856,
+      0.0,
+      0.018988827938977847,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "reconstruction_error": 0.1728003741797867,
+    "explained_variance": 0.9701400306832958,
+    "n_active": 7,
+    "top": [
+      {
+        "lsm_id": "fatty_acid.m00",
+        "weight": 0.7115740640355087,
+        "share": 0.9231284840095971
+      },
+      {
+        "lsm_id": "polysaccharide.m01",
+        "weight": 0.03244736577006153,
+        "share": 0.04209412496508176
+      },
+      {
+        "lsm_id": "small_nitrogenous.m00",
+        "weight": 0.018988827938977847,
+        "share": 0.024634298570433803
+      },
+      {
+        "lsm_id": "fatty_acid.m01",
+        "weight": 0.004993857871642455,
+        "share": 0.0064785560343001035
+      },
+      {
+        "lsm_id": "purine.m01",
+        "weight": 0.001468430913197856,
+        "share": 0.00190500254476043
+      },
+      {
+        "lsm_id": "carboxylic_acid_metabolite.m00",
+        "weight": 0.0006956841427669511,
+        "share": 0.0009025144120906641
+      },
+      {
+        "lsm_id": "free_amino_acid.m03",
+        "weight": 0.0006606153232280986,
+        "share": 0.0008570194624387448
+      }
+    ]
+  },
+  "csm": {
+    "activation": [
+      0.0031210263992173803,
+      0.0,
+      0.0,
+      0.0018292449275782142,
+      0.0,
+      0.0,
+      0.0,
+      0.9642446198691595,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0005478294501867867,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.04349253783051699,
+      0.0,
+      0.0018776966490234258,
+      0.0,
+      0.01957471097250186,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "explained_variance": 0.970112072056623,
+    "residual_fraction": 0.029887927943376993,
+    "sparsity": 0.9880441379001985,
+    "entropy": 0.08174804757631202,
+    "n_active": 7,
+    "top": [
+      {
+        "csm_id": "csm07",
+        "weight": 0.9642446198691595,
+        "share": 0.9319185406977952,
+        "dominant_bands": [
+          892.0,
+          1064.0,
+          1128.0,
+          1176.0,
+          1296.0,
+          1422.0,
+          1438.0,
+          1464.0
+        ],
+        "band_assignment": "892: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1064: C\u2013C trans chain [fatty_acid] | 1128: C\u2013C skeletal (gauche) / C\u2013N stretch | 1176: C\u2013C / C=C conjugated stretch | 1296: CH2 twist | 1422: unassigned | 1438: CH2 / CH3 scissoring | 1464: CH2 / CH3 scissoring",
+        "lsms": [
+          "fatty_acid.m00"
+        ]
+      },
+      {
+        "csm_id": "csm39",
+        "weight": 0.04349253783051699,
+        "share": 0.04203446050003251,
+        "dominant_bands": [
+          498.0,
+          896.0,
+          954.0,
+          1058.0,
+          1098.0,
+          1150.0,
+          1266.0,
+          1330.0,
+          1378.0,
+          1414.0
+        ],
+        "band_assignment": "498: S\u2013S / skeletal deformation | 896: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 954: C\u2013O\u2013C ring [polysaccharide] | 1058: C\u2013N / C\u2013O stretch | 1098: C\u2013O\u2013C glycosidic [polysaccharide] | 1150: C\u2013C / C=C conjugated stretch | 1266: amide III / =C\u2013H in-plane bend | 1330: CH deformation / tryptophan | 1378: unassigned | 1414: COO- symmetric stretch",
+        "lsms": [
+          "polysaccharide.m01"
+        ]
+      },
+      {
+        "csm_id": "csm43",
+        "weight": 0.01957471097250186,
+        "share": 0.018918473287982,
+        "dominant_bands": [
+          578.0,
+          606.0,
+          674.0,
+          838.0,
+          904.0,
+          1010.0,
+          1246.0,
+          1416.0,
+          1658.0,
+          1712.0
+        ],
+        "band_assignment": "578: unassigned | 606: unassigned | 674: unassigned | 838: tyrosine Fermi doublet / C\u2013C skeletal | 904: unassigned | 1010: C\u2013N symmetric [small_nitrogenous] | 1246: amide III / =C\u2013H in-plane bend | 1416: COO- symmetric stretch | 1658: amide I / C=C stretch | 1712: C=O ester / carboxylic acid",
+        "lsms": [
+          "small_nitrogenous.m00"
+        ]
+      },
+      {
+        "csm_id": "csm00",
+        "weight": 0.0031210263992173803,
+        "share": 0.0030163947068044023,
+        "dominant_bands": [
+          866.0,
+          970.0,
+          1082.0,
+          1264.0,
+          1436.0,
+          1654.0
+        ],
+        "band_assignment": "866: glycerol C\u2013C [acylglycerol] | 970: unassigned | 1082: C\u2013C skeletal (trans) / PO2- symmetric | 1264: amide III / =C\u2013H in-plane bend | 1436: CH2 / CH3 scissoring | 1654: cis C=C [fatty_acid]",
+        "lsms": [
+          "acylglycerol.m01",
+          "fatty_acid.m01"
+        ]
+      },
+      {
+        "csm_id": "csm41",
+        "weight": 0.0018776966490234258,
+        "share": 0.0018147473006056218,
+        "dominant_bands": [
+          544.0,
+          650.0,
+          938.0,
+          958.0,
+          1230.0,
+          1264.0,
+          1330.0,
+          1434.0,
+          1552.0,
+          1680.0
+        ],
+        "band_assignment": "544: S\u2013S / skeletal deformation | 650: C\u2013S stretch / phenyl ring | 938: C\u2013C backbone stretch | 958: C\u2013C backbone stretch | 1230: amide III / C\u2013O\u2013C asymmetric | 1264: amide III / =C\u2013H in-plane bend | 1330: purine N7\u2013C5 stretch [purine] | 1434: CH2 / CH3 scissoring | 1552: amide II / COO- asymmetric | 1680: amide I / C=C stretch",
+        "lsms": [
+          "purine.m01"
+        ]
+      },
+      {
+        "csm_id": "csm03",
+        "weight": 0.0018292449275782142,
+        "share": 0.001767919911981307,
+        "dominant_bands": [
+          640.0,
+          684.0,
+          784.0,
+          830.0,
+          938.0,
+          1168.0,
+          1294.0,
+          1430.0,
+          1658.0,
+          1704.0
+        ],
+        "band_assignment": "640: C\u2013S stretch / phenyl ring | 684: unassigned | 784: unassigned | 830: tyrosine Fermi doublet / C\u2013C skeletal | 938: C\u2013C backbone stretch | 1168: C\u2013C / C=C conjugated stretch | 1294: CH2 twist | 1430: CH2 / CH3 scissoring | 1658: amide I / C=C stretch | 1704: carboxylic acid C=O [carboxylic_acid_metabolite]",
+        "lsms": [
+          "carboxylic_acid_metabolite.m00"
+        ]
+      },
+      {
+        "csm_id": "csm14",
+        "weight": 0.0005478294501867867,
+        "share": 0.0005294635938322592,
+        "dominant_bands": [
+          504.0,
+          602.0,
+          840.0,
+          896.0,
+          1034.0,
+          1084.0,
+          1238.0,
+          1326.0,
+          1410.0,
+          1444.0
+        ],
+        "band_assignment": "504: S\u2013S / skeletal deformation | 602: unassigned | 840: tyrosine Fermi doublet / C\u2013C skeletal | 896: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1034: C\u2013N / C\u2013O stretch | 1084: C\u2013C skeletal (trans) / PO2- symmetric | 1238: amide III / C\u2013O\u2013C asymmetric | 1326: unassigned | 1410: COO- symmetric [free_amino_acid] | 1444: CH2 / CH3 scissoring",
+        "lsms": [
+          "free_amino_acid.m03"
+        ]
+      }
+    ]
+  },
+  "retrieval": {
+    "top": [
+      {
+        "rank": 1,
+        "molecule": "myristic acid",
+        "chemistry_class": "fatty_acid",
+        "similarity": 0.9974681918531483,
+        "supporting_csms": [
+          {
+            "csm_id": "csm07",
+            "contribution": 0.9954711733498581,
+            "share_of_similarity": 0.997997912594508,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          },
+          {
+            "csm_id": "csm39",
+            "contribution": 0.0017413440470905477,
+            "share_of_similarity": 0.0017457639865724867,
+            "lsms": [
+              "polysaccharide.m01"
+            ],
+            "diagnostic_bands": [
+              498.0,
+              896.0,
+              954.0,
+              1058.0,
+              1098.0,
+              1150.0,
+              1266.0,
+              1330.0,
+              1378.0,
+              1414.0
+            ]
+          },
+          {
+            "csm_id": "csm43",
+            "contribution": 0.00022158174636458032,
+            "share_of_similarity": 0.00022214417279080558,
+            "lsms": [
+              "small_nitrogenous.m00"
+            ],
+            "diagnostic_bands": [
+              578.0,
+              606.0,
+              674.0,
+              838.0,
+              904.0,
+              1010.0,
+              1246.0,
+              1416.0,
+              1658.0,
+              1712.0
+            ]
+          },
+          {
+            "csm_id": "csm03",
+            "contribution": 2.1287559269335847e-05,
+            "share_of_similarity": 2.134159208602469e-05,
+            "lsms": [
+              "carboxylic_acid_metabolite.m00"
+            ],
+            "diagnostic_bands": [
+              640.0,
+              684.0,
+              784.0,
+              830.0,
+              938.0,
+              1168.0,
+              1294.0,
+              1430.0,
+              1658.0,
+              1704.0
+            ]
+          },
+          {
+            "csm_id": "csm00",
+            "contribution": 5.632979214031229e-06,
+            "share_of_similarity": 5.647277036032938e-06,
+            "lsms": [
+              "acylglycerol.m01",
+              "fatty_acid.m01"
+            ],
+            "diagnostic_bands": [
+              866.0,
+              970.0,
+              1082.0,
+              1264.0,
+              1436.0,
+              1654.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.9974681918531483,
+        "reconciles": true
+      },
+      {
+        "rank": 2,
+        "molecule": "palmitic acid",
+        "chemistry_class": "fatty_acid",
+        "similarity": 0.9711343966927729,
+        "supporting_csms": [
+          {
+            "csm_id": "csm07",
+            "contribution": 0.9702892605005319,
+            "share_of_similarity": 0.9991297433227386,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          },
+          {
+            "csm_id": "csm39",
+            "contribution": 0.0007039076705456983,
+            "share_of_similarity": 0.0007248303354738046,
+            "lsms": [
+              "polysaccharide.m01"
+            ],
+            "diagnostic_bands": [
+              498.0,
+              896.0,
+              954.0,
+              1058.0,
+              1098.0,
+              1150.0,
+              1266.0,
+              1330.0,
+              1378.0,
+              1414.0
+            ]
+          },
+          {
+            "csm_id": "csm43",
+            "contribution": 0.00011393727962521871,
+            "share_of_similarity": 0.00011732390492306542,
+            "lsms": [
+              "small_nitrogenous.m00"
+            ],
+            "diagnostic_bands": [
+              578.0,
+              606.0,
+              674.0,
+              838.0,
+              904.0,
+              1010.0,
+              1246.0,
+              1416.0,
+              1658.0,
+              1712.0
+            ]
+          },
+          {
+            "csm_id": "csm03",
+            "contribution": 1.6932422069274943e-05,
+            "share_of_similarity": 1.7435714487017837e-05,
+            "lsms": [
+              "carboxylic_acid_metabolite.m00"
+            ],
+            "diagnostic_bands": [
+              640.0,
+              684.0,
+              784.0,
+              830.0,
+              938.0,
+              1168.0,
+              1294.0,
+              1430.0,
+              1658.0,
+              1704.0
+            ]
+          },
+          {
+            "csm_id": "csm00",
+            "contribution": 5.62939159609591e-06,
+            "share_of_similarity": 5.796717339290189e-06,
+            "lsms": [
+              "acylglycerol.m01",
+              "fatty_acid.m01"
+            ],
+            "diagnostic_bands": [
+              866.0,
+              970.0,
+              1082.0,
+              1264.0,
+              1436.0,
+              1654.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.971134396692773,
+        "reconciles": true
+      },
+      {
+        "rank": 3,
+        "molecule": "arachidic acid",
+        "chemistry_class": "fatty_acid",
+        "similarity": 0.9343550653500746,
+        "supporting_csms": [
+          {
+            "csm_id": "csm07",
+            "contribution": 0.9343550653500746,
+            "share_of_similarity": 0.9999999999989297,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.9343550653500746,
+        "reconciles": true
+      },
+      {
+        "rank": 4,
+        "molecule": "stearate",
+        "chemistry_class": "fatty_acid",
+        "similarity": 0.7917441281836778,
+        "supporting_csms": [
+          {
+            "csm_id": "csm07",
+            "contribution": 0.7917441281836778,
+            "share_of_similarity": 0.999999999998737,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.7917441281836778,
+        "reconciles": true
+      },
+      {
+        "rank": 5,
+        "molecule": "lauric acid",
+        "chemistry_class": "fatty_acid",
+        "similarity": 0.5089484540179142,
+        "supporting_csms": [
+          {
+            "csm_id": "csm07",
+            "contribution": 0.5089484540179142,
+            "share_of_similarity": 0.9999999999980352,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.5089484540179142,
+        "reconciles": true
+      },
+      {
+        "rank": 6,
+        "molecule": "tripetroselinin",
+        "chemistry_class": "acylglycerol",
+        "similarity": 0.3651384445500573,
+        "supporting_csms": [
+          {
+            "csm_id": "csm07",
+            "contribution": 0.3634496862271392,
+            "share_of_similarity": 0.9953750191218719,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          },
+          {
+            "csm_id": "csm00",
+            "contribution": 0.0015583997154953193,
+            "share_of_similarity": 0.004267969420232901,
+            "lsms": [
+              "acylglycerol.m01",
+              "fatty_acid.m01"
+            ],
+            "diagnostic_bands": [
+              866.0,
+              970.0,
+              1082.0,
+              1264.0,
+              1436.0,
+              1654.0
+            ]
+          },
+          {
+            "csm_id": "csm03",
+            "contribution": 0.000130358607422792,
+            "share_of_similarity": 0.00035701145515660426,
+            "lsms": [
+              "carboxylic_acid_metabolite.m00"
+            ],
+            "diagnostic_bands": [
+              640.0,
+              684.0,
+              784.0,
+              830.0,
+              938.0,
+              1168.0,
+              1294.0,
+              1430.0,
+              1658.0,
+              1704.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.3651384445500573,
+        "reconciles": true
+      },
+      {
+        "rank": 7,
+        "molecule": "sphingomyelin",
+        "chemistry_class": "phospholipid_sphingolipid",
+        "similarity": 0.27541031929011056,
+        "supporting_csms": [
+          {
+            "csm_id": "csm07",
+            "contribution": 0.27541031929011056,
+            "share_of_similarity": 0.9999999999963691,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.27541031929011056,
+        "reconciles": true
+      },
+      {
+        "rank": 8,
+        "molecule": "ceramide",
+        "chemistry_class": "phospholipid_sphingolipid",
+        "similarity": 0.24296338182387214,
+        "supporting_csms": [
+          {
+            "csm_id": "csm07",
+            "contribution": 0.24278163000920916,
+            "share_of_similarity": 0.9992519374141985,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          },
+          {
+            "csm_id": "csm39",
+            "contribution": 0.00010801117952893013,
+            "share_of_similarity": 0.0004445574420213846,
+            "lsms": [
+              "polysaccharide.m01"
+            ],
+            "diagnostic_bands": [
+              498.0,
+              896.0,
+              954.0,
+              1058.0,
+              1098.0,
+              1150.0,
+              1266.0,
+              1330.0,
+              1378.0,
+              1414.0
+            ]
+          },
+          {
+            "csm_id": "csm03",
+            "contribution": 5.679045749464634e-05,
+            "share_of_similarity": 0.00023374080928615355,
+            "lsms": [
+              "carboxylic_acid_metabolite.m00"
+            ],
+            "diagnostic_bands": [
+              640.0,
+              684.0,
+              784.0,
+              830.0,
+              938.0,
+              1168.0,
+              1294.0,
+              1430.0,
+              1658.0,
+              1704.0
+            ]
+          },
+          {
+            "csm_id": "csm41",
+            "contribution": 1.6950177639391348e-05,
+            "share_of_similarity": 6.976433037801979e-05,
+            "lsms": [
+              "purine.m01"
+            ],
+            "diagnostic_bands": [
+              544.0,
+              650.0,
+              938.0,
+              958.0,
+              1230.0,
+              1264.0,
+              1330.0,
+              1434.0,
+              1552.0,
+              1680.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.24296338182387214,
+        "reconciles": true
+      },
+      {
+        "rank": 9,
+        "molecule": "14-methylhexadecanoic acid",
+        "chemistry_class": "fatty_acid",
+        "similarity": 0.12642281745561845,
+        "supporting_csms": [
+          {
+            "csm_id": "csm07",
+            "contribution": 0.12453197933675436,
+            "share_of_similarity": 0.9850435375677897,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          },
+          {
+            "csm_id": "csm39",
+            "contribution": 0.0018908381188640917,
+            "share_of_similarity": 0.014956462424300314,
+            "lsms": [
+              "polysaccharide.m01"
+            ],
+            "diagnostic_bands": [
+              498.0,
+              896.0,
+              954.0,
+              1058.0,
+              1098.0,
+              1150.0,
+              1266.0,
+              1330.0,
+              1378.0,
+              1414.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.12642281745561845,
+        "reconciles": true
+      },
+      {
+        "rank": 10,
+        "molecule": "14-methylpentadecanoic acid",
+        "chemistry_class": "fatty_acid",
+        "similarity": 0.12580160084722747,
+        "supporting_csms": [
+          {
+            "csm_id": "csm07",
+            "contribution": 0.12575225369644755,
+            "share_of_similarity": 0.9996077382843525,
+            "lsms": [
+              "fatty_acid.m00"
+            ],
+            "diagnostic_bands": [
+              892.0,
+              1064.0,
+              1128.0,
+              1176.0,
+              1296.0,
+              1422.0,
+              1438.0,
+              1464.0
+            ]
+          },
+          {
+            "csm_id": "csm00",
+            "contribution": 4.256153931160348e-05,
+            "share_of_similarity": 0.00033832271628205727,
+            "lsms": [
+              "acylglycerol.m01",
+              "fatty_acid.m01"
+            ],
+            "diagnostic_bands": [
+              866.0,
+              970.0,
+              1082.0,
+              1264.0,
+              1436.0,
+              1654.0
+            ]
+          },
+          {
+            "csm_id": "csm14",
+            "contribution": 6.7856114683142395e-06,
+            "share_of_similarity": 5.393899141633894e-05,
+            "lsms": [
+              "free_amino_acid.m03"
+            ],
+            "diagnostic_bands": [
+              504.0,
+              602.0,
+              840.0,
+              896.0,
+              1034.0,
+              1084.0,
+              1238.0,
+              1326.0,
+              1410.0,
+              1444.0
+            ]
+          }
+        ],
+        "contribution_sum": 0.12580160084722744,
+        "reconciles": true
+      }
+    ],
+    "margin": 0.026333795160375373,
+    "n_candidates": 154
+  },
+  "chemistry": {
+    "axis_names": [
+      "acylglycerol",
+      "carboxylic_acid_metabolite",
+      "chromophore_pigment",
+      "fatty_acid",
+      "free_amino_acid",
+      "mono_oligosaccharide",
+      "nucleic_acid_polymer",
+      "peptide_protein",
+      "phosphate_metabolite",
+      "phospholipid_sphingolipid",
+      "polysaccharide",
+      "purine",
+      "pyrimidine",
+      "small_nitrogenous",
+      "sterol_steroid",
+      "sulfur_thiol_cofactor"
+    ],
+    "evidence": [
+      0.2850340787195244,
+      0.03359838400665006,
+      6.27546521812294e-05,
+      0.7786428171573021,
+      0.021921440917183285,
+      0.028458794776241456,
+      0.0007902335767260234,
+      0.01836851249272507,
+      0.00020567289906608916,
+      0.29711342975600363,
+      0.017905454113000527,
+      0.009338225576829015,
+      2.2090442461541326e-06,
+      0.00807676662320663,
+      0.05037011917417976,
+      0.0007512097833723999
+    ],
+    "calibrated_probability": [
+      0.005616567942049395,
+      9.395210361417485e-08,
+      8.644523211147666e-22,
+      0.9874291874692245,
+      1.0446333621567658e-08,
+      3.9996107773844424e-08,
+      3.941430819461972e-16,
+      4.206621006959079e-09,
+      3.8780151206642325e-19,
+      0.0069533378929765325,
+      3.6888745960918612e-09,
+      1.2959558201102448e-10,
+      2.8860566562984683e-29,
+      6.14303661852787e-11,
+      7.542136947673627e-07,
+      3.037501723826078e-16
+    ],
+    "evidence_l1": [
+      0.18381704311564367,
+      0.02166742878364215,
+      4.047015941927125e-05,
+      0.5021428347658347,
+      0.014137026941946847,
+      0.018352933550627046,
+      0.0005096176572886642,
+      0.011845761278839679,
+      0.0001326374176912098,
+      0.19160695581750825,
+      0.011547137259798633,
+      0.006022174685886099,
+      1.424601518751183e-06,
+      0.00520866615417544,
+      0.032483436400217676,
+      0.00048445140931704017
+    ],
+    "top": [
+      {
+        "axis": "fatty_acid",
+        "evidence": 0.7786428171573021,
+        "share": 0.5021428347658347,
+        "calibrated_probability": 0.9874291874692245,
+        "rank": 1
+      },
+      {
+        "axis": "phospholipid_sphingolipid",
+        "evidence": 0.29711342975600363,
+        "share": 0.19160695581750825,
+        "calibrated_probability": 0.0069533378929765325,
+        "rank": 2
+      },
+      {
+        "axis": "acylglycerol",
+        "evidence": 0.2850340787195244,
+        "share": 0.18381704311564367,
+        "calibrated_probability": 0.005616567942049395,
+        "rank": 3
+      },
+      {
+        "axis": "sterol_steroid",
+        "evidence": 0.05037011917417976,
+        "share": 0.032483436400217676,
+        "calibrated_probability": 7.542136947673627e-07,
+        "rank": 4
+      },
+      {
+        "axis": "carboxylic_acid_metabolite",
+        "evidence": 0.03359838400665006,
+        "share": 0.02166742878364215,
+        "calibrated_probability": 9.395210361417485e-08,
+        "rank": 5
+      }
+    ],
+    "predicted_class": "fatty_acid",
+    "margin": 0.48152938740129847,
+    "entropy": 0.5313434706229807
+  },
+  "confidence": {
+    "overall": 0.9676559344092308,
+    "evidence_coverage": 0.970112072056623,
+    "top1_confidence": 0.9974681918531483,
+    "top3_confidence": 0.9676525512986652,
+    "retrieval_margin": 0.026333795160375373,
+    "chemistry_confidence": 0.9874291874692245,
+    "reconstruction_explained_variance": 0.970112072056623,
+    "unknown_warning": false,
+    "outlier_warning": false,
+    "notes": [
+      "preprocessing skipped: caller asserts the spectrum is canonical"
+    ]
+  },
+  "provenance": {
+    "root": "spectrum",
+    "lsm_layer": [
+      {
+        "id": "fatty_acid.m00",
+        "weight": 0.7115740640355087
+      },
+      {
+        "id": "polysaccharide.m01",
+        "weight": 0.03244736577006153
+      },
+      {
+        "id": "small_nitrogenous.m00",
+        "weight": 0.018988827938977847
+      },
+      {
+        "id": "fatty_acid.m01",
+        "weight": 0.004993857871642455
+      },
+      {
+        "id": "purine.m01",
+        "weight": 0.001468430913197856
+      },
+      {
+        "id": "carboxylic_acid_metabolite.m00",
+        "weight": 0.0006956841427669511
+      },
+      {
+        "id": "free_amino_acid.m03",
+        "weight": 0.0006606153232280986
+      }
+    ],
+    "csm_layer": [
+      {
+        "id": "csm07",
+        "weight": 0.9642446198691595,
+        "lsms": [
+          "fatty_acid.m00"
+        ],
+        "bands": [
+          892.0,
+          1064.0,
+          1128.0,
+          1176.0,
+          1296.0,
+          1422.0,
+          1438.0,
+          1464.0
+        ],
+        "assignment": "892: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1064: C\u2013C trans chain [fatty_acid] | 1128: C\u2013C skeletal (gauche) / C\u2013N stretch | 1176: C\u2013C / C=C conjugated stretch | 1296: CH2 twist | 1422: unassigned | 1438: CH2 / CH3 scissoring | 1464: CH2 / CH3 scissoring"
+      },
+      {
+        "id": "csm39",
+        "weight": 0.04349253783051699,
+        "lsms": [
+          "polysaccharide.m01"
+        ],
+        "bands": [
+          498.0,
+          896.0,
+          954.0,
+          1058.0,
+          1098.0,
+          1150.0,
+          1266.0,
+          1330.0,
+          1378.0,
+          1414.0
+        ],
+        "assignment": "498: S\u2013S / skeletal deformation | 896: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 954: C\u2013O\u2013C ring [polysaccharide] | 1058: C\u2013N / C\u2013O stretch | 1098: C\u2013O\u2013C glycosidic [polysaccharide] | 1150: C\u2013C / C=C conjugated stretch | 1266: amide III / =C\u2013H in-plane bend | 1330: CH deformation / tryptophan | 1378: unassigned | 1414: COO- symmetric stretch"
+      },
+      {
+        "id": "csm43",
+        "weight": 0.01957471097250186,
+        "lsms": [
+          "small_nitrogenous.m00"
+        ],
+        "bands": [
+          578.0,
+          606.0,
+          674.0,
+          838.0,
+          904.0,
+          1010.0,
+          1246.0,
+          1416.0,
+          1658.0,
+          1712.0
+        ],
+        "assignment": "578: unassigned | 606: unassigned | 674: unassigned | 838: tyrosine Fermi doublet / C\u2013C skeletal | 904: unassigned | 1010: C\u2013N symmetric [small_nitrogenous] | 1246: amide III / =C\u2013H in-plane bend | 1416: COO- symmetric stretch | 1658: amide I / C=C stretch | 1712: C=O ester / carboxylic acid"
+      },
+      {
+        "id": "csm00",
+        "weight": 0.0031210263992173803,
+        "lsms": [
+          "acylglycerol.m01",
+          "fatty_acid.m01"
+        ],
+        "bands": [
+          866.0,
+          970.0,
+          1082.0,
+          1264.0,
+          1436.0,
+          1654.0
+        ],
+        "assignment": "866: glycerol C\u2013C [acylglycerol] | 970: unassigned | 1082: C\u2013C skeletal (trans) / PO2- symmetric | 1264: amide III / =C\u2013H in-plane bend | 1436: CH2 / CH3 scissoring | 1654: cis C=C [fatty_acid]"
+      },
+      {
+        "id": "csm41",
+        "weight": 0.0018776966490234258,
+        "lsms": [
+          "purine.m01"
+        ],
+        "bands": [
+          544.0,
+          650.0,
+          938.0,
+          958.0,
+          1230.0,
+          1264.0,
+          1330.0,
+          1434.0,
+          1552.0,
+          1680.0
+        ],
+        "assignment": "544: S\u2013S / skeletal deformation | 650: C\u2013S stretch / phenyl ring | 938: C\u2013C backbone stretch | 958: C\u2013C backbone stretch | 1230: amide III / C\u2013O\u2013C asymmetric | 1264: amide III / =C\u2013H in-plane bend | 1330: purine N7\u2013C5 stretch [purine] | 1434: CH2 / CH3 scissoring | 1552: amide II / COO- asymmetric | 1680: amide I / C=C stretch"
+      },
+      {
+        "id": "csm03",
+        "weight": 0.0018292449275782142,
+        "lsms": [
+          "carboxylic_acid_metabolite.m00"
+        ],
+        "bands": [
+          640.0,
+          684.0,
+          784.0,
+          830.0,
+          938.0,
+          1168.0,
+          1294.0,
+          1430.0,
+          1658.0,
+          1704.0
+        ],
+        "assignment": "640: C\u2013S stretch / phenyl ring | 684: unassigned | 784: unassigned | 830: tyrosine Fermi doublet / C\u2013C skeletal | 938: C\u2013C backbone stretch | 1168: C\u2013C / C=C conjugated stretch | 1294: CH2 twist | 1430: CH2 / CH3 scissoring | 1658: amide I / C=C stretch | 1704: carboxylic acid C=O [carboxylic_acid_metabolite]"
+      },
+      {
+        "id": "csm14",
+        "weight": 0.0005478294501867867,
+        "lsms": [
+          "free_amino_acid.m03"
+        ],
+        "bands": [
+          504.0,
+          602.0,
+          840.0,
+          896.0,
+          1034.0,
+          1084.0,
+          1238.0,
+          1326.0,
+          1410.0,
+          1444.0
+        ],
+        "assignment": "504: S\u2013S / skeletal deformation | 602: unassigned | 840: tyrosine Fermi doublet / C\u2013C skeletal | 896: C\u2013C\u2013N / C\u2013O\u2013C skeletal | 1034: C\u2013N / C\u2013O stretch | 1084: C\u2013C skeletal (trans) / PO2- symmetric | 1238: amide III / C\u2013O\u2013C asymmetric | 1326: unassigned | 1410: COO- symmetric [free_amino_acid] | 1444: CH2 / CH3 scissoring"
+      }
+    ],
+    "chemistry_layer": [
+      {
+        "axis": "fatty_acid",
+        "evidence": 0.7786428171573021
+      },
+      {
+        "axis": "phospholipid_sphingolipid",
+        "evidence": 0.29711342975600363
+      },
+      {
+        "axis": "acylglycerol",
+        "evidence": 0.2850340787195244
+      },
+      {
+        "axis": "sterol_steroid",
+        "evidence": 0.05037011917417976
+      },
+      {
+        "axis": "carboxylic_acid_metabolite",
+        "evidence": 0.03359838400665006
+      }
+    ],
+    "molecule_layer": [
+      {
+        "molecule": "myristic acid",
+        "similarity": 0.9974681918531483,
+        "class": "fatty_acid",
+        "via_csms": [
+          "csm07",
+          "csm39",
+          "csm43",
+          "csm03",
+          "csm00"
+        ]
+      },
+      {
+        "molecule": "palmitic acid",
+        "similarity": 0.9711343966927729,
+        "class": "fatty_acid",
+        "via_csms": [
+          "csm07",
+          "csm39",
+          "csm43",
+          "csm03",
+          "csm00"
+        ]
+      },
+      {
+        "molecule": "arachidic acid",
+        "similarity": 0.9343550653500746,
+        "class": "fatty_acid",
+        "via_csms": [
+          "csm07"
+        ]
+      },
+      {
+        "molecule": "stearate",
+        "similarity": 0.7917441281836778,
+        "class": "fatty_acid",
+        "via_csms": [
+          "csm07"
+        ]
+      },
+      {
+        "molecule": "lauric acid",
+        "similarity": 0.5089484540179142,
+        "class": "fatty_acid",
+        "via_csms": [
+          "csm07"
+        ]
+      }
+    ],
+    "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f"
+  },
+  "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f",
+  "_provenance": {
+    "phase": "09",
+    "seed": 0,
+    "fingerprints": {
+      "atlas": "09ed804a40836f4a05a91ba10900cded",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51"
+    },
+    "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f",
+    "code_fingerprint": "5e10e5c2eebb42c1427c2cdc0ebf4683",
+    "created_utc": "2026-08-07T05:31:50.945105+00:00",
+    "packaging_phase": true
+  }
+}

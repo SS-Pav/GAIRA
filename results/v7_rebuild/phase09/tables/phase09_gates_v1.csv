@@ -1,0 +1,17 @@
+gate,status
+G1 frozen fingerprints verified on engine load,PASS
+"G2 no new representation, optimisation or heuristic introduced",PASS
+"G3 BSV2, PCA, UMAP, clustering and geometry absent from the inference path",PASS
+G4 engine holds no mutable state,PASS
+G5 engine is deterministic on repeat,PASS
+"G6 every spectrum processed, no exceptions",PASS
+G7 every retrieval score reconciles,PASS
+G8 retrieval reproduces the frozen baseline exactly,PASS
+"G9 LSM, CSM, retrieval and chemistry all validated",PASS
+G10 representative reports for every chemistry family,PASS
+G11 noise robustness measured end to end,PASS
+"G12 radar labelled relative evidence, not concentration",PASS
+G13 provenance tree complete for every spectrum,PASS
+G14 Raman-only scope,PASS
+"G15 chemistry accuracy reported held-out, not only in-sample",PASS
+G16 retrieval confidence temperature fitted in-fold,PASS

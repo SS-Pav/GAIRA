@@ -1,0 +1,113 @@
+{
+  "phase": "09",
+  "artifacts": [
+    {
+      "artifact_id": "engine_outputs_all_spectra_v1.csv",
+      "path": "results/v7_rebuild/phase09/tables/engine_outputs_all_spectra_v1.csv",
+      "sha256": "43281f215adf06bf3b6fc6898d7ee74a65e2d6969f31553317b5619e63eedc80",
+      "rows": 375
+    },
+    {
+      "artifact_id": "csm_confusion_matrix_v1.csv",
+      "path": "results/v7_rebuild/phase09/tables/csm_confusion_matrix_v1.csv",
+      "sha256": "e0a28a96e24c1243d5988738dfc82f70e25c7489099e8583b9810e43ccfadad5",
+      "rows": 16
+    },
+    {
+      "artifact_id": "csm_per_class_v1.csv",
+      "path": "results/v7_rebuild/phase09/tables/csm_per_class_v1.csv",
+      "sha256": "e2a2f0797c6bd209905ee640e468c82d57e2289adba0eb386b66d72e1b535827",
+      "rows": 16
+    },
+    {
+      "artifact_id": "retrieval_rank_distribution_v1.csv",
+      "path": "results/v7_rebuild/phase09/tables/retrieval_rank_distribution_v1.csv",
+      "sha256": "cb68423961d578f0707bf1e28d6ecc4299ac54d34946492a2bb5496b8fc823e7",
+      "rows": 9
+    },
+    {
+      "artifact_id": "retrieval_risk_coverage_v1.csv",
+      "path": "results/v7_rebuild/phase09/tables/retrieval_risk_coverage_v1.csv",
+      "sha256": "27f38abb8c02938e74eeebc47556c09cd83423c56bcea7784e2f574044fbd5d6",
+      "rows": 30
+    },
+    {
+      "artifact_id": "chemistry_per_axis_v1.csv",
+      "path": "results/v7_rebuild/phase09/tables/chemistry_per_axis_v1.csv",
+      "sha256": "1646c33bf9099b249a02dd7503f552f72d4a7df546bbc99da632e3fd52ef4622",
+      "rows": 16
+    },
+    {
+      "artifact_id": "chemistry_roc_v1.csv",
+      "path": "results/v7_rebuild/phase09/tables/chemistry_roc_v1.csv",
+      "sha256": "6b314b9c6f00eea43061f711a655cf2fdab235cc8c6cc214823e5e6e5bc51c86",
+      "rows": 106
+    },
+    {
+      "artifact_id": "chemistry_pr_v1.csv",
+      "path": "results/v7_rebuild/phase09/tables/chemistry_pr_v1.csv",
+      "sha256": "d942fbce651fd87ce4efcee537e14c958bc9bd02aecb1488c8db984c7ef0e9dc",
+      "rows": 5965
+    },
+    {
+      "artifact_id": "chemistry_reliability_v1.csv",
+      "path": "results/v7_rebuild/phase09/tables/chemistry_reliability_v1.csv",
+      "sha256": "7e7e0f1aadc753bc2c410cb7ad635429cf14bfd2a246d94bd3f27c4d7a1f3116",
+      "rows": 10
+    },
+    {
+      "artifact_id": "noise_robustness_v1.csv",
+      "path": "results/v7_rebuild/phase09/tables/noise_robustness_v1.csv",
+      "sha256": "b3781f2eb96fc9dff53c3b718eb502846dc41943e4ff96dd92e83af14c0d720a",
+      "rows": 35
+    },
+    {
+      "artifact_id": "representative_analytes_v1.csv",
+      "path": "results/v7_rebuild/phase09/tables/representative_analytes_v1.csv",
+      "sha256": "39f2a5cf33fdf9f173525c6529d77d889d1f051d19eebd26960c1878482d704d",
+      "rows": 48
+    },
+    {
+      "artifact_id": "engine_activations_v1.npz",
+      "path": "results/v7_rebuild/phase09/artifacts/engine_activations_v1.npz",
+      "sha256": "f906138878fc0e32f287fa44c4a5819c579a6f9d1cf160b99477e6eda301ba0e"
+    },
+    {
+      "artifact_id": "validation_summary_v1.json",
+      "path": "results/v7_rebuild/phase09/artifacts/validation_summary_v1.json",
+      "sha256": "93e6221fc3ce0fc12004ed0e7423cf06f98b3ffa5aceafa13cd86c411ffdac48"
+    },
+    {
+      "artifact_id": "phase09_gates_v1.csv",
+      "path": "results/v7_rebuild/phase09/tables/phase09_gates_v1.csv",
+      "sha256": "a4cfd62fdfc794067588db54f627526dcc2676487cf0d40d7c82048d7f54fe6f",
+      "rows": 16
+    },
+    {
+      "artifact_id": "phase09_summary_v1.json",
+      "path": "results/v7_rebuild/phase09/artifacts/phase09_summary_v1.json",
+      "sha256": "aba4e124d1546a985090dfe94a0fd433765c83d11648161a734d8c8597703eee"
+    }
+  ],
+  "fingerprints": {
+    "atlas": "09ed804a40836f4a05a91ba10900cded",
+    "lsm": "208482d6f7178b5b8f16cace91be55b0",
+    "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+    "engine": "20d8bd99ce71f45a125c6a2b1d719e51"
+  },
+  "seed": 0,
+  "_provenance": {
+    "phase": "09",
+    "seed": 0,
+    "fingerprints": {
+      "atlas": "09ed804a40836f4a05a91ba10900cded",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51"
+    },
+    "atlas_fingerprint": "2e43ddcca7d3be41c5f9da016fb8277f",
+    "code_fingerprint": "5e10e5c2eebb42c1427c2cdc0ebf4683",
+    "created_utc": "2026-08-07T05:31:50.945105+00:00",
+    "packaging_phase": true
+  }
+}
