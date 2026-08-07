@@ -290,6 +290,36 @@ class GAIRAEngine:
                                             np.log(e / (e.sum() + EPS) + EPS), 0)).sum()
                                  / np.log(len(e)))}
 
+    def prepare(self, spectrum, wavenumbers=None,
+                already_preprocessed: bool = False) -> tuple[np.ndarray, PreprocessingSummary]:
+        """The canonical spectrum `infer` will project, and its summary.
+
+        Read-only and side-effect free. Exposed so a client can *display* the processed spectrum
+        without reimplementing preprocessing: `infer` calls this and nothing else, so what a
+        viewer draws is exactly what the projection consumed. Phase 10 added the accessor; the
+        arithmetic is unchanged and was verified byte-identical against the Phase 09 fixtures.
+        """
+        v = np.asarray(spectrum, float)
+        w = np.asarray(wavenumbers, float) if wavenumbers is not None else self._grid
+        if v.shape[0] != w.shape[0]:
+            raise ValueError(f"spectrum has {v.shape[0]} points but {w.shape[0]} wavenumbers")
+        if not already_preprocessed:
+            return self.preprocess(w, v)
+        if v.shape[0] != N_BINS:
+            raise ValueError(f"already_preprocessed needs {N_BINS} bins, got {v.shape[0]}")
+        from scipy.signal import find_peaks
+        x = np.clip(v, 0.0, None)
+        x = x / (np.linalg.norm(x) + EPS)
+        pk, _ = find_peaks(x / (x.max() + EPS), prominence=0.02)
+        noise = float(np.median(np.abs(np.diff(x))))
+        return x, PreprocessingSummary(
+            n_input_points=int(len(w)), input_range=(float(w.min()), float(w.max())),
+            resampled_to="supplied on the canonical grid", baseline_method="(skipped)",
+            smoothing="(skipped)", normalisation="L2 (re-applied)", n_peaks=int(len(pk)),
+            signal_quality=float(np.clip(x.max() / (noise + EPS) / 100.0, 0, 1)),
+            snr_estimate=float(x.max() / (noise + EPS)),
+            warnings=("preprocessing skipped: caller asserts the spectrum is canonical",))
+
     def infer(self, spectrum, wavenumbers=None, top_k: int = 10,
               already_preprocessed: bool = False) -> InferenceReport:
         """The whole path. Deterministic, stateless, and identical alone or in a batch.
@@ -299,27 +329,7 @@ class GAIRAEngine:
         second time on a baseline-corrected spectrum would subtract a second small baseline, so
         the flag exists to keep validation honest rather than to save time.
         """
-        v = np.asarray(spectrum, float)
-        w = np.asarray(wavenumbers, float) if wavenumbers is not None else self._grid
-        if v.shape[0] != w.shape[0]:
-            raise ValueError(f"spectrum has {v.shape[0]} points but {w.shape[0]} wavenumbers")
-        if already_preprocessed:
-            if v.shape[0] != N_BINS:
-                raise ValueError(f"already_preprocessed needs {N_BINS} bins, got {v.shape[0]}")
-            from scipy.signal import find_peaks
-            x = np.clip(v, 0.0, None)
-            x = x / (np.linalg.norm(x) + EPS)
-            pk, _ = find_peaks(x / (x.max() + EPS), prominence=0.02)
-            noise = float(np.median(np.abs(np.diff(x))))
-            pre = PreprocessingSummary(
-                n_input_points=int(len(w)), input_range=(float(w.min()), float(w.max())),
-                resampled_to="supplied on the canonical grid", baseline_method="(skipped)",
-                smoothing="(skipped)", normalisation="L2 (re-applied)", n_peaks=int(len(pk)),
-                signal_quality=float(np.clip(x.max() / (noise + EPS) / 100.0, 0, 1)),
-                snr_estimate=float(x.max() / (noise + EPS)),
-                warnings=("preprocessing skipped: caller asserts the spectrum is canonical",))
-        else:
-            x, pre = self.preprocess(w, v)
+        x, pre = self.prepare(spectrum, wavenumbers, already_preprocessed)
         lsm = self.project_lsm(x)
         csm = self.project_csm(x)
         ret = self.retrieve(csm["activation"], top_k)
