@@ -1,0 +1,70 @@
+{
+  "chemistry_dominates": true,
+  "fine_chemistry_R2": 0.4522423691963074,
+  "source_R2": 0.03987666104362359,
+  "excitation_R2": 0.11755831340514226,
+  "ev_anova": {
+    "F": 17.0598367713103,
+    "p_value": 7.085430373491161e-22,
+    "eta_squared": 0.5973366342360376
+  },
+  "partition_ami": [
+    {
+      "factor": "fine_chemistry",
+      "n_levels": 16,
+      "AMI": 0.7024758160543361,
+      "ARI": 0.5639017748019893
+    },
+    {
+      "factor": "broad_chemistry",
+      "n_levels": 6,
+      "AMI": 0.5963698036440952,
+      "ARI": 0.5155049411063517
+    },
+    {
+      "factor": "reconstruction_EV_tertile",
+      "n_levels": 3,
+      "AMI": 0.29977591257656344,
+      "ARI": 0.22508249988050563
+    },
+    {
+      "factor": "excitation",
+      "n_levels": 7,
+      "AMI": 0.2915928710562653,
+      "ARI": 0.15601243833013956
+    },
+    {
+      "factor": "replicate_count",
+      "n_levels": 7,
+      "AMI": 0.23729934028193422,
+      "ARI": 0.1871830614067732
+    },
+    {
+      "factor": "source",
+      "n_levels": 3,
+      "AMI": 0.1867867748581729,
+      "ARI": 0.1195939983593593
+    },
+    {
+      "factor": "intensity_tertile",
+      "n_levels": 3,
+      "AMI": 0.06986805094076545,
+      "ARI": 0.060066705553952784
+    }
+  ],
+  "_provenance": {
+    "phase": "06_5",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "unit_of_analysis": "canonical molecule (154)",
+    "labels_used_in_construction": false,
+    "code_fingerprint": "6472717d5819a88e2c4c39b326009306",
+    "created_utc": "2026-08-07T02:35:33.072755+00:00",
+    "scope": "Raman only"
+  }
+}

@@ -1,0 +1,856 @@
+{
+  "canonical_partition": {
+    "algorithm": "average",
+    "K": 16,
+    "bootstrap_ari": 0.7734929212463255,
+    "selected_without_labels": true
+  },
+  "k_selection": {
+    "no_preferred_k": true,
+    "n_indices_with_interior_optimum": 0,
+    "monotonicity": [
+      {
+        "index": "silhouette",
+        "better": "higher",
+        "spearman_rho_vs_K": 1.0,
+        "p_value": 0.0,
+        "monotone": true,
+        "has_interior_optimum": false,
+        "optimal_K": 30
+      },
+      {
+        "index": "calinski_harabasz",
+        "better": "higher",
+        "spearman_rho_vs_K": 0.09010989010989012,
+        "p_value": 0.7593388378159543,
+        "monotone": false,
+        "has_interior_optimum": false,
+        "optimal_K": 30
+      },
+      {
+        "index": "davies_bouldin",
+        "better": "lower",
+        "spearman_rho_vs_K": -0.7230769230769231,
+        "p_value": 0.0034752946180943048,
+        "monotone": false,
+        "has_interior_optimum": false,
+        "optimal_K": 30
+      },
+      {
+        "index": "neighbour_preservation",
+        "better": "higher",
+        "spearman_rho_vs_K": -1.0,
+        "p_value": 0.0,
+        "monotone": true,
+        "has_interior_optimum": false,
+        "optimal_K": 2
+      },
+      {
+        "index": "membership_entropy",
+        "better": "higher",
+        "spearman_rho_vs_K": 1.0,
+        "p_value": 0.0,
+        "monotone": true,
+        "has_interior_optimum": false,
+        "optimal_K": 30
+      },
+      {
+        "index": "bootstrap_ari_mean",
+        "better": "higher",
+        "spearman_rho_vs_K": 0.2879120879120879,
+        "p_value": 0.31819287102579996,
+        "monotone": false,
+        "has_interior_optimum": false,
+        "optimal_K": 30
+      },
+      {
+        "index": "mean_cluster_survival",
+        "better": "higher",
+        "spearman_rho_vs_K": -0.1076923076923077,
+        "p_value": 0.7140308087262492,
+        "monotone": false,
+        "has_interior_optimum": false,
+        "optimal_K": 30
+      }
+    ],
+    "canonical_K_is_a_convention": true
+  },
+  "stability": {
+    "stable_ks": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      24,
+      30
+    ],
+    "k16_stable_algorithms": 2,
+    "k16_mean_bootstrap_ari": 0.6732655734926267,
+    "by_k": [
+      {
+        "K": 2,
+        "n_algorithms": 4,
+        "n_stable": 2,
+        "mean_bootstrap_ari": 0.6774383868822991,
+        "mean_silhouette": 0.07791350591190295,
+        "mean_survival": 0.7793727528370226,
+        "mean_neighbour_preservation": 0.9756493506493507
+      },
+      {
+        "K": 3,
+        "n_algorithms": 4,
+        "n_stable": 2,
+        "mean_bootstrap_ari": 0.7331943357950725,
+        "mean_silhouette": 0.10108184556122571,
+        "mean_survival": 0.7708265828582932,
+        "mean_neighbour_preservation": 0.9340909090909091
+      },
+      {
+        "K": 4,
+        "n_algorithms": 4,
+        "n_stable": 2,
+        "mean_bootstrap_ari": 0.7242580131367987,
+        "mean_silhouette": 0.116689337635799,
+        "mean_survival": 0.8041800065171388,
+        "mean_neighbour_preservation": 0.9061688311688312
+      },
+      {
+        "K": 5,
+        "n_algorithms": 4,
+        "n_stable": 1,
+        "mean_bootstrap_ari": 0.6577743494384027,
+        "mean_silhouette": 0.13720482818832253,
+        "mean_survival": 0.7478443053640667,
+        "mean_neighbour_preservation": 0.8772727272727273
+      },
+      {
+        "K": 6,
+        "n_algorithms": 4,
+        "n_stable": 2,
+        "mean_bootstrap_ari": 0.6101562653767552,
+        "mean_silhouette": 0.15930315890345978,
+        "mean_survival": 0.7325370969239196,
+        "mean_neighbour_preservation": 0.8376623376623377
+      },
+      {
+        "K": 8,
+        "n_algorithms": 4,
+        "n_stable": 3,
+        "mean_bootstrap_ari": 0.6847526145711902,
+        "mean_silhouette": 0.18994093112371307,
+        "mean_survival": 0.7545686634492063,
+        "mean_neighbour_preservation": 0.8207792207792207
+      },
+      {
+        "K": 10,
+        "n_algorithms": 4,
+        "n_stable": 2,
+        "mean_bootstrap_ari": 0.679109605663358,
+        "mean_silhouette": 0.2295946491533773,
+        "mean_survival": 0.7508297438778173,
+        "mean_neighbour_preservation": 0.7922077922077922
+      },
+      {
+        "K": 12,
+        "n_algorithms": 4,
+        "n_stable": 1,
+        "mean_bootstrap_ari": 0.6432789260336395,
+        "mean_silhouette": 0.25833694786611644,
+        "mean_survival": 0.7351851652554373,
+        "mean_neighbour_preservation": 0.7636363636363637
+      },
+      {
+        "K": 14,
+        "n_algorithms": 4,
+        "n_stable": 2,
+        "mean_bootstrap_ari": 0.6520534568334924,
+        "mean_silhouette": 0.2849033724656215,
+        "mean_survival": 0.7296741119960506,
+        "mean_neighbour_preservation": 0.7324675324675325
+      },
+      {
+        "K": 16,
+        "n_algorithms": 4,
+        "n_stable": 2,
+        "mean_bootstrap_ari": 0.6732655734926266,
+        "mean_silhouette": 0.3071250786254415,
+        "mean_survival": 0.7295713356546424,
+        "mean_neighbour_preservation": 0.7100649350649351
+      },
+      {
+        "K": 18,
+        "n_algorithms": 4,
+        "n_stable": 1,
+        "mean_bootstrap_ari": 0.6816298399207088,
+        "mean_silhouette": 0.31221378688222395,
+        "mean_survival": 0.7386167304453757,
+        "mean_neighbour_preservation": 0.6977272727272728
+      },
+      {
+        "K": 20,
+        "n_algorithms": 4,
+        "n_stable": 2,
+        "mean_bootstrap_ari": 0.7102372811896374,
+        "mean_silhouette": 0.3512903900057218,
+        "mean_survival": 0.7531026880141072,
+        "mean_neighbour_preservation": 0.6863636363636364
+      },
+      {
+        "K": 24,
+        "n_algorithms": 4,
+        "n_stable": 2,
+        "mean_bootstrap_ari": 0.7468844672509349,
+        "mean_silhouette": 0.40644111982523934,
+        "mean_survival": 0.7767559531367221,
+        "mean_neighbour_preservation": 0.6623376623376623
+      },
+      {
+        "K": 30,
+        "n_algorithms": 4,
+        "n_stable": 2,
+        "mean_bootstrap_ari": 0.7530078804825412,
+        "mean_silhouette": 0.4509620433699225,
+        "mean_survival": 0.808208788344449,
+        "mean_neighbour_preservation": 0.6233766233766234
+      }
+    ]
+  },
+  "composition": {
+    "kinds": {
+      "unresolved": 7,
+      "chemically_coherent": 5,
+      "acquisition_confounded": 4
+    },
+    "clusters": [
+      {
+        "cluster": 0,
+        "n_molecules": 9,
+        "n_spectra": 22,
+        "dominant_fine_class": "polysaccharide",
+        "fine_purity": 0.5555555555555556,
+        "fine_entropy": 0.8288713632524444,
+        "dominant_broad_class": "carbohydrate",
+        "broad_purity": 0.6666666666666666,
+        "dominant_source": "RamanBioLib",
+        "source_purity": 0.6666666666666666,
+        "dominant_excitation": "785.0",
+        "excitation_purity": 0.5555555555555556,
+        "mean_replicates": 2.4444444444444446,
+        "within_cluster_mean_distance": 0.6895792923916217,
+        "within_cluster_max_distance": 1.0,
+        "kind": "unresolved",
+        "justification": "fine 56%, broad 67%, within-cluster distance 0.69: no rule applies cleanly"
+      },
+      {
+        "cluster": 1,
+        "n_molecules": 30,
+        "n_spectra": 110,
+        "dominant_fine_class": "free_amino_acid",
+        "fine_purity": 0.5333333333333333,
+        "fine_entropy": 0.7503289743838134,
+        "dominant_broad_class": "protein_amino_acid",
+        "broad_purity": 0.5333333333333333,
+        "dominant_source": "gobbato_raman_metabolites",
+        "source_purity": 0.7666666666666667,
+        "dominant_excitation": "785.0",
+        "excitation_purity": 0.8666666666666667,
+        "mean_replicates": 3.6666666666666665,
+        "within_cluster_mean_distance": 0.8196850643877259,
+        "within_cluster_max_distance": 1.0,
+        "kind": "acquisition_confounded",
+        "justification": "source purity 0.77 / excitation purity 0.87 exceed chemistry purity 0.53 and the corpus baselines (0.67 / 0.46); the grouping tracks acquisition, not chemistry"
+      },
+      {
+        "cluster": 2,
+        "n_molecules": 38,
+        "n_spectra": 55,
+        "dominant_fine_class": "acylglycerol",
+        "fine_purity": 0.4473684210526316,
+        "fine_entropy": 0.8708077334468091,
+        "dominant_broad_class": "lipid",
+        "broad_purity": 1.0,
+        "dominant_source": "RamanBioLib",
+        "source_purity": 0.9210526315789473,
+        "dominant_excitation": "1064.0",
+        "excitation_purity": 0.4473684210526316,
+        "mean_replicates": 1.4473684210526316,
+        "within_cluster_mean_distance": 0.7475719994901937,
+        "within_cluster_max_distance": 1.0,
+        "kind": "acquisition_confounded",
+        "justification": "source purity 0.92 / excitation purity 0.45 exceed chemistry purity 0.45 and the corpus baselines (0.67 / 0.46); the grouping tracks acquisition, not chemistry"
+      },
+      {
+        "cluster": 3,
+        "n_molecules": 5,
+        "n_spectra": 5,
+        "dominant_fine_class": "sterol_steroid",
+        "fine_purity": 1.0,
+        "fine_entropy": 0.0,
+        "dominant_broad_class": "lipid",
+        "broad_purity": 1.0,
+        "dominant_source": "RamanBioLib",
+        "source_purity": 1.0,
+        "dominant_excitation": "532.0",
+        "excitation_purity": 1.0,
+        "mean_replicates": 1.0,
+        "within_cluster_mean_distance": 0.421190534772367,
+        "within_cluster_max_distance": 0.9999569362109523,
+        "kind": "chemically_coherent",
+        "justification": "100% of members share fine class 'sterol_steroid' (entropy 0.00)"
+      },
+      {
+        "cluster": 4,
+        "n_molecules": 4,
+        "n_spectra": 15,
+        "dominant_fine_class": "free_amino_acid",
+        "fine_purity": 0.5,
+        "fine_entropy": 1.0,
+        "dominant_broad_class": "protein_amino_acid",
+        "broad_purity": 0.5,
+        "dominant_source": "gobbato_raman_metabolites",
+        "source_purity": 1.0,
+        "dominant_excitation": "785.0",
+        "excitation_purity": 1.0,
+        "mean_replicates": 3.75,
+        "within_cluster_mean_distance": 0.5736828019613486,
+        "within_cluster_max_distance": 0.9998880717666658,
+        "kind": "acquisition_confounded",
+        "justification": "source purity 1.00 / excitation purity 1.00 exceed chemistry purity 0.50 and the corpus baselines (0.67 / 0.46); the grouping tracks acquisition, not chemistry"
+      },
+      {
+        "cluster": 5,
+        "n_molecules": 4,
+        "n_spectra": 13,
+        "dominant_fine_class": "purine",
+        "fine_purity": 0.75,
+        "fine_entropy": 0.8112781244591328,
+        "dominant_broad_class": "nucleic",
+        "broad_purity": 0.75,
+        "dominant_source": "gobbato_raman_metabolites",
+        "source_purity": 1.0,
+        "dominant_excitation": "785.0",
+        "excitation_purity": 1.0,
+        "mean_replicates": 3.25,
+        "within_cluster_mean_distance": 0.5026567290966312,
+        "within_cluster_max_distance": 0.9879112925611319,
+        "kind": "acquisition_confounded",
+        "justification": "source purity 1.00 / excitation purity 1.00 exceed chemistry purity 0.75 and the corpus baselines (0.67 / 0.46); the grouping tracks acquisition, not chemistry"
+      },
+      {
+        "cluster": 6,
+        "n_molecules": 9,
+        "n_spectra": 25,
+        "dominant_fine_class": "peptide_protein",
+        "fine_purity": 0.4444444444444444,
+        "fine_entropy": 0.965633607142825,
+        "dominant_broad_class": "protein_amino_acid",
+        "broad_purity": 0.4444444444444444,
+        "dominant_source": "RamanBioLib",
+        "source_purity": 0.6666666666666666,
+        "dominant_excitation": "488.0",
+        "excitation_purity": 0.4444444444444444,
+        "mean_replicates": 2.7777777777777777,
+        "within_cluster_mean_distance": 0.6859113658763487,
+        "within_cluster_max_distance": 1.0,
+        "kind": "unresolved",
+        "justification": "fine 44%, broad 44%, within-cluster distance 0.69: no rule applies cleanly"
+      },
+      {
+        "cluster": 7,
+        "n_molecules": 2,
+        "n_spectra": 2,
+        "dominant_fine_class": "chromophore_pigment",
+        "fine_purity": 1.0,
+        "fine_entropy": 0.0,
+        "dominant_broad_class": "redox_cofactor",
+        "broad_purity": 1.0,
+        "dominant_source": "RamanBioLib",
+        "source_purity": 0.5,
+        "dominant_excitation": "785.0",
+        "excitation_purity": 1.0,
+        "mean_replicates": 1.0,
+        "within_cluster_mean_distance": 0.00024949235862326,
+        "within_cluster_max_distance": 0.00024949235862326,
+        "kind": "unresolved",
+        "justification": "only 2 molecules \u2014 too small to characterise; reported, not interpreted"
+      },
+      {
+        "cluster": 8,
+        "n_molecules": 1,
+        "n_spectra": 3,
+        "dominant_fine_class": "sulfur_thiol_cofactor",
+        "fine_purity": 1.0,
+        "fine_entropy": 0.0,
+        "dominant_broad_class": "redox_cofactor",
+        "broad_purity": 1.0,
+        "dominant_source": "gobbato_raman_metabolites",
+        "source_purity": 1.0,
+        "dominant_excitation": "785.0",
+        "excitation_purity": 1.0,
+        "mean_replicates": 3.0,
+        "within_cluster_mean_distance": 0.0,
+        "within_cluster_max_distance": 0.0,
+        "kind": "unresolved",
+        "justification": "only 1 molecules \u2014 too small to characterise; reported, not interpreted"
+      },
+      {
+        "cluster": 9,
+        "n_molecules": 1,
+        "n_spectra": 3,
+        "dominant_fine_class": "small_nitrogenous",
+        "fine_purity": 1.0,
+        "fine_entropy": 0.0,
+        "dominant_broad_class": "energy_metabolism",
+        "broad_purity": 1.0,
+        "dominant_source": "gobbato_raman_metabolites",
+        "source_purity": 1.0,
+        "dominant_excitation": "785.0",
+        "excitation_purity": 1.0,
+        "mean_replicates": 3.0,
+        "within_cluster_mean_distance": 0.0,
+        "within_cluster_max_distance": 0.0,
+        "kind": "unresolved",
+        "justification": "only 1 molecules \u2014 too small to characterise; reported, not interpreted"
+      },
+      {
+        "cluster": 10,
+        "n_molecules": 2,
+        "n_spectra": 7,
+        "dominant_fine_class": "purine",
+        "fine_purity": 1.0,
+        "fine_entropy": 0.0,
+        "dominant_broad_class": "nucleic",
+        "broad_purity": 1.0,
+        "dominant_source": "gobbato_raman_metabolites",
+        "source_purity": 1.0,
+        "dominant_excitation": "785.0",
+        "excitation_purity": 1.0,
+        "mean_replicates": 3.5,
+        "within_cluster_mean_distance": 0.01837775008367093,
+        "within_cluster_max_distance": 0.01837775008367093,
+        "kind": "unresolved",
+        "justification": "only 2 molecules \u2014 too small to characterise; reported, not interpreted"
+      },
+      {
+        "cluster": 11,
+        "n_molecules": 3,
+        "n_spectra": 3,
+        "dominant_fine_class": "nucleic_acid_polymer",
+        "fine_purity": 1.0,
+        "fine_entropy": 0.0,
+        "dominant_broad_class": "nucleic",
+        "broad_purity": 1.0,
+        "dominant_source": "RamanBioLib",
+        "source_purity": 1.0,
+        "dominant_excitation": "514.5",
+        "excitation_purity": 0.6666666666666666,
+        "mean_replicates": 1.0,
+        "within_cluster_mean_distance": 0.006316439089771937,
+        "within_cluster_max_distance": 0.009286029351402658,
+        "kind": "chemically_coherent",
+        "justification": "100% of members share fine class 'nucleic_acid_polymer' (entropy 0.00)"
+      },
+      {
+        "cluster": 12,
+        "n_molecules": 5,
+        "n_spectra": 8,
+        "dominant_fine_class": "sterol_steroid",
+        "fine_purity": 1.0,
+        "fine_entropy": 0.0,
+        "dominant_broad_class": "lipid",
+        "broad_purity": 1.0,
+        "dominant_source": "RamanBioLib",
+        "source_purity": 0.8,
+        "dominant_excitation": "532.0",
+        "excitation_purity": 0.8,
+        "mean_replicates": 1.6,
+        "within_cluster_mean_distance": 0.06309293084191529,
+        "within_cluster_max_distance": 0.0900490004718264,
+        "kind": "chemically_coherent",
+        "justification": "100% of members share fine class 'sterol_steroid' (entropy 0.00)"
+      },
+      {
+        "cluster": 13,
+        "n_molecules": 16,
+        "n_spectra": 35,
+        "dominant_fine_class": "mono_oligosaccharide",
+        "fine_purity": 1.0,
+        "fine_entropy": 0.0,
+        "dominant_broad_class": "carbohydrate",
+        "broad_purity": 1.0,
+        "dominant_source": "RamanBioLib",
+        "source_purity": 0.6875,
+        "dominant_excitation": "785.0",
+        "excitation_purity": 0.625,
+        "mean_replicates": 2.1875,
+        "within_cluster_mean_distance": 0.7115787159755911,
+        "within_cluster_max_distance": 1.0,
+        "kind": "chemically_coherent",
+        "justification": "100% of members share fine class 'mono_oligosaccharide' (entropy 0.00)"
+      },
+      {
+        "cluster": 14,
+        "n_molecules": 24,
+        "n_spectra": 68,
+        "dominant_fine_class": "peptide_protein",
+        "fine_purity": 1.0,
+        "fine_entropy": 0.0,
+        "dominant_broad_class": "protein_amino_acid",
+        "broad_purity": 1.0,
+        "dominant_source": "RamanBioLib",
+        "source_purity": 1.0,
+        "dominant_excitation": "1064.0",
+        "excitation_purity": 0.875,
+        "mean_replicates": 2.8333333333333335,
+        "within_cluster_mean_distance": 0.501081725458948,
+        "within_cluster_max_distance": 0.9981708692039442,
+        "kind": "chemically_coherent",
+        "justification": "100% of members share fine class 'peptide_protein' (entropy 0.00)"
+      },
+      {
+        "cluster": 15,
+        "n_molecules": 1,
+        "n_spectra": 1,
+        "dominant_fine_class": "peptide_protein",
+        "fine_purity": 1.0,
+        "fine_entropy": 0.0,
+        "dominant_broad_class": "protein_amino_acid",
+        "broad_purity": 1.0,
+        "dominant_source": "RamanBioLib",
+        "source_purity": 1.0,
+        "dominant_excitation": "532.0",
+        "excitation_purity": 1.0,
+        "mean_replicates": 1.0,
+        "within_cluster_mean_distance": 0.0,
+        "within_cluster_max_distance": 0.0,
+        "kind": "unresolved",
+        "justification": "only 1 molecules \u2014 too small to characterise; reported, not interpreted"
+      }
+    ]
+  },
+  "confounding": {
+    "chemistry_dominates": true,
+    "variance_partition": [
+      {
+        "factor": "fine_chemistry",
+        "n_levels": 16,
+        "marginal_R2": 0.4522423691963074,
+        "pseudo_F": 7.595749584512926,
+        "p_value": 0.001
+      },
+      {
+        "factor": "broad_chemistry",
+        "n_levels": 6,
+        "marginal_R2": 0.20175677917603593,
+        "pseudo_F": 7.481429854713055,
+        "p_value": 0.001
+      },
+      {
+        "factor": "excitation",
+        "n_levels": 7,
+        "marginal_R2": 0.11755831340514226,
+        "pseudo_F": 3.2638742278065185,
+        "p_value": 0.001
+      },
+      {
+        "factor": "replicate_count",
+        "n_levels": 7,
+        "marginal_R2": 0.11308634636254664,
+        "pseudo_F": 3.123884128418583,
+        "p_value": 0.001
+      },
+      {
+        "factor": "reconstruction_EV_tertile",
+        "n_levels": 3,
+        "marginal_R2": 0.07309988975265053,
+        "pseudo_F": 5.954300377458544,
+        "p_value": 0.001
+      },
+      {
+        "factor": "source",
+        "n_levels": 3,
+        "marginal_R2": 0.03987666104362359,
+        "pseudo_F": 3.1357303657041404,
+        "p_value": 0.001
+      },
+      {
+        "factor": "intensity_tertile",
+        "n_levels": 3,
+        "marginal_R2": 0.03969388333988341,
+        "pseudo_F": 3.1207634109187947,
+        "p_value": 0.001
+      }
+    ],
+    "partition_ami": [
+      {
+        "factor": "fine_chemistry",
+        "n_levels": 16,
+        "AMI": 0.7024758160543361,
+        "ARI": 0.5639017748019893
+      },
+      {
+        "factor": "broad_chemistry",
+        "n_levels": 6,
+        "AMI": 0.5963698036440952,
+        "ARI": 0.5155049411063517
+      },
+      {
+        "factor": "reconstruction_EV_tertile",
+        "n_levels": 3,
+        "AMI": 0.29977591257656344,
+        "ARI": 0.22508249988050563
+      },
+      {
+        "factor": "excitation",
+        "n_levels": 7,
+        "AMI": 0.2915928710562653,
+        "ARI": 0.15601243833013956
+      },
+      {
+        "factor": "replicate_count",
+        "n_levels": 7,
+        "AMI": 0.23729934028193422,
+        "ARI": 0.1871830614067732
+      },
+      {
+        "factor": "source",
+        "n_levels": 3,
+        "AMI": 0.1867867748581729,
+        "ARI": 0.1195939983593593
+      },
+      {
+        "factor": "intensity_tertile",
+        "n_levels": 3,
+        "AMI": 0.06986805094076545,
+        "ARI": 0.060066705553952784
+      }
+    ]
+  },
+  "hierarchy": {
+    "intrinsic_dimension": {
+      "levina_bickel_mle": 1.4030210798837202,
+      "correlation_dimension": 4.6842302015627,
+      "ambient_dimension": 49,
+      "estimators_agree": false
+    },
+    "gap": {
+      "valley_depth": 0.8000000000011216,
+      "bimodal": true,
+      "median_distance": 0.9931148611943246
+    },
+    "modularity": {
+      "modularity": 0.7177013294974858,
+      "n_communities": 9,
+      "null_mean": 0.34728318134641406,
+      "null_sd": 0.009250723224826235,
+      "z_score": 40.0420744528315,
+      "community_sizes": [
+        39,
+        27,
+        24,
+        16,
+        15,
+        11,
+        9,
+        8,
+        5
+      ],
+      "p_value": 0.004975124378109453
+    },
+    "cophenetic": {
+      "cophenetic_correlation": {
+        "average": 0.8699708770053043,
+        "complete": 0.7532730092810801,
+        "ward": 0.4103741794606423,
+        "single": 0.5706872111560236
+      },
+      "best_linkage": "average",
+      "best_correlation": 0.8699708770053043,
+      "tree_like": true
+    },
+    "continuity": {
+      "mean_communities_in_neighbourhood": 1.396103896103896,
+      "fraction_bridging": 0.35064935064935066,
+      "n_communities": 7
+    },
+    "shape": "modular"
+  },
+  "coordinates": {
+    "kernel": "cosine_power",
+    "temperature": 1.0,
+    "selection_reason": "max neighbour preservation among non-degenerate settings",
+    "K": 16,
+    "mean_entropy": 0.5204018195430355,
+    "reproducibility": 0.9630704056071197,
+    "neighbour_preservation_k10": 0.44586666666666663,
+    "neighbour_preservation_hard_ids": 0.23706666666666668,
+    "effective_rank": 10.558583116932114,
+    "effective_rank_hard_ids": 9.013467452626704,
+    "mean_bridge_score": 0.5410771379658557
+  },
+  "coordinate_robustness_mean_cosine": 0.9584165606324774,
+  "retrieval": {
+    "A_csm_only": {
+      "molecule_top1": 0.6053333333333333,
+      "molecule_top3": 0.7626666666666667,
+      "molecule_top5": 0.7946666666666666,
+      "molecule_mrr": 0.6870030418103813,
+      "molecule_ndcg5": 0.7436180057188191,
+      "n_unretrievable_singletons": 66,
+      "chem_top1": 0.8453333333333334,
+      "chem_top3": 0.9706666666666667,
+      "chem_macro_f1": 0.8067832265276851,
+      "chem_balanced_accuracy": 0.79661202673088
+    },
+    "B_csm_plus_coordinate_prior": {
+      "molecule_top1": 0.6213333333333333,
+      "molecule_top3": 0.7626666666666667,
+      "molecule_top5": 0.7973333333333333,
+      "molecule_mrr": 0.6940362476303653,
+      "molecule_ndcg5": 0.7488125861233375,
+      "n_unretrievable_singletons": 66,
+      "chem_top1": 0.848,
+      "chem_top3": 0.9706666666666667,
+      "chem_macro_f1": 0.7983083362530978,
+      "chem_balanced_accuracy": 0.792410837773104
+    },
+    "C_coordinates_only": {
+      "molecule_top1": 0.56,
+      "molecule_top3": 0.6373333333333333,
+      "molecule_top5": 0.6586666666666666,
+      "molecule_mrr": 0.611688438767118,
+      "molecule_ndcg5": 0.6804100183303394,
+      "n_unretrievable_singletons": 66,
+      "chem_top1": 0.6853333333333333,
+      "chem_top3": 0.8853333333333333,
+      "chem_macro_f1": 0.5780813843419974,
+      "chem_balanced_accuracy": 0.5796059314496498
+    }
+  },
+  "retrieval_significance": {
+    "molecule": {
+      "delta": 0.016000000000000014,
+      "ci95": [
+        -0.005406139835487605,
+        0.038963575487012986
+      ],
+      "mcnemar_b01": 10,
+      "mcnemar_b10": 4,
+      "p_value": 0.1795654296875,
+      "significant": false
+    },
+    "chemistry": {
+      "delta": 0.002666666666666595,
+      "ci95": [
+        -0.011461318051575908,
+        0.01933835570315728
+      ],
+      "mcnemar_b01": 5,
+      "mcnemar_b10": 4,
+      "p_value": 1.0,
+      "significant": false
+    }
+  },
+  "fusion_weight_sweep": [
+    {
+      "coordinate_weight": 0.0,
+      "chem_top1": 0.8453333333333334
+    },
+    {
+      "coordinate_weight": 0.1,
+      "chem_top1": 0.8506666666666667
+    },
+    {
+      "coordinate_weight": 0.25,
+      "chem_top1": 0.8506666666666667
+    },
+    {
+      "coordinate_weight": 0.5,
+      "chem_top1": 0.848
+    },
+    {
+      "coordinate_weight": 0.75,
+      "chem_top1": 0.8133333333333334
+    },
+    {
+      "coordinate_weight": 0.9,
+      "chem_top1": 0.8106666666666666
+    },
+    {
+      "coordinate_weight": 1.0,
+      "chem_top1": 0.6853333333333333
+    }
+  ],
+  "agreement": {
+    "ARI": 0.5639017748019893,
+    "AMI": 0.7024758160543361,
+    "NMI": 0.7698768755474072,
+    "VI": 1.0777019597739619,
+    "homogeneity": 0.7320867133610145,
+    "completeness": 0.8117808313444924,
+    "ARI_vs_broad": 0.5155049411063517,
+    "AMI_vs_broad": 0.5963698036440952
+  },
+  "section9_criteria": {
+    "reproducibility": {
+      "pass": true,
+      "evidence": "0.963 vs floor 0.90"
+    },
+    "interpretability": {
+      "pass": false,
+      "evidence": "5 of 16 clusters chemically nameable"
+    },
+    "robustness": {
+      "pass": true,
+      "evidence": "mean coordinate cosine 0.958"
+    },
+    "retrieval_improvement": {
+      "pass": false,
+      "evidence": "molecule \u0394+0.016 CI[-0.005,+0.039] p=0.180; chemistry \u0394+0.003 p=1.000 \u2014 neither significant"
+    },
+    "generalisation": {
+      "pass": true,
+      "evidence": "coordinates alone reach chem top1 0.685"
+    },
+    "stability": {
+      "pass": true,
+      "evidence": "bootstrap ARI 0.773, min cluster survival 0.505"
+    },
+    "biochemical_meaning": {
+      "pass": true,
+      "evidence": "chemistry dominates True, AMI 0.702"
+    }
+  },
+  "recommendation": {
+    "option": "Option A",
+    "rationale": "the coordinates are reproducible, robust and chemically meaningful, but they do NOT significantly improve retrieval over the CSM representation. They belong in GAIRA as a scientific instrument, not in the inference path",
+    "all_criteria_met": false
+  },
+  "gates": {
+    "n": 16,
+    "failed": 0
+  },
+  "_provenance": {
+    "phase": "06_5",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "unit_of_analysis": "canonical molecule (154)",
+    "labels_used_in_construction": false,
+    "code_fingerprint": "6472717d5819a88e2c4c39b326009306",
+    "created_utc": "2026-08-07T02:35:33.072755+00:00",
+    "scope": "Raman only"
+  }
+}

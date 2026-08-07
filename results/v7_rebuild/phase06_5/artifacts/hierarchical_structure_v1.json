@@ -1,0 +1,64 @@
+{
+  "intrinsic_dimension": {
+    "levina_bickel_mle": 1.4030210798837202,
+    "correlation_dimension": 4.6842302015627,
+    "ambient_dimension": 49,
+    "estimators_agree": false
+  },
+  "distance_gap": {
+    "valley_depth": 0.8000000000011216,
+    "bimodal": true,
+    "median_distance": 0.9931148611943246
+  },
+  "modularity": {
+    "modularity": 0.7177013294974858,
+    "n_communities": 9,
+    "null_mean": 0.34728318134641406,
+    "null_sd": 0.009250723224826235,
+    "z_score": 40.0420744528315,
+    "community_sizes": [
+      39,
+      27,
+      24,
+      16,
+      15,
+      11,
+      9,
+      8,
+      5
+    ],
+    "p_value": 0.004975124378109453
+  },
+  "cophenetic": {
+    "cophenetic_correlation": {
+      "average": 0.8699708770053043,
+      "complete": 0.7532730092810801,
+      "ward": 0.4103741794606423,
+      "single": 0.5706872111560236
+    },
+    "best_linkage": "average",
+    "best_correlation": 0.8699708770053043,
+    "tree_like": true
+  },
+  "continuity": {
+    "mean_communities_in_neighbourhood": 1.396103896103896,
+    "fraction_bridging": 0.35064935064935066,
+    "n_communities": 7
+  },
+  "shape_verdict": "modular",
+  "_provenance": {
+    "phase": "06_5",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "unit_of_analysis": "canonical molecule (154)",
+    "labels_used_in_construction": false,
+    "code_fingerprint": "6472717d5819a88e2c4c39b326009306",
+    "created_utc": "2026-08-07T02:35:33.072755+00:00",
+    "scope": "Raman only"
+  }
+}

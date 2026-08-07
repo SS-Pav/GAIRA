@@ -1,0 +1,17 @@
+gate,status
+G1 frozen fingerprints verified,PASS
+G2 no upstream artifact modified,PASS
+G3 no chemistry label used in geometry construction,PASS
+G4 Raman-only scope,PASS
+G5 unit of analysis is the canonical molecule,PASS
+G6 stability swept over 14 K and 6 algorithms,PASS
+"G6b every internal index computed, none silently NaN",PASS
+G6c K selection tested for an interior optimum rather than assumed,PASS
+G7 every cluster classified with a written justification,PASS
+G8 confounding tested by PERMANOVA with a permutation null,PASS
+G9 chemistry dominates source and excitation,PASS
+G10 coordinates non-degenerate,PASS
+G11 retrieval evaluated molecule-grouped with clustering refitted per fold,PASS
+G12 no clustering leak across folds,PASS
+G13 architecture recommendation is evidence-based,PASS
+G14 Phase 07 not begun,PASS

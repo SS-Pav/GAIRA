@@ -1,0 +1,26 @@
+{
+  "ARI": 0.5639017748019893,
+  "AMI": 0.7024758160543361,
+  "NMI": 0.7698768755474072,
+  "VI": 1.0777019597739619,
+  "homogeneity": 0.7320867133610145,
+  "completeness": 0.8117808313444924,
+  "ARI_vs_broad": 0.5155049411063517,
+  "AMI_vs_broad": 0.5963698036440952,
+  "n_disagreements": 24,
+  "_provenance": {
+    "phase": "06_5",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "unit_of_analysis": "canonical molecule (154)",
+    "labels_used_in_construction": false,
+    "code_fingerprint": "6472717d5819a88e2c4c39b326009306",
+    "created_utc": "2026-08-07T02:35:33.072755+00:00",
+    "scope": "Raman only"
+  }
+}

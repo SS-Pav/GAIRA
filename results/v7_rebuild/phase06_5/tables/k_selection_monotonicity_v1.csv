@@ -1,0 +1,8 @@
+index,better,spearman_rho_vs_K,p_value,monotone,has_interior_optimum,optimal_K
+silhouette,higher,1.0,0.0,True,False,30
+calinski_harabasz,higher,0.09010989010989012,0.7593388378159543,False,False,30
+davies_bouldin,lower,-0.7230769230769231,0.0034752946180943048,False,False,30
+neighbour_preservation,higher,-1.0,0.0,True,False,2
+membership_entropy,higher,1.0,0.0,True,False,30
+bootstrap_ari_mean,higher,0.2879120879120879,0.31819287102579996,False,False,30
+mean_cluster_survival,higher,-0.1076923076923077,0.7140308087262492,False,False,30

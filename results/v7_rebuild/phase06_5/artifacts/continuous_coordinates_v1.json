@@ -1,0 +1,28 @@
+{
+  "kernel": "cosine_power",
+  "temperature": 1.0,
+  "selection_reason": "max neighbour preservation among non-degenerate settings",
+  "K": 16,
+  "mean_entropy": 0.5204018195430355,
+  "reproducibility": 0.9630704056071197,
+  "neighbour_preservation_k10": 0.44586666666666663,
+  "neighbour_preservation_hard_ids": 0.23706666666666668,
+  "effective_rank": 10.558583116932114,
+  "effective_rank_hard_ids": 9.013467452626704,
+  "mean_bridge_score": 0.5410771379658557,
+  "_provenance": {
+    "phase": "06_5",
+    "seed": 0,
+    "input_fingerprints": {
+      "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+      "lsm": "208482d6f7178b5b8f16cace91be55b0",
+      "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+      "atlas": "09ed804a40836f4a05a91ba10900cded"
+    },
+    "unit_of_analysis": "canonical molecule (154)",
+    "labels_used_in_construction": false,
+    "code_fingerprint": "6472717d5819a88e2c4c39b326009306",
+    "created_utc": "2026-08-07T02:35:33.072755+00:00",
+    "scope": "Raman only"
+  }
+}

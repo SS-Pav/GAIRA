@@ -1,0 +1,162 @@
+{
+  "phase": "06_5",
+  "name": "Latent spectral geometry audit",
+  "status": "COMPLETE",
+  "started": "2026-08-07T02:35:33.072755+00:00",
+  "finished": "2026-08-07T02:37:00.393527+00:00",
+  "seed": 0,
+  "audit_only": true,
+  "architecture_changed": false,
+  "canonical_partition": "average@K=16",
+  "recommendation": "Option A",
+  "input_fingerprints": {
+    "csm": "0b4aa550ccefed3edabdbde5bae11c8d",
+    "lsm": "208482d6f7178b5b8f16cace91be55b0",
+    "engine": "20d8bd99ce71f45a125c6a2b1d719e51",
+    "atlas": "09ed804a40836f4a05a91ba10900cded"
+  },
+  "scope": "Raman only; audit only; no inference layer created",
+  "phase07_begun": false,
+  "outputs": [
+    {
+      "artifact_id": "cluster_stability_sweep_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/cluster_stability_sweep_v1.csv",
+      "sha256": "78daaed8ce5959df62ffdfa0b91064c8531b105cd76b658de0681356cdd5f8d8",
+      "rows": 56
+    },
+    {
+      "artifact_id": "cluster_stability_verdicts_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/cluster_stability_verdicts_v1.csv",
+      "sha256": "c64a977fbaf5ae31df85c432ef1c35a68dca526b7e0a042ec4e5d1d9fa28dc52",
+      "rows": 56
+    },
+    {
+      "artifact_id": "cluster_stability_by_k_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/cluster_stability_by_k_v1.csv",
+      "sha256": "869e5af08188756c39f14c6ede57fe0f38997dd0d0a912108ed7a67bb878a08c",
+      "rows": 14
+    },
+    {
+      "artifact_id": "k_selection_monotonicity_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/k_selection_monotonicity_v1.csv",
+      "sha256": "9a3397f833b63ef1d767143c3eb32bf88fe5a83a20baec4aaa1e4ee7e82a17c3",
+      "rows": 7
+    },
+    {
+      "artifact_id": "free_k_algorithms_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/free_k_algorithms_v1.csv",
+      "sha256": "f8711e9580534fe0a0e35fda9dd9f96fb343f69626b43fd55d53a6413efd8e85",
+      "rows": 7
+    },
+    {
+      "artifact_id": "cluster_composition_v1.json",
+      "path": "results/v7_rebuild/phase06_5/artifacts/cluster_composition_v1.json",
+      "sha256": "3d9eeabe780b35405224be29345a6a8cf9aaf611e8aee8f5d587eb0190e1651b"
+    },
+    {
+      "artifact_id": "cluster_composition_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/cluster_composition_v1.csv",
+      "sha256": "87b3a50f31b7ae6629a9cfe360124a875140be6503d2e1c5039739bca4af905c",
+      "rows": 16
+    },
+    {
+      "artifact_id": "permanova_variance_partition_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/permanova_variance_partition_v1.csv",
+      "sha256": "973e8803760e99199f09aeaa9286bd9c863e4e6838e7f9acfc544a60ed6f7298",
+      "rows": 7
+    },
+    {
+      "artifact_id": "cluster_vs_factor_ami_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/cluster_vs_factor_ami_v1.csv",
+      "sha256": "b36a98bc4fbd75b98c26ea30ce7d50b41f84f861007ddc9dda6937d15fd1e575",
+      "rows": 7
+    },
+    {
+      "artifact_id": "confounding_verdict_v1.json",
+      "path": "results/v7_rebuild/phase06_5/artifacts/confounding_verdict_v1.json",
+      "sha256": "74e2845f05bcac473e63c1d606753d45efc187838fdd86c4c27d405ff811cad1"
+    },
+    {
+      "artifact_id": "dendrogram_branch_points_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/dendrogram_branch_points_v1.csv",
+      "sha256": "504e4c34a5aaa09116292f8c091f60d0922d33bb0eda931c0f6068eb321011a3",
+      "rows": 11
+    },
+    {
+      "artifact_id": "hierarchical_structure_v1.json",
+      "path": "results/v7_rebuild/phase06_5/artifacts/hierarchical_structure_v1.json",
+      "sha256": "0d7e7d4ca3ade320821e0b0bcdb3dce20f4c8bf39901b801c9b52154cc29ad74"
+    },
+    {
+      "artifact_id": "coordinate_kernel_sweep_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/coordinate_kernel_sweep_v1.csv",
+      "sha256": "3ed09bf7a1777e20c3e0ea5129dfbdf582ce1f9f5a6072944c268ae3e489d9ce",
+      "rows": 30
+    },
+    {
+      "artifact_id": "continuous_coordinates_v1.json",
+      "path": "results/v7_rebuild/phase06_5/artifacts/continuous_coordinates_v1.json",
+      "sha256": "1caa603fb2a3e19b66eadbfeb51fe96b3de3f255f37687396d2d3e46011b1817"
+    },
+    {
+      "artifact_id": "continuous_coordinates_v1.npz",
+      "path": "results/v7_rebuild/phase06_5/artifacts/continuous_coordinates_v1.npz",
+      "sha256": "b3290ca91496677969ca96122a11cb6b82de5b142694df15985c0fa60a40c144"
+    },
+    {
+      "artifact_id": "coordinate_robustness_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/coordinate_robustness_v1.csv",
+      "sha256": "4335e3913af1ddf9bd7e7a2b4787b06e4fc720b1849db60eb754b40f1f42e68b",
+      "rows": 30
+    },
+    {
+      "artifact_id": "retrieval_benchmark_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/retrieval_benchmark_v1.csv",
+      "sha256": "c3e3a10781a41e01066413511278e1546953241b638968677e496f14c4171f03",
+      "rows": 3
+    },
+    {
+      "artifact_id": "retrieval_significance_v1.json",
+      "path": "results/v7_rebuild/phase06_5/artifacts/retrieval_significance_v1.json",
+      "sha256": "b7e82500eab5b6d19fc21eae0b21189139ea57c7bf3de0f5c6f1e94d7140d21c"
+    },
+    {
+      "artifact_id": "fusion_weight_sweep_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/fusion_weight_sweep_v1.csv",
+      "sha256": "8342c2cafdd583a382b37bacec8e9efacac268cdca2de6daf26c86b17390bff4",
+      "rows": 7
+    },
+    {
+      "artifact_id": "geometry_chemistry_disagreements_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/geometry_chemistry_disagreements_v1.csv",
+      "sha256": "7be3a40756a83bb3459b197a6e3e6684f6e52ac66bf27e5de07851f67fc1b897",
+      "rows": 24
+    },
+    {
+      "artifact_id": "geometry_chemistry_agreement_v1.json",
+      "path": "results/v7_rebuild/phase06_5/artifacts/geometry_chemistry_agreement_v1.json",
+      "sha256": "cf33d478cf4f792124ce221860bc0fca3fd8d7335b256b8064867f2575902c84"
+    },
+    {
+      "artifact_id": "embeddings_v1.npz",
+      "path": "results/v7_rebuild/phase06_5/artifacts/embeddings_v1.npz",
+      "sha256": "1cf6c4d47d4f6624861dab47c2448f9583e5695cf74b483f5e58866d7c0e523a"
+    },
+    {
+      "artifact_id": "phase06_5_gates_v1.csv",
+      "path": "results/v7_rebuild/phase06_5/tables/phase06_5_gates_v1.csv",
+      "sha256": "eb9461f6df9825f3f10111544223d9a6c2c7cb33266a7df98f6b7283c1bd2990",
+      "rows": 16
+    },
+    {
+      "artifact_id": "phase06_5_summary_v1.json",
+      "path": "results/v7_rebuild/phase06_5/artifacts/phase06_5_summary_v1.json",
+      "sha256": "3fe1f70a70594c9587e68ce6e17e9c56dedecec7a3be93ff4f270cf62ccd6fa5"
+    },
+    {
+      "artifact_id": "latent_geometry_manifest_v1.json",
+      "path": "results/v7_rebuild/phase06_5/manifests/latent_geometry_manifest_v1.json",
+      "sha256": "7b59fbf1a1140b78173802ca52ce3743cee9e07d8430123d69179ca4c7ff4f3e"
+    }
+  ]
+}
