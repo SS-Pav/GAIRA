@@ -1,6 +1,11 @@
-# GAIRA_Core runtime dependencies.
-# Enough to run the inference engine and both Streamlit apps from a fresh clone.
-# (A full frozen environment for the lab VM is in requirements_vm.txt.)
+# GAIRA runtime dependencies.
+# Enough to run the inference engine, the V7 runtime platform and every client from a fresh
+# clone. (A full frozen environment for the lab VM is in requirements_vm.txt.)
+#
+#     pip install -r requirements.txt
+#
+# The frozen atlas itself is COMMITTED to this repository — ten files, ~10 MB, under
+# results/v7_rebuild/. No download, no external volume, no cloud account.
 
 # ── numerical / scientific core ──
 numpy>=1.24
@@ -9,10 +14,22 @@ scikit-learn>=1.3
 pandas>=2.0
 pyyaml>=6.0
 
-# ── apps + figures ──
+# ── V7 runtime platform (Phase 10): typed contracts, HTTP service, SDK ──
+pydantic>=2.7
+fastapi>=0.115
+uvicorn[standard]>=0.30
+httpx>=0.27
+
+# ── MCP tool server (Phase 10) ──
+mcp>=1.2
+
+# ── clients and reports ──
 streamlit>=1.40
 plotly>=5.20
-matplotlib>=3.7
+matplotlib>=3.7          # used by the frozen PDF report generator, not by the demo UI
+
+# ── testing ──
+pytest>=7.4
 
 # ── optional (only to RE-RUN the representation benchmark; not needed for inference) ──
 # torch>=2.0
